@@ -40,7 +40,8 @@ function shuffle<T>(input: T[], rng: () => number = Math.random): T[] {
 }
 
 function pickDistractors(pool: string[], answer: string, count: number): string[] {
-  const options = shuffle(pool.filter((value) => value !== answer)).slice(0, count);
+  const unique = [...new Set(pool)].filter((value) => value !== answer);
+  const options = shuffle(unique).slice(0, count);
   return shuffle([answer, ...options]);
 }
 
@@ -77,7 +78,13 @@ export function placementQuestion(item: Item, placementPool: string[]): Question
 
 export function armamentQuestion(item: Item, pool: Item[]): Question | null {
   if (!item.armament) return null;
-  const others = pool.filter((i) => i.slug !== item.slug && i.armament).map((i) => i.armament!);
+  const others = [
+    ...new Set(
+      pool
+        .filter((i) => i.slug !== item.slug && i.armament && i.armament !== item.armament)
+        .map((i) => i.armament!),
+    ),
+  ];
   if (others.length < 3) return null;
   return {
     kind: "armament",

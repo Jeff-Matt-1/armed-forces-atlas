@@ -42,7 +42,8 @@ export function QuizRunner({
   const passed = percent >= PASS_RATIO * 100;
 
   const missedItems = useMemo(
-    () => missed.map((slug) => getItem(slug)).filter((item) => item !== undefined),
+    () =>
+      [...new Set(missed)].map((slug) => getItem(slug)).filter((item) => item !== undefined),
     [missed],
   );
 
@@ -59,7 +60,7 @@ export function QuizRunner({
     if (picked || !question) return;
     setPicked(option);
     if (option === question.answer) setScore((value) => value + 1);
-    else setMissed((value) => [...value, question.itemSlug]);
+    else setMissed((value) => (value.includes(question.itemSlug) ? value : [...value, question.itemSlug]));
   }
 
   function advance() {
