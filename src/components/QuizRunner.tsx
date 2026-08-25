@@ -248,3 +248,18 @@ export function EmptyState({ title, body }: { title: string; body: string }) {
     </div>
   );
 }
+
+export function DrillSkeleton() {
+  return (
+    <div className="mx-auto w-full max-w-3xl px-4 py-8">
+      <div className="h-3 w-40 bg-secondary" />
+      <div className="mt-6 aspect-[16/9] w-full border border-border bg-secondary" />
+      <div className="mt-6 h-5 w-64 bg-secondary" />
+      <div className="mt-4 grid gap-2">
+        {[0, 1, 2, 3].map((row) => (
+          <div key={row} className="h-12 border border-border bg-card" />
+        ))}
+      </div>
+    </div>
+  );
+}

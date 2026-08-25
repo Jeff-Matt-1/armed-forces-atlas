@@ -1,8 +1,9 @@
 import { Link, createFileRoute } from "@tanstack/react-router";
-import { useMemo, useState } from "react";
+import { useState } from "react";
 
 import { Button } from "@/components/ui/button";
-import { EmptyState } from "@/components/QuizRunner";
+import { DrillSkeleton, EmptyState } from "@/components/QuizRunner";
+import { useShuffled } from "@/hooks/useShuffled";
 import { readyBlocks, studyableItems, type Item } from "@/lib/content";
 import { useProgress, useRecordReview } from "@/lib/progress";
 import { gradeLabels } from "@/lib/srs";
@@ -39,16 +40,18 @@ function Flashcards() {
   const progress = useProgress();
   const recordReview = useRecordReview();
 
-  const deck = useMemo(() => {
-    const pool = studyableItems(block ? [block] : undefined);
-    return [...pool].sort(() => Math.random() - 0.5);
-  }, [block]);
+  const { items: deck, built } = useShuffled(
+    () => [...studyableItems(block ? [block] : undefined)].sort(() => Math.random() - 0.5),
+    [block],
+  );
 
   const [index, setIndex] = useState(0);
   const [flipped, setFlipped] = useState(false);
   const [graded, setGraded] = useState(0);
 
   const card: Item | undefined = deck[index];
+
+  if (!built) return <DrillSkeleton />;
 
   if (deck.length === 0) {
     return (
