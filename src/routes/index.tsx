@@ -40,10 +40,10 @@ function Home() {
             Identify the equipment of the Russian Armed Forces.
           </h1>
           <p className="mt-5 max-w-2xl text-base text-muted-foreground">
-            Nineteen study blocks, one subject at a time. Every entry gives you the recognition
-            cues, the main armament and range, and where the machine actually sits in the force
-            structure. Doctrinal framing follows Grau &amp; Bartles, <em>The Russian Way of War</em>
-            .
+            A foundations primer plus nineteen subject blocks, one subject at a time. Every entry
+            gives you the recognition cues, the main armament and range, and where the machine
+            actually sits in the force structure. Doctrinal framing follows Grau &amp; Bartles,{" "}
+            <em>The Russian Way of War</em>.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-2">
