@@ -10,6 +10,11 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ReviewRouteImport } from './routes/review'
+import { Route as DrillFlashcardsRouteImport } from './routes/drill.flashcards'
+import { Route as DrillPhotoIdRouteImport } from './routes/drill.photo-id'
+import { Route as DrillStructureRouteImport } from './routes/drill.structure'
+import { Route as ExamBlockRouteImport } from './routes/exam.$block'
 import { Route as LearnIndexRouteImport } from './routes/learn.index'
 import { Route as LearnBlockRouteImport } from './routes/learn.$block'
 import { Route as LearnBlockItemRouteImport } from './routes/learn.$block.$item'
@@ -17,6 +22,31 @@ import { Route as LearnBlockItemRouteImport } from './routes/learn.$block.$item'
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ReviewRoute = ReviewRouteImport.update({
+  id: '/review',
+  path: '/review',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DrillFlashcardsRoute = DrillFlashcardsRouteImport.update({
+  id: '/drill/flashcards',
+  path: '/drill/flashcards',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DrillPhotoIdRoute = DrillPhotoIdRouteImport.update({
+  id: '/drill/photo-id',
+  path: '/drill/photo-id',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DrillStructureRoute = DrillStructureRouteImport.update({
+  id: '/drill/structure',
+  path: '/drill/structure',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ExamBlockRoute = ExamBlockRouteImport.update({
+  id: '/exam/$block',
+  path: '/exam/$block',
   getParentRoute: () => rootRouteImport,
 } as any)
 const LearnIndexRoute = LearnIndexRouteImport.update({
@@ -37,12 +67,22 @@ const LearnBlockItemRoute = LearnBlockItemRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/review': typeof ReviewRoute
+  '/drill/flashcards': typeof DrillFlashcardsRoute
+  '/drill/photo-id': typeof DrillPhotoIdRoute
+  '/drill/structure': typeof DrillStructureRoute
+  '/exam/$block': typeof ExamBlockRoute
   '/learn/$block': typeof LearnBlockRouteWithChildren
   '/learn/': typeof LearnIndexRoute
   '/learn/$block/$item': typeof LearnBlockItemRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/review': typeof ReviewRoute
+  '/drill/flashcards': typeof DrillFlashcardsRoute
+  '/drill/photo-id': typeof DrillPhotoIdRoute
+  '/drill/structure': typeof DrillStructureRoute
+  '/exam/$block': typeof ExamBlockRoute
   '/learn/$block': typeof LearnBlockRouteWithChildren
   '/learn': typeof LearnIndexRoute
   '/learn/$block/$item': typeof LearnBlockItemRoute
@@ -50,20 +90,58 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/review': typeof ReviewRoute
+  '/drill/flashcards': typeof DrillFlashcardsRoute
+  '/drill/photo-id': typeof DrillPhotoIdRoute
+  '/drill/structure': typeof DrillStructureRoute
+  '/exam/$block': typeof ExamBlockRoute
   '/learn/$block': typeof LearnBlockRouteWithChildren
   '/learn/': typeof LearnIndexRoute
   '/learn/$block/$item': typeof LearnBlockItemRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/learn/$block' | '/learn/' | '/learn/$block/$item'
+  fullPaths:
+    | '/'
+    | '/review'
+    | '/drill/flashcards'
+    | '/drill/photo-id'
+    | '/drill/structure'
+    | '/exam/$block'
+    | '/learn/$block'
+    | '/learn/'
+    | '/learn/$block/$item'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/learn/$block' | '/learn' | '/learn/$block/$item'
-  id: '__root__' | '/' | '/learn/$block' | '/learn/' | '/learn/$block/$item'
+  to:
+    | '/'
+    | '/review'
+    | '/drill/flashcards'
+    | '/drill/photo-id'
+    | '/drill/structure'
+    | '/exam/$block'
+    | '/learn/$block'
+    | '/learn'
+    | '/learn/$block/$item'
+  id:
+    | '__root__'
+    | '/'
+    | '/review'
+    | '/drill/flashcards'
+    | '/drill/photo-id'
+    | '/drill/structure'
+    | '/exam/$block'
+    | '/learn/$block'
+    | '/learn/'
+    | '/learn/$block/$item'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  ReviewRoute: typeof ReviewRoute
+  DrillFlashcardsRoute: typeof DrillFlashcardsRoute
+  DrillPhotoIdRoute: typeof DrillPhotoIdRoute
+  DrillStructureRoute: typeof DrillStructureRoute
+  ExamBlockRoute: typeof ExamBlockRoute
   LearnBlockRoute: typeof LearnBlockRouteWithChildren
   LearnIndexRoute: typeof LearnIndexRoute
 }
@@ -75,6 +153,41 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/review': {
+      id: '/review'
+      path: '/review'
+      fullPath: '/review'
+      preLoaderRoute: typeof ReviewRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/drill/flashcards': {
+      id: '/drill/flashcards'
+      path: '/drill/flashcards'
+      fullPath: '/drill/flashcards'
+      preLoaderRoute: typeof DrillFlashcardsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/drill/photo-id': {
+      id: '/drill/photo-id'
+      path: '/drill/photo-id'
+      fullPath: '/drill/photo-id'
+      preLoaderRoute: typeof DrillPhotoIdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/drill/structure': {
+      id: '/drill/structure'
+      path: '/drill/structure'
+      fullPath: '/drill/structure'
+      preLoaderRoute: typeof DrillStructureRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/exam/$block': {
+      id: '/exam/$block'
+      path: '/exam/$block'
+      fullPath: '/exam/$block'
+      preLoaderRoute: typeof ExamBlockRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/learn/': {
@@ -115,6 +228,11 @@ const LearnBlockRouteWithChildren = LearnBlockRoute._addFileChildren(
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  ReviewRoute: ReviewRoute,
+  DrillFlashcardsRoute: DrillFlashcardsRoute,
+  DrillPhotoIdRoute: DrillPhotoIdRoute,
+  DrillStructureRoute: DrillStructureRoute,
+  ExamBlockRoute: ExamBlockRoute,
   LearnBlockRoute: LearnBlockRouteWithChildren,
   LearnIndexRoute: LearnIndexRoute,
 }
