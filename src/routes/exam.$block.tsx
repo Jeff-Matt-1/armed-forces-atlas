@@ -1,9 +1,10 @@
 import { createFileRoute, notFound } from "@tanstack/react-router";
-import { useMemo, useState } from "react";
+import { useState } from "react";
 
-import { QuizRunner } from "@/components/QuizRunner";
+import { DrillSkeleton, QuizRunner } from "@/components/QuizRunner";
 import { getBlock } from "@/lib/content";
 import { buildExam } from "@/lib/quiz";
+import { useShuffled } from "@/hooks/useShuffled";
 
 export const Route = createFileRoute("/exam/$block")({
   loader: ({ params }) => {
@@ -32,7 +33,9 @@ export const Route = createFileRoute("/exam/$block")({
 function Exam() {
   const { blockSlug, title } = Route.useLoaderData();
   const [seed, setSeed] = useState(0);
-  const questions = useMemo(() => buildExam(blockSlug, 16), [blockSlug, seed]);
+  const { items: questions, built } = useShuffled(() => buildExam(blockSlug, 16), [blockSlug, seed]);
+
+  if (!built) return <DrillSkeleton />;
 
   return (
     <QuizRunner

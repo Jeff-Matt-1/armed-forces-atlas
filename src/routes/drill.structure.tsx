@@ -1,9 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useMemo, useState } from "react";
+import { useState } from "react";
 
-import { QuizRunner } from "@/components/QuizRunner";
+import { DrillSkeleton, QuizRunner } from "@/components/QuizRunner";
 import { getBlock } from "@/lib/content";
 import { buildPlacementQuiz } from "@/lib/quiz";
+import { useShuffled } from "@/hooks/useShuffled";
 
 type Search = { block?: string | undefined };
 
@@ -32,11 +33,13 @@ export const Route = createFileRoute("/drill/structure")({
 function StructureDrill() {
   const { block } = Route.useSearch();
   const [seed, setSeed] = useState(0);
-  const questions = useMemo(
+  const { items: questions, built } = useShuffled(
     () => buildPlacementQuiz(block ? [block] : undefined, 12),
     [block, seed],
   );
   const blockTitle = block ? getBlock(block)?.title : undefined;
+
+  if (!built) return <DrillSkeleton />;
 
   return (
     <QuizRunner
