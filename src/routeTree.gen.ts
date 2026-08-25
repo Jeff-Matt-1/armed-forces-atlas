@@ -10,33 +10,62 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as LearnIndexRouteImport } from './routes/learn.index'
+import { Route as LearnBlockRouteImport } from './routes/learn.$block'
+import { Route as LearnBlockItemRouteImport } from './routes/learn.$block.$item'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const LearnIndexRoute = LearnIndexRouteImport.update({
+  id: '/learn/',
+  path: '/learn/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LearnBlockRoute = LearnBlockRouteImport.update({
+  id: '/learn/$block',
+  path: '/learn/$block',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LearnBlockItemRoute = LearnBlockItemRouteImport.update({
+  id: '/$item',
+  path: '/$item',
+  getParentRoute: () => LearnBlockRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/learn/$block': typeof LearnBlockRouteWithChildren
+  '/learn/': typeof LearnIndexRoute
+  '/learn/$block/$item': typeof LearnBlockItemRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/learn/$block': typeof LearnBlockRouteWithChildren
+  '/learn': typeof LearnIndexRoute
+  '/learn/$block/$item': typeof LearnBlockItemRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/learn/$block': typeof LearnBlockRouteWithChildren
+  '/learn/': typeof LearnIndexRoute
+  '/learn/$block/$item': typeof LearnBlockItemRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths: '/' | '/learn/$block' | '/learn/' | '/learn/$block/$item'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to: '/' | '/learn/$block' | '/learn' | '/learn/$block/$item'
+  id: '__root__' | '/' | '/learn/$block' | '/learn/' | '/learn/$block/$item'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  LearnBlockRoute: typeof LearnBlockRouteWithChildren
+  LearnIndexRoute: typeof LearnIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +77,46 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/learn/': {
+      id: '/learn/'
+      path: '/learn'
+      fullPath: '/learn/'
+      preLoaderRoute: typeof LearnIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/learn/$block': {
+      id: '/learn/$block'
+      path: '/learn/$block'
+      fullPath: '/learn/$block'
+      preLoaderRoute: typeof LearnBlockRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/learn/$block/$item': {
+      id: '/learn/$block/$item'
+      path: '/$item'
+      fullPath: '/learn/$block/$item'
+      preLoaderRoute: typeof LearnBlockItemRouteImport
+      parentRoute: typeof LearnBlockRoute
+    }
   }
 }
 
+interface LearnBlockRouteChildren {
+  LearnBlockItemRoute: typeof LearnBlockItemRoute
+}
+
+const LearnBlockRouteChildren: LearnBlockRouteChildren = {
+  LearnBlockItemRoute: LearnBlockItemRoute,
+}
+
+const LearnBlockRouteWithChildren = LearnBlockRoute._addFileChildren(
+  LearnBlockRouteChildren,
+)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  LearnBlockRoute: LearnBlockRouteWithChildren,
+  LearnIndexRoute: LearnIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
