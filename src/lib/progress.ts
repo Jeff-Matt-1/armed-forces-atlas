@@ -148,7 +148,7 @@ export function useRecordReview() {
       itemSlug: string;
       blockSlug: string;
       grade: number;
-      current?: ReviewState;
+      current?: ReviewState | undefined;
     }) => {
       if (!user) return;
       const next = schedule(input.current ?? emptyReview, input.grade);

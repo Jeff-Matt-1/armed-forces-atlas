@@ -10,6 +10,9 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AboutRouteImport } from './routes/about'
+import { Route as AuthRouteImport } from './routes/auth'
+import { Route as ProgressRouteImport } from './routes/progress'
 import { Route as ReviewRouteImport } from './routes/review'
 import { Route as DrillFlashcardsRouteImport } from './routes/drill.flashcards'
 import { Route as DrillPhotoIdRouteImport } from './routes/drill.photo-id'
@@ -22,6 +25,21 @@ import { Route as LearnBlockItemRouteImport } from './routes/learn.$block.$item'
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AuthRoute = AuthRouteImport.update({
+  id: '/auth',
+  path: '/auth',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProgressRoute = ProgressRouteImport.update({
+  id: '/progress',
+  path: '/progress',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ReviewRoute = ReviewRouteImport.update({
@@ -67,6 +85,9 @@ const LearnBlockItemRoute = LearnBlockItemRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/auth': typeof AuthRoute
+  '/progress': typeof ProgressRoute
   '/review': typeof ReviewRoute
   '/drill/flashcards': typeof DrillFlashcardsRoute
   '/drill/photo-id': typeof DrillPhotoIdRoute
@@ -78,6 +99,9 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/auth': typeof AuthRoute
+  '/progress': typeof ProgressRoute
   '/review': typeof ReviewRoute
   '/drill/flashcards': typeof DrillFlashcardsRoute
   '/drill/photo-id': typeof DrillPhotoIdRoute
@@ -90,6 +114,9 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/auth': typeof AuthRoute
+  '/progress': typeof ProgressRoute
   '/review': typeof ReviewRoute
   '/drill/flashcards': typeof DrillFlashcardsRoute
   '/drill/photo-id': typeof DrillPhotoIdRoute
@@ -103,6 +130,9 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/about'
+    | '/auth'
+    | '/progress'
     | '/review'
     | '/drill/flashcards'
     | '/drill/photo-id'
@@ -114,6 +144,9 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/about'
+    | '/auth'
+    | '/progress'
     | '/review'
     | '/drill/flashcards'
     | '/drill/photo-id'
@@ -125,6 +158,9 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
+    | '/about'
+    | '/auth'
+    | '/progress'
     | '/review'
     | '/drill/flashcards'
     | '/drill/photo-id'
@@ -137,6 +173,9 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutRoute: typeof AboutRoute
+  AuthRoute: typeof AuthRoute
+  ProgressRoute: typeof ProgressRoute
   ReviewRoute: typeof ReviewRoute
   DrillFlashcardsRoute: typeof DrillFlashcardsRoute
   DrillPhotoIdRoute: typeof DrillPhotoIdRoute
@@ -153,6 +192,27 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/auth': {
+      id: '/auth'
+      path: '/auth'
+      fullPath: '/auth'
+      preLoaderRoute: typeof AuthRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/progress': {
+      id: '/progress'
+      path: '/progress'
+      fullPath: '/progress'
+      preLoaderRoute: typeof ProgressRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/review': {
@@ -228,6 +288,9 @@ const LearnBlockRouteWithChildren = LearnBlockRoute._addFileChildren(
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutRoute: AboutRoute,
+  AuthRoute: AuthRoute,
+  ProgressRoute: ProgressRoute,
   ReviewRoute: ReviewRoute,
   DrillFlashcardsRoute: DrillFlashcardsRoute,
   DrillPhotoIdRoute: DrillPhotoIdRoute,

@@ -9,11 +9,11 @@ import { gradeLabels } from "@/lib/srs";
 import { useAuth } from "@/hooks/useAuth";
 import { cn } from "@/lib/utils";
 
-type Search = { block?: string };
+type Search = { block?: string | undefined };
 
 export const Route = createFileRoute("/drill/flashcards")({
   validateSearch: (search: Record<string, unknown>): Search => ({
-    block: typeof search.block === "string" ? search.block : undefined,
+    block: typeof search["block"] === "string" ? (search["block"] as string) : undefined,
   }),
   head: () => ({
     meta: [

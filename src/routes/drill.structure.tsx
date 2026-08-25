@@ -5,11 +5,11 @@ import { QuizRunner } from "@/components/QuizRunner";
 import { getBlock } from "@/lib/content";
 import { buildPlacementQuiz } from "@/lib/quiz";
 
-type Search = { block?: string };
+type Search = { block?: string | undefined };
 
 export const Route = createFileRoute("/drill/structure")({
   validateSearch: (search: Record<string, unknown>): Search => ({
-    block: typeof search.block === "string" ? search.block : undefined,
+    block: typeof search["block"] === "string" ? (search["block"] as string) : undefined,
   }),
   head: () => ({
     meta: [
