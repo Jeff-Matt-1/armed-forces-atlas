@@ -14,7 +14,150 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      attempts: {
+        Row: {
+          block_slug: string | null
+          created_at: string
+          id: string
+          missed: Json
+          mode: string
+          passed: boolean
+          score: number
+          total: number
+          user_id: string
+        }
+        Insert: {
+          block_slug?: string | null
+          created_at?: string
+          id?: string
+          missed?: Json
+          mode: string
+          passed?: boolean
+          score?: number
+          total?: number
+          user_id: string
+        }
+        Update: {
+          block_slug?: string | null
+          created_at?: string
+          id?: string
+          missed?: Json
+          mode?: string
+          passed?: boolean
+          score?: number
+          total?: number
+          user_id?: string
+        }
+        Relationships: []
+      }
+      block_progress: {
+        Row: {
+          best_score: number
+          block_slug: string
+          exam_passed: boolean
+          mastery: number
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          best_score?: number
+          block_slug: string
+          exam_passed?: boolean
+          mastery?: number
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          best_score?: number
+          block_slug?: string
+          exam_passed?: boolean
+          mastery?: number
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
+      card_reviews: {
+        Row: {
+          block_slug: string
+          due_at: string
+          ease: number
+          interval_days: number
+          item_slug: string
+          lapses: number
+          last_grade: number | null
+          reps: number
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          block_slug: string
+          due_at?: string
+          ease?: number
+          interval_days?: number
+          item_slug: string
+          lapses?: number
+          last_grade?: number | null
+          reps?: number
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          block_slug?: string
+          due_at?: string
+          ease?: number
+          interval_days?: number
+          item_slug?: string
+          lapses?: number
+          last_grade?: number | null
+          reps?: number
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
+      profiles: {
+        Row: {
+          created_at: string
+          display_name: string | null
+          id: string
+        }
+        Insert: {
+          created_at?: string
+          display_name?: string | null
+          id: string
+        }
+        Update: {
+          created_at?: string
+          display_name?: string | null
+          id?: string
+        }
+        Relationships: []
+      }
+      streaks: {
+        Row: {
+          current_streak: number
+          last_study_date: string | null
+          longest_streak: number
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          current_streak?: number
+          last_study_date?: string | null
+          longest_streak?: number
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          current_streak?: number
+          last_study_date?: string | null
+          longest_streak?: number
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
