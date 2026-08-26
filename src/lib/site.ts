@@ -10,7 +10,7 @@
  */
 const configured = import.meta.env["VITE_SITE_URL"] as string | undefined;
 
-export const SITE_URL = (configured ?? "http://localhost:3000").replace(/\/+$/, "");
+export const SITE_URL = (configured ?? "http://localhost:8080").replace(/\/+$/, "");
 
 /** Turn a root-relative asset path into an absolute URL. Passes through absolute inputs. */
 export function absoluteUrl(path: string): string {
