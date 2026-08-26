@@ -44,10 +44,12 @@ function About() {
           artillery-led battle.
         </p>
         <p>
-          Photographs are hotlinked from Wikimedia Commons under their original licences, with the
-          author and licence shown on each card. Where an item is recognised primarily at long range
-          — aircraft, vessels and drones — the corresponding blocks will pair photographs with
-          recognition silhouettes.
+          Photographs come from Wikimedia Commons and are reproduced here under their original
+          licences, with the author and licence shown on each card and linked back to the Commons
+          file page. Copies are served from this site rather than hotlinked, and are resized for
+          web delivery; no other alteration is made. Where an item is recognised primarily at long
+          range — aircraft, vessels and drones — the corresponding blocks will pair photographs
+          with recognition silhouettes.
         </p>
         <p>
           Force-structure placements describe common, openly reported practice. Organisations change;
