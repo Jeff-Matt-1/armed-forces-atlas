@@ -8,7 +8,7 @@
  * Set VITE_SITE_URL in the deploy environment. The fallback only keeps local
  * development working; it is not a valid production origin.
  */
-const configured = import.meta.env.VITE_SITE_URL as string | undefined;
+const configured = import.meta.env["VITE_SITE_URL"] as string | undefined;
 
 export const SITE_URL = (configured ?? "http://localhost:3000").replace(/\/+$/, "");
 
