@@ -38,17 +38,15 @@ function AuthPage() {
     setBusy(true);
     try {
       if (mode === "signup") {
-        const { data, error } = await supabase.auth.signUp({
+        const { error } = await supabase.auth.signUp({
           email,
           password,
           options: { emailRedirectTo: window.location.origin },
         });
         if (error) throw error;
-        if (data.user) {
-          await supabase
-            .from("profiles")
-            .upsert({ id: data.user.id, display_name: email.split("@")[0] ?? null });
-        }
+        // The profile row is created by the on_auth_user_created trigger, not
+        // here: at this point there may be no session yet, so a client insert
+        // would fail RLS silently.
         toast.success("Account created");
       } else {
         const { error } = await supabase.auth.signInWithPassword({ email, password });
@@ -60,21 +58,6 @@ function AuthPage() {
       toast.error(error instanceof Error ? error.message : "Authentication failed");
     } finally {
       setBusy(false);
-    }
-  }
-
-  async function google() {
-    // Native Supabase OAuth rather than Lovable's auth broker: broker-issued
-    // tokens are scoped to the Lovable project and will not validate against
-    // our own. This redirects away, so there is no success path to navigate.
-    setBusy(true);
-    const { error } = await supabase.auth.signInWithOAuth({
-      provider: "google",
-      options: { redirectTo: window.location.origin + "/learn" },
-    });
-    if (error) {
-      setBusy(false);
-      toast.error("Google sign-in failed");
     }
   }
 
@@ -117,16 +100,6 @@ function AuthPage() {
           {mode === "signin" ? "Sign in" : "Create account"}
         </Button>
       </form>
-
-      <div className="my-6 flex items-center gap-3">
-        <span className="h-px flex-1 bg-border" />
-        <span className="plate-label">or</span>
-        <span className="h-px flex-1 bg-border" />
-      </div>
-
-      <Button variant="outline" className="w-full" onClick={() => void google()} disabled={busy}>
-        Continue with Google
-      </Button>
 
       <button
         type="button"
