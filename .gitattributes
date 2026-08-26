@@ -1,0 +1,15 @@
+# Normalize line endings so the repo stays consistent across Windows/macOS/Linux
+* text=auto eol=lf
+
+# Binary assets — never touch
+*.jpg binary
+*.jpeg binary
+*.png binary
+*.webp binary
+*.ico binary
+*.woff binary
+*.woff2 binary
+
+# Generated — collapse in diffs
+src/routeTree.gen.ts linguist-generated=true
+bun.lock linguist-generated=true

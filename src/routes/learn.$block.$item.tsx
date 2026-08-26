@@ -1,6 +1,7 @@
 import { Link, createFileRoute, notFound } from "@tanstack/react-router";
 
 import { getBlock, getItem, itemsOfBlock } from "@/lib/content";
+import { absoluteUrl } from "@/lib/site";
 
 export const Route = createFileRoute("/learn/$block/$item")({
   loader: ({ params }) => {
@@ -25,8 +26,8 @@ export const Route = createFileRoute("/learn/$block/$item")({
     ];
     if (loaderData.imageUrl) {
       meta.push(
-        { property: "og:image", content: loaderData.imageUrl },
-        { name: "twitter:image", content: loaderData.imageUrl },
+        { property: "og:image", content: absoluteUrl(loaderData.imageUrl) },
+        { name: "twitter:image", content: absoluteUrl(loaderData.imageUrl) },
       );
     }
     return { meta };
