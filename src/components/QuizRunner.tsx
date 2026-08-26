@@ -2,6 +2,13 @@ import { Link } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
 
 import { Button } from "@/components/ui/button";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
 import { MasteryRing } from "@/components/MasteryRing";
 import { getItem } from "@/lib/content";
 import { useRecordAttempt } from "@/lib/progress";
@@ -35,9 +42,11 @@ export function QuizRunner({
   const [score, setScore] = useState(0);
   const [finished, setFinished] = useState(false);
   const [saveError, setSaveError] = useState<string | null>(null);
+  const [cardOpen, setCardOpen] = useState(false);
   const recordAttempt = useRecordAttempt();
 
   const question = questions[index];
+  const questionItem = question ? getItem(question.itemSlug) : undefined;
   const total = questions.length;
   const percent = total ? Math.round((score / total) * 100) : 0;
   const passed = percent >= PASS_RATIO * 100;
@@ -238,21 +247,90 @@ export function QuizRunner({
                   : "Finish"
                 : "Next"}
           </Button>
-          <Link
-            to="/learn/$block/$item"
-            params={{
-              block: getItem(question.itemSlug)?.blockSlug ?? "foundations",
-              item: question.itemSlug,
-            }}
-            className="text-xs text-muted-foreground underline-offset-4 hover:underline"
+          <Button
+            type="button"
+            variant="link"
+            size="sm"
+            className="h-auto px-0 text-xs text-muted-foreground"
+            onClick={() => setCardOpen(true)}
           >
             Open the card for this item
-          </Link>
+          </Button>
           </div>
           {saveError && <p className="mt-3 text-sm text-destructive" role="alert">{saveError}</p>}
         </div>
       )}
+
+      <Dialog open={cardOpen} onOpenChange={setCardOpen}>
+        <DialogContent className="max-h-[85vh] max-w-2xl overflow-y-auto p-0 sm:rounded-none">
+          {questionItem && (
+            <>
+              {questionItem.imageUrl && (
+                <img
+                  src={questionItem.imageUrl}
+                  alt={`${questionItem.name} — recognition photograph`}
+                  className="aspect-[16/9] w-full bg-secondary object-cover"
+                />
+              )}
+              <div className="p-5 sm:p-6">
+                <DialogHeader>
+                  <DialogTitle className="designation pr-8 text-2xl">
+                    {questionItem.name}
+                  </DialogTitle>
+                  <DialogDescription>{questionItem.aka ?? "Recognition card"}</DialogDescription>
+                </DialogHeader>
+
+                <div className="mt-5 grid gap-px bg-border sm:grid-cols-2">
+                  <CardPanel title="Recognition cues">
+                    <ul className="space-y-2">
+                      {questionItem.cues.map((cue) => (
+                        <li key={cue} className="flex gap-2 text-sm">
+                          <span className="text-primary">•</span>
+                          <span>{cue}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </CardPanel>
+                  <CardPanel title="Force-structure placement">
+                    <ul className="space-y-2">
+                      {questionItem.placements.map((placement) => (
+                        <li key={placement} className="border-l-2 border-primary pl-3 text-sm">
+                          {placement}
+                        </li>
+                      ))}
+                    </ul>
+                  </CardPanel>
+                  {(questionItem.armament || questionItem.rangeText) && (
+                    <CardPanel title="Armament and range">
+                      {questionItem.armament && <p className="text-sm">{questionItem.armament}</p>}
+                      {questionItem.rangeText && (
+                        <p className="designation mt-2 text-sm text-primary">
+                          {questionItem.rangeText}
+                        </p>
+                      )}
+                    </CardPanel>
+                  )}
+                  {questionItem.doctrineNote && (
+                    <CardPanel title="Employment">
+                      <p className="text-sm text-muted-foreground">{questionItem.doctrineNote}</p>
+                    </CardPanel>
+                  )}
+                </div>
+              </div>
+            </>
+          )}
+        </DialogContent>
+      </Dialog>
     </div>
+  );
+}
+
+function CardPanel({ title, children }: { title: string; children: React.ReactNode }) {
+  return (
+    <section className="bg-card p-4">
+      <h2 className="plate-label">{title}</h2>
+      <div className="mt-3">{children}</div>
+    </section>
   );
 }
 
