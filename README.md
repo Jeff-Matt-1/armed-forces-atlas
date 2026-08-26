@@ -14,15 +14,15 @@ context               placement   pass 80%  across all blocks
 ```
 
 Recognition comes first: what to look at on the hull, turret, wheels and
-antennas — not spec sheets. Doctrinal framing follows Grau & Bartles, *The
-Russian Way of War*, so equipment is understood by the role it plays inside an
+antennas — not spec sheets. Doctrinal framing follows Grau & Bartles, _The
+Russian Way of War_, so equipment is understood by the role it plays inside an
 artillery-led battle rather than as isolated trivia.
 
 ## Status
 
-| Block | State |
-| --- | --- |
-| 0 Foundations, 1 Ranks, 2 Handguns, 9 Tanks | Content complete |
+| Block                                                                                                                                     | State                                   |
+| ----------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------- |
+| 0 Foundations, 1 Ranks, 2 Handguns, 9 Tanks                                                                                               | Content complete                        |
 | 3–8, 10–19 (weapons, vehicles, artillery, IFV/APC, EW, C2, radar, engineering, air defence, recon, vessels, submarines, drones, aircraft) | Structure in place, content in progress |
 
 54 entries, 26 with recognition photographs.
@@ -40,12 +40,12 @@ Copy `.env.example` to `.env` and fill in the values. Supabase holds accounts
 and progress only — all study content is a static TypeScript module, so the app
 browses fine without a backend.
 
-| Script | Purpose |
-| --- | --- |
-| `bun run dev` | Dev server |
-| `bun run build` | Production build |
-| `bun run lint` | ESLint |
-| `bun run format` | Prettier |
+| Script           | Purpose          |
+| ---------------- | ---------------- |
+| `bun run dev`    | Dev server       |
+| `bun run build`  | Production build |
+| `bun run lint`   | ESLint           |
+| `bun run format` | Prettier         |
 
 ## Architecture
 

@@ -37,4 +37,10 @@ export default tseslint.config(
     },
   },
   eslintPluginPrettier,
+  {
+    // Lovable codegen — these files carry a "do not edit directly" header and
+    // are rewritten by the generator, so style fixes here do not survive.
+    files: ["src/integrations/lovable/**", "src/integrations/supabase/previewAuthStorage.ts"],
+    rules: { "prefer-const": "off" },
+  },
 );

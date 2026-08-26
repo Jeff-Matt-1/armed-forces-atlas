@@ -64,9 +64,7 @@ function AuthPage() {
   return (
     <div className="mx-auto w-full max-w-md px-4 py-14">
       <p className="plate-label">Account</p>
-      <h1 className="mt-3 text-3xl">
-        {mode === "signin" ? "Sign in" : "Create an account"}
-      </h1>
+      <h1 className="mt-3 text-3xl">{mode === "signin" ? "Sign in" : "Create an account"}</h1>
       <p className="mt-2 text-sm text-muted-foreground">
         Progress, spaced-repetition scheduling and exam results are stored against your account.
         Study content stays free to browse without one.
@@ -106,9 +104,7 @@ function AuthPage() {
         onClick={() => setMode(mode === "signin" ? "signup" : "signin")}
         className="mt-6 w-full text-center text-sm text-muted-foreground underline-offset-4 hover:underline"
       >
-        {mode === "signin"
-          ? "No account yet? Create one"
-          : "Already registered? Sign in instead"}
+        {mode === "signin" ? "No account yet? Create one" : "Already registered? Sign in instead"}
       </button>
     </div>
   );

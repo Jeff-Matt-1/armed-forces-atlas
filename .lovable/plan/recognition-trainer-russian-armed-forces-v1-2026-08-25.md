@@ -1,6 +1,6 @@
 # Recognition Trainer — Russian Armed Forces (v1)
 
-An open-source visual-recognition and basic-training app. Doctrinal framing follows Grau & Bartles, *The Russian Way of War*. No restricted material — public sources only, every image credited.
+An open-source visual-recognition and basic-training app. Doctrinal framing follows Grau & Bartles, _The Russian Way of War_. No restricted material — public sources only, every image credited.
 
 ## Learning principle
 
@@ -26,6 +26,7 @@ All 19 appear in the app from day one. Filled with real content in v1: **Foundat
 ## Data per object
 
 Every entry carries:
+
 - Designation + NATO/common name, and any nicknames
 - Primary photo (Wikimedia / public domain, with author + licence shown) — plus a **recognition silhouette** for aircraft, vessels and UAVs, since those are identified at long range
 - Recognition cues: 3-5 short "what to look at" points (hull shape, turret, wheel count, exhaust, antenna layout)

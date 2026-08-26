@@ -33,7 +33,10 @@ export const Route = createFileRoute("/exam/$block")({
 function Exam() {
   const { blockSlug, title } = Route.useLoaderData();
   const [seed, setSeed] = useState(0);
-  const { items: questions, built } = useShuffled(() => buildExam(blockSlug, 16), [blockSlug, seed]);
+  const { items: questions, built } = useShuffled(
+    () => buildExam(blockSlug, 16),
+    [blockSlug, seed],
+  );
 
   if (!built) return <DrillSkeleton />;
 

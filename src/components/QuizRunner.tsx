@@ -52,8 +52,7 @@ export function QuizRunner({
   const passed = percent >= PASS_RATIO * 100;
 
   const missedItems = useMemo(
-    () =>
-      [...new Set(missed)].map((slug) => getItem(slug)).filter((item) => item !== undefined),
+    () => [...new Set(missed)].map((slug) => getItem(slug)).filter((item) => item !== undefined),
     [missed],
   );
 
@@ -70,7 +69,10 @@ export function QuizRunner({
     if (picked || !question) return;
     setPicked(option);
     if (option === question.answer) setScore((value) => value + 1);
-    else setMissed((value) => (value.includes(question.itemSlug) ? value : [...value, question.itemSlug]));
+    else
+      setMissed((value) =>
+        value.includes(question.itemSlug) ? value : [...value, question.itemSlug],
+      );
   }
 
   async function advance() {
@@ -238,26 +240,30 @@ export function QuizRunner({
       {picked && (
         <div className="mt-5">
           <div className="flex items-center gap-3">
-          <Button onClick={() => void advance()} disabled={recordAttempt.isPending}>
-            {recordAttempt.isPending
-              ? "Saving…"
-              : index + 1 >= total
-                ? saveError
-                  ? "Try saving again"
-                  : "Finish"
-                : "Next"}
-          </Button>
-          <Button
-            type="button"
-            variant="link"
-            size="sm"
-            className="h-auto px-0 text-xs text-muted-foreground"
-            onClick={() => setCardOpen(true)}
-          >
-            Open the card for this item
-          </Button>
+            <Button onClick={() => void advance()} disabled={recordAttempt.isPending}>
+              {recordAttempt.isPending
+                ? "Saving…"
+                : index + 1 >= total
+                  ? saveError
+                    ? "Try saving again"
+                    : "Finish"
+                  : "Next"}
+            </Button>
+            <Button
+              type="button"
+              variant="link"
+              size="sm"
+              className="h-auto px-0 text-xs text-muted-foreground"
+              onClick={() => setCardOpen(true)}
+            >
+              Open the card for this item
+            </Button>
           </div>
-          {saveError && <p className="mt-3 text-sm text-destructive" role="alert">{saveError}</p>}
+          {saveError && (
+            <p className="mt-3 text-sm text-destructive" role="alert">
+              {saveError}
+            </p>
+          )}
         </div>
       )}
 

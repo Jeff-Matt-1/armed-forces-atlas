@@ -14,9 +14,9 @@ Block briefs, recognition cues, doctrinal notes and force-structure placements
 in `src/content/` are original prose written for this project and released
 under the same MIT terms.
 
-The doctrinal framing draws on Lester W. Grau and Charles K. Bartles, *The
+The doctrinal framing draws on Lester W. Grau and Charles K. Bartles, _The
 Russian Way of War: Force Structure, Tactics, and Modernization of the Russian
-Ground Forces* (Foreign Military Studies Office) — a publicly released study.
+Ground Forces_ (Foreign Military Studies Office) — a publicly released study.
 That work is cited, not reproduced.
 
 **This project uses public sources only.** No restricted, classified, or

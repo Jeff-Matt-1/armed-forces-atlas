@@ -37,23 +37,26 @@ function About() {
         </p>
         <p>
           Doctrinal framing follows Lester W. Grau and Charles K. Bartles,{" "}
-          <em>The Russian Way of War: Force Structure, Tactics, and Modernization of the Russian
-          Ground Forces</em> (Foreign Military Studies Office), a publicly released study. Where an
-          entry carries an employment note, that note reflects the framing in that work: the Russian
-          force is fires-centric, and equipment is best understood by the role it plays inside an
+          <em>
+            The Russian Way of War: Force Structure, Tactics, and Modernization of the Russian
+            Ground Forces
+          </em>{" "}
+          (Foreign Military Studies Office), a publicly released study. Where an entry carries an
+          employment note, that note reflects the framing in that work: the Russian force is
+          fires-centric, and equipment is best understood by the role it plays inside an
           artillery-led battle.
         </p>
         <p>
           Photographs come from Wikimedia Commons and are reproduced here under their original
           licences, with the author and licence shown on each card and linked back to the Commons
-          file page. Copies are served from this site rather than hotlinked, and are resized for
-          web delivery; no other alteration is made. Where an item is recognised primarily at long
-          range — aircraft, vessels and drones — the corresponding blocks will pair photographs
-          with recognition silhouettes.
+          file page. Copies are served from this site rather than hotlinked, and are resized for web
+          delivery; no other alteration is made. Where an item is recognised primarily at long range
+          — aircraft, vessels and drones — the corresponding blocks will pair photographs with
+          recognition silhouettes.
         </p>
         <p>
-          Force-structure placements describe common, openly reported practice. Organisations change;
-          treat placements as typical rather than absolute.
+          Force-structure placements describe common, openly reported practice. Organisations
+          change; treat placements as typical rather than absolute.
         </p>
       </div>
 

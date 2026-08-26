@@ -6,3 +6,13 @@ pnpm-lock.yaml
 package-lock.json
 bun.lock
 routeTree.gen.ts
+
+# Lovable codegen — carries a "do not edit directly" header; formatting it
+# only creates churn when the generator rewrites these files.
+src/integrations/lovable/
+src/integrations/supabase/auth-attacher.ts
+src/integrations/supabase/auth-middleware.ts
+src/integrations/supabase/client.server.ts
+src/integrations/supabase/client.ts
+src/integrations/supabase/cron-auth.ts
+src/integrations/supabase/previewAuthStorage.ts

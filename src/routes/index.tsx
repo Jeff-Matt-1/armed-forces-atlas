@@ -59,7 +59,10 @@ function Home() {
             <Stat label="Blocks" value={`${readyBlocks.length} / ${allBlocks.length}`} />
             <Stat label="Entries" value={String(totalItems)} />
             <Stat label="Due today" value={user ? String(progress.dueSlugs.length) : "—"} />
-            <Stat label="Streak" value={user ? String(progress.streak?.current_streak ?? 0) : "—"} />
+            <Stat
+              label="Streak"
+              value={user ? String(progress.streak?.current_streak ?? 0) : "—"}
+            />
           </dl>
         </div>
       </section>
