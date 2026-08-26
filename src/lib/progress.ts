@@ -204,13 +204,14 @@ export function useRecordAttempt() {
 
       if (input.blockSlug) {
         const percent = input.total ? Math.round((input.score / input.total) * 100) : 0;
-        const { data: existing } = await supabase
+        const { data: existing, error: existingError } = await supabase
           .from("block_progress")
           .select("best_score, exam_passed")
           .eq("block_slug", input.blockSlug)
           .maybeSingle();
+        if (existingError) throw existingError;
 
-        await supabase.from("block_progress").upsert(
+        const { error: progressError } = await supabase.from("block_progress").upsert(
           {
             user_id: user.id,
             block_slug: input.blockSlug,
@@ -221,6 +222,7 @@ export function useRecordAttempt() {
           },
           { onConflict: "user_id,block_slug" },
         );
+        if (progressError) throw progressError;
       }
 
       await touchStreak(user.id);
@@ -252,17 +254,18 @@ export function useAttempts() {
 
 async function touchStreak(userId: string) {
   const today = new Date().toISOString().slice(0, 10);
-  const { data } = await supabase
+  const { data, error: readError } = await supabase
     .from("streaks")
     .select("current_streak, longest_streak, last_study_date")
     .maybeSingle();
+  if (readError) throw readError;
 
   if (data?.last_study_date === today) return;
 
   const yesterday = new Date(Date.now() - 24 * 60 * 60 * 1000).toISOString().slice(0, 10);
   const current = data?.last_study_date === yesterday ? (data.current_streak ?? 0) + 1 : 1;
 
-  await supabase.from("streaks").upsert(
+  const { error: streakError } = await supabase.from("streaks").upsert(
     {
       user_id: userId,
       current_streak: current,
@@ -272,4 +275,5 @@ async function touchStreak(userId: string) {
     },
     { onConflict: "user_id" },
   );
+  if (streakError) throw streakError;
 }
