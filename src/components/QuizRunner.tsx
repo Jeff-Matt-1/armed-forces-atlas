@@ -34,6 +34,7 @@ export function QuizRunner({
   const [missed, setMissed] = useState<string[]>([]);
   const [score, setScore] = useState(0);
   const [finished, setFinished] = useState(false);
+  const [saveError, setSaveError] = useState<string | null>(null);
   const recordAttempt = useRecordAttempt();
 
   const question = questions[index];
@@ -63,19 +64,24 @@ export function QuizRunner({
     else setMissed((value) => (value.includes(question.itemSlug) ? value : [...value, question.itemSlug]));
   }
 
-  function advance() {
+  async function advance() {
     if (index + 1 >= total) {
       const finalScore = score;
       const finalPassed = total ? finalScore / total >= PASS_RATIO : false;
-      setFinished(true);
-      recordAttempt.mutate({
-        blockSlug,
-        mode,
-        score: finalScore,
-        total,
-        passed: finalPassed,
-        missed,
-      });
+      setSaveError(null);
+      try {
+        await recordAttempt.mutateAsync({
+          blockSlug,
+          mode,
+          score: finalScore,
+          total,
+          passed: finalPassed,
+          missed,
+        });
+        setFinished(true);
+      } catch {
+        setSaveError("Your result could not be saved. Check your connection and try again.");
+      }
       return;
     }
     setIndex((value) => value + 1);
@@ -145,6 +151,7 @@ export function QuizRunner({
               setScore(0);
               setMissed([]);
               setFinished(false);
+              setSaveError(null);
               onRestart();
             }}
           >
@@ -220,8 +227,17 @@ export function QuizRunner({
       </div>
 
       {picked && (
-        <div className="mt-5 flex items-center gap-3">
-          <Button onClick={advance}>{index + 1 >= total ? "Finish" : "Next"}</Button>
+        <div className="mt-5">
+          <div className="flex items-center gap-3">
+          <Button onClick={() => void advance()} disabled={recordAttempt.isPending}>
+            {recordAttempt.isPending
+              ? "Saving…"
+              : index + 1 >= total
+                ? saveError
+                  ? "Try saving again"
+                  : "Finish"
+                : "Next"}
+          </Button>
           <Link
             to="/learn/$block/$item"
             params={{
@@ -232,6 +248,8 @@ export function QuizRunner({
           >
             Open the card for this item
           </Link>
+          </div>
+          {saveError && <p className="mt-3 text-sm text-destructive" role="alert">{saveError}</p>}
         </div>
       )}
     </div>
