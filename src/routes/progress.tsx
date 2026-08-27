@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Switch } from "@/components/ui/switch";
 import { Label } from "@/components/ui/label";
+import { LocalOnlyNotice } from "@/components/LocalOnlyNotice";
 import { MasteryRing } from "@/components/MasteryRing";
 import { getItem, plateNumber, readyBlocks } from "@/lib/content";
 import { readGatePreference, useAttempts, useProgress, writeGatePreference } from "@/lib/progress";
@@ -36,25 +37,12 @@ function ProgressPage() {
 
   useEffect(() => setGate(readGatePreference()), []);
 
-  if (!user) {
-    return (
-      <div className="mx-auto w-full max-w-xl px-4 py-16 text-center">
-        <p className="plate-label">Progress</p>
-        <h1 className="mt-3 text-2xl">Sign in to see your progress</h1>
-        <p className="mt-2 text-sm text-muted-foreground">
-          Mastery, streaks and exam history are saved per account.
-        </p>
-        <Button asChild className="mt-6">
-          <Link to="/auth">Sign in</Link>
-        </Button>
-      </div>
-    );
-  }
-
   return (
     <div className="mx-auto w-full max-w-4xl px-4 py-10">
       <p className="plate-label">Training record</p>
       <h1 className="mt-3 text-3xl">Progress</h1>
+
+      {!user && <LocalOnlyNotice />}
 
       <dl className="mt-6 grid grid-cols-2 gap-px border border-border bg-border sm:grid-cols-4">
         <Stat label="Overall mastery" value={`${progress.overall}%`} />

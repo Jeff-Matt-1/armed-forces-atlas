@@ -1,102 +1,99 @@
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
+import { useEffect, useRef, useState } from "react";
 
+import { useAuth } from "@/hooks/useAuth";
 import { supabase } from "@/integrations/supabase/client";
 import { itemsOfBlock, readyBlocks } from "@/lib/content";
+import {
+  advanceStreak,
+  clearLocalProgress,
+  hasLocalProgress,
+  mergeBlock,
+  mergeReview,
+  mergeStreak,
+  readLocalProgress,
+  recordLocalAttempt,
+  recordLocalReview,
+} from "@/lib/local-progress";
+import type { Attempt, BlockProgressRow, CardReview, StreakRow } from "@/lib/progress-types";
 import { emptyReview, schedule, strength, type ReviewState } from "@/lib/srs";
-import { useAuth } from "@/hooks/useAuth";
 
-export type CardReview = {
-  item_slug: string;
-  block_slug: string;
-  ease: number;
-  interval_days: number;
-  reps: number;
-  lapses: number;
-  last_grade: number | null;
-  due_at: string;
-};
-
-export type Attempt = {
-  id: string;
-  block_slug: string | null;
-  mode: string;
-  score: number;
-  total: number;
-  passed: boolean;
-  missed: unknown;
-  created_at: string;
-};
-
-export type BlockProgressRow = {
-  block_slug: string;
-  mastery: number;
-  exam_passed: boolean;
-  best_score: number;
-};
-
-export type StreakRow = {
-  current_streak: number;
-  longest_streak: number;
-  last_study_date: string | null;
-};
+export type { Attempt, BlockProgressRow, CardReview, StreakRow } from "@/lib/progress-types";
 
 const GATE_KEY = "recognition-trainer:unlock-gate";
 
 export function readGatePreference(): boolean {
   if (typeof window === "undefined") return true;
-  return window.localStorage.getItem(GATE_KEY) !== "off";
+  try {
+    return window.localStorage.getItem(GATE_KEY) !== "off";
+  } catch {
+    return true;
+  }
 }
 
 export function writeGatePreference(enabled: boolean) {
-  window.localStorage.setItem(GATE_KEY, enabled ? "on" : "off");
+  try {
+    window.localStorage.setItem(GATE_KEY, enabled ? "on" : "off");
+  } catch {
+    // Preference is a convenience; storage being unavailable is not fatal.
+  }
+}
+
+type Snapshot = {
+  reviews: CardReview[];
+  blocks: BlockProgressRow[];
+  streak: StreakRow | null;
+};
+
+async function fetchRemoteSnapshot(): Promise<Snapshot> {
+  const [reviews, blocks, streak] = await Promise.all([
+    supabase
+      .from("card_reviews")
+      .select("item_slug, block_slug, ease, interval_days, reps, lapses, last_grade, due_at"),
+    supabase.from("block_progress").select("block_slug, mastery, exam_passed, best_score"),
+    supabase
+      .from("streaks")
+      .select("current_streak, longest_streak, last_study_date")
+      .maybeSingle(),
+  ]);
+
+  if (reviews.error) throw reviews.error;
+  if (blocks.error) throw blocks.error;
+  if (streak.error) throw streak.error;
+
+  return {
+    reviews: (reviews.data ?? []) as CardReview[],
+    blocks: (blocks.data ?? []) as BlockProgressRow[],
+    streak: (streak.data ?? null) as StreakRow | null,
+  };
+}
+
+function localSnapshot(): Snapshot {
+  const store = readLocalProgress();
+  return {
+    reviews: Object.values(store.reviews),
+    blocks: Object.values(store.blocks),
+    streak: store.streak,
+  };
 }
 
 export function useProgress() {
   const { user } = useAuth();
   const userId = user?.id ?? null;
 
-  const reviews = useQuery({
-    queryKey: ["card_reviews", userId],
-    enabled: Boolean(userId),
-    queryFn: async (): Promise<CardReview[]> => {
-      const { data, error } = await supabase
-        .from("card_reviews")
-        .select("item_slug, block_slug, ease, interval_days, reps, lapses, last_grade, due_at");
-      if (error) throw error;
-      return (data ?? []) as CardReview[];
-    },
+  const snapshot = useQuery({
+    queryKey: ["progress", userId],
+    queryFn: (): Promise<Snapshot> =>
+      userId ? fetchRemoteSnapshot() : Promise.resolve(localSnapshot()),
   });
 
-  const blockProgress = useQuery({
-    queryKey: ["block_progress", userId],
-    enabled: Boolean(userId),
-    queryFn: async (): Promise<BlockProgressRow[]> => {
-      const { data, error } = await supabase
-        .from("block_progress")
-        .select("block_slug, mastery, exam_passed, best_score");
-      if (error) throw error;
-      return (data ?? []) as BlockProgressRow[];
-    },
-  });
-
-  const streak = useQuery({
-    queryKey: ["streaks", userId],
-    enabled: Boolean(userId),
-    queryFn: async (): Promise<StreakRow | null> => {
-      const { data, error } = await supabase
-        .from("streaks")
-        .select("current_streak, longest_streak, last_study_date")
-        .maybeSingle();
-      if (error) throw error;
-      return (data ?? null) as StreakRow | null;
-    },
-  });
+  const data = snapshot.data ?? { reviews: [], blocks: [], streak: null };
 
   const reviewMap = new Map<string, CardReview>();
-  for (const row of reviews.data ?? []) reviewMap.set(row.item_slug, row);
+  for (const row of data.reviews) reviewMap.set(row.item_slug, row);
 
   const passedBlocks = new Set(
-    (blockProgress.data ?? []).filter((row) => row.exam_passed).map((row) => row.block_slug),
+    data.blocks.filter((row) => row.exam_passed).map((row) => row.block_slug),
   );
 
   function masteryOf(blockSlug: string): number {
@@ -111,11 +108,11 @@ export function useProgress() {
   }
 
   const now = Date.now();
-  const dueSlugs = (reviews.data ?? [])
+  const dueSlugs = data.reviews
     .filter((row) => new Date(row.due_at).getTime() <= now)
     .map((row) => row.item_slug);
 
-  const weakItems = (reviews.data ?? [])
+  const weakItems = data.reviews
     .filter((row) => row.lapses > 0)
     .sort((a, b) => b.lapses - a.lapses)
     .slice(0, 12);
@@ -126,12 +123,12 @@ export function useProgress() {
 
   return {
     isSignedIn: Boolean(userId),
-    loading: reviews.isLoading || blockProgress.isLoading,
-    reviews: reviews.data ?? [],
+    loading: snapshot.isLoading,
+    reviews: data.reviews,
     reviewMap,
-    blockProgress: blockProgress.data ?? [],
+    blockProgress: data.blocks,
     passedBlocks,
-    streak: streak.data ?? null,
+    streak: data.streak,
     dueSlugs,
     weakItems,
     masteryOf,
@@ -139,18 +136,24 @@ export function useProgress() {
   };
 }
 
+type ReviewInput = {
+  itemSlug: string;
+  blockSlug: string;
+  grade: number;
+  current?: ReviewState | undefined;
+};
+
 export function useRecordReview() {
   const { user } = useAuth();
   const queryClient = useQueryClient();
 
   return useMutation({
-    mutationFn: async (input: {
-      itemSlug: string;
-      blockSlug: string;
-      grade: number;
-      current?: ReviewState | undefined;
-    }) => {
-      if (!user) return;
+    mutationFn: async (input: ReviewInput) => {
+      if (!user) {
+        recordLocalReview(input);
+        return;
+      }
+
       const next = schedule(input.current ?? emptyReview, input.grade);
       const { error } = await supabase.from("card_reviews").upsert(
         {
@@ -168,29 +171,32 @@ export function useRecordReview() {
         { onConflict: "user_id,item_slug" },
       );
       if (error) throw error;
-      await touchStreak(user.id);
+      await touchRemoteStreak(user.id);
     },
-    onSuccess: () => {
-      void queryClient.invalidateQueries({ queryKey: ["card_reviews"] });
-      void queryClient.invalidateQueries({ queryKey: ["streaks"] });
-    },
+    onSuccess: () => invalidateProgress(queryClient),
   });
 }
+
+type AttemptInput = {
+  blockSlug: string | null;
+  mode: string;
+  score: number;
+  total: number;
+  passed: boolean;
+  missed: string[];
+};
 
 export function useRecordAttempt() {
   const { user } = useAuth();
   const queryClient = useQueryClient();
 
   return useMutation({
-    mutationFn: async (input: {
-      blockSlug: string | null;
-      mode: string;
-      score: number;
-      total: number;
-      passed: boolean;
-      missed: string[];
-    }) => {
-      if (!user) return;
+    mutationFn: async (input: AttemptInput) => {
+      if (!user) {
+        recordLocalAttempt(input);
+        return;
+      }
+
       const { error } = await supabase.from("attempts").insert({
         user_id: user.id,
         block_slug: input.blockSlug,
@@ -225,22 +231,21 @@ export function useRecordAttempt() {
         if (progressError) throw progressError;
       }
 
-      await touchStreak(user.id);
+      await touchRemoteStreak(user.id);
     },
-    onSuccess: () => {
-      void queryClient.invalidateQueries({ queryKey: ["block_progress"] });
-      void queryClient.invalidateQueries({ queryKey: ["attempts"] });
-      void queryClient.invalidateQueries({ queryKey: ["streaks"] });
-    },
+    onSuccess: () => invalidateProgress(queryClient),
   });
 }
 
 export function useAttempts() {
   const { user } = useAuth();
+  const userId = user?.id ?? null;
+
   return useQuery({
-    queryKey: ["attempts", user?.id ?? null],
-    enabled: Boolean(user),
+    queryKey: ["attempts", userId],
     queryFn: async (): Promise<Attempt[]> => {
+      if (!userId) return readLocalProgress().attempts;
+
       const { data, error } = await supabase
         .from("attempts")
         .select("id, block_slug, mode, score, total, passed, missed, created_at")
@@ -252,28 +257,137 @@ export function useAttempts() {
   });
 }
 
-async function touchStreak(userId: string) {
-  const today = new Date().toISOString().slice(0, 10);
+/**
+ * Folds anonymous progress into the account on first sign-in.
+ *
+ * Runs once per signed-in session, and only when there is something to move.
+ * Local storage is cleared only after every write has succeeded, so a failure
+ * part-way leaves the local copy intact to retry rather than losing the work.
+ */
+export function useMergeLocalProgress() {
+  const { user } = useAuth();
+  const queryClient = useQueryClient();
+  const mergedFor = useRef<string | null>(null);
+  const [merging, setMerging] = useState(false);
+
+  const userId = user?.id ?? null;
+
+  useEffect(() => {
+    if (!userId || mergedFor.current === userId) return;
+
+    if (!hasLocalProgress()) {
+      mergedFor.current = userId;
+      return;
+    }
+
+    mergedFor.current = userId;
+    setMerging(true);
+
+    void mergeLocalIntoAccount(userId)
+      .then(() => {
+        clearLocalProgress();
+        invalidateProgress(queryClient);
+      })
+      .catch(() => {
+        // Leave the local copy alone so the work is not lost, and allow a
+        // later sign-in to retry the merge.
+        mergedFor.current = null;
+      })
+      .finally(() => setMerging(false));
+  }, [userId, queryClient]);
+
+  return { merging };
+}
+
+async function mergeLocalIntoAccount(userId: string): Promise<void> {
+  const local = readLocalProgress();
+  const remote = await fetchRemoteSnapshot();
+  const stamp = new Date().toISOString();
+
+  const remoteReviews = new Map(remote.reviews.map((row) => [row.item_slug, row]));
+  const reviewUpserts = Object.values(local.reviews)
+    .map((localRow) => {
+      const remoteRow = remoteReviews.get(localRow.item_slug);
+      return remoteRow ? mergeReview(localRow, remoteRow) : localRow;
+    })
+    // A merge that resolved to the row already on the server is a no-op.
+    .filter((row) => remoteReviews.get(row.item_slug) !== row)
+    .map((row) => ({ user_id: userId, ...row, updated_at: stamp }));
+
+  if (reviewUpserts.length) {
+    const { error } = await supabase
+      .from("card_reviews")
+      .upsert(reviewUpserts, { onConflict: "user_id,item_slug" });
+    if (error) throw error;
+  }
+
+  const remoteBlocks = new Map(remote.blocks.map((row) => [row.block_slug, row]));
+  const blockUpserts = Object.values(local.blocks)
+    .map((localRow) => {
+      const remoteRow = remoteBlocks.get(localRow.block_slug);
+      return remoteRow ? mergeBlock(localRow, remoteRow) : localRow;
+    })
+    .map((row) => ({ user_id: userId, ...row, updated_at: stamp }));
+
+  if (blockUpserts.length) {
+    const { error } = await supabase
+      .from("block_progress")
+      .upsert(blockUpserts, { onConflict: "user_id,block_slug" });
+    if (error) throw error;
+  }
+
+  if (local.attempts.length) {
+    // Attempts are an append-only history, so local ones are inserted rather
+    // than merged. The id is left to the database instead of reusing the
+    // locally generated one.
+    const { error } = await supabase.from("attempts").insert(
+      local.attempts.map((row) => ({
+        user_id: userId,
+        block_slug: row.block_slug,
+        mode: row.mode,
+        score: row.score,
+        total: row.total,
+        passed: row.passed,
+        // Locally recorded attempts always store a slug array; the row type is
+        // `unknown` only because the column is jsonb.
+        missed: (row.missed ?? []) as string[],
+        created_at: row.created_at,
+      })),
+    );
+    if (error) throw error;
+  }
+
+  const streak = mergeStreak(local.streak, remote.streak);
+  if (streak) {
+    const { error } = await supabase
+      .from("streaks")
+      .upsert({ user_id: userId, ...streak, updated_at: stamp }, { onConflict: "user_id" });
+    if (error) throw error;
+  }
+}
+
+async function touchRemoteStreak(userId: string) {
   const { data, error: readError } = await supabase
     .from("streaks")
     .select("current_streak, longest_streak, last_study_date")
     .maybeSingle();
   if (readError) throw readError;
 
-  if (data?.last_study_date === today) return;
+  const previous = (data ?? null) as StreakRow | null;
+  const next = advanceStreak(previous);
+  // advanceStreak returns the same object when today is already counted.
+  if (previous && next === previous) return;
 
-  const yesterday = new Date(Date.now() - 24 * 60 * 60 * 1000).toISOString().slice(0, 10);
-  const current = data?.last_study_date === yesterday ? (data.current_streak ?? 0) + 1 : 1;
-
-  const { error: streakError } = await supabase.from("streaks").upsert(
-    {
-      user_id: userId,
-      current_streak: current,
-      longest_streak: Math.max(current, data?.longest_streak ?? 0),
-      last_study_date: today,
-      updated_at: new Date().toISOString(),
-    },
-    { onConflict: "user_id" },
-  );
+  const { error: streakError } = await supabase
+    .from("streaks")
+    .upsert(
+      { user_id: userId, ...next, updated_at: new Date().toISOString() },
+      { onConflict: "user_id" },
+    );
   if (streakError) throw streakError;
+}
+
+function invalidateProgress(queryClient: ReturnType<typeof useQueryClient>) {
+  void queryClient.invalidateQueries({ queryKey: ["progress"] });
+  void queryClient.invalidateQueries({ queryKey: ["attempts"] });
 }

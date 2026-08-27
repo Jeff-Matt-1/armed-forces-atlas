@@ -92,21 +92,21 @@ function Flashcards() {
 
   function grade(value: number) {
     const existing = progress.reviewMap.get(card!.slug);
-    if (user) {
-      recordReview.mutate({
-        itemSlug: card!.slug,
-        blockSlug: card!.blockSlug,
-        grade: value,
-        current: existing
-          ? {
-              ease: existing.ease,
-              intervalDays: existing.interval_days,
-              reps: existing.reps,
-              lapses: existing.lapses,
-            }
-          : undefined,
-      });
-    }
+    // Always record. The mutation writes to localStorage when signed out and
+    // to Supabase when signed in, so grading is never thrown away.
+    recordReview.mutate({
+      itemSlug: card!.slug,
+      blockSlug: card!.blockSlug,
+      grade: value,
+      current: existing
+        ? {
+            ease: existing.ease,
+            intervalDays: existing.interval_days,
+            reps: existing.reps,
+            lapses: existing.lapses,
+          }
+        : undefined,
+    });
     setGraded((count) => count + 1);
     setFlipped(false);
     setIndex((i) => i + 1);

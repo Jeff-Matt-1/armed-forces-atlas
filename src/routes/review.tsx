@@ -1,6 +1,7 @@
 import { Link, createFileRoute } from "@tanstack/react-router";
 
 import { Button } from "@/components/ui/button";
+import { LocalOnlyNotice } from "@/components/LocalOnlyNotice";
 import { getItem } from "@/lib/content";
 import { useProgress } from "@/lib/progress";
 import { useAuth } from "@/hooks/useAuth";
@@ -28,27 +29,6 @@ function Review() {
   const { user } = useAuth();
   const progress = useProgress();
 
-  if (!user) {
-    return (
-      <div className="mx-auto w-full max-w-xl px-4 py-16 text-center">
-        <p className="plate-label">Review queue</p>
-        <h1 className="mt-3 text-2xl">Sign in to track retention</h1>
-        <p className="mt-2 text-sm text-muted-foreground">
-          Spaced repetition needs an account so your scheduling survives across sessions and
-          devices. Browsing the blocks works without one.
-        </p>
-        <div className="mt-6 flex justify-center gap-2">
-          <Button asChild>
-            <Link to="/auth">Sign in</Link>
-          </Button>
-          <Button asChild variant="outline">
-            <Link to="/learn">Browse blocks</Link>
-          </Button>
-        </div>
-      </div>
-    );
-  }
-
   const dueItems = progress.dueSlugs.map((slug) => getItem(slug)).filter((i) => i !== undefined);
 
   return (
@@ -60,6 +40,8 @@ function Review() {
           ? "Nothing is due right now. Grade some new cards to build the queue."
           : `${dueItems.length} card${dueItems.length === 1 ? "" : "s"} scheduled for review.`}
       </p>
+
+      {!user && <LocalOnlyNotice />}
 
       <div className="mt-6 flex gap-2">
         <Button asChild>

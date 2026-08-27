@@ -2,6 +2,7 @@ import { Link } from "@tanstack/react-router";
 import type { ReactNode } from "react";
 
 import { useAuth } from "@/hooks/useAuth";
+import { useMergeLocalProgress } from "@/lib/progress";
 import { Button } from "@/components/ui/button";
 
 const NAV = [
@@ -13,6 +14,9 @@ const NAV = [
 
 export function AppShell({ children }: { children: ReactNode }) {
   const { user, signOut } = useAuth();
+  // Mounted inside AuthProvider, so this is the one place guaranteed to see
+  // every sign-in and fold anonymous study into the account exactly once.
+  useMergeLocalProgress();
 
   return (
     <div className="flex min-h-screen flex-col bg-background">
