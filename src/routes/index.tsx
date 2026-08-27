@@ -4,7 +4,6 @@ import { Button } from "@/components/ui/button";
 import { MasteryRing } from "@/components/MasteryRing";
 import { allBlocks, plateNumber, readyBlocks, studyableItems } from "@/lib/content";
 import { useProgress } from "@/lib/progress";
-import { useAuth } from "@/hooks/useAuth";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -27,7 +26,6 @@ export const Route = createFileRoute("/")({
 });
 
 function Home() {
-  const { user } = useAuth();
   const progress = useProgress();
   const totalItems = studyableItems().length;
 
@@ -58,11 +56,8 @@ function Home() {
           <dl className="mt-12 grid max-w-3xl grid-cols-2 gap-px border border-border bg-border sm:grid-cols-4">
             <Stat label="Blocks" value={`${readyBlocks.length} / ${allBlocks.length}`} />
             <Stat label="Entries" value={String(totalItems)} />
-            <Stat label="Due today" value={user ? String(progress.dueSlugs.length) : "—"} />
-            <Stat
-              label="Streak"
-              value={user ? String(progress.streak?.current_streak ?? 0) : "—"}
-            />
+            <Stat label="Due today" value={String(progress.dueSlugs.length)} />
+            <Stat label="Streak" value={String(progress.streak?.current_streak ?? 0)} />
           </dl>
         </div>
       </section>
@@ -93,7 +88,7 @@ function Home() {
                 <span className="designation text-xs text-primary">
                   {plateNumber(block.ordinal)}
                 </span>
-                <MasteryRing value={user ? progress.masteryOf(block.slug) : 0} />
+                <MasteryRing value={progress.masteryOf(block.slug)} />
               </div>
               <h3 className="mt-4 text-lg leading-tight">{block.title}</h3>
               <p className="mt-1 text-xs text-muted-foreground">{block.subtitle}</p>

@@ -4,7 +4,6 @@ import { Lock } from "lucide-react";
 import { MasteryRing } from "@/components/MasteryRing";
 import { allBlocks, blockItemCount, isBlockUnlocked, plateNumber } from "@/lib/content";
 import { readGatePreference, useProgress } from "@/lib/progress";
-import { useAuth } from "@/hooks/useAuth";
 import { cn } from "@/lib/utils";
 import { useEffect, useState } from "react";
 
@@ -28,7 +27,6 @@ export const Route = createFileRoute("/learn/")({
 });
 
 function BlockIndex() {
-  const { user } = useAuth();
   const progress = useProgress();
   const [gate, setGate] = useState(true);
 
@@ -48,7 +46,7 @@ function BlockIndex() {
           const ready = block.status === "ready";
           const unlocked = isBlockUnlocked(block.slug, progress.passedBlocks, gate);
           const count = blockItemCount(block.slug);
-          const mastery = user ? progress.masteryOf(block.slug) : 0;
+          const mastery = progress.masteryOf(block.slug);
 
           const body = (
             <>

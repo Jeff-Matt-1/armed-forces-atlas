@@ -70,7 +70,7 @@ function Flashcards() {
         <p className="mt-2 text-sm text-muted-foreground">
           {user
             ? "Scheduling saved. Check the review queue for what is due next."
-            : "Sign in to save scheduling and keep your progress across devices."}
+            : "Scheduling saved on this device. Sign in to sync it across devices — what you have already studied comes with you."}
         </p>
         <div className="mt-6 flex justify-center gap-2">
           <Button

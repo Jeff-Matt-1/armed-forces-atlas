@@ -4,7 +4,6 @@ import { Button } from "@/components/ui/button";
 import { MasteryRing } from "@/components/MasteryRing";
 import { getBlock, itemsOfBlock, plateNumber } from "@/lib/content";
 import { useProgress } from "@/lib/progress";
-import { useAuth } from "@/hooks/useAuth";
 
 export const Route = createFileRoute("/learn/$block")({
   loader: ({ params }) => {
@@ -37,7 +36,6 @@ function BlockDetail() {
   const { blockSlug } = Route.useLoaderData();
   const block = getBlock(blockSlug)!;
   const items = itemsOfBlock(blockSlug);
-  const { user } = useAuth();
   const progress = useProgress();
 
   return (
@@ -50,7 +48,7 @@ function BlockDetail() {
               <h1 className="mt-3 text-3xl">{block.title}</h1>
               <p className="mt-2 text-sm text-muted-foreground">{block.subtitle}</p>
             </div>
-            {user && <MasteryRing value={progress.masteryOf(block.slug)} size={64} />}
+            <MasteryRing value={progress.masteryOf(block.slug)} size={64} />
           </div>
 
           {block.brief && (
