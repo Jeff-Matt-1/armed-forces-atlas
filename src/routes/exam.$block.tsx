@@ -1,7 +1,8 @@
-import { createFileRoute, notFound } from "@tanstack/react-router";
+import { Link, createFileRoute, notFound } from "@tanstack/react-router";
 import { useState } from "react";
 
 import { DrillSkeleton, QuizRunner } from "@/components/QuizRunner";
+import { Button } from "@/components/ui/button";
 import { getBlock } from "@/lib/content";
 import { buildExam } from "@/lib/quiz";
 import { useShuffled } from "@/hooks/useShuffled";
@@ -39,6 +40,32 @@ function Exam() {
   );
 
   if (!built) return <DrillSkeleton />;
+
+  // A block can be marked ready and still yield no questions if its entries
+  // lack the fields the generators need. Say so plainly rather than rendering
+  // an empty page that looks broken and silently blocks the unlock chain.
+  if (questions.length === 0) {
+    return (
+      <div className="mx-auto w-full max-w-xl px-4 py-16 text-center">
+        <p className="plate-label">Block exam</p>
+        <h1 className="mt-3 text-2xl">No exam available for {title} yet</h1>
+        <p className="mt-2 text-sm text-muted-foreground">
+          This block does not yet carry enough data to build questions from. Study the cards and
+          drills in the meantime — the exam opens once the block is filled out.
+        </p>
+        <div className="mt-6 flex justify-center gap-2">
+          <Button asChild>
+            <Link to="/learn/$block" params={{ block: blockSlug }}>
+              Back to the block
+            </Link>
+          </Button>
+          <Button asChild variant="outline">
+            <Link to="/learn">All blocks</Link>
+          </Button>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <QuizRunner

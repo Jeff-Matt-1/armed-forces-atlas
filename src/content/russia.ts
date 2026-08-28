@@ -1,5 +1,5 @@
 // AUTO-AUTHORED CONTENT — open-source, public-source material only.
-// Photographs are hotlinked from Wikimedia Commons with author + licence recorded.
+// Photographs are copied from Wikimedia Commons with author + licence recorded.
 export type Block = {
   slug: string;
   ordinal: number;
@@ -8,6 +8,13 @@ export type Block = {
   brief: string | null;
   doctrineNote: string | null;
   status: "ready" | "wip";
+  /**
+   * Items in this block form a meaningful sequence — rank seniority — so the
+   * exam can ask ordering questions that the recognition types cannot cover.
+   * Ranks carry no photograph, no armament and only two placements, so without
+   * this its exam generates nothing at all.
+   */
+  ordered?: boolean;
 };
 
 export type Item = {
@@ -50,6 +57,7 @@ export const blocks: Block[] = [
     doctrineNote:
       "Command echelon matters more than the title. A podpolkovnik commanding a battalion tactical grouping holds real combined-arms authority; the equivalent staff officer does not.",
     status: "ready",
+    ordered: true,
   },
   {
     slug: "handguns",
