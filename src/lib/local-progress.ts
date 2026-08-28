@@ -157,6 +157,20 @@ export function recordLocalAttempt(input: {
       block_slug: input.blockSlug,
       mastery: existing?.mastery ?? 0,
       best_score: Math.max(percent, existing?.best_score ?? 0),
+      // Per-mode bests, mirroring the Supabase path so mastery is identical
+      // whether or not the user is signed in.
+      best_photo_id:
+        input.mode === "photo-id"
+          ? Math.max(percent, existing?.best_photo_id ?? 0)
+          : (existing?.best_photo_id ?? 0),
+      best_structure:
+        input.mode === "structure"
+          ? Math.max(percent, existing?.best_structure ?? 0)
+          : (existing?.best_structure ?? 0),
+      best_exam:
+        input.mode === "exam"
+          ? Math.max(percent, existing?.best_exam ?? 0)
+          : (existing?.best_exam ?? 0),
       exam_passed: (existing?.exam_passed ?? false) || (input.mode === "exam" && input.passed),
     };
   }
@@ -188,6 +202,9 @@ export function mergeBlock(local: BlockProgressRow, remote: BlockProgressRow): B
     block_slug: remote.block_slug,
     mastery: Math.max(local.mastery, remote.mastery),
     best_score: Math.max(local.best_score, remote.best_score),
+    best_photo_id: Math.max(local.best_photo_id ?? 0, remote.best_photo_id ?? 0),
+    best_structure: Math.max(local.best_structure ?? 0, remote.best_structure ?? 0),
+    best_exam: Math.max(local.best_exam ?? 0, remote.best_exam ?? 0),
     exam_passed: local.exam_passed || remote.exam_passed,
   };
 }

@@ -16,7 +16,8 @@ import {
   recordLocalReview,
 } from "@/lib/local-progress";
 import type { Attempt, BlockProgressRow, CardReview, StreakRow } from "@/lib/progress-types";
-import { emptyReview, schedule, strength, type ReviewState } from "@/lib/srs";
+import { masteryBreakdown, type MasteryBreakdown } from "@/lib/mastery";
+import { emptyReview, schedule, type ReviewState } from "@/lib/srs";
 
 export type { Attempt, BlockProgressRow, CardReview, StreakRow } from "@/lib/progress-types";
 
@@ -50,7 +51,11 @@ async function fetchRemoteSnapshot(): Promise<Snapshot> {
     supabase
       .from("card_reviews")
       .select("item_slug, block_slug, ease, interval_days, reps, lapses, last_grade, due_at"),
-    supabase.from("block_progress").select("block_slug, mastery, exam_passed, best_score"),
+    supabase
+      .from("block_progress")
+      .select(
+        "block_slug, mastery, exam_passed, best_score, best_photo_id, best_structure, best_exam",
+      ),
     supabase
       .from("streaks")
       .select("current_streak, longest_streak, last_study_date")
@@ -96,15 +101,15 @@ export function useProgress() {
     data.blocks.filter((row) => row.exam_passed).map((row) => row.block_slug),
   );
 
+  const blockBySlug = new Map(data.blocks.map((row) => [row.block_slug, row]));
+
+  function breakdownOf(blockSlug: string): MasteryBreakdown {
+    const slugs = itemsOfBlock(blockSlug).map((item) => item.slug);
+    return masteryBreakdown(slugs, reviewMap, blockBySlug.get(blockSlug));
+  }
+
   function masteryOf(blockSlug: string): number {
-    const items = itemsOfBlock(blockSlug);
-    if (items.length === 0) return 0;
-    const total = items.reduce((sum, item) => {
-      const row = reviewMap.get(item.slug);
-      return sum + (row ? strength({ intervalDays: row.interval_days, reps: row.reps }) : 0);
-    }, 0);
-    const examBonus = passedBlocks.has(blockSlug) ? 0.15 : 0;
-    return Math.min(100, Math.round((total / items.length + examBonus) * 100));
+    return breakdownOf(blockSlug).total;
   }
 
   const now = Date.now();
@@ -132,6 +137,7 @@ export function useProgress() {
     dueSlugs,
     weakItems,
     masteryOf,
+    breakdownOf,
     overall,
   };
 }
@@ -212,7 +218,7 @@ export function useRecordAttempt() {
         const percent = input.total ? Math.round((input.score / input.total) * 100) : 0;
         const { data: existing, error: existingError } = await supabase
           .from("block_progress")
-          .select("best_score, exam_passed")
+          .select("best_score, exam_passed, best_photo_id, best_structure, best_exam")
           .eq("block_slug", input.blockSlug)
           .maybeSingle();
         if (existingError) throw existingError;
@@ -222,6 +228,19 @@ export function useRecordAttempt() {
             user_id: user.id,
             block_slug: input.blockSlug,
             best_score: Math.max(percent, existing?.best_score ?? 0),
+            // Per-mode bests, so mastery can reflect each activity separately.
+            best_photo_id:
+              input.mode === "photo-id"
+                ? Math.max(percent, existing?.best_photo_id ?? 0)
+                : (existing?.best_photo_id ?? 0),
+            best_structure:
+              input.mode === "structure"
+                ? Math.max(percent, existing?.best_structure ?? 0)
+                : (existing?.best_structure ?? 0),
+            best_exam:
+              input.mode === "exam"
+                ? Math.max(percent, existing?.best_exam ?? 0)
+                : (existing?.best_exam ?? 0),
             exam_passed:
               (existing?.exam_passed ?? false) || (input.mode === "exam" && input.passed),
             updated_at: new Date().toISOString(),

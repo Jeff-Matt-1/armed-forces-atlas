@@ -46,24 +46,36 @@ export type Database = {
       };
       block_progress: {
         Row: {
+          best_exam: number;
+          best_photo_id: number;
           best_score: number;
+          best_structure: number;
           block_slug: string;
+          cards_seen: number;
           exam_passed: boolean;
           mastery: number;
           updated_at: string;
           user_id: string;
         };
         Insert: {
+          best_exam?: number;
+          best_photo_id?: number;
           best_score?: number;
+          best_structure?: number;
           block_slug: string;
+          cards_seen?: number;
           exam_passed?: boolean;
           mastery?: number;
           updated_at?: string;
           user_id: string;
         };
         Update: {
+          best_exam?: number;
+          best_photo_id?: number;
           best_score?: number;
+          best_structure?: number;
           block_slug?: string;
+          cards_seen?: number;
           exam_passed?: boolean;
           mastery?: number;
           updated_at?: string;

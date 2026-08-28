@@ -24,7 +24,16 @@ function review(over: Partial<CardReview> = {}): CardReview {
 }
 
 function block(over: Partial<BlockProgressRow> = {}): BlockProgressRow {
-  return { block_slug: "tanks", mastery: 0, exam_passed: false, best_score: 0, ...over };
+  return {
+    block_slug: "tanks",
+    mastery: 0,
+    exam_passed: false,
+    best_score: 0,
+    best_photo_id: 0,
+    best_structure: 0,
+    best_exam: 0,
+    ...over,
+  };
 }
 
 function streak(over: Partial<StreakRow> = {}): StreakRow {

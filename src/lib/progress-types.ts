@@ -31,7 +31,11 @@ export type BlockProgressRow = {
   block_slug: string;
   mastery: number;
   exam_passed: boolean;
+  /** Best score across any mode. Kept for continuity; mastery uses the per-mode fields. */
   best_score: number;
+  best_photo_id: number;
+  best_structure: number;
+  best_exam: number;
 };
 
 export type StreakRow = {
