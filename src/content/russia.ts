@@ -1,47 +1,12 @@
 // AUTO-AUTHORED CONTENT — open-source, public-source material only.
 // Photographs are copied from Wikimedia Commons with author + licence recorded.
-export type Block = {
-  slug: string;
-  ordinal: number;
-  title: string;
-  subtitle: string | null;
-  brief: string | null;
-  doctrineNote: string | null;
-  status: "ready" | "wip";
-  /**
-   * Items in this block form a meaningful sequence — rank seniority — so the
-   * exam can ask ordering questions that the recognition types cannot cover.
-   * Ranks carry no photograph, no armament and only two placements, so without
-   * this its exam generates nothing at all.
-   */
-  ordered?: boolean;
-  /**
-   * How this block's imagery should sit in its frame. Vehicle photographs are
-   * landscape and fill the 16:9 slots, but rank insignia are tall portrait
-   * shoulder boards — cropping those to fill would cut away the stars and
-   * stripes that identify the rank.
-   */
-  imageFit?: "cover" | "contain";
-};
+//
+// Entries for blocks filled after the first release live in ./items/<block>.ts
+// and are concatenated below; this file keeps the original four blocks inline.
+import { heavyWeapons } from "@/content/items/heavy-weapons";
+import type { Block, Item } from "@/content/types";
 
-export type Item = {
-  slug: string;
-  blockSlug: string;
-  name: string;
-  aka: string | null;
-  imageUrl: string | null;
-  imageCredit: string | null;
-  imagePage: string | null;
-  armament: string | null;
-  rangeText: string | null;
-  cues: string[];
-  placements: string[];
-  doctrineNote: string | null;
-  crew: string | null;
-  service: string | null;
-  sort: number;
-};
-
+export type { Block, Item } from "@/content/types";
 export const blocks: Block[] = [
   {
     slug: "foundations",
@@ -83,9 +48,11 @@ export const blocks: Block[] = [
     ordinal: 3,
     title: "Heavy, Squad and Specialized Weapons",
     subtitle: "Machine guns, grenade launchers, ATGMs, flame systems",
-    brief: null,
-    doctrineNote: null,
-    status: "wip",
+    brief:
+      "Everything the infantry carries that is heavier than a rifle and lighter than a gun battery. Recognition here rests on mount, feed and tube diameter rather than overall silhouette: a belt from the side and a heavy barrel means a machine gun, a drum and a stubby barrel means an automatic grenade launcher, a flared cone means a recoilless launcher. Learn which weapon sits at which echelon — that is what tells you the size of the force you are looking at.",
+    doctrineNote:
+      "These are suppression weapons, not killing weapons. Grau & Bartles describe Russian infantry using organic automatic fire to fix an enemy in place so that artillery can destroy it; the crew-served layer exists to hold the enemy still.",
+    status: "ready",
   },
   {
     slug: "light-vehicles",
@@ -235,7 +202,7 @@ export const blocks: Block[] = [
   },
 ];
 
-export const items: Item[] = [
+const baseItems: Item[] = [
   {
     slug: "concept-mbt",
     blockSlug: "foundations",
@@ -1347,3 +1314,6 @@ export const items: Item[] = [
     sort: 8,
   },
 ];
+
+/** Blocks authored after the first release, kept in their own modules. */
+export const items: Item[] = [...baseItems, ...heavyWeapons];

@@ -1,5 +1,55 @@
 [
   {
+    "slug": "2b14-podnos",
+    "file": "File:2B14 Podnos at \"Engineering Technologies 2010\" forum.jpg",
+    "localPath": "/images/items/2b14-podnos.jpg",
+    "imageCredit": "CC BY-SA 3.0 — Nockson",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:2B14_Podnos_at_%22Engineering_Technologies_2010%22_forum.jpg",
+    "licence": "CC BY-SA 3.0",
+    "artist": "Nockson",
+    "attributionRequired": true
+  },
+  {
+    "slug": "ags-17",
+    "file": "File:AGS-17 grenade launcher - RaceofHeroes-part2-15.jpg",
+    "localPath": "/images/items/ags-17.jpg",
+    "imageCredit": "CC BY-SA 4.0 — Vitaly V. Kuzmin",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:AGS-17_grenade_launcher_-_RaceofHeroes-part2-15.jpg",
+    "licence": "CC BY-SA 4.0",
+    "artist": "Vitaly V. Kuzmin",
+    "attributionRequired": true
+  },
+  {
+    "slug": "kord",
+    "file": "File:Kord 6P50.jpg",
+    "localPath": "/images/items/kord.jpg",
+    "imageCredit": "CC BY-SA 3.0 — Sergeev Pavel",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:Kord_6P50.jpg",
+    "licence": "CC BY-SA 3.0",
+    "artist": "Sergeev Pavel",
+    "attributionRequired": true
+  },
+  {
+    "slug": "kornet",
+    "file": "File:9M133 Kornet.JPG",
+    "localPath": "/images/items/kornet.jpg",
+    "imageCredit": "CC BY-SA 3.0 — Mike1979 Russia",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:9M133_Kornet.JPG",
+    "licence": "CC BY-SA 3.0",
+    "artist": "Mike1979 Russia",
+    "attributionRequired": true
+  },
+  {
+    "slug": "pkp-pecheneg",
+    "file": "File:PKP Pecheneg machine gun - RaceofHeroes-part2-19.jpg",
+    "localPath": "/images/items/pkp-pecheneg.jpg",
+    "imageCredit": "CC BY-SA 4.0 — Vitaly V. Kuzmin",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:PKP_Pecheneg_machine_gun_-_RaceofHeroes-part2-19.jpg",
+    "licence": "CC BY-SA 4.0",
+    "artist": "Vitaly V. Kuzmin",
+    "attributionRequired": true
+  },
+  {
     "slug": "rank-general-leytenant",
     "file": "File:Russia-Army-OF-7-2010.svg",
     "localPath": "/images/items/rank-general-leytenant.png",
@@ -278,5 +328,25 @@
     "licence": "CC BY-SA 4.0",
     "artist": "Skjoldbro",
     "attributionRequired": true
+  },
+  {
+    "slug": "rpg-7",
+    "file": "File:RPG-7V1 grenade launcher - RaceofHeroes-part2-22.jpg",
+    "localPath": "/images/items/rpg-7.jpg",
+    "imageCredit": "CC BY-SA 4.0 — Vitaly V. Kuzmin",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:RPG-7V1_grenade_launcher_-_RaceofHeroes-part2-22.jpg",
+    "licence": "CC BY-SA 4.0",
+    "artist": "Vitaly V. Kuzmin",
+    "attributionRequired": true
+  },
+  {
+    "slug": "rpo-a-shmel",
+    "file": "File:RPO-A missile and launcher.jpg",
+    "localPath": "/images/items/rpo-a-shmel.jpg",
+    "imageCredit": "Public domain — User Megapixie on en.wikipedia",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:RPO-A_missile_and_launcher.jpg",
+    "licence": "Public domain",
+    "artist": "User Megapixie on en.wikipedia",
+    "attributionRequired": false
   }
 ]

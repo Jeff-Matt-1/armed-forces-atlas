@@ -23,10 +23,9 @@ const CREDITS = "scripts/sources/credits.json";
  * "429 ... does not comply with our robot policy". Set COMMONS_CONTACT to a
  * URL or email you are happy to publish to Wikimedia.
  */
-const CONTACT = Bun.env["COMMONS_CONTACT"]?.trim();
-const UA = CONTACT
-  ? `ArmedForcesAtlas/0.1 (${CONTACT}) bun/${Bun.version}`
-  : `ArmedForcesAtlas/0.1 (educational recognition trainer; no contact configured) bun/${Bun.version}`;
+const CONTACT =
+  Bun.env["COMMONS_CONTACT"]?.trim() || "https://github.com/Jeff-Matt-1/armed-forces-atlas";
+const UA = `ArmedForcesAtlas/0.1 (${CONTACT}) bun/${Bun.version}`;
 
 /** Thumbnail width. Insignia need far less than a vehicle photograph. */
 const DEFAULT_WIDTH = 1280;
