@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { DrillSkeleton, EmptyState } from "@/components/QuizRunner";
 import { useShuffled } from "@/hooks/useShuffled";
-import { readyBlocks, studyableItems, type Item } from "@/lib/content";
+import { imageFitClass, readyBlocks, studyableItems, type Item } from "@/lib/content";
 import { useProgress, useRecordReview } from "@/lib/progress";
 import { gradeLabels } from "@/lib/srs";
 import { useAuth } from "@/hooks/useAuth";
@@ -132,7 +132,7 @@ function Flashcards() {
           <img
             src={card.imageUrl}
             alt="Recognition card"
-            className="aspect-[16/9] w-full bg-secondary object-cover"
+            className={`aspect-[16/9] w-full bg-secondary ${imageFitClass(card.slug)}`}
           />
         ) : (
           <div className="flex aspect-[16/6] w-full items-center justify-center bg-secondary p-6 text-center">

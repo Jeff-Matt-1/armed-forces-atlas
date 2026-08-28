@@ -1,6 +1,6 @@
 import { Link, createFileRoute, notFound } from "@tanstack/react-router";
 
-import { getBlock, getItem, itemsOfBlock } from "@/lib/content";
+import { getBlock, getItem, imageFitClass, itemsOfBlock } from "@/lib/content";
 import { absoluteUrl } from "@/lib/site";
 
 export const Route = createFileRoute("/learn/$block/$item")({
@@ -59,7 +59,7 @@ function ItemDetail() {
           <img
             src={item.imageUrl}
             alt={`${item.name} — recognition photograph`}
-            className="aspect-[16/9] w-full bg-secondary object-cover"
+            className={`aspect-[16/9] w-full bg-secondary ${imageFitClass(item.slug)}`}
           />
           <figcaption className="border-t border-border px-4 py-2 text-[11px] text-muted-foreground">
             {item.imagePage ? (

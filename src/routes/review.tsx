@@ -2,7 +2,7 @@ import { Link, createFileRoute } from "@tanstack/react-router";
 
 import { Button } from "@/components/ui/button";
 import { LocalOnlyNotice } from "@/components/LocalOnlyNotice";
-import { getItem } from "@/lib/content";
+import { getItem, imageFitClass } from "@/lib/content";
 import { useProgress } from "@/lib/progress";
 import { useAuth } from "@/hooks/useAuth";
 
@@ -66,7 +66,7 @@ function Review() {
                     src={item.imageUrl}
                     alt={item.name}
                     loading="lazy"
-                    className="h-11 w-16 bg-secondary object-cover"
+                    className={`h-11 w-16 bg-secondary ${imageFitClass(item.slug)}`}
                   />
                 ) : (
                   <span className="h-11 w-16 bg-secondary" />

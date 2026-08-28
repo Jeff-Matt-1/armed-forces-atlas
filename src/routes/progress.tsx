@@ -6,7 +6,7 @@ import { Switch } from "@/components/ui/switch";
 import { Label } from "@/components/ui/label";
 import { LocalOnlyNotice } from "@/components/LocalOnlyNotice";
 import { MasteryRing } from "@/components/MasteryRing";
-import { getItem, plateNumber, readyBlocks } from "@/lib/content";
+import { getItem, imageFitClass, plateNumber, readyBlocks } from "@/lib/content";
 import { readGatePreference, useAttempts, useProgress, writeGatePreference } from "@/lib/progress";
 import { useAuth } from "@/hooks/useAuth";
 
@@ -106,7 +106,7 @@ function ProgressPage() {
                         src={item.imageUrl}
                         alt={item.name}
                         loading="lazy"
-                        className="h-10 w-14 bg-secondary object-cover"
+                        className={`h-10 w-14 bg-secondary ${imageFitClass(item.slug)}`}
                       />
                     ) : (
                       <span className="h-10 w-14 bg-secondary" />

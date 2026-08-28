@@ -40,6 +40,17 @@ export function allPlacements(blockSlugs?: string[]): string[] {
   return [...set];
 }
 
+/**
+ * Tailwind object-fit class for a block's imagery. Portrait insignia must be
+ * contained rather than cropped to fill, or the identifying detail is lost.
+ * Takes an item slug so callers holding only a question or card can use it.
+ */
+export function imageFitClass(itemSlug: string | undefined): string {
+  const item = itemSlug ? getItem(itemSlug) : undefined;
+  const block = item ? getBlock(item.blockSlug) : undefined;
+  return block?.imageFit === "contain" ? "object-contain p-2" : "object-cover";
+}
+
 export function blockItemCount(slug: string): number {
   return allItems.filter((i) => i.blockSlug === slug).length;
 }

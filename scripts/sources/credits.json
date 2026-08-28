@@ -1,10 +1,150 @@
 [
   {
+    "slug": "rank-general-leytenant",
+    "file": "File:Russia-Army-OF-7-2010.svg",
+    "localPath": "/images/items/rank-general-leytenant.png",
+    "imageCredit": "CC BY-SA 4.0 — Skjoldbro",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:Russia-Army-OF-7-2010.svg",
+    "licence": "CC BY-SA 4.0",
+    "artist": "Skjoldbro",
+    "attributionRequired": true
+  },
+  {
+    "slug": "rank-general-mayor",
+    "file": "File:Russia-Army-OF-6-2010.svg",
+    "localPath": "/images/items/rank-general-mayor.png",
+    "imageCredit": "CC BY-SA 4.0 — Skjoldbro",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:Russia-Army-OF-6-2010.svg",
+    "licence": "CC BY-SA 4.0",
+    "artist": "Skjoldbro",
+    "attributionRequired": true
+  },
+  {
+    "slug": "rank-general-polkovnik",
+    "file": "File:Russia-Army-OF-8-2010.svg",
+    "localPath": "/images/items/rank-general-polkovnik.png",
+    "imageCredit": "CC BY-SA 4.0 — Skjoldbro",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:Russia-Army-OF-8-2010.svg",
+    "licence": "CC BY-SA 4.0",
+    "artist": "Skjoldbro",
+    "attributionRequired": true
+  },
+  {
+    "slug": "rank-kapitan",
+    "file": "File:Russia-Army-OF-2-2010.svg",
+    "localPath": "/images/items/rank-kapitan.png",
+    "imageCredit": "CC BY-SA 4.0 — Skjoldbro",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:Russia-Army-OF-2-2010.svg",
+    "licence": "CC BY-SA 4.0",
+    "artist": "Skjoldbro",
+    "attributionRequired": true
+  },
+  {
+    "slug": "rank-leytenant",
+    "file": "File:Russia-Army-OF-1b-2010.svg",
+    "localPath": "/images/items/rank-leytenant.png",
+    "imageCredit": "CC BY-SA 4.0 — Skjoldbro",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:Russia-Army-OF-1b-2010.svg",
+    "licence": "CC BY-SA 4.0",
+    "artist": "Skjoldbro",
+    "attributionRequired": true
+  },
+  {
+    "slug": "rank-mayor",
+    "file": "File:Russia-Army-OF-3-2010.svg",
+    "localPath": "/images/items/rank-mayor.png",
+    "imageCredit": "CC BY-SA 4.0 — Skjoldbro",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:Russia-Army-OF-3-2010.svg",
+    "licence": "CC BY-SA 4.0",
+    "artist": "Skjoldbro",
+    "attributionRequired": true
+  },
+  {
+    "slug": "rank-mladshiy-leytenant",
+    "file": "File:Russia-Army-OF-1a-2010.svg",
+    "localPath": "/images/items/rank-mladshiy-leytenant.png",
+    "imageCredit": "CC BY-SA 4.0 — Skjoldbro",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:Russia-Army-OF-1a-2010.svg",
+    "licence": "CC BY-SA 4.0",
+    "artist": "Skjoldbro",
+    "attributionRequired": true
+  },
+  {
+    "slug": "rank-mladshiy-serzhant",
+    "file": "File:Russia-Army-OR-4-2010.svg",
+    "localPath": "/images/items/rank-mladshiy-serzhant.png",
+    "imageCredit": "CC BY-SA 4.0 — Skjoldbro",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:Russia-Army-OR-4-2010.svg",
+    "licence": "CC BY-SA 4.0",
+    "artist": "Skjoldbro",
+    "attributionRequired": true
+  },
+  {
     "slug": "rank-navy-admiral",
     "file": "File:Russia-Navy-OF-8-2010.svg",
     "localPath": "/images/items/rank-navy-admiral.png",
     "imageCredit": "CC BY-SA 4.0 — Skjoldbro",
     "imagePage": "https://commons.wikimedia.org/wiki/File:Russia-Navy-OF-8-2010.svg",
+    "licence": "CC BY-SA 4.0",
+    "artist": "Skjoldbro",
+    "attributionRequired": true
+  },
+  {
+    "slug": "rank-navy-kapitan-1-ranga",
+    "file": "File:Russia-Navy-OF-5-2010.svg",
+    "localPath": "/images/items/rank-navy-kapitan-1-ranga.png",
+    "imageCredit": "CC BY-SA 4.0 — Skjoldbro",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:Russia-Navy-OF-5-2010.svg",
+    "licence": "CC BY-SA 4.0",
+    "artist": "Skjoldbro",
+    "attributionRequired": true
+  },
+  {
+    "slug": "rank-navy-kapitan-2-ranga",
+    "file": "File:Russia-Navy-OF-4-2010.svg",
+    "localPath": "/images/items/rank-navy-kapitan-2-ranga.png",
+    "imageCredit": "CC BY-SA 4.0 — Skjoldbro",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:Russia-Navy-OF-4-2010.svg",
+    "licence": "CC BY-SA 4.0",
+    "artist": "Skjoldbro",
+    "attributionRequired": true
+  },
+  {
+    "slug": "rank-navy-kapitan-3-ranga",
+    "file": "File:Russia-Navy-OF-3-2010.svg",
+    "localPath": "/images/items/rank-navy-kapitan-3-ranga.png",
+    "imageCredit": "CC BY-SA 4.0 — Skjoldbro",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:Russia-Navy-OF-3-2010.svg",
+    "licence": "CC BY-SA 4.0",
+    "artist": "Skjoldbro",
+    "attributionRequired": true
+  },
+  {
+    "slug": "rank-navy-kapitan-leytenant",
+    "file": "File:Russia-Navy-OF-2-2010.svg",
+    "localPath": "/images/items/rank-navy-kapitan-leytenant.png",
+    "imageCredit": "CC BY-SA 4.0 — Skjoldbro",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:Russia-Navy-OF-2-2010.svg",
+    "licence": "CC BY-SA 4.0",
+    "artist": "Skjoldbro",
+    "attributionRequired": true
+  },
+  {
+    "slug": "rank-navy-kontr-admiral",
+    "file": "File:Russia-Navy-OF-6-2010.svg",
+    "localPath": "/images/items/rank-navy-kontr-admiral.png",
+    "imageCredit": "CC BY-SA 4.0 — Skjoldbro",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:Russia-Navy-OF-6-2010.svg",
+    "licence": "CC BY-SA 4.0",
+    "artist": "Skjoldbro",
+    "attributionRequired": true
+  },
+  {
+    "slug": "rank-navy-matros",
+    "file": "File:Russia-Navy-OR-1-1994-everyday.svg",
+    "localPath": "/images/items/rank-navy-matros.png",
+    "imageCredit": "CC BY-SA 4.0 — Skjoldbro",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:Russia-Navy-OR-1-1994-everyday.svg",
     "licence": "CC BY-SA 4.0",
     "artist": "Skjoldbro",
     "attributionRequired": true
@@ -20,11 +160,121 @@
     "attributionRequired": true
   },
   {
+    "slug": "rank-navy-starshina-2-stati",
+    "file": "File:Russia-Navy-OR-4-1994-everyday.svg",
+    "localPath": "/images/items/rank-navy-starshina-2-stati.png",
+    "imageCredit": "CC BY-SA 4.0 — Skjoldbro",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:Russia-Navy-OR-4-1994-everyday.svg",
+    "licence": "CC BY-SA 4.0",
+    "artist": "Skjoldbro",
+    "attributionRequired": true
+  },
+  {
     "slug": "rank-navy-vitse-admiral",
     "file": "File:Russia-Navy-OF-7-2010.svg",
     "localPath": "/images/items/rank-navy-vitse-admiral.png",
     "imageCredit": "CC BY-SA 4.0 — Skjoldbro",
     "imagePage": "https://commons.wikimedia.org/wiki/File:Russia-Navy-OF-7-2010.svg",
+    "licence": "CC BY-SA 4.0",
+    "artist": "Skjoldbro",
+    "attributionRequired": true
+  },
+  {
+    "slug": "rank-podpolkovnik",
+    "file": "File:Russia-Army-OF-4-2010.svg",
+    "localPath": "/images/items/rank-podpolkovnik.png",
+    "imageCredit": "CC BY-SA 4.0 — Skjoldbro",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:Russia-Army-OF-4-2010.svg",
+    "licence": "CC BY-SA 4.0",
+    "artist": "Skjoldbro",
+    "attributionRequired": true
+  },
+  {
+    "slug": "rank-polkovnik",
+    "file": "File:Russia-Army-OF-5-2010.svg",
+    "localPath": "/images/items/rank-polkovnik.png",
+    "imageCredit": "CC BY-SA 4.0 — Skjoldbro",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:Russia-Army-OF-5-2010.svg",
+    "licence": "CC BY-SA 4.0",
+    "artist": "Skjoldbro",
+    "attributionRequired": true
+  },
+  {
+    "slug": "rank-praporshchik",
+    "file": "File:Russia-Army-OR-9a-2010.svg",
+    "localPath": "/images/items/rank-praporshchik.png",
+    "imageCredit": "CC BY-SA 4.0 — Skjoldbro",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:Russia-Army-OR-9a-2010.svg",
+    "licence": "CC BY-SA 4.0",
+    "artist": "Skjoldbro",
+    "attributionRequired": true
+  },
+  {
+    "slug": "rank-ryadovoy",
+    "file": "File:Russia-Army-OR-1-2010.svg",
+    "localPath": "/images/items/rank-ryadovoy.png",
+    "imageCredit": "CC BY-SA 4.0 — Skjoldbro",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:Russia-Army-OR-1-2010.svg",
+    "licence": "CC BY-SA 4.0",
+    "artist": "Skjoldbro",
+    "attributionRequired": true
+  },
+  {
+    "slug": "rank-serzhant",
+    "file": "File:Russia-Army-OR-5-2010.svg",
+    "localPath": "/images/items/rank-serzhant.png",
+    "imageCredit": "CC BY-SA 4.0 — Skjoldbro",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:Russia-Army-OR-5-2010.svg",
+    "licence": "CC BY-SA 4.0",
+    "artist": "Skjoldbro",
+    "attributionRequired": true
+  },
+  {
+    "slug": "rank-starshina",
+    "file": "File:Russia-Army-OR-8-2010.svg",
+    "localPath": "/images/items/rank-starshina.png",
+    "imageCredit": "CC BY-SA 4.0 — Skjoldbro",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:Russia-Army-OR-8-2010.svg",
+    "licence": "CC BY-SA 4.0",
+    "artist": "Skjoldbro",
+    "attributionRequired": true
+  },
+  {
+    "slug": "rank-starshiy-leytenant",
+    "file": "File:Russia-Army-OF-1c-2010.svg",
+    "localPath": "/images/items/rank-starshiy-leytenant.png",
+    "imageCredit": "CC BY-SA 4.0 — Skjoldbro",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:Russia-Army-OF-1c-2010.svg",
+    "licence": "CC BY-SA 4.0",
+    "artist": "Skjoldbro",
+    "attributionRequired": true
+  },
+  {
+    "slug": "rank-starshiy-praporshchik",
+    "file": "File:Russia-Army-OR-9b-2010.svg",
+    "localPath": "/images/items/rank-starshiy-praporshchik.png",
+    "imageCredit": "CC BY-SA 4.0 — Skjoldbro",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:Russia-Army-OR-9b-2010.svg",
+    "licence": "CC BY-SA 4.0",
+    "artist": "Skjoldbro",
+    "attributionRequired": true
+  },
+  {
+    "slug": "rank-starshiy-serzhant",
+    "file": "File:Russia-Army-OR-7-2010.svg",
+    "localPath": "/images/items/rank-starshiy-serzhant.png",
+    "imageCredit": "CC BY-SA 4.0 — Skjoldbro",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:Russia-Army-OR-7-2010.svg",
+    "licence": "CC BY-SA 4.0",
+    "artist": "Skjoldbro",
+    "attributionRequired": true
+  },
+  {
+    "slug": "rank-yefreytor",
+    "file": "File:Russia-Army-OR-2-2010.svg",
+    "localPath": "/images/items/rank-yefreytor.png",
+    "imageCredit": "CC BY-SA 4.0 — Skjoldbro",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:Russia-Army-OR-2-2010.svg",
     "licence": "CC BY-SA 4.0",
     "artist": "Skjoldbro",
     "attributionRequired": true

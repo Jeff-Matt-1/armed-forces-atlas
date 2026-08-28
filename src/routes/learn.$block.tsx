@@ -2,7 +2,7 @@ import { Link, createFileRoute, notFound } from "@tanstack/react-router";
 
 import { Button } from "@/components/ui/button";
 import { MasteryRing } from "@/components/MasteryRing";
-import { getBlock, itemsOfBlock, plateNumber } from "@/lib/content";
+import { getBlock, imageFitClass, itemsOfBlock, plateNumber } from "@/lib/content";
 import { useProgress } from "@/lib/progress";
 
 export const Route = createFileRoute("/learn/$block")({
@@ -104,7 +104,7 @@ function BlockDetail() {
                     src={item.imageUrl}
                     alt={item.name}
                     loading="lazy"
-                    className="aspect-[16/10] w-full bg-secondary object-cover"
+                    className={`aspect-[16/10] w-full bg-secondary ${imageFitClass(item.slug)}`}
                   />
                 ) : (
                   <div className="flex aspect-[16/10] w-full items-center justify-center bg-secondary">

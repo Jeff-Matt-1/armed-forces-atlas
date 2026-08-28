@@ -10,7 +10,7 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 import { MasteryRing } from "@/components/MasteryRing";
-import { getItem } from "@/lib/content";
+import { getItem, imageFitClass } from "@/lib/content";
 import { useRecordAttempt } from "@/lib/progress";
 import { PASS_RATIO, type Question } from "@/lib/quiz";
 import { cn } from "@/lib/utils";
@@ -142,7 +142,7 @@ export function QuizRunner({
                         src={item.imageUrl}
                         alt={item.name}
                         loading="lazy"
-                        className="h-10 w-16 object-cover"
+                        className={`h-10 w-16 ${imageFitClass(item.slug)}`}
                       />
                     )}
                     <span className="designation text-sm">{item.name}</span>
@@ -204,7 +204,7 @@ export function QuizRunner({
           <img
             src={question.imageUrl}
             alt="Identify this equipment"
-            className="aspect-[16/9] w-full bg-secondary object-cover"
+            className={`aspect-[16/9] w-full bg-secondary ${imageFitClass(question.itemSlug)}`}
           />
         </div>
       )}
@@ -275,7 +275,7 @@ export function QuizRunner({
                 <img
                   src={questionItem.imageUrl}
                   alt={`${questionItem.name} — recognition photograph`}
-                  className="aspect-[16/9] w-full bg-secondary object-cover"
+                  className={`aspect-[16/9] w-full bg-secondary ${imageFitClass(questionItem.slug)}`}
                 />
               )}
               <div className="p-5 sm:p-6">
