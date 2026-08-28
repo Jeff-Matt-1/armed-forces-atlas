@@ -4,6 +4,8 @@
 // Entries for blocks filled after the first release live in ./items/<block>.ts
 // and are concatenated below; this file keeps the original four blocks inline.
 import { heavyWeapons } from "@/content/items/heavy-weapons";
+import { lightVehicles } from "@/content/items/light-vehicles";
+import { trucks } from "@/content/items/trucks";
 import type { Block, Item } from "@/content/types";
 
 export type { Block, Item } from "@/content/types";
@@ -59,18 +61,22 @@ export const blocks: Block[] = [
     ordinal: 4,
     title: "Light Vehicles",
     subtitle: "Tigr, Rys, UAZ and protected mobility",
-    brief: null,
-    doctrineNote: null,
-    status: "wip",
+    brief:
+      "Everything wheeled below the APC. The first split is protection: a slab-sided hull with small thick windows set high in the doors is armoured, while large glass and a canvas top is not. The second is size — count axles and look at ride height, since a Typhoon towers over a Tigr and a UAZ is smaller again. What a vehicle carries matters less here than who is riding in it.",
+    doctrineNote:
+      "These are reconnaissance, command and liaison vehicles, not assault transport. Grau & Bartles stress the weight of effort Russian formations put into reconnaissance; much of that effort rides in a Tigr, so identifying one forward says something about intent.",
+    status: "ready",
   },
   {
     slug: "trucks",
     ordinal: 5,
     title: "Trucks",
     subtitle: "Ural, KamAZ, KrAZ and logistics chassis",
-    brief: null,
-    doctrineNote: null,
-    status: "wip",
+    brief:
+      "The chassis that carries everything else. Recognition runs on three questions: how many axles, is there a bonnet ahead of the cab or does the cab sit over the engine, and what is on the load bed. The last one matters most — the same KamAZ cab appears under cargo, a command post, an EW cabin and a radar shelter, so the truck alone never identifies the system.",
+    doctrineNote:
+      "Grau & Bartles note that Russian formations carry limited organic lift and lean heavily on rail. The truck park is therefore a real constraint on how far from a railhead a force can fight, which makes counting logistics vehicles a way of estimating reach.",
+    status: "ready",
   },
   {
     slug: "artillery",
@@ -1316,4 +1322,4 @@ const baseItems: Item[] = [
 ];
 
 /** Blocks authored after the first release, kept in their own modules. */
-export const items: Item[] = [...baseItems, ...heavyWeapons];
+export const items: Item[] = [...baseItems, ...heavyWeapons, ...lightVehicles, ...trucks];

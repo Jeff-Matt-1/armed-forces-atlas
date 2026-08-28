@@ -20,6 +20,86 @@
     "attributionRequired": true
   },
   {
+    "slug": "gaz-233114-tigr-m",
+    "file": "File:GAZ 233114 Tigr-M Arbalet-DM.jpg",
+    "localPath": "/images/items/gaz-233114-tigr-m.jpg",
+    "imageCredit": "CC BY-SA 4.0 — Boevaya mashina",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:GAZ_233114_Tigr-M_Arbalet-DM.jpg",
+    "licence": "CC BY-SA 4.0",
+    "artist": "Boevaya mashina",
+    "attributionRequired": true
+  },
+  {
+    "slug": "gaz-2975-tigr",
+    "file": "File:GAZ-2975 Tigr.jpg",
+    "localPath": "/images/items/gaz-2975-tigr.jpg",
+    "imageCredit": "CC BY-SA 3.0 — Евгений Катышев",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:GAZ-2975_Tigr.jpg",
+    "licence": "CC BY-SA 3.0",
+    "artist": "Евгений Катышев",
+    "attributionRequired": true
+  },
+  {
+    "slug": "gaz-66",
+    "file": "File:GAZ-66 truck in Vrachesh, Botevgrad municipality, Bulgaria 01.jpg",
+    "localPath": "/images/items/gaz-66.jpg",
+    "imageCredit": "CC BY-SA 4.0 — Dimitǎr Boevski",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:GAZ-66_truck_in_Vrachesh,_Botevgrad_municipality,_Bulgaria_01.jpg",
+    "licence": "CC BY-SA 4.0",
+    "artist": "Dimitǎr Boevski",
+    "attributionRequired": true
+  },
+  {
+    "slug": "iveco-lmv-rys",
+    "file": "File:Iveco LMV Lynx photo002.jpg",
+    "localPath": "/images/items/iveco-lmv-rys.jpg",
+    "imageCredit": "CC BY-SA 4.0 — Vitaly V. Kuzmin",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:Iveco_LMV_Lynx_photo002.jpg",
+    "licence": "CC BY-SA 4.0",
+    "artist": "Vitaly V. Kuzmin",
+    "attributionRequired": true
+  },
+  {
+    "slug": "kamaz-4310",
+    "file": "File:2014.05.14 kamaz-4310(1).JPG",
+    "localPath": "/images/items/kamaz-4310.jpg",
+    "imageCredit": "CC BY-SA 4.0 — Alexey8601",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:2014.05.14_kamaz-4310(1).JPG",
+    "licence": "CC BY-SA 4.0",
+    "artist": "Alexey8601",
+    "attributionRequired": true
+  },
+  {
+    "slug": "kamaz-5350",
+    "file": "File:KamAZ-5350.jpg",
+    "localPath": "/images/items/kamaz-5350.jpg",
+    "imageCredit": "CC BY 4.0 — Ministry of Defence of the Russian Federation",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:KamAZ-5350.jpg",
+    "licence": "CC BY 4.0",
+    "artist": "Ministry of Defence of the Russian Federation",
+    "attributionRequired": true
+  },
+  {
+    "slug": "kamaz-63501",
+    "file": "File:KamAZ 63501 AT (3).jpg",
+    "localPath": "/images/items/kamaz-63501.jpg",
+    "imageCredit": "CC0 — Ural-66",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:KamAZ_63501_AT_(3).jpg",
+    "licence": "CC0",
+    "artist": "Ural-66",
+    "attributionRequired": false
+  },
+  {
+    "slug": "kamaz-63968-typhoon",
+    "file": "File:KamAZ-63968 Typhoon - Engineering technologies 2012 (1).jpg",
+    "localPath": "/images/items/kamaz-63968-typhoon.jpg",
+    "imageCredit": "CC BY-SA 4.0 — Vitaly V. Kuzmin",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:KamAZ-63968_Typhoon_-_Engineering_technologies_2012_(1).jpg",
+    "licence": "CC BY-SA 4.0",
+    "artist": "Vitaly V. Kuzmin",
+    "attributionRequired": true
+  },
+  {
     "slug": "kord",
     "file": "File:Kord 6P50.jpg",
     "localPath": "/images/items/kord.jpg",
@@ -38,6 +118,16 @@
     "licence": "CC BY-SA 3.0",
     "artist": "Mike1979 Russia",
     "attributionRequired": true
+  },
+  {
+    "slug": "kraz-255",
+    "file": "File:KrAZ 255.JPG",
+    "localPath": "/images/items/kraz-255.jpg",
+    "imageCredit": "Attribution — Unknown author",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:KrAZ_255.JPG",
+    "licence": "Attribution",
+    "artist": "Unknown author",
+    "attributionRequired": false
   },
   {
     "slug": "pkp-pecheneg",
@@ -348,5 +438,35 @@
     "licence": "Public domain",
     "artist": "User Megapixie on en.wikipedia",
     "attributionRequired": false
+  },
+  {
+    "slug": "uaz-3163-patriot",
+    "file": "File:UAZ 3163 Patriot.jpg",
+    "localPath": "/images/items/uaz-3163-patriot.jpg",
+    "imageCredit": "CC BY-SA 3.0 — Zaporozhetz_Blue_03.jpg: NVO derivative work: ZZZico",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:UAZ_3163_Patriot.jpg",
+    "licence": "CC BY-SA 3.0",
+    "artist": "Zaporozhetz_Blue_03.jpg: NVO derivative work: ZZZico",
+    "attributionRequired": true
+  },
+  {
+    "slug": "uaz-469",
+    "file": "File:2014 Suchum, UAZ 469.jpg",
+    "localPath": "/images/items/uaz-469.jpg",
+    "imageCredit": "CC BY-SA 4.0 — Hons084",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:2014_Suchum,_UAZ_469.jpg",
+    "licence": "CC BY-SA 4.0",
+    "artist": "Hons084",
+    "attributionRequired": true
+  },
+  {
+    "slug": "ural-4320",
+    "file": "File:Ural-4320, 12. Internationales Maritimes-Fahrzeugtreffen, Ribnitz-Damgarten ( 1060471).jpg",
+    "localPath": "/images/items/ural-4320.jpg",
+    "imageCredit": "CC BY-SA 4.0 — Matti Blume",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:Ural-4320,_12._Internationales_Maritimes-Fahrzeugtreffen,_Ribnitz-Damgarten_(_1060471).jpg",
+    "licence": "CC BY-SA 4.0",
+    "artist": "Matti Blume",
+    "attributionRequired": true
   }
 ]
