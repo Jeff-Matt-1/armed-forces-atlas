@@ -11,7 +11,13 @@
  * progress" instead of breaking the app.
  */
 
-import type { Attempt, BlockProgressRow, CardReview, StreakRow } from "@/lib/progress-types";
+import type {
+  Attempt,
+  BlockProgressRow,
+  CardReview,
+  DrillResult,
+  StreakRow,
+} from "@/lib/progress-types";
 import { emptyReview, schedule, type ReviewState } from "@/lib/srs";
 
 const STORE_KEY = "recognition-trainer:progress";
@@ -24,12 +30,21 @@ export type LocalProgress = {
   version: number;
   reviews: Record<string, CardReview>;
   blocks: Record<string, BlockProgressRow>;
+  /** Items answered correctly, keyed "itemSlug:kind" so entries stay unique. */
+  drills: DrillResult[];
   attempts: Attempt[];
   streak: StreakRow | null;
 };
 
 export function emptyLocalProgress(): LocalProgress {
-  return { version: STORE_VERSION, reviews: {}, blocks: {}, attempts: [], streak: null };
+  return {
+    version: STORE_VERSION,
+    reviews: {},
+    blocks: {},
+    drills: [],
+    attempts: [],
+    streak: null,
+  };
 }
 
 export function readLocalProgress(): LocalProgress {
@@ -43,6 +58,7 @@ export function readLocalProgress(): LocalProgress {
       version: STORE_VERSION,
       reviews: parsed.reviews ?? {},
       blocks: parsed.blocks ?? {},
+      drills: parsed.drills ?? [],
       attempts: parsed.attempts ?? [],
       streak: parsed.streak ?? null,
     };
@@ -74,6 +90,7 @@ export function hasLocalProgress(store: LocalProgress = readLocalProgress()): bo
   return (
     Object.keys(store.reviews).length > 0 ||
     Object.keys(store.blocks).length > 0 ||
+    store.drills.length > 0 ||
     store.attempts.length > 0
   );
 }
@@ -133,8 +150,22 @@ export function recordLocalAttempt(input: {
   total: number;
   passed: boolean;
   missed: string[];
+  correct: DrillResult[];
 }): LocalProgress {
   const store = readLocalProgress();
+
+  // Every correct answer credits its own item and block, so a drill spanning
+  // several blocks advances each of them. Union, never overwrite.
+  if (input.correct.length > 0) {
+    const seen = new Set(store.drills.map((row) => `${row.item_slug}:${row.kind}`));
+    for (const row of input.correct) {
+      const key = `${row.item_slug}:${row.kind}`;
+      if (row.block_slug && !seen.has(key)) {
+        seen.add(key);
+        store.drills.push(row);
+      }
+    }
+  }
 
   store.attempts = [
     {
@@ -207,6 +238,13 @@ export function mergeBlock(local: BlockProgressRow, remote: BlockProgressRow): B
     best_exam: Math.max(local.best_exam ?? 0, remote.best_exam ?? 0),
     exam_passed: local.exam_passed || remote.exam_passed,
   };
+}
+
+/** Drill results are facts about what was answered; the merge is a union. */
+export function mergeDrills(local: DrillResult[], remote: DrillResult[]): DrillResult[] {
+  const byKey = new Map<string, DrillResult>();
+  for (const row of [...remote, ...local]) byKey.set(`${row.item_slug}:${row.kind}`, row);
+  return [...byKey.values()];
 }
 
 export function mergeStreak(local: StreakRow | null, remote: StreakRow | null): StreakRow | null {

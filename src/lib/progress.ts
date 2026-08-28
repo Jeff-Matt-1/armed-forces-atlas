@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from "react";
 
 import { useAuth } from "@/hooks/useAuth";
 import { supabase } from "@/integrations/supabase/client";
-import { itemsOfBlock, readyBlocks } from "@/lib/content";
+import { askableCounts, itemsOfBlock, readyBlocks } from "@/lib/content";
 import {
   advanceStreak,
   clearLocalProgress,
@@ -15,7 +15,14 @@ import {
   recordLocalAttempt,
   recordLocalReview,
 } from "@/lib/local-progress";
-import type { Attempt, BlockProgressRow, CardReview, StreakRow } from "@/lib/progress-types";
+import type {
+  Attempt,
+  BlockProgressRow,
+  CardReview,
+  CorrectAnswer,
+  DrillResult,
+  StreakRow,
+} from "@/lib/progress-types";
 import { masteryBreakdown, type MasteryBreakdown } from "@/lib/mastery";
 import { emptyReview, schedule, type ReviewState } from "@/lib/srs";
 
@@ -43,11 +50,12 @@ export function writeGatePreference(enabled: boolean) {
 type Snapshot = {
   reviews: CardReview[];
   blocks: BlockProgressRow[];
+  drills: DrillResult[];
   streak: StreakRow | null;
 };
 
 async function fetchRemoteSnapshot(): Promise<Snapshot> {
-  const [reviews, blocks, streak] = await Promise.all([
+  const [reviews, blocks, drills, streak] = await Promise.all([
     supabase
       .from("card_reviews")
       .select("item_slug, block_slug, ease, interval_days, reps, lapses, last_grade, due_at"),
@@ -56,6 +64,7 @@ async function fetchRemoteSnapshot(): Promise<Snapshot> {
       .select(
         "block_slug, mastery, exam_passed, best_score, best_photo_id, best_structure, best_exam",
       ),
+    supabase.from("drill_results").select("item_slug, block_slug, kind"),
     supabase
       .from("streaks")
       .select("current_streak, longest_streak, last_study_date")
@@ -64,11 +73,13 @@ async function fetchRemoteSnapshot(): Promise<Snapshot> {
 
   if (reviews.error) throw reviews.error;
   if (blocks.error) throw blocks.error;
+  if (drills.error) throw drills.error;
   if (streak.error) throw streak.error;
 
   return {
     reviews: (reviews.data ?? []) as CardReview[],
     blocks: (blocks.data ?? []) as BlockProgressRow[],
+    drills: (drills.data ?? []) as DrillResult[],
     streak: (streak.data ?? null) as StreakRow | null,
   };
 }
@@ -78,6 +89,7 @@ function localSnapshot(): Snapshot {
   return {
     reviews: Object.values(store.reviews),
     blocks: Object.values(store.blocks),
+    drills: store.drills ?? [],
     streak: store.streak,
   };
 }
@@ -92,7 +104,7 @@ export function useProgress() {
       userId ? fetchRemoteSnapshot() : Promise.resolve(localSnapshot()),
   });
 
-  const data = snapshot.data ?? { reviews: [], blocks: [], streak: null };
+  const data = snapshot.data ?? { reviews: [], blocks: [], drills: [], streak: null };
 
   const reviewMap = new Map<string, CardReview>();
   for (const row of data.reviews) reviewMap.set(row.item_slug, row);
@@ -103,9 +115,22 @@ export function useProgress() {
 
   const blockBySlug = new Map(data.blocks.map((row) => [row.block_slug, row]));
 
+  // Correct answers grouped by question kind, so a mixed drill credits each
+  // item to whichever block it belongs to.
+  const correctByKind = { photo: new Set<string>(), placement: new Set<string>() };
+  for (const row of data.drills) {
+    if (row.kind === "photo-id") correctByKind.photo.add(row.item_slug);
+    if (row.kind === "placement") correctByKind.placement.add(row.item_slug);
+  }
+
   function breakdownOf(blockSlug: string): MasteryBreakdown {
-    const slugs = itemsOfBlock(blockSlug).map((item) => item.slug);
-    return masteryBreakdown(slugs, reviewMap, blockBySlug.get(blockSlug));
+    return masteryBreakdown({
+      itemSlugs: itemsOfBlock(blockSlug).map((item) => item.slug),
+      askable: askableCounts(blockSlug),
+      reviewMap,
+      correctByKind,
+      progress: blockBySlug.get(blockSlug),
+    });
   }
 
   function masteryOf(blockSlug: string): number {
@@ -190,6 +215,7 @@ type AttemptInput = {
   total: number;
   passed: boolean;
   missed: string[];
+  correct: CorrectAnswer[];
 };
 
 export function useRecordAttempt() {
@@ -213,6 +239,22 @@ export function useRecordAttempt() {
         missed: input.missed,
       });
       if (error) throw error;
+
+      // Every correct answer credits its own item and block, so a drill run
+      // across all blocks still advances each block it touched. Insert-only:
+      // the row's existence means "answered correctly at least once".
+      if (input.correct.length > 0) {
+        const rows = dedupeCorrect(input.correct).map((row) => ({
+          user_id: user.id,
+          item_slug: row.item_slug,
+          block_slug: row.block_slug,
+          kind: row.kind,
+        }));
+        const { error: drillError } = await supabase
+          .from("drill_results")
+          .upsert(rows, { onConflict: "user_id,item_slug,kind", ignoreDuplicates: true });
+        if (drillError) throw drillError;
+      }
 
       if (input.blockSlug) {
         const percent = input.total ? Math.round((input.score / input.total) * 100) : 0;
@@ -355,6 +397,21 @@ async function mergeLocalIntoAccount(userId: string): Promise<void> {
     if (error) throw error;
   }
 
+  // Drill results are a union of facts, so anonymous answers simply add to
+  // whatever the account already holds.
+  if (local.drills.length > 0) {
+    const rows = local.drills.map((row) => ({
+      user_id: userId,
+      item_slug: row.item_slug,
+      block_slug: row.block_slug,
+      kind: row.kind,
+    }));
+    const { error } = await supabase
+      .from("drill_results")
+      .upsert(rows, { onConflict: "user_id,item_slug,kind", ignoreDuplicates: true });
+    if (error) throw error;
+  }
+
   if (local.attempts.length) {
     // Attempts are an append-only history, so local ones are inserted rather
     // than merged. The id is left to the database instead of reusing the
@@ -404,6 +461,15 @@ async function touchRemoteStreak(userId: string) {
       { onConflict: "user_id" },
     );
   if (streakError) throw streakError;
+}
+
+/** One row per item+kind; a quiz can ask about the same item more than once. */
+function dedupeCorrect(rows: CorrectAnswer[]): CorrectAnswer[] {
+  const seen = new Map<string, CorrectAnswer>();
+  for (const row of rows) {
+    if (row.block_slug) seen.set(`${row.item_slug}:${row.kind}`, row);
+  }
+  return [...seen.values()];
 }
 
 function invalidateProgress(queryClient: ReturnType<typeof useQueryClient>) {

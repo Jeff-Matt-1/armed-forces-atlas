@@ -38,6 +38,21 @@ export type BlockProgressRow = {
   best_exam: number;
 };
 
+/**
+ * One item answered correctly by one kind of question, at least once.
+ *
+ * Kind rather than drill mode, so a photo question inside a block exam credits
+ * photo recognition exactly as the photo-ID drill does.
+ */
+export type DrillResult = {
+  item_slug: string;
+  block_slug: string;
+  kind: string;
+};
+
+/** What a finished quiz reports back for each question answered correctly. */
+export type CorrectAnswer = DrillResult;
+
 export type StreakRow = {
   current_streak: number;
   longest_streak: number;

@@ -83,6 +83,30 @@ export type Database = {
         };
         Relationships: [];
       };
+      drill_results: {
+        Row: {
+          block_slug: string;
+          first_correct_at: string;
+          item_slug: string;
+          kind: string;
+          user_id: string;
+        };
+        Insert: {
+          block_slug: string;
+          first_correct_at?: string;
+          item_slug: string;
+          kind: string;
+          user_id: string;
+        };
+        Update: {
+          block_slug?: string;
+          first_correct_at?: string;
+          item_slug?: string;
+          kind?: string;
+          user_id?: string;
+        };
+        Relationships: [];
+      };
       card_reviews: {
         Row: {
           block_slug: string;

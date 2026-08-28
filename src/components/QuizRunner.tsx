@@ -11,6 +11,7 @@ import {
 } from "@/components/ui/dialog";
 import { MasteryRing } from "@/components/MasteryRing";
 import { getItem, imageFitClass } from "@/lib/content";
+import type { CorrectAnswer } from "@/lib/progress-types";
 import { useRecordAttempt } from "@/lib/progress";
 import { PASS_RATIO, type Question } from "@/lib/quiz";
 import { cn } from "@/lib/utils";
@@ -39,6 +40,7 @@ export function QuizRunner({
   const [index, setIndex] = useState(0);
   const [picked, setPicked] = useState<string | null>(null);
   const [missed, setMissed] = useState<string[]>([]);
+  const [correct, setCorrect] = useState<CorrectAnswer[]>([]);
   const [score, setScore] = useState(0);
   const [finished, setFinished] = useState(false);
   const [saveError, setSaveError] = useState<string | null>(null);
@@ -68,8 +70,19 @@ export function QuizRunner({
   function choose(option: string) {
     if (picked || !question) return;
     setPicked(option);
-    if (option === question.answer) setScore((value) => value + 1);
-    else
+    if (option === question.answer) {
+      setScore((value) => value + 1);
+      // Remember what was answered correctly and how, so progress can credit
+      // the item's own block even when the drill spans several.
+      setCorrect((value) => [
+        ...value,
+        {
+          item_slug: question.itemSlug,
+          block_slug: getItem(question.itemSlug)?.blockSlug ?? "",
+          kind: question.kind,
+        },
+      ]);
+    } else
       setMissed((value) =>
         value.includes(question.itemSlug) ? value : [...value, question.itemSlug],
       );
@@ -88,6 +101,7 @@ export function QuizRunner({
           total,
           passed: finalPassed,
           missed,
+          correct,
         });
         setFinished(true);
       } catch {
@@ -161,6 +175,7 @@ export function QuizRunner({
               setPicked(null);
               setScore(0);
               setMissed([]);
+              setCorrect([]);
               setFinished(false);
               setSaveError(null);
               onRestart();
