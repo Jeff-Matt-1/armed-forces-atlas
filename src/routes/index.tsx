@@ -1,10 +1,10 @@
 import { Link, createFileRoute } from "@tanstack/react-router";
 
 import { Button } from "@/components/ui/button";
-import { MasteryRing } from "@/components/MasteryRing";
-import { allBlocks, plateNumber, readyBlocks, studyableItems } from "@/lib/content";
+import { BlockCard } from "@/components/BlockCard";
+import { allBlocks, isBlockUnlocked, readyBlocks, studyableItems } from "@/lib/content";
 import { useLocale } from "@/i18n/LocaleProvider";
-import { useProgress } from "@/lib/progress";
+import { useProgress, useUnlockGate } from "@/lib/progress";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -30,6 +30,7 @@ function Home() {
   const progress = useProgress();
   const totalItems = studyableItems().length;
   const { t } = useLocale();
+  const gate = useUnlockGate();
 
   return (
     <div>
@@ -81,21 +82,12 @@ function Home() {
 
         <div className="mt-6 grid gap-px bg-border sm:grid-cols-2 lg:grid-cols-4">
           {readyBlocks.map((block) => (
-            <Link
+            <BlockCard
               key={block.slug}
-              to="/learn/$block"
-              params={{ block: block.slug }}
-              className="group bg-card p-5 transition-colors hover:bg-secondary"
-            >
-              <div className="flex items-start justify-between">
-                <span className="designation text-xs text-primary">
-                  {plateNumber(block.ordinal)}
-                </span>
-                <MasteryRing value={progress.masteryOf(block.slug)} />
-              </div>
-              <h3 className="mt-4 text-lg leading-tight">{block.title}</h3>
-              <p className="mt-1 text-xs text-muted-foreground">{block.subtitle}</p>
-            </Link>
+              block={block}
+              mastery={progress.masteryOf(block.slug)}
+              state={isBlockUnlocked(block.slug, progress.passedBlocks, gate) ? "open" : "locked"}
+            />
           ))}
         </div>
 

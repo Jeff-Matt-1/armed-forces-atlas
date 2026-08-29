@@ -7,7 +7,7 @@ import { useShuffled } from "@/hooks/useShuffled";
 import { imageFitClass, readyBlocks, studyableItems, type Item } from "@/lib/content";
 import { useLocale } from "@/i18n/LocaleProvider";
 import { useProgress, useRecordReview } from "@/lib/progress";
-import { gradeLabels } from "@/lib/srs";
+import { gradeKeys } from "@/lib/srs";
 import { useAuth } from "@/hooks/useAuth";
 import { cn } from "@/lib/utils";
 
@@ -158,21 +158,19 @@ function Flashcards() {
 
       {flipped ? (
         <div className="mt-4 grid grid-cols-4 gap-2">
-          {gradeLabels.map((label, value) => (
+          {gradeKeys.map((key, value) => (
             <Button
-              key={label}
+              key={key}
               variant={value === 0 ? "destructive" : value === 3 ? "default" : "outline"}
               onClick={() => grade(value)}
               className={cn(value === 2 && "border-primary")}
             >
-              {label}
+              {t(key)}
             </Button>
           ))}
         </div>
       ) : (
-        <p className="mt-4 text-center text-xs text-muted-foreground">
-          Recall the designation, the armament, and the unit that fields it — then reveal.
-        </p>
+        <p className="mt-4 text-center text-xs text-muted-foreground">{t("drill.recallHint")}</p>
       )}
     </div>
   );

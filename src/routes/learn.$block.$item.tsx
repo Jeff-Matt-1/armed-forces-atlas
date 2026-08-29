@@ -1,7 +1,9 @@
 import { Link, createFileRoute, notFound } from "@tanstack/react-router";
 
 import { getBlock, getItem, imageFitClass, itemsOfBlock } from "@/lib/content";
+import { BlockChecking, BlockLocked } from "@/components/BlockGate";
 import { useLocale } from "@/i18n/LocaleProvider";
+import { useBlockAccess } from "@/lib/progress";
 import { absoluteUrl } from "@/lib/site";
 
 export const Route = createFileRoute("/learn/$block/$item")({
@@ -41,11 +43,17 @@ function ItemDetail() {
   const item = getItem(itemSlug)!;
   const block = getBlock(item.blockSlug)!;
   const { t } = useLocale();
+  const access = useBlockAccess(block.slug);
   const siblings = itemsOfBlock(block.slug);
   const index = siblings.findIndex((s) => s.slug === item.slug);
   const previous = index > 0 ? siblings[index - 1] : undefined;
   const next = index < siblings.length - 1 ? siblings[index + 1] : undefined;
 
+  // The unlock gate has to hold here too. Guarding only the listing left the
+  // block reachable by URL, and the exam -- which is what unlocks the next
+  // block -- reachable without having opened this one.
+  if (access === "checking") return <BlockChecking />;
+  if (access === "locked") return <BlockLocked blockSlug={block.slug} />;
   return (
     <div className="mx-auto w-full max-w-5xl px-4 py-8">
       <Link

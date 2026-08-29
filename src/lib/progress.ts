@@ -3,7 +3,13 @@ import { useEffect, useRef, useState } from "react";
 
 import { useAuth } from "@/hooks/useAuth";
 import { supabase } from "@/integrations/supabase/client";
-import { allPlacements, itemsOfBlock, readyBlocks, type Item } from "@/lib/content";
+import {
+  allPlacements,
+  isBlockUnlocked,
+  itemsOfBlock,
+  readyBlocks,
+  type Item,
+} from "@/lib/content";
 import {
   advanceStreak,
   clearLocalProgress,
@@ -539,4 +545,35 @@ function dedupeCorrect(rows: CorrectAnswer[]): CorrectAnswer[] {
 function invalidateProgress(queryClient: ReturnType<typeof useQueryClient>) {
   void queryClient.invalidateQueries({ queryKey: ["progress"] });
   void queryClient.invalidateQueries({ queryKey: ["attempts"] });
+}
+
+/**
+ * Whether a block may be opened, once that is actually known.
+ *
+ * Both inputs land after hydration -- the gate preference from localStorage and
+ * the passed blocks from the progress query -- so no page can decide this on
+ * the server. It reports "checking" until both have arrived, because either
+ * guess is visibly wrong: assume open and a locked block flashes its contents,
+ * assume locked and a block you earned flashes a padlock at you.
+ */
+export function useBlockAccess(slug: string): "checking" | "open" | "locked" {
+  const progress = useProgress();
+  const [gate, setGate] = useState<boolean | null>(null);
+
+  useEffect(() => setGate(readGatePreference()), []);
+
+  if (gate === null || progress.loading) return "checking";
+  return isBlockUnlocked(slug, progress.passedBlocks, gate) ? "open" : "locked";
+}
+
+export type BlockCardState = "open" | "locked" | "unreleased";
+
+/**
+ * The unlock preference, read after hydration because it lives in
+ * localStorage. Defaults to on, so the gate is never briefly bypassed.
+ */
+export function useUnlockGate(): boolean {
+  const [gate, setGate] = useState(true);
+  useEffect(() => setGate(readGatePreference()), []);
+  return gate;
 }

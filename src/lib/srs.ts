@@ -1,3 +1,5 @@
+import type { StringKey } from "@/i18n/strings";
+
 /**
  * SM-2 spaced repetition.
  * Grades: 0 = again, 1 = hard, 2 = good, 3 = easy.
@@ -51,4 +53,13 @@ export function strength(state: { intervalDays: number; reps: number }): number 
   return Math.min(1, 0.25 + (state.intervalDays / 21) * 0.75);
 }
 
-export const gradeLabels = ["Again", "Hard", "Good", "Easy"] as const;
+/**
+ * The four SM-2 grades in ascending order, as interface string keys so the
+ * buttons speak the reader's language rather than always English.
+ */
+export const gradeKeys = [
+  "drill.gradeAgain",
+  "drill.gradeHard",
+  "drill.gradeGood",
+  "drill.gradeEasy",
+] as const satisfies readonly StringKey[];

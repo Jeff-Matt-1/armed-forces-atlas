@@ -3,7 +3,9 @@ import { useState } from "react";
 
 import { DrillSkeleton, QuizRunner } from "@/components/QuizRunner";
 import { Button } from "@/components/ui/button";
+import { BlockChecking, BlockLocked } from "@/components/BlockGate";
 import { useLocale } from "@/i18n/LocaleProvider";
+import { useBlockAccess } from "@/lib/progress";
 import { getBlock } from "@/lib/content";
 import { PASS_RATIO, buildExam } from "@/lib/quiz";
 import { useShuffled } from "@/hooks/useShuffled";
@@ -35,6 +37,7 @@ export const Route = createFileRoute("/exam/$block")({
 function Exam() {
   const { blockSlug } = Route.useLoaderData();
   const { t } = useLocale();
+  const access = useBlockAccess(blockSlug);
   // Read the title from the content layer rather than the loader: the loader
   // runs before the chosen language is applied, so its copy is always English.
   const title = getBlock(blockSlug)?.title ?? blockSlug;
@@ -44,6 +47,11 @@ function Exam() {
     [blockSlug, seed],
   );
 
+  // The unlock gate has to hold here too. Guarding only the listing left the
+  // block reachable by URL, and the exam -- which is what unlocks the next
+  // block -- reachable without having opened this one.
+  if (access === "checking") return <BlockChecking />;
+  if (access === "locked") return <BlockLocked blockSlug={blockSlug} />;
   if (!built) return <DrillSkeleton />;
 
   // A block can be marked ready and still yield no questions if its entries

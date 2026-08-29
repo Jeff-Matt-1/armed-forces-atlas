@@ -4,9 +4,10 @@ import { Button } from "@/components/ui/button";
 import { MasteryRing } from "@/components/MasteryRing";
 import { getBlock, imageFitClass, itemsOfBlock, plateNumber } from "@/lib/content";
 import { BlockGapsPanel } from "@/components/BlockGapsPanel";
+import { BlockChecking, BlockLocked } from "@/components/BlockGate";
 import { useLocale } from "@/i18n/LocaleProvider";
 import { askableCounts } from "@/lib/quiz";
-import { useProgress } from "@/lib/progress";
+import { useProgress, useBlockAccess } from "@/lib/progress";
 
 export const Route = createFileRoute("/learn/$block/")({
   loader: ({ params }) => {
@@ -39,12 +40,18 @@ function BlockDetail() {
   const { blockSlug } = Route.useLoaderData();
   const block = getBlock(blockSlug)!;
   const { t } = useLocale();
+  const access = useBlockAccess(blockSlug);
   // A block that cannot build a drill should not offer it. Ranks has two
   // distinct placements, so no placement question exists for it to ask.
   const askable = askableCounts(blockSlug);
   const items = itemsOfBlock(blockSlug);
   const progress = useProgress();
 
+  // The unlock gate has to hold here too. Guarding only the listing left the
+  // block reachable by URL, and the exam -- which is what unlocks the next
+  // block -- reachable without having opened this one.
+  if (access === "checking") return <BlockChecking />;
+  if (access === "locked") return <BlockLocked blockSlug={blockSlug} />;
   return (
     <div>
       <section className="border-b border-border bg-card">

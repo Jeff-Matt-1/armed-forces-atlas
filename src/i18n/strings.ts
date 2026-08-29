@@ -140,6 +140,20 @@ const en = {
   "drill.savedLocal":
     "Scheduling saved on this device. Sign in to sync it across devices — what you have already studied comes with you.",
   "drill.shuffleAgain": "Shuffle again",
+  // Unlock gate
+  "gate.lockedTitle": "This block is still locked",
+  "gate.lockedBody":
+    "Pass the {block} exam to open it. The blocks build on each other, so the order is the point.",
+  "gate.lockedBodyGeneric": "Work through the earlier blocks to open this one.",
+  "gate.openPrevious": "Go to {block}",
+  "curriculum.inProgressHint": "Content in progress",
+  "drill.gradeAgain": "Again",
+  "drill.gradeHard": "Hard",
+  "drill.gradeGood": "Good",
+  "drill.gradeEasy": "Easy",
+  "drill.recallHint":
+    "Recall the designation, the armament, and the unit that fields it — then reveal.",
+
   "drill.reviewQueue": "Review queue",
 
   "gaps.title": "Still outstanding in this block",
@@ -374,6 +388,20 @@ const et: Record<StringKey, string> = {
   "drill.savedLocal":
     "Ajastus salvestati sellesse seadmesse. Logi sisse, et seda seadmete vahel sünkroonida — juba õpitu tuleb sinuga kaasa.",
   "drill.shuffleAgain": "Sega uuesti",
+  // Unlock gate
+  "gate.lockedTitle": "See õppetükk on veel lukus",
+  "gate.lockedBody":
+    "Ava see, sooritades õppetüki {block} eksami. Õppetükid ehituvad üksteisele, seega on järjekord oluline.",
+  "gate.lockedBodyGeneric": "Selle avamiseks tööta läbi eelnevad õppetükid.",
+  "gate.openPrevious": "Ava {block}",
+  "curriculum.inProgressHint": "Sisu on koostamisel",
+  "drill.gradeAgain": "Uuesti",
+  "drill.gradeHard": "Raske",
+  "drill.gradeGood": "Hea",
+  "drill.gradeEasy": "Kerge",
+  "drill.recallHint":
+    "Tuleta meelde tähistus, relvastus ja üksus, mis seda kasutab — seejärel ava vastus.",
+
   "drill.reviewQueue": "Kordamisjärjekord",
 
   "gaps.title": "Selles õppetükis on veel tegemata",
