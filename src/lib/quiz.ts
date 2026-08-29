@@ -2,6 +2,7 @@ import {
   allPlacements,
   contentLocale,
   getBlock,
+  itemsOfBlock,
   photoItems,
   studyableItems,
   type Item,
@@ -99,16 +100,9 @@ export function placementQuestion(item: Item, placementPool: string[]): Question
   const answer = item.placements[0];
   if (!answer) return null;
   const pool = placementPool.filter((p) => !item.placements.includes(p));
-  if (pool.length < 3) return null;
-  const options = pickDistractors([...pool, answer], answer, 3);
-  if (
-    optionGivesItselfAway(
-      item.name,
-      answer,
-      options.filter((o) => o !== answer),
-    )
-  )
-    return null;
+  const chosen = fairDistractors(item.name, answer, pool);
+  if (!chosen) return null;
+  const options = shuffle([answer, ...chosen]);
   return {
     kind: "placement",
     id: `place:${item.slug}`,
@@ -129,15 +123,9 @@ export function armamentQuestion(item: Item, pool: Item[]): Question | null {
     ),
   ];
   if (others.length < 3) return null;
-  const options = pickDistractors([...others, item.armament], item.armament, 3);
-  if (
-    optionGivesItselfAway(
-      item.name,
-      item.armament,
-      options.filter((o) => o !== item.armament),
-    )
-  )
-    return null;
+  const chosen = fairDistractors(item.name, item.armament, others);
+  if (!chosen) return null;
+  const options = shuffle([item.armament, ...chosen]);
   return {
     kind: "armament",
     id: `arm:${item.slug}`,
@@ -173,12 +161,12 @@ const GENERIC_WORDS = new Set([
 function designationTokens(value: string): string[] {
   return value
     .toLowerCase()
-    .split(/[^a-z0-9]+/)
+    .split(/[^\p{L}\p{N}]+/u)
     .filter((token) => token.length >= 2 && !GENERIC_WORDS.has(token));
 }
 
 function squash(value: string): string {
-  return value.toLowerCase().replace(/[^a-z0-9]/g, "");
+  return value.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "");
 }
 
 /**
@@ -207,6 +195,34 @@ function optionGivesItselfAway(subject: string, answer: string, others: string[]
   const shared = designationTokens(answer).filter((token) => subjectTokens.has(token));
   if (shared.length === 0) return false;
   return !others.some((other) => designationTokens(other).some((token) => shared.includes(token)));
+}
+
+/**
+ * Three distractors that leave the answer unmatchable to the prompt.
+ *
+ * Where the answer shares an identifying word with the subject, one distractor
+ * carrying that word is chosen deliberately rather than hoped for, so the word
+ * stops being a shortcut. Returning null therefore means no fair question
+ * exists at all — not that this particular draw was unlucky, which is what
+ * made buildability vary run to run and left mastery dividing by a count no
+ * one could reach.
+ */
+function fairDistractors(subject: string, answer: string, pool: string[]): string[] | null {
+  const unique = [...new Set(pool)].filter((value) => value !== answer);
+  if (unique.length < 3) return null;
+
+  const subjectWords = new Set(designationTokens(subject));
+  const shared = designationTokens(answer).filter((word) => subjectWords.has(word));
+  if (shared.length === 0) return shuffle(unique).slice(0, 3);
+
+  const sharing = unique.filter((value) =>
+    designationTokens(value).some((word) => shared.includes(word)),
+  );
+  if (sharing.length === 0) return null;
+
+  const rest = unique.filter((value) => !sharing.includes(value));
+  const picked = [...shuffle(sharing), ...shuffle(rest)].slice(0, 3);
+  return picked.length === 3 ? picked : null;
 }
 
 /**
@@ -360,3 +376,24 @@ export function buildExam(blockSlug: string, length = 16): Question[] {
 }
 
 export const PASS_RATIO = 0.8;
+
+/**
+ * How many items in a block each question kind can actually be asked about.
+ *
+ * This is the denominator mastery divides by, so it has to agree with the
+ * builders rather than approximate them. It used to approximate: it counted
+ * items that had a photograph or enough distinct placements, while the builders
+ * additionally reject questions whose answer can be matched to the prompt. A
+ * block could then never reach 100%, because some of the items it was counting
+ * could never be earned — which is exactly what a reader sees as being stuck.
+ */
+export function askableCounts(blockSlug: string): { photo: number; placement: number } {
+  const items = itemsOfBlock(blockSlug);
+  const photos = items.filter((item) => item.imageUrl);
+  const placements = allPlacements([blockSlug]);
+
+  return {
+    photo: items.filter((item) => photoQuestion(item, photos) !== null).length,
+    placement: items.filter((item) => placementQuestion(item, placements) !== null).length,
+  };
+}

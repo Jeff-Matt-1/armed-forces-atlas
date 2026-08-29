@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from "react";
 
 import { useAuth } from "@/hooks/useAuth";
 import { supabase } from "@/integrations/supabase/client";
-import { allPlacements, askableCounts, itemsOfBlock, readyBlocks, type Item } from "@/lib/content";
+import { allPlacements, itemsOfBlock, readyBlocks, type Item } from "@/lib/content";
 import {
   advanceStreak,
   clearLocalProgress,
@@ -24,6 +24,7 @@ import type {
   StreakRow,
 } from "@/lib/progress-types";
 import { masteryBreakdown, masteryGaps, type MasteryBreakdown } from "@/lib/mastery";
+import { askableCounts, placementQuestion, photoQuestion } from "@/lib/quiz";
 import { emptyReview, schedule, type ReviewState } from "@/lib/srs";
 
 export type { Attempt, BlockProgressRow, CardReview, StreakRow } from "@/lib/progress-types";
@@ -152,6 +153,7 @@ export function useProgress() {
     const items = itemsOfBlock(blockSlug);
     const askable = askableCounts(blockSlug);
     const placementPool = allPlacements([blockSlug]);
+    const photoPool = items.filter((item) => item.imageUrl);
     const bySlug = new Map(items.map((item) => [item.slug, item]));
     const resolve = (slugs: string[]) =>
       slugs.map((slug) => bySlug.get(slug)).filter((item) => item !== undefined);
@@ -162,11 +164,14 @@ export function useProgress() {
       reviewMap,
       correctByKind,
       progress: blockBySlug.get(blockSlug),
-      canAskPhoto: (slug) => Boolean(bySlug.get(slug)?.imageUrl),
+      // Same question the counts asked, so the list can always reach empty.
+      canAskPhoto: (slug) => {
+        const item = bySlug.get(slug);
+        return item ? photoQuestion(item, photoPool) !== null : false;
+      },
       canAskPlacement: (slug) => {
         const item = bySlug.get(slug);
-        if (!item?.placements[0]) return false;
-        return placementPool.filter((entry) => !item.placements.includes(entry)).length >= 3;
+        return item ? placementQuestion(item, placementPool) !== null : false;
       },
     });
 

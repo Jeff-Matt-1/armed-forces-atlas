@@ -81,21 +81,6 @@ export function allPlacements(blockSlugs?: string[]): string[] {
  * asked a placement question, and dividing by the item count there would make
  * 100% unreachable no matter how much studying was done.
  */
-export function askableCounts(blockSlug: string): { photo: number; placement: number } {
-  const items = itemsOfBlock(blockSlug);
-  const photos = items.filter((item) => item.imageUrl);
-  const placements = allPlacements([blockSlug]);
-
-  return {
-    // photoQuestion needs the item to have an image and three other names.
-    photo: photos.length >= 4 ? photos.length : 0,
-    // placementQuestion needs three distinct placements the item does not hold.
-    placement: items.filter(
-      (item) =>
-        item.placements[0] && placements.filter((p) => !item.placements.includes(p)).length >= 3,
-    ).length,
-  };
-}
 
 /**
  * Tailwind object-fit class for a block's imagery. Portrait insignia must be

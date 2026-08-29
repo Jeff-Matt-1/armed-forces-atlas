@@ -1,11 +1,14 @@
 import { describe, expect, test } from "bun:test";
 
 import { blocks, items } from "@/content/russia";
+import { allPlacements, itemsOfBlock } from "@/lib/content";
 import {
   armamentQuestion,
+  askableCounts,
   buildExam,
   buildPhotoQuiz,
   designationQuestion,
+  photoQuestion,
   placementQuestion,
 } from "@/lib/quiz";
 
@@ -62,6 +65,60 @@ describe("content wiring", () => {
 });
 
 describe("question generation", () => {
+  /**
+   * askableCounts is the denominator mastery divides by, so a block can only
+   * reach 100% if every item it counts can actually be asked about. It used to
+   * approximate the builders — counting items with a photograph, or with enough
+   * distinct placements — while the builders additionally reject a question
+   * whose answer can be matched to its own prompt. Foundations counted ten
+   * placement questions and could build three, so the block was unfinishable
+   * and the reader was left staring at a number that would not move.
+   */
+  test("every counted question can actually be built", () => {
+    const mismatches: string[] = [];
+    for (const block of readyBlocks) {
+      const pool = itemsOfBlock(block.slug);
+      const photos = pool.filter((i) => i.imageUrl);
+      const placements = allPlacements([block.slug]);
+      const counted = askableCounts(block.slug);
+
+      const buildablePhoto = pool.filter((i) => photoQuestion(i, photos) !== null).length;
+      const buildablePlacement = pool.filter(
+        (i) => placementQuestion(i, placements) !== null,
+      ).length;
+
+      if (counted.photo !== buildablePhoto) {
+        mismatches.push(`${block.slug} photo: counts ${counted.photo}, builds ${buildablePhoto}`);
+      }
+      if (counted.placement !== buildablePlacement) {
+        mismatches.push(
+          `${block.slug} placement: counts ${counted.placement}, builds ${buildablePlacement}`,
+        );
+      }
+    }
+    expect(mismatches).toEqual([]);
+  });
+
+  /**
+   * Whether a question can be built must not depend on which distractors happen
+   * to be drawn, or the denominator would wobble between renders and a block
+   * would drift in and out of being finishable.
+   */
+  test("buildability does not depend on the draw", () => {
+    const unstable: string[] = [];
+    for (const block of readyBlocks) {
+      const pool = itemsOfBlock(block.slug);
+      const placements = allPlacements([block.slug]);
+      for (const item of pool) {
+        const results = new Set(
+          Array.from({ length: 25 }, () => placementQuestion(item, placements) !== null),
+        );
+        if (results.size > 1) unstable.push(`${block.slug}/${item.slug}`);
+      }
+    }
+    expect(unstable).toEqual([]);
+  });
+
   /**
    * The failure this guards against is the one that once left Ranks a dead
    * end: a block that looks finished but whose exam generates nothing.
