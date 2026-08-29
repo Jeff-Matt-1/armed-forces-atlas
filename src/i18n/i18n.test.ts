@@ -56,6 +56,16 @@ describe("content translation", () => {
     expect(Object.keys(etTranslations.items).filter((k) => !itemSlugs.has(k))).toEqual([]);
   });
 
+  /** The same shape is expected of the Estonian Foundations akas. */
+  test("every Estonian Foundations aka is an abbreviation with its expansion", () => {
+    const wrong = items
+      .filter((i) => i.blockSlug === "foundations")
+      .map((i) => [i.slug, etTranslations.items[i.slug]?.aka] as const)
+      .filter(([, aka]) => !/^[A-Z]{2,4} \(.+\)$/.test(aka ?? ""))
+      .map(([slug, aka]) => `${slug}: ${aka}`);
+    expect(wrong).toEqual([]);
+  });
+
   test("localising to English returns the source untouched", () => {
     const block = blocks[0]!;
     const item = items[0]!;

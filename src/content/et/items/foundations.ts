@@ -24,7 +24,7 @@ export const etFoundations: Record<string, ItemTranslation> = {
   },
   "concept-ifv": {
     name: "Jalaväe lahingumasin (JLM)",
-    aka: "BMP klass",
+    aka: "BMP (bojevaja mašina pehotõ)",
     armament: "Automaatkahur (tavaliselt 30 mm), tankitõrjerakett, paarikuulipilduja",
     rangeText: "Automaatkahur 2000–4000 m; tankitõrjerakett 4000–5500 m",
     cues: [
@@ -44,7 +44,7 @@ export const etFoundations: Record<string, ItemTranslation> = {
   },
   "concept-apc": {
     name: "Soomustransportöör (STR)",
-    aka: "BTR klass",
+    aka: "BTR (bronetransportjor)",
     armament: "Raskekuulipilduja või kerge automaatkahur väikeses tornis",
     rangeText: "Kuulipilduja 1500–2000 m; 30 mm kuni 4000 m",
     cues: [
@@ -83,8 +83,8 @@ export const etFoundations: Record<string, ItemTranslation> = {
     service: "Kategooria",
   },
   "concept-mlrs": {
-    name: "Raketiheitja (RSZO)",
-    aka: "Reaktiivsuurtükivägi",
+    name: "Raketiheitja",
+    aka: "RSZO (reaktiivnaja sistema zalpovogo ognja)",
     armament: "12–40 torust koosnev raketiplokk",
     rangeText: "20–40 km (122 mm); kuni 70–90 km suuremate kaliibritega",
     cues: [
@@ -124,7 +124,7 @@ export const etFoundations: Record<string, ItemTranslation> = {
   },
   "concept-ship": {
     name: "Pinnalahingulaev",
-    aka: "Fregatt / korvett / hävitaja",
+    aka: "NK (nadvodnõi korabl)",
     armament: "Laevakahur, püststardiraketišahtid, lähikaitsesüsteemid",
     rangeText: "Tiibraketid üle 1500 km",
     cues: [
@@ -141,7 +141,7 @@ export const etFoundations: Record<string, ItemTranslation> = {
   },
   "concept-uav": {
     name: "Mehitamata õhusõiduk (MÕS)",
-    aka: "Droon / BLA",
+    aka: "BLA (bespilotnõi letatelnõi aparaat)",
     armament: "Enamasti relvastamata luureks; ringlevad tüübid kannavad lõhkepead",
     rangeText: "Taktikalise mehitamata õhusõiduki raadius 100–120 km",
     cues: [
@@ -161,7 +161,7 @@ export const etFoundations: Record<string, ItemTranslation> = {
   },
   "concept-ew": {
     name: "Elektroonilise sõjapidamise süsteem",
-    aka: "REB",
+    aka: "REB (radioelektronnaja borba)",
     armament: "Mittekineetiline: segamine ja suunamääramine",
     rangeText: "Strateegilistel tüüpidel segamisefekt 150–300 km",
     cues: [
@@ -181,7 +181,7 @@ export const etFoundations: Record<string, ItemTranslation> = {
   },
   "concept-recon": {
     name: "Luuremasin",
-    aka: "BRM / razvedka",
+    aka: "BRM (bojevaja razvedõvatelnaja mašina)",
     armament: "Automaatkahur ja kuulipilduja; põhikoormaks on sensorid",
     rangeText: "Sensorite avastuskaugus 10–25 km",
     cues: [

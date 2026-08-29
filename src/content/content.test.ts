@@ -35,6 +35,21 @@ describe("content wiring", () => {
     expect(duplicates.map((i) => i.slug)).toEqual([]);
   });
 
+  /**
+   * Foundations entries name a category, not a machine, so the alternative
+   * designation is the Russian abbreviation and its expansion — "BTR
+   * (bronetransportyor)". The block had drifted into four different shapes,
+   * including a bare "REB" with nothing to expand it, so the cards no longer
+   * read the same way.
+   */
+  test("every Foundations aka is an abbreviation with its expansion", () => {
+    const wrong = items
+      .filter((i) => i.blockSlug === "foundations")
+      .filter((i) => !/^[A-Z]{2,4} \(.+\)$/.test(i.aka ?? ""))
+      .map((i) => `${i.slug}: ${i.aka}`);
+    expect(wrong).toEqual([]);
+  });
+
   test("ready blocks carry a brief and a doctrinal note", () => {
     const bare = readyBlocks.filter((b) => !b.brief || !b.doctrineNote);
     expect(bare.map((b) => b.slug)).toEqual([]);
