@@ -25,8 +25,18 @@ non-public material is included, and none will be accepted in contributions.
 ## 3. Photographs — individually licensed, NOT MIT
 
 Images in `public/images/items/` are copies of Wikimedia Commons files, each
-under its own licence (variously CC BY, CC BY-SA, or public domain). They are
-**not** covered by this project's MIT licence and cannot be relicensed by it.
+under its own licence. They are **not** covered by this project's MIT licence
+and cannot be relicensed by it. The licences currently in use are:
+
+- CC BY 2.0, 2.5, 3.0 and 4.0
+- CC BY-SA 2.0, 2.5, 3.0, 3.0 (de) and 4.0
+- CC0 and public domain
+- Open Government Licence v1.0 (UK Crown copyright)
+- Commons "Attribution" — free use with attribution on the author's own terms
+
+Share-alike applies to the CC BY-SA files: an adaptation of one must carry the
+same licence. GFDL images are deliberately avoided, because that licence
+requires distributing its full text alongside the work.
 
 Per-image author, licence and source link are stored alongside each entry in
 `src/content/` — `russia.ts` and the per-block files under `items/` —

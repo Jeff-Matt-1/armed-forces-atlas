@@ -70,6 +70,26 @@
     "attributionRequired": true
   },
   {
+    "slug": "admiral-gorshkov",
+    "file": "File:Admiral Gorshkov frigate 03.jpg",
+    "localPath": "/images/items/admiral-gorshkov.jpg",
+    "imageCredit": "CC BY 4.0 — Ministry of Defence of the Russian Federation",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:Admiral_Gorshkov_frigate_03.jpg",
+    "licence": "CC BY 4.0",
+    "artist": "Ministry of Defence of the Russian Federation",
+    "attributionRequired": true
+  },
+  {
+    "slug": "admiral-grigorovich",
+    "file": "File:Адмирал Григорович.jpg",
+    "localPath": "/images/items/admiral-grigorovich.jpg",
+    "imageCredit": "CC BY 4.0 — Пресс-служба Западного военного округа",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:%D0%90%D0%B4%D0%BC%D0%B8%D1%80%D0%B0%D0%BB_%D0%93%D1%80%D0%B8%D0%B3%D0%BE%D1%80%D0%BE%D0%B2%D0%B8%D1%87.jpg",
+    "licence": "CC BY 4.0",
+    "artist": "Пресс-служба Западного военного округа",
+    "attributionRequired": true
+  },
+  {
     "slug": "ags-17",
     "file": "File:AGS-17 grenade launcher - RaceofHeroes-part2-15.jpg",
     "localPath": "/images/items/ags-17.jpg",
@@ -78,6 +98,16 @@
     "licence": "CC BY-SA 4.0",
     "artist": "Vitaly V. Kuzmin",
     "attributionRequired": true
+  },
+  {
+    "slug": "akula",
+    "file": "File:Akula class submarine starboard quarter view.JPEG",
+    "localPath": "/images/items/akula.jpg",
+    "imageCredit": "Public domain — Unknown author",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:Akula_class_submarine_starboard_quarter_view.JPEG",
+    "licence": "Public domain",
+    "artist": "Unknown author",
+    "attributionRequired": false
   },
   {
     "slug": "bm-21-grad",
@@ -167,6 +197,16 @@
     "imagePage": "https://commons.wikimedia.org/wiki/File:BMP-3_(41204909204).jpg",
     "licence": "CC BY 2.0",
     "artist": "Dmitriy Fomin from Moscow, Russia",
+    "attributionRequired": true
+  },
+  {
+    "slug": "borei",
+    "file": "File:A Borei class submarine at sea.jpg",
+    "localPath": "/images/items/borei.jpg",
+    "imageCredit": "CC BY 4.0 — Ministry of Defence of the Russian Federation",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:A_Borei_class_submarine_at_sea.jpg",
+    "licence": "CC BY 4.0",
+    "artist": "Ministry of Defence of the Russian Federation",
     "attributionRequired": true
   },
   {
@@ -280,6 +320,16 @@
     "attributionRequired": true
   },
   {
+    "slug": "buyan-m",
+    "file": "File:Orekhovo-Zuyevo corvette.jpg",
+    "localPath": "/images/items/buyan-m.jpg",
+    "imageCredit": "CC BY 3.0 — Rumlin",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:Orekhovo-Zuyevo_corvette.jpg",
+    "licence": "CC BY 3.0",
+    "artist": "Rumlin",
+    "attributionRequired": true
+  },
+  {
     "slug": "d-30",
     "file": "File:122mm howitzer D-30 - Armory masters4.jpg",
     "localPath": "/images/items/d-30.jpg",
@@ -287,6 +337,36 @@
     "imagePage": "https://commons.wikimedia.org/wiki/File:122mm_howitzer_D-30_-_Armory_masters4.jpg",
     "licence": "CC BY 4.0",
     "artist": "Министерство обороны Российской Федерации",
+    "attributionRequired": true
+  },
+  {
+    "slug": "delta-iv",
+    "file": "File:Submarine Novomoskovsk, 2016 2.jpg",
+    "localPath": "/images/items/delta-iv.jpg",
+    "imageCredit": "CC BY 4.0 — Министерство обороны Российской Федерации",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:Submarine_Novomoskovsk,_2016_2.jpg",
+    "licence": "CC BY 4.0",
+    "artist": "Министерство обороны Российской Федерации",
+    "attributionRequired": true
+  },
+  {
+    "slug": "eleron-3",
+    "file": "File:ENICS Eleron-3 UAV Army-2022 2022-08-20 2212.jpg",
+    "localPath": "/images/items/eleron-3.jpg",
+    "imageCredit": "CC BY-SA 4.0 — Mike1979 Russia",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:ENICS_Eleron-3_UAV_Army-2022_2022-08-20_2212.jpg",
+    "licence": "CC BY-SA 4.0",
+    "artist": "Mike1979 Russia",
+    "attributionRequired": true
+  },
+  {
+    "slug": "forpost",
+    "file": "File:Forpost UAV ARMY-2022.jpg",
+    "localPath": "/images/items/forpost.jpg",
+    "imageCredit": "CC BY-SA 3.0 — Boevaya mashina",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:Forpost_UAV_ARMY-2022.jpg",
+    "licence": "CC BY-SA 3.0",
+    "artist": "Boevaya mashina",
     "attributionRequired": true
   },
   {
@@ -327,6 +407,16 @@
     "imagePage": "https://commons.wikimedia.org/wiki/File:GMZ-3_minelayer_vehicle_at_Engineering_Technologies_2012.jpg",
     "licence": "CC BY-SA 3.0",
     "artist": "Mike1979 Russia",
+    "attributionRequired": true
+  },
+  {
+    "slug": "il-76",
+    "file": "File:Ilyushin Il-76 Russian Air Force at Zurich Airport.jpg",
+    "localPath": "/images/items/il-76.jpg",
+    "imageCredit": "CC BY-SA 4.0 — Schmidy87",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:Ilyushin_Il-76_Russian_Air_Force_at_Zurich_Airport.jpg",
+    "licence": "CC BY-SA 4.0",
+    "artist": "Schmidy87",
     "attributionRequired": true
   },
   {
@@ -400,6 +490,16 @@
     "attributionRequired": true
   },
   {
+    "slug": "kilo",
+    "file": "File:B-261 Novorossiysk, 2020.jpg",
+    "localPath": "/images/items/kilo.jpg",
+    "imageCredit": "CC BY 4.0 — Unknown authorUnknown author",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:B-261_Novorossiysk,_2020.jpg",
+    "licence": "CC BY 4.0",
+    "artist": "Unknown authorUnknown author",
+    "attributionRequired": true
+  },
+  {
     "slug": "kord",
     "file": "File:Kord 6P50.jpg",
     "localPath": "/images/items/kord.jpg",
@@ -450,6 +550,36 @@
     "attributionRequired": false
   },
   {
+    "slug": "lancet",
+    "file": "File:ZALA Lancet at IDEX 2025.jpg",
+    "localPath": "/images/items/lancet.jpg",
+    "imageCredit": "CC BY 4.0 — Mztourist",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:ZALA_Lancet_at_IDEX_2025.jpg",
+    "licence": "CC BY 4.0",
+    "artist": "Mztourist",
+    "attributionRequired": true
+  },
+  {
+    "slug": "mig-31",
+    "file": "File:Right side view of a Soviet MiG-31 Foxhound 2.jpg",
+    "localPath": "/images/items/mig-31.jpg",
+    "imageCredit": "Public domain — Unknown author",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:Right_side_view_of_a_Soviet_MiG-31_Foxhound_2.jpg",
+    "licence": "Public domain",
+    "artist": "Unknown author",
+    "attributionRequired": false
+  },
+  {
+    "slug": "moskva",
+    "file": "File:Project 1164 Moskva 2012 G2.jpg",
+    "localPath": "/images/items/moskva.jpg",
+    "imageCredit": "Public domain — George Chernilevsky",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:Project_1164_Moskva_2012_G2.jpg",
+    "licence": "Public domain",
+    "artist": "George Chernilevsky",
+    "attributionRequired": false
+  },
+  {
     "slug": "mt-55",
     "file": "File:MT-55 bridgelayer in Technical museum Togliatti.jpg",
     "localPath": "/images/items/mt-55.jpg",
@@ -480,6 +610,26 @@
     "attributionRequired": true
   },
   {
+    "slug": "orion-uav",
+    "file": "File:Kronstadt Orion left side ARMY-2022.jpg",
+    "localPath": "/images/items/orion-uav.jpg",
+    "imageCredit": "CC BY-SA 3.0 — Boevaya mashina",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:Kronstadt_Orion_left_side_ARMY-2022.jpg",
+    "licence": "CC BY-SA 3.0",
+    "artist": "Boevaya mashina",
+    "attributionRequired": true
+  },
+  {
+    "slug": "orlan-10",
+    "file": "File:Orlan-10 UAV Army-2022 2022-08-20 2287.jpg",
+    "localPath": "/images/items/orlan-10.jpg",
+    "imageCredit": "CC BY-SA 4.0 — Mike1979 Russia",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:Orlan-10_UAV_Army-2022_2022-08-20_2287.jpg",
+    "licence": "CC BY-SA 4.0",
+    "artist": "Mike1979 Russia",
+    "attributionRequired": true
+  },
+  {
     "slug": "osa-akm",
     "file": "File:9K33M3 Osa-AKM in VDNKh.jpg",
     "localPath": "/images/items/osa-akm.jpg",
@@ -487,6 +637,16 @@
     "imagePage": "https://commons.wikimedia.org/wiki/File:9K33M3_Osa-AKM_in_VDNKh.jpg",
     "licence": "CC BY-SA 4.0",
     "artist": "Dmitry Ivanov.",
+    "attributionRequired": true
+  },
+  {
+    "slug": "oscar-ii",
+    "file": "File:K-410 Smolensk.jpg",
+    "localPath": "/images/items/oscar-ii.jpg",
+    "imageCredit": "CC BY 4.0 — Министерство обороны Российской федерации",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:K-410_Smolensk.jpg",
+    "licence": "CC BY 4.0",
+    "artist": "Министерство обороны Российской федерации",
     "attributionRequired": true
   },
   {
@@ -547,6 +707,16 @@
     "imagePage": "https://commons.wikimedia.org/wiki/File:Russia_Arms_Expo_2013_(531-22).jpg",
     "licence": "CC BY-SA 4.0",
     "artist": "Vitaly V. Kuzmin",
+    "attributionRequired": true
+  },
+  {
+    "slug": "pyotr-velikiy",
+    "file": "File:HMS Dragon with Kirov Class 'Pyotr Velikiy' MOD 45157551.jpg",
+    "localPath": "/images/items/pyotr-velikiy.jpg",
+    "imageCredit": "OGL v1.0 — Royal Navy",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:HMS_Dragon_with_Kirov_Class_%27Pyotr_Velikiy%27_MOD_45157551.jpg",
+    "licence": "OGL v1.0",
+    "artist": "Royal Navy",
     "attributionRequired": true
   },
   {
@@ -900,6 +1070,16 @@
     "attributionRequired": true
   },
   {
+    "slug": "ropucha",
+    "file": "File:Project 775M AZOV 2008 G2.jpg",
+    "localPath": "/images/items/ropucha.jpg",
+    "imageCredit": "Public domain — George Chernilevsky",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:Project_775M_AZOV_2008_G2.jpg",
+    "licence": "Public domain",
+    "artist": "George Chernilevsky",
+    "attributionRequired": false
+  },
+  {
     "slug": "rpg-7",
     "file": "File:RPG-7V1 grenade launcher - RaceofHeroes-part2-22.jpg",
     "localPath": "/images/items/rpg-7.jpg",
@@ -950,6 +1130,16 @@
     "attributionRequired": false
   },
   {
+    "slug": "steregushchiy",
+    "file": "File:Corvette Steregushchiy.jpg",
+    "localPath": "/images/items/steregushchiy.jpg",
+    "imageCredit": "Public domain — Tungsten",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:Corvette_Steregushchiy.jpg",
+    "licence": "Public domain",
+    "artist": "Tungsten",
+    "attributionRequired": false
+  },
+  {
     "slug": "strela-10",
     "file": "File:9K35 Strieła-10 Darłowo.JPG",
     "localPath": "/images/items/strela-10.jpg",
@@ -967,6 +1157,46 @@
     "imagePage": "https://commons.wikimedia.org/wiki/File:Strelets_Recce.jpg",
     "licence": "CC BY 4.0",
     "artist": "Ministry of Defence of the Russian Federation",
+    "attributionRequired": true
+  },
+  {
+    "slug": "su-25",
+    "file": "File:Sukhoi Su-25 of the Russian Air Force landing at Vladivostok (8683076150).jpg",
+    "localPath": "/images/items/su-25.jpg",
+    "imageCredit": "CC BY-SA 2.0 — Fedor Leukhin",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:Sukhoi_Su-25_of_the_Russian_Air_Force_landing_at_Vladivostok_(8683076150).jpg",
+    "licence": "CC BY-SA 2.0",
+    "artist": "Fedor Leukhin",
+    "attributionRequired": true
+  },
+  {
+    "slug": "su-34",
+    "file": "File:Russian Air Force, RF-81857, Sukhoi Su-34 (51525365450).jpg",
+    "localPath": "/images/items/su-34.jpg",
+    "imageCredit": "CC BY-SA 2.0 — Anna Zvereva",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:Russian_Air_Force,_RF-81857,_Sukhoi_Su-34_(51525365450).jpg",
+    "licence": "CC BY-SA 2.0",
+    "artist": "Anna Zvereva",
+    "attributionRequired": true
+  },
+  {
+    "slug": "su-35s",
+    "file": "File:Russian Air Force Sukhoi Su-35 Belyakov.jpg",
+    "localPath": "/images/items/su-35s.jpg",
+    "imageCredit": "CC BY-SA 3.0 — Oleg Belyakov",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:Russian_Air_Force_Sukhoi_Su-35_Belyakov.jpg",
+    "licence": "CC BY-SA 3.0",
+    "artist": "Oleg Belyakov",
+    "attributionRequired": true
+  },
+  {
+    "slug": "su-57",
+    "file": "File:Sukhoi Su-57 RF-81775 Army-2022.jpg",
+    "localPath": "/images/items/su-57.jpg",
+    "imageCredit": "CC BY-SA 3.0 — Boevaya mashina",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:Sukhoi_Su-57_RF-81775_Army-2022.jpg",
+    "licence": "CC BY-SA 3.0",
+    "artist": "Boevaya mashina",
     "attributionRequired": true
   },
   {
@@ -1000,6 +1230,26 @@
     "attributionRequired": true
   },
   {
+    "slug": "tu-160",
+    "file": "File:Tupolev Tu-160 overflying Moscow fix.jpg",
+    "localPath": "/images/items/tu-160.jpg",
+    "imageCredit": "CC BY-SA 3.0 — Alex Beltyukov",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:Tupolev_Tu-160_overflying_Moscow_fix.jpg",
+    "licence": "CC BY-SA 3.0",
+    "artist": "Alex Beltyukov",
+    "attributionRequired": true
+  },
+  {
+    "slug": "tu-95ms",
+    "file": "File:Tu-95 at an Air show in Voronezh 2014.jpg",
+    "localPath": "/images/items/tu-95ms.jpg",
+    "imageCredit": "CC BY-SA 4.0 — Роман Дергунов",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:Tu-95_at_an_Air_show_in_Voronezh_2014.jpg",
+    "licence": "CC BY-SA 4.0",
+    "artist": "Роман Дергунов",
+    "attributionRequired": true
+  },
+  {
     "slug": "tunguska",
     "file": "File:2S6M1 Tunguska M1 at ARMY-2016.JPG",
     "localPath": "/images/items/tunguska.jpg",
@@ -1008,6 +1258,16 @@
     "licence": "CC BY-SA 3.0 de",
     "artist": "Boevaya mashina",
     "attributionRequired": true
+  },
+  {
+    "slug": "typhoon",
+    "file": "File:Typhoon class submarine.jpg",
+    "localPath": "/images/items/typhoon.jpg",
+    "imageCredit": "Public domain — US gov",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:Typhoon_class_submarine.jpg",
+    "licence": "Public domain",
+    "artist": "US gov",
+    "attributionRequired": false
   },
   {
     "slug": "uaz-3163-patriot",
@@ -1030,6 +1290,16 @@
     "attributionRequired": true
   },
   {
+    "slug": "udaloy",
+    "file": "File:Soviet destroyer Udaloy underway c1981.jpg",
+    "localPath": "/images/items/udaloy.jpg",
+    "imageCredit": "Public domain — U.S. Navy",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:Soviet_destroyer_Udaloy_underway_c1981.jpg",
+    "licence": "Public domain",
+    "artist": "U.S. Navy",
+    "attributionRequired": false
+  },
+  {
     "slug": "ur-77",
     "file": "File:UR-77 Meteorit being renovated inside Tatarstan military-industrial complex - July 2023 03.jpg",
     "localPath": "/images/items/ur-77.jpg",
@@ -1047,6 +1317,16 @@
     "imagePage": "https://commons.wikimedia.org/wiki/File:Ural-4320,_12._Internationales_Maritimes-Fahrzeugtreffen,_Ribnitz-Damgarten_(_1060471).jpg",
     "licence": "CC BY-SA 4.0",
     "artist": "Matti Blume",
+    "attributionRequired": true
+  },
+  {
+    "slug": "uran-9",
+    "file": "File:Боевой многофункциональный робототехнический комплекс Уран-9 - Международного военно-технического форума АРМИЯ-2016 01.jpg",
+    "localPath": "/images/items/uran-9.jpg",
+    "imageCredit": "CC BY-SA 4.0 — Vitaly V. Kuzmin",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:%D0%91%D0%BE%D0%B5%D0%B2%D0%BE%D0%B9_%D0%BC%D0%BD%D0%BE%D0%B3%D0%BE%D1%84%D1%83%D0%BD%D0%BA%D1%86%D0%B8%D0%BE%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9_%D1%80%D0%BE%D0%B1%D0%BE%D1%82%D0%BE%D1%82%D0%B5%D1%85%D0%BD%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D0%BA%D0%BE%D0%BC%D0%BF%D0%BB%D0%B5%D0%BA%D1%81_%D0%A3%D1%80%D0%B0%D0%BD-9_-_%D0%9C%D0%B5%D0%B6%D0%B4%D1%83%D0%BD%D0%B0%D1%80%D0%BE%D0%B4%D0%BD%D0%BE%D0%B3%D0%BE_%D0%B2%D0%BE%D0%B5%D0%BD%D0%BD%D0%BE-%D1%82%D0%B5%D1%85%D0%BD%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%BE%D0%B3%D0%BE_%D1%84%D0%BE%D1%80%D1%83%D0%BC%D0%B0_%D0%90%D0%A0%D0%9C%D0%98%D0%AF-2016_01.jpg",
+    "licence": "CC BY-SA 4.0",
+    "artist": "Vitaly V. Kuzmin",
     "attributionRequired": true
   },
   {

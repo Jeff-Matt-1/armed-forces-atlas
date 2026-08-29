@@ -3,10 +3,12 @@
 //
 // Entries for blocks filled after the first release live in ./items/<block>.ts
 // and are concatenated below; this file keeps the original four blocks inline.
+import { aircraft } from "@/content/items/aircraft";
 import { airDefence } from "@/content/items/air-defence";
 import { apc } from "@/content/items/apc";
 import { artillery } from "@/content/items/artillery";
 import { c2 } from "@/content/items/c2";
+import { drones } from "@/content/items/drones";
 import { engineering } from "@/content/items/engineering";
 import { ew } from "@/content/items/ew";
 import { heavyWeapons } from "@/content/items/heavy-weapons";
@@ -14,7 +16,9 @@ import { ifv } from "@/content/items/ifv";
 import { lightVehicles } from "@/content/items/light-vehicles";
 import { radars } from "@/content/items/radars";
 import { recon } from "@/content/items/recon";
+import { submarines } from "@/content/items/submarines";
 import { trucks } from "@/content/items/trucks";
+import { vessels } from "@/content/items/vessels";
 import type { Block, Item } from "@/content/types";
 
 export type { Block, Item } from "@/content/types";
@@ -204,36 +208,47 @@ export const blocks: Block[] = [
     ordinal: 16,
     title: "Warships and Vessels",
     subtitle: "Surface combatants, patrol and auxiliary",
-    brief: null,
-    doctrineNote: null,
-    status: "wip",
+    brief:
+      "Ships are read by profile: length against anything nearby, where the superstructure sits, and what stands on the deck. Missile ships show their armament — huge tubes angled along the sides on the older designs, flush vertical hatches on the newer ones — so deck layout separates the classes long before hull shape does. A blunt bow and a superstructure pushed right aft means a landing ship rather than a combatant.",
+    doctrineNote:
+      "Russian surface strength is concentrated in very few large hulls and a great many small ones. Because the small missile ships carry the same land-attack weapons as the large ones, size is a poor guide to reach — which is the single most useful thing to know when identifying them.",
+    status: "ready",
+    imageFit: "contain",
   },
   {
     slug: "submarines",
     ordinal: 17,
     title: "Submarines",
     subtitle: "SSN, SSK, SSGN and SSBN",
-    brief: null,
-    doctrineNote: null,
-    status: "wip",
+    brief:
+      "Only three things are ever visible: hull length, beam, and the shape and position of the sail — and that is enough. Ballistic missile boats carry their tubes behind the sail, raising a long hump down the after casing. Cruise missile boats carry theirs outside the pressure hull, which makes the boat unusually wide with no hump. Attack boats have neither and look clean.",
+    doctrineNote:
+      "The submarine force holds the survivable part of the nuclear deterrent and the main threat to surface groups, so it absorbs a disproportionate share of naval investment. Recognition here is about class rather than individual boat, because a class defines the weapon it carries.",
+    status: "ready",
+    imageFit: "contain",
   },
   {
     slug: "drones",
     ordinal: 18,
     title: "Drones",
     subtitle: "Air, ground and surface unmanned systems",
-    brief: null,
-    doctrineNote: null,
-    status: "wip",
+    brief:
+      "Sort by purpose and the size follows. A small catapult-launched airframe is looking for targets for the guns; a large twin-boom or single-fuselage aircraft is watching an area for hours and may be armed; something small with cruciform wings and no landing gear is a munition rather than an aircraft. Ground robots are recognised the other way round — a tracked vehicle with no hatches, no vision blocks and no room for anyone inside.",
+    doctrineNote:
+      "Drones are what now close the reconnaissance-fires loop that the whole Russian system is built around. Grau & Bartles argue Russian artillery is only ever as good as its observation, and observation has largely moved from the vehicles in block 15 to the airframes here.",
+    status: "ready",
   },
   {
     slug: "aircraft",
     ordinal: 19,
     title: "Warplanes",
     subtitle: "Fighter, interceptor, bomber, transport",
-    brief: null,
-    doctrineNote: null,
-    status: "wip",
+    brief:
+      "Count the engines, then read the wing. One straight wing over two body-side engines is an attack aircraft; two engines under a swept wing with twin fins is a fighter; four engines is a bomber or a transport, and the tail says which. The fine separations come last, because the Flanker family is one airframe stretched into several aircraft and only the nose reliably tells them apart.",
+    doctrineNote:
+      "Russian air power is used to reach what the guns cannot rather than to win the battle on its own. That is why the strike aircraft outnumber the interceptors, why the bombers are missile carriers that never enter defended airspace, and why the transport fleet decides what the airborne forces can actually do.",
+    status: "ready",
+    imageFit: "contain",
   },
 ];
 
@@ -1365,4 +1380,8 @@ export const items: Item[] = [
   ...engineering,
   ...airDefence,
   ...recon,
+  ...vessels,
+  ...submarines,
+  ...drones,
+  ...aircraft,
 ];

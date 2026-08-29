@@ -1,7 +1,7 @@
 import { describe, expect, test } from "bun:test";
 
 import { blocks, items } from "@/content/russia";
-import { armamentQuestion, placementQuestion } from "@/lib/quiz";
+import { armamentQuestion, buildExam, buildPhotoQuiz } from "@/lib/quiz";
 
 const blockSlugs = new Set(blocks.map((b) => b.slug));
 const readyBlocks = blocks.filter((b) => b.status === "ready");
@@ -42,15 +42,24 @@ describe("content wiring", () => {
 
 describe("question generation", () => {
   /**
-   * A block needs enough items for the generator to find three distractors,
-   * or its exam comes out empty — the failure that once left the Ranks block
-   * a dead end.
+   * The failure this guards against is the one that once left Ranks a dead
+   * end: a block that looks finished but whose exam generates nothing.
+   *
+   * It deliberately asserts against buildExam rather than against one question
+   * type. Not every block can build every kind — Ranks has 28 entries but only
+   * two distinct placements, so it never produces a placement question and
+   * leans on designation and seniority instead. What matters is that the exam
+   * a learner actually sits is not empty.
    */
-  test("every ready block can build a placement question", () => {
-    const barren = readyBlocks.filter((b) => {
-      const pool = items.filter((i) => i.blockSlug === b.slug);
-      return !pool.some((i) => placementQuestion(i, pool) !== null);
-    });
+  test("every ready block builds a usable exam", () => {
+    const thin = readyBlocks
+      .map((b) => ({ slug: b.slug, count: buildExam(b.slug).length }))
+      .filter((r) => r.count < 8);
+    expect(thin).toEqual([]);
+  });
+
+  test("every ready block builds photo questions", () => {
+    const barren = readyBlocks.filter((b) => buildPhotoQuiz([b.slug]).length === 0);
     expect(barren.map((b) => b.slug)).toEqual([]);
   });
 
