@@ -1,0 +1,18 @@
+// Cloudflare Worker settings for the production deploy.
+//
+// Nitro's cloudflare-module preset merges this file into the generated
+// .output/server/wrangler.json at build time, so only the fields nitro does
+// not compute itself belong here — `main`, `assets`, `no_bundle` and `rules`
+// are overridden by the preset and would only produce warnings.
+//
+// The name is pinned because it decides the workers.dev hostname. Left to the
+// preset it is derived from the git remote, so renaming the repository would
+// silently move the site and break every emailed auth link pointing at it.
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "armed-forces-atlas",
+  "compatibility_date": "2026-08-29",
+  "observability": {
+    "enabled": true,
+  },
+}
