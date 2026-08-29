@@ -3,6 +3,7 @@ import {
   useCallback,
   useContext,
   useEffect,
+  useLayoutEffect,
   useMemo,
   useState,
   type ReactNode,
@@ -29,38 +30,48 @@ const LocaleContext = createContext<LocaleContextValue>({
 /**
  * Holds the chosen language and keeps the content layer in step with it.
  *
- * The server always renders English, because the choice lives in localStorage
- * and the server cannot see it. The stored preference is applied after mount,
- * which costs one frame of English but avoids a hydration mismatch — the
- * alternative, reading storage during the first render, makes the client's
- * markup disagree with the server's.
+ * Two pieces of state rather than one, for a reason. `chosen` is what the
+ * reader picked; `applied` is what the tree is currently rendering. The content
+ * layer is switched in a layout effect and `applied` is advanced in the same
+ * pass, so the switch happens between renders rather than during one.
  *
- * setContentLocale is called during render rather than in an effect so that
- * children read already-translated blocks and items on the very same render.
- * It only assigns module state, so repeating it is harmless.
+ * The earlier version called setContentLocale in the render body. That mutates
+ * module state while React is rendering, which concurrent rendering is entitled
+ * to punish: a render can be started, discarded and retried, and the content a
+ * child reads is then not the content that was committed. Doing it in a layout
+ * effect means children never observe a half-applied switch, and the re-render
+ * lands before the browser paints, so there is no visible flicker.
+ *
+ * The server always renders English, because the choice lives in localStorage
+ * and the server cannot see it. Applying the stored preference after mount
+ * costs one commit rather than risking a hydration mismatch.
  */
 export function LocaleProvider({ children }: { children: ReactNode }) {
-  const [locale, setLocaleState] = useState<Locale>(DEFAULT_LOCALE);
+  const [chosen, setChosen] = useState<Locale>(DEFAULT_LOCALE);
+  const [applied, setApplied] = useState<Locale>(DEFAULT_LOCALE);
 
-  setContentLocale(locale);
+  useLayoutEffect(() => {
+    if (applied === chosen) return;
+    setContentLocale(chosen);
+    setApplied(chosen);
+  }, [chosen, applied]);
 
   useEffect(() => {
     try {
       const stored = window.localStorage.getItem(STORAGE_KEY);
-      if (isLocale(stored) && stored !== locale) setLocaleState(stored);
+      if (isLocale(stored)) setChosen(stored);
     } catch {
       // Private windows and blocked site data throw on access; English stands.
     }
     // Runs once: later changes go through setLocale, which writes storage itself.
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
-    document.documentElement.lang = locale;
-  }, [locale]);
+    document.documentElement.lang = applied;
+  }, [applied]);
 
   const setLocale = useCallback((next: Locale) => {
-    setLocaleState(next);
+    setChosen(next);
     try {
       window.localStorage.setItem(STORAGE_KEY, next);
     } catch {
@@ -68,13 +79,17 @@ export function LocaleProvider({ children }: { children: ReactNode }) {
     }
   }, []);
 
+  /**
+   * Consumers see the applied language, not the chosen one, so interface
+   * strings and content always change together.
+   */
   const value = useMemo<LocaleContextValue>(
     () => ({
-      locale,
+      locale: applied,
       setLocale,
-      t: (key, values) => translate(locale, key, values),
+      t: (key, values) => translate(applied, key, values),
     }),
-    [locale, setLocale],
+    [applied, setLocale],
   );
 
   return <LocaleContext.Provider value={value}>{children}</LocaleContext.Provider>;
