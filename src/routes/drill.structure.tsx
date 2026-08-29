@@ -5,7 +5,9 @@ import { DrillSkeleton, QuizRunner } from "@/components/QuizRunner";
 import { getBlock } from "@/lib/content";
 import { buildPlacementQuiz } from "@/lib/quiz";
 import { useShuffled } from "@/hooks/useShuffled";
+import { EmptyState } from "@/components/QuizRunner";
 import { useLocale } from "@/i18n/LocaleProvider";
+import { askableCounts } from "@/lib/quiz";
 
 type Search = { block?: string | undefined };
 
@@ -42,6 +44,13 @@ function StructureDrill() {
   const blockTitle = block ? getBlock(block)?.title : undefined;
 
   if (!built) return <DrillSkeleton />;
+
+  // Distinguish a block that cannot offer this drill from one that is merely
+  // unfinished. Saying "not enough content yet" about Ranks, which is complete,
+  // sends a reader looking for content that is not missing.
+  if (block && askableCounts(block).placement === 0) {
+    return <EmptyState title={t("quiz.notForBlock")} body={t("quiz.notForBlockBody")} />;
+  }
 
   return (
     <QuizRunner

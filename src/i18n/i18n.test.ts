@@ -188,4 +188,6 @@ const KEYS = [
   "gaps.placement",
   "gaps.exam",
   "gaps.open",
+  "quiz.notForBlock",
+  "quiz.notForBlockBody",
 ] as const;

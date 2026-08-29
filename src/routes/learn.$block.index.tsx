@@ -5,6 +5,7 @@ import { MasteryRing } from "@/components/MasteryRing";
 import { getBlock, imageFitClass, itemsOfBlock, plateNumber } from "@/lib/content";
 import { BlockGapsPanel } from "@/components/BlockGapsPanel";
 import { useLocale } from "@/i18n/LocaleProvider";
+import { askableCounts } from "@/lib/quiz";
 import { useProgress } from "@/lib/progress";
 
 export const Route = createFileRoute("/learn/$block/")({
@@ -38,6 +39,9 @@ function BlockDetail() {
   const { blockSlug } = Route.useLoaderData();
   const block = getBlock(blockSlug)!;
   const { t } = useLocale();
+  // A block that cannot build a drill should not offer it. Ranks has two
+  // distinct placements, so no placement question exists for it to ask.
+  const askable = askableCounts(blockSlug);
   const items = itemsOfBlock(blockSlug);
   const progress = useProgress();
 
@@ -75,16 +79,20 @@ function BlockDetail() {
                 {t("block.flashcards")}
               </Link>
             </Button>
-            <Button asChild variant="outline">
-              <Link to="/drill/photo-id" search={{ block: block.slug }}>
-                {t("block.photoId")}
-              </Link>
-            </Button>
-            <Button asChild variant="outline">
-              <Link to="/drill/structure" search={{ block: block.slug }}>
-                {t("block.structureDrill")}
-              </Link>
-            </Button>
+            {askable.photo > 0 && (
+              <Button asChild variant="outline">
+                <Link to="/drill/photo-id" search={{ block: block.slug }}>
+                  {t("block.photoId")}
+                </Link>
+              </Button>
+            )}
+            {askable.placement > 0 && (
+              <Button asChild variant="outline">
+                <Link to="/drill/structure" search={{ block: block.slug }}>
+                  {t("block.structureDrill")}
+                </Link>
+              </Button>
+            )}
             <Button asChild variant="secondary">
               <Link to="/exam/$block" params={{ block: block.slug }}>
                 {t("block.exam")}
