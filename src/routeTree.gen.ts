@@ -13,6 +13,7 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as AuthRouteImport } from './routes/auth'
 import { Route as ProgressRouteImport } from './routes/progress'
+import { Route as ResetPasswordRouteImport } from './routes/reset-password'
 import { Route as ReviewRouteImport } from './routes/review'
 import { Route as DrillFlashcardsRouteImport } from './routes/drill.flashcards'
 import { Route as DrillPhotoIdRouteImport } from './routes/drill.photo-id'
@@ -40,6 +41,11 @@ const AuthRoute = AuthRouteImport.update({
 const ProgressRoute = ProgressRouteImport.update({
   id: '/progress',
   path: '/progress',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ResetPasswordRoute = ResetPasswordRouteImport.update({
+  id: '/reset-password',
+  path: '/reset-password',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ReviewRoute = ReviewRouteImport.update({
@@ -88,6 +94,7 @@ export interface FileRoutesByFullPath {
   '/about': typeof AboutRoute
   '/auth': typeof AuthRoute
   '/progress': typeof ProgressRoute
+  '/reset-password': typeof ResetPasswordRoute
   '/review': typeof ReviewRoute
   '/drill/flashcards': typeof DrillFlashcardsRoute
   '/drill/photo-id': typeof DrillPhotoIdRoute
@@ -102,6 +109,7 @@ export interface FileRoutesByTo {
   '/about': typeof AboutRoute
   '/auth': typeof AuthRoute
   '/progress': typeof ProgressRoute
+  '/reset-password': typeof ResetPasswordRoute
   '/review': typeof ReviewRoute
   '/drill/flashcards': typeof DrillFlashcardsRoute
   '/drill/photo-id': typeof DrillPhotoIdRoute
@@ -117,6 +125,7 @@ export interface FileRoutesById {
   '/about': typeof AboutRoute
   '/auth': typeof AuthRoute
   '/progress': typeof ProgressRoute
+  '/reset-password': typeof ResetPasswordRoute
   '/review': typeof ReviewRoute
   '/drill/flashcards': typeof DrillFlashcardsRoute
   '/drill/photo-id': typeof DrillPhotoIdRoute
@@ -133,6 +142,7 @@ export interface FileRouteTypes {
     | '/about'
     | '/auth'
     | '/progress'
+    | '/reset-password'
     | '/review'
     | '/drill/flashcards'
     | '/drill/photo-id'
@@ -147,6 +157,7 @@ export interface FileRouteTypes {
     | '/about'
     | '/auth'
     | '/progress'
+    | '/reset-password'
     | '/review'
     | '/drill/flashcards'
     | '/drill/photo-id'
@@ -161,6 +172,7 @@ export interface FileRouteTypes {
     | '/about'
     | '/auth'
     | '/progress'
+    | '/reset-password'
     | '/review'
     | '/drill/flashcards'
     | '/drill/photo-id'
@@ -176,6 +188,7 @@ export interface RootRouteChildren {
   AboutRoute: typeof AboutRoute
   AuthRoute: typeof AuthRoute
   ProgressRoute: typeof ProgressRoute
+  ResetPasswordRoute: typeof ResetPasswordRoute
   ReviewRoute: typeof ReviewRoute
   DrillFlashcardsRoute: typeof DrillFlashcardsRoute
   DrillPhotoIdRoute: typeof DrillPhotoIdRoute
@@ -213,6 +226,13 @@ declare module '@tanstack/react-router' {
       path: '/progress'
       fullPath: '/progress'
       preLoaderRoute: typeof ProgressRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/reset-password': {
+      id: '/reset-password'
+      path: '/reset-password'
+      fullPath: '/reset-password'
+      preLoaderRoute: typeof ResetPasswordRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/review': {
@@ -291,6 +311,7 @@ const rootRouteChildren: RootRouteChildren = {
   AboutRoute: AboutRoute,
   AuthRoute: AuthRoute,
   ProgressRoute: ProgressRoute,
+  ResetPasswordRoute: ResetPasswordRoute,
   ReviewRoute: ReviewRoute,
   DrillFlashcardsRoute: DrillFlashcardsRoute,
   DrillPhotoIdRoute: DrillPhotoIdRoute,

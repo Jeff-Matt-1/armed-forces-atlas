@@ -17,3 +17,15 @@ export function absoluteUrl(path: string): string {
   if (/^https?:\/\//i.test(path)) return path;
   return `${SITE_URL}/${path.replace(/^\/+/, "")}`;
 }
+
+/**
+ * Where Supabase should send the user back to after an emailed link.
+ *
+ * The live origin is preferred over SITE_URL so that a link requested from
+ * localhost returns to localhost rather than to production. SITE_URL is only
+ * the fallback for the server render, which has no origin of its own.
+ */
+export function authRedirectTo(path: string): string {
+  const base = typeof window === "undefined" ? SITE_URL : window.location.origin;
+  return `${base.replace(/\/+$/, "")}/${path.replace(/^\/+/, "")}`;
+}
