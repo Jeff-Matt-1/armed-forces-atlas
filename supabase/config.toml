@@ -1,1 +1,38 @@
-project_id = "pwvzebzrihjfwhkcatei"
+# The self-owned project. This pointed at the Lovable-managed project
+# (pwvzebzrihjfwhkcatei) long after the move on 2026-08-26, so anything driven
+# from this file — `supabase link`, `db push` — would have run against the dead
+# project rather than the live one.
+project_id = "tiftfaczauypdmlfnmiv"
+
+# Auth settings that have to match the deploy. Recorded here so the intent is
+# in version control rather than living only as dashboard state nobody can
+# review or reproduce.
+#
+# CAUTION: `supabase config push` applies this file as a whole, filling in CLI
+# defaults for everything left unspecified — which can quietly reset remote
+# settings this file does not mention. To change only these three, prefer the
+# dashboard, or a targeted Management API call:
+#
+#   curl -X PATCH "https://api.supabase.com/v1/projects/$PROJECT_REF/config/auth" \
+#     -H "Authorization: Bearer $SUPABASE_ACCESS_TOKEN" \
+#     -H "Content-Type: application/json" \
+#     -d '{"mailer_autoconfirm": true, "site_url": "...", "uri_allow_list": "..."}'
+[auth]
+site_url = "https://app.armed-forces-atlas.workers.dev"
+
+# Every destination an emailed link may return to. A URL outside this list is
+# silently rewritten to site_url, which presents as a broken reset flow rather
+# than as a configuration error. The localhost entries keep development working.
+additional_redirect_urls = [
+  "https://app.armed-forces-atlas.workers.dev/reset-password",
+  "https://app.armed-forces-atlas.workers.dev/learn",
+  "http://localhost:8080/reset-password",
+  "http://localhost:8080/learn",
+]
+
+[auth.email]
+# Off by design: progress is local-first, so an account is a sync toggle rather
+# than a gate to studying, and confirmation buys little friction-for-safety.
+# With it off, email is only ever needed for password recovery — a far smaller
+# blast radius if the sender fails. Decided 2026-08-29.
+enable_confirmations = false
