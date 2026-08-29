@@ -139,6 +139,14 @@ const en = {
   "drill.shuffleAgain": "Shuffle again",
   "drill.reviewQueue": "Review queue",
 
+  "gaps.title": "Still outstanding in this block",
+  "gaps.cards": "Cards not yet recalled",
+  "gaps.photo": "Not yet identified from a photograph",
+  "gaps.placement": "Placement not yet answered correctly",
+  "gaps.exam": "Block exam not yet passed",
+  "gaps.open": "Open →",
+  "gaps.complete": "Everything in this block is done.",
+
   // Progress and review
   "progress.title": "Progress",
   "progress.blocksPassed": "Blocks passed",
@@ -361,6 +369,14 @@ const et: Record<StringKey, string> = {
     "Ajastus salvestati sellesse seadmesse. Logi sisse, et seda seadmete vahel sünkroonida — juba õpitu tuleb sinuga kaasa.",
   "drill.shuffleAgain": "Sega uuesti",
   "drill.reviewQueue": "Kordamisjärjekord",
+
+  "gaps.title": "Selles õppetükis on veel tegemata",
+  "gaps.cards": "Kaardid, mida ei ole veel meelde jäetud",
+  "gaps.photo": "Foto järgi veel tuvastamata",
+  "gaps.placement": "Koht koosseisus veel õigesti vastamata",
+  "gaps.exam": "Õppetüki eksam veel sooritamata",
+  "gaps.open": "Ava →",
+  "gaps.complete": "Selles õppetükis on kõik tehtud.",
 
   // Progress and review
   "progress.title": "Edenemine",

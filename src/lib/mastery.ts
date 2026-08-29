@@ -95,3 +95,47 @@ export function masteryBreakdown(input: MasteryInput): MasteryBreakdown {
     total: Math.min(100, Math.round(total * 100)),
   };
 }
+
+/** Which items each component is still waiting on. */
+export type MasteryGaps = {
+  cards: string[];
+  photo: string[];
+  placement: string[];
+  examPassed: boolean;
+};
+
+/**
+ * The work behind the number.
+ *
+ * Derived from the same input as masteryBreakdown and gated on the same
+ * askable counts, because a list that named work outside those counts could
+ * never empty — mastery divides by them. The invariant a test can hold this to
+ * is simple: nothing outstanding means 100, and 100 means nothing outstanding.
+ *
+ * `askablePhoto` and `askablePlacement` decide membership per item, mirroring
+ * askableCounts: an item without a photograph is never owed a photo answer.
+ */
+export function masteryGaps(
+  input: MasteryInput & {
+    canAskPhoto: (slug: string) => boolean;
+    canAskPlacement: (slug: string) => boolean;
+  },
+): MasteryGaps {
+  const { itemSlugs, askable, reviewMap, correctByKind, progress } = input;
+
+  return {
+    // A card counts once recalled; grading "Again" resets reps and uncounts it.
+    cards: itemSlugs.filter((slug) => (reviewMap.get(slug)?.reps ?? 0) === 0),
+    photo:
+      askable.photo > 0
+        ? itemSlugs.filter((slug) => input.canAskPhoto(slug) && !correctByKind.photo.has(slug))
+        : [],
+    placement:
+      askable.placement > 0
+        ? itemSlugs.filter(
+            (slug) => input.canAskPlacement(slug) && !correctByKind.placement.has(slug),
+          )
+        : [],
+    examPassed: Boolean(progress?.exam_passed),
+  };
+}

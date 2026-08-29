@@ -182,4 +182,10 @@ const KEYS = [
   "quiz.saveRetry",
   "quiz.notEnough",
   "quiz.notEnoughBody",
+  "gaps.title",
+  "gaps.cards",
+  "gaps.photo",
+  "gaps.placement",
+  "gaps.exam",
+  "gaps.open",
 ] as const;

@@ -3,6 +3,7 @@ import { Link, createFileRoute, notFound } from "@tanstack/react-router";
 import { Button } from "@/components/ui/button";
 import { MasteryRing } from "@/components/MasteryRing";
 import { getBlock, imageFitClass, itemsOfBlock, plateNumber } from "@/lib/content";
+import { BlockGapsPanel } from "@/components/BlockGapsPanel";
 import { useLocale } from "@/i18n/LocaleProvider";
 import { useProgress } from "@/lib/progress";
 
@@ -91,6 +92,15 @@ function BlockDetail() {
             </Button>
           </div>
         </div>
+      </section>
+
+      <section className="mx-auto w-full max-w-6xl px-4">
+        {/* Progress lives in the browser, so the server cannot know it. Waiting
+            for it to load keeps the server and the first client render in
+            agreement instead of hydrating over a different list. */}
+        {!progress.loading && (
+          <BlockGapsPanel gaps={progress.gapsOf(blockSlug)} blockSlug={blockSlug} />
+        )}
       </section>
 
       <section className="mx-auto w-full max-w-6xl px-4 py-10">

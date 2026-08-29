@@ -1,6 +1,6 @@
 import { describe, expect, test } from "bun:test";
 
-import { masteryBreakdown, type MasteryInput } from "@/lib/mastery";
+import { masteryBreakdown, masteryGaps, type MasteryInput } from "@/lib/mastery";
 import type { BlockProgressRow, CardReview } from "@/lib/progress-types";
 
 const SLUGS = ["a", "b", "c", "d"];
@@ -131,5 +131,66 @@ describe("masteryBreakdown", () => {
     expect(masteryBreakdown(input({ reviewMap: mature })).total).toBe(
       masteryBreakdown(input({ reviewMap: fresh })).total,
     );
+  });
+});
+
+describe("masteryGaps", () => {
+  /** Every item can be asked both ways in these fixtures. */
+  const all = { canAskPhoto: () => true, canAskPlacement: () => true };
+
+  test("an untouched block owes every item on every component", () => {
+    const gaps = masteryGaps({ ...input(), ...all });
+    expect(gaps.cards).toEqual(SLUGS);
+    expect(gaps.photo).toEqual(SLUGS);
+    expect(gaps.placement).toEqual(SLUGS);
+    expect(gaps.examPassed).toBe(false);
+  });
+
+  test("a card graded back to zero reps is owed again", () => {
+    const gaps = masteryGaps({ ...input({ reviewMap: reviewed(["a", "b"]) }), ...all });
+    expect(gaps.cards).toEqual(["c", "d"]);
+  });
+
+  /**
+   * The panel and the percentage are two views of one calculation, and a reader
+   * told "nothing outstanding" beside a number below 100 would rightly not
+   * trust either. This holds them to each other in both directions.
+   */
+  test("nothing outstanding means 100, and 100 means nothing outstanding", () => {
+    const complete: MasteryInput = input({
+      reviewMap: reviewed(SLUGS),
+      correctByKind: { photo: new Set(SLUGS), placement: new Set(SLUGS) },
+      progress: progress({ exam_passed: true }),
+    });
+
+    const gaps = masteryGaps({ ...complete, ...all });
+    expect(gaps.cards).toEqual([]);
+    expect(gaps.photo).toEqual([]);
+    expect(gaps.placement).toEqual([]);
+    expect(gaps.examPassed).toBe(true);
+    expect(masteryBreakdown(complete).total).toBe(100);
+
+    // And one card short is no longer either.
+    const short: MasteryInput = { ...complete, reviewMap: reviewed(SLUGS.slice(0, 3)) };
+    expect(masteryGaps({ ...short, ...all }).cards).toEqual(["d"]);
+    expect(masteryBreakdown(short).total).toBeLessThan(100);
+  });
+
+  test("a component the block cannot ask is never owed", () => {
+    const gaps = masteryGaps({
+      ...input({ askable: { photo: 0, placement: 0 } }),
+      ...all,
+    });
+    expect(gaps.photo).toEqual([]);
+    expect(gaps.placement).toEqual([]);
+  });
+
+  test("an item that cannot be asked by photo is not owed a photo answer", () => {
+    const gaps = masteryGaps({
+      ...input(),
+      canAskPhoto: (slug) => slug !== "a",
+      canAskPlacement: () => true,
+    });
+    expect(gaps.photo).toEqual(["b", "c", "d"]);
   });
 });

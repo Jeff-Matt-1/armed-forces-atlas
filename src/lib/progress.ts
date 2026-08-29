@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from "react";
 
 import { useAuth } from "@/hooks/useAuth";
 import { supabase } from "@/integrations/supabase/client";
-import { askableCounts, itemsOfBlock, readyBlocks } from "@/lib/content";
+import { allPlacements, askableCounts, itemsOfBlock, readyBlocks, type Item } from "@/lib/content";
 import {
   advanceStreak,
   clearLocalProgress,
@@ -23,7 +23,7 @@ import type {
   DrillResult,
   StreakRow,
 } from "@/lib/progress-types";
-import { masteryBreakdown, type MasteryBreakdown } from "@/lib/mastery";
+import { masteryBreakdown, masteryGaps, type MasteryBreakdown } from "@/lib/mastery";
 import { emptyReview, schedule, type ReviewState } from "@/lib/srs";
 
 export type { Attempt, BlockProgressRow, CardReview, StreakRow } from "@/lib/progress-types";
@@ -137,6 +137,49 @@ export function useProgress() {
     return breakdownOf(blockSlug).total;
   }
 
+  /**
+   * The specific work still outstanding in a block.
+   *
+   * Mastery accumulates per item, so a block can be short of 100 with every
+   * drill "finished" — the components count items answered correctly, not runs
+   * completed. Without this a reader can see the number but not what moves it.
+   *
+   * The askable checks mirror askableCounts deliberately: mastery divides by
+   * those counts, so listing anything outside them would name work that cannot
+   * be done and could never reach zero.
+   */
+  function gapsOf(blockSlug: string): BlockGaps {
+    const items = itemsOfBlock(blockSlug);
+    const askable = askableCounts(blockSlug);
+    const placementPool = allPlacements([blockSlug]);
+    const bySlug = new Map(items.map((item) => [item.slug, item]));
+    const resolve = (slugs: string[]) =>
+      slugs.map((slug) => bySlug.get(slug)).filter((item) => item !== undefined);
+
+    const gaps = masteryGaps({
+      itemSlugs: items.map((item) => item.slug),
+      askable,
+      reviewMap,
+      correctByKind,
+      progress: blockBySlug.get(blockSlug),
+      canAskPhoto: (slug) => Boolean(bySlug.get(slug)?.imageUrl),
+      canAskPlacement: (slug) => {
+        const item = bySlug.get(slug);
+        if (!item?.placements[0]) return false;
+        return placementPool.filter((entry) => !item.placements.includes(entry)).length >= 3;
+      },
+    });
+
+    return {
+      cards: resolve(gaps.cards),
+      photo: resolve(gaps.photo),
+      placement: resolve(gaps.placement),
+      examPassed: gaps.examPassed,
+      asks: { photo: askable.photo > 0, placement: askable.placement > 0 },
+      totals: { cards: items.length, photo: askable.photo, placement: askable.placement },
+    };
+  }
+
   const now = Date.now();
   const dueSlugs = data.reviews
     .filter((row) => new Date(row.due_at).getTime() <= now)
@@ -163,9 +206,25 @@ export function useProgress() {
     weakItems,
     masteryOf,
     breakdownOf,
+    gapsOf,
     overall,
   };
 }
+
+/** What a block still needs before it reads 100%. */
+export type BlockGaps = {
+  /** Items never recalled in flashcards, or reset by grading "Again". */
+  cards: Item[];
+  /** Items never yet identified correctly from a photograph. */
+  photo: Item[];
+  /** Items whose placement has never been answered correctly. */
+  placement: Item[];
+  examPassed: boolean;
+  /** Whether the block can offer each kind at all; Ranks cannot ask placement. */
+  asks: { photo: boolean; placement: boolean };
+  /** How many items each component covers, so progress reads as a fraction. */
+  totals: { cards: number; photo: number; placement: number };
+};
 
 type ReviewInput = {
   itemSlug: string;
