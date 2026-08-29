@@ -23,7 +23,6 @@ export const etLightVehicles: Record<string, ItemTranslation> = {
   },
   "uaz-469": {
     aka: "Bobik",
-    armament: "Standardvarustuses puudub",
     cues: [
       "Väike kandiline maastur presendist või õhukesest plekist katusega",
       "Ümmargused esituled lamedas püstises iluvõres",

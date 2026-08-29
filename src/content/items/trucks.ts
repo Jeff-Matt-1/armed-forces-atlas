@@ -17,7 +17,7 @@ export const trucks: Item[] = [
     imageCredit: "CC BY-SA 4.0 — Matti Blume",
     imagePage:
       "https://commons.wikimedia.org/wiki/File:Ural-4320,_12._Internationales_Maritimes-Fahrzeugtreffen,_Ribnitz-Damgarten_(_1060471).jpg",
-    armament: "None as standard",
+    armament: null,
     rangeText: null,
     cues: [
       "6x6 with a bonnet ahead of the cab",
@@ -43,13 +43,14 @@ export const trucks: Item[] = [
     imageUrl: "/images/items/kamaz-5350.jpg",
     imageCredit: "CC BY 4.0 — Ministry of Defence of the Russian Federation",
     imagePage: "https://commons.wikimedia.org/wiki/File:KamAZ-5350.jpg",
-    armament: "None as standard; armoured cab variants exist",
+    armament: null,
     rangeText: null,
     cues: [
       "6x6 cab-over-engine — flat front with no bonnet",
       "Large windscreen split by a central pillar on older cabs",
       "Steps cut into the front bumper for cab access",
       "Square headlight clusters low in the bumper",
+      "Unarmed as standard, though armoured-cab variants are in service",
     ],
     placements: [
       "General transport across all arms",
@@ -69,7 +70,7 @@ export const trucks: Item[] = [
     imageUrl: "/images/items/kamaz-4310.jpg",
     imageCredit: "CC BY-SA 4.0 — Alexey8601",
     imagePage: "https://commons.wikimedia.org/wiki/File:2014.05.14_kamaz-4310(1).JPG",
-    armament: "None as standard",
+    armament: null,
     rangeText: null,
     cues: [
       "Cab-over 6x6, older and boxier than the 5350",
@@ -95,7 +96,7 @@ export const trucks: Item[] = [
     imageUrl: "/images/items/kraz-255.jpg",
     imageCredit: "Attribution — Unknown author",
     imagePage: "https://commons.wikimedia.org/wiki/File:KrAZ_255.JPG",
-    armament: "None",
+    armament: null,
     rangeText: null,
     cues: [
       "Very large bonneted 6x6 with huge low-pressure tyres",
@@ -121,7 +122,7 @@ export const trucks: Item[] = [
     imageUrl: "/images/items/kamaz-63501.jpg",
     imageCredit: "CC0 — Ural-66",
     imagePage: "https://commons.wikimedia.org/wiki/File:KamAZ_63501_AT_(3).jpg",
-    armament: "None as standard",
+    armament: null,
     rangeText: null,
     cues: [
       "Eight wheels — four axles, all driven",
@@ -148,7 +149,7 @@ export const trucks: Item[] = [
     imageCredit: "CC BY-SA 4.0 — Dimitǎr Boevski",
     imagePage:
       "https://commons.wikimedia.org/wiki/File:GAZ-66_truck_in_Vrachesh,_Botevgrad_municipality,_Bulgaria_01.jpg",
-    armament: "None",
+    armament: null,
     rangeText: null,
     cues: [
       "Small 4x4 cab-over with a snub, almost square nose",

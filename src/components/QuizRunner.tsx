@@ -268,7 +268,7 @@ export function QuizRunner({
               className="h-auto px-0 text-xs text-muted-foreground"
               onClick={() => setCardOpen(true)}
             >
-              Open the card for this item
+              {t("quiz.openCard")}
             </Button>
           </div>
           {saveError && (

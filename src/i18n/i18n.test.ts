@@ -89,6 +89,63 @@ describe("content translation", () => {
    * Estonian uses õ, ä, ö, ü and š/ž. Their absence across the whole table
    * would mean the files had been mangled by an encoding step somewhere.
    */
+  /**
+   * A translation may only translate. localiseItem merges field by field, so a
+   * table entry that supplies a field English leaves null does not translate
+   * anything -- it invents content for one language. Every EW, C2 and radar
+   * entry did exactly that with armament, so Estonian readers were asked
+   * armament questions that do not exist in English, and every option was a
+   * different way of writing "nothing".
+   */
+  test("no translation adds a field English does not have", () => {
+    const invented: string[] = [];
+    for (const item of items) {
+      const t = etTranslations.items[item.slug];
+      if (!t) continue;
+      if (!item.armament && t.armament) invented.push(`${item.slug}.armament`);
+      if (!item.aka && t.aka) invented.push(`${item.slug}.aka`);
+      if (!item.rangeText && t.rangeText) invented.push(`${item.slug}.rangeText`);
+      if (!item.crew && t.crew) invented.push(`${item.slug}.crew`);
+    }
+    expect(invented).toEqual([]);
+  });
+
+  /**
+   * "What is the main armament?" has no answer for something unarmed: every
+   * option is a rephrasing of nothing. Unarmed entries say so with null, which
+   * stops the question being generated at all -- in every language, since a
+   * translation that writes "puudub" puts the question back.
+   */
+  test("no armament, in any language, means nothing", () => {
+    const prose: string[] = [];
+    const nothing = /^(none|puudub|standardvarustuses puudub|ei ole)\b/i;
+    for (const locale of LOCALES) {
+      for (const item of items.map((i) => localiseItem(i, locale))) {
+        if (item.armament && nothing.test(item.armament.trim())) {
+          prose.push(`${locale} ${item.slug}: "${item.armament}"`);
+        }
+      }
+    }
+    expect(prose).toEqual([]);
+  });
+
+  /**
+   * An untranslated field still renders -- in English, beside Estonian ones.
+   * In a quiz that is worse than a blank: one UAZ entry had no Estonian
+   * armament, so "None as standard" appeared as an option next to
+   * "Standardvarustuses puudub" and was marked the correct answer.
+   */
+  test("no answerable field falls back to English", () => {
+    const fallbacks: string[] = [];
+    for (const item of items) {
+      const t = etTranslations.items[item.slug];
+      if (!t) continue;
+      if (item.armament && !t.armament) fallbacks.push(`${item.slug}.armament`);
+      if (item.placements.length && !t.placements) fallbacks.push(`${item.slug}.placements`);
+    }
+    expect(fallbacks).toEqual([]);
+  });
+
   test("Estonian diacritics survive the build", () => {
     const all = Object.values(etTranslations.items)
       .flatMap((t) => [t.doctrineNote ?? "", ...(t.cues ?? []), ...(t.placements ?? [])])

@@ -4,7 +4,6 @@ import type { ItemTranslation } from "@/content/translations";
 export const etC2: Record<string, ItemTranslation> = {
   "r-142n": {
     aka: "R-142NSA",
-    armament: "Puudub",
     rangeText: "Lühi- ja ultralainevõrgud üle koondise vastutusala",
     cues: [
       "GAZ-66 4x4 mootorikattega, kannab kandilist kastkeret",
@@ -22,7 +21,6 @@ export const etC2: Record<string, ItemTranslation> = {
   },
   "r-145bm": {
     aka: "Kajakas",
-    armament: "Standardvarustuses puudub",
     rangeText: "Mitu raadiovõrku korraga",
     cues: [
       "BTR-60 kere — kaheksa ratast, terav paadivöör, küljeuksi ei ole",
@@ -40,7 +38,6 @@ export const etC2: Record<string, ItemTranslation> = {
   },
   "r-149ma1": {
     aka: "Kušetka-B",
-    armament: "Standardvarustuses puudub",
     rangeText: "Raadio-, raadiorelee- ja satelliitside",
     cues: [
       "BTR-80 kere, kaheksa ratast, torn on täielikult puudu",
@@ -58,7 +55,6 @@ export const etC2: Record<string, ItemTranslation> = {
   },
   "bmp-1ksh": {
     aka: "Potok-2",
-    armament: "Puudub — torni asemel on juhtimisvarustus",
     rangeText: "Raadioreleeside, mida pikendab teleskoopmast",
     cues: [
       "BMP-1 kere ja kuus tugiratast, kuid kahuritorni ei ole",
@@ -76,7 +72,6 @@ export const etC2: Record<string, ItemTranslation> = {
   },
   strelets: {
     aka: "Ambur; 1B181",
-    armament: "Puudub — terminal, mitte relv",
     rangeText: "Edastab sihtmärgiandmed kahuritele mõne minutiga",
     cues: [
       "Ei ole sõiduk — tunne ära olukord, mitte siluett",

@@ -4,7 +4,6 @@ import type { ItemTranslation } from "@/content/translations";
 export const etRadars: Record<string, ItemTranslation> = {
   "p-18": {
     aka: "Terek; Spoon Rest D",
-    armament: "Puudub",
     rangeText: "Avastab lennukid kuni umbes 250 km",
     cues: [
       "Lai võrestik pikkadest horisontaalsetest varrastest üksteise kohal ridades",
@@ -22,7 +21,6 @@ export const etRadars: Record<string, ItemTranslation> = {
   },
   "nebo-m": {
     aka: "Taevas-M; moodul RLM-M",
-    armament: "Puudub",
     rangeText: "Avastab lennukid kuni umbes 600 km",
     cues: [
       "Tohutu ristkülikuline massiiv, mitu rida sügav ja masinast palju laiem",
@@ -40,7 +38,6 @@ export const etRadars: Record<string, ItemTranslation> = {
   },
   "kasta-2e2": {
     aka: "Flat Face E",
-    armament: "Puudub",
     rangeText: "Avastab lennukid kuni umbes 150 km",
     cues: [
       "Üksainus terviklik ristkülikuline paneel, mitte lahtine varrastevõrestik",
@@ -58,7 +55,6 @@ export const etRadars: Record<string, ItemTranslation> = {
   },
   "zoopark-1": {
     aka: "Loomaaed",
-    armament: "Puudub",
     rangeText: "Määrab tulistavad kahurid 20 km, raketiheitjad 35 km kauguselt",
     cues: [
       "Roomikutel MT-LB perekonna kere lameda ristkülikulise paneeliga tagumisel tekil",

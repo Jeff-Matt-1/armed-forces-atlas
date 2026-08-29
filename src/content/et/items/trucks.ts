@@ -4,7 +4,6 @@ import type { ItemTranslation } from "@/content/translations";
 export const etTrucks: Record<string, ItemTranslation> = {
   "ural-4320": {
     aka: "Ural",
-    armament: "Standardvarustuses puudub",
     cues: [
       "6x6 mootorikattega kabiini ees",
       "Ümar mootorikate, iluvõre tagapool",
@@ -22,7 +21,6 @@ export const etTrucks: Record<string, ItemTranslation> = {
   },
   "kamaz-5350": {
     aka: "Mustang",
-    armament: "Standardvarustuses puudub; soomuskabiiniga variandid on olemas",
     cues: [
       "6x6 kabiin mootori peal — lame esiosa, mootorikatet ei ole",
       "Suur esiklaas, vanematel kabiinidel keskmise postiga jaotatud",
@@ -39,7 +37,6 @@ export const etTrucks: Record<string, ItemTranslation> = {
     service: "Kasutuses",
   },
   "kamaz-4310": {
-    armament: "Standardvarustuses puudub",
     cues: [
       "Kabiin mootori peal, 6x6, 5350-st vanem ja kandilisem",
       "Ümmargused esituled lamedas esipaneelis",
@@ -57,7 +54,6 @@ export const etTrucks: Record<string, ItemTranslation> = {
   },
   "kraz-255": {
     aka: "Lapot",
-    armament: "Puudub",
     cues: [
       "Väga suur mootorikattega 6x6 hiiglaslike madalrõhurehvidega",
       "Punnis ümar mootorikate — hüüdnimi tähendab niinejalatsit",
@@ -72,7 +68,6 @@ export const etTrucks: Record<string, ItemTranslation> = {
   },
   "kamaz-63501": {
     aka: "Mustang 8x8",
-    armament: "Standardvarustuses puudub",
     cues: [
       "Kaheksa ratast — neli telge, kõik vedavad",
       "Kabiin mootori peal, sama paigutus kui 5350 perekonnas",
@@ -90,7 +85,6 @@ export const etTrucks: Record<string, ItemTranslation> = {
   },
   "gaz-66": {
     aka: "Šišiga",
-    armament: "Puudub",
     cues: [
       "Väike 4x4, kabiin mootori peal, nüri peaaegu ruudukujuline nina",
       "Ainult kaks telge — palju lühem kui Ural või KamAZ",

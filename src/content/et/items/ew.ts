@@ -4,7 +4,6 @@ import type { ItemTranslation } from "@/content/translations";
 export const etEw: Record<string, ItemTranslation> = {
   "krasukha-4": {
     aka: "Krasuha-S4",
-    armament: "Puudub — ainult segamine",
     rangeText: "Mõjus õhus olevate radarite vastu kuni umbes 300 km",
     cues: [
       "Mitu ümarat paraboolantenni koos ühel kokkupandaval alusel",
@@ -22,7 +21,6 @@ export const etEw: Record<string, ItemTranslation> = {
   },
   "krasukha-2": {
     aka: "Krasuha-2O",
-    armament: "Puudub — ainult segamine",
     rangeText: "Mõjus õhus olevate radarite vastu kuni umbes 250 km",
     cues: [
       "Üksainus väga suur taldrik, mitte Krasuha-4 väiksemate kogum",
@@ -40,7 +38,6 @@ export const etEw: Record<string, ItemTranslation> = {
   },
   "r-330zh-zhitel": {
     aka: "Elanik",
-    armament: "Puudub — ainult segamine",
     rangeText: "Surub satelliitnavigatsiooni alla umbes 25–30 km raadiuses",
     cues: [
       "Laotub lagedale laiali, ei ole üks masin",
@@ -58,7 +55,6 @@ export const etEw: Record<string, ItemTranslation> = {
   },
   "borisoglebsk-2": {
     aka: "Borisoglebsk-2",
-    armament: "Puudub — segamine ja suunamääramine",
     rangeText: "Taktikaliste raadiovõrkude vastu tavaliselt kümneid kilomeetreid",
     cues: [
       "Roomikutel MT-LB kere — madal, lame ja palju väiksem kui veokipõhised segajad",
@@ -76,7 +72,6 @@ export const etEw: Record<string, ItemTranslation> = {
   },
   "rb-531b-infauna": {
     aka: "Infauna",
-    armament: "Puudub — segamine ja aerosoolkate",
     rangeText: "Kaitseb kolonni, millega ta liigub, mitte piirkonda",
     cues: [
       "BTR-80 kere, kaheksa ratast ja paadivöör — kuid torni ei ole",
@@ -94,7 +89,6 @@ export const etEw: Record<string, ItemTranslation> = {
   },
   "rtut-bm": {
     aka: "Elavhõbe",
-    armament: "Puudub — sütikute segamine",
     rangeText: "Kaitseb enda ümber umbes 50 hektarit",
     cues: [
       "MT-LB kere suure avatud võrestikantenni all",

@@ -115,6 +115,7 @@ const en = {
   "quiz.retry": "Try again",
   "quiz.saveFailed": "Your result could not be saved. Check your connection and try again.",
   "quiz.saveRetry": "Try saving again",
+  "quiz.openCard": "Open the card for this item",
   "quiz.notForBlock": "This block has no structure drill",
   "quiz.notForBlockBody":
     "Every entry here shares the same few places in the force, so there is nothing to tell apart. Use the flashcards, the photo drill and the exam — the exam asks about seniority instead.",
@@ -361,6 +362,7 @@ const et: Record<StringKey, string> = {
   "quiz.retry": "Proovi uuesti",
   "quiz.saveFailed": "Tulemust ei õnnestunud salvestada. Kontrolli ühendust ja proovi uuesti.",
   "quiz.saveRetry": "Proovi uuesti salvestada",
+  "quiz.openCard": "Ava selle kirje tuvastuskaart",
   "quiz.notForBlock": "Sellel õppetükil ei ole struktuuriharjutust",
   "quiz.notForBlockBody":
     "Kõik siinsed kirjed jagavad samu üksikuid kohti koosseisus, nii et eristada ei ole midagi. Kasuta sõnasedeleid, fototuvastust ja eksamit — eksam küsib selle asemel auastmete järjestuse kohta.",

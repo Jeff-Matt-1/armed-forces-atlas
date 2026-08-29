@@ -42,7 +42,7 @@ export const lightVehicles: Item[] = [
     imageUrl: "/images/items/uaz-469.jpg",
     imageCredit: "CC BY-SA 4.0 — Hons084",
     imagePage: "https://commons.wikimedia.org/wiki/File:2014_Suchum,_UAZ_469.jpg",
-    armament: "None as standard",
+    armament: null,
     rangeText: null,
     cues: [
       "Small boxy jeep with a canvas or thin metal top",
@@ -68,7 +68,7 @@ export const lightVehicles: Item[] = [
     imageUrl: "/images/items/uaz-3163-patriot.jpg",
     imageCredit: "CC BY-SA 3.0 — Zaporozhetz_Blue_03.jpg: NVO derivative work: ZZZico",
     imagePage: "https://commons.wikimedia.org/wiki/File:UAZ_3163_Patriot.jpg",
-    armament: "None as standard",
+    armament: null,
     rangeText: null,
     cues: [
       "Civilian SUV lines, rounded compared with the UAZ-469",

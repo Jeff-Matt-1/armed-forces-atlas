@@ -71,6 +71,7 @@ export const etTanks: Record<string, ItemTranslation> = {
     service: "Kasutuses",
   },
   "t-80bvm": {
+    aka: "T-80BV moderniseeritud variant",
     armament: "125 mm 2A46M-4; 12.7 mm NSVT",
     rangeText: "Kahur kuni 3000 m; tankitõrjerakett Refleks-M 5000 m",
     cues: [
