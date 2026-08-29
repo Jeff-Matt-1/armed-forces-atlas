@@ -182,13 +182,13 @@ export const etFoundations: Record<string, ItemTranslation> = {
   "concept-recon": {
     name: "Rekkemasin",
     aka: "BRM (bojevaja razvedõvatelnaja mašina)",
-    armament: "Automaatkahur ja kuulipilduja; põhikoormaks on sensorid",
+    armament: "Kuulipilduja või kerge automaatkahur; tegelik koorem on sensorid",
     rangeText: "Sensorite avastuskaugus 10–25 km",
     cues: [
-      "Näeb välja nagu jalaväe lahingumasin, kuid kannab lisaantenne ja mastisensoreid",
-      "Vähem dessandiluuke",
-      "Maaseireradari kuppel või mast",
-      "Töötab sageli koos droonimeeskondadega",
+      "Kerge relvastus — piisab kontaktist väljumiseks, mitte maa hoidmiseks",
+      "Väike ja kiire: luuraja jääb ellu sellega, et teda kätte ei saada",
+      "Seal, kus lahingumasin kannab relvi, on sensorid ja antennid",
+      "Enamasti ujuv, nii et jõgi luuret ei peata",
     ],
     placements: ["Brigaadide luurekompaniid ja -pataljonid", "Suurtükiväe luurepatareid"],
     doctrineNote:

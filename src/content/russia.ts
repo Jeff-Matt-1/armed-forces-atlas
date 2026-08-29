@@ -484,16 +484,15 @@ const baseItems: Item[] = [
     name: "Reconnaissance Vehicle",
     aka: "BRM (boyevaya razvedyvatelnaya mashina)",
     imageUrl: "/images/items/concept-recon.jpg",
-    imageCredit: "CC BY-SA 4.0 — Mike1979 Russia",
-    imagePage:
-      "https://commons.wikimedia.org/wiki/File:BRM_with_BTR-80_Weapon_Army-2022_2022-08-20_2621.jpg",
-    armament: "Autocannon and MG; primary payload is sensors",
+    imageCredit: "CC BY-SA 4.0 — Dmitry Ivanov.",
+    imagePage: "https://commons.wikimedia.org/wiki/File:BRDM-2_in_Korolyov_Moscow_Oblast.jpg",
+    armament: "Machine gun or light autocannon; the payload that matters is sensors",
     rangeText: "Sensor detection 10–25 km",
     cues: [
-      "Looks like an IFV but carries extra antennas and mast sensors",
-      "Fewer dismount hatches",
-      "Ground surveillance radar dome or mast",
-      "Often paired with UAV teams",
+      "Light armament — enough to break contact, not to hold ground",
+      "Small and fast: a scout survives by not being caught",
+      "Sensors and antennas where a fighting vehicle carries weapons",
+      "Usually amphibious, so a river does not stop the reconnaissance",
     ],
     placements: [
       "Reconnaissance companies/battalions of brigades",

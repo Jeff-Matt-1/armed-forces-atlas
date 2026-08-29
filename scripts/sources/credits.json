@@ -330,6 +330,16 @@
     "attributionRequired": true
   },
   {
+    "slug": "concept-recon",
+    "file": "File:BRDM-2 in Korolyov Moscow Oblast.jpg",
+    "localPath": "/images/items/concept-recon.jpg",
+    "imageCredit": "CC BY-SA 4.0 — Dmitry Ivanov.",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:BRDM-2_in_Korolyov_Moscow_Oblast.jpg",
+    "licence": "CC BY-SA 4.0",
+    "artist": "Dmitry Ivanov.",
+    "attributionRequired": true
+  },
+  {
     "slug": "d-30",
     "file": "File:122mm howitzer D-30 - Armory masters4.jpg",
     "localPath": "/images/items/d-30.jpg",
