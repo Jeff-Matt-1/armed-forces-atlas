@@ -3,7 +3,10 @@
 //
 // Entries for blocks filled after the first release live in ./items/<block>.ts
 // and are concatenated below; this file keeps the original four blocks inline.
+import { apc } from "@/content/items/apc";
+import { artillery } from "@/content/items/artillery";
 import { heavyWeapons } from "@/content/items/heavy-weapons";
+import { ifv } from "@/content/items/ifv";
 import { lightVehicles } from "@/content/items/light-vehicles";
 import { trucks } from "@/content/items/trucks";
 import type { Block, Item } from "@/content/types";
@@ -83,27 +86,33 @@ export const blocks: Block[] = [
     ordinal: 6,
     title: "Artillery and Reactive Artillery",
     subtitle: "Towed, self-propelled and MLRS",
-    brief: null,
-    doctrineNote: null,
-    status: "wip",
+    brief:
+      "The arm the rest of the force is built around. Three shapes to separate first: a towed gun sits on trails and has no engine, a self-propelled gun is a turret on tracks, and a rocket launcher is a block of tubes on whatever chassis will carry it. After that the questions are narrow — how many trail legs, where the turret sits on the hull, how many tubes and how fat. Calibre follows from the answer rather than being read directly.",
+    doctrineNote:
+      "Grau & Bartles describe an artillery-led system: manoeuvre units find and fix the enemy so the guns can destroy him, which inverts the Western habit of treating artillery as support. Identifying a battery therefore tells you more about a formation's intent than counting its tanks does.",
+    status: "ready",
   },
   {
     slug: "ifv",
     ordinal: 7,
     title: "IFVs",
     subtitle: "BMP and BMD families",
-    brief: null,
-    doctrineNote: null,
-    status: "wip",
+    brief:
+      "Tracked vehicles that carry infantry and fight alongside them. Two families, and the split is size: a BMP has six roadwheels, a BMD has five and is airborne. Within each family the gun does the work — a short fat 73 mm means BMP-1, a long thin 30 mm means BMP-2, and both together in one turret means BMP-3 or BMD-4M. Where the engine sits is the one structural difference worth knowing.",
+    doctrineNote:
+      "The distinction from an APC is doctrinal, not cosmetic. An IFV is meant to fight while its infantry are still aboard, which is why it carries a cannon and missiles; the vehicle is part of the assault rather than the taxi that delivered it.",
+    status: "ready",
   },
   {
     slug: "apc",
     ordinal: 8,
     title: "APCs",
     subtitle: "BTR family and tracked carriers",
-    brief: null,
-    doctrineNote: null,
-    status: "wip",
+    brief:
+      "Carriers, not fighting vehicles. The wheeled BTR line all looks alike at distance — eight wheels, boat hull, small turret — so recognition comes down to two details: whether there is a proper side door and what is in the turret. No door means BTR-60, small hatches mean BTR-70, a big two-part door means BTR-80, and a long thin barrel above that door means BTR-82A. The tracked carriers are separated by how low they sit.",
+    doctrineNote:
+      "These deliver infantry and then get out of the way. Grau & Bartles note that Russian motor rifle units expect to dismount close in; the carrier's job is to survive the approach, not the assault, which is why its armament is defensive.",
+    status: "ready",
   },
   {
     slug: "tanks",
@@ -1322,4 +1331,12 @@ const baseItems: Item[] = [
 ];
 
 /** Blocks authored after the first release, kept in their own modules. */
-export const items: Item[] = [...baseItems, ...heavyWeapons, ...lightVehicles, ...trucks];
+export const items: Item[] = [
+  ...baseItems,
+  ...heavyWeapons,
+  ...lightVehicles,
+  ...trucks,
+  ...artillery,
+  ...ifv,
+  ...apc,
+];

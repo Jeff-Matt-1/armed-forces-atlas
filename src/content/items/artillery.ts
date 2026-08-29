@@ -1,0 +1,271 @@
+import type { Item } from "@/content/types";
+
+/**
+ * Block 06 — Artillery and Reactive Artillery.
+ *
+ * Three families that look nothing alike. Towed guns are read off the carriage
+ * — three splayed legs or two split trails. Self-propelled guns are read off
+ * turret shape and where it sits on the hull. Rocket artillery is read off the
+ * tube count and the chassis underneath, because the launcher block is most of
+ * what you can see.
+ */
+export const artillery: Item[] = [
+  {
+    slug: "d-30",
+    blockSlug: "artillery",
+    name: "D-30",
+    aka: "2A18",
+    imageUrl: "/images/items/d-30.jpg",
+    imageCredit: "CC BY 4.0 — Министерство обороны Российской Федерации",
+    imagePage: "https://commons.wikimedia.org/wiki/File:122mm_howitzer_D-30_-_Armory_masters4.jpg",
+    armament: "122 mm 2A18 howitzer",
+    rangeText: "15.4 km standard, 21.9 km rocket-assisted",
+    cues: [
+      "Three trail legs splayed at 120° — the only Russian gun laid out this way",
+      "Traverses a full circle without shifting the trails",
+      "No gun shield at all, so the crew is visible around the breech",
+      "Towed muzzle-first, barrel folded back over the carriage",
+    ],
+    placements: [
+      "Towed howitzer battalions of motor rifle brigades",
+      "Airborne and coastal defence artillery",
+    ],
+    doctrineNote:
+      "The cheapest way to put a battery on the ground. Grau & Bartles describe a system in which volume of fire matters more than precision, and the D-30 exists to add tubes to it.",
+    crew: "6",
+    service: "In service",
+    sort: 0,
+  },
+  {
+    slug: "2a65-msta-b",
+    blockSlug: "artillery",
+    name: "2A65 Msta-B",
+    aka: "Msta-B",
+    imageUrl: "/images/items/2a65-msta-b.jpg",
+    imageCredit: "Public domain — One half 3544",
+    imagePage: "https://commons.wikimedia.org/wiki/File:2A65_Msta-B.JPG",
+    armament: "152 mm 2A65 howitzer",
+    rangeText: "24.7 km standard, 28.9 km rocket-assisted",
+    cues: [
+      "Two split trails, not three legs — the immediate split from a D-30",
+      "Large gun shield standing upright behind the barrel",
+      "Long barrel with a pepperpot muzzle brake full of small ports",
+      "Wheels lift clear of the ground once the trails are staked",
+    ],
+    placements: [
+      "Towed artillery battalions at brigade and army level",
+      "The towed counterpart to the 2S19 in the same fire units",
+    ],
+    doctrineNote:
+      "Same shell and nearly the same range as the self-propelled 2S19 at a fraction of the cost. Where a formation cannot afford tracks, it still gets 152 mm fires.",
+    crew: "8",
+    service: "In service",
+    sort: 1,
+  },
+  {
+    slug: "2s1-gvozdika",
+    blockSlug: "artillery",
+    name: "2S1 Gvozdika",
+    aka: "Carnation",
+    imageUrl: "/images/items/2s1-gvozdika.jpg",
+    imageCredit: "CC BY-SA 4.0 — Joshbaumgartner",
+    imagePage:
+      "https://commons.wikimedia.org/wiki/File:2S1_Gvozdika,_AHM,_2024-04-28,_Left_full.jpg",
+    armament: "122 mm 2A31 howitzer",
+    rangeText: "15.2 km standard, 21.9 km rocket-assisted",
+    cues: [
+      "Small rounded turret set well back on a low tracked hull",
+      "Seven roadwheels — more than any other Russian self-propelled gun",
+      "Short 122 mm barrel with a double-baffle muzzle brake",
+      "Boat-shaped bow: it swims, and the hull shows it",
+    ],
+    placements: [
+      "Self-propelled howitzer battalions of motor rifle regiments",
+      "Divisional artillery in older establishments",
+    ],
+    doctrineNote:
+      "Light enough to cross water with the vehicles it supports. The point is not shell weight but that the battery keeps pace with the manoeuvre units it fires for.",
+    crew: "4",
+    service: "In service",
+    sort: 2,
+  },
+  {
+    slug: "2s3-akatsiya",
+    blockSlug: "artillery",
+    name: "2S3 Akatsiya",
+    aka: "Acacia",
+    imageUrl: "/images/items/2s3-akatsiya.jpg",
+    imageCredit: "CC BY-SA 2.0 — Trubble",
+    imagePage: "https://commons.wikimedia.org/wiki/File:2S3_Akatsiya_2.jpg",
+    armament: "152 mm 2A33 howitzer",
+    rangeText: "18.5 km standard, 24 km rocket-assisted",
+    cues: [
+      "Big slab-sided turret with flat vertical faces, centred on the hull",
+      "Six evenly spaced roadwheels under a tall boxy hull",
+      "Two round ammunition hatches in the turret rear",
+      "Barrel noticeably longer and thicker than a 2S1's",
+    ],
+    placements: [
+      "Self-propelled artillery battalions at divisional and brigade level",
+      "Increasingly the second line behind 2S19-equipped units",
+    ],
+    doctrineNote:
+      "The Soviet-era 152 mm standard, still widely fielded. Seeing it alongside 2S19s usually marks a formation part-way through re-equipping rather than a modernised one.",
+    crew: "4",
+    service: "In service",
+    sort: 3,
+  },
+  {
+    slug: "2s19-msta-s",
+    blockSlug: "artillery",
+    name: "2S19 Msta-S",
+    aka: "Msta-SM, 2S19M2",
+    imageUrl: "/images/items/2s19-msta-s.jpg",
+    imageCredit: "CC BY-SA 4.0 — Zala",
+    imagePage: "https://commons.wikimedia.org/wiki/File:2S19_Msta-S_PM_MWB_03.jpg",
+    armament: "152 mm 2A64 howitzer, 12.7 mm NSVT",
+    rangeText: "24.7 km standard, 29 km rocket-assisted",
+    cues: [
+      "Large sloped turret with a full-width bustle at the back",
+      "T-80 running gear — six roadwheels on a tank-sized hull",
+      "Very long barrel with a fume extractor part-way along it",
+      "Remote 12.7 mm machine gun on the commander's cupola",
+    ],
+    placements: [
+      "Self-propelled artillery battalions of tank and motor rifle brigades",
+      "Army-level artillery brigades",
+    ],
+    doctrineNote:
+      "The backbone of modern Russian tube artillery. Grau & Bartles argue that Russian formations fight around their guns rather than their tanks, which makes this the vehicle much of the order of battle is arranged to serve.",
+    crew: "5",
+    service: "In service",
+    sort: 4,
+  },
+  {
+    slug: "2s7-pion",
+    blockSlug: "artillery",
+    name: "2S7 Pion",
+    aka: "Peony; 2S7M Malka",
+    imageUrl: "/images/items/2s7-pion.jpg",
+    imageCredit: "CC BY-SA 4.0 — Boevaya mashina",
+    imagePage: "https://commons.wikimedia.org/wiki/File:2S7_Pion_at_ARMY-2018.jpg",
+    armament: "203 mm 2A44 gun",
+    rangeText: "37.5 km standard, 47.5 km rocket-assisted",
+    cues: [
+      "No turret whatsoever — the gun sits open on the rear deck",
+      "Enormous barrel carried forward over the crew cab when travelling",
+      "Heavy spade lowered into the ground at the rear before firing",
+      "Seven roadwheels and a boxy forward cab on a T-80-derived chassis",
+    ],
+    placements: [
+      "Heavy artillery brigades held at army and district level",
+      "Not organic to manoeuvre brigades",
+    ],
+    doctrineNote:
+      "Reserved for targets that justify a 203 mm shell — fortifications, depots, command posts. Its appearance says something about the level of command that ordered the strike, not about the unit in contact.",
+    crew: "7",
+    service: "In service",
+    sort: 5,
+  },
+  {
+    slug: "bm-21-grad",
+    blockSlug: "artillery",
+    name: "BM-21 Grad",
+    aka: "Hail; Tornado-G",
+    imageUrl: "/images/items/bm-21-grad.jpg",
+    imageCredit: "CC BY-SA 3.0 — Robert Wray",
+    imagePage: "https://commons.wikimedia.org/wiki/File:Russian_BM-21_Grad_in_Saint_Petersburg.JPG",
+    armament: "40 × 122 mm rockets",
+    rangeText: "20 km, up to 40 km with extended-range rockets",
+    cues: [
+      "Forty tubes in a dense four-by-ten block — more tubes than anything else here",
+      "Bonneted Ural 6x6 truck underneath, engine ahead of the cab",
+      "Tubes narrow enough that the block reads as a solid slab at distance",
+      "Shutters folded down over the windscreen before firing",
+    ],
+    placements: [
+      "Rocket artillery battalions of motor rifle and tank brigades",
+      "The most widely fielded rocket system in Russian service",
+    ],
+    doctrineNote:
+      "Area saturation, not precision. Grau & Bartles describe rocket artillery as the tool for covering a grid square quickly; one vehicle delivers a battery's worth of tube fire in seconds and must then displace before counter-battery arrives.",
+    crew: "3",
+    service: "In service",
+    sort: 6,
+  },
+  {
+    slug: "bm-27-uragan",
+    blockSlug: "artillery",
+    name: "BM-27 Uragan",
+    aka: "Hurricane; 9P140",
+    imageUrl: "/images/items/bm-27-uragan.jpg",
+    imageCredit: "CC BY-SA 3.0 — Mike1979 Russia",
+    imagePage: "https://commons.wikimedia.org/wiki/File:BM-27_Uragan_Museum_of_technique.jpg",
+    armament: "16 × 220 mm rockets",
+    rangeText: "35 km",
+    cues: [
+      "Sixteen fat tubes — visibly fewer and wider than a Grad's forty",
+      "ZIL-135 8x8 chassis with axles grouped two forward and two aft",
+      "Long gap amidships between the two wheel groups",
+      "Cab well ahead of the launcher, separated by the loading deck",
+    ],
+    placements: ["Rocket artillery battalions at army level", "Not held by manoeuvre brigades"],
+    doctrineNote:
+      "The middle rung of reactive artillery, and a scatterable-mine delivery system as much as a high-explosive one. Finding one implies army-level fire planning rather than a brigade fight.",
+    crew: "4",
+    service: "In service",
+    sort: 7,
+  },
+  {
+    slug: "bm-30-smerch",
+    blockSlug: "artillery",
+    name: "BM-30 Smerch",
+    aka: "Tornado; 9A52, Tornado-S",
+    imageUrl: "/images/items/bm-30-smerch.jpg",
+    imageCredit: "CC BY-SA 3.0 — Boevaya mashina",
+    imagePage: "https://commons.wikimedia.org/wiki/File:BM-30_Smerch_ARMY-2018.jpg",
+    armament: "12 × 300 mm rockets",
+    rangeText: "70 km, up to 120 km with newer rockets",
+    cues: [
+      "Twelve very large tubes in two rows of six — the fattest tubes in service",
+      "MAZ-543 8x8 chassis with four evenly spaced axles",
+      "Twin-pod cab, driver and commander in separate windows",
+      "Launcher block long enough to overhang the rear of the chassis",
+    ],
+    placements: [
+      "Heavy rocket artillery brigades at army and district level",
+      "A deep-fires asset rather than a brigade weapon",
+    ],
+    doctrineNote:
+      "Ranged far enough to strike the enemy's artillery and logistics rather than his forward troops. Grau & Bartles frame this as the counter-battery and deep-strike layer of the artillery system.",
+    crew: "4",
+    service: "In service",
+    sort: 8,
+  },
+  {
+    slug: "tos-1a",
+    blockSlug: "artillery",
+    name: "TOS-1A Solntsepyok",
+    aka: "Blazing Sun; Buratino (TOS-1)",
+    imageUrl: "/images/items/tos-1a.jpg",
+    imageCredit: "CC BY-SA 3.0 — Boevaya mashina",
+    imagePage: "https://commons.wikimedia.org/wiki/File:TOS-1A_ParkPatriot_at_Army-2016.jpg",
+    armament: "24 × 220 mm thermobaric rockets",
+    rangeText: "6 km — far shorter than anything else in this block",
+    cues: [
+      "Tracks, not wheels: the launcher rides on a T-72 tank chassis",
+      "Squat rectangular block of tubes where a tank turret would be",
+      "No gun barrel at all, which separates it instantly from a tank",
+      "Launcher block much shorter front-to-back than a Grad's",
+    ],
+    placements: [
+      "NBC protection troops (RKhBZ), not the artillery arm",
+      "Attached forward to support an assault directly",
+    ],
+    doctrineNote:
+      "Six kilometres means it fires from inside the manoeuvre battle rather than behind it, so it appears close to the forward edge and escorted. Its presence signals an assault on prepared positions.",
+    crew: "3",
+    service: "In service",
+    sort: 9,
+  },
+];

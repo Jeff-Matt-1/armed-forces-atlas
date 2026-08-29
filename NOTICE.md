@@ -29,8 +29,11 @@ under its own licence (variously CC BY, CC BY-SA, or public domain). They are
 **not** covered by this project's MIT licence and cannot be relicensed by it.
 
 Per-image author, licence and source link are stored alongside each entry in
-`src/content/russia.ts` (`imageCredit`, `imagePage`) and rendered on every item
-card and on the `/about` page.
+`src/content/` — `russia.ts` and the per-block files under `items/` —
+as `imageCredit` and `imagePage`, and rendered on every item card and on the
+`/about` page. Those fields are written by `scripts/apply-credits.ts` from the
+Commons API rather than typed by hand, so attribution traces back to the file's
+own metadata.
 
 Images are reproduced at reduced resolution for web delivery; no other
 alteration is made. If you reuse an image, honour its original licence — for

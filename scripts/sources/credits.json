@@ -1,5 +1,15 @@
 [
   {
+    "slug": "2a65-msta-b",
+    "file": "File:2A65 Msta-B.JPG",
+    "localPath": "/images/items/2a65-msta-b.jpg",
+    "imageCredit": "Public domain — One half 3544",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:2A65_Msta-B.JPG",
+    "licence": "Public domain",
+    "artist": "One half 3544",
+    "attributionRequired": false
+  },
+  {
     "slug": "2b14-podnos",
     "file": "File:2B14 Podnos at \"Engineering Technologies 2010\" forum.jpg",
     "localPath": "/images/items/2b14-podnos.jpg",
@@ -10,6 +20,46 @@
     "attributionRequired": true
   },
   {
+    "slug": "2s1-gvozdika",
+    "file": "File:2S1 Gvozdika, AHM, 2024-04-28, Left full.jpg",
+    "localPath": "/images/items/2s1-gvozdika.jpg",
+    "imageCredit": "CC BY-SA 4.0 — Joshbaumgartner",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:2S1_Gvozdika,_AHM,_2024-04-28,_Left_full.jpg",
+    "licence": "CC BY-SA 4.0",
+    "artist": "Joshbaumgartner",
+    "attributionRequired": true
+  },
+  {
+    "slug": "2s19-msta-s",
+    "file": "File:2S19 Msta-S PM MWB 03.jpg",
+    "localPath": "/images/items/2s19-msta-s.jpg",
+    "imageCredit": "CC BY-SA 4.0 — Zala",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:2S19_Msta-S_PM_MWB_03.jpg",
+    "licence": "CC BY-SA 4.0",
+    "artist": "Zala",
+    "attributionRequired": true
+  },
+  {
+    "slug": "2s3-akatsiya",
+    "file": "File:2S3 Akatsiya 2.jpg",
+    "localPath": "/images/items/2s3-akatsiya.jpg",
+    "imageCredit": "CC BY-SA 2.0 — Trubble",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:2S3_Akatsiya_2.jpg",
+    "licence": "CC BY-SA 2.0",
+    "artist": "Trubble",
+    "attributionRequired": true
+  },
+  {
+    "slug": "2s7-pion",
+    "file": "File:2S7 Pion at ARMY-2018.jpg",
+    "localPath": "/images/items/2s7-pion.jpg",
+    "imageCredit": "CC BY-SA 4.0 — Boevaya mashina",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:2S7_Pion_at_ARMY-2018.jpg",
+    "licence": "CC BY-SA 4.0",
+    "artist": "Boevaya mashina",
+    "attributionRequired": true
+  },
+  {
     "slug": "ags-17",
     "file": "File:AGS-17 grenade launcher - RaceofHeroes-part2-15.jpg",
     "localPath": "/images/items/ags-17.jpg",
@@ -17,6 +67,156 @@
     "imagePage": "https://commons.wikimedia.org/wiki/File:AGS-17_grenade_launcher_-_RaceofHeroes-part2-15.jpg",
     "licence": "CC BY-SA 4.0",
     "artist": "Vitaly V. Kuzmin",
+    "attributionRequired": true
+  },
+  {
+    "slug": "bm-21-grad",
+    "file": "File:Russian BM-21 Grad in Saint Petersburg.JPG",
+    "localPath": "/images/items/bm-21-grad.jpg",
+    "imageCredit": "CC BY-SA 3.0 — Robert Wray",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:Russian_BM-21_Grad_in_Saint_Petersburg.JPG",
+    "licence": "CC BY-SA 3.0",
+    "artist": "Robert Wray",
+    "attributionRequired": true
+  },
+  {
+    "slug": "bm-27-uragan",
+    "file": "File:BM-27 Uragan Museum of technique.jpg",
+    "localPath": "/images/items/bm-27-uragan.jpg",
+    "imageCredit": "CC BY-SA 3.0 — Mike1979 Russia",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:BM-27_Uragan_Museum_of_technique.jpg",
+    "licence": "CC BY-SA 3.0",
+    "artist": "Mike1979 Russia",
+    "attributionRequired": true
+  },
+  {
+    "slug": "bm-30-smerch",
+    "file": "File:BM-30 Smerch ARMY-2018.jpg",
+    "localPath": "/images/items/bm-30-smerch.jpg",
+    "imageCredit": "CC BY-SA 3.0 — Boevaya mashina",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:BM-30_Smerch_ARMY-2018.jpg",
+    "licence": "CC BY-SA 3.0",
+    "artist": "Boevaya mashina",
+    "attributionRequired": true
+  },
+  {
+    "slug": "bmd-2",
+    "file": "File:BMD-2 airborne combat vehicle.jpg",
+    "localPath": "/images/items/bmd-2.jpg",
+    "imageCredit": "CC BY-SA 4.0 — Rockybrown",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:BMD-2_airborne_combat_vehicle.jpg",
+    "licence": "CC BY-SA 4.0",
+    "artist": "Rockybrown",
+    "attributionRequired": true
+  },
+  {
+    "slug": "bmd-4m",
+    "file": "File:BMD-4M at Army 2016.jpg",
+    "localPath": "/images/items/bmd-4m.jpg",
+    "imageCredit": "CC BY-SA 4.0 — Boevaya mashina",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:BMD-4M_at_Army_2016.jpg",
+    "licence": "CC BY-SA 4.0",
+    "artist": "Boevaya mashina",
+    "attributionRequired": true
+  },
+  {
+    "slug": "bmp-1",
+    "file": "File:BMP-1 Zlot Darłowo 2009.JPG",
+    "localPath": "/images/items/bmp-1.jpg",
+    "imageCredit": "Attribution — Łukasz Golowanow & Maciek Hypś, Konflikty.pl",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:BMP-1_Zlot_Dar%C5%82owo_2009.JPG",
+    "licence": "Attribution",
+    "artist": "Łukasz Golowanow & Maciek Hypś, Konflikty.pl",
+    "attributionRequired": false
+  },
+  {
+    "slug": "bmp-2",
+    "file": "File:БМП-2 на параде в Хабаровске.JPG",
+    "localPath": "/images/items/bmp-2.jpg",
+    "imageCredit": "CC BY-SA 3.0 — Andshel",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:%D0%91%D0%9C%D0%9F-2_%D0%BD%D0%B0_%D0%BF%D0%B0%D1%80%D0%B0%D0%B4%D0%B5_%D0%B2_%D0%A5%D0%B0%D0%B1%D0%B0%D1%80%D0%BE%D0%B2%D1%81%D0%BA%D0%B5.JPG",
+    "licence": "CC BY-SA 3.0",
+    "artist": "Andshel",
+    "attributionRequired": true
+  },
+  {
+    "slug": "bmp-3",
+    "file": "File:BMP-3 (41204909204).jpg",
+    "localPath": "/images/items/bmp-3.jpg",
+    "imageCredit": "CC BY 2.0 — Dmitriy Fomin from Moscow, Russia",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:BMP-3_(41204909204).jpg",
+    "licence": "CC BY 2.0",
+    "artist": "Dmitriy Fomin from Moscow, Russia",
+    "attributionRequired": true
+  },
+  {
+    "slug": "btr-60pb",
+    "file": "File:BTR-60PB DA-ST-89-06597.jpg",
+    "localPath": "/images/items/btr-60pb.jpg",
+    "imageCredit": "Public domain — Unknown author",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:BTR-60PB_DA-ST-89-06597.jpg",
+    "licence": "Public domain",
+    "artist": "Unknown author",
+    "attributionRequired": false
+  },
+  {
+    "slug": "btr-70",
+    "file": "File:BTR-70 APCs, Tiraspol 2015.JPG",
+    "localPath": "/images/items/btr-70.jpg",
+    "imageCredit": "Attribution — Правительство Приднестровской Молдавской Республики (Government of the Pridnestrovian Moldavian Republic)",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:BTR-70_APCs,_Tiraspol_2015.JPG",
+    "licence": "Attribution",
+    "artist": "Правительство Приднестровской Молдавской Республики (Government of the Pridnestrovian Moldavian Republic)",
+    "attributionRequired": false
+  },
+  {
+    "slug": "btr-80",
+    "file": "File:Russian BTR-80 APC.jpg",
+    "localPath": "/images/items/btr-80.jpg",
+    "imageCredit": "CC BY-SA 3.0 — Vitaliy Ragulin",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:Russian_BTR-80_APC.jpg",
+    "licence": "CC BY-SA 3.0",
+    "artist": "Vitaliy Ragulin",
+    "attributionRequired": true
+  },
+  {
+    "slug": "btr-82a",
+    "file": "File:BTR-82A of the Western Military District - June 2023.jpg",
+    "localPath": "/images/items/btr-82a.jpg",
+    "imageCredit": "CC BY 4.0 — Ministry of Defence of the Russian Federation",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:BTR-82A_of_the_Western_Military_District_-_June_2023.jpg",
+    "licence": "CC BY 4.0",
+    "artist": "Ministry of Defence of the Russian Federation",
+    "attributionRequired": true
+  },
+  {
+    "slug": "btr-d",
+    "file": "File:BTR-D.jpg",
+    "localPath": "/images/items/btr-d.jpg",
+    "imageCredit": "CC BY-SA 2.0 — Xabier Eskisabel",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:BTR-D.jpg",
+    "licence": "CC BY-SA 2.0",
+    "artist": "Xabier Eskisabel",
+    "attributionRequired": true
+  },
+  {
+    "slug": "btr-mdm-rakushka",
+    "file": "File:Armored personnel carrier \"Rakushka\" during the \"Armiya 2020\" exhibition.jpg",
+    "localPath": "/images/items/btr-mdm-rakushka.jpg",
+    "imageCredit": "CC BY-SA 4.0 — Kirill Borisenko",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:Armored_personnel_carrier_%22Rakushka%22_during_the_%22Armiya_2020%22_exhibition.jpg",
+    "licence": "CC BY-SA 4.0",
+    "artist": "Kirill Borisenko",
+    "attributionRequired": true
+  },
+  {
+    "slug": "d-30",
+    "file": "File:122mm howitzer D-30 - Armory masters4.jpg",
+    "localPath": "/images/items/d-30.jpg",
+    "imageCredit": "CC BY 4.0 — Министерство обороны Российской Федерации",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:122mm_howitzer_D-30_-_Armory_masters4.jpg",
+    "licence": "CC BY 4.0",
+    "artist": "Министерство обороны Российской Федерации",
     "attributionRequired": true
   },
   {
@@ -127,6 +327,16 @@
     "imagePage": "https://commons.wikimedia.org/wiki/File:KrAZ_255.JPG",
     "licence": "Attribution",
     "artist": "Unknown author",
+    "attributionRequired": false
+  },
+  {
+    "slug": "mt-lb",
+    "file": "File:Soviet MT-LB.JPEG",
+    "localPath": "/images/items/mt-lb.jpg",
+    "imageCredit": "Public domain — DON S. Montgomery, U.S. Navy (Ret.)",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:Soviet_MT-LB.JPEG",
+    "licence": "Public domain",
+    "artist": "DON S. Montgomery, U.S. Navy (Ret.)",
     "attributionRequired": false
   },
   {
@@ -438,6 +648,16 @@
     "licence": "Public domain",
     "artist": "User Megapixie on en.wikipedia",
     "attributionRequired": false
+  },
+  {
+    "slug": "tos-1a",
+    "file": "File:TOS-1A ParkPatriot at Army-2016.jpg",
+    "localPath": "/images/items/tos-1a.jpg",
+    "imageCredit": "CC BY-SA 3.0 — Boevaya mashina",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:TOS-1A_ParkPatriot_at_Army-2016.jpg",
+    "licence": "CC BY-SA 3.0",
+    "artist": "Boevaya mashina",
+    "attributionRequired": true
   },
   {
     "slug": "uaz-3163-patriot",
