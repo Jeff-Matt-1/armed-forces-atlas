@@ -5,9 +5,12 @@
 // and are concatenated below; this file keeps the original four blocks inline.
 import { apc } from "@/content/items/apc";
 import { artillery } from "@/content/items/artillery";
+import { c2 } from "@/content/items/c2";
+import { ew } from "@/content/items/ew";
 import { heavyWeapons } from "@/content/items/heavy-weapons";
 import { ifv } from "@/content/items/ifv";
 import { lightVehicles } from "@/content/items/light-vehicles";
+import { radars } from "@/content/items/radars";
 import { trucks } from "@/content/items/trucks";
 import type { Block, Item } from "@/content/types";
 
@@ -130,27 +133,35 @@ export const blocks: Block[] = [
     ordinal: 10,
     title: "EW Systems",
     subtitle: "Jamming, direction finding and protection",
-    brief: null,
-    doctrineNote: null,
-    status: "wip",
+    brief:
+      "The chassis stops helping here. These ride on the same KamAZ, BAZ, BTR-80 and MT-LB hulls learned in earlier blocks, so the antenna is the whole recognition problem: one dish or several, an open lattice or a solid panel, on the roof or guyed out across the field beside it. Footprint is the second cue — a jammer reaching hundreds of kilometres spreads masts and guy wires over open ground, while one protecting its own vehicle keeps everything on the roof.",
+    doctrineNote:
+      "Grau & Bartles treat radio-electronic combat as an arm in its own right, organic down to brigade rather than attached from above. Its purpose is to break the link between the enemy's sensors and his guns — the same link the Russian system depends on for itself.",
+    status: "ready",
+    imageFit: "contain",
   },
   {
     slug: "c2",
     ordinal: 11,
     title: "C2 Systems",
     subtitle: "Command posts, Strelets, ACCS",
-    brief: null,
-    doctrineNote: null,
-    status: "wip",
+    brief:
+      "Command vehicles are built to be unremarkable, so recognition works by subtraction: a hull you already know, with the weapon missing and antennas in its place. What separates them is the chassis, and the chassis follows the echelon — a box-bodied truck well to the rear, a wheeled carrier with the manoeuvre units, a tracked hull that can follow the assault, and at the bottom a handheld terminal in a trench.",
+    doctrineNote:
+      "Finding the command post is how you paralyse an artillery-led force, and both sides know it. Everything here is shaped by that: the vehicles hide inside ordinary columns, and the most important node in the chain is a device in an observer's hands rather than anything with armour.",
+    status: "ready",
   },
   {
     slug: "radars",
     ordinal: 12,
     title: "Radars",
     subtitle: "Surveillance, counter-battery and target acquisition",
-    brief: null,
-    doctrineNote: null,
-    status: "wip",
+    brief:
+      "Read the antenna and you have the radar. Size runs with wavelength and with range: a lattice of long rods spanning two lorry-widths is a metre-band set searching hundreds of kilometres for aircraft, while a small drum on a tracked hull is looking a few kilometres for vehicles or shells. Then ask what it hunts — air surveillance sets stand high on masts and turn full circle, battlefield and counter-battery sets sit low and scan a narrow sector.",
+    doctrineNote:
+      "The counter-battery sets are the ones that matter most here. They track a shell in flight and compute backwards to the gun, which makes them among the most valuable targets on a battlefield where artillery decides the outcome — hence tracked, low, and moved as soon as they have radiated.",
+    status: "ready",
+    imageFit: "contain",
   },
   {
     slug: "engineering",
@@ -1339,4 +1350,7 @@ export const items: Item[] = [
   ...artillery,
   ...ifv,
   ...apc,
+  ...ew,
+  ...c2,
+  ...radars,
 ];

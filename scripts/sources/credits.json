@@ -1,5 +1,15 @@
 [
   {
+    "slug": "1v110",
+    "file": "File:1V110 - 4th Separate Tank Brigade.jpg",
+    "localPath": "/images/items/1v110.jpg",
+    "imageCredit": "CC BY-SA 4.0 — Vitaly V. Kuzmin",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:1V110_-_4th_Separate_Tank_Brigade.jpg",
+    "licence": "CC BY-SA 4.0",
+    "artist": "Vitaly V. Kuzmin",
+    "attributionRequired": true
+  },
+  {
     "slug": "2a65-msta-b",
     "file": "File:2A65 Msta-B.JPG",
     "localPath": "/images/items/2a65-msta-b.jpg",
@@ -130,6 +140,16 @@
     "attributionRequired": false
   },
   {
+    "slug": "bmp-1ksh",
+    "file": "File:BMP-1KSh in TLT - 4553.JPG",
+    "localPath": "/images/items/bmp-1ksh.jpg",
+    "imageCredit": "CC BY-SA 3.0 — ShinePhantom",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:BMP-1KSh_in_TLT_-_4553.JPG",
+    "licence": "CC BY-SA 3.0",
+    "artist": "ShinePhantom",
+    "attributionRequired": true
+  },
+  {
     "slug": "bmp-2",
     "file": "File:БМП-2 на параде в Хабаровске.JPG",
     "localPath": "/images/items/bmp-2.jpg",
@@ -147,6 +167,16 @@
     "imagePage": "https://commons.wikimedia.org/wiki/File:BMP-3_(41204909204).jpg",
     "licence": "CC BY 2.0",
     "artist": "Dmitriy Fomin from Moscow, Russia",
+    "attributionRequired": true
+  },
+  {
+    "slug": "borisoglebsk-2",
+    "file": "File:Electronic warfare complex Borisoglebsk-2.jpg",
+    "localPath": "/images/items/borisoglebsk-2.jpg",
+    "imageCredit": "CC BY 4.0 — Ministry of Defense of Russia",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:Electronic_warfare_complex_Borisoglebsk-2.jpg",
+    "licence": "CC BY 4.0",
+    "artist": "Ministry of Defense of Russia",
     "attributionRequired": true
   },
   {
@@ -300,6 +330,16 @@
     "attributionRequired": true
   },
   {
+    "slug": "kasta-2e2",
+    "file": "File:39N6E Kasta-2E2 radar - 100th Anniversary VVS-R -02.jpg",
+    "localPath": "/images/items/kasta-2e2.jpg",
+    "imageCredit": "CC BY-SA 4.0 — Vitaly V. Kuzmin",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:39N6E_Kasta-2E2_radar_-_100th_Anniversary_VVS-R_-02.jpg",
+    "licence": "CC BY-SA 4.0",
+    "artist": "Vitaly V. Kuzmin",
+    "attributionRequired": true
+  },
+  {
     "slug": "kord",
     "file": "File:Kord 6P50.jpg",
     "localPath": "/images/items/kord.jpg",
@@ -317,6 +357,26 @@
     "imagePage": "https://commons.wikimedia.org/wiki/File:9M133_Kornet.JPG",
     "licence": "CC BY-SA 3.0",
     "artist": "Mike1979 Russia",
+    "attributionRequired": true
+  },
+  {
+    "slug": "krasukha-2",
+    "file": "File:Krasukha-2 (Красуха-2) Unloaded.jpg",
+    "localPath": "/images/items/krasukha-2.jpg",
+    "imageCredit": "CC BY-SA 3.0 — Vitaly V. Kuzmin",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:Krasukha-2_(%D0%9A%D1%80%D0%B0%D1%81%D1%83%D1%85%D0%B0-2)_Unloaded.jpg",
+    "licence": "CC BY-SA 3.0",
+    "artist": "Vitaly V. Kuzmin",
+    "attributionRequired": true
+  },
+  {
+    "slug": "krasukha-4",
+    "file": "File:1RL257E Krasukha-4 Army-2018.jpg",
+    "localPath": "/images/items/krasukha-4.jpg",
+    "imageCredit": "CC BY-SA 4.0 — Boevaya mashina",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:1RL257E_Krasukha-4_Army-2018.jpg",
+    "licence": "CC BY-SA 4.0",
+    "artist": "Boevaya mashina",
     "attributionRequired": true
   },
   {
@@ -340,6 +400,36 @@
     "attributionRequired": false
   },
   {
+    "slug": "nebo-m",
+    "file": "File:Nebo-M RLM-ME Army-2016.jpg",
+    "localPath": "/images/items/nebo-m.jpg",
+    "imageCredit": "CC BY-SA 4.0 — Boevaya mashina",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:Nebo-M_RLM-ME_Army-2016.jpg",
+    "licence": "CC BY-SA 4.0",
+    "artist": "Boevaya mashina",
+    "attributionRequired": true
+  },
+  {
+    "slug": "p-18",
+    "file": "File:P-18 radar in Russia.JPG",
+    "localPath": "/images/items/p-18.jpg",
+    "imageCredit": "CC BY-SA 3.0 — Антон Бородин",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:P-18_radar_in_Russia.JPG",
+    "licence": "CC BY-SA 3.0",
+    "artist": "Антон Бородин",
+    "attributionRequired": true
+  },
+  {
+    "slug": "palantin",
+    "file": "File:Развертывание РЭБ Палантин на учениях.jpg",
+    "localPath": "/images/items/palantin.jpg",
+    "imageCredit": "CC BY 4.0 — Ministry of Defense of Russia",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:%D0%A0%D0%B0%D0%B7%D0%B2%D0%B5%D1%80%D1%82%D1%8B%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5_%D0%A0%D0%AD%D0%91_%D0%9F%D0%B0%D0%BB%D0%B0%D0%BD%D1%82%D0%B8%D0%BD_%D0%BD%D0%B0_%D1%83%D1%87%D0%B5%D0%BD%D0%B8%D1%8F%D1%85.jpg",
+    "licence": "CC BY 4.0",
+    "artist": "Ministry of Defense of Russia",
+    "attributionRequired": true
+  },
+  {
     "slug": "pkp-pecheneg",
     "file": "File:PKP Pecheneg machine gun - RaceofHeroes-part2-19.jpg",
     "localPath": "/images/items/pkp-pecheneg.jpg",
@@ -347,6 +437,56 @@
     "imagePage": "https://commons.wikimedia.org/wiki/File:PKP_Pecheneg_machine_gun_-_RaceofHeroes-part2-19.jpg",
     "licence": "CC BY-SA 4.0",
     "artist": "Vitaly V. Kuzmin",
+    "attributionRequired": true
+  },
+  {
+    "slug": "r-142n",
+    "file": "File:R-142N command vehicle.jpg",
+    "localPath": "/images/items/r-142n.jpg",
+    "imageCredit": "CC BY-SA 4.0 — Vitaly V. Kuzmin",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:R-142N_command_vehicle.jpg",
+    "licence": "CC BY-SA 4.0",
+    "artist": "Vitaly V. Kuzmin",
+    "attributionRequired": true
+  },
+  {
+    "slug": "r-145bm",
+    "file": "File:R-145BM command vehicle on BTR-60 base.jpg",
+    "localPath": "/images/items/r-145bm.jpg",
+    "imageCredit": "CC BY-SA 4.0 — Vitaly V. Kuzmin",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:R-145BM_command_vehicle_on_BTR-60_base.jpg",
+    "licence": "CC BY-SA 4.0",
+    "artist": "Vitaly V. Kuzmin",
+    "attributionRequired": true
+  },
+  {
+    "slug": "r-149bmr",
+    "file": "File:R-149BMR - ETIF-2010 (1).jpg",
+    "localPath": "/images/items/r-149bmr.jpg",
+    "imageCredit": "CC BY-SA 4.0 — Vitaly V. Kuzmin",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:R-149BMR_-_ETIF-2010_(1).jpg",
+    "licence": "CC BY-SA 4.0",
+    "artist": "Vitaly V. Kuzmin",
+    "attributionRequired": true
+  },
+  {
+    "slug": "r-149ma1",
+    "file": "File:R-149MA1 command vehicle at Engineering Technologies 2012.jpg",
+    "localPath": "/images/items/r-149ma1.jpg",
+    "imageCredit": "CC BY-SA 3.0 — Mike1979 Russia",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:R-149MA1_command_vehicle_at_Engineering_Technologies_2012.jpg",
+    "licence": "CC BY-SA 3.0",
+    "artist": "Mike1979 Russia",
+    "attributionRequired": true
+  },
+  {
+    "slug": "r-330zh-zhitel",
+    "file": "File:R-330Zh Zhitel jammer.jpg",
+    "localPath": "/images/items/r-330zh-zhitel.jpg",
+    "imageCredit": "CC BY 4.0 — Денис Абрамов (Denis Abramov)",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:R-330Zh_Zhitel_jammer.jpg",
+    "licence": "CC BY 4.0",
+    "artist": "Денис Абрамов (Denis Abramov)",
     "attributionRequired": true
   },
   {
@@ -630,6 +770,16 @@
     "attributionRequired": true
   },
   {
+    "slug": "rb-531b-infauna",
+    "file": "File:RB-531B Infauna 01.jpg",
+    "localPath": "/images/items/rb-531b-infauna.jpg",
+    "imageCredit": "CC BY 4.0 — The Ministry of Defence of the Russian Federation",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:RB-531B_Infauna_01.jpg",
+    "licence": "CC BY 4.0",
+    "artist": "The Ministry of Defence of the Russian Federation",
+    "attributionRequired": true
+  },
+  {
     "slug": "rpg-7",
     "file": "File:RPG-7V1 grenade launcher - RaceofHeroes-part2-22.jpg",
     "localPath": "/images/items/rpg-7.jpg",
@@ -648,6 +798,36 @@
     "licence": "Public domain",
     "artist": "User Megapixie on en.wikipedia",
     "attributionRequired": false
+  },
+  {
+    "slug": "rtut-bm",
+    "file": "File:1L262E Army-2016.jpg",
+    "localPath": "/images/items/rtut-bm.jpg",
+    "imageCredit": "CC BY-SA 4.0 — Boevaya mashina",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:1L262E_Army-2016.jpg",
+    "licence": "CC BY-SA 4.0",
+    "artist": "Boevaya mashina",
+    "attributionRequired": true
+  },
+  {
+    "slug": "snar-10",
+    "file": "File:Battlefield Surveillance Radar SNAR 10 on MTLB M 1975 in Aalborg Forsvars- og Garnisonsmuseum, pic1.JPG",
+    "localPath": "/images/items/snar-10.jpg",
+    "imageCredit": "CC0 — Alf van Beem",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:Battlefield_Surveillance_Radar_SNAR_10_on_MTLB_M_1975_in_Aalborg_Forsvars-_og_Garnisonsmuseum,_pic1.JPG",
+    "licence": "CC0",
+    "artist": "Alf van Beem",
+    "attributionRequired": false
+  },
+  {
+    "slug": "strelets",
+    "file": "File:Strelets Recce.jpg",
+    "localPath": "/images/items/strelets.jpg",
+    "imageCredit": "CC BY 4.0 — Ministry of Defence of the Russian Federation",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:Strelets_Recce.jpg",
+    "licence": "CC BY 4.0",
+    "artist": "Ministry of Defence of the Russian Federation",
+    "attributionRequired": true
   },
   {
     "slug": "tos-1a",
@@ -687,6 +867,16 @@
     "imagePage": "https://commons.wikimedia.org/wiki/File:Ural-4320,_12._Internationales_Maritimes-Fahrzeugtreffen,_Ribnitz-Damgarten_(_1060471).jpg",
     "licence": "CC BY-SA 4.0",
     "artist": "Matti Blume",
+    "attributionRequired": true
+  },
+  {
+    "slug": "zoopark-1",
+    "file": "File:1L219 Zoopark-1 radar Tula 2016.JPG",
+    "localPath": "/images/items/zoopark-1.jpg",
+    "imageCredit": "CC BY-SA 3.0 de — Boevaya mashina",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:1L219_Zoopark-1_radar_Tula_2016.JPG",
+    "licence": "CC BY-SA 3.0 de",
+    "artist": "Boevaya mashina",
     "attributionRequired": true
   }
 ]
