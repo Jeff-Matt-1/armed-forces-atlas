@@ -20,7 +20,7 @@ import { Route as DrillPhotoIdRouteImport } from './routes/drill.photo-id'
 import { Route as DrillStructureRouteImport } from './routes/drill.structure'
 import { Route as ExamBlockRouteImport } from './routes/exam.$block'
 import { Route as LearnIndexRouteImport } from './routes/learn.index'
-import { Route as LearnBlockRouteImport } from './routes/learn.$block'
+import { Route as LearnBlockIndexRouteImport } from './routes/learn.$block.index'
 import { Route as LearnBlockItemRouteImport } from './routes/learn.$block.$item'
 
 const IndexRoute = IndexRouteImport.update({
@@ -78,15 +78,15 @@ const LearnIndexRoute = LearnIndexRouteImport.update({
   path: '/learn/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const LearnBlockRoute = LearnBlockRouteImport.update({
-  id: '/learn/$block',
-  path: '/learn/$block',
+const LearnBlockIndexRoute = LearnBlockIndexRouteImport.update({
+  id: '/learn/$block/',
+  path: '/learn/$block/',
   getParentRoute: () => rootRouteImport,
 } as any)
 const LearnBlockItemRoute = LearnBlockItemRouteImport.update({
-  id: '/$item',
-  path: '/$item',
-  getParentRoute: () => LearnBlockRoute,
+  id: '/learn/$block/$item',
+  path: '/learn/$block/$item',
+  getParentRoute: () => rootRouteImport,
 } as any)
 
 export interface FileRoutesByFullPath {
@@ -100,9 +100,9 @@ export interface FileRoutesByFullPath {
   '/drill/photo-id': typeof DrillPhotoIdRoute
   '/drill/structure': typeof DrillStructureRoute
   '/exam/$block': typeof ExamBlockRoute
-  '/learn/$block': typeof LearnBlockRouteWithChildren
   '/learn/': typeof LearnIndexRoute
   '/learn/$block/$item': typeof LearnBlockItemRoute
+  '/learn/$block/': typeof LearnBlockIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -115,9 +115,9 @@ export interface FileRoutesByTo {
   '/drill/photo-id': typeof DrillPhotoIdRoute
   '/drill/structure': typeof DrillStructureRoute
   '/exam/$block': typeof ExamBlockRoute
-  '/learn/$block': typeof LearnBlockRouteWithChildren
   '/learn': typeof LearnIndexRoute
   '/learn/$block/$item': typeof LearnBlockItemRoute
+  '/learn/$block': typeof LearnBlockIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -131,9 +131,9 @@ export interface FileRoutesById {
   '/drill/photo-id': typeof DrillPhotoIdRoute
   '/drill/structure': typeof DrillStructureRoute
   '/exam/$block': typeof ExamBlockRoute
-  '/learn/$block': typeof LearnBlockRouteWithChildren
   '/learn/': typeof LearnIndexRoute
   '/learn/$block/$item': typeof LearnBlockItemRoute
+  '/learn/$block/': typeof LearnBlockIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -148,9 +148,9 @@ export interface FileRouteTypes {
     | '/drill/photo-id'
     | '/drill/structure'
     | '/exam/$block'
-    | '/learn/$block'
     | '/learn/'
     | '/learn/$block/$item'
+    | '/learn/$block/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -163,9 +163,9 @@ export interface FileRouteTypes {
     | '/drill/photo-id'
     | '/drill/structure'
     | '/exam/$block'
-    | '/learn/$block'
     | '/learn'
     | '/learn/$block/$item'
+    | '/learn/$block'
   id:
     | '__root__'
     | '/'
@@ -178,9 +178,9 @@ export interface FileRouteTypes {
     | '/drill/photo-id'
     | '/drill/structure'
     | '/exam/$block'
-    | '/learn/$block'
     | '/learn/'
     | '/learn/$block/$item'
+    | '/learn/$block/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -194,8 +194,9 @@ export interface RootRouteChildren {
   DrillPhotoIdRoute: typeof DrillPhotoIdRoute
   DrillStructureRoute: typeof DrillStructureRoute
   ExamBlockRoute: typeof ExamBlockRoute
-  LearnBlockRoute: typeof LearnBlockRouteWithChildren
   LearnIndexRoute: typeof LearnIndexRoute
+  LearnBlockItemRoute: typeof LearnBlockItemRoute
+  LearnBlockIndexRoute: typeof LearnBlockIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -277,34 +278,22 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LearnIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/learn/$block': {
-      id: '/learn/$block'
+    '/learn/$block/': {
+      id: '/learn/$block/'
       path: '/learn/$block'
-      fullPath: '/learn/$block'
-      preLoaderRoute: typeof LearnBlockRouteImport
+      fullPath: '/learn/$block/'
+      preLoaderRoute: typeof LearnBlockIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/learn/$block/$item': {
       id: '/learn/$block/$item'
-      path: '/$item'
+      path: '/learn/$block/$item'
       fullPath: '/learn/$block/$item'
       preLoaderRoute: typeof LearnBlockItemRouteImport
-      parentRoute: typeof LearnBlockRoute
+      parentRoute: typeof rootRouteImport
     }
   }
 }
-
-interface LearnBlockRouteChildren {
-  LearnBlockItemRoute: typeof LearnBlockItemRoute
-}
-
-const LearnBlockRouteChildren: LearnBlockRouteChildren = {
-  LearnBlockItemRoute: LearnBlockItemRoute,
-}
-
-const LearnBlockRouteWithChildren = LearnBlockRoute._addFileChildren(
-  LearnBlockRouteChildren,
-)
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
@@ -317,8 +306,9 @@ const rootRouteChildren: RootRouteChildren = {
   DrillPhotoIdRoute: DrillPhotoIdRoute,
   DrillStructureRoute: DrillStructureRoute,
   ExamBlockRoute: ExamBlockRoute,
-  LearnBlockRoute: LearnBlockRouteWithChildren,
   LearnIndexRoute: LearnIndexRoute,
+  LearnBlockItemRoute: LearnBlockItemRoute,
+  LearnBlockIndexRoute: LearnBlockIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

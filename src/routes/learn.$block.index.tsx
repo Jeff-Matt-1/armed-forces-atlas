@@ -7,7 +7,7 @@ import { BlockGapsPanel } from "@/components/BlockGapsPanel";
 import { useLocale } from "@/i18n/LocaleProvider";
 import { useProgress } from "@/lib/progress";
 
-export const Route = createFileRoute("/learn/$block")({
+export const Route = createFileRoute("/learn/$block/")({
   loader: ({ params }) => {
     const block = getBlock(params.block);
     if (!block || block.status !== "ready") throw notFound();
