@@ -11,8 +11,10 @@ import type { ItemTranslation } from "@/content/translations";
  * between leitnant and kapten, a step the Estonian ladder does not have, and
  * the naval michman is given both its Estonian loan form and a gloss.
  */
-const LADDER_GROUND = "Maavägede ning õhu- ja kosmoseväe auastmeredel";
-const LADDER_NAVY = "Mereväe auastmeredel";
+const LADDER_GROUND =
+  "Üldväe auastmeredel — maavägi, õhu- ja kosmosevägi, strateegilised raketiväed, õhudessantväed";
+const LADDER_NAVY =
+  "Mereväe auastmeredel — merevägi; merejalavägi ja rannikuväed kasutavad üldväe redelit";
 const RANK = "Auaste";
 
 function ground(aka: string, cue: string): ItemTranslation {

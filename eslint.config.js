@@ -6,7 +6,9 @@ import reactRefresh from "eslint-plugin-react-refresh";
 import tseslint from "typescript-eslint";
 
 export default tseslint.config(
-  { ignores: ["dist", ".output", ".vinxi"] },
+  // Generated bundles, not source. .wrangler/tmp holds the deploy bundle, which
+  // a cancelled deploy leaves behind and which is not ours to format.
+  { ignores: ["dist", ".output", ".vinxi", ".wrangler"] },
   {
     extends: [js.configs.recommended, ...tseslint.configs.recommended],
     files: ["**/*.{ts,tsx}"],
