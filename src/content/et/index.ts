@@ -19,14 +19,15 @@ import { etSubmarines } from "@/content/et/items/submarines";
 import { etTanks } from "@/content/et/items/tanks";
 import { etTrucks } from "@/content/et/items/trucks";
 import { etVessels } from "@/content/et/items/vessels";
-import { registerTranslations, type ContentTranslations } from "@/content/translations";
+import type { ContentTranslations } from "@/content/translations";
 
 /**
  * The Estonian content table, assembled from one file per block.
  *
- * Registration happens on import for its side effect, so the content layer
- * knows about Estonian without depending on it. Anything absent falls back to
- * English, which is what let the translation land block by block.
+ * Exported as a value and imported as one by src/content/translations.ts.
+ * It was registered by a side-effecting import at first, which the bundler was
+ * free to drop — and did. Anything absent falls back to English, which is what
+ * let the translation land block by block.
  */
 export const etTranslations: ContentTranslations = {
   blocks: etBlocks,
@@ -53,5 +54,3 @@ export const etTranslations: ContentTranslations = {
     ...etAircraft,
   },
 };
-
-registerTranslations("et", etTranslations);

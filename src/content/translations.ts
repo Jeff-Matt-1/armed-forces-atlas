@@ -1,3 +1,4 @@
+import { etTranslations } from "@/content/et";
 import type { Block, Item } from "@/content/types";
 import type { Locale } from "@/i18n/locales";
 
@@ -37,14 +38,18 @@ export type ContentTranslations = {
 
 const EMPTY: ContentTranslations = { blocks: {}, items: {} };
 
-const REGISTRY: Partial<Record<Locale, ContentTranslations>> = {};
-
-export function registerTranslations(locale: Locale, translations: ContentTranslations) {
-  REGISTRY[locale] = translations;
-}
+/**
+ * Tables are imported as values rather than registered by a side-effecting
+ * import. This package sets "sideEffects": false, so an import kept only for
+ * its side effect is fair game for the bundler to remove — which is exactly
+ * what happened to the Estonian content the first time round.
+ */
+const TABLES: Partial<Record<Locale, ContentTranslations>> = {
+  et: etTranslations,
+};
 
 function tableFor(locale: Locale): ContentTranslations {
-  return REGISTRY[locale] ?? EMPTY;
+  return TABLES[locale] ?? EMPTY;
 }
 
 export function localiseBlock(block: Block, locale: Locale): Block {

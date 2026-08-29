@@ -1,6 +1,4 @@
 import { blocks as rawBlocks, items as rawItems, type Block, type Item } from "@/content/russia";
-// Registers the Estonian tables for their side effect; see src/content/et/index.ts.
-import "@/content/et";
 import { localiseBlock, localiseItem } from "@/content/translations";
 import { DEFAULT_LOCALE, type Locale } from "@/i18n/locales";
 
