@@ -5,6 +5,7 @@ import { DrillSkeleton, QuizRunner } from "@/components/QuizRunner";
 import { getBlock } from "@/lib/content";
 import { buildPhotoQuiz } from "@/lib/quiz";
 import { useShuffled } from "@/hooks/useShuffled";
+import { useLocale } from "@/i18n/LocaleProvider";
 
 type Search = { block?: string | undefined };
 
@@ -32,6 +33,7 @@ export const Route = createFileRoute("/drill/photo-id")({
 });
 
 function PhotoDrill() {
+  const { t } = useLocale();
   const { block } = Route.useSearch();
   const [seed, setSeed] = useState(0);
   const { items: questions, built } = useShuffled(
@@ -44,13 +46,13 @@ function PhotoDrill() {
 
   return (
     <QuizRunner
-      title={`Photo ID${blockTitle ? ` · ${blockTitle}` : " · all blocks"}`}
-      subtitle="Identify the equipment from the photograph."
+      title={`${t("drill.photoIdTitle")} · ${blockTitle || t("drill.allBlocks")}`}
+      subtitle={t("drill.photoIdSubtitle")}
       questions={questions}
       mode="photo-id"
       blockSlug={block ?? null}
       onRestart={() => setSeed((value) => value + 1)}
-      backTo={{ to: "/learn", label: "Back to blocks" }}
+      backTo={{ to: "/learn", label: t("quiz.backToBlocks") }}
     />
   );
 }

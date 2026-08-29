@@ -3,8 +3,9 @@ import { useState } from "react";
 
 import { DrillSkeleton, QuizRunner } from "@/components/QuizRunner";
 import { Button } from "@/components/ui/button";
+import { useLocale } from "@/i18n/LocaleProvider";
 import { getBlock } from "@/lib/content";
-import { buildExam } from "@/lib/quiz";
+import { PASS_RATIO, buildExam } from "@/lib/quiz";
 import { useShuffled } from "@/hooks/useShuffled";
 
 export const Route = createFileRoute("/exam/$block")({
@@ -32,7 +33,11 @@ export const Route = createFileRoute("/exam/$block")({
 });
 
 function Exam() {
-  const { blockSlug, title } = Route.useLoaderData();
+  const { blockSlug } = Route.useLoaderData();
+  const { t } = useLocale();
+  // Read the title from the content layer rather than the loader: the loader
+  // runs before the chosen language is applied, so its copy is always English.
+  const title = getBlock(blockSlug)?.title ?? blockSlug;
   const [seed, setSeed] = useState(0);
   const { items: questions, built } = useShuffled(
     () => buildExam(blockSlug, 16),
@@ -47,20 +52,17 @@ function Exam() {
   if (questions.length === 0) {
     return (
       <div className="mx-auto w-full max-w-xl px-4 py-16 text-center">
-        <p className="plate-label">Block exam</p>
-        <h1 className="mt-3 text-2xl">No exam available for {title} yet</h1>
-        <p className="mt-2 text-sm text-muted-foreground">
-          This block does not yet carry enough data to build questions from. Study the cards and
-          drills in the meantime — the exam opens once the block is filled out.
-        </p>
+        <p className="plate-label">{t("block.exam")}</p>
+        <h1 className="mt-3 text-2xl">{t("exam.noneTitle", { block: title })}</h1>
+        <p className="mt-2 text-sm text-muted-foreground">{t("exam.noneBody")}</p>
         <div className="mt-6 flex justify-center gap-2">
           <Button asChild>
             <Link to="/learn/$block" params={{ block: blockSlug }}>
-              Back to the block
+              {t("exam.backToBlock")}
             </Link>
           </Button>
           <Button asChild variant="outline">
-            <Link to="/learn">All blocks</Link>
+            <Link to="/learn">{t("exam.allBlocks")}</Link>
           </Button>
         </div>
       </div>
@@ -69,14 +71,14 @@ function Exam() {
 
   return (
     <QuizRunner
-      title={`Block exam · ${title}`}
-      subtitle="Mixed recognition, armament and placement questions. 80% required to pass."
+      title={t("quiz.examHeading", { block: title })}
+      subtitle={t("quiz.examIntro", { pass: Math.round(PASS_RATIO * 100) })}
       questions={questions}
       mode="exam"
       blockSlug={blockSlug}
       requirePass
       onRestart={() => setSeed((value) => value + 1)}
-      backTo={{ to: "/learn", label: "Back to blocks" }}
+      backTo={{ to: "/learn", label: t("quiz.backToBlocks") }}
     />
   );
 }

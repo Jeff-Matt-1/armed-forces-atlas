@@ -52,6 +52,31 @@ browses fine without a backend.
 | `bun run lint`   | ESLint           |
 | `bun run format` | Prettier         |
 
+## Languages
+
+The app is offered in English and Estonian, switched by the button in the
+header and remembered in `localStorage`. Everything is translated: interface,
+block briefs, doctrinal notes, recognition cues, force-structure placements and
+the exam questions themselves.
+
+- Interface strings live in `src/i18n/strings.ts`. English defines the key set,
+  so a missing Estonian string is a type error rather than a blank label.
+- Content translations live in `src/content/et/`, one file per block, keyed by
+  slug. Every field is optional and falls back to English, which is what let the
+  translation land block by block.
+- `src/lib/content.ts` serves content in the chosen language. Its exports are
+  `let` rather than `const` on purpose: ES module bindings are live, so
+  switching language updates every importer without any of the thirty-odd call
+  sites knowing that translation exists.
+- The server always renders English, because the choice lives in the browser.
+  The stored preference is applied after mount, which costs one frame rather
+  than risking a hydration mismatch.
+
+Military vocabulary follows [Militerm](https://sonaveeb.ee/ds/mil), the Estonian
+Defence Forces terminology base maintained by EKI and the Defence Academy.
+Terms were checked against EKI's dictionary API; equipment designations
+(T-90M, BMP-2, 2S19) are not translated, and category names are.
+
 ## Architecture
 
 - **TanStack Start** with file-based routes in `src/routes/`

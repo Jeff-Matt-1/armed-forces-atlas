@@ -1,6 +1,7 @@
 import { Link, createFileRoute, notFound } from "@tanstack/react-router";
 
 import { getBlock, getItem, imageFitClass, itemsOfBlock } from "@/lib/content";
+import { useLocale } from "@/i18n/LocaleProvider";
 import { absoluteUrl } from "@/lib/site";
 
 export const Route = createFileRoute("/learn/$block/$item")({
@@ -39,6 +40,7 @@ function ItemDetail() {
   const { itemSlug } = Route.useLoaderData();
   const item = getItem(itemSlug)!;
   const block = getBlock(item.blockSlug)!;
+  const { t } = useLocale();
   const siblings = itemsOfBlock(block.slug);
   const index = siblings.findIndex((s) => s.slug === item.slug);
   const previous = index > 0 ? siblings[index - 1] : undefined;
@@ -85,7 +87,7 @@ function ItemDetail() {
       </header>
 
       <div className="mt-8 grid gap-px bg-border lg:grid-cols-2">
-        <Panel title="Recognition cues">
+        <Panel title={t("item.recognitionCues")}>
           <ul className="space-y-2">
             {item.cues.map((cue) => (
               <li key={cue} className="flex gap-3 text-sm">
@@ -96,7 +98,7 @@ function ItemDetail() {
           </ul>
         </Panel>
 
-        <Panel title="Force-structure placement">
+        <Panel title={t("item.forceStructure")}>
           <ul className="space-y-3">
             {item.placements.map((placement) => (
               <li key={placement} className="border-l-2 border-primary pl-3 text-sm">
@@ -107,7 +109,7 @@ function ItemDetail() {
         </Panel>
 
         {(item.armament || item.rangeText) && (
-          <Panel title="Armament and range">
+          <Panel title={t("item.armamentRange")}>
             {item.armament && <p className="text-sm">{item.armament}</p>}
             {item.rangeText && (
               <p className="designation mt-2 text-sm text-primary">{item.rangeText}</p>
@@ -116,23 +118,23 @@ function ItemDetail() {
         )}
 
         {item.doctrineNote && (
-          <Panel title="Employment">
+          <Panel title={t("item.employment")}>
             <p className="text-sm text-muted-foreground">{item.doctrineNote}</p>
           </Panel>
         )}
 
         {(item.crew || item.service) && (
-          <Panel title="Data">
+          <Panel title={t("item.data")}>
             <dl className="grid grid-cols-2 gap-4 text-sm">
               {item.crew && (
                 <div>
-                  <dt className="plate-label">Crew</dt>
+                  <dt className="plate-label">{t("item.crew")}</dt>
                   <dd className="designation mt-1">{item.crew}</dd>
                 </div>
               )}
               {item.service && (
                 <div>
-                  <dt className="plate-label">Status</dt>
+                  <dt className="plate-label">{t("item.status")}</dt>
                   <dd className="mt-1">{item.service}</dd>
                 </div>
               )}

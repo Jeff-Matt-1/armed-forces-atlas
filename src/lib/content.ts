@@ -1,11 +1,46 @@
 import { blocks as rawBlocks, items as rawItems, type Block, type Item } from "@/content/russia";
+// Registers the Estonian tables for their side effect; see src/content/et/index.ts.
+import "@/content/et";
+import { localiseBlock, localiseItem } from "@/content/translations";
+import { DEFAULT_LOCALE, type Locale } from "@/i18n/locales";
 
 export type { Block, Item };
 
-export const allBlocks: Block[] = [...rawBlocks].sort((a, b) => a.ordinal - b.ordinal);
-export const allItems: Item[] = rawItems;
+const sortedBlocks: Block[] = [...rawBlocks].sort((a, b) => a.ordinal - b.ordinal);
 
-export const readyBlocks = allBlocks.filter((b) => b.status === "ready");
+/**
+ * Content in the language currently being displayed.
+ *
+ * These are `let` rather than `const` deliberately. ES module bindings are
+ * live, so reassigning them here updates every importer without a single call
+ * site needing to know that translation exists — and there are more than thirty
+ * of them, in routes, drills and the quiz builders alike.
+ */
+export let allBlocks: Block[] = sortedBlocks;
+export let allItems: Item[] = rawItems;
+export let readyBlocks: Block[] = sortedBlocks.filter((b) => b.status === "ready");
+
+let currentLocale: Locale = DEFAULT_LOCALE;
+
+/**
+ * Switch the language the content layer serves.
+ *
+ * Called by LocaleProvider during render, so children read translated content
+ * on the same render rather than a frame later. The server never calls it: the
+ * chosen language lives in the browser, so a server render is always English
+ * and this module's state cannot leak between requests.
+ */
+export function setContentLocale(locale: Locale): void {
+  if (locale === currentLocale) return;
+  currentLocale = locale;
+  allBlocks = sortedBlocks.map((b) => localiseBlock(b, locale));
+  allItems = rawItems.map((i) => localiseItem(i, locale));
+  readyBlocks = allBlocks.filter((b) => b.status === "ready");
+}
+
+export function contentLocale(): Locale {
+  return currentLocale;
+}
 
 export function getBlock(slug: string): Block | undefined {
   return allBlocks.find((b) => b.slug === slug);

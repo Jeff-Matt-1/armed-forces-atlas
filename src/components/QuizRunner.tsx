@@ -11,6 +11,7 @@ import {
 } from "@/components/ui/dialog";
 import { MasteryRing } from "@/components/MasteryRing";
 import { getItem, imageFitClass } from "@/lib/content";
+import { useLocale } from "@/i18n/LocaleProvider";
 import type { CorrectAnswer } from "@/lib/progress-types";
 import { useRecordAttempt } from "@/lib/progress";
 import { PASS_RATIO, type Question } from "@/lib/quiz";
@@ -37,6 +38,7 @@ export function QuizRunner({
   onRestart,
   backTo,
 }: Props) {
+  const { t } = useLocale();
   const [index, setIndex] = useState(0);
   const [picked, setPicked] = useState<string | null>(null);
   const [missed, setMissed] = useState<string[]>([]);
@@ -59,12 +61,7 @@ export function QuizRunner({
   );
 
   if (total === 0) {
-    return (
-      <EmptyState
-        title="Not enough content yet"
-        body="This drill needs at least four comparable entries. Pick another block."
-      />
-    );
+    return <EmptyState title={t("quiz.notEnough")} body={t("quiz.notEnoughBody")} />;
   }
 
   function choose(option: string) {
@@ -105,7 +102,7 @@ export function QuizRunner({
         });
         setFinished(true);
       } catch {
-        setSaveError("Your result could not be saved. Check your connection and try again.");
+        setSaveError(t("quiz.saveFailed"));
       }
       return;
     }
@@ -120,9 +117,7 @@ export function QuizRunner({
         <div className="mt-4 flex items-center gap-5 border border-border bg-card p-6">
           <MasteryRing value={percent} size={76} label={`${percent}%`} />
           <div>
-            <h1 className="text-2xl">
-              {score} / {total} correct
-            </h1>
+            <h1 className="text-2xl">{t("quiz.scoreLine", { score, total })}</h1>
             <p
               className={cn(
                 "designation mt-1 text-sm",
@@ -131,18 +126,18 @@ export function QuizRunner({
             >
               {requirePass
                 ? passed
-                  ? "PASS — block complete"
-                  : `FAIL — ${Math.ceil(PASS_RATIO * total)} correct required`
+                  ? t("quiz.passed")
+                  : t("quiz.failLine", { needed: Math.ceil(PASS_RATIO * total) })
                 : passed
-                  ? "Strong recognition"
-                  : "Needs more repetition"}
+                  ? t("quiz.strong")
+                  : t("quiz.needsWork")}
             </p>
           </div>
         </div>
 
         {missedItems.length > 0 && (
           <div className="mt-6 border border-border">
-            <p className="plate-label border-b border-border px-4 py-2">Missed items</p>
+            <p className="plate-label border-b border-border px-4 py-2">{t("quiz.missed")}</p>
             <ul className="divide-y divide-border">
               {missedItems.map((item) => (
                 <li key={item.slug}>
@@ -160,7 +155,9 @@ export function QuizRunner({
                       />
                     )}
                     <span className="designation text-sm">{item.name}</span>
-                    <span className="ml-auto text-xs text-muted-foreground">Review card</span>
+                    <span className="ml-auto text-xs text-muted-foreground">
+                      {t("quiz.reviewCard")}
+                    </span>
                   </Link>
                 </li>
               ))}
@@ -218,7 +215,7 @@ export function QuizRunner({
         <div className="mt-6 border border-border bg-card">
           <img
             src={question.imageUrl}
-            alt="Identify this equipment"
+            alt={t("quiz.identify")}
             className={`aspect-[16/9] w-full bg-secondary ${imageFitClass(question.itemSlug)}`}
           />
         </div>
@@ -257,12 +254,12 @@ export function QuizRunner({
           <div className="flex items-center gap-3">
             <Button onClick={() => void advance()} disabled={recordAttempt.isPending}>
               {recordAttempt.isPending
-                ? "Saving…"
+                ? t("quiz.saving")
                 : index + 1 >= total
                   ? saveError
-                    ? "Try saving again"
-                    : "Finish"
-                  : "Next"}
+                    ? t("quiz.saveRetry")
+                    : t("quiz.finish")
+                  : t("quiz.next")}
             </Button>
             <Button
               type="button"
@@ -298,11 +295,13 @@ export function QuizRunner({
                   <DialogTitle className="designation pr-8 text-2xl">
                     {questionItem.name}
                   </DialogTitle>
-                  <DialogDescription>{questionItem.aka ?? "Recognition card"}</DialogDescription>
+                  <DialogDescription>
+                    {questionItem.aka ?? t("quiz.recognitionCard")}
+                  </DialogDescription>
                 </DialogHeader>
 
                 <div className="mt-5 grid gap-px bg-border sm:grid-cols-2">
-                  <CardPanel title="Recognition cues">
+                  <CardPanel title={t("item.recognitionCues")}>
                     <ul className="space-y-2">
                       {questionItem.cues.map((cue) => (
                         <li key={cue} className="flex gap-2 text-sm">
@@ -312,7 +311,7 @@ export function QuizRunner({
                       ))}
                     </ul>
                   </CardPanel>
-                  <CardPanel title="Force-structure placement">
+                  <CardPanel title={t("item.forceStructure")}>
                     <ul className="space-y-2">
                       {questionItem.placements.map((placement) => (
                         <li key={placement} className="border-l-2 border-primary pl-3 text-sm">
@@ -322,7 +321,7 @@ export function QuizRunner({
                     </ul>
                   </CardPanel>
                   {(questionItem.armament || questionItem.rangeText) && (
-                    <CardPanel title="Armament and range">
+                    <CardPanel title={t("item.armamentRange")}>
                       {questionItem.armament && <p className="text-sm">{questionItem.armament}</p>}
                       {questionItem.rangeText && (
                         <p className="designation mt-2 text-sm text-primary">
@@ -332,7 +331,7 @@ export function QuizRunner({
                     </CardPanel>
                   )}
                   {questionItem.doctrineNote && (
-                    <CardPanel title="Employment">
+                    <CardPanel title={t("item.employment")}>
                       <p className="text-sm text-muted-foreground">{questionItem.doctrineNote}</p>
                     </CardPanel>
                   )}
@@ -356,12 +355,13 @@ function CardPanel({ title, children }: { title: string; children: React.ReactNo
 }
 
 export function EmptyState({ title, body }: { title: string; body: string }) {
+  const { t } = useLocale();
   return (
     <div className="mx-auto w-full max-w-xl px-4 py-16 text-center">
       <h1 className="text-xl">{title}</h1>
       <p className="mt-2 text-sm text-muted-foreground">{body}</p>
       <Button asChild className="mt-6" variant="outline">
-        <Link to="/learn">Back to blocks</Link>
+        <Link to="/learn">{t("quiz.backToBlocks")}</Link>
       </Button>
     </div>
   );

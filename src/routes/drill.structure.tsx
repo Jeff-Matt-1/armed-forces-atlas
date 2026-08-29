@@ -5,6 +5,7 @@ import { DrillSkeleton, QuizRunner } from "@/components/QuizRunner";
 import { getBlock } from "@/lib/content";
 import { buildPlacementQuiz } from "@/lib/quiz";
 import { useShuffled } from "@/hooks/useShuffled";
+import { useLocale } from "@/i18n/LocaleProvider";
 
 type Search = { block?: string | undefined };
 
@@ -31,6 +32,7 @@ export const Route = createFileRoute("/drill/structure")({
 });
 
 function StructureDrill() {
+  const { t } = useLocale();
   const { block } = Route.useSearch();
   const [seed, setSeed] = useState(0);
   const { items: questions, built } = useShuffled(
@@ -43,13 +45,13 @@ function StructureDrill() {
 
   return (
     <QuizRunner
-      title={`Structure placement${blockTitle ? ` · ${blockTitle}` : " · all blocks"}`}
-      subtitle="Name the unit that normally fields this equipment."
+      title={`${t("drill.structureTitle")} · ${blockTitle || t("drill.allBlocks")}`}
+      subtitle={t("drill.structureSubtitle")}
       questions={questions}
       mode="structure"
       blockSlug={block ?? null}
       onRestart={() => setSeed((value) => value + 1)}
-      backTo={{ to: "/learn", label: "Back to blocks" }}
+      backTo={{ to: "/learn", label: t("quiz.backToBlocks") }}
     />
   );
 }

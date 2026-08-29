@@ -2,18 +2,22 @@ import { Link } from "@tanstack/react-router";
 import type { ReactNode } from "react";
 
 import { useAuth } from "@/hooks/useAuth";
+import { LanguageToggle } from "@/components/LanguageToggle";
+import { useLocale } from "@/i18n/LocaleProvider";
+import type { StringKey } from "@/i18n/strings";
 import { useMergeLocalProgress } from "@/lib/progress";
 import { Button } from "@/components/ui/button";
 
 const NAV = [
-  { to: "/learn", label: "Blocks" },
-  { to: "/review", label: "Review" },
-  { to: "/progress", label: "Progress" },
-  { to: "/about", label: "Sources" },
-] as const;
+  { to: "/learn", label: "nav.blocks" },
+  { to: "/review", label: "nav.review" },
+  { to: "/progress", label: "nav.progress" },
+  { to: "/about", label: "nav.sources" },
+] as const satisfies ReadonlyArray<{ to: string; label: StringKey }>;
 
 export function AppShell({ children }: { children: ReactNode }) {
   const { user, signOut } = useAuth();
+  const { t } = useLocale();
   // Mounted inside AuthProvider, so this is the one place guaranteed to see
   // every sign-in and fold anonymous study into the account exactly once.
   useMergeLocalProgress();
@@ -26,7 +30,7 @@ export function AppShell({ children }: { children: ReactNode }) {
             <span className="designation text-sm font-bold tracking-tight text-primary">
               RECOG/RU
             </span>
-            <span className="plate-label hidden sm:inline">Recognition Trainer</span>
+            <span className="plate-label hidden sm:inline">{t("shell.tagline")}</span>
           </Link>
 
           <nav className="ml-auto flex items-center gap-1">
@@ -37,18 +41,20 @@ export function AppShell({ children }: { children: ReactNode }) {
                 className="rounded-sm px-2.5 py-1.5 text-sm text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
                 activeProps={{ className: "bg-secondary text-foreground" }}
               >
-                {entry.label}
+                {t(entry.label)}
               </Link>
             ))}
           </nav>
 
+          <LanguageToggle />
+
           {user ? (
             <Button variant="ghost" size="sm" onClick={() => void signOut()}>
-              Sign out
+              {t("nav.signOut")}
             </Button>
           ) : (
             <Button asChild size="sm">
-              <Link to="/auth">Sign in</Link>
+              <Link to="/auth">{t("nav.signIn")}</Link>
             </Button>
           )}
         </div>
@@ -58,12 +64,9 @@ export function AppShell({ children }: { children: ReactNode }) {
 
       <footer className="border-t border-border">
         <div className="mx-auto flex w-full max-w-6xl flex-col gap-1 px-4 py-6 text-xs text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
-          <p>
-            Open-source study material from public sources only. No restricted or classified
-            content.
-          </p>
+          <p>{t("shell.footerSources")}</p>
           <p className="designation">
-            Doctrinal framing: Grau &amp; Bartles, <em>The Russian Way of War</em>
+            {t("shell.footerDoctrine")} <em>The Russian Way of War</em>
           </p>
         </div>
       </footer>

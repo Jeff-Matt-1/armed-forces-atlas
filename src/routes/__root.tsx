@@ -11,23 +11,23 @@ import { type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { AuthProvider } from "@/hooks/useAuth";
+import { LocaleProvider, useLocale } from "@/i18n/LocaleProvider";
 import { AppShell } from "@/components/AppShell";
 import { Toaster } from "@/components/ui/sonner";
 
 function NotFoundComponent() {
+  const { t } = useLocale();
   return (
     <div className="flex min-h-[60vh] items-center justify-center px-4">
       <div className="max-w-md text-center">
-        <p className="plate-label">Not found</p>
-        <h1 className="mt-3 text-3xl">No such page</h1>
-        <p className="mt-2 text-sm text-muted-foreground">
-          The route you requested does not exist in this trainer.
-        </p>
+        <p className="plate-label">{t("common.notFound")}</p>
+        <h1 className="mt-3 text-3xl">{t("common.noSuchPage")}</h1>
+        <p className="mt-2 text-sm text-muted-foreground">{t("notFound.body")}</p>
         <Link
           to="/learn"
           className="mt-6 inline-flex items-center justify-center rounded-sm bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
         >
-          Go to blocks
+          {t("notFound.goToBlocks")}
         </Link>
       </div>
     </div>
@@ -112,13 +112,17 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <AuthProvider>
-        <AppShell>
-          {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
-          <Outlet />
-        </AppShell>
-        <Toaster />
-      </AuthProvider>
+      {/* Outermost of the app providers: AppShell and every route read the
+          chosen language, and the content layer is switched during its render. */}
+      <LocaleProvider>
+        <AuthProvider>
+          <AppShell>
+            {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
+            <Outlet />
+          </AppShell>
+          <Toaster />
+        </AuthProvider>
+      </LocaleProvider>
     </QueryClientProvider>
   );
 }

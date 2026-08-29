@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 
 import { allItems } from "@/lib/content";
+import { useLocale } from "@/i18n/LocaleProvider";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -22,45 +23,29 @@ export const Route = createFileRoute("/about")({
 });
 
 function About() {
+  const { t } = useLocale();
   const credited = allItems.filter((item) => item.imageUrl);
 
   return (
     <div className="mx-auto w-full max-w-3xl px-4 py-10">
-      <p className="plate-label">Transparency</p>
-      <h1 className="mt-3 text-3xl">Sources and licensing</h1>
+      <p className="plate-label">{t("about.transparency")}</p>
+      <h1 className="mt-3 text-3xl">{t("about.title")}</h1>
 
       <div className="mt-6 space-y-4 text-sm leading-relaxed text-foreground/90">
+        <p>{t("about.publicSources")}</p>
         <p>
-          This trainer is built for enthusiasts and military personnel as basic-training material.
-          It uses <strong>public sources only</strong>. Nothing here is restricted, classified or
-          derived from non-public documents, and it never will be.
-        </p>
-        <p>
-          Doctrinal framing follows Lester W. Grau and Charles K. Bartles,{" "}
+          {t("about.doctrineIntro")}{" "}
           <em>
             The Russian Way of War: Force Structure, Tactics, and Modernization of the Russian
             Ground Forces
           </em>{" "}
-          (Foreign Military Studies Office), a publicly released study. Where an entry carries an
-          employment note, that note reflects the framing in that work: the Russian force is
-          fires-centric, and equipment is best understood by the role it plays inside an
-          artillery-led battle.
+          {t("about.doctrineRest")}
         </p>
-        <p>
-          Photographs come from Wikimedia Commons and are reproduced here under their original
-          licences, with the author and licence shown on each card and linked back to the Commons
-          file page. Copies are served from this site rather than hotlinked, and are resized for web
-          delivery; no other alteration is made. Where an item is recognised primarily at long range
-          — aircraft, vessels and drones — the corresponding blocks will pair photographs with
-          recognition silhouettes.
-        </p>
-        <p>
-          Force-structure placements describe common, openly reported practice. Organisations
-          change; treat placements as typical rather than absolute.
-        </p>
+        <p>{t("about.photographs")}</p>
+        <p>{t("about.placements")}</p>
       </div>
 
-      <h2 className="mt-10 text-xl">Image credits</h2>
+      <h2 className="mt-10 text-xl">{t("about.imageCredits")}</h2>
       <ul className="mt-4 divide-y divide-border border border-border text-xs">
         {credited.map((item) => (
           <li key={item.slug} className="flex flex-wrap items-baseline gap-x-3 gap-y-1 p-3">
@@ -73,7 +58,7 @@ function About() {
                 rel="noreferrer noopener"
                 className="ml-auto text-muted-foreground underline-offset-4 hover:underline"
               >
-                Commons
+                {t("about.commons")}
               </a>
             )}
           </li>

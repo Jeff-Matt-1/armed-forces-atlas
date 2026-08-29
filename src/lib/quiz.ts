@@ -1,4 +1,22 @@
-import { allPlacements, getBlock, photoItems, studyableItems, type Item } from "@/lib/content";
+import {
+  allPlacements,
+  contentLocale,
+  getBlock,
+  photoItems,
+  studyableItems,
+  type Item,
+} from "@/lib/content";
+import { translate, type StringKey } from "@/i18n/strings";
+
+/**
+ * Question prompts follow the language the content layer is serving, so a
+ * translated exam does not ask its questions in English. The locale is read
+ * rather than passed because every caller already relies on the content layer
+ * carrying it.
+ */
+function prompt(key: StringKey, values?: Record<string, string | number>): string {
+  return translate(contentLocale(), key, values);
+}
 
 export type Question =
   | {
@@ -71,7 +89,7 @@ export function photoQuestion(item: Item, blockPool: Item[]): Question | null {
     id: `photo:${item.slug}`,
     itemSlug: item.slug,
     imageUrl: item.imageUrl,
-    prompt: "Identify this equipment.",
+    prompt: prompt("prompt.photo"),
     options: pickDistractors([...names, item.name], item.name, 3),
     answer: item.name,
   };
@@ -95,7 +113,7 @@ export function placementQuestion(item: Item, placementPool: string[]): Question
     kind: "placement",
     id: `place:${item.slug}`,
     itemSlug: item.slug,
-    prompt: `Where is the ${item.name} normally found?`,
+    prompt: prompt("prompt.placement", { name: item.name }),
     options,
     answer,
   };
@@ -124,7 +142,7 @@ export function armamentQuestion(item: Item, pool: Item[]): Question | null {
     kind: "armament",
     id: `arm:${item.slug}`,
     itemSlug: item.slug,
-    prompt: `What is the main armament of the ${item.name}?`,
+    prompt: prompt("prompt.armament", { name: item.name }),
     options,
     answer: item.armament,
   };
@@ -245,7 +263,7 @@ export function designationQuestion(item: Item, pool: Item[]): Question | null {
     kind: "designation",
     id: `desig:${item.slug}`,
     itemSlug: item.slug,
-    prompt: `Which designation is also known as "${item.aka}"?`,
+    prompt: prompt("prompt.designation", { aka: item.aka }),
     options: shuffle([item.name, ...chosen]),
     answer: item.name,
   };
@@ -266,7 +284,7 @@ export function seniorityQuestion(item: Item, pool: Item[]): Question | null {
     kind: "seniority",
     id: `senior:${item.slug}`,
     itemSlug: item.slug,
-    prompt: `Which of these is the most senior rank?`,
+    prompt: prompt("prompt.seniority"),
     options: pickDistractors(
       [
         ...shuffle(juniors)

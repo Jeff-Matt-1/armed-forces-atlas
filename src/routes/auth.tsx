@@ -7,6 +7,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { supabase } from "@/integrations/supabase/client";
 import { authRedirectTo } from "@/lib/site";
+import { useLocale } from "@/i18n/LocaleProvider";
 
 export const Route = createFileRoute("/auth")({
   head: () => ({
@@ -43,6 +44,7 @@ const SUBMIT_LABEL: Record<Mode, string> = {
 
 function AuthPage() {
   const navigate = useNavigate();
+  const { t } = useLocale();
   const [mode, setMode] = useState<Mode>("signin");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -109,18 +111,16 @@ function AuthPage() {
   if (sentTo) {
     return (
       <div className="mx-auto w-full max-w-md px-4 py-14">
-        <p className="plate-label">Account</p>
-        <h1 className="mt-3 text-3xl">Check your email</h1>
+        <p className="plate-label">{t("auth.account")}</p>
+        <h1 className="mt-3 text-3xl">{t("auth.checkEmail")}</h1>
         <p className="mt-3 text-sm text-muted-foreground">
           {mode === "forgot"
-            ? `If an account exists for ${sentTo}, a password reset link is on its way. The link expires in one hour.`
-            : `A confirmation link has been sent to ${sentTo}. Open it to finish creating your account.`}
+            ? t("auth.resetSent", { email: sentTo })
+            : t("auth.confirmSent", { email: sentTo })}
         </p>
-        <p className="mt-3 text-sm text-muted-foreground">
-          Nothing in your inbox after a few minutes? Check the spam folder, then try again.
-        </p>
+        <p className="mt-3 text-sm text-muted-foreground">{t("auth.checkSpam")}</p>
         <Button variant="outline" className="mt-8 w-full" onClick={() => switchTo("signin")}>
-          Back to sign in
+          {t("auth.backToSignIn")}
         </Button>
       </div>
     );
@@ -128,7 +128,7 @@ function AuthPage() {
 
   return (
     <div className="mx-auto w-full max-w-md px-4 py-14">
-      <p className="plate-label">Account</p>
+      <p className="plate-label">{t("auth.account")}</p>
       <h1 className="mt-3 text-3xl">{HEADING[mode]}</h1>
       <p className="mt-2 text-sm text-muted-foreground">
         {mode === "forgot"
@@ -138,7 +138,7 @@ function AuthPage() {
 
       <form onSubmit={submit} className="mt-8 space-y-4">
         <div className="space-y-1.5">
-          <Label htmlFor="email">Email</Label>
+          <Label htmlFor="email">{t("auth.email")}</Label>
           <Input
             id="email"
             type="email"
@@ -150,7 +150,7 @@ function AuthPage() {
         </div>
         {mode !== "forgot" && (
           <div className="space-y-1.5">
-            <Label htmlFor="password">Password</Label>
+            <Label htmlFor="password">{t("auth.password")}</Label>
             <Input
               id="password"
               type="password"
@@ -175,14 +175,14 @@ function AuthPage() {
               onClick={() => switchTo("signup")}
               className="block w-full underline-offset-4 hover:underline"
             >
-              No account yet? Create one
+              {t("auth.noAccount")}
             </button>
             <button
               type="button"
               onClick={() => switchTo("forgot")}
               className="block w-full underline-offset-4 hover:underline"
             >
-              Forgotten your password?
+              {t("auth.forgot")}
             </button>
           </>
         )}
@@ -192,7 +192,7 @@ function AuthPage() {
             onClick={() => switchTo("signin")}
             className="block w-full underline-offset-4 hover:underline"
           >
-            Already registered? Sign in instead
+            {t("auth.haveAccount")}
           </button>
         )}
         {mode === "forgot" && (
@@ -207,7 +207,7 @@ function AuthPage() {
         <p>
           You can also{" "}
           <Link to="/learn" className="underline underline-offset-4">
-            keep studying without an account
+            {t("auth.studyWithout")}
           </Link>
           .
         </p>

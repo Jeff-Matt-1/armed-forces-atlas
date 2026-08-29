@@ -1,6 +1,7 @@
 import { Link, createFileRoute } from "@tanstack/react-router";
 
 import { Button } from "@/components/ui/button";
+import { useLocale } from "@/i18n/LocaleProvider";
 import { LocalOnlyNotice } from "@/components/LocalOnlyNotice";
 import { getItem, imageFitClass } from "@/lib/content";
 import { useProgress } from "@/lib/progress";
@@ -27,28 +28,29 @@ export const Route = createFileRoute("/review")({
 
 function Review() {
   const { user } = useAuth();
+  const { t } = useLocale();
   const progress = useProgress();
 
   const dueItems = progress.dueSlugs.map((slug) => getItem(slug)).filter((i) => i !== undefined);
 
   return (
     <div className="mx-auto w-full max-w-3xl px-4 py-10">
-      <p className="plate-label">Retention</p>
-      <h1 className="mt-3 text-3xl">Due today</h1>
+      <p className="plate-label">{t("review.retention")}</p>
+      <h1 className="mt-3 text-3xl">{t("review.dueToday")}</h1>
       <p className="mt-2 text-sm text-muted-foreground">
         {dueItems.length === 0
-          ? "Nothing is due right now. Grade some new cards to build the queue."
-          : `${dueItems.length} card${dueItems.length === 1 ? "" : "s"} scheduled for review.`}
+          ? t("review.nothingDue")
+          : t("review.scheduled", { count: dueItems.length })}
       </p>
 
       {!user && <LocalOnlyNotice />}
 
       <div className="mt-6 flex gap-2">
         <Button asChild>
-          <Link to="/drill/flashcards">Start review run</Link>
+          <Link to="/drill/flashcards">{t("review.startRun")}</Link>
         </Button>
         <Button asChild variant="outline">
-          <Link to="/drill/photo-id">Photo ID instead</Link>
+          <Link to="/drill/photo-id">{t("review.photoInstead")}</Link>
         </Button>
       </div>
 

@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 
 import { Button } from "@/components/ui/button";
+import { useLocale } from "@/i18n/LocaleProvider";
 
 /**
  * Shown to signed-out users on pages that display saved progress.
@@ -10,15 +11,13 @@ import { Button } from "@/components/ui/button";
  * studied before signing in is folded into the account at sign-in.
  */
 export function LocalOnlyNotice() {
+  const { t } = useLocale();
   return (
     <div className="mt-6 flex flex-wrap items-center gap-x-4 gap-y-2 border border-border bg-secondary/40 p-3 text-xs">
-      <span className="plate-label">On this device</span>
-      <span className="text-muted-foreground">
-        Progress is saved in this browser. Sign in to sync it across devices — anything you have
-        already studied comes with you.
-      </span>
+      <span className="plate-label">{t("local.onThisDevice")}</span>
+      <span className="text-muted-foreground">{t("local.body")}</span>
       <Button asChild size="sm" variant="outline" className="ml-auto">
-        <Link to="/auth">Sign in</Link>
+        <Link to="/auth">{t("nav.signIn")}</Link>
       </Button>
     </div>
   );

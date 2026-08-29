@@ -3,6 +3,7 @@ import { Lock } from "lucide-react";
 
 import { MasteryRing } from "@/components/MasteryRing";
 import { allBlocks, blockItemCount, isBlockUnlocked, plateNumber } from "@/lib/content";
+import { useLocale } from "@/i18n/LocaleProvider";
 import { readGatePreference, useProgress } from "@/lib/progress";
 import { cn } from "@/lib/utils";
 import { useEffect, useState } from "react";
@@ -28,18 +29,16 @@ export const Route = createFileRoute("/learn/")({
 
 function BlockIndex() {
   const progress = useProgress();
+  const { t } = useLocale();
   const [gate, setGate] = useState(true);
 
   useEffect(() => setGate(readGatePreference()), []);
 
   return (
     <div className="mx-auto w-full max-w-6xl px-4 py-10">
-      <p className="plate-label">Curriculum</p>
-      <h1 className="mt-3 text-3xl">Study blocks</h1>
-      <p className="mt-3 max-w-2xl text-sm text-muted-foreground">
-        Work one subject at a time. Each block opens with a brief, then recognition cards, then
-        drills, and closes with a mixed exam. Pass the exam at 80% to unlock the next block.
-      </p>
+      <p className="plate-label">{t("curriculum.eyebrow")}</p>
+      <h1 className="mt-3 text-3xl">{t("curriculum.title")}</h1>
+      <p className="mt-3 max-w-2xl text-sm text-muted-foreground">{t("curriculum.intro")}</p>
 
       <ol className="mt-8 grid gap-px bg-border sm:grid-cols-2 lg:grid-cols-3">
         {allBlocks.map((block) => {
@@ -66,7 +65,7 @@ function BlockIndex() {
                     <Lock className="size-4 text-muted-foreground" aria-hidden />
                   )
                 ) : (
-                  <span className="plate-label">In progress</span>
+                  <span className="plate-label">{t("curriculum.inProgress")}</span>
                 )}
               </div>
               <h2 className="mt-4 text-lg leading-tight">{block.title}</h2>
@@ -74,8 +73,8 @@ function BlockIndex() {
               <p className="designation mt-4 text-[11px] text-muted-foreground">
                 {ready
                   ? unlocked
-                    ? `${count} entries`
-                    : "Pass the previous block to unlock"
+                    ? t("block.entries", { count })
+                    : t("curriculum.lockedHint")
                   : "Content in progress"}
               </p>
             </>

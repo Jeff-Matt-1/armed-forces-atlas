@@ -3,6 +3,7 @@ import { Link, createFileRoute } from "@tanstack/react-router";
 import { Button } from "@/components/ui/button";
 import { MasteryRing } from "@/components/MasteryRing";
 import { allBlocks, plateNumber, readyBlocks, studyableItems } from "@/lib/content";
+import { useLocale } from "@/i18n/LocaleProvider";
 import { useProgress } from "@/lib/progress";
 
 export const Route = createFileRoute("/")({
@@ -28,36 +29,38 @@ export const Route = createFileRoute("/")({
 function Home() {
   const progress = useProgress();
   const totalItems = studyableItems().length;
+  const { t } = useLocale();
 
   return (
     <div>
       <section className="grid-backdrop border-b border-border">
         <div className="mx-auto w-full max-w-6xl px-4 py-16">
-          <p className="plate-label">Visual recognition · basic training</p>
-          <h1 className="mt-4 max-w-3xl text-4xl leading-[1.05] sm:text-5xl">
-            Identify the equipment of the Russian Armed Forces.
-          </h1>
+          <p className="plate-label">{t("home.eyebrow")}</p>
+          <h1 className="mt-4 max-w-3xl text-4xl leading-[1.05] sm:text-5xl">{t("home.title")}</h1>
           <p className="mt-5 max-w-2xl text-base text-muted-foreground">
-            A foundations primer plus nineteen subject blocks, one subject at a time. Every entry
-            gives you the recognition cues, the main armament and range, and where the machine
-            actually sits in the force structure. Doctrinal framing follows Grau &amp; Bartles,{" "}
-            <em>The Russian Way of War</em>.
+            {t("home.intro")} <em>The Russian Way of War</em>.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-2">
             <Button asChild size="lg">
-              <Link to="/learn">Start with Foundations</Link>
+              <Link to="/learn">{t("home.startFoundations")}</Link>
             </Button>
             <Button asChild size="lg" variant="outline">
-              <Link to="/drill/photo-id">Photo ID drill</Link>
+              <Link to="/drill/photo-id">{t("home.photoDrill")}</Link>
             </Button>
           </div>
 
           <dl className="mt-12 grid max-w-3xl grid-cols-2 gap-px border border-border bg-border sm:grid-cols-4">
-            <Stat label="Blocks" value={`${readyBlocks.length} / ${allBlocks.length}`} />
-            <Stat label="Entries" value={String(totalItems)} />
-            <Stat label="Due today" value={String(progress.dueSlugs.length)} />
-            <Stat label="Streak" value={String(progress.streak?.current_streak ?? 0)} />
+            <Stat
+              label={t("home.statBlocks")}
+              value={`${readyBlocks.length} / ${allBlocks.length}`}
+            />
+            <Stat label={t("home.statEntries")} value={String(totalItems)} />
+            <Stat label={t("home.statDue")} value={String(progress.dueSlugs.length)} />
+            <Stat
+              label={t("home.statStreak")}
+              value={String(progress.streak?.current_streak ?? 0)}
+            />
           </dl>
         </div>
       </section>
@@ -65,14 +68,14 @@ function Home() {
       <section className="mx-auto w-full max-w-6xl px-4 py-12">
         <div className="flex items-end justify-between">
           <div>
-            <p className="plate-label">Continue</p>
-            <h2 className="mt-2 text-2xl">Ready blocks</h2>
+            <p className="plate-label">{t("home.continue")}</p>
+            <h2 className="mt-2 text-2xl">{t("home.readyBlocks")}</h2>
           </div>
           <Link
             to="/learn"
             className="text-sm text-muted-foreground underline-offset-4 hover:underline"
           >
-            All 19 blocks
+            {t("home.allBlocks", { count: allBlocks.length })}
           </Link>
         </div>
 
@@ -99,18 +102,21 @@ function Home() {
         <div className="mt-10 grid gap-px bg-border md:grid-cols-3">
           <Mode
             to="/drill/flashcards"
-            title="Flashcards"
-            body="Spaced repetition on photos and designations. Cards resurface exactly when you are about to forget them."
+            title={t("home.modeFlashcards")}
+            body={t("home.modeFlashcardsBody")}
+            cta={t("home.openDrill")}
           />
           <Mode
             to="/drill/photo-id"
-            title="Photo ID"
-            body="One photograph, four designations. Distractors are pulled from visually similar equipment in the same block."
+            title={t("home.modePhotoId")}
+            body={t("home.modePhotoIdBody")}
+            cta={t("home.openDrill")}
           />
           <Mode
             to="/drill/structure"
-            title="Structure placement"
-            body="Given the machine, name the unit that fields it. Recognition without context is trivia."
+            title={t("home.modeStructure")}
+            body={t("home.modeStructureBody")}
+            cta={t("home.openDrill")}
           />
         </div>
       </section>
@@ -127,12 +133,12 @@ function Stat({ label, value }: { label: string; value: string }) {
   );
 }
 
-function Mode({ to, title, body }: { to: string; title: string; body: string }) {
+function Mode({ to, title, body, cta }: { to: string; title: string; body: string; cta: string }) {
   return (
     <Link to={to} className="bg-card p-6 transition-colors hover:bg-secondary">
       <h3 className="text-lg">{title}</h3>
       <p className="mt-2 text-sm text-muted-foreground">{body}</p>
-      <span className="designation mt-4 inline-block text-xs text-primary">Open drill →</span>
+      <span className="designation mt-4 inline-block text-xs text-primary">{cta}</span>
     </Link>
   );
 }

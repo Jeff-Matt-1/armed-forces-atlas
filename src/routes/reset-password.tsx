@@ -7,6 +7,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { useAuth } from "@/hooks/useAuth";
 import { supabase } from "@/integrations/supabase/client";
+import { useLocale } from "@/i18n/LocaleProvider";
 
 export const Route = createFileRoute("/reset-password")({
   head: () => ({
@@ -30,6 +31,7 @@ export const Route = createFileRoute("/reset-password")({
 function ResetPasswordPage() {
   const navigate = useNavigate();
   const { session, loading } = useAuth();
+  const { t } = useLocale();
   const [password, setPassword] = useState("");
   const [confirmation, setConfirmation] = useState("");
   const [busy, setBusy] = useState(false);
@@ -64,7 +66,7 @@ function ResetPasswordPage() {
   if (loading) {
     return (
       <div className="mx-auto w-full max-w-md px-4 py-14">
-        <p className="text-sm text-muted-foreground">Checking your link…</p>
+        <p className="text-sm text-muted-foreground">{t("auth.checkingLink")}</p>
       </div>
     );
   }
@@ -72,14 +74,13 @@ function ResetPasswordPage() {
   if (linkError || !session) {
     return (
       <div className="mx-auto w-full max-w-md px-4 py-14">
-        <p className="plate-label">Account</p>
-        <h1 className="mt-3 text-3xl">This link is no longer valid</h1>
+        <p className="plate-label">{t("auth.account")}</p>
+        <h1 className="mt-3 text-3xl">{t("auth.linkInvalid")}</h1>
         <p className="mt-3 text-sm text-muted-foreground">
-          {linkError ??
-            "Reset links expire after an hour and can only be used once. Request a fresh one and open it from the same browser."}
+          {linkError ?? t("auth.linkInvalidBody")}
         </p>
         <Button asChild variant="outline" className="mt-8 w-full">
-          <Link to="/auth">Request a new link</Link>
+          <Link to="/auth">{t("auth.requestNewLink")}</Link>
         </Button>
       </div>
     );
@@ -88,14 +89,14 @@ function ResetPasswordPage() {
   return (
     <div className="mx-auto w-full max-w-md px-4 py-14">
       <p className="plate-label">Account</p>
-      <h1 className="mt-3 text-3xl">Set a new password</h1>
+      <h1 className="mt-3 text-3xl">{t("auth.setNewPassword")}</h1>
       <p className="mt-2 text-sm text-muted-foreground">
         Signed in as {session.user.email}. Choose a new password to finish.
       </p>
 
       <form onSubmit={submit} className="mt-8 space-y-4">
         <div className="space-y-1.5">
-          <Label htmlFor="password">New password</Label>
+          <Label htmlFor="password">{t("auth.newPassword")}</Label>
           <Input
             id="password"
             type="password"
@@ -107,7 +108,7 @@ function ResetPasswordPage() {
           />
         </div>
         <div className="space-y-1.5">
-          <Label htmlFor="confirmation">Repeat it</Label>
+          <Label htmlFor="confirmation">{t("auth.repeatPassword")}</Label>
           <Input
             id="confirmation"
             type="password"
@@ -119,7 +120,7 @@ function ResetPasswordPage() {
           />
         </div>
         <Button type="submit" className="w-full" disabled={busy}>
-          Update password
+          {t("auth.updatePassword")}
         </Button>
       </form>
     </div>

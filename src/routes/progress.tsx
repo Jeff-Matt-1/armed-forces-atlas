@@ -7,6 +7,7 @@ import { Label } from "@/components/ui/label";
 import { LocalOnlyNotice } from "@/components/LocalOnlyNotice";
 import { MasteryRing } from "@/components/MasteryRing";
 import { getItem, imageFitClass, plateNumber, readyBlocks } from "@/lib/content";
+import { useLocale } from "@/i18n/LocaleProvider";
 import { readGatePreference, useAttempts, useProgress, writeGatePreference } from "@/lib/progress";
 import { useAuth } from "@/hooks/useAuth";
 
@@ -32,6 +33,7 @@ export const Route = createFileRoute("/progress")({
 function ProgressPage() {
   const { user } = useAuth();
   const progress = useProgress();
+  const { t } = useLocale();
   const attempts = useAttempts();
   const [gate, setGate] = useState(true);
 
@@ -39,20 +41,26 @@ function ProgressPage() {
 
   return (
     <div className="mx-auto w-full max-w-4xl px-4 py-10">
-      <p className="plate-label">Training record</p>
-      <h1 className="mt-3 text-3xl">Progress</h1>
+      <p className="plate-label">{t("progress.trainingRecord")}</p>
+      <h1 className="mt-3 text-3xl">{t("progress.title")}</h1>
 
       {!user && <LocalOnlyNotice />}
 
       <dl className="mt-6 grid grid-cols-2 gap-px border border-border bg-border sm:grid-cols-4">
-        <Stat label="Overall mastery" value={`${progress.overall}%`} />
-        <Stat label="Blocks passed" value={`${progress.passedBlocks.size}/${readyBlocks.length}`} />
-        <Stat label="Current streak" value={String(progress.streak?.current_streak ?? 0)} />
-        <Stat label="Cards due" value={String(progress.dueSlugs.length)} />
+        <Stat label={t("progress.overallMastery")} value={`${progress.overall}%`} />
+        <Stat
+          label={t("progress.blocksPassed")}
+          value={`${progress.passedBlocks.size}/${readyBlocks.length}`}
+        />
+        <Stat
+          label={t("progress.currentStreak")}
+          value={String(progress.streak?.current_streak ?? 0)}
+        />
+        <Stat label={t("progress.cardsDue")} value={String(progress.dueSlugs.length)} />
       </dl>
 
       <section className="mt-10">
-        <h2 className="text-xl">Mastery by block</h2>
+        <h2 className="text-xl">{t("progress.masteryByBlock")}</h2>
         <ul className="mt-4 divide-y divide-border border border-border">
           {readyBlocks.map((block) => {
             const mastery = progress.masteryOf(block.slug);
@@ -75,7 +83,7 @@ function ProgressPage() {
                   </div>
                 </div>
                 <span className="designation text-xs text-muted-foreground">
-                  {passed ? "EXAM PASSED" : "EXAM PENDING"}
+                  {passed ? t("progress.examPassed") : t("progress.examPending")}
                 </span>
                 <MasteryRing value={mastery} />
               </li>
@@ -86,7 +94,7 @@ function ProgressPage() {
 
       {progress.weakItems.length > 0 && (
         <section className="mt-10">
-          <h2 className="text-xl">Weak items</h2>
+          <h2 className="text-xl">{t("progress.weakItems")}</h2>
           <p className="mt-1 text-sm text-muted-foreground">
             Cards you have failed at least once. Work these first.
           </p>
@@ -122,9 +130,9 @@ function ProgressPage() {
       )}
 
       <section className="mt-10">
-        <h2 className="text-xl">Recent attempts</h2>
+        <h2 className="text-xl">{t("progress.recentAttempts")}</h2>
         {(attempts.data ?? []).length === 0 ? (
-          <p className="mt-2 text-sm text-muted-foreground">No drills or exams recorded yet.</p>
+          <p className="mt-2 text-sm text-muted-foreground">{t("progress.noAttempts")}</p>
         ) : (
           <ul className="mt-4 divide-y divide-border border border-border">
             {(attempts.data ?? []).map((attempt) => (
@@ -152,9 +160,9 @@ function ProgressPage() {
       <section className="mt-10 border border-border p-4">
         <div className="flex items-center justify-between gap-4">
           <div>
-            <Label htmlFor="gate">Progressive unlock</Label>
+            <Label htmlFor="gate">{t("progress.progressiveUnlock")}</Label>
             <p className="mt-1 text-xs text-muted-foreground">
-              Require each block exam to be passed before the next block opens.
+              {t("progress.progressiveUnlockBody")}
             </p>
           </div>
           <Switch

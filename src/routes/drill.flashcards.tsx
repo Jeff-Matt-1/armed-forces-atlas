@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { DrillSkeleton, EmptyState } from "@/components/QuizRunner";
 import { useShuffled } from "@/hooks/useShuffled";
 import { imageFitClass, readyBlocks, studyableItems, type Item } from "@/lib/content";
+import { useLocale } from "@/i18n/LocaleProvider";
 import { useProgress, useRecordReview } from "@/lib/progress";
 import { gradeLabels } from "@/lib/srs";
 import { useAuth } from "@/hooks/useAuth";
@@ -35,6 +36,7 @@ export const Route = createFileRoute("/drill/flashcards")({
 });
 
 function Flashcards() {
+  const { t } = useLocale();
   const { block } = Route.useSearch();
   const { user } = useAuth();
   const progress = useProgress();
@@ -54,23 +56,16 @@ function Flashcards() {
   if (!built) return <DrillSkeleton />;
 
   if (deck.length === 0) {
-    return (
-      <EmptyState
-        title="No cards in this selection"
-        body="Pick a block with published content to start a flashcard run."
-      />
-    );
+    return <EmptyState title={t("drill.noCards")} body={t("drill.noCardsBody")} />;
   }
 
   if (!card) {
     return (
       <div className="mx-auto w-full max-w-xl px-4 py-16 text-center">
-        <p className="plate-label">Deck complete</p>
-        <h1 className="mt-3 text-2xl">{graded} cards graded</h1>
+        <p className="plate-label">{t("drill.deckComplete")}</p>
+        <h1 className="mt-3 text-2xl">{t("drill.cardsGraded", { count: graded })}</h1>
         <p className="mt-2 text-sm text-muted-foreground">
-          {user
-            ? "Scheduling saved. Check the review queue for what is due next."
-            : "Scheduling saved on this device. Sign in to sync it across devices — what you have already studied comes with you."}
+          {user ? t("drill.savedSynced") : t("drill.savedLocal")}
         </p>
         <div className="mt-6 flex justify-center gap-2">
           <Button
@@ -80,10 +75,10 @@ function Flashcards() {
               setGraded(0);
             }}
           >
-            Shuffle again
+            {t("drill.shuffleAgain")}
           </Button>
           <Button asChild variant="outline">
-            <Link to="/review">Review queue</Link>
+            <Link to="/review">{t("drill.reviewQueue")}</Link>
           </Button>
         </div>
       </div>
@@ -156,7 +151,7 @@ function Flashcards() {
               )}
             </div>
           ) : (
-            <p className="plate-label">Tap to reveal the designation</p>
+            <p className="plate-label">{t("drill.tapToReveal")}</p>
           )}
         </div>
       </button>
