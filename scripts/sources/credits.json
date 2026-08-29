@@ -180,6 +180,36 @@
     "attributionRequired": true
   },
   {
+    "slug": "brdm-2",
+    "file": "File:BRDM-2 - ETIF-2010 (1).jpg",
+    "localPath": "/images/items/brdm-2.jpg",
+    "imageCredit": "CC BY-SA 4.0 — Vitaly V. Kuzmin",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:BRDM-2_-_ETIF-2010_(1).jpg",
+    "licence": "CC BY-SA 4.0",
+    "artist": "Vitaly V. Kuzmin",
+    "attributionRequired": true
+  },
+  {
+    "slug": "brem-1",
+    "file": "File:BREM-1 armoured recovery vehicle (1).jpg",
+    "localPath": "/images/items/brem-1.jpg",
+    "imageCredit": "CC BY-SA 4.0 — Vitaly V. Kuzmin",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:BREM-1_armoured_recovery_vehicle_(1).jpg",
+    "licence": "CC BY-SA 4.0",
+    "artist": "Vitaly V. Kuzmin",
+    "attributionRequired": true
+  },
+  {
+    "slug": "brm-1k",
+    "file": "File:BRM-1K.jpg",
+    "localPath": "/images/items/brm-1k.jpg",
+    "imageCredit": "CC BY-SA 2.5 — Mzajac",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:BRM-1K.jpg",
+    "licence": "CC BY-SA 2.5",
+    "artist": "Mzajac",
+    "attributionRequired": true
+  },
+  {
     "slug": "btr-60pb",
     "file": "File:BTR-60PB DA-ST-89-06597.jpg",
     "localPath": "/images/items/btr-60pb.jpg",
@@ -240,6 +270,16 @@
     "attributionRequired": true
   },
   {
+    "slug": "buk-m2",
+    "file": "File:Buk-M2, 2009 Victory parade.JPG",
+    "localPath": "/images/items/buk-m2.jpg",
+    "imageCredit": "CC BY-SA 3.0 — piligrims74 (Anton)",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:Buk-M2,_2009_Victory_parade.JPG",
+    "licence": "CC BY-SA 3.0",
+    "artist": "piligrims74 (Anton)",
+    "attributionRequired": true
+  },
+  {
     "slug": "d-30",
     "file": "File:122mm howitzer D-30 - Armory masters4.jpg",
     "localPath": "/images/items/d-30.jpg",
@@ -277,6 +317,26 @@
     "imagePage": "https://commons.wikimedia.org/wiki/File:GAZ-66_truck_in_Vrachesh,_Botevgrad_municipality,_Bulgaria_01.jpg",
     "licence": "CC BY-SA 4.0",
     "artist": "Dimitǎr Boevski",
+    "attributionRequired": true
+  },
+  {
+    "slug": "gmz-3",
+    "file": "File:GMZ-3 minelayer vehicle at Engineering Technologies 2012.jpg",
+    "localPath": "/images/items/gmz-3.jpg",
+    "imageCredit": "CC BY-SA 3.0 — Mike1979 Russia",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:GMZ-3_minelayer_vehicle_at_Engineering_Technologies_2012.jpg",
+    "licence": "CC BY-SA 3.0",
+    "artist": "Mike1979 Russia",
+    "attributionRequired": true
+  },
+  {
+    "slug": "imr-3m",
+    "file": "File:IMR-3M armoured engineering vehicle at Engineering Technologies 2012.jpg",
+    "localPath": "/images/items/imr-3m.jpg",
+    "imageCredit": "CC BY-SA 3.0 — Mike1979 Russia",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:IMR-3M_armoured_engineering_vehicle_at_Engineering_Technologies_2012.jpg",
+    "licence": "CC BY-SA 3.0",
+    "artist": "Mike1979 Russia",
     "attributionRequired": true
   },
   {
@@ -390,6 +450,16 @@
     "attributionRequired": false
   },
   {
+    "slug": "mt-55",
+    "file": "File:MT-55 bridgelayer in Technical museum Togliatti.jpg",
+    "localPath": "/images/items/mt-55.jpg",
+    "imageCredit": "CC BY-SA 3.0 — ShinePhantom",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:MT-55_bridgelayer_in_Technical_museum_Togliatti.jpg",
+    "licence": "CC BY-SA 3.0",
+    "artist": "ShinePhantom",
+    "attributionRequired": true
+  },
+  {
     "slug": "mt-lb",
     "file": "File:Soviet MT-LB.JPEG",
     "localPath": "/images/items/mt-lb.jpg",
@@ -407,6 +477,16 @@
     "imagePage": "https://commons.wikimedia.org/wiki/File:Nebo-M_RLM-ME_Army-2016.jpg",
     "licence": "CC BY-SA 4.0",
     "artist": "Boevaya mashina",
+    "attributionRequired": true
+  },
+  {
+    "slug": "osa-akm",
+    "file": "File:9K33M3 Osa-AKM in VDNKh.jpg",
+    "localPath": "/images/items/osa-akm.jpg",
+    "imageCredit": "CC BY-SA 4.0 — Dmitry Ivanov.",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:9K33M3_Osa-AKM_in_VDNKh.jpg",
+    "licence": "CC BY-SA 4.0",
+    "artist": "Dmitry Ivanov.",
     "attributionRequired": true
   },
   {
@@ -430,11 +510,41 @@
     "attributionRequired": true
   },
   {
+    "slug": "pantsir-s1",
+    "file": "File:Astrakhan Victory Day Parade (May 9 2015) Pantsir-S1 P5090721 2185.jpg",
+    "localPath": "/images/items/pantsir-s1.jpg",
+    "imageCredit": "CC BY-SA 4.0 — Alexxx1979",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:Astrakhan_Victory_Day_Parade_(May_9_2015)_Pantsir-S1_P5090721_2185.jpg",
+    "licence": "CC BY-SA 4.0",
+    "artist": "Alexxx1979",
+    "attributionRequired": true
+  },
+  {
     "slug": "pkp-pecheneg",
     "file": "File:PKP Pecheneg machine gun - RaceofHeroes-part2-19.jpg",
     "localPath": "/images/items/pkp-pecheneg.jpg",
     "imageCredit": "CC BY-SA 4.0 — Vitaly V. Kuzmin",
     "imagePage": "https://commons.wikimedia.org/wiki/File:PKP_Pecheneg_machine_gun_-_RaceofHeroes-part2-19.jpg",
+    "licence": "CC BY-SA 4.0",
+    "artist": "Vitaly V. Kuzmin",
+    "attributionRequired": true
+  },
+  {
+    "slug": "pmp",
+    "file": "File:PMP-Pontoon-Bridge-latrun-2.jpg",
+    "localPath": "/images/items/pmp.jpg",
+    "imageCredit": "CC BY 2.5 — No machine-readable author provided. Bukvoed assumed (based on copyright claims).",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:PMP-Pontoon-Bridge-latrun-2.jpg",
+    "licence": "CC BY 2.5",
+    "artist": "No machine-readable author provided. Bukvoed assumed (based on copyright claims).",
+    "attributionRequired": true
+  },
+  {
+    "slug": "prp-4a-argus",
+    "file": "File:Russia Arms Expo 2013 (531-22).jpg",
+    "localPath": "/images/items/prp-4a-argus.jpg",
+    "imageCredit": "CC BY-SA 4.0 — Vitaly V. Kuzmin",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:Russia_Arms_Expo_2013_(531-22).jpg",
     "licence": "CC BY-SA 4.0",
     "artist": "Vitaly V. Kuzmin",
     "attributionRequired": true
@@ -780,6 +890,16 @@
     "attributionRequired": true
   },
   {
+    "slug": "rkhm-6",
+    "file": "File:RKhM-6 NBC vehicle аt Lebyazhye.jpg",
+    "localPath": "/images/items/rkhm-6.jpg",
+    "imageCredit": "CC BY 4.0 — Ministry of Defense of the Russian Federation Official website, all materials are licensed under Creative Commons Attribution 4.0 https://eng.mil.ru/en/index.htm",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:RKhM-6_NBC_vehicle_%D0%B0t_Lebyazhye.jpg",
+    "licence": "CC BY 4.0",
+    "artist": "Ministry of Defense of the Russian Federation Official website, all materials are licensed under Creative Commons Attribution 4.0 https://eng.mil.ru/en/index.htm",
+    "attributionRequired": true
+  },
+  {
     "slug": "rpg-7",
     "file": "File:RPG-7V1 grenade launcher - RaceofHeroes-part2-22.jpg",
     "localPath": "/images/items/rpg-7.jpg",
@@ -810,6 +930,16 @@
     "attributionRequired": true
   },
   {
+    "slug": "s-400",
+    "file": "File:S-400 Triumf launch vehicle.JPG",
+    "localPath": "/images/items/s-400.jpg",
+    "imageCredit": "CC BY 3.0 — Droni4ch",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:S-400_Triumf_launch_vehicle.JPG",
+    "licence": "CC BY 3.0",
+    "artist": "Droni4ch",
+    "attributionRequired": true
+  },
+  {
     "slug": "snar-10",
     "file": "File:Battlefield Surveillance Radar SNAR 10 on MTLB M 1975 in Aalborg Forsvars- og Garnisonsmuseum, pic1.JPG",
     "localPath": "/images/items/snar-10.jpg",
@@ -817,6 +947,16 @@
     "imagePage": "https://commons.wikimedia.org/wiki/File:Battlefield_Surveillance_Radar_SNAR_10_on_MTLB_M_1975_in_Aalborg_Forsvars-_og_Garnisonsmuseum,_pic1.JPG",
     "licence": "CC0",
     "artist": "Alf van Beem",
+    "attributionRequired": false
+  },
+  {
+    "slug": "strela-10",
+    "file": "File:9K35 Strieła-10 Darłowo.JPG",
+    "localPath": "/images/items/strela-10.jpg",
+    "imageCredit": "Attribution — Łukasz Golowanow & Maciek Hypś, Konflikty.pl",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:9K35_Strie%C5%82a-10_Dar%C5%82owo.JPG",
+    "licence": "Attribution",
+    "artist": "Łukasz Golowanow & Maciek Hypś, Konflikty.pl",
     "attributionRequired": false
   },
   {
@@ -830,12 +970,42 @@
     "attributionRequired": true
   },
   {
+    "slug": "tmm-3",
+    "file": "File:TMM-Bridge-latrun-1.jpg",
+    "localPath": "/images/items/tmm-3.jpg",
+    "imageCredit": "CC BY 2.5 — No machine-readable author provided. Bukvoed assumed (based on copyright claims).",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:TMM-Bridge-latrun-1.jpg",
+    "licence": "CC BY 2.5",
+    "artist": "No machine-readable author provided. Bukvoed assumed (based on copyright claims).",
+    "attributionRequired": true
+  },
+  {
+    "slug": "tor-m2",
+    "file": "File:Tor-M2U Army-2016.jpg",
+    "localPath": "/images/items/tor-m2.jpg",
+    "imageCredit": "CC BY-SA 4.0 — Boevaya mashina",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:Tor-M2U_Army-2016.jpg",
+    "licence": "CC BY-SA 4.0",
+    "artist": "Boevaya mashina",
+    "attributionRequired": true
+  },
+  {
     "slug": "tos-1a",
     "file": "File:TOS-1A ParkPatriot at Army-2016.jpg",
     "localPath": "/images/items/tos-1a.jpg",
     "imageCredit": "CC BY-SA 3.0 — Boevaya mashina",
     "imagePage": "https://commons.wikimedia.org/wiki/File:TOS-1A_ParkPatriot_at_Army-2016.jpg",
     "licence": "CC BY-SA 3.0",
+    "artist": "Boevaya mashina",
+    "attributionRequired": true
+  },
+  {
+    "slug": "tunguska",
+    "file": "File:2S6M1 Tunguska M1 at ARMY-2016.JPG",
+    "localPath": "/images/items/tunguska.jpg",
+    "imageCredit": "CC BY-SA 3.0 de — Boevaya mashina",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:2S6M1_Tunguska_M1_at_ARMY-2016.JPG",
+    "licence": "CC BY-SA 3.0 de",
     "artist": "Boevaya mashina",
     "attributionRequired": true
   },
@@ -860,6 +1030,16 @@
     "attributionRequired": true
   },
   {
+    "slug": "ur-77",
+    "file": "File:UR-77 Meteorit being renovated inside Tatarstan military-industrial complex - July 2023 03.jpg",
+    "localPath": "/images/items/ur-77.jpg",
+    "imageCredit": "CC BY 4.0 — Ministry of Defence of the Russian Federation",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:UR-77_Meteorit_being_renovated_inside_Tatarstan_military-industrial_complex_-_July_2023_03.jpg",
+    "licence": "CC BY 4.0",
+    "artist": "Ministry of Defence of the Russian Federation",
+    "attributionRequired": true
+  },
+  {
     "slug": "ural-4320",
     "file": "File:Ural-4320, 12. Internationales Maritimes-Fahrzeugtreffen, Ribnitz-Damgarten ( 1060471).jpg",
     "localPath": "/images/items/ural-4320.jpg",
@@ -877,6 +1057,16 @@
     "imagePage": "https://commons.wikimedia.org/wiki/File:1L219_Zoopark-1_radar_Tula_2016.JPG",
     "licence": "CC BY-SA 3.0 de",
     "artist": "Boevaya mashina",
+    "attributionRequired": true
+  },
+  {
+    "slug": "zsu-23-4-shilka",
+    "file": "File:ZSU 23-4 'Shilka' mobile anti-aircraft vehicle - Museum of Army Flying, Hampshire, England.jpg",
+    "localPath": "/images/items/zsu-23-4-shilka.jpg",
+    "imageCredit": "CC BY-SA 4.0 — Acabashi",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:ZSU_23-4_%27Shilka%27_mobile_anti-aircraft_vehicle_-_Museum_of_Army_Flying,_Hampshire,_England.jpg",
+    "licence": "CC BY-SA 4.0",
+    "artist": "Acabashi",
     "attributionRequired": true
   }
 ]

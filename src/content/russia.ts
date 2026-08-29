@@ -3,14 +3,17 @@
 //
 // Entries for blocks filled after the first release live in ./items/<block>.ts
 // and are concatenated below; this file keeps the original four blocks inline.
+import { airDefence } from "@/content/items/air-defence";
 import { apc } from "@/content/items/apc";
 import { artillery } from "@/content/items/artillery";
 import { c2 } from "@/content/items/c2";
+import { engineering } from "@/content/items/engineering";
 import { ew } from "@/content/items/ew";
 import { heavyWeapons } from "@/content/items/heavy-weapons";
 import { ifv } from "@/content/items/ifv";
 import { lightVehicles } from "@/content/items/light-vehicles";
 import { radars } from "@/content/items/radars";
+import { recon } from "@/content/items/recon";
 import { trucks } from "@/content/items/trucks";
 import type { Block, Item } from "@/content/types";
 
@@ -168,27 +171,33 @@ export const blocks: Block[] = [
     ordinal: 13,
     title: "Engineering Vehicles",
     subtitle: "Bridging, mine clearing, earthmoving",
-    brief: null,
-    doctrineNote: null,
-    status: "wip",
+    brief:
+      "Almost everything here is a tank hull with the turret taken off and a tool put in its place, so recognition means reading the tool: a jointed arm, a dozer blade, a folded bridge, a hinged launcher cover, a chute at the back. Where the tool is a bridge, ask what carries it — a tank hull goes where tanks go, a truck follows the road. The first cue of all is that none of them can fight.",
+    doctrineNote:
+      "Mobility is treated as a combat function rather than a support one. River crossing in particular is a planned set-piece, so a pontoon column moving forward is among the clearest indicators of intent a formation gives away.",
+    status: "ready",
   },
   {
     slug: "air-defence",
     ordinal: 14,
     title: "Air Defence Systems",
     subtitle: "SHORAD to strategic SAM",
-    brief: null,
-    doctrineNote: null,
-    status: "wip",
+    brief:
+      "One question separates most of this block: guns, missiles, or both. Then read the launcher. Missiles in sealed box canisters, or hidden entirely inside the turret, belong to short-range systems riding with the manoeuvre units; missiles carried openly on rails, or raised as large tubes, belong to the long-range systems standing behind them. Size tracks reach almost perfectly, so the ladder from a tracked gun carriage to an 8x8 with four erected canisters is also the ladder from two kilometres to four hundred.",
+    doctrineNote:
+      "Russian air defence is layered rather than centralised: each echelon carries its own cover, so a formation sits under several systems with overlapping reach rather than one. Identifying which layer you are looking at tells you which echelon owns the ground.",
+    status: "ready",
   },
   {
     slug: "reconnaissance",
     ordinal: 15,
     title: "Reconnaissance Systems",
     subtitle: "Ground, artillery and special reconnaissance",
-    brief: null,
-    doctrineNote: null,
-    status: "wip",
+    brief:
+      "Reconnaissance vehicles look like the fighting vehicles they are built from, because they have to survive where they are sent. The tell is always on the roof: a sensor where a weapon should be, an extra cupola, a folded radar, a cluster of antennas. This is a short block by design — the radars in block 12, the observation parties in block 11 and the drones in block 18 do much of the same work and are covered there.",
+    doctrineNote:
+      "Grau & Bartles describe reconnaissance as the front half of a reconnaissance-fires system rather than an end in itself: its product is a target for the guns. That is why the artillery's own reconnaissance vehicle is a higher-value objective than most tanks.",
+    status: "ready",
   },
   {
     slug: "vessels",
@@ -1353,4 +1362,7 @@ export const items: Item[] = [
   ...ew,
   ...c2,
   ...radars,
+  ...engineering,
+  ...airDefence,
+  ...recon,
 ];

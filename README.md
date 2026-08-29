@@ -20,12 +20,12 @@ artillery-led battle rather than as isolated trivia.
 
 ## Status
 
-| Block                                                                                                                    | State                                   |
-| ------------------------------------------------------------------------------------------------------------------------ | --------------------------------------- |
-| 0–12 — Foundations, Ranks, Handguns, Heavy Weapons, Light Vehicles, Trucks, Artillery, IFVs, APCs, Tanks, EW, C2, Radars | Content complete                        |
-| 13–19 — engineering, air defence, recon, vessels, submarines, drones, aircraft                                           | Structure in place, content in progress |
+| Block                                                                                                                                                              | State                                   |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------- |
+| 0–15 — Foundations, Ranks, Handguns, Heavy Weapons, Light Vehicles, Trucks, Artillery, IFVs, APCs, Tanks, EW, C2, Radars, Engineering, Air Defence, Reconnaissance | Content complete                        |
+| 16–19 — vessels, submarines, drones, aircraft                                                                                                                      | Structure in place, content in progress |
 
-111 entries across the first thirteen blocks, every one with a credited
+130 entries across the first sixteen blocks, every one with a credited
 recognition photograph.
 
 ## Development
