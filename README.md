@@ -77,6 +77,16 @@ late:
 `VITE_SITE_URL` also backs the absolute Open Graph image URLs; a root-relative
 path is silently ignored by every crawler.
 
+Put the deployed values in `.env.production`, which Vite loads for
+`vite build` in place of the `.env` development still needs. `bun run deploy`
+runs `scripts/check-deploy-env.ts` first and refuses to build when a value is
+missing or still points at localhost.
+
+```sh
+wrangler login   # once per machine
+bun run deploy
+```
+
 ### Supabase auth configuration
 
 Email is the only way into an account, so the auth settings are part of the
