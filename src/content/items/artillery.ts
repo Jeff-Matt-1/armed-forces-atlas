@@ -44,7 +44,7 @@ export const artillery: Item[] = [
     imageUrl: "/images/items/2a65-msta-b.jpg",
     imageCredit: "Public domain — One half 3544",
     imagePage: "https://commons.wikimedia.org/wiki/File:2A65_Msta-B.JPG",
-    armament: "152 mm 2A65 howitzer",
+    armament: "152 mm howitzer",
     rangeText: "24.7 km standard, 28.9 km rocket-assisted",
     cues: [
       "Two split trails, not three legs — the immediate split from a D-30",

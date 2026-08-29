@@ -69,7 +69,7 @@ export const drones: Item[] = [
     imageUrl: "/images/items/forpost.jpg",
     imageCredit: "CC BY-SA 3.0 — Boevaya mashina",
     imagePage: "https://commons.wikimedia.org/wiki/File:Forpost_UAV_ARMY-2022.jpg",
-    armament: "Forpost-R can carry light guided weapons",
+    armament: "Light guided weapons on the armed variant",
     rangeText: "Roughly 250 km, about 18 hours aloft",
     cues: [
       "Twin tail booms running back from a central fuselage pod",

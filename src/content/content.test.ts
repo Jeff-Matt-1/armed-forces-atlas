@@ -1,7 +1,13 @@
 import { describe, expect, test } from "bun:test";
 
 import { blocks, items } from "@/content/russia";
-import { armamentQuestion, buildExam, buildPhotoQuiz } from "@/lib/quiz";
+import {
+  armamentQuestion,
+  buildExam,
+  buildPhotoQuiz,
+  designationQuestion,
+  placementQuestion,
+} from "@/lib/quiz";
 
 const blockSlugs = new Set(blocks.map((b) => b.slug));
 const readyBlocks = blocks.filter((b) => b.status === "ready");
@@ -61,6 +67,71 @@ describe("question generation", () => {
   test("every ready block builds photo questions", () => {
     const barren = readyBlocks.filter((b) => buildPhotoQuiz([b.slug]).length === 0);
     expect(barren.map((b) => b.slug)).toEqual([]);
+  });
+
+  /**
+   * A question is unfair when the right option can be picked out by a word it
+   * alone shares with the subject of the prompt — asking for the armament of
+   * the 2A65 Msta-B and offering "152 mm 2A65 howitzer" against three options
+   * naming no gun at all. The learner matches a string instead of knowing the
+   * answer.
+   *
+   * Sharing a word is fine when other options share it too: General-Mayor,
+   * General-Leytenant and General-Polkovnik all answer to "General", and the
+   * learner still has to know which. Only a word unique to the answer gives it
+   * away.
+   *
+   * Photo-ID and seniority prompts never name their subject, so they cannot
+   * leak and are not checked.
+   */
+  test("no question can be answered by matching a word in the prompt", () => {
+    const GENERIC = new Set([
+      "class",
+      "project",
+      "obr",
+      "mod",
+      "modernisation",
+      "variant",
+      "system",
+      "vehicle",
+      "carrier",
+      "launcher",
+      "bridge",
+      "radar",
+      "the",
+      "and",
+      "mm",
+    ]);
+    const words = (value: string) =>
+      value
+        .toLowerCase()
+        .split(/[^a-z0-9]+/)
+        .filter((w) => w.length >= 2 && !GENERIC.has(w));
+
+    const leaking: string[] = [];
+    for (const block of blocks) {
+      const pool = items.filter((i) => i.blockSlug === block.slug);
+      const placements = [...new Set(pool.flatMap((i) => i.placements))];
+      for (const item of pool) {
+        const built = [
+          designationQuestion(item, pool),
+          placementQuestion(item, placements),
+          armamentQuestion(item, pool),
+        ];
+        for (const q of built) {
+          if (!q) continue;
+          const subject = q.kind === "designation" ? (item.aka ?? "") : item.name;
+          const subjectWords = new Set(words(subject));
+          const shared = words(q.answer).filter((w) => subjectWords.has(w));
+          if (shared.length === 0) continue;
+          const others = q.options.filter((o) => o !== q.answer);
+          if (!others.some((o) => words(o).some((w) => shared.includes(w)))) {
+            leaking.push(`${block.slug}/${item.slug} [${q.kind}] gives away "${shared.join(",")}"`);
+          }
+        }
+      }
+    }
+    expect(leaking).toEqual([]);
   });
 
   /**
