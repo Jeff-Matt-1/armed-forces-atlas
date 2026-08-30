@@ -3,6 +3,8 @@ import { describe, expect, test } from "bun:test";
 import { blocks, items } from "@/content/russia";
 import { etTranslations } from "@/content/et";
 import { localiseBlock, localiseItem } from "@/content/translations";
+import { allItems, itemsOfBlock, setContentLocale } from "@/lib/content";
+import { designationQuestion } from "@/lib/quiz";
 import { LOCALES } from "@/i18n/locales";
 import { translate } from "@/i18n/strings";
 
@@ -144,6 +146,48 @@ describe("content translation", () => {
       if (item.placements.length && !t.placements) fallbacks.push(`${item.slug}.placements`);
     }
     expect(fallbacks).toEqual([]);
+  });
+
+  /**
+   * A designation question must not carry its own answer.
+   *
+   * The guard for this compared spellings, and a Russian name reaches the app
+   * through more than one: "Krasuha-S4" was asked against "1RL257 Krasukha-4",
+   * and Estonian "\u0160ilka" against "ZSU-23-4 Shilka", because kh/h and \u0161/sh made
+   * one word look like two. Reducing both sides to a single skeleton is what
+   * lets the check see them, so the check is written out again here rather
+   * than calling the implementation it is meant to be testing.
+   */
+  test("no designation question contains its own answer", () => {
+    const skeleton = (v: string) =>
+      v
+        .toLowerCase()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .replace(/shch/g, "s")
+        .replace(/kh/g, "h")
+        .replace(/sh/g, "s")
+        .replace(/zh/g, "z")
+        .replace(/ch/g, "c")
+        .replace(/ts/g, "c")
+        .replace(/y/g, "i")
+        .replace(/[^\p{L}\p{N}]/gu, "");
+
+    const leaky: string[] = [];
+    for (const locale of LOCALES) {
+      setContentLocale(locale);
+      for (const item of allItems) {
+        if (!item.aka) continue;
+        if (!designationQuestion(item, itemsOfBlock(item.blockSlug))) continue;
+        const aka = skeleton(item.aka);
+        const name = skeleton(item.name);
+        if (aka.length >= 4 && (name.includes(aka) || aka.includes(name))) {
+          leaky.push(locale + " " + item.name + ' <- "' + item.aka + '"');
+        }
+      }
+    }
+    setContentLocale("en");
+    expect(leaky).toEqual([]);
   });
 
   test("Estonian diacritics survive the build", () => {

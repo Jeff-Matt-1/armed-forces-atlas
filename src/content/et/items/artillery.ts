@@ -3,7 +3,6 @@ import type { ItemTranslation } from "@/content/translations";
 /** Block 06 — Suurtükivägi ja reaktiivsuurtükivägi. */
 export const etArtillery: Record<string, ItemTranslation> = {
   "d-30": {
-    aka: "2A18",
     armament: "122 mm haubits 2A18",
     rangeText: "15,4 km tavamürsuga, 21,9 km reaktiivmürsuga",
     cues: [
@@ -36,7 +35,7 @@ export const etArtillery: Record<string, ItemTranslation> = {
       "2S19 veetav vaste samades tuleüksustes",
     ],
     doctrineNote:
-      "Sama mürsk ja peaaegu sama laskekaugus kui liikuval 2S19-l murdosa hinnaga. Kus koondis roomikuid endale lubada ei saa, saab ta ikkagi 152 mm tuld.",
+      "Sama mürsk ja peaaegu sama laskekaugus kui liikuval 2S19-l murdosa hinnaga. Kus allüksus roomikuid endale lubada ei saa, saab ta ikkagi 152 mm tuld.",
     crew: "8",
     service: "Kasutuses",
   },
@@ -74,12 +73,11 @@ export const etArtillery: Record<string, ItemTranslation> = {
       "Üha enam teine liin 2S19-ga varustatud üksuste taga",
     ],
     doctrineNote:
-      "Nõukogudeaegne 152 mm standard, endiselt laialt kasutusel. Selle nägemine 2S19-de kõrval märgib tavaliselt ümberrelvastumise poole peal olevat koondist, mitte moderniseeritud üksust.",
+      "Nõukogudeaegne 152 mm standard, endiselt laialt kasutusel. Selle nägemine 2S19-de kõrval märgib tavaliselt ümberrelvastumise poole peal olevat allüksust, mitte moderniseeritud üksust.",
     crew: "4",
     service: "Kasutuses",
   },
   "2s19-msta-s": {
-    aka: "Msta-SM, 2S19M2",
     armament: "152 mm haubits 2A64, 12.7 mm NSVT",
     rangeText: "24,7 km tavamürsuga, 29 km reaktiivmürsuga",
     cues: [
@@ -93,12 +91,12 @@ export const etArtillery: Record<string, ItemTranslation> = {
       "Armee tasandi suurtükiväebrigaadid",
     ],
     doctrineNote:
-      "Kaasaegse Vene torusuurtükiväe selgroog. Grau ja Bartles väidavad, et Vene väekoondised võitlevad oma kahurite, mitte tankide ümber, mistõttu suur osa lahingukorrast on üles ehitatud just seda masinat teenima.",
+      "Kaasaegse Vene torusuurtükiväe selgroog, mida ikka veel uuendatakse — Msta-SM ja 2S19M2 kannavad sama äratuntava kere peal uuendatud tulejuhtimist. Grau ja Bartles väidavad, et Vene allüksused võitlevad oma kahurite, mitte tankide ümber, mistõttu suur osa lahingukorrast on üles ehitatud just seda masinat teenima.",
     crew: "5",
     service: "Kasutuses",
   },
   "2s7-pion": {
-    aka: "Pojeng; 2S7M Malka",
+    aka: "Pojeng",
     armament: "203 mm kahur 2A44",
     rangeText: "37,5 km tavamürsuga, 47,5 km reaktiivmürsuga",
     cues: [
@@ -117,7 +115,7 @@ export const etArtillery: Record<string, ItemTranslation> = {
     service: "Kasutuses",
   },
   "bm-21-grad": {
-    aka: "Rahe; Tornado-G",
+    aka: "Rahe",
     armament: "40 × 122 mm raketti",
     rangeText: "20 km, pikendatud laskekaugusega rakettidega kuni 40 km",
     cues: [
@@ -136,7 +134,7 @@ export const etArtillery: Record<string, ItemTranslation> = {
     service: "Kasutuses",
   },
   "bm-27-uragan": {
-    aka: "Orkaan; 9P140",
+    aka: "Orkaan",
     armament: "16 × 220 mm raketti",
     rangeText: "35 km",
     cues: [
@@ -155,7 +153,7 @@ export const etArtillery: Record<string, ItemTranslation> = {
     service: "Kasutuses",
   },
   "bm-30-smerch": {
-    aka: "Tromb; 9A52, Tornado-S",
+    aka: "Tromb",
     armament: "12 × 300 mm raketti",
     rangeText: "70 km, uuemate rakettidega kuni 120 km",
     cues: [

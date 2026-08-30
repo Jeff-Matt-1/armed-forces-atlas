@@ -3,7 +3,6 @@ import type { ItemTranslation } from "@/content/translations";
 /** Block 03 — Rasked, jao- ja eriotstarbelised relvad. */
 export const etHeavyWeapons: Record<string, ItemTranslation> = {
   "pkp-pecheneg": {
-    aka: "6P41",
     armament: "7.62x54mmR üldotstarbeline kuulipilduja, lintsöötmega",
     rangeText: "Mõjus kahejalal 1500 m; kolmjalalt 1900 m",
     cues: [
@@ -19,7 +18,6 @@ export const etHeavyWeapons: Record<string, ItemTranslation> = {
     service: "Kasutuses",
   },
   kord: {
-    aka: "6P50 / NSV järglane",
     armament: "12.7x108mm raskekuulipilduja",
     rangeText: "Mõjus 2000 m; kerge soomuse vastu 1500 m",
     cues: [

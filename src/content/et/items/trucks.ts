@@ -15,7 +15,7 @@ export const etTrucks: Record<string, ItemTranslation> = {
       "Veduk veetavale suurtükiväele ja BM-21 šassii perekonnale",
     ],
     doctrineNote:
-      "Vene logistika tööhobune. Grau ja Bartles rõhutavad, et Vene väekoondistel on oma veovõimekust vähe, mistõttu veoautopark on tegelik piirang sellele, kui kaugel raudteesõlmest saab jõud tegutseda.",
+      "Vene logistika tööhobune. Grau ja Bartles rõhutavad, et Vene allüksustel on oma veovõimekust vähe, mistõttu veoautopark on tegelik piirang sellele, kui kaugel raudteesõlmest saab jõud tegutseda.",
     crew: "1 + 2",
     service: "Kasutuses",
   },

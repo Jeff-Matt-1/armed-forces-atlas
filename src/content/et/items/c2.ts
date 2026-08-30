@@ -4,7 +4,7 @@ import type { ItemTranslation } from "@/content/translations";
 export const etC2: Record<string, ItemTranslation> = {
   "r-142n": {
     aka: "R-142NSA",
-    rangeText: "Lühi- ja ultralainevõrgud üle koondise vastutusala",
+    rangeText: "Lühi- ja ultralainevõrgud üle allüksuse vastutusala",
     cues: [
       "GAZ-66 4x4 mootorikattega, kannab kandilist kastkeret",
       "Vardantennid kobaras kabiini ja kastkere katuse kohal",
@@ -13,7 +13,7 @@ export const etC2: Record<string, ItemTranslation> = {
     ],
     placements: [
       "Juhtimis- ja staabimasin rügemendi ja pataljoni tasandil",
-      "Koondise tagalas, mitte eesliiniüksuste juures",
+      "Allüksuse tagalas, mitte eesliiniüksuste juures",
     ],
     doctrineNote:
       "Soomustamata, seega töötab varjes tublisti liinist tagapool. Šassii on ühine kümnete omavahel mitteseotud kastkeremasinatega — teda tuvastab ainult antennikomplekt, ja just nii ta olema peabki.",
@@ -30,7 +30,7 @@ export const etC2: Record<string, ItemTranslation> = {
     ],
     placements: [
       "Nõukogudeaegsete koosseisude juhtimis- ja staabimasin",
-      "Reservi ja teise liini koondised",
+      "Reservi ja teise liini allüksused",
     ],
     doctrineNote:
       "Eelmise põlvkonna soomustatud juhtimispunkt kerel, mille nõrkust selgitab soomustransportööride õppetükk. Ta paneb ülema oma üksuste juurde, mitte nende taha, ja just selleks raadiojaama soomustataksegi.",
@@ -47,7 +47,7 @@ export const etC2: Record<string, ItemTranslation> = {
     ],
     placements: [
       "Brigaadi ja pataljoni staapide juhtimis- ja staabimasin",
-      "Liigub koos koondisega, mida ta juhib",
+      "Liigub koos allüksusega, mida ta juhib",
     ],
     doctrineNote:
       "Kaasaegne soomustatud juhtimispunkt. Kuna kere on BTR-80, näeb teda sisaldav kolonn tavaline välja seni, kuni märkad puuduvat torni — ja see ongi mõte.",
@@ -63,7 +63,7 @@ export const etC2: Record<string, ItemTranslation> = {
       "Mast tõuseb teleskoopselt üles alles pärast peatumist",
     ],
     placements: [
-      "Tanki- ja motolaskurkoondiste juhtimis- ja raadioreleemasin",
+      "Tanki- ja motolaskurallüksuste juhtimis- ja raadioreleemasin",
       "Samal kerel suurtükiväe ja õhutõrje juhtimisvariandid",
     ],
     doctrineNote:
@@ -71,7 +71,7 @@ export const etC2: Record<string, ItemTranslation> = {
     service: "Kasutuses",
   },
   strelets: {
-    aka: "Ambur; 1B181",
+    aka: "Ambur",
     rangeText: "Edastab sihtmärgiandmed kahuritele mõne minutiga",
     cues: [
       "Ei ole sõiduk — tunne ära olukord, mitte siluett",

@@ -12,7 +12,7 @@ export const etTanks: Record<string, ItemTranslation> = {
       "115 mm toru, peenem kui 125 mm perekonnal",
     ],
     placements: [
-      "Taaskasutusse võetud varud teise liini ja territoriaalkoondistele",
+      "Taaskasutusse võetud varud teise liini ja territoriaalallüksustele",
       "Kasutatakse otsetuletoetuseks, mitte tankiduellideks",
     ],
     doctrineNote:
@@ -61,10 +61,10 @@ export const etTanks: Record<string, ItemTranslation> = {
     ],
     placements: [
       "Tankiüksused lääne ja põhja operatsioonisuundadel",
-      "Koondised, kellelt oodatakse tegutsemist külmades oludes",
+      "Allüksused, kellelt oodatakse tegutsemist külmades oludes",
     ],
     doctrineNote:
-      "Turbiin annab spurdikiiruse suure kütusekulu hinnaga — see on väekoondise tasandi logistiline tunnus.",
+      "Turbiin annab spurdikiiruse suure kütusekulu hinnaga — see on allüksuse tasandi logistiline tunnus.",
     crew: "3",
     service: "Kasutuses",
   },
@@ -109,7 +109,7 @@ export const etTanks: Record<string, ItemTranslation> = {
       "Štora pimesteid ei ole",
     ],
     placements: ["Võimekaim tank esimese liini tankipataljonides; väljastatud piiratud koguses"],
-    doctrineNote: "Eelisvarustus. Selle olemasolu näitab koondist, mida juhatus peab põhirõhuks.",
+    doctrineNote: "Eelisvarustus. Selle olemasolu näitab allüksust, mida juhatus peab põhirõhuks.",
     crew: "3",
     service: "Praegune, eelisväljastus",
   },

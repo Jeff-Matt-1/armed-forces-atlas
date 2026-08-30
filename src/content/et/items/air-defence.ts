@@ -60,7 +60,7 @@ export const etAirDefence: Record<string, ItemTranslation> = {
     service: "Kasutuses",
   },
   tunguska: {
-    aka: "2S6M; Grison, SA-19",
+    aka: "Grison; SA-19",
     armament: "2 × 30 mm automaatkahur 2A38, 8 × raketti 9M311",
     rangeText: "Kahurid 4 km, raketid 8 km",
     cues: [
@@ -71,7 +71,7 @@ export const etAirDefence: Record<string, ItemTranslation> = {
     ],
     placements: [
       "Tanki- ja motolaskurrügementide õhutõrjepatareid",
-      "Asendas Šilka esimese liini koondistes",
+      "Asendas Šilka esimese liini allüksustes",
     ],
     doctrineNote:
       "Vastus Šilka probleemile: kahurid selle vastu, mis tuleb lähedale ja kiiresti, raketid selle vastu, mis püsib eemal. Mõlema kandmine tähendab, et masin ei pea valima enne, kui sihtmärk ilmub.",
@@ -109,7 +109,7 @@ export const etAirDefence: Record<string, ItemTranslation> = {
     ],
     placements: [
       "Diviiside ja armee tasandi brigaadide õhutõrjerügemendid",
-      "Katab manöövrikoondisi täppisrelvade eest",
+      "Katab manöövriallüksusi täppisrelvade eest",
     ],
     doctrineNote:
       "Püststart on see, mis ta ära annab: midagi ei ulatu välja, nii et masin saab tabada igas suunas ilma enne pöördumata. Ehitatud spetsiaalselt juhitava laskemoona, mitte seda välja lastavate lennukite tõrjumiseks.",
@@ -131,7 +131,7 @@ export const etAirDefence: Record<string, ItemTranslation> = {
       "Töötab patareina eraldi heitja-, radari- ja juhtimismasinatest",
     ],
     doctrineNote:
-      "Keskmaa kate koondisele, mitte üksusele, ja esimene süsteem siin, mis üksi võidelda ei saa — heitja, radar ja juhtimispunkt on eraldi masinad, mis tuleb leida koos.",
+      "Keskmaa kate allüksusele, mitte üksusele, ja esimene süsteem siin, mis üksi võidelda ei saa — heitja, radar ja juhtimispunkt on eraldi masinad, mis tuleb leida koos.",
     crew: "4",
     service: "Kasutuses",
   },
@@ -147,7 +147,7 @@ export const etAirDefence: Record<string, ItemTranslation> = {
     ],
     placements: [
       "Õhutõrjerügemendid strateegiliste alade ja taristu kaitseks",
-      "Ringkonna ja riigi tasandi vahend, mitte koondise oma",
+      "Ringkonna ja riigi tasandi vahend, mitte allüksuse oma",
     ],
     doctrineNote:
       "Kõige välimine kiht ja sama palju poliitiline objekt kui sõjaline. Ta ei kaitse kontaktis olevaid vägesid, vaid keelab õhuruumi terve piirkonna kohal — seepärast ütleb ühe leidmine rohkem selle kohta, mis on liini taga, kui selle kohta, mis on liinil.",

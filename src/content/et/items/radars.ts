@@ -20,7 +20,7 @@ export const etRadars: Record<string, ItemTranslation> = {
     service: "Kasutuses",
   },
   "nebo-m": {
-    aka: "Taevas-M; moodul RLM-M",
+    aka: "Taevas-M",
     rangeText: "Avastab lennukid kuni umbes 600 km",
     cues: [
       "Tohutu ristkülikuline massiiv, mitu rida sügav ja masinast palju laiem",
@@ -71,7 +71,7 @@ export const etRadars: Record<string, ItemTranslation> = {
     service: "Kasutuses",
   },
   "snar-10": {
-    aka: "Leopard; 1RL232",
+    aka: "Leopard",
     armament: "7.62 mm PKT",
     rangeText: "Avastab sõidukid kuni 20 km, liikuvad inimesed 10 km",
     cues: [

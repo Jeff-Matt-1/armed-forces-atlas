@@ -30,7 +30,7 @@ export const etLightVehicles: Record<string, ItemTranslation> = {
       "Varuratas tavaliselt taga või mootorikattel",
     ],
     placements: [
-      "Juhtimine ja side kõigis maaväekoondistes",
+      "Juhtimine ja side kõigis maaväe allüksustes",
       "Laialt kasutusel territoriaal- ja teise liini üksustes",
     ],
     doctrineNote:
@@ -102,7 +102,7 @@ export const etLightVehicles: Record<string, ItemTranslation> = {
     ],
     placements: [
       "Piiratud koguses luure- ja õhudessantüksustele",
-      "Juhtimine ja side valitud väekoondistes",
+      "Juhtimine ja side valitud allüksustes",
     ],
     doctrineNote:
       "Osteti väikeses koguses ja laialdaselt kasutusele ei võetud; haruldus teeb sellest kasuliku märgi konkreetsete üksuste kohta.",

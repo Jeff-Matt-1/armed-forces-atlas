@@ -44,7 +44,7 @@ export const radars: Item[] = [
     slug: "nebo-m",
     blockSlug: "radars",
     name: "55Zh6M Nebo-M",
-    aka: "Sky-M; RLM-M module",
+    aka: "Sky-M",
     imageUrl: "/images/items/nebo-m.jpg",
     imageCredit: "CC BY-SA 4.0 — Boevaya mashina",
     imagePage: "https://commons.wikimedia.org/wiki/File:Nebo-M_RLM-ME_Army-2016.jpg",
@@ -123,7 +123,7 @@ export const radars: Item[] = [
     slug: "snar-10",
     blockSlug: "radars",
     name: "SNAR-10",
-    aka: "Leopard; 1RL232",
+    aka: "Leopard",
     imageUrl: "/images/items/snar-10.jpg",
     imageCredit: "CC0 — Alf van Beem",
     imagePage:

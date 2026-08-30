@@ -124,7 +124,7 @@ export const c2: Item[] = [
     slug: "strelets",
     blockSlug: "c2",
     name: "Strelets KRUS",
-    aka: "Sagittarius; 1B181",
+    aka: "Sagittarius",
     imageUrl: "/images/items/strelets.jpg",
     imageCredit: "CC BY 4.0 — Ministry of Defence of the Russian Federation",
     imagePage: "https://commons.wikimedia.org/wiki/File:Strelets_Recce.jpg",

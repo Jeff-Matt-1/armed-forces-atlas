@@ -47,7 +47,7 @@ export const etBlocks: Record<string, BlockTranslation> = {
     brief:
       "Kõik ratastel sõidukid soomustransportöörist allpool. Esimene eristus on kaitstus: tahulise kerega ja väikeste paksude akendega masin on soomustatud, suure klaasi ja presentkatusega masin ei ole. Teine on suurus — loe telgesid ja vaata kõrgust, sest Tüfoon kõrgub Tigri kohal ja UAZ on veel väiksem. Siin loeb vähem see, mida masin kannab, kui see, kes sees istub.",
     doctrineNote:
-      "Need on luure-, juhtimis- ja sidemasinad, mitte rünnakutransport. Grau ja Bartles rõhutavad, kui suure osa jõupingutusest Vene väekoondised luurele pühendavad; suur osa sellest liigub Tigris, mistõttu ühe leidmine eesliinil ütleb midagi kavatsuse kohta.",
+      "Need on luure-, juhtimis- ja sidemasinad, mitte rünnakutransport. Grau ja Bartles rõhutavad, kui suure osa jõupingutusest Vene allüksused luurele pühendavad; suur osa sellest liigub Tigris, mistõttu ühe leidmine eesliinil ütleb midagi kavatsuse kohta.",
   },
   trucks: {
     title: "Veoautod",
@@ -55,7 +55,7 @@ export const etBlocks: Record<string, BlockTranslation> = {
     brief:
       "Šassii, mis veab kõike ülejäänut. Tuvastamine käib kolme küsimuse kaudu: mitu telge, kas mootorikate on kabiini ees või istub kabiin mootori peal, ja mis on veokastis. Viimane loeb enim — sama KamAZi kabiin on nii veose, juhtimispunkti, elektroonilise sõjapidamise kabiini kui radari varjualuse all, nii et veoauto ise ei ütle kunagi, millise süsteemiga on tegemist.",
     doctrineNote:
-      "Grau ja Bartles märgivad, et Vene väekoondistel on oma veovõimekust vähe ja nad toetuvad tugevalt raudteele. Veoautopark on seetõttu tegelik piirang sellele, kui kaugele raudteesõlmest üksus võitlema suudab minna, mistõttu logistikamasinate lugemine on viis ulatuse hindamiseks.",
+      "Grau ja Bartles märgivad, et Vene allüksustel on oma veovõimekust vähe ja nad toetuvad tugevalt raudteele. Veoautopark on seetõttu tegelik piirang sellele, kui kaugele raudteesõlmest üksus võitlema suudab minna, mistõttu logistikamasinate lugemine on viis ulatuse hindamiseks.",
   },
   artillery: {
     title: "Suurtükivägi ja reaktiivsuurtükivägi",
@@ -63,7 +63,7 @@ export const etBlocks: Record<string, BlockTranslation> = {
     brief:
       "Väeliik, mille ümber kogu ülejäänu on ehitatud. Kõigepealt erista kolm kuju: veetav suurtükk seisab jalgadel ja tal ei ole mootorit, liikursuurtükil on torn roomikutel, ja raketiheitja on torude plokk sellel šassiil, mis teda kannab. Seejärel on küsimused kitsad — mitu jalga, kus torn kere peal asub, mitu toru ja kui jämedad. Kaliiber tuleneb vastusest, seda ei loeta otse.",
     doctrineNote:
-      "Grau ja Bartles kirjeldavad suurtükiväekeskset süsteemi: manöövriüksused leiavad ja seovad vastase, et suurtükivägi ta hävitaks. See pöörab ümber lääne harjumuse kohelda suurtükiväge toetusena. Patarei tuvastamine ütleb väekoondise kavatsuse kohta rohkem kui tema tankide lugemine.",
+      "Grau ja Bartles kirjeldavad suurtükiväekeskset süsteemi: manöövriüksused leiavad ja seovad vastase, et suurtükivägi ta hävitaks. See pöörab ümber lääne harjumuse kohelda suurtükiväge toetusena. Patarei tuvastamine ütleb allüksuse kavatsuse kohta rohkem kui tema tankide lugemine.",
   },
   ifv: {
     title: "Jalaväe lahingumasinad",
@@ -119,7 +119,7 @@ export const etBlocks: Record<string, BlockTranslation> = {
     brief:
       "Peaaegu kõik siin on tankikere, millelt on torn maha võetud ja asemele pandud tööriist, nii et tuvastamine tähendab tööriista lugemist: liigendpuomi, buldooserisahk, kokkupandud sild, hingedel heitjakaas, renn taga. Kui tööriist on sild, küsi, mis teda kannab — tankikere läheb sinna, kuhu tankid, veoauto järgib teed. Kõige esimene tunnus on aga see, et ükski neist ei suuda võidelda.",
     doctrineNote:
-      "Liikuvust käsitletakse lahingufunktsiooni, mitte toetusena. Eriti jõe ületamine on ettevalmistatud operatsioon, mistõttu ettepoole liikuv pontoonkolonn on üks selgemaid märke kavatsusest, mille väekoondis endast välja annab.",
+      "Liikuvust käsitletakse lahingufunktsiooni, mitte toetusena. Eriti jõe ületamine on ettevalmistatud operatsioon, mistõttu ettepoole liikuv pontoonkolonn on üks selgemaid märke kavatsusest, mille allüksus endast välja annab.",
   },
   "air-defence": {
     title: "Õhutõrjesüsteemid",
@@ -127,7 +127,7 @@ export const etBlocks: Record<string, BlockTranslation> = {
     brief:
       "Enamiku sellest õppetükist eraldab üks küsimus: kahurid, raketid või mõlemad. Seejärel loe heitjat. Kinnistes konteinerites või tornis peidus raketid kuuluvad lähimaa süsteemidele, mis liiguvad koos manöövriüksustega; lahtiselt siinidel või püsti tõstetud torudes raketid kuuluvad kaugmaa süsteemidele nende taga. Mõõt käib ulatusega peaaegu täpselt kokku, nii et redel roomikutel kahurikandjast kuni kaheksarattalise neljatorulise heitjani on ühtlasi redel kahest kilomeetrist neljasajani.",
     doctrineNote:
-      "Vene õhutõrje on kihiline, mitte tsentraliseeritud: igal tasandil on oma kate, nii et väekoondis seisab mitme kattuva ulatusega süsteemi all, mitte ühe. Selle järgi, millist kihti sa vaatad, saab öelda, milline tasand seda maad valdab.",
+      "Vene õhutõrje on kihiline, mitte tsentraliseeritud: igal tasandil on oma kate, nii et allüksus seisab mitme kattuva ulatusega süsteemi all, mitte ühe. Selle järgi, millist kihti sa vaatad, saab öelda, milline tasand seda maad valdab.",
   },
   reconnaissance: {
     title: "Luuresüsteemid",

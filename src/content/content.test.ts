@@ -32,6 +32,29 @@ describe("content wiring", () => {
     expect(empty.map((b) => b.slug)).toEqual([]);
   });
 
+  /**
+   * An aka is what a thing is called, not where it sits in an ordnance
+   * catalogue. "Sagittarius; 1B181" and "6P41" made designation recall a test
+   * of having memorised a GRAU index, which says nothing about recognising
+   * anything. Where NATO gave a reporting name that is the answer -- AT-14
+   * Spriggan for the 9M133 Kornet -- and where it gave none, an English gloss
+   * of the Russian name, or nothing at all.
+   *
+   * Item *names* may carry an index: the 9M133 Kornet is called that. Only the
+   * "also known as" is held to this.
+   */
+  test("no aka is a bare GRAU index", () => {
+    const index = /^\d+[A-Z]+\d+[A-Z]?$/;
+    const offenders: string[] = [];
+    for (const item of items) {
+      if (!item.aka) continue;
+      for (const part of item.aka.split(/[;,/]/)) {
+        if (index.test(part.trim())) offenders.push(item.slug + ': "' + item.aka + '"');
+      }
+    }
+    expect(offenders).toEqual([]);
+  });
+
   test("slugs are unique", () => {
     const seen = new Set<string>();
     const duplicates = items.filter((i) => (seen.has(i.slug) ? true : (seen.add(i.slug), false)));

@@ -197,7 +197,10 @@ function editDistance(a: string, b: string, cap: number): number {
  * Krasukha-4" with no other option carrying the name. A shortened form gives
  * away as much as the full one: "Boris" for "Borisoglebsk-2".
  */
-function sameRoot(a: string, b: string): boolean {
+function sameRoot(rawA: string, rawB: string): boolean {
+  if (rawA === rawB) return true;
+  const a = transliterationSkeleton(rawA);
+  const b = transliterationSkeleton(rawB);
   if (a === b) return true;
   const [short, long] = a.length <= b.length ? [a, b] : [b, a];
   if (short.length >= 4 && long.startsWith(short)) return true;
@@ -209,8 +212,32 @@ function sharedRoots(words: string[], against: string[]): string[] {
   return words.filter((word) => against.some((other) => sameRoot(word, other)));
 }
 
+/**
+ * One spelling for a Russian name that reaches the app through several.
+ *
+ * The same word is written Shilka in English and \u0160ilka in Estonian, Krasukha
+ * and Krasuha. A comparison that respects the difference decides that two
+ * spellings of one word are two words, and then fails to notice a question
+ * containing its own answer. Folding the digraphs and the diacritics gives
+ * every spelling the same skeleton to compare on. It is deliberately crude: it
+ * exists to make two renderings of one name collide, not to transliterate.
+ */
+function transliterationSkeleton(value: string): string {
+  return value
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/shch/g, "s")
+    .replace(/kh/g, "h")
+    .replace(/sh/g, "s")
+    .replace(/zh/g, "z")
+    .replace(/ch/g, "c")
+    .replace(/ts/g, "c")
+    .replace(/y/g, "i");
+}
+
 function squash(value: string): string {
-  return value.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "");
+  return transliterationSkeleton(value).replace(/[^\p{L}\p{N}]/gu, "");
 }
 
 /**

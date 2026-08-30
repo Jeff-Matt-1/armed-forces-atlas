@@ -13,7 +13,7 @@ export const heavyWeapons: Item[] = [
     slug: "pkp-pecheneg",
     blockSlug: "heavy-weapons",
     name: "PKP Pecheneg",
-    aka: "6P41",
+    aka: null,
     imageUrl: "/images/items/pkp-pecheneg.jpg",
     imageCredit: "CC BY-SA 4.0 — Vitaly V. Kuzmin",
     imagePage:
@@ -40,7 +40,7 @@ export const heavyWeapons: Item[] = [
     slug: "kord",
     blockSlug: "heavy-weapons",
     name: "Kord",
-    aka: "6P50 / NSV successor",
+    aka: null,
     imageUrl: "/images/items/kord.jpg",
     imageCredit: "CC BY-SA 3.0 — Sergeev Pavel",
     imagePage: "https://commons.wikimedia.org/wiki/File:Kord_6P50.jpg",

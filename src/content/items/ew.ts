@@ -17,7 +17,7 @@ export const ew: Item[] = [
     slug: "krasukha-4",
     blockSlug: "ew",
     name: "1RL257 Krasukha-4",
-    aka: "Krasukha-S4",
+    aka: null,
     imageUrl: "/images/items/krasukha-4.jpg",
     imageCredit: "CC BY-SA 4.0 — Boevaya mashina",
     imagePage: "https://commons.wikimedia.org/wiki/File:1RL257E_Krasukha-4_Army-2018.jpg",
@@ -43,7 +43,7 @@ export const ew: Item[] = [
     slug: "krasukha-2",
     blockSlug: "ew",
     name: "1L269 Krasukha-2",
-    aka: "Krasukha-2O",
+    aka: null,
     imageUrl: "/images/items/krasukha-2.jpg",
     imageCredit: "CC BY-SA 3.0 — Vitaly V. Kuzmin",
     imagePage:

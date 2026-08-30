@@ -97,7 +97,7 @@ export const airDefence: Item[] = [
     slug: "tunguska",
     blockSlug: "air-defence",
     name: "2K22 Tunguska",
-    aka: "2S6M; Grison, SA-19",
+    aka: "Grison; SA-19",
     imageUrl: "/images/items/tunguska.jpg",
     imageCredit: "CC BY-SA 3.0 de — Boevaya mashina",
     imagePage: "https://commons.wikimedia.org/wiki/File:2S6M1_Tunguska_M1_at_ARMY-2016.JPG",

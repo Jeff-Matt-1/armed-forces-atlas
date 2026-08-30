@@ -3,7 +3,6 @@ import type { ItemTranslation } from "@/content/translations";
 /** Block 10 — Elektroonilise sõjapidamise süsteemid. */
 export const etEw: Record<string, ItemTranslation> = {
   "krasukha-4": {
-    aka: "Krasuha-S4",
     rangeText: "Mõjus õhus olevate radarite vastu kuni umbes 300 km",
     cues: [
       "Mitu ümarat paraboolantenni koos ühel kokkupandaval alusel",
@@ -13,14 +12,13 @@ export const etEw: Record<string, ItemTranslation> = {
     ],
     placements: [
       "Ringkonna ja armee tasandil hoitavad elektroonilise sõjapidamise brigaadid ja kompaniid",
-      "Paigutatakse katma väekoondist, mitte üksust",
+      "Paigutatakse katma allüksust, mitte üksust",
     ],
     doctrineNote:
-      "Suunatud ülespoole: õhus olevate tulejuhtimisradarite, radarsatelliitide ja droonide andmesidelinkide vastu. Ta ei võitle vastasega enda ees, vaid sensoritega, mis muidu näeksid koondist, keda ta kaitseb.",
+      "Suunatud ülespoole: õhus olevate tulejuhtimisradarite, radarsatelliitide ja droonide andmesidelinkide vastu. Ta ei võitle vastasega enda ees, vaid sensoritega, mis muidu näeksid allüksust, keda ta kaitseb.",
     service: "Kasutuses",
   },
   "krasukha-2": {
-    aka: "Krasuha-2O",
     rangeText: "Mõjus õhus olevate radarite vastu kuni umbes 250 km",
     cues: [
       "Üksainus väga suur taldrik, mitte Krasuha-4 väiksemate kogum",
@@ -30,7 +28,7 @@ export const etEw: Record<string, ItemTranslation> = {
     ],
     placements: [
       "Ringkonna tasandi elektroonilise sõjapidamise brigaadid",
-      "Paaris Krasuha-4-ga samades koondistes",
+      "Paaris Krasuha-4-ga samades allüksustes",
     ],
     doctrineNote:
       "Ehitatud just õhus olevate varajase hoiatuse lennukite pimestamiseks. Kui Krasuha-4 katab hulga õhukiirgureid, siis see keskendub sellele, mis näeb kõige kaugemale.",
@@ -64,7 +62,7 @@ export const etEw: Record<string, ItemTranslation> = {
     ],
     placements: [
       "Motolaskur- ja tankibrigaadide koosseisulised elektroonilise sõjapidamise kompaniid",
-      "Töötab ees koos koondisega, kuhu ta kuulub",
+      "Töötab ees koos allüksusega, kuhu ta kuulub",
     ],
     doctrineNote:
       "Brigaadi enda segaja, piisavalt väike, et lahinguga kaasa liikuda. Grau ja Bartles käsitlevad raadioelektroonilist võitlust brigaadi tasandil koosseisulise, mitte ülalt juurde antud väeliigina, ja maapinnal näeb see välja just nii.",

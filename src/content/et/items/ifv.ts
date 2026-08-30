@@ -62,7 +62,7 @@ export const etIfv: Record<string, ItemTranslation> = {
       "Hüdropneumaatiline vedrustus: kere kõrgus muutub nähtavalt",
       "Väike üheinimese 30 mm torn, mitte BMP-2 kaheinimesetorn",
     ],
-    placements: ["Õhudessantväe (VDV) üksused", "Õhudessantrünnakukoondised"],
+    placements: ["Õhudessantväe (VDV) üksused", "Õhudessantrünnakuallüksused"],
     doctrineNote:
       "Kõik selle juures on kompromiss langevarjuga heidetavuse nimel. Grau ja Bartles märgivad, et õhudessantvägi võitleb eraldi väeliigina oma masinatega; BMD nägemine BMP asemel ütleb, millise väeliigiga on tegemist.",
     crew: "2 + 5",
@@ -83,7 +83,7 @@ export const etIfv: Record<string, ItemTranslation> = {
       "Paaris BTR-MDM vedajatega samades pataljonides",
     ],
     doctrineNote:
-      "Annab õhudessantüksustele BMP-3-ga sama tulejõu langevarjuga heidetavas paketis. See on selgeim märk moderniseeritud, mitte pärandkoosseisuga õhudessantkoondisest.",
+      "Annab õhudessantüksustele BMP-3-ga sama tulejõu langevarjuga heidetavas paketis. See on selgeim märk moderniseeritud, mitte pärandkoosseisuga õhudessantallüksusest.",
     crew: "2 + 5",
     service: "Kasutuses",
   },

@@ -22,7 +22,7 @@ export const etHandguns: Record<string, ItemTranslation> = {
     service: "Pärand, endiselt kasutuses",
   },
   "mp-443": {
-    aka: "Pistolet Jarõgina, 6P35",
+    aka: "Pistolet Jarõgina",
     armament: "9x19 mm, 17/18-padrunine salv",
     rangeText: "Mõjus kuni 50 m",
     cues: [
@@ -41,7 +41,6 @@ export const etHandguns: Record<string, ItemTranslation> = {
     service: "Praegune standard",
   },
   "gsh-18": {
-    aka: "6P54",
     armament: "9x19 mm (sh soomustläbistav 7N31), 18-padrunine salv",
     rangeText: "Mõjus kuni 50 m",
     cues: [
@@ -75,7 +74,7 @@ export const etHandguns: Record<string, ItemTranslation> = {
     service: "Pärand / eriotstarbeline",
   },
   "sr-1mp": {
-    aka: "Vektor / SPS, 6P53",
+    aka: "Vektor / SPS",
     armament: "9x21 mm soomustläbistav, 18-padrunine salv",
     rangeText: "Mõjus 50 m; läbistab kuulivesti kuni 50 m",
     cues: [
@@ -107,7 +106,6 @@ export const etHandguns: Record<string, ItemTranslation> = {
     service: "Eriüksused",
   },
   udav: {
-    aka: "SR-1 järglane, 6P72",
     armament: "9x21 mm, 18-padrunine salv",
     rangeText: "Mõjus kuni 100 m",
     cues: [

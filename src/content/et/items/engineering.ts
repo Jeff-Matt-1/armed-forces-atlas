@@ -11,11 +11,11 @@ export const etEngineering: Record<string, ItemTranslation> = {
       "Väike operaatorikuppel tublisti ees",
     ],
     placements: [
-      "Pioneeriüksused soomuskoondistele marsruutide raivamiseks",
+      "Pioneeriüksused soomusallüksustele marsruutide raivamiseks",
       "Kasutatakse tõkete murdmiseks ja rusude koristamiseks",
     ],
     doctrineNote:
-      "Ehitatud töötama tule all, ja seepärast tehakse ekskavaatori tööd tankikerel. Selle olemasolu ees tähendab, et koondis arvestab endale ise marsruudi rajamisega, mitte olemasoleva kasutamisega.",
+      "Ehitatud töötama tule all, ja seepärast tehakse ekskavaatori tööd tankikerel. Selle olemasolu ees tähendab, et allüksus arvestab endale ise marsruudi rajamisega, mitte olemasoleva kasutamisega.",
     crew: "2",
     service: "Kasutuses",
   },
@@ -29,11 +29,11 @@ export const etEngineering: Record<string, ItemTranslation> = {
       "Masin istub koorma tõttu märgatavalt kõrgel",
     ],
     placements: [
-      "Pioneeriüksused tanki- ja motolaskurkoondiste toetuseks",
+      "Pioneeriüksused tanki- ja motolaskurallüksuste toetuseks",
       "Liigub esimeses ešelonis, mitte selle taga",
     ],
     doctrineNote:
-      "Tankišassii sellepärast, et sild peab jõudma sinna, kus on tankid, ja teekonna üle elama. Ta ostab ühe ületuskoha kiiresti ja tuleb siis tagasi tuua — seepärast võtab mitme lõhkega arvestav koondis kaasa hoopis pontoonid.",
+      "Tankišassii sellepärast, et sild peab jõudma sinna, kus on tankid, ja teekonna üle elama. Ta ostab ühe ületuskoha kiiresti ja tuleb siis tagasi tuua — seepärast võtab mitme lõhkega arvestav allüksus kaasa hoopis pontoonid.",
     crew: "2",
     service: "Kasutuses",
   },
@@ -51,7 +51,7 @@ export const etEngineering: Record<string, ItemTranslation> = {
       "Üks või rohkem iga tankipataljoni kohta",
     ],
     doctrineNote:
-      "Toob kahjustatud masinad lahinguväljalt ära, et neid saaks parandada, mitte maha kanda. Kuna Vene väekoondistel on asendusvarusid vähe, hoiab suure osa tankipataljoni koosseisust üleval just evakuatsioonimasin.",
+      "Toob kahjustatud masinad lahinguväljalt ära, et neid saaks parandada, mitte maha kanda. Kuna Vene allüksustel on asendusvarusid vähe, hoiab suure osa tankipataljoni koosseisust üleval just evakuatsioonimasin.",
     crew: "3",
     service: "Kasutuses",
   },
