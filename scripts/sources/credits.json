@@ -110,6 +110,16 @@
     "attributionRequired": false
   },
   {
+    "slug": "ark-1",
+    "file": "File:1RL239 in Togliatti Technical museum.jpg",
+    "localPath": "/images/items/ark-1.jpg",
+    "imageCredit": "CC BY-SA 3.0 — ShinePhantom",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:1RL239_in_Togliatti_Technical_museum.jpg",
+    "licence": "CC BY-SA 3.0",
+    "artist": "ShinePhantom",
+    "attributionRequired": true
+  },
+  {
     "slug": "bm-21-grad",
     "file": "File:Russian BM-21 Grad in Saint Petersburg.JPG",
     "localPath": "/images/items/bm-21-grad.jpg",

@@ -70,6 +70,22 @@ export const etRadars: Record<string, ItemTranslation> = {
       "Jälgib mürske lennus ja arvutab tagasi kahurini, mis need välja saatis. Sõjas, mida peetakse mõlemal pool suurtükiväega, on ta lahinguvälja väärtuslikemaid sihtmärke — sellest roomikud, madal profiil ja positsiooni vahetamine kohe pärast kiirgamist.",
     service: "Kasutuses",
   },
+  "ark-1": {
+    aka: "Ilves",
+    rangeText: "Avastab miinipildujad kuni umbes 10 km, raketiheitjad kuni umbes 20 km",
+    cues: [
+      "Ümmargune peegelantenn alusel — Zoopark istub samal kerel lameda ristkülikukujulise paneeliga",
+      "Antenn klapitakse sõiduks tagatekile alla",
+      "Pikk MT-LBu kere, seitse tugiratast, torni ei ole",
+      "Kandiline seadmekast antenni ja juhikoha vahel",
+    ],
+    placements: [
+      "Suurtükiväeluure üksuste vastupatareijaam",
+      "Paigutatakse rindejoone taha nii, et sektor katab vastase suurtükipositsioone",
+    ],
+    doctrineNote:
+      "Vanem vastupatareijaam, mis on endiselt kasutuses kõrvuti Zoopargiga, mis pidi ta välja vahetama. Mõlemad sõidavad samal kerel, nii et kogu tuvastus on antenn — siin peegelantenn, seal lame paneel. Kumbki neist ütleb, et suurtükiväeluure üksus töötab ja et miinipilduja tuli läheduses maksab midagi.",
+  },
   "snar-10": {
     aka: "Leopard",
     armament: "7.62 mm PKT",

@@ -120,6 +120,32 @@ export const radars: Item[] = [
     sort: 3,
   },
   {
+    slug: "ark-1",
+    blockSlug: "radars",
+    name: "1RL239 ARK-1",
+    aka: "Lynx",
+    imageUrl: "/images/items/ark-1.jpg",
+    imageCredit: "CC BY-SA 3.0 — ShinePhantom",
+    imagePage: "https://commons.wikimedia.org/wiki/File:1RL239_in_Togliatti_Technical_museum.jpg",
+    armament: null,
+    rangeText: "Locates mortars to roughly 10 km, rocket launchers to roughly 20 km",
+    cues: [
+      "Round dish on a pedestal — the Zoopark rides the same hull behind a flat rectangular panel",
+      "Dish folds down over the rear deck for travel",
+      "Long MT-LBu hull, seven roadwheels, no turret",
+      "Boxy equipment shelter between the dish and the driver's compartment",
+    ],
+    placements: [
+      "Counter-battery radar of artillery reconnaissance units",
+      "Sited close behind the line so its sector covers enemy gun areas",
+    ],
+    doctrineNote:
+      "The older counter-battery set, still fielded alongside the Zoopark that was meant to replace it. Both ride the same hull, so the antenna is the entire identification — a dish here, a flat panel there. Either one tells you an artillery reconnaissance unit is working and that firing a mortar nearby has a cost.",
+    crew: null,
+    service: "In service",
+    sort: 4,
+  },
+  {
     slug: "snar-10",
     blockSlug: "radars",
     name: "SNAR-10",
@@ -144,6 +170,6 @@ export const radars: Item[] = [
       "Points at the ground, not the sky: it finds vehicles and men moving in the enemy's rear and can walk artillery onto them by watching the fall of shot. The small antenna is the tell that this is a short-range ground sensor.",
     crew: null,
     service: "In service",
-    sort: 4,
+    sort: 5,
   },
 ];
