@@ -93,9 +93,8 @@ export const missiles: Item[] = [
     name: "3K60 Bal",
     aka: "SSC-6 Sennight",
     imageUrl: "/images/items/bal.jpg",
-    imageCredit: "CC BY 4.0 — Ildus Gilazutdinov",
-    imagePage:
-      "https://commons.wikimedia.org/wiki/File:Crews_of_the_coastal_missile_system_Bal_of_the_Pacific_Fleet_perform_training_firings_02.jpg",
+    imageCredit: "CC0 — Pliskin",
+    imagePage: "https://commons.wikimedia.org/wiki/File:BAL-E003.jpg",
     armament: "Eight Kh-35 anti-ship missiles in a boxed block",
     rangeText: "Roughly 120–260 km depending on missile",
     cues: [

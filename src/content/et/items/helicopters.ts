@@ -11,6 +11,7 @@ export const etHelicopters: Record<string, ItemTranslation> = {
       "Tiivatüükad relvade jaoks, otsad järsult allapoole kaldu",
       "Kabiini taga dessantruum: ta veab meeskonda, mida ükski teine siinne ründekopter ei tee",
       "Sissetõmmatav telik, kopteri kohta ebatavaline",
+      "Pildil Tšehhi tähistustega — seda tüüpi lendab palju kasutajariike",
     ],
     placements: [
       "Maaväe lennuväerügemendid maaüksuste toetuseks",

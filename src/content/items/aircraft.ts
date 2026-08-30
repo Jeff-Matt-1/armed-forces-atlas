@@ -278,9 +278,8 @@ export const aircraft: Item[] = [
     name: "Su-30SM",
     aka: "Flanker-H",
     imageUrl: "/images/items/su-30sm.jpg",
-    imageCredit: "CC BY 4.0 — Japan Ministry of Defense / Japan Air Self-Defense Force",
-    imagePage:
-      "https://commons.wikimedia.org/wiki/File:Russian_Air_Force_Su-30SM_51_Blue_20251209.jpg",
+    imageCredit: "CC BY-SA 3.0 — Alex Beltyukov",
+    imagePage: "https://commons.wikimedia.org/wiki/File:Sukhoi_Su-30SM_in_flight_2014.jpg",
     armament: "30 mm GSh-30-1, air-to-air and guided air-to-ground weapons",
     rangeText: "Combat radius roughly 1,500 km",
     cues: [

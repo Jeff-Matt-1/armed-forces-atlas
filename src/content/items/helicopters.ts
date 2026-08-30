@@ -15,9 +15,8 @@ export const helicopters: Item[] = [
     name: "Mi-24",
     aka: "Hind",
     imageUrl: "/images/items/mi-24.jpg",
-    imageCredit: "CC BY 2.0 — Eric Friedebach",
-    imagePage:
-      "https://commons.wikimedia.org/wiki/File:Mil_Mi-24_Hind_Helicopter_(51326569448).jpg",
+    imageCredit: "CC BY-SA 4.0 — Jakub Hałun",
+    imagePage: "https://commons.wikimedia.org/wiki/File:20110827_Mi-24_Radom_Air_Show_8611.jpg",
     armament: "12.7 mm or 30 mm gun, rockets, Shturm or Ataka missiles",
     rangeText: "Combat radius roughly 160 km",
     cues: [
@@ -25,6 +24,7 @@ export const helicopters: Item[] = [
       "Stub wings that carry weapons and are angled sharply down at the tips",
       "A cabin behind the cockpit: it carries troops, which no other gunship here does",
       "Retractable undercarriage, unusual on a helicopter",
+      "Photographed here in Czech markings — the type is flown by many operators",
     ],
     placements: [
       "Army aviation regiments supporting ground formations",
@@ -122,8 +122,8 @@ export const helicopters: Item[] = [
     name: "Mi-26",
     aka: "Halo",
     imageUrl: "/images/items/mi-26.jpg",
-    imageCredit: "CC0 — Аимаина хикари",
-    imagePage: "https://commons.wikimedia.org/wiki/File:Mi-26_Kiev8.jpg",
+    imageCredit: "CC BY-SA 2.0 — Alan Wilson",
+    imagePage: "https://commons.wikimedia.org/wiki/File:Mil_Mi-26_Halo_88_blue_(8594011266).jpg",
     armament: null,
     rangeText: "Carries roughly 20 tonnes",
     cues: [
