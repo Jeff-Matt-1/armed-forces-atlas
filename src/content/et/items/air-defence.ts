@@ -70,7 +70,7 @@ export const etAirDefence: Record<string, ItemTranslation> = {
       "Torn on Šilka omast palju kõrgem",
     ],
     placements: [
-      "Tanki- ja motolaskurrügementide õhutõrjepatareid",
+      "Motolaskur- ja tankirügementide õhutõrjepatareid",
       "Asendas Šilka esimese liini allüksustes",
     ],
     doctrineNote:

@@ -128,7 +128,7 @@ export const blocks: Block[] = [
     slug: "tanks",
     ordinal: 9,
     title: "Tanks",
-    subtitle: "Main battle tanks in Russian service",
+    subtitle: "Main battle tanks, and the light tank of the airborne",
     brief:
       "Three families dominate: T-72 (and its T-90 descendant), T-80 with a gas-turbine engine, and reactivated T-62/T-55 stock. All use a 125 mm smoothbore with an autoloader and a three-man crew except the T-62 (115 mm, four crew). Recognition works off turret shape, ERA pattern, roadwheel spacing and exhaust position.",
     doctrineNote:
@@ -1439,4 +1439,31 @@ export const items: Item[] = [
   ...submarines,
   ...drones,
   ...aircraft,
+  {
+    slug: "2s25-sprut-sd",
+    blockSlug: "tanks",
+    name: "2S25 Sprut-SD",
+    aka: "Octopus",
+    imageUrl: "/images/items/2s25-sprut-sd.jpg",
+    imageCredit:
+      "Public domain — Участник:Николай Александрович Колосов. Original uploader was Николай Александрович Колосов at ru.wikipedia",
+    imagePage: "https://commons.wikimedia.org/wiki/File:2S25_Sprut-SD.jpg",
+    armament: "125 mm 2A75 gun, coaxial 7.62 mm PKT",
+    rangeText: "Gun to roughly 2,000 m, gun-launched missile to 5,000 m",
+    cues: [
+      "Tank gun on a hull far too light for it — the give-away at any distance",
+      "Seven small roadwheels of the BMD family, not a tank's large ones",
+      "Very low flat hull that sits close to the ground",
+      "Amphibious, with water jets at the rear that no MBT has",
+    ],
+    placements: [
+      "Anti-tank units of airborne divisions",
+      "Air-dropped with the force it supports, unlike any main battle tank",
+    ],
+    doctrineNote:
+      "Not a main battle tank and not armoured like one: it carries a tank's gun so that airborne troops, who cannot bring tanks, still have something that kills them. Mistaking one for a T-72 at distance overestimates what is in front of you by a great deal.",
+    crew: "3",
+    service: "In service",
+    sort: 7,
+  },
 ];

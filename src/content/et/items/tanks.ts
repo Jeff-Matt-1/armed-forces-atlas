@@ -144,4 +144,23 @@ export const etTanks: Record<string, ItemTranslation> = {
     crew: "5",
     service: "Piiratud kasutuses",
   },
+  "2s25-sprut-sd": {
+    aka: "Kaheksajalg",
+    armament: "125 mm kahur 2A75, koaksiaalne 7.62 mm PKT",
+    rangeText: "Kahur kuni umbes 2000 m, kahurist lastav rakett 5000 m",
+    cues: [
+      "Tankikahur kerel, mis on selle jaoks palju liiga kerge — äratundmismärk igalt kauguselt",
+      "Seitse väikest BMD-perekonna tugiratast, mitte tanki suured",
+      "Väga madal lame kere, mis istub maapinna lähedal",
+      "Ujuv, taga veejoad, mida ühelgi põhilahingutankil ei ole",
+    ],
+    placements: [
+      "Õhudessantdiviiside tankitõrjeüksused",
+      "Heidetakse õhu teel koos väega, keda ta toetab — erinevalt ükskõik millisest põhilahingutankist",
+    ],
+    doctrineNote:
+      "Ei ole põhilahingutank ega ole ka nii soomustatud: ta kannab tankikahurit selleks, et õhudessantväel, kes tanke kaasa võtta ei saa, oleks siiski midagi, mis neid hävitab. Kui pidada teda kaugelt T-72-ks, hindad enda ees olevat tugevalt üle.",
+    crew: "3",
+    service: "Kasutuses",
+  },
 };

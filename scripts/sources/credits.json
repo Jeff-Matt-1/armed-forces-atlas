@@ -80,6 +80,16 @@
     "attributionRequired": true
   },
   {
+    "slug": "2s25-sprut-sd",
+    "file": "File:2S25 Sprut-SD.jpg",
+    "localPath": "/images/items/2s25-sprut-sd.jpg",
+    "imageCredit": "Public domain — Участник:Николай Александрович Колосов. Original uploader was Николай Александрович Колосов at ru.wikipedia",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:2S25_Sprut-SD.jpg",
+    "licence": "Public domain",
+    "artist": "Участник:Николай Александрович Колосов. Original uploader was Николай Александрович Колосов at ru.wikipedia",
+    "attributionRequired": false
+  },
+  {
     "slug": "2s3-akatsiya",
     "file": "File:2S3 Akatsiya 2.jpg",
     "localPath": "/images/items/2s3-akatsiya.jpg",
@@ -100,6 +110,16 @@
     "attributionRequired": true
   },
   {
+    "slug": "2s4-tyulpan",
+    "file": "File:2S4 Tyulpan.jpg",
+    "localPath": "/images/items/2s4-tyulpan.jpg",
+    "imageCredit": "CC BY-SA 3.0 — Dmitry A. Mottl",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:2S4_Tyulpan.jpg",
+    "licence": "CC BY-SA 3.0",
+    "artist": "Dmitry A. Mottl",
+    "attributionRequired": true
+  },
+  {
     "slug": "2s43-malva",
     "file": "File:2S43 Malva.jpg",
     "localPath": "/images/items/2s43-malva.jpg",
@@ -117,6 +137,16 @@
     "imagePage": "https://commons.wikimedia.org/wiki/File:2S7_Pion_at_ARMY-2018.jpg",
     "licence": "CC BY-SA 4.0",
     "artist": "Boevaya mashina",
+    "attributionRequired": true
+  },
+  {
+    "slug": "2s9-nona-s",
+    "file": "File:2S9 Nona-S.png",
+    "localPath": "/images/items/2s9-nona-s.png",
+    "imageCredit": "CC BY-SA 3.0 — Olegvdv68",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:2S9_Nona-S.png",
+    "licence": "CC BY-SA 3.0",
+    "artist": "Olegvdv68",
     "attributionRequired": true
   },
   {
@@ -391,12 +421,12 @@
   },
   {
     "slug": "buk-m2",
-    "file": "File:Buk-M2, 2009 Victory parade.JPG",
+    "file": "File:Buk TELAR Moscow 2015.jpg",
     "localPath": "/images/items/buk-m2.jpg",
-    "imageCredit": "CC BY-SA 3.0 — piligrims74 (Anton)",
-    "imagePage": "https://commons.wikimedia.org/wiki/File:Buk-M2,_2009_Victory_parade.JPG",
+    "imageCredit": "CC BY-SA 3.0 — Boevaya mashina",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:Buk_TELAR_Moscow_2015.jpg",
     "licence": "CC BY-SA 3.0",
-    "artist": "piligrims74 (Anton)",
+    "artist": "Boevaya mashina",
     "attributionRequired": true
   },
   {
@@ -537,6 +567,16 @@
     "imagePage": "https://commons.wikimedia.org/wiki/File:IMR-3M_armoured_engineering_vehicle_at_Engineering_Technologies_2012.jpg",
     "licence": "CC BY-SA 3.0",
     "artist": "Mike1979 Russia",
+    "attributionRequired": true
+  },
+  {
+    "slug": "irm",
+    "file": "File:IRM Zhuk.jpg",
+    "localPath": "/images/items/irm.jpg",
+    "imageCredit": "CC BY-SA 4.0 — Historiador09NI",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:IRM_Zhuk.jpg",
+    "licence": "CC BY-SA 4.0",
+    "artist": "Historiador09NI",
     "attributionRequired": true
   },
   {
@@ -1261,12 +1301,12 @@
   },
   {
     "slug": "s-400",
-    "file": "File:S-400 Triumf launch vehicle.JPG",
+    "file": "File:S-400 Triumf (27102989027).jpg",
     "localPath": "/images/items/s-400.jpg",
-    "imageCredit": "CC BY 3.0 — Droni4ch",
-    "imagePage": "https://commons.wikimedia.org/wiki/File:S-400_Triumf_launch_vehicle.JPG",
-    "licence": "CC BY 3.0",
-    "artist": "Droni4ch",
+    "imageCredit": "CC BY 2.0 — Dmitriy Fomin from Moscow, Russia",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:S-400_Triumf_(27102989027).jpg",
+    "licence": "CC BY 2.0",
+    "artist": "Dmitriy Fomin from Moscow, Russia",
     "attributionRequired": true
   },
   {

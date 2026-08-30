@@ -83,7 +83,7 @@ export const etBlocks: Record<string, BlockTranslation> = {
   },
   tanks: {
     title: "Tankid",
-    subtitle: "Vene teenistuses olevad põhilahingutankid",
+    subtitle: "Põhilahingutankid ja õhudessantvägede kergtank",
     brief:
       "Domineerib kolm perekonda: T-72 (ja tema järglane T-90), gaasiturbiiniga T-80 ning taaskasutusse võetud T-62/T-55. Kõigil on 125 mm sileraudne kahur automaatlaaduri ja kolmeliikmelise meeskonnaga, välja arvatud T-62 (115 mm, neli meest). Tuvastamine käib torni kuju, reaktiivsoomuse mustri, tugirataste vahekauguse ja väljalaske asukoha järgi.",
     doctrineNote:

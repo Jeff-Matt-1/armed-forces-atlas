@@ -110,7 +110,7 @@ export const airDefence: Item[] = [
       "Turret much taller than a Shilka's",
     ],
     placements: [
-      "Air defence batteries of tank and motor rifle regiments",
+      "Air defence batteries of motor rifle and tank regiments",
       "Replaced the Shilka in first-line formations",
     ],
     doctrineNote:
@@ -178,8 +178,8 @@ export const airDefence: Item[] = [
     name: "9K37 Buk-M2",
     aka: "Grizzly; SA-17",
     imageUrl: "/images/items/buk-m2.jpg",
-    imageCredit: "CC BY-SA 3.0 — piligrims74 (Anton)",
-    imagePage: "https://commons.wikimedia.org/wiki/File:Buk-M2,_2009_Victory_parade.JPG",
+    imageCredit: "CC BY-SA 3.0 — Boevaya mashina",
+    imagePage: "https://commons.wikimedia.org/wiki/File:Buk_TELAR_Moscow_2015.jpg",
     armament: "4 × 9M317 missiles",
     rangeText: "Engages to about 45 km, up to 25 km altitude",
     cues: [
@@ -204,8 +204,8 @@ export const airDefence: Item[] = [
     name: "S-400 Triumf",
     aka: "Growler; SA-21",
     imageUrl: "/images/items/s-400.jpg",
-    imageCredit: "CC BY 3.0 — Droni4ch",
-    imagePage: "https://commons.wikimedia.org/wiki/File:S-400_Triumf_launch_vehicle.JPG",
+    imageCredit: "CC BY 2.0 — Dmitriy Fomin from Moscow, Russia",
+    imagePage: "https://commons.wikimedia.org/wiki/File:S-400_Triumf_(27102989027).jpg",
     armament: "4 × missile canisters, several missile types",
     rangeText: "Engages to 400 km depending on missile",
     cues: [

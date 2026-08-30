@@ -265,4 +265,42 @@ export const etArtillery: Record<string, ItemTranslation> = {
     crew: "4",
     service: "Kasutuses",
   },
+  "2s9-nona-s": {
+    aka: "Nona",
+    armament: "120 mm kahur-miiniheitja 2A51",
+    rangeText: "Umbes 8,8 km, reaktiivmürsuga kaugemale",
+    cues: [
+      "BTR-D kere — roomikutel, madal, kuus väikest tugiratast",
+      "Väike torn väga lühikese jämeda toruga",
+      "Toru tõuseb palju kõrgemale kui ükski tanki- või rünnakukahur",
+      "Õhu teel heidetav ja ujuv, erinevalt 2S31-st tema BMP-3 kerel",
+    ],
+    placements: [
+      "Õhudessantrügementide liikursuurtükiväe patareid",
+      "Õhudessantväe vastus haubitsapatareile, heidetakse koos väega alla",
+    ],
+    doctrineNote:
+      "Seesama kahur-miiniheitja, mida Nona-K veab, pandud kerele, mis on piisavalt kerge langevarjuga heitmiseks. See annab õhudessantrügemendile oma kaudtule kohe maandumisest alates, ja just see on vahe eesmärgi hoidmise ja pelgalt sinna jõudmise vahel.",
+    crew: "4",
+    service: "Kasutuses",
+  },
+  "2s4-tyulpan": {
+    aka: "Tulp",
+    armament: "240 mm miiniheitja 2B8",
+    rangeText: "Umbes 9,6 km, reaktiivmiiniga umbes 20 km",
+    cues: [
+      "Hiiglaslik miiniheitjatoru kantakse tagatekil kokkuklapitult, mitte tornis",
+      "Toru pöördub alla ja taha ning tulistab maapinnal olevalt alusplaadilt",
+      "Roomikkere ilma tornita, suuruselt lähedane 2S7-le",
+      "Miinid on mehekõrgused ja laaditakse tagant raamilt",
+    ],
+    placements: [
+      "Armee tasandil hoitavad rasked miinipildujapatareid",
+      "Rakendatakse kindlustuste vastu, mitte rünnaku toetuseks",
+    ],
+    doctrineNote:
+      "Suurim teenistuses olev miiniheitja maailmas, ja ta ei ole mõeldud lagedal oleva elavjõu vastu: ta on hoonete, punkrite ja ettevalmistatud positsioonide jaoks, mida haubits ei murra. Ühe nägemine ütleb, et kindlustatud maastikule valmistatakse ette kavakohast rünnakut ja et otsus on tehtud tublisti kõrgemal kui kontaktis olev üksus.",
+    crew: "5",
+    service: "Kasutuses",
+  },
 };

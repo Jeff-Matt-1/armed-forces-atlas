@@ -119,4 +119,30 @@ export const recon: Item[] = [
     service: "In service",
     sort: 3,
   },
+  {
+    slug: "irm",
+    blockSlug: "reconnaissance",
+    name: "IRM Zhuk",
+    aka: "Beetle",
+    imageUrl: "/images/items/irm.jpg",
+    imageCredit: "CC BY-SA 4.0 — Historiador09NI",
+    imagePage: "https://commons.wikimedia.org/wiki/File:IRM_Zhuk.jpg",
+    armament: "7.62 mm PKT",
+    rangeText: null,
+    cues: [
+      "Boat-shaped hull with a high pointed bow — built to swim, not merely to wade",
+      "BMP-1 running gear: six small roadwheels under a much bulkier body",
+      "Folding probe arms lie along the glacis, one each side",
+      "Sensor and periscope clutter on the roof where a turret would be",
+    ],
+    placements: [
+      "Engineer reconnaissance units surveying routes and crossings",
+      "Works ahead of the bridging and route-clearing vehicles it reports for",
+    ],
+    doctrineNote:
+      "Answers the questions a crossing depends on: how deep, how fast, how soft the bottom, and whether the bank will take a vehicle. It surveys the river before the ferries and bridgelayers arrive, so finding one is an earlier warning of a crossing than finding the equipment that makes it.",
+    crew: "6",
+    service: "In service",
+    sort: 4,
+  },
 ];

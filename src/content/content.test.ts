@@ -55,6 +55,45 @@ describe("content wiring", () => {
     expect(offenders).toEqual([]);
   });
 
+  /**
+   * Two placements that mean the same thing become two options in one
+   * question, and the reader has to guess which wording the app prefers.
+   * The Shilka and the Tunguska both sit in regimental air defence batteries
+   * and each described it in its own word order, so "tank and motor rifle
+   * regiments" was marked wrong against "motor rifle and tank regiments".
+   *
+   * Comparing a sorted bag of significant words catches the word-order case,
+   * which is the one that arises when two people write the same fact twice.
+   */
+  test("no two placements in a block say the same thing", () => {
+    const skip = new Set(["of", "and", "the", "a", "in", "for", "at", "to", "ja", "ning"]);
+    const bag = (value: string) =>
+      [
+        ...new Set(
+          value
+            .toLowerCase()
+            .split(/[^\p{L}\p{N}]+/u)
+            .filter((word) => word && !skip.has(word)),
+        ),
+      ]
+        .sort()
+        .join(" ");
+
+    const clashes: string[] = [];
+    for (const block of readyBlocks) {
+      const groups = new Map<string, Set<string>>();
+      for (const placement of allPlacements([block.slug])) {
+        const key = bag(placement);
+        if (!groups.has(key)) groups.set(key, new Set());
+        groups.get(key)!.add(placement);
+      }
+      for (const variants of groups.values()) {
+        if (variants.size > 1) clashes.push(block.slug + ": " + [...variants].join(" / "));
+      }
+    }
+    expect(clashes).toEqual([]);
+  });
+
   test("slugs are unique", () => {
     const seen = new Set<string>();
     const duplicates = items.filter((i) => (seen.has(i.slug) ? true : (seen.add(i.slug), false)));

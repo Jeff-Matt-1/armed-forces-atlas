@@ -76,4 +76,22 @@ export const etRecon: Record<string, ItemTranslation> = {
     crew: "4",
     service: "Kasutuses",
   },
+  irm: {
+    aka: "Mardikas",
+    armament: "7.62 mm PKT",
+    cues: [
+      "Paadikujuline kere kõrge terava vööriga — ehitatud ujuma, mitte üksnes kahlama",
+      "BMP-1 käiguosa: kuus väikest tugiratast palju kogukama kere all",
+      "Klapitavad sondiõlad kere esiosal, üks kummalgi pool",
+      "Katusel sensorite ja periskoopide kobar seal, kus oleks torn",
+    ],
+    placements: [
+      "Pioneeriluure üksused, kes uurivad marsruute ja ülekäigukohti",
+      "Töötab sillapaneku- ja teeraivamismasinate ees, kellele ta ette kannab",
+    ],
+    doctrineNote:
+      "Vastab küsimustele, millest ülekäik sõltub: kui sügav, kui kiire vool, kui pehme põhi ja kas kallas kannab sõidukit. Ta uurib jõe läbi enne, kui parvlaevad ja sillapanekumasinad kohale jõuavad, nii et tema leidmine hoiatab ülekäigust varem kui selle tehnika leidmine, mis ülekäigu teeb.",
+    crew: "6",
+    service: "Kasutuses",
+  },
 };
