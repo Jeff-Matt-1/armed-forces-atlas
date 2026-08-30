@@ -620,6 +620,16 @@
     "attributionRequired": true
   },
   {
+    "slug": "ka-52",
+    "file": "File:Ka-52 at an air show in Voronezh 2014.jpg",
+    "localPath": "/images/items/ka-52.jpg",
+    "imageCredit": "CC BY-SA 4.0 — Роман Дергунов",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:Ka-52_at_an_air_show_in_Voronezh_2014.jpg",
+    "licence": "CC BY-SA 4.0",
+    "artist": "Роман Дергунов",
+    "attributionRequired": true
+  },
+  {
     "slug": "kamaz-4310",
     "file": "File:2014.05.14 kamaz-4310(1).JPG",
     "localPath": "/images/items/kamaz-4310.jpg",
@@ -757,6 +767,56 @@
     "imagePage": "https://commons.wikimedia.org/wiki/File:Abandoned_Russian_Linza_ambulance_01.jpg",
     "licence": "CC BY 4.0",
     "artist": "General Staff of the Armed Forces of Ukraine",
+    "attributionRequired": true
+  },
+  {
+    "slug": "mi-24",
+    "file": "File:Mil Mi-24 Hind Helicopter (51326569448).jpg",
+    "localPath": "/images/items/mi-24.jpg",
+    "imageCredit": "CC BY 2.0 — Eric Friedebach",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:Mil_Mi-24_Hind_Helicopter_(51326569448).jpg",
+    "licence": "CC BY 2.0",
+    "artist": "Eric Friedebach",
+    "attributionRequired": true
+  },
+  {
+    "slug": "mi-26",
+    "file": "File:Mi-26 Kiev8.jpg",
+    "localPath": "/images/items/mi-26.jpg",
+    "imageCredit": "CC0 — Аимаина хикари",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:Mi-26_Kiev8.jpg",
+    "licence": "CC0",
+    "artist": "Аимаина хикари",
+    "attributionRequired": false
+  },
+  {
+    "slug": "mi-28",
+    "file": "File:Mil Mi-28N Havoc (c n 34012843262) (8584312973).jpg",
+    "localPath": "/images/items/mi-28.jpg",
+    "imageCredit": "CC BY-SA 2.0 — Alan Wilson",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:Mil_Mi-28N_Havoc_(c_n_34012843262)_(8584312973).jpg",
+    "licence": "CC BY-SA 2.0",
+    "artist": "Alan Wilson",
+    "attributionRequired": true
+  },
+  {
+    "slug": "mi-8",
+    "file": "File:Russian Air Force Mil Mi-8MT Dvurekov-3.jpg",
+    "localPath": "/images/items/mi-8.jpg",
+    "imageCredit": "CC BY-SA 3.0 — Igor Dvurekov",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:Russian_Air_Force_Mil_Mi-8MT_Dvurekov-3.jpg",
+    "licence": "CC BY-SA 3.0",
+    "artist": "Igor Dvurekov",
+    "attributionRequired": true
+  },
+  {
+    "slug": "mig-29",
+    "file": "File:Mikoyan MiG-29 Fulcrum 10 blue (8605744566).jpg",
+    "localPath": "/images/items/mig-29.jpg",
+    "imageCredit": "CC BY-SA 2.0 — Alan Wilson",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:Mikoyan_MiG-29_Fulcrum_10_blue_(8605744566).jpg",
+    "licence": "CC BY-SA 2.0",
+    "artist": "Alan Wilson",
     "attributionRequired": true
   },
   {
@@ -1391,22 +1451,52 @@
   },
   {
     "slug": "su-25",
-    "file": "File:Sukhoi Su-25 of the Russian Air Force landing at Vladivostok (8683076150).jpg",
+    "file": "File:Russian Air Force Sukhoi Su-25 Lipetsk Ryabtsev.jpg",
     "localPath": "/images/items/su-25.jpg",
-    "imageCredit": "CC BY-SA 2.0 — Fedor Leukhin",
-    "imagePage": "https://commons.wikimedia.org/wiki/File:Sukhoi_Su-25_of_the_Russian_Air_Force_landing_at_Vladivostok_(8683076150).jpg",
-    "licence": "CC BY-SA 2.0",
-    "artist": "Fedor Leukhin",
+    "imageCredit": "GFDL 1.2 — Sergey Ryabtsev",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:Russian_Air_Force_Sukhoi_Su-25_Lipetsk_Ryabtsev.jpg",
+    "licence": "GFDL 1.2",
+    "artist": "Sergey Ryabtsev",
+    "attributionRequired": true
+  },
+  {
+    "slug": "su-27",
+    "file": "File:Su-27SM3 in flight, Celebration of the 100th anniversary of Russian Air Force.jpg",
+    "localPath": "/images/items/su-27.jpg",
+    "imageCredit": "CC BY-SA 4.0 — Vitaly V. Kuzmin",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:Su-27SM3_in_flight,_Celebration_of_the_100th_anniversary_of_Russian_Air_Force.jpg",
+    "licence": "CC BY-SA 4.0",
+    "artist": "Vitaly V. Kuzmin",
+    "attributionRequired": true
+  },
+  {
+    "slug": "su-30sm",
+    "file": "File:Russian Air Force Su-30SM 51 Blue 20251209.jpg",
+    "localPath": "/images/items/su-30sm.jpg",
+    "imageCredit": "CC BY 4.0 — Japan Ministry of Defense / Japan Air Self-Defense Force",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:Russian_Air_Force_Su-30SM_51_Blue_20251209.jpg",
+    "licence": "CC BY 4.0",
+    "artist": "Japan Ministry of Defense / Japan Air Self-Defense Force",
+    "attributionRequired": true
+  },
+  {
+    "slug": "su-33",
+    "file": "File:Sukhoi Su-33 at MAKS-2007 airshow.jpg",
+    "localPath": "/images/items/su-33.jpg",
+    "imageCredit": "CC BY-SA 3.0 — Pavel Adzhigildaev",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:Sukhoi_Su-33_at_MAKS-2007_airshow.jpg",
+    "licence": "CC BY-SA 3.0",
+    "artist": "Pavel Adzhigildaev",
     "attributionRequired": true
   },
   {
     "slug": "su-34",
-    "file": "File:Russian Air Force, RF-81857, Sukhoi Su-34 (51525365450).jpg",
+    "file": "File:Russian Air Force Su-34.jpg",
     "localPath": "/images/items/su-34.jpg",
-    "imageCredit": "CC BY-SA 2.0 — Anna Zvereva",
-    "imagePage": "https://commons.wikimedia.org/wiki/File:Russian_Air_Force,_RF-81857,_Sukhoi_Su-34_(51525365450).jpg",
-    "licence": "CC BY-SA 2.0",
-    "artist": "Anna Zvereva",
+    "imageCredit": "GFDL — Yevgeny Pashnin",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:Russian_Air_Force_Su-34.jpg",
+    "licence": "GFDL",
+    "artist": "Yevgeny Pashnin",
     "attributionRequired": true
   },
   {

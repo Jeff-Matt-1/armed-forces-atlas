@@ -12,6 +12,7 @@ import { etHandguns } from "@/content/et/items/handguns";
 import { etHeavyWeapons } from "@/content/et/items/heavy-weapons";
 import { etIfv } from "@/content/et/items/ifv";
 import { etLightVehicles } from "@/content/et/items/light-vehicles";
+import { etHelicopters } from "@/content/et/items/helicopters";
 import { etMissiles } from "@/content/et/items/missiles";
 import { etRadars } from "@/content/et/items/radars";
 import { etRanks } from "@/content/et/items/ranks";
@@ -45,6 +46,7 @@ export const etTranslations: ContentTranslations = {
     ...etTanks,
     ...etEw,
     ...etC2,
+    ...etHelicopters,
     ...etMissiles,
     ...etRadars,
     ...etEngineering,

@@ -177,4 +177,12 @@ export const etBlocks: Record<string, BlockTranslation> = {
     doctrineNote:
       "Ükski neist ei kuulu allüksusele, keda sa parasjagu jälgid. Neid vabastatakse armee tasandil või kõrgemal ja nad ulatuvad sihtmärkideni, mida sinu ees olev brigaad kunagi ei näe — juhtimispunktid, lennuväljad, sadamad, laskemoon. Ühe tuvastamine ütleb, milline ešelon on selle lõigu vastu huvi tundnud, ja see on teistsugune ning suurem fakt kui see, mida ütleb ükskõik milline kahur.",
   },
+  helicopters: {
+    title: "Kopterid",
+    subtitle: "Maaväe lennuväe ründe- ja transpordikopterid",
+    brief:
+      "Loe kõigepealt tiivikut. Kaks tiivikut ühel mastil ja sabatiivikut ei ole — see on Ka-52 ja mitte miski muu Vene teenistuses. Kõigil ülejäänutel on üks peatiivik ja sabatiivik, ja järgmine küsimus on, kas kabiini taga on dessantruum: dessantruumiga ründekopter on Hind, ilma selleta Mi-28, ja rida ümmargusi aknaid küljel tähendab Hipi koos sellega, mis talle sisse on kruvitud.",
+    doctrineNote:
+      "Maaväe lennuvägi kuulub maaväe ülemale, mitte õhuväele, ja teda kasutatakse väga liikuva tuletoetusena, mitte õhujõuna. Seepärast töötavad ründekopterid paarides madalal eesliini lähedal, ja seepärast ütleb nende leidmine, kus oodatakse maalahingut, mitte seda, kus käib õhukampaania.",
+  },
 };

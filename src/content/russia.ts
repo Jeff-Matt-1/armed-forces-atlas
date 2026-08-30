@@ -12,6 +12,7 @@ import { drones } from "@/content/items/drones";
 import { engineering } from "@/content/items/engineering";
 import { ew } from "@/content/items/ew";
 import { heavyWeapons } from "@/content/items/heavy-weapons";
+import { helicopters } from "@/content/items/helicopters";
 import { ifv } from "@/content/items/ifv";
 import { lightVehicles } from "@/content/items/light-vehicles";
 import { missiles } from "@/content/items/missiles";
@@ -260,6 +261,18 @@ export const blocks: Block[] = [
       "Missiles on wheels, and the first question is how many wheels. A four-axle chassis carrying two missiles openly is an Iskander; a single missile on a tilting rail behind a boat-shaped hull is a Tochka; four canisters lying flat on a truck is a coastal system; and eight axles under a single tube the length of the vehicle is strategic. Read the chassis first and the load second — these systems share almost nothing else.",
     doctrineNote:
       "None of these belongs to the formation you are watching. They are released at army level or above and reach targets the brigade in front of you will never see — headquarters, airfields, ports, ammunition. Identifying one tells you which echelon has taken an interest in this sector, which is a different and larger fact than what any gun tells you.",
+    status: "ready",
+    imageFit: "contain",
+  },
+  {
+    slug: "helicopters",
+    ordinal: 21,
+    title: "Helicopters",
+    subtitle: "Gunships and transports of army aviation",
+    brief:
+      "Read the rotor before anything else. Two rotors stacked on one mast with no tail rotor is a Ka-52 and nothing else in Russian service. Everything else has one main rotor and a tail rotor, and the next question is whether there is a cabin behind the cockpit: a gunship with a cabin is a Hind, a gunship without one is an Mi-28, and a cabin with rows of round windows is a Hip carrying whatever has been bolted inside it.",
+    doctrineNote:
+      "Army aviation belongs to the ground commander, not to the air force, and it is used as very mobile fire support rather than as air power. That is why the gunships work in pairs at low level near the forward edge, and why finding them tells you where the ground fight is expected rather than where the air campaign is.",
     status: "ready",
     imageFit: "contain",
   },
@@ -1444,6 +1457,7 @@ export const items: Item[] = [
   ...apc,
   ...ew,
   ...c2,
+  ...helicopters,
   ...missiles,
   ...radars,
   ...engineering,

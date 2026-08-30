@@ -141,4 +141,80 @@ export const etAircraft: Record<string, ItemTranslation> = {
     crew: "5",
     service: "Kasutuses",
   },
+  "mig-29": {
+    aka: "Fulcrum",
+    armament: "30 mm GSh-30-1, õhk-õhk raketid R-73 ja R-27",
+    rangeText: "Lahingraadius umbes 700 km",
+    cues: [
+      "Kaks mootorit laialt paigutatud, nende vahel sügav valgusest läbipaistev tunnel",
+      "Tiivajuured sulanduvad kerre pika kaarja üleminekuga",
+      "Kaks väljapoole kaldu kiilu, väiksemad kui Flankeril",
+      "Märgatavalt lühem ja jässakam kui ükski Su-27 tuletis",
+    ],
+    placements: [
+      "Rindeõhukaitseks määratud hävitajarügemendid",
+      "Lühikese tegevusraadiusega juba disainilt: kaitseb piirkonda, kus ta baseerub",
+    ],
+    doctrineNote:
+      "Ehitatud hoidma õhuruumi lahingu kohal, mitte ulatuma sellest kaugemale — seepärast on tema kütusevaru ja radar tagasihoidlikud ja väledus mitte. Kui Flanker tähendab ulatust, siis Fulcrum tähendab õhuruumi otse selle allüksuse kohal, keda sa jälgid.",
+    crew: "1",
+    service: "Kasutuses",
+  },
+  "su-27": {
+    aka: "Flanker",
+    armament: "30 mm GSh-30-1, õhk-õhk raketid R-27 ja R-73",
+    rangeText: "Lahingraadius umbes 1300 km",
+    cues: [
+      "Suur kahemootoriline hävitaja pika kaarja tiivajuure eesservaga",
+      "Iseloomulik sabaastel, mis ulatub mootoritest tublisti tahapoole",
+      "Kaks kiilu mootoritest väljaspool, mitte nende peal",
+      "Igas mõõtmes suurem kui MiG-29 — perekondlik sarnasus ongi lõks",
+    ],
+    placements: [
+      "Hävitajarügemendid, kelle ülesanne on õhukaitse kaugusel",
+      "Lennukikere, millest on välja venitatud kõik hilisemad selle õppetüki Flankerid",
+    ],
+    doctrineNote:
+      "Perekonna alusmasin: Su-30, Su-33, Su-34 ja Su-35 on kõik seesama lennuk, mida on rolli järgi muudetud. Su-27 esimesena selgeks õppimine ongi see, mis teeb ülejäänud eristatavaks, sest erinevused on ninas, kabiinis ja kanardides, mitte üldkujus.",
+    crew: "1",
+    service: "Kasutuses",
+  },
+  "su-30sm": {
+    aka: "Flanker-H",
+    armament: "30 mm GSh-30-1, õhk-õhk ja juhitavad õhk-maa relvad",
+    rangeText: "Lahingraadius umbes 1500 km",
+    cues: [
+      "Flankeri kuju, tiivajuurte ees väikesed kanardid",
+      "Kaks istet üksteise taga ühe pika kabiinikatte all",
+      "Ninaprofiil kõrgem kui üheistmelisel Flankeril",
+      "Kanardid koos kahe istmega ongi see paar, mis eristab teda Su-35-st",
+    ],
+    placements: [
+      "Õhu- ja kosmoseväe ning mereväelennuväe mitmeotstarbelised rügemendid",
+      "Lendab seal, kus ühelt lennukilt oodatakse nii õhulahingut kui löögiülesandeid",
+    ],
+    doctrineNote:
+      "Kaheistmeline mitmeotstarbeline Flanker: teine mees töötab sensorite ja relvadega, samal ajal kui piloot lendab — ja just see teeb temast eelistatud masina keerukate löögiülesannete, mitte puhta õhutõrje jaoks.",
+    crew: "2",
+    service: "Kasutuses",
+  },
+  "su-33": {
+    aka: "Flanker-D",
+    armament: "30 mm GSh-30-1, õhk-õhk raketid R-27 ja R-73",
+    rangeText: "Lahingraadius umbes 1000 km",
+    cues: [
+      "Flanker kanardite ja ühe istmega — Su-30-l on kanardid ja kaks istet",
+      "Tiivad ja sabapind klapivad, väljaspool on hingejooned näha",
+      "Pidurikonks sabaastla all",
+      "Pikendatud ninatelik ja tugevdatud telik tekile maandumiseks",
+    ],
+    placements: [
+      "Mereväelennuvägi, laeval või rannikubaasis",
+      "Ainus Vene teenistuses olev hävitaja, mis on ehitatud tekilt opereerima",
+    ],
+    doctrineNote:
+      "Ehitatud lennukikandjale, mis on harva merel, nii et teda leiab enamasti maalt. Tema tuvastusväärtus on peamiselt eitav: klappivad tiivad ja konks tähendavad mereväelennuväge, mis paigutab pigem üksuse kui lennuki.",
+    crew: "1",
+    service: "Kasutuses",
+  },
 };
