@@ -1,6 +1,8 @@
 import { Link, createFileRoute, notFound } from "@tanstack/react-router";
 
 import { getBlock, getItem, imageFitClass, itemsOfBlock } from "@/lib/content";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+
 import { BlockChecking, BlockLocked } from "@/components/BlockGate";
 import { useLocale } from "@/i18n/LocaleProvider";
 import { useBlockAccess } from "@/lib/progress";
@@ -151,28 +153,36 @@ function ItemDetail() {
         )}
       </div>
 
-      <nav className="mt-8 flex items-center justify-between gap-4 border-t border-border pt-4 text-sm">
+      <nav className="mt-8 grid gap-px bg-border sm:grid-cols-2">
         {previous ? (
           <Link
             to="/learn/$block/$item"
             params={{ block: block.slug, item: previous.slug }}
-            className="designation text-muted-foreground transition-colors hover:text-foreground"
+            className="flex items-center gap-3 bg-card p-4 transition-colors hover:bg-secondary"
           >
-            ← {previous.name}
+            <ChevronLeft className="size-5 shrink-0 text-primary" aria-hidden />
+            <span className="min-w-0">
+              <span className="plate-label block">{t("item.previous")}</span>
+              <span className="designation mt-1 block truncate text-sm">{previous.name}</span>
+            </span>
           </Link>
         ) : (
-          <span />
+          <span className="hidden bg-card sm:block" />
         )}
         {next ? (
           <Link
             to="/learn/$block/$item"
             params={{ block: block.slug, item: next.slug }}
-            className="designation text-right text-muted-foreground transition-colors hover:text-foreground"
+            className="flex items-center justify-end gap-3 bg-card p-4 text-right transition-colors hover:bg-secondary"
           >
-            {next.name} →
+            <span className="min-w-0">
+              <span className="plate-label block">{t("item.next")}</span>
+              <span className="designation mt-1 block truncate text-sm">{next.name}</span>
+            </span>
+            <ChevronRight className="size-5 shrink-0 text-primary" aria-hidden />
           </Link>
         ) : (
-          <span />
+          <span className="hidden bg-card sm:block" />
         )}
       </nav>
     </div>
