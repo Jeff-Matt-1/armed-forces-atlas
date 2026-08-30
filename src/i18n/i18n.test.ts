@@ -135,15 +135,24 @@ describe("content translation", () => {
    * An untranslated field still renders -- in English, beside Estonian ones.
    * In a quiz that is worse than a blank: one UAZ entry had no Estonian
    * armament, so "None as standard" appeared as an option next to
-   * "Standardvarustuses puudub" and was marked the correct answer.
+   * "Standardvarustuses puudub" and was marked the correct answer. On a card it
+   * is merely wrong-looking -- a new entry shipped reading "In service" under
+   * an Estonian heading -- so every displayed field is checked, not just the
+   * two a quiz draws its options from.
    */
   test("no answerable field falls back to English", () => {
     const fallbacks: string[] = [];
     for (const item of items) {
       const t = etTranslations.items[item.slug];
       if (!t) continue;
+      if (item.aka && !t.aka) fallbacks.push(`${item.slug}.aka`);
       if (item.armament && !t.armament) fallbacks.push(`${item.slug}.armament`);
+      if (item.rangeText && !t.rangeText) fallbacks.push(`${item.slug}.rangeText`);
+      if (item.cues.length && !t.cues) fallbacks.push(`${item.slug}.cues`);
       if (item.placements.length && !t.placements) fallbacks.push(`${item.slug}.placements`);
+      if (item.doctrineNote && !t.doctrineNote) fallbacks.push(`${item.slug}.doctrineNote`);
+      if (item.crew && !t.crew) fallbacks.push(`${item.slug}.crew`);
+      if (item.service && !t.service) fallbacks.push(`${item.slug}.service`);
     }
     expect(fallbacks).toEqual([]);
   });

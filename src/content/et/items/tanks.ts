@@ -37,6 +37,7 @@ export const etTanks: Record<string, ItemTranslation> = {
     service: "Praegune standard",
   },
   "t-72b3m": {
+    aka: "Obr. 2016 / T-72B3 mudel 2016",
     armament: "125 mm 2A46M-5; 12.7 mm kaugjuhitav relvajaam",
     rangeText: "Kahur kuni 3000 m; tankitõrjerakett 5000 m",
     cues: [

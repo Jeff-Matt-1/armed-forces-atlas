@@ -85,6 +85,7 @@ export const etRadars: Record<string, ItemTranslation> = {
     ],
     doctrineNote:
       "Vanem vastupatareijaam, mis on endiselt kasutuses kõrvuti Zoopargiga, mis pidi ta välja vahetama. Mõlemad sõidavad samal kerel, nii et kogu tuvastus on antenn — siin peegelantenn, seal lame paneel. Kumbki neist ütleb, et suurtükiväeluure üksus töötab ja et miinipilduja tuli läheduses maksab midagi.",
+    service: "Kasutuses",
   },
   "snar-10": {
     aka: "Leopard",
