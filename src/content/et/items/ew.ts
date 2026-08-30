@@ -72,7 +72,8 @@ export const etEw: Record<string, ItemTranslation> = {
   },
   "rb-531b-infauna": {
     aka: "Infauna",
-    rangeText: "Kaitseb kolonni, millega ta liigub, mitte piirkonda",
+    rangeText:
+      "Raadio teel lõhatavate laengute ja taktikaliste raadiovõrkude vastu, mõnesaja meetri ulatuses ümber kolonni",
     cues: [
       "BTR-80 kere, kaheksa ratast ja paadivöör — kuid torni ei ole",
       "Kõrge kandiline kastikujuline ehitis, mis ulatub katusest tublisti kõrgemale",
@@ -101,7 +102,7 @@ export const etEw: Record<string, ItemTranslation> = {
       "Paigutatakse kaitstava sisse, mitte sellest ettepoole",
     ],
     doctrineNote:
-      "Võidab suurtükiväge mürsku, mitte kahurit rünnates: ta käivitab või summutab raadiolähendussütikud, nii et mürsud lõhkevad kahjutult kõrgel või ei lõhke üldse. Sõjas, kus mõlemal pool domineerib suurtükivägi, on see omaette vastupatareimeede.",
+      "Võidab suurtükiväge mürsku, mitte kahurit rünnates: ta käivitab või summutab sensorsütikud, nii et mürsud lõhkevad kahjutult kõrgel või ei lõhke üldse. Sõjas, kus mõlemal pool domineerib suurtükivägi, on see omaette vastupatareimeede.",
     service: "Kasutuses",
   },
 };

@@ -125,7 +125,8 @@ export const ew: Item[] = [
     imageCredit: "CC BY 4.0 — The Ministry of Defence of the Russian Federation",
     imagePage: "https://commons.wikimedia.org/wiki/File:RB-531B_Infauna_01.jpg",
     armament: null,
-    rangeText: "Protects the column it travels with, not an area",
+    rangeText:
+      "Against radio-fired charges and tactical radio nets, a few hundred metres around the column",
     cues: [
       "BTR-80 hull, eight wheels and a boat bow — but no turret",
       "Tall square box structure standing well above the roof",
