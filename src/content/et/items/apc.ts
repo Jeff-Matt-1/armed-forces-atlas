@@ -71,20 +71,20 @@ export const etApc: Record<string, ItemTranslation> = {
   },
   "mt-lb": {
     aka: "Mitmeotstarbeline kerge soomustraktor",
-    armament: "7.62 mm PKT väikeses tornis",
+    armament: "7.62 mm PKT väikeses tornis; VM-variantidel 12.7 mm NSVT või Kord",
     cues: [
       "Roomikutel ja märkimisväärselt madal — vaevu kõrgem kui mehed tema kõrval",
       "Pikk lame katus peaaegu ilma pealisehituseta",
-      "Väike kuulipildujatorn ees paremal või puudub üldse",
+      "Torn ees paremal: väike 7.62 mm, massiivsem 12.7 mm alus või puudub üldse",
       "Kuus väikest tugiratast, tagasijooksurullikuid ei ole",
     ],
     placements: [
       "Suurtükiväe veduk ja laskemoonavedaja",
       "Kandja miinipildujate, õhutõrje ja pioneerivariantidele",
-      "Kasutatud hädapäraselt ka jalaväevedajana",
+      "Jalaväevedaja motolaskurüksustes",
     ],
     doctrineNote:
-      "Rohkem šassii kui masin: 2S1 ja tosina eriotstarbelise ümberehituse alus. Ühe tuvastamine ei ütle midagi enne, kui loed, mis on tema katusele kruvitud.",
+      "Rohkem šassii kui masin: 2S1 ja tosina eriotstarbelise ümberehituse alus. Ühe tuvastamine ei ütle midagi enne, kui loed, mis on tema katusele kruvitud — V-variantidel laiad roomikud lume ja pehme pinnase jaoks, VM-il ja VMK-l 12.7 mm alus, ja jalavägi tagaruumis pigem tavapäraselt kui hädapäraselt.",
     crew: "2 + 11",
     service: "Kasutuses",
   },
