@@ -84,7 +84,7 @@ export const ew: Item[] = [
       "Sited to cover an area rather than to accompany a unit",
     ],
     doctrineNote:
-      "Attacks satellite navigation and satellite phones — the inputs precision weapons and drones depend on. The guy wires are the giveaway and the weakness: it takes time to erect and cannot displace quickly.",
+      "Attacks satellite navigation and satellite phones, and reaches down into the cellular and V/UHF bands — so it can cut a drone's control link as well as the satnav it flies by, and the mobile network a unit falls back on when its radios fail. The guy wires are the giveaway and the weakness: it takes time to erect and cannot displace quickly.",
     crew: null,
     service: "In service",
     sort: 2,

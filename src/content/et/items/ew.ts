@@ -50,7 +50,7 @@ export const etEw: Record<string, ItemTranslation> = {
       "Paigutatakse katma piirkonda, mitte üksusega kaasa minema",
     ],
     doctrineNote:
-      "Ründab satelliitnavigatsiooni ja satelliittelefone — sisendeid, millest sõltuvad täppisrelvad ja droonid. Tõmmitsad on korraga äratundmismärk ja nõrkus: ülesseadmine võtab aega ja kiiresti ümber paigutuda ei saa.",
+      "Ründab satelliitnavigatsiooni ja satelliittelefone ning ulatub ka mobiilside- ja V/UHF-sagedustele — nii katkestab ta nii drooni juhtimislingi kui ka satelliitnavigatsiooni, mille järgi see lendab, ja mobiilsidevõrgu, millele üksus oma raadiote kadudes taandub. Tõmmitsad on korraga äratundmismärk ja nõrkus: ülesseadmine võtab aega ja kiiresti ümber paigutuda ei saa.",
     service: "Kasutuses",
   },
   "borisoglebsk-2": {
