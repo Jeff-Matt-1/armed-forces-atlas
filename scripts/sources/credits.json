@@ -200,6 +200,26 @@
     "attributionRequired": true
   },
   {
+    "slug": "bal",
+    "file": "File:Crews of the coastal missile system Bal of the Pacific Fleet perform training firings 02.jpg",
+    "localPath": "/images/items/bal.jpg",
+    "imageCredit": "CC BY 4.0 — Ildus Gilazutdinov",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:Crews_of_the_coastal_missile_system_Bal_of_the_Pacific_Fleet_perform_training_firings_02.jpg",
+    "licence": "CC BY 4.0",
+    "artist": "Ildus Gilazutdinov",
+    "attributionRequired": true
+  },
+  {
+    "slug": "bastion-p",
+    "file": "File:K-300P Bastion-P.jpg",
+    "localPath": "/images/items/bastion-p.jpg",
+    "imageCredit": "CC BY 4.0 — Ministry of Defence of the Russian Federation",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:K-300P_Bastion-P.jpg",
+    "licence": "CC BY 4.0",
+    "artist": "Ministry of Defence of the Russian Federation",
+    "attributionRequired": true
+  },
+  {
     "slug": "bat-2",
     "file": "File:БАТ-2 - Финал международного конкурса «Безопасный маршрут» 01.jpg",
     "localPath": "/images/items/bat-2.jpg",
@@ -577,6 +597,16 @@
     "imagePage": "https://commons.wikimedia.org/wiki/File:IRM_Zhuk.jpg",
     "licence": "CC BY-SA 4.0",
     "artist": "Historiador09NI",
+    "attributionRequired": true
+  },
+  {
+    "slug": "iskander-m",
+    "file": "File:9P78-1 TEL Iskander-M.JPG",
+    "localPath": "/images/items/iskander-m.jpg",
+    "imageCredit": "CC BY-SA 4.0 — Boevaya mashina",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:9P78-1_TEL_Iskander-M.JPG",
+    "licence": "CC BY-SA 4.0",
+    "artist": "Boevaya mashina",
     "attributionRequired": true
   },
   {
@@ -1407,6 +1437,26 @@
     "imagePage": "https://commons.wikimedia.org/wiki/File:TMM-Bridge-latrun-1.jpg",
     "licence": "CC BY 2.5",
     "artist": "No machine-readable author provided. Bukvoed assumed (based on copyright claims).",
+    "attributionRequired": true
+  },
+  {
+    "slug": "tochka-u",
+    "file": "File:Самбекские высоты, Точка-У.jpg",
+    "localPath": "/images/items/tochka-u.jpg",
+    "imageCredit": "CC BY-SA 4.0 — Nikolai Bulykin",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:%D0%A1%D0%B0%D0%BC%D0%B1%D0%B5%D0%BA%D1%81%D0%BA%D0%B8%D0%B5_%D0%B2%D1%8B%D1%81%D0%BE%D1%82%D1%8B,_%D0%A2%D0%BE%D1%87%D0%BA%D0%B0-%D0%A3.jpg",
+    "licence": "CC BY-SA 4.0",
+    "artist": "Nikolai Bulykin",
+    "attributionRequired": true
+  },
+  {
+    "slug": "topol-m",
+    "file": "File:19-03-2012-Parade-rehearsal - Topol-M.jpg",
+    "localPath": "/images/items/topol-m.jpg",
+    "imageCredit": "CC BY-SA 4.0 — Vitaly V. Kuzmin",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:19-03-2012-Parade-rehearsal_-_Topol-M.jpg",
+    "licence": "CC BY-SA 4.0",
+    "artist": "Vitaly V. Kuzmin",
     "attributionRequired": true
   },
   {

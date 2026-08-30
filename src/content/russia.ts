@@ -14,6 +14,7 @@ import { ew } from "@/content/items/ew";
 import { heavyWeapons } from "@/content/items/heavy-weapons";
 import { ifv } from "@/content/items/ifv";
 import { lightVehicles } from "@/content/items/light-vehicles";
+import { missiles } from "@/content/items/missiles";
 import { radars } from "@/content/items/radars";
 import { recon } from "@/content/items/recon";
 import { submarines } from "@/content/items/submarines";
@@ -247,6 +248,18 @@ export const blocks: Block[] = [
       "Count the engines, then read the wing. One straight wing over two body-side engines is an attack aircraft; two engines under a swept wing with twin fins is a fighter; four engines is a bomber or a transport, and the tail says which. The fine separations come last, because the Flanker family is one airframe stretched into several aircraft and only the nose reliably tells them apart.",
     doctrineNote:
       "Russian air power is used to reach what the guns cannot rather than to win the battle on its own. That is why the strike aircraft outnumber the interceptors, why the bombers are missile carriers that never enter defended airspace, and why the transport fleet decides what the airborne forces can actually do.",
+    status: "ready",
+    imageFit: "contain",
+  },
+  {
+    slug: "missiles",
+    ordinal: 20,
+    title: "Missile Systems",
+    subtitle: "Operational-tactical, coastal and strategic",
+    brief:
+      "Missiles on wheels, and the first question is how many wheels. A four-axle chassis carrying two missiles openly is an Iskander; a single missile on a tilting rail behind a boat-shaped hull is a Tochka; four canisters lying flat on a truck is a coastal system; and eight axles under a single tube the length of the vehicle is strategic. Read the chassis first and the load second — these systems share almost nothing else.",
+    doctrineNote:
+      "None of these belongs to the formation you are watching. They are released at army level or above and reach targets the brigade in front of you will never see — headquarters, airfields, ports, ammunition. Identifying one tells you which echelon has taken an interest in this sector, which is a different and larger fact than what any gun tells you.",
     status: "ready",
     imageFit: "contain",
   },
@@ -1431,6 +1444,7 @@ export const items: Item[] = [
   ...apc,
   ...ew,
   ...c2,
+  ...missiles,
   ...radars,
   ...engineering,
   ...airDefence,
