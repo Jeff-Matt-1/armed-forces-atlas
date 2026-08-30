@@ -124,4 +124,42 @@ export const etHeavyWeapons: Record<string, ItemTranslation> = {
     crew: "4",
     service: "Kasutuses",
   },
+  "2b9-vasilek": {
+    aka: "Rukkilill",
+    armament: "82 mm automaatmiiniheitja",
+    rangeText: "Umbes 4,3 km",
+    cues: [
+      "Ei näe välja nagu miiniheitja — madal rattalafett peaaegu horisontaalse toruga",
+      "Neljalasuline salv söödab küljelt, nii et tuli käib valangutena",
+      "Laskub lamedaks ka otsetule jaoks, mitte ainult järsu nurga alla",
+      "Sageli MT-LB katusele kinnitatud, mitte veetav",
+    ],
+    placements: [
+      "Motolaskur- ja õhudessantüksuste miinipildujapatareid",
+      "MT-LB peal seal, kus pinnas veetavat relva ei kanna",
+    ],
+    doctrineNote:
+      "Miiniheitja, mis tulistab valangut ühe miini asemel, nii et neli lasku jõuavad sihtmärgini enne, kui esimest kuulda on. Ta on ka lametule relv, mistõttu teda kasutatakse lagedal oleva elavjõu ja kergsõidukite vastu sama palju kui positsioonide vastu.",
+    crew: "4",
+    service: "Kasutuses",
+  },
+  "khrizantema-s": {
+    aka: "Krüsanteem",
+    armament: "Kaks 9M123 raketti sissetõmmataval stardiseadmel",
+    rangeText: "Umbes 6 km, radari- või laserjuhtimisega",
+    cues: [
+      "BMP-3 kere, torni üldse ei ole",
+      "Kaksikstardiseade tõuseb tekilt üles ja klapib sõiduks tasapinda",
+      "Radariantenn stardiseadme kõrval — ühelgi teisel tankitõrjemasinal seda ei ole",
+      "Lame tühi tekk seal, kus lahingumasinal oleks lahinguruum",
+    ],
+    placements: [
+      "Motolaskurallüksuste tankitõrjeüksused",
+      "Hoitakse tagavaras soomusläbimurde sulgemiseks, ei liigu koos rünnakuga",
+    ],
+    doctrineNote:
+      "Juhib radari, mitte laskuri silma järgi, nii et suits, tolm ja pimedus teda ei peata — needsamad tingimused, mida soomus rünnakuks eelistab. Grau ja Bartles kirjeldavad tankitõrjereservi, mida hoitakse läbimurde sulgemiseks; see on seesama reserv, millele on antud igailmasilmad.",
+    crew: "2",
+    service: "Kasutuses",
+  },
 };

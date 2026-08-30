@@ -125,4 +125,40 @@ export const etEngineering: Record<string, ItemTranslation> = {
       "Ratastel, seega järgib marsruuti, ei raja seda. Kui MT-55 viib tanki tule all üle lõhe, siis see ehitab pealetungi taga tee üles, et kõik ülejäänu järele pääseks.",
     service: "Kasutuses",
   },
+  "bat-2": {
+    aka: "Teerajaja",
+    rangeText: "Rajab teed kergel pinnal umbes 10 km/h, mullas kordades aeglasemalt",
+    cues: [
+      "Väga lai sahk, mis keskelt kokku klapib ja on mehest kõrgem",
+      "Kraanapoom kere külje peale kokku klapitud",
+      "Kõrge klaasitud kabiin mitme aknaga — roomikmasina kohta ebatavaline",
+      "Pikk raske roomikšassii, tankist laiem ja kõrgem",
+    ],
+    placements: [
+      "Pioneeriüksused, mis avavad teid liikuvale allüksusele",
+      "Töötab kolonni ees, mitte koos sellega",
+    ],
+    doctrineNote:
+      "Teeb tee sinna, kus seda ei ole, ja just see lubab allüksusel liikuda väljaspool neid üksikuid teid, mis olemas on. Aeglane ja silmatorkav, seega töötab enne liikumist, mitte selle ajal — ühe leidmine ütleb, et marsruuti valmistatakse ette, ja umbkaudu ka seda, kuhu pealetung kavatseb minna.",
+    crew: "2",
+    service: "Kasutuses",
+  },
+  zemledeliye: {
+    aka: "Põllundus",
+    armament: "Kaks 122 mm torude plokki, mis tulistavad miine paigaldavaid rakette",
+    rangeText: "Külvab miiniväljasid umbes 5–15 km kaugusele",
+    cues: [
+      "KamAZ 8x8 soomustatud kabiiniga, ehitatud nagu raske raketiheitja",
+      "Kaks kandilist torude plokki kõrvuti, enamasti katete all",
+      "Plokid seisavad madalal ja loodis, mitte üles kallutatud nagu Gradil",
+      "Liigub koos eraldi juhtimismasinaga samal šassiil",
+    ],
+    placements: [
+      "Pioneeriüksused, mis rajavad tõkkeid kaugelt",
+      "Hoitakse armee tasandil, mitte brigaadi juures",
+    ],
+    doctrineNote:
+      "Mineerib koha, saatmata sinna sapööre. Miinivälja saab panna teele, ülekäigule või maandumisalale minutitega ja kaugelt, mis muudab tõkete rajamise pioneeriülesandest tuleülesandeks.",
+    service: "Kasutuses",
+  },
 };

@@ -195,4 +195,57 @@ export const heavyWeapons: Item[] = [
     service: "In service",
     sort: 6,
   },
+  {
+    slug: "2b9-vasilek",
+    blockSlug: "heavy-weapons",
+    name: "2B9 Vasilek",
+    aka: "Cornflower",
+    imageUrl: "/images/items/2b9-vasilek.jpg",
+    imageCredit: "CC BY-SA 3.0 — ShinePhantom",
+    imagePage: "https://commons.wikimedia.org/wiki/File:2B9_Vasilek_mortar-4058.JPG",
+    armament: "82 mm automatic mortar",
+    rangeText: "Roughly 4.3 km",
+    cues: [
+      "Does not look like a mortar — a low wheeled carriage with a near-horizontal barrel",
+      "Four-round clip feeds from the side, so it fires in bursts",
+      "Lays flat for direct fire as well as high angle",
+      "Often bolted to the roof of an MT-LB rather than towed",
+    ],
+    placements: [
+      "Mortar batteries of motor rifle and airborne units",
+      "Mounted on an MT-LB where the ground will not take a towed weapon",
+    ],
+    doctrineNote:
+      "A mortar that fires bursts rather than single bombs, putting four rounds onto a target before the first is heard. It is flat-firing too, so it is used against people and light vehicles in the open as much as against positions.",
+    crew: "4",
+    service: "In service",
+    sort: 7,
+  },
+  {
+    slug: "khrizantema-s",
+    blockSlug: "heavy-weapons",
+    name: "9P157-2 Khrizantema-S",
+    aka: "Chrysanthemum",
+    imageUrl: "/images/items/khrizantema-s.jpg",
+    imageCredit: "CC BY-SA 3.0 — Mike1979 Russia",
+    imagePage:
+      "https://commons.wikimedia.org/wiki/File:9P157-2_combat_vehicle_of_9K123_Khrizantema-S_AT_system_at_Engineering_Technologies_2012.jpg",
+    armament: "Two 9M123 missiles on a retractable launcher",
+    rangeText: "Roughly 6 km, radar or laser guided",
+    cues: [
+      "BMP-3 hull with no turret at all",
+      "Twin missile rail rises from the deck and folds flush to travel",
+      "Radar antenna beside the launcher — no other anti-tank vehicle carries one",
+      "Flat empty deck where an IFV would have its fighting compartment",
+    ],
+    placements: [
+      "Anti-tank units of motor rifle formations",
+      "Held back to seal an armoured breakthrough rather than moving with the assault",
+    ],
+    doctrineNote:
+      "Guides on radar rather than on what a gunner can see, so smoke, dust and darkness do not stop it — the conditions armour prefers to attack in. Grau and Bartles describe anti-tank reserves held to close a penetration; this is that reserve given all-weather eyes.",
+    crew: "2",
+    service: "In service",
+    sort: 8,
+  },
 ];

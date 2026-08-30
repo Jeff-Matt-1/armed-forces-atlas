@@ -202,4 +202,57 @@ export const engineering: Item[] = [
     service: "In service",
     sort: 6,
   },
+  {
+    slug: "bat-2",
+    blockSlug: "engineering",
+    name: "BAT-2",
+    aka: "Path-layer",
+    imageUrl: "/images/items/bat-2.jpg",
+    imageCredit: "CC BY 4.0 — Павла Герасимова (Pavel Gerasimov)",
+    imagePage:
+      "https://commons.wikimedia.org/wiki/File:%D0%91%D0%90%D0%A2-2_-_%D0%A4%D0%B8%D0%BD%D0%B0%D0%BB_%D0%BC%D0%B5%D0%B6%D0%B4%D1%83%D0%BD%D0%B0%D1%80%D0%BE%D0%B4%D0%BD%D0%BE%D0%B3%D0%BE_%D0%BA%D0%BE%D0%BD%D0%BA%D1%83%D1%80%D1%81%D0%B0_%C2%AB%D0%91%D0%B5%D0%B7%D0%BE%D0%BF%D0%B0%D1%81%D0%BD%D1%8B%D0%B9_%D0%BC%D0%B0%D1%80%D1%88%D1%80%D1%83%D1%82%C2%BB_01.jpg",
+    armament: null,
+    rangeText: "Cuts route at roughly 10 km/h in easy going, far slower in earth",
+    cues: [
+      "Very wide dozer blade that folds in the middle, taller than a man",
+      "Crane jib folded along the side of the hull",
+      "Tall glazed cab with several windows — unusual on a tracked vehicle",
+      "Long heavy tracked chassis, wider and higher than a tank",
+    ],
+    placements: [
+      "Engineer units opening routes for a formation on the move",
+      "Works ahead of the column rather than with it",
+    ],
+    doctrineNote:
+      "Makes a road where there is none, which is what lets a formation move off the few roads that exist. Slow and conspicuous, so it works before the move rather than during it — finding one tells you a route is being prepared and roughly where the advance means to go.",
+    crew: "2",
+    service: "In service",
+    sort: 7,
+  },
+  {
+    slug: "zemledeliye",
+    blockSlug: "engineering",
+    name: "ISDM Zemledeliye",
+    aka: "Agriculture",
+    imageUrl: "/images/items/zemledeliye.jpg",
+    imageCredit: "CC BY-SA 3.0 — Boevaya mashina",
+    imagePage: "https://commons.wikimedia.org/wiki/File:ISDM_Zemledeliye_at_Army-2022.jpg",
+    armament: "Two blocks of 122 mm tubes firing mine-laying rockets",
+    rangeText: "Sows minefields at roughly 5–15 km",
+    cues: [
+      "KamAZ 8x8 with an armoured cab, built like a heavy rocket launcher",
+      "Two square tube blocks side by side, usually under covers",
+      "Blocks sit level and low rather than raked up like a Grad",
+      "Travels with a separate control vehicle on the same chassis",
+    ],
+    placements: [
+      "Engineer units laying obstacles at range",
+      "Held at army level rather than with the brigade",
+    ],
+    doctrineNote:
+      "Mines a place without sending sappers to it. A minefield can be put across a road, a crossing or a landing site in minutes and from a distance, which turns obstacle laying from an engineering task into a fire mission.",
+    crew: null,
+    service: "In service",
+    sort: 8,
+  },
 ];

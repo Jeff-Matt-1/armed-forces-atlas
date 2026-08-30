@@ -190,4 +190,41 @@ export const etArtillery: Record<string, ItemTranslation> = {
     crew: "3",
     service: "Kasutuses",
   },
+  "2s43-malva": {
+    aka: "Kassinaeris",
+    armament: "152 mm haubits 2A64",
+    rangeText: "Tavamürsuga umbes 24 km",
+    cues: [
+      "Kaheksa ratast, mitte roomikud — ainus 152 mm Vene teenistuses veoautošassiil",
+      "Kahur seisab taga lahtiselt, torni ega kilpi ei ole",
+      "Kaks suurt tugilabidat klapivad tagarataste taha alla",
+      "Soomustatud kabiin kaugel ees, kabiini ja kahuri vahel pikk lame plats",
+    ],
+    placements: [
+      "Uut tehnikat saavad suurtükiväebrigaadid",
+      "Valitakse sinna, kus teed lubavad kiirust eelistada maastikuläbivusele",
+    ],
+    doctrineNote:
+      "Msta kahur ratastel roomikute asemel: odavam, teel kiirem ja tulepositsioonilt kiiremini lahkuv, kuid ei lähe sinna, kuhu roomikud lähevad. Tema ilmumine ütleb, et üksust varustatakse ümber, mitte ei tugevdata.",
+    crew: "5",
+    service: "Kasutuses",
+  },
+  "2b16-nona-k": {
+    armament: "120 mm vintraudne kahur-miiniheitja",
+    rangeText: "Tavamürsuga umbes 8,8 km, reaktiivmürsuga kaugemale",
+    cues: [
+      "Lühike jäme toru suure suudmepiduriga, palju kobakam kui 122 mm kahuril",
+      "Veetav lahkuvatel jalgadel ja väga madal",
+      "Toru tõuseb palju kõrgemale kui väliksuurtükil",
+      "Väikesed rattad ja kerge lafett, mõeldud õhu teel heitmiseks",
+    ],
+    placements: [
+      "Õhudessant- ja mäeüksused, kes vajavad suurtükiväge, millega koos maanduda",
+      "Pataljoni tasandi tuli seal, kuhu haubits ei pääse",
+    ],
+    doctrineNote:
+      "Üks toru kolme töö jaoks: miinid, haubitsamürsud ja otsetuli. Just seepärast kannavad seda õhudessant- ja mäeüksused — üks relv katab rollid, mille jaoks teedeta allüksus ei saa kolme eraldi kahurit kaasa võtta.",
+    crew: "5",
+    service: "Kasutuses",
+  },
 };
