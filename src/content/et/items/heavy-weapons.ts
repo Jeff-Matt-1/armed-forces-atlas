@@ -162,4 +162,23 @@ export const etHeavyWeapons: Record<string, ItemTranslation> = {
     crew: "2",
     service: "Kasutuses",
   },
+  "shturm-s": {
+    aka: "Rünnak",
+    armament: "9M114 või 9M120 raketid sissetõmmataval stardiseadmel",
+    rangeText: "Umbes 5 km, raadiokäskjuhtimisega",
+    cues: [
+      "MT-LB kere ühe stardiseadme õlaga torni asemel",
+      "Stardiseade tõmbub kerre ja tekk näib tühi",
+      "Kaksteist raketti kere sees, laetakse katuse kaudu",
+      "Madalam ja kergem kui Khrizantema, mis kasutab BMP-3 keret",
+    ],
+    placements: [
+      "Motolaskur- ja õhudessantallüksuste tankitõrjepatareid",
+      "Hoitakse tagavaras soomusläbimurde sulgemiseks, ei liigu koos rünnakuga",
+    ],
+    doctrineNote:
+      "Tankitõrjereservi vanem pool, kerel, mis läheb sinna, kuhu jalavägi. Juhitakse raadiokäskudega, mitte radariga, nii et ta peab sihtmärki nägema ja suitsus tuli seisab — just see lünk, mille sulgemiseks Khrizantema ehitati.",
+    crew: "2",
+    service: "Kasutuses",
+  },
 };

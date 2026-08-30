@@ -10,6 +10,16 @@
     "attributionRequired": true
   },
   {
+    "slug": "2a36-giatsint-b",
+    "file": "File:152 mm Gun 2A36 Giatsint-B 2017-12-24.JPG",
+    "localPath": "/images/items/2a36-giatsint-b.jpg",
+    "imageCredit": "CC BY-SA 4.0 — Mike1979 Russia",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:152_mm_Gun_2A36_Giatsint-B_2017-12-24.JPG",
+    "licence": "CC BY-SA 4.0",
+    "artist": "Mike1979 Russia",
+    "attributionRequired": true
+  },
+  {
     "slug": "2a65-msta-b",
     "file": "File:2A65 Msta-B.JPG",
     "localPath": "/images/items/2a65-msta-b.jpg",
@@ -77,6 +87,16 @@
     "imagePage": "https://commons.wikimedia.org/wiki/File:2S3_Akatsiya_2.jpg",
     "licence": "CC BY-SA 2.0",
     "artist": "Trubble",
+    "attributionRequired": true
+  },
+  {
+    "slug": "2s31-vena",
+    "file": "File:2S31 Vena Sideview.jpg",
+    "localPath": "/images/items/2s31-vena.jpg",
+    "imageCredit": "CC BY-SA 4.0 — Vitaly V. Kuzmin",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:2S31_Vena_Sideview.jpg",
+    "licence": "CC BY-SA 4.0",
+    "artist": "Vitaly V. Kuzmin",
     "attributionRequired": true
   },
   {
@@ -250,6 +270,16 @@
     "attributionRequired": true
   },
   {
+    "slug": "bmr-3m",
+    "file": "File:Engineering Technologies - 2012 (5-38).jpg",
+    "localPath": "/images/items/bmr-3m.jpg",
+    "imageCredit": "CC BY-SA 4.0 — Vitaly V. Kuzmin",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:Engineering_Technologies_-_2012_(5-38).jpg",
+    "licence": "CC BY-SA 4.0",
+    "artist": "Vitaly V. Kuzmin",
+    "attributionRequired": true
+  },
+  {
     "slug": "borei",
     "file": "File:A Borei class submarine at sea.jpg",
     "localPath": "/images/items/borei.jpg",
@@ -410,6 +440,16 @@
     "attributionRequired": true
   },
   {
+    "slug": "dt-30",
+    "file": "File:DT-30P1 Vityaz 1.jpg",
+    "localPath": "/images/items/dt-30.jpg",
+    "imageCredit": "CC BY-SA 4.0 — Алексей Китаев",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:DT-30P1_Vityaz_1.jpg",
+    "licence": "CC BY-SA 4.0",
+    "artist": "Алексей Китаев",
+    "attributionRequired": true
+  },
+  {
     "slug": "eleron-3",
     "file": "File:ENICS Eleron-3 UAV Army-2022 2022-08-20 2212.jpg",
     "localPath": "/images/items/eleron-3.jpg",
@@ -417,6 +457,16 @@
     "imagePage": "https://commons.wikimedia.org/wiki/File:ENICS_Eleron-3_UAV_Army-2022_2022-08-20_2212.jpg",
     "licence": "CC BY-SA 4.0",
     "artist": "Mike1979 Russia",
+    "attributionRequired": true
+  },
+  {
+    "slug": "eov-3523",
+    "file": "File:EOV-3523 excavator on KamAZ-53501 chassis during the \"Armiya 2020\" exhibition (side view).jpg",
+    "localPath": "/images/items/eov-3523.jpg",
+    "imageCredit": "CC BY-SA 4.0 — Kirill Borisenko",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:EOV-3523_excavator_on_KamAZ-53501_chassis_during_the_%22Armiya_2020%22_exhibition_(side_view).jpg",
+    "licence": "CC BY-SA 4.0",
+    "artist": "Kirill Borisenko",
     "attributionRequired": true
   },
   {
@@ -630,6 +680,16 @@
     "attributionRequired": true
   },
   {
+    "slug": "linza",
+    "file": "File:Abandoned Russian Linza ambulance 01.jpg",
+    "localPath": "/images/items/linza.jpg",
+    "imageCredit": "CC BY 4.0 — General Staff of the Armed Forces of Ukraine",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:Abandoned_Russian_Linza_ambulance_01.jpg",
+    "licence": "CC BY 4.0",
+    "artist": "General Staff of the Armed Forces of Ukraine",
+    "attributionRequired": true
+  },
+  {
     "slug": "mig-31",
     "file": "File:Right side view of a Soviet MiG-31 Foxhound 2.jpg",
     "localPath": "/images/items/mig-31.jpg",
@@ -668,6 +728,16 @@
     "licence": "Public domain",
     "artist": "DON S. Montgomery, U.S. Navy (Ret.)",
     "attributionRequired": false
+  },
+  {
+    "slug": "mtu-90",
+    "file": "File:MTU-90 1.jpg",
+    "localPath": "/images/items/mtu-90.jpg",
+    "imageCredit": "CC BY-SA 4.0 — Vitaly V. Kuzmin",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:MTU-90_1.jpg",
+    "licence": "CC BY-SA 4.0",
+    "artist": "Vitaly V. Kuzmin",
+    "attributionRequired": true
   },
   {
     "slug": "nebo-m",
@@ -777,6 +847,16 @@
     "imagePage": "https://commons.wikimedia.org/wiki/File:Russia_Arms_Expo_2013_(531-22).jpg",
     "licence": "CC BY-SA 4.0",
     "artist": "Vitaly V. Kuzmin",
+    "attributionRequired": true
+  },
+  {
+    "slug": "pts-4",
+    "file": "File:Floating сrawler conveyor PTS-4 during the \"Armiya 2021\" exhibition (side view).jpg",
+    "localPath": "/images/items/pts-4.jpg",
+    "imageCredit": "CC BY-SA 4.0 — Kirill Borisenko",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:Floating_%D1%81rawler_conveyor_PTS-4_during_the_%22Armiya_2021%22_exhibition_(side_view).jpg",
+    "licence": "CC BY-SA 4.0",
+    "artist": "Kirill Borisenko",
     "attributionRequired": true
   },
   {
@@ -1190,6 +1270,16 @@
     "attributionRequired": true
   },
   {
+    "slug": "shturm-s",
+    "file": "File:9P149 Shturm-S Tank Destroyer.jpg",
+    "localPath": "/images/items/shturm-s.jpg",
+    "imageCredit": "CC BY-SA 4.0 — Jonj7490",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:9P149_Shturm-S_Tank_Destroyer.jpg",
+    "licence": "CC BY-SA 4.0",
+    "artist": "Jonj7490",
+    "attributionRequired": true
+  },
+  {
     "slug": "snar-10",
     "file": "File:Battlefield Surveillance Radar SNAR 10 on MTLB M 1975 in Aalborg Forsvars- og Garnisonsmuseum, pic1.JPG",
     "localPath": "/images/items/snar-10.jpg",
@@ -1338,6 +1428,16 @@
     "licence": "Public domain",
     "artist": "US gov",
     "attributionRequired": false
+  },
+  {
+    "slug": "typhoon-u",
+    "file": "File:Ural 63095 right side.jpg",
+    "localPath": "/images/items/typhoon-u.jpg",
+    "imageCredit": "CC BY-SA 4.0 — Boevaya mashina",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:Ural_63095_right_side.jpg",
+    "licence": "CC BY-SA 4.0",
+    "artist": "Boevaya mashina",
+    "attributionRequired": true
   },
   {
     "slug": "uaz-3163-patriot",

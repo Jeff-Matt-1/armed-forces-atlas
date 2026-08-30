@@ -109,4 +109,37 @@ export const etLightVehicles: Record<string, ItemTranslation> = {
     crew: "1 + 4",
     service: "Piiratud kasutuses",
   },
+  "typhoon-u": {
+    aka: "Taifuun",
+    armament: "Kaugjuhitav relvajaam või katuserõngas, kui paigaldatud",
+    cues: [
+      "Väga kõrge tahulise küljega soomuskere 6x6 veoautošassiil",
+      "Mootorikate kabiini ees — KamAZi Typhoon-K on kabiin-mootori-peal ja katet ei ole",
+      "Rida väikesi paksusid aknaid kõrgel dessantruumi küljel",
+      "All V-kujuline põhi, mida on näha kliirensist",
+    ],
+    placements: [
+      "Kaitstud liikuvus motolaskurüksustele mineeritud marsruutidel",
+      "Veab inimesi mööda teid, ei liigu koos rünnakuga maastikul",
+    ],
+    doctrineNote:
+      "Ehitatud miinide ja teeäärsete laengute, mitte otsetule vastu. Kõrgus, mis teeb ta silmatorkavaks, ongi see kliirens, mis hoiab plahvatuse põrandast eemal — vahetus, mille vägi, kes peab teid kasutama, on nõus tegema.",
+    service: "Kasutuses",
+  },
+  linza: {
+    aka: "Lääts",
+    cues: [
+      "Lühike 4x4 soomusveok, palju väiksem kui Typhoon",
+      "Kõrge kastikere eraldi soomuskabiini taga",
+      "Meditsiiniversioonil punase risti märgid, sageli üle värvitud",
+      "Üks tagauks astmetega, kanderaamide, mitte dessandi jaoks",
+    ],
+    placements: [
+      "Motolaskur- ja õhudessantüksuste meditsiiniline evakuatsioon",
+      "Kasutusel ka lihtsa kaitstud vedajana ilma meditsiinivarustuseta",
+    ],
+    doctrineNote:
+      "Kaitstud kiirabiauto, mitte lahingumasin, ja tema kohalolek märgib haavatute kogumispunkti või evakuatsioonimarsruuti. Tema äratundmine annab rohkem teadmist positsiooni kohta kui masina enda võimekuse kohta.",
+    service: "Kasutuses",
+  },
 };

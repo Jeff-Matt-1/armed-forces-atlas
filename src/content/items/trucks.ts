@@ -167,4 +167,30 @@ export const trucks: Item[] = [
     service: "Reserve",
     sort: 5,
   },
+  {
+    slug: "dt-30",
+    blockSlug: "trucks",
+    name: "DT-30 Vityaz",
+    aka: "Knight",
+    imageUrl: "/images/items/dt-30.jpg",
+    imageCredit: "CC BY-SA 4.0 — Алексей Китаев",
+    imagePage: "https://commons.wikimedia.org/wiki/File:DT-30P1_Vityaz_1.jpg",
+    armament: null,
+    rangeText: null,
+    cues: [
+      "Two tracked bodies joined by a hinge — articulated, not one vehicle",
+      "Both sections tracked, with very wide low-pressure tracks",
+      "Cab on the front section, cargo body on the rear",
+      "Sits high on its running gear and swims without preparation",
+    ],
+    placements: [
+      "Arctic and northern units where wheels cannot go",
+      "Carries other systems as a chassis, not only cargo",
+    ],
+    doctrineNote:
+      "Built for ground that will not carry anything else — snow, bog, tundra. The articulated pair spreads its weight so thinly that it crosses where a tracked vehicle sinks, which is why northern formations are equipped around it rather than around trucks.",
+    crew: null,
+    service: "In service",
+    sort: 7,
+  },
 ];

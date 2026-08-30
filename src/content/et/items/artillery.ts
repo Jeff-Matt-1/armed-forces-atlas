@@ -227,4 +227,42 @@ export const etArtillery: Record<string, ItemTranslation> = {
     crew: "5",
     service: "Kasutuses",
   },
+  "2a36-giatsint-b": {
+    aka: "Hüatsint",
+    armament: "152 mm kahur 2A36",
+    rangeText: "Umbes 28 km, reaktiivmürsuga kaugemale",
+    cues: [
+      "Väga pikk peenike toru — pikim ükskõik millisel Vene veetaval kahuril",
+      "Mitmekambriline suudmepidur toru otsas",
+      "Lahkuvad jalad ja lafetil väike abijõuallikas",
+      "Kilpi ei ole, erinevalt D-30-st ja Msta-B-st",
+    ],
+    placements: [
+      "Armee tasandi suurtükiväebrigaadide kahurisuurtükivägi",
+      "Paigutatakse kaugele taha, ulatudes sihtmärkideni, kuhu teised veetavad kahurid ei ulatu",
+    ],
+    doctrineNote:
+      "Kahur, mitte haubits: lame lennutrajektoor, pikk ulatus, ja teda kasutatakse vastupatareituleks ja sügavate sihtmärkide vastu, mitte rünnaku otsetoetuseks. Ühe leidmine ütleb, et kavandatav tuli kuulub armeele, mitte brigaadile.",
+    crew: "8",
+    service: "Kasutuses",
+  },
+  "2s31-vena": {
+    aka: "Viin",
+    armament: "120 mm kahur-miiniheitja 2A80",
+    rangeText: "Reaktiivmürsuga umbes 13 km",
+    cues: [
+      "BMP-3 kere suure ümara torniga, mille toru on lühike ja jäme",
+      "Toru palju kobakam kui ükski tankikahur sarnasel kerel",
+      "Torn istub kõrgel ja tekil kaugel taga",
+      "Ujuv, taga BMP-3 veejoad",
+    ],
+    placements: [
+      "Õhudessant- ja merejalaväeüksuste liikurmiinipildujapatareid",
+      "Tulistab manööverüksuse seest, mitte selle taga olevalt kahuriliinilt",
+    ],
+    doctrineNote:
+      "Nona töö tornis lahingumasina kerel: miiniheitja, haubits ja otsetuli masinast, mis peab sammu jalaväega, keda ta toetab. Tema kohalolek tähendab, et üksus kannab oma kaudtuld kaasas, mitte ei kutsu seda mujalt.",
+    crew: "4",
+    service: "Kasutuses",
+  },
 };

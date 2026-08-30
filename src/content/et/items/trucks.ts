@@ -100,4 +100,20 @@ export const etTrucks: Record<string, ItemTranslation> = {
     crew: "1 + 2",
     service: "Reservis",
   },
+  "dt-30": {
+    aka: "Rüütel",
+    cues: [
+      "Kaks roomikkeret liigendiga ühendatud — liigendmasin, mitte üks sõiduk",
+      "Mõlemad sektsioonid roomikutel, roomikud väga laiad ja madala survega",
+      "Kabiin esisektsioonil, veosekere tagumisel",
+      "Istub kõrgel käiguosal ja ujub ilma ettevalmistuseta",
+    ],
+    placements: [
+      "Arktika- ja põhjaüksused seal, kuhu rattad ei pääse",
+      "Kannab šassiina ka teisi süsteeme, mitte üksnes veost",
+    ],
+    doctrineNote:
+      "Ehitatud pinnasele, mis muud ei kanna — lumi, soo, tundra. Liigendpaar jaotab raskuse nii hõredalt, et ta läbib kohti, kus roomikmasin vajub, ja just seepärast on põhjapoolsed allüksused varustatud tema, mitte veoautode ümber.",
+    service: "Kasutuses",
+  },
 };

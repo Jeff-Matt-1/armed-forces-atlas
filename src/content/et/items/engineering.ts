@@ -161,4 +161,75 @@ export const etEngineering: Record<string, ItemTranslation> = {
       "Mineerib koha, saatmata sinna sapööre. Miinivälja saab panna teele, ülekäigule või maandumisalale minutitega ja kaugelt, mis muudab tõkete rajamise pioneeriülesandest tuleülesandeks.",
     service: "Kasutuses",
   },
+  "pts-4": {
+    aka: "Roomik-ujuvtransportöör",
+    armament: "12.7 mm kaugjuhitav relvajaam",
+    rangeText: "Kannab vees umbes 18 tonni",
+    cues: [
+      "Suur lame lahtine veosetekk madalate äärtega, hõivab suurema osa masinast",
+      "Paadikujuline kere, mis on ilmselgelt ehitatud ujuma, mitte üksnes kahlama",
+      "Kabiin ees vasakul, tekk selle taga",
+      "Taga sõukruvid, mitte veejoad",
+    ],
+    placements: [
+      "Pioneeriüksused, kes viivad sõidukeid ja kahureid üle veetõkke",
+      "Töötab ülekäigukohas, mitte esimeses ešelonis",
+    ],
+    doctrineNote:
+      "Veab üle selle, mis ise ei uju: kahurid, veoautod ja varustus üle jõe enne, kui sild olemas on. Tema tõttu peatab veetõke Vene allüksust tundide, mitte päevade kaupa, ja ta on kõige haavatavam just seal, kus ta on kõige vajalikum.",
+    crew: "2",
+    service: "Kasutuses",
+  },
+  "bmr-3m": {
+    aka: "Soomustatud demineerimismasin",
+    armament: "12.7 mm kaugjuhitav relvajaam",
+    cues: [
+      "Tankikere ilma tornita, ees lai rullikute komplekt",
+      "Kaks rasket rullikuplokki õlgadel, üks kummagi roomiku ees",
+      "Kõrge kandiline meeskonnakabiin seal, kus oleks torn",
+      "Kabiini taga vahel demineerimislaengute stardiseadmed",
+    ],
+    placements: [
+      "Pioneeriüksused, kes murravad miinivälju läbi liikuvale allüksusele",
+      "Juhib kolonni läbi kahtlase vöö ja annab siis teatepulga edasi",
+    ],
+    doctrineNote:
+      "Laseb miinid raskusega õhku, selle asemel et neid otsida. Ta puhastab koridori, mis on piisavalt lai järgnevatele, ja seepärast on ta mineeritud marsruudil kolonni eesotsas — ning masin, mille kaitsja tahab kõige esimesena peatada.",
+    crew: "2",
+    service: "Kasutuses",
+  },
+  "eov-3523": {
+    aka: "Sõjaväeekskavaator",
+    cues: [
+      "Tavaline ekskavaatoripoom sõjaväelisel KamAZi veoautošassiil",
+      "Pöördplatvorm kabiini taga, kopp kere kohale kinnitatud",
+      "Töötamise ajaks klapivad taga tugijalad alla",
+      "Soomustamata — töömasin mundris",
+    ],
+    placements: [
+      "Pioneeriüksused, kes kaevavad positsioone, varjendeid ja sõidukikaevikuid",
+      "Töötab rindejoone taga, kus kaevata saab varjatult",
+    ],
+    doctrineNote:
+      "Kaevab positsioonid, mis teevad suurtükiväe ellujäävaks. Masinatega, mitte labidatega ettevalmistatud kaitse näeb õhust teistsugune välja ja selle murdmine võtab kordades kauem, nii et ühe leidmine ütleb, et eesolevat maad kindlustatakse, mitte lihtsalt ei hõivata.",
+    service: "Kasutuses",
+  },
+  "mtu-90": {
+    aka: "T-90 sillapanek",
+    rangeText: "Ületab kuni 25 m laiuse tõkke",
+    cues: [
+      "T-90 kere, sild kantakse lamedalt selle peal",
+      "Sild laotub kolme klapiva sektsioonina, mitte kahena",
+      "Pikem koorem kui MT-55-l, ulatub mõlemast otsast üle",
+      "Torni ei ole; ees vasakul väike kuppel",
+    ],
+    placements: [
+      "Pioneeriüksused tanki- ja motolaskurallüksuste toetuseks",
+      "Liigub esimeses ešelonis, mitte selle taga",
+    ],
+    doctrineNote:
+      "MT-55 kaasaegne asendaja kerel, mis peab sammu tankidega, kellele ta silda paneb, ja talub sama tuld. Pikem ava tähendab, et ta ületab tõkkeid, mis vanema masina peataksid, ja see laiendab maad, mida allüksus saab läbitavaks pidada.",
+    crew: "2",
+    service: "Kasutuses",
+  },
 };

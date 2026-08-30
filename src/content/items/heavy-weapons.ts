@@ -248,4 +248,30 @@ export const heavyWeapons: Item[] = [
     service: "In service",
     sort: 8,
   },
+  {
+    slug: "shturm-s",
+    blockSlug: "heavy-weapons",
+    name: "9P149 Shturm-S",
+    aka: "Assault",
+    imageUrl: "/images/items/shturm-s.jpg",
+    imageCredit: "CC BY-SA 4.0 — Jonj7490",
+    imagePage: "https://commons.wikimedia.org/wiki/File:9P149_Shturm-S_Tank_Destroyer.jpg",
+    armament: "9M114 or 9M120 missiles on a retractable launcher",
+    rangeText: "Roughly 5 km, radio command guidance",
+    cues: [
+      "MT-LB hull with a single launcher arm instead of a turret",
+      "Launcher retracts into the hull and the deck reads as empty",
+      "Twelve missiles carried inside, reloaded through the roof",
+      "Lower and lighter than the Khrizantema, which uses a BMP-3 hull",
+    ],
+    placements: [
+      "Anti-tank batteries of motor rifle and airborne formations",
+      "Held back to seal an armoured breakthrough rather than moving with the assault",
+    ],
+    doctrineNote:
+      "The older half of the anti-tank reserve, on a hull that goes where the infantry goes. Guided by radio command rather than radar, so it needs to see the target and holds fire in smoke — the gap the Khrizantema was built to close.",
+    crew: "2",
+    service: "In service",
+    sort: 9,
+  },
 ];
