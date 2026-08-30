@@ -25,7 +25,7 @@ type Props = {
   blockSlug: string | null;
   requirePass?: boolean;
   onRestart: () => void;
-  backTo?: { to: string; label: string };
+  backTo?: { to: string; params?: Record<string, string>; label: string };
 };
 
 export function QuizRunner({
@@ -178,11 +178,17 @@ export function QuizRunner({
               onRestart();
             }}
           >
-            Run again
+            {t("quiz.runAgain")}
           </Button>
           {backTo && (
             <Button asChild variant="outline">
-              <Link to={backTo.to}>{backTo.label}</Link>
+              {backTo.params ? (
+                <Link to={backTo.to} params={backTo.params}>
+                  {backTo.label}
+                </Link>
+              ) : (
+                <Link to={backTo.to}>{backTo.label}</Link>
+              )}
             </Button>
           )}
         </div>

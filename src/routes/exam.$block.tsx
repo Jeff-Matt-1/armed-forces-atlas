@@ -86,7 +86,11 @@ function Exam() {
       blockSlug={blockSlug}
       requirePass
       onRestart={() => setSeed((value) => value + 1)}
-      backTo={{ to: "/learn", label: t("quiz.backToBlocks") }}
+      backTo={{
+        to: "/learn/$block",
+        params: { block: blockSlug },
+        label: t("exam.backToBlock"),
+      }}
     />
   );
 }

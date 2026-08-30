@@ -67,8 +67,16 @@ function Flashcards() {
         <p className="mt-2 text-sm text-muted-foreground">
           {user ? t("drill.savedSynced") : t("drill.savedLocal")}
         </p>
-        <div className="mt-6 flex justify-center gap-2">
+        <div className="mt-6 flex flex-wrap justify-center gap-2">
+          {block && (
+            <Button asChild>
+              <Link to="/learn/$block" params={{ block }}>
+                {t("exam.backToBlock")}
+              </Link>
+            </Button>
+          )}
           <Button
+            variant={block ? "outline" : "default"}
             onClick={() => {
               setIndex(0);
               setFlipped(false);

@@ -60,7 +60,11 @@ function StructureDrill() {
       mode="structure"
       blockSlug={block ?? null}
       onRestart={() => setSeed((value) => value + 1)}
-      backTo={{ to: "/learn", label: t("quiz.backToBlocks") }}
+      backTo={
+        block
+          ? { to: "/learn/$block", params: { block }, label: t("exam.backToBlock") }
+          : { to: "/learn", label: t("quiz.backToBlocks") }
+      }
     />
   );
 }
