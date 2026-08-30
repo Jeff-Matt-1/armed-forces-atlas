@@ -5,7 +5,10 @@ ags-17	File:AGS-17 grenade launcher - RaceofHeroes-part2-15.jpg
 rpg-7	File:RPG-7V1 grenade launcher - RaceofHeroes-part2-22.jpg
 rpo-a-shmel	File:RPO-A missile and launcher.jpg
 kornet	File:9M133 Kornet.JPG
-2b14-podnos	File:2B14 Podnos at "Engineering Technologies 2010" forum.jpg
+# 2b14-podnos is a MANUAL CROP of File:2B14 Podnos at "Engineering Technologies 2010" forum.jpg
+# (CC BY-SA 3.0 — Vitaly V. Kuzmin). The right of the frame held an exhibition
+# placard reading 2Б14 "Поднос", which handed the answer to every photo
+# question. Do not re-add the fetch line: it would restore the placard.
 2b9-vasilek	File:2B9 Vasilek mortar-4058.JPG
 khrizantema-s	File:9P157-2 combat vehicle of 9K123 Khrizantema-S AT system at Engineering Technologies 2012.jpg
 shturm-s	File:9P149 Shturm-S Tank Destroyer.jpg

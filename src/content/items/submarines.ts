@@ -73,8 +73,9 @@ export const submarines: Item[] = [
     name: "Typhoon class",
     aka: "Project 941 Akula",
     imageUrl: "/images/items/typhoon.jpg",
-    imageCredit: "Public domain — US gov",
-    imagePage: "https://commons.wikimedia.org/wiki/File:Typhoon_class_submarine.jpg",
+    imageCredit: "CC BY 4.0 — Sergey Fedyunin",
+    imagePage:
+      "https://commons.wikimedia.org/wiki/File:%C2%AB%D0%94%D0%BC%D0%B8%D1%82%D1%80%D0%B8%D0%B9_%D0%94%D0%BE%D0%BD%D1%81%D0%BA%D0%BE%D0%B9%C2%BB.jpg",
     armament: "20 × R-39 ballistic missiles",
     rangeText: "Missiles to about 8,300 km",
     cues: [

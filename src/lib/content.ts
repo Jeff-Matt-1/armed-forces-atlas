@@ -89,8 +89,8 @@ export function allPlacements(blockSlugs?: string[]): string[] {
  */
 export function imageFitClass(itemSlug: string | undefined): string {
   const item = itemSlug ? getItem(itemSlug) : undefined;
-  const block = item ? getBlock(item.blockSlug) : undefined;
-  return block?.imageFit === "contain" ? "object-contain p-2" : "object-cover";
+  const fit = item?.imageFit ?? (item ? getBlock(item.blockSlug)?.imageFit : undefined);
+  return fit === "contain" ? "object-contain p-2" : "object-cover";
 }
 
 export function blockItemCount(slug: string): number {

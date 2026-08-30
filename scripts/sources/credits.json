@@ -141,12 +141,12 @@
   },
   {
     "slug": "2s9-nona-s",
-    "file": "File:2S9 Nona-S.png",
-    "localPath": "/images/items/2s9-nona-s.png",
-    "imageCredit": "CC BY-SA 3.0 — Olegvdv68",
-    "imagePage": "https://commons.wikimedia.org/wiki/File:2S9_Nona-S.png",
-    "licence": "CC BY-SA 3.0",
-    "artist": "Olegvdv68",
+    "file": "File:2S9 Nona-S in Museum of technique 2016-08-16.JPG",
+    "localPath": "/images/items/2s9-nona-s.jpg",
+    "imageCredit": "CC BY-SA 4.0 — Mike1979 Russia",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:2S9_Nona-S_in_Museum_of_technique_2016-08-16.JPG",
+    "licence": "CC BY-SA 4.0",
+    "artist": "Mike1979 Russia",
     "attributionRequired": true
   },
   {
@@ -451,12 +451,12 @@
   },
   {
     "slug": "buyan-m",
-    "file": "File:Orekhovo-Zuyevo corvette.jpg",
+    "file": "File:«Великий Устюг».jpg",
     "localPath": "/images/items/buyan-m.jpg",
-    "imageCredit": "CC BY 3.0 — Rumlin",
-    "imagePage": "https://commons.wikimedia.org/wiki/File:Orekhovo-Zuyevo_corvette.jpg",
-    "licence": "CC BY 3.0",
-    "artist": "Rumlin",
+    "imageCredit": "CC BY 4.0 — Ministry of Defence of the Russian Federation",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:%C2%AB%D0%92%D0%B5%D0%BB%D0%B8%D0%BA%D0%B8%D0%B9_%D0%A3%D1%81%D1%82%D1%8E%D0%B3%C2%BB.jpg",
+    "licence": "CC BY 4.0",
+    "artist": "Ministry of Defence of the Russian Federation",
     "attributionRequired": true
   },
   {
@@ -481,10 +481,10 @@
   },
   {
     "slug": "delta-iv",
-    "file": "File:Submarine Novomoskovsk, 2016 2.jpg",
+    "file": "File:Submarine Novomoskovsk, 2016 1.jpg",
     "localPath": "/images/items/delta-iv.jpg",
     "imageCredit": "CC BY 4.0 — Министерство обороны Российской Федерации",
-    "imagePage": "https://commons.wikimedia.org/wiki/File:Submarine_Novomoskovsk,_2016_2.jpg",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:Submarine_Novomoskovsk,_2016_1.jpg",
     "licence": "CC BY 4.0",
     "artist": "Министерство обороны Российской Федерации",
     "attributionRequired": true
@@ -851,13 +851,13 @@
   },
   {
     "slug": "oscar-ii",
-    "file": "File:K-410 Smolensk.jpg",
+    "file": "File:Oscar class submarine 3.jpg",
     "localPath": "/images/items/oscar-ii.jpg",
-    "imageCredit": "CC BY 4.0 — Министерство обороны Российской федерации",
-    "imagePage": "https://commons.wikimedia.org/wiki/File:K-410_Smolensk.jpg",
-    "licence": "CC BY 4.0",
-    "artist": "Министерство обороны Российской федерации",
-    "attributionRequired": true
+    "imageCredit": "Public domain — USN, VP9",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:Oscar_class_submarine_3.jpg",
+    "licence": "Public domain",
+    "artist": "USN, VP9",
+    "attributionRequired": false
   },
   {
     "slug": "p-18",
@@ -1511,13 +1511,13 @@
   },
   {
     "slug": "typhoon",
-    "file": "File:Typhoon class submarine.jpg",
+    "file": "File:«Дмитрий Донской».jpg",
     "localPath": "/images/items/typhoon.jpg",
-    "imageCredit": "Public domain — US gov",
-    "imagePage": "https://commons.wikimedia.org/wiki/File:Typhoon_class_submarine.jpg",
-    "licence": "Public domain",
-    "artist": "US gov",
-    "attributionRequired": false
+    "imageCredit": "CC BY 4.0 — Sergey Fedyunin",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:%C2%AB%D0%94%D0%BC%D0%B8%D1%82%D1%80%D0%B8%D0%B9_%D0%94%D0%BE%D0%BD%D1%81%D0%BA%D0%BE%D0%B9%C2%BB.jpg",
+    "licence": "CC BY 4.0",
+    "artist": "Sergey Fedyunin",
+    "attributionRequired": true
   },
   {
     "slug": "typhoon-u",

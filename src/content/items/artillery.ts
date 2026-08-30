@@ -378,8 +378,9 @@ export const artillery: Item[] = [
     name: "2S9 Nona-S",
     aka: "Nona",
     imageUrl: "/images/items/2s9-nona-s.jpg",
-    imageCredit: "CC BY-SA 3.0 — Olegvdv68",
-    imagePage: "https://commons.wikimedia.org/wiki/File:2S9_Nona-S.png",
+    imageCredit: "CC BY-SA 4.0 — Mike1979 Russia",
+    imagePage:
+      "https://commons.wikimedia.org/wiki/File:2S9_Nona-S_in_Museum_of_technique_2016-08-16.JPG",
     armament: "120 mm 2A51 gun-mortar",
     rangeText: "Roughly 8.8 km, further with a rocket-assisted shell",
     cues: [

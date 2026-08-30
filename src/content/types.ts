@@ -35,6 +35,8 @@ export type Item = {
   name: string;
   aka: string | null;
   imageUrl: string | null;
+  /** Overrides the block's fit, for a photograph the block's crop would spoil. */
+  imageFit?: "cover" | "contain";
   imageCredit: string | null;
   imagePage: string | null;
   armament: string | null;

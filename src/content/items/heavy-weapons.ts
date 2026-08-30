@@ -122,6 +122,7 @@ export const heavyWeapons: Item[] = [
     name: "RPO-A Shmel",
     aka: "Bumblebee",
     imageUrl: "/images/items/rpo-a-shmel.jpg",
+    imageFit: "contain",
     imageCredit: "Public domain — User Megapixie on en.wikipedia",
     imagePage: "https://commons.wikimedia.org/wiki/File:RPO-A_missile_and_launcher.jpg",
     armament: "93mm disposable thermobaric rocket launcher",

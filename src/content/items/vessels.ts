@@ -174,8 +174,9 @@ export const vessels: Item[] = [
     name: "Buyan-M class",
     aka: "Project 21631",
     imageUrl: "/images/items/buyan-m.jpg",
-    imageCredit: "CC BY 3.0 — Rumlin",
-    imagePage: "https://commons.wikimedia.org/wiki/File:Orekhovo-Zuyevo_corvette.jpg",
+    imageCredit: "CC BY 4.0 — Ministry of Defence of the Russian Federation",
+    imagePage:
+      "https://commons.wikimedia.org/wiki/File:%C2%AB%D0%92%D0%B5%D0%BB%D0%B8%D0%BA%D0%B8%D0%B9_%D0%A3%D1%81%D1%82%D1%8E%D0%B3%C2%BB.jpg",
     armament: "8 × Kalibr in vertical cells, 100 mm gun",
     rangeText: "Kalibr to about 1,500 km against land targets",
     cues: [
