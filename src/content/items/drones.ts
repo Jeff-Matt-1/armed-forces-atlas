@@ -117,7 +117,7 @@ export const drones: Item[] = [
     slug: "lancet",
     blockSlug: "drones",
     name: "Lancet",
-    aka: "ZALA Lancet; Izdeliye 51/52",
+    aka: "ZALA Lancet",
     imageUrl: "/images/items/lancet.jpg",
     imageCredit: "CC BY 4.0 — Mztourist",
     imagePage: "https://commons.wikimedia.org/wiki/File:ZALA_Lancet_at_IDEX_2025.jpg",

@@ -3,7 +3,6 @@ import type { ItemTranslation } from "@/content/translations";
 /** Block 07 — Jalaväe lahingumasinad. */
 export const etIfv: Record<string, ItemTranslation> = {
   "bmp-1": {
-    aka: "Objekt 765",
     armament: "73 mm 2A28 Grom, 7.62 mm PKT, 9M14 Maljutka siin",
     rangeText: "Kahur mõjus umbes 800 m",
     cues: [
@@ -22,7 +21,6 @@ export const etIfv: Record<string, ItemTranslation> = {
     service: "Kasutuses",
   },
   "bmp-2": {
-    aka: "Objekt 675",
     armament: "30 mm automaatkahur 2A42, 7.62 mm PKT, 9M113 Konkurs",
     rangeText: "Automaatkahur mõjus umbes 2000 m",
     cues: [
@@ -41,7 +39,6 @@ export const etIfv: Record<string, ItemTranslation> = {
     service: "Kasutuses",
   },
   "bmp-3": {
-    aka: "Objekt 688M",
     armament: "100 mm kahur 2A70, 30 mm 2A72, 7.62 mm PKT",
     rangeText: "100 mm kahur 4000 m; juhitav tankitõrjerakett 5500 m",
     cues: [
@@ -57,7 +54,6 @@ export const etIfv: Record<string, ItemTranslation> = {
     service: "Kasutuses",
   },
   "bmd-2": {
-    aka: "Objekt 916",
     armament: "30 mm automaatkahur 2A42, 7.62 mm PKT, 9M113 Konkurs",
     rangeText: "Automaatkahur mõjus umbes 2000 m",
     cues: [

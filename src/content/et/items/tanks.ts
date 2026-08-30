@@ -3,7 +3,6 @@ import type { ItemTranslation } from "@/content/translations";
 /** Block 09 — Tankid. */
 export const etTanks: Record<string, ItemTranslation> = {
   "t-62m": {
-    aka: "Objekt 166M",
     armament: "115 mm sileraudne U-5TS; 12.7 mm NSVT",
     rangeText: "Kahur 1600–2000 m; tankitõrjerakett Šeksna 4000 m",
     cues: [
@@ -52,7 +51,6 @@ export const etTanks: Record<string, ItemTranslation> = {
     service: "Praegune, moderniseeritud",
   },
   "t-80u": {
-    aka: "Objekt 219AS",
     armament: "125 mm 2A46M-1; 12.7 mm NSVT",
     rangeText: "Kahur 2500–3000 m; tankitõrjerakett Refleks 5000 m",
     cues: [
@@ -116,7 +114,6 @@ export const etTanks: Record<string, ItemTranslation> = {
     service: "Praegune, eelisväljastus",
   },
   "t-14": {
-    aka: "Objekt 148",
     armament: "125 mm 2A82-1M mehitamata tornis; 12.7 mm kaugjuhitav jaam",
     rangeText: "Kahur üle 4000 m; tankitõrjerakett kuni 8000 m (väidetavalt)",
     cues: [
@@ -132,7 +129,6 @@ export const etTanks: Record<string, ItemTranslation> = {
     service: "Katsetustel / piiratud",
   },
   bmpt: {
-    aka: "Objekt 199 Ramka",
     armament: "Kaks 30 mm 2A42; 4 Ataka tankitõrjeraketti; 2 AG-17D granaadiheitjat",
     rangeText: "30 mm 4000 m; Ataka 6000 m; granaadiheitja 1700 m",
     cues: [

@@ -89,7 +89,6 @@ export const etApc: Record<string, ItemTranslation> = {
     service: "Kasutuses",
   },
   "btr-d": {
-    aka: "Objekt 925",
     armament: "Kaks kere ette paigaldatud 7.62 mm PKT-d; torni ei ole",
     cues: [
       "Roomikutel, madal ja tavaliselt ilma igasuguse tornita",

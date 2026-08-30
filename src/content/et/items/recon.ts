@@ -22,7 +22,6 @@ export const etRecon: Record<string, ItemTranslation> = {
     service: "Kasutuses",
   },
   "brm-1k": {
-    aka: "Objekt 676",
     armament: "73 mm 2A28 Grom, 7.62 mm PKT",
     rangeText: "Seireradar avastab sõidukid umbes 7 km kauguselt",
     cues: [

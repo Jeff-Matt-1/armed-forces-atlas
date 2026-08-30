@@ -70,7 +70,7 @@ export const etDrones: Record<string, ItemTranslation> = {
     service: "Kasutuses",
   },
   lancet: {
-    aka: "Izdelije 51",
+    aka: "ZALA Lancet",
     armament: "Sisseehitatud lõhkepea — lennuk ise on relv",
     rangeText: "Umbes 40 km",
     cues: [

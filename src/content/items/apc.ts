@@ -144,7 +144,7 @@ export const apc: Item[] = [
     slug: "btr-d",
     blockSlug: "apc",
     name: "BTR-D",
-    aka: "Obyekt 925",
+    aka: null,
     imageUrl: "/images/items/btr-d.jpg",
     imageCredit: "CC BY-SA 2.0 — Xabier Eskisabel",
     imagePage: "https://commons.wikimedia.org/wiki/File:BTR-D.jpg",

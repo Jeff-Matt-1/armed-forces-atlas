@@ -44,7 +44,7 @@ export const recon: Item[] = [
     slug: "brm-1k",
     blockSlug: "reconnaissance",
     name: "BRM-1K",
-    aka: "Obyekt 676",
+    aka: null,
     imageUrl: "/images/items/brm-1k.jpg",
     imageCredit: "CC BY-SA 2.5 — Mzajac",
     imagePage: "https://commons.wikimedia.org/wiki/File:BRM-1K.jpg",
