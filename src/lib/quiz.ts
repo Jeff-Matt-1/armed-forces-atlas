@@ -165,6 +165,50 @@ function designationTokens(value: string): string[] {
     .filter((token) => token.length >= 2 && !GENERIC_WORDS.has(token));
 }
 
+/**
+ * Edit distance, abandoned once it passes `cap`. Only "almost the same word"
+ * matters here, so a large distance never needs computing exactly.
+ */
+function editDistance(a: string, b: string, cap: number): number {
+  if (Math.abs(a.length - b.length) > cap) return cap + 1;
+  let previous = Array.from({ length: b.length + 1 }, (_, i) => i);
+  for (let i = 1; i <= a.length; i++) {
+    const current = [i];
+    let best = i;
+    for (let j = 1; j <= b.length; j++) {
+      const cost = a[i - 1] === b[j - 1] ? 0 : 1;
+      const value = Math.min(previous[j]! + 1, current[j - 1]! + 1, previous[j - 1]! + cost);
+      current[j] = value;
+      if (value < best) best = value;
+    }
+    if (best > cap) return cap + 1;
+    previous = current;
+  }
+  return previous[b.length]!;
+}
+
+/**
+ * Whether two words in a designation are the same word, as far as handing over
+ * an answer goes.
+ *
+ * String equality is not enough. A Russian name reaches this app through more
+ * than one transliteration, so "Krasuha" and "Krasukha" read as one word and
+ * compare as two — which is how "Krasuha-S4" came to be asked against "1RL257
+ * Krasukha-4" with no other option carrying the name. A shortened form gives
+ * away as much as the full one: "Boris" for "Borisoglebsk-2".
+ */
+function sameRoot(a: string, b: string): boolean {
+  if (a === b) return true;
+  const [short, long] = a.length <= b.length ? [a, b] : [b, a];
+  if (short.length >= 4 && long.startsWith(short)) return true;
+  return short.length >= 5 && editDistance(a, b, 1) <= 1;
+}
+
+/** The words of `words` that give away something in `against`. */
+function sharedRoots(words: string[], against: string[]): string[] {
+  return words.filter((word) => against.some((other) => sameRoot(word, other)));
+}
+
 function squash(value: string): string {
   return value.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "");
 }
@@ -191,10 +235,9 @@ function spellsOutAnswer(aka: string, name: string): boolean {
  * rank ladder honest.
  */
 function optionGivesItselfAway(subject: string, answer: string, others: string[]): boolean {
-  const subjectTokens = new Set(designationTokens(subject));
-  const shared = designationTokens(answer).filter((token) => subjectTokens.has(token));
+  const shared = sharedRoots(designationTokens(answer), designationTokens(subject));
   if (shared.length === 0) return false;
-  return !others.some((other) => designationTokens(other).some((token) => shared.includes(token)));
+  return !others.some((other) => sharedRoots(designationTokens(other), shared).length > 0);
 }
 
 /**
@@ -211,12 +254,11 @@ function fairDistractors(subject: string, answer: string, pool: string[]): strin
   const unique = [...new Set(pool)].filter((value) => value !== answer);
   if (unique.length < 3) return null;
 
-  const subjectWords = new Set(designationTokens(subject));
-  const shared = designationTokens(answer).filter((word) => subjectWords.has(word));
+  const shared = sharedRoots(designationTokens(answer), designationTokens(subject));
   if (shared.length === 0) return shuffle(unique).slice(0, 3);
 
-  const sharing = unique.filter((value) =>
-    designationTokens(value).some((word) => shared.includes(word)),
+  const sharing = unique.filter(
+    (value) => sharedRoots(designationTokens(value), shared).length > 0,
   );
   if (sharing.length === 0) return null;
 
@@ -248,8 +290,7 @@ export function designationQuestion(item: Item, pool: Item[]): Question | null {
   const others = pool.filter((i) => i.slug !== item.slug);
   if (others.length < 3) return null;
 
-  const akaTokens = new Set(designationTokens(item.aka));
-  const giveaways = designationTokens(item.name).filter((token) => akaTokens.has(token));
+  const giveaways = sharedRoots(designationTokens(item.name), designationTokens(item.aka));
 
   // Distractors are ranked, not taken at random. Anything sharing a giveaway
   // word comes first, because that word then stops being a shortcut. Then come
@@ -258,7 +299,7 @@ export function designationQuestion(item: Item, pool: Item[]): Question | null {
   // which captain it is, not on spotting the only captain-shaped word.
   const ladder = item.placements[0];
   const sharesGiveaway = (other: Item) =>
-    giveaways.length > 0 && designationTokens(other.name).some((t) => giveaways.includes(t));
+    giveaways.length > 0 && sharedRoots(designationTokens(other.name), giveaways).length > 0;
   const sameRole = (other: Item) => ladder !== undefined && other.placements[0] === ladder;
 
   if (giveaways.length > 0 && !others.some(sharesGiveaway)) return null;

@@ -81,7 +81,7 @@ export const etEw: Record<string, ItemTranslation> = {
       "Loeb kui BTR-80, millele on kasvanud kuur",
     ],
     placements: [
-      "Elektroonilise sõjapidamise üksused kolonnide ja marsside toetuseks",
+      "Elektroonilise sõjapidamise üksused kolonnide ja rännakute toetuseks",
       "Antakse ette, mitte ei hoita ringkonna tasandil",
     ],
     doctrineNote:
