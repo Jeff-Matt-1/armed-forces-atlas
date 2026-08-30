@@ -95,7 +95,7 @@ export const etBlocks: Record<string, BlockTranslation> = {
     brief:
       "Šassii lakkab siin aitamast. Need sõidavad samadel KamAZi, BAZi, BTR-80 ja MT-LB keredel, mis on varasemates õppetükkides läbitud, nii et kogu tuvastusülesanne on antenn: üks taldrik või mitu, avatud võre või kinnine paneel, katusel või tõmmitsatega maas kõrval. Teine tunnus on jalajälg — sadu kilomeetreid ulatuv segaja laotab mastid ja tõmmitsad lagedale, oma masinat kaitsev hoiab kõik katusel.",
     doctrineNote:
-      "Grau ja Bartles käsitlevad raadioelektroonilist võitlust omaette väeliigina, mis on brigaadi tasandil oma, mitte ülalt juurde antud. Selle ülesanne on katkestada side vastase sensorite ja tema suurtükiväe vahel — sama side, millele Vene süsteem ise toetub.",
+      "Grau ja Bartles käsitlevad raadioelektroonilist võitlust omaette väeliigina, mis on brigaadi tasandil orgaaniline, mitte ülalt juurde antud. Selle ülesanne on katkestada side vastase sensorite ja tema suurtükiväe vahel — sama side, millele Vene süsteem ise toetub.",
   },
   c2: {
     title: "Juhtimissüsteemid",
