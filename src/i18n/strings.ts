@@ -100,6 +100,15 @@ const en = {
   "quiz.failLine": "FAIL — {needed} correct required",
   "quiz.saving": "Saving…",
   "quiz.recognitionCard": "Recognition card",
+  // Excellence badges
+  "badge.title": "Excellence badge",
+  "badge.frame": "Excellence badge — frame earned",
+  "badge.rank": "Excellence badge — rank {rank} of {max}",
+  "badge.howTo":
+    "Pass a block exam without a single mistake to rise one rank. Each block counts once, so going back to clear a block you passed with a mistake advances you too.",
+  "badge.complete": "Every block cleared without a mistake. There is no higher rank.",
+  "badge.cleanExams": "Cleared without a mistake ({count})",
+  "badge.remaining": "{count} blocks still to clear perfectly",
   "quiz.runAgain": "Run again",
   "quiz.backToBlocks": "Back to blocks",
   "quiz.correct": "Correct",
@@ -348,6 +357,15 @@ const et: Record<StringKey, string> = {
   "quiz.failLine": "EI LÄBINUD — vaja on {needed} õiget",
   "quiz.saving": "Salvestan…",
   "quiz.recognitionCard": "Tuvastuskaart",
+  // Excellence badges
+  "badge.title": "Meisterlikkuse märk",
+  "badge.frame": "Meisterlikkuse märk — raam teenitud",
+  "badge.rank": "Meisterlikkuse märk — aste {rank} / {max}",
+  "badge.howTo":
+    "Soorita õppetüki eksam ilma ühegi veata, et tõusta ühe astme võrra. Iga õppetükk loeb ühe korra, nii et ka tagasiminek varem veaga sooritatud õppetüki juurde viib sind edasi.",
+  "badge.complete": "Kõik õppetükid sooritatud veatult. Kõrgemat astet ei ole.",
+  "badge.cleanExams": "Veatult sooritatud ({count})",
+  "badge.remaining": "{count} õppetükki veel veatult sooritada",
   "quiz.runAgain": "Tee uuesti",
   "quiz.backToBlocks": "Tagasi õppetükkide juurde",
   "quiz.correct": "Õige",

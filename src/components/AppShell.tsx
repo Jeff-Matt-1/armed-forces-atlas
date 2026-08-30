@@ -2,6 +2,7 @@ import { Link } from "@tanstack/react-router";
 import type { ReactNode } from "react";
 
 import { useAuth } from "@/hooks/useAuth";
+import { BadgeIndicator } from "@/components/BadgeIndicator";
 import { LanguageToggle } from "@/components/LanguageToggle";
 import { useLocale } from "@/i18n/LocaleProvider";
 import type { StringKey } from "@/i18n/strings";
@@ -45,6 +46,8 @@ export function AppShell({ children }: { children: ReactNode }) {
               </Link>
             ))}
           </nav>
+
+          <BadgeIndicator />
 
           <LanguageToggle />
 
