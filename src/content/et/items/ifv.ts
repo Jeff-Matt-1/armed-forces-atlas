@@ -42,8 +42,8 @@ export const etIfv: Record<string, ItemTranslation> = {
   },
   "bmp-3": {
     aka: "Objekt 688M",
-    armament: "100 mm kahur-heitja 2A70, 30 mm 2A72, 7.62 mm PKT",
-    rangeText: "100 mm kahur 4000 m; juhitav mürsk 5500 m",
+    armament: "100 mm kahur 2A70, 30 mm 2A72, 7.62 mm PKT",
+    rangeText: "100 mm kahur 4000 m; juhitav tankitõrjerakett 5500 m",
     cues: [
       "Kaks relva ühes tornis — jäme 100 mm toru ja selle kõrval peenike 30 mm",
       "Mootor taga, nii et jalavägi astub väljumisel üle jõuseadme",
@@ -74,8 +74,8 @@ export const etIfv: Record<string, ItemTranslation> = {
   },
   "bmd-4m": {
     aka: "Sadovnitsa",
-    armament: "100 mm kahur-heitja 2A70, 30 mm 2A72, 7.62 mm PKT",
-    rangeText: "100 mm kahur 4000 m; juhitav mürsk 5500 m",
+    armament: "100 mm kahur 2A70, 30 mm 2A72, 7.62 mm PKT",
+    rangeText: "100 mm kahur 4000 m; juhitav tankitõrjerakett 5500 m",
     cues: [
       "BMP-3 relvastus — 100 mm ja 30 mm koos — poole väiksemal kerel",
       "Viis tugiratast lühikesel madalal õhudessantkerel",
