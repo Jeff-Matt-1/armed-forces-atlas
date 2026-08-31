@@ -68,7 +68,7 @@ export const etVessels: Record<string, ItemTranslation> = {
     ],
     placements: [
       "Vene mereväe kaasaegne esimese järgu fregatt",
-      "Põhjalaevastik, edasisi kereid ehitatakse",
+      "Põhjalaevastik, jätkuehitused käivad",
     ],
     doctrineNote:
       "Esimene kaasaegne Vene pealveelaev, mis on ehitatud püststardi ümber, nii et tema relvastus on nähtamatu kuni tulistamiseni. Sile korrastatud profiil on korraga tuvastustunnus ja konstruktsiooni eesmärk.",

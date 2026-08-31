@@ -12,7 +12,7 @@ export const etRadars: Record<string, ItemTranslation> = {
       "Massiiv pöörleb tervikuna masina kohal mastil",
     ],
     placements: [
-      "Raadiotehnilised üksused õhuseireks",
+      "Raadiotehnilised väed õhuseireks",
       "Varajane hoiatus ja sihtmärkide leidmine õhutõrjeüksustele",
     ],
     doctrineNote:
@@ -29,7 +29,7 @@ export const etRadars: Record<string, ItemTranslation> = {
       "Mitu masinat töötavad koos ühe süsteemina",
     ],
     placements: [
-      "Ringkonna tasandi raadiotehnilised üksused",
+      "Ringkonna tasandi raadiotehnilised väed",
       "Toidab kaugmaa õhutõrjeraketisüsteeme",
     ],
     doctrineNote:
