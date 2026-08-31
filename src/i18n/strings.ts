@@ -215,6 +215,8 @@ const en = {
   "auth.noAccount": "No account yet? Create one",
   "auth.haveAccount": "Already registered? Sign in instead",
   "auth.forgot": "Forgotten your password?",
+  "auth.forgotAskInstructor":
+    "Forgotten your password? Ask your instructor to set a new one — there is no reset email.",
   "auth.studyWithout": "keep studying without an account",
 
   "about.transparency": "Transparency",
@@ -474,6 +476,8 @@ const et: Record<StringKey, string> = {
   "auth.noAccount": "Kontot veel ei ole? Loo see",
   "auth.haveAccount": "Juba registreeritud? Logi hoopis sisse",
   "auth.forgot": "Unustasid parooli?",
+  "auth.forgotAskInstructor":
+    "Unustasid parooli? Palu juhendajal uus määrata — parooli lähtestamise e-kirja ei saadeta.",
   "auth.studyWithout": "jätka õppimist ilma kontota",
 
   "about.transparency": "Läbipaistvus",

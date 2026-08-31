@@ -177,13 +177,11 @@ function AuthPage() {
             >
               {t("auth.noAccount")}
             </button>
-            <button
-              type="button"
-              onClick={() => switchTo("forgot")}
-              className="block w-full underline-offset-4 hover:underline"
-            >
-              {t("auth.forgot")}
-            </button>
+            {/* No SMTP is configured and none is planned: the instructor sets
+                passwords directly. Swap this back for a button calling
+                switchTo("forgot") if that ever changes — the mode and the
+                /reset-password route are still here and still work. */}
+            <p className="text-muted-foreground">{t("auth.forgotAskInstructor")}</p>
           </>
         )}
         {mode === "signup" && (
