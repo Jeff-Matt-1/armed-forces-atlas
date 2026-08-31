@@ -17,7 +17,7 @@ export const etAirDefence: Record<string, ItemTranslation> = {
       "Laialt kasutusel ka maasihtmärkide vastu",
     ],
     doctrineNote:
-      "Relvastuseks ainult kahurid, ja üha sagedamini suunatakse need hoonete, mitte lennukite pihta. Just tulejõud metsaserva pihta hoiab teda teenistuses ammu pärast seda, kui tema radar tänapäeva lennukite vastu vananes.",
+      "Relvastuseks ainult kahurid, ja üha sagedamini suunatakse need hoonete, mitte lennukite pihta. Just tulejõud maismaasihtmärkide vastu hoiab teda teenistuses ammu pärast seda, kui tema radar tänapäeva lennukite vastu vananes.",
     crew: "4",
     service: "Kasutuses",
   },
