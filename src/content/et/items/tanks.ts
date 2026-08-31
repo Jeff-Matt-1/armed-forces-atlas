@@ -38,7 +38,7 @@ export const etTanks: Record<string, ItemTranslation> = {
   },
   "t-72b3m": {
     aka: "Obr. 2016 / T-72B3 mudel 2016",
-    armament: "125 mm 2A46M-5; 12.7 mm kaugjuhitav relvajaam",
+    armament: "125 mm 2A46M-5; 12.7 mm kaugjuhitav relvasüsteem",
     rangeText: "Kahur kuni 3000 m; tankitõrjerakett 5000 m",
     cues: [
       "Relikt-reaktiivsoomuse paneelid Kontakt-1 plokkide asemel kere ja torni esiosal",
@@ -101,12 +101,12 @@ export const etTanks: Record<string, ItemTranslation> = {
   },
   "t-90m": {
     aka: "Proryv-3",
-    armament: "125 mm 2A46M-5; 7.62 mm ja 12.7 mm kaugjuhitav relvajaam",
+    armament: "125 mm 2A46M-5; 7.62 mm ja 12.7 mm kaugjuhitav relvasüsteem",
     rangeText: "Kahur 3000 m; tankitõrjerakett Refleks-M 5000 m",
     cues: [
       "Suur kandiline varustusrest torni tagaosas",
       "Relikt-paneelid ja võrekaitse taga",
-      "Kaugjuhitav relvajaam ülema kupli peal — avatud 12.7 mm alust ei ole",
+      "Kaugjuhitav relvasüsteem ülema kupli peal — avatud 12.7 mm alust ei ole",
       "Štora pimesteid ei ole",
     ],
     placements: ["Võimekaim tank esimese liini tankipataljonides; väljastatud piiratud koguses"],

@@ -83,7 +83,7 @@ export const etEngineering: Record<string, ItemTranslation> = {
       "Torni ei ole, sahka ei ole, puomi ei ole",
     ],
     placements: [
-      "Pioneeriüksused miiniväljade murdmiseks enne rünnakut",
+      "Pioneeriüksused miiniväljadest läbipääsu rajamiseks enne rünnakut",
       "Kasutatakse kindlustuste ja hoonete vastu linnalahingus",
     ],
     doctrineNote:
@@ -118,11 +118,11 @@ export const etEngineering: Record<string, ItemTranslation> = {
       "Mitu masinat kasutatakse koos, iga annab ühe lüli",
     ],
     placements: [
-      "Pioneeriüksused kuivade lõhede ja väikeste ojade sillutamiseks",
+      "Pioneeriüksused kraavide ja väikeste ojade sillutamiseks",
       "Tee- ja marsruudi tugi, mitte rünnakuületus",
     ],
     doctrineNote:
-      "Ratastel, seega järgib marsruuti, ei raja seda. Kui MT-55 viib tanki tule all üle lõhe, siis see ehitab pealetungi taga tee üles, et kõik ülejäänu järele pääseks.",
+      "Ratastel, seega järgib marsruuti, ei raja seda. Kui MT-55 viib tanki tule all üle kraavi, siis see ehitab pealetungi taga tee üles, et kõik ülejäänu järele pääseks.",
     service: "Kasutuses",
   },
   "bat-2": {
@@ -146,7 +146,7 @@ export const etEngineering: Record<string, ItemTranslation> = {
   zemledeliye: {
     aka: "Põllundus",
     armament: "Kaks 122 mm torude plokki, mis tulistavad miine paigaldavaid rakette",
-    rangeText: "Külvab miiniväljasid umbes 5–15 km kaugusele",
+    rangeText: "Puistab miiniväljasid umbes 5–15 km kaugusele",
     cues: [
       "KamAZ 8x8 soomustatud kabiiniga, ehitatud nagu raske raketiheitja",
       "Kaks kandilist torude plokki kõrvuti, enamasti katete all",
@@ -163,7 +163,7 @@ export const etEngineering: Record<string, ItemTranslation> = {
   },
   "pts-4": {
     aka: "Roomik-ujuvtransportöör",
-    armament: "12.7 mm kaugjuhitav relvajaam",
+    armament: "12.7 mm kaugjuhitav relvasüsteem",
     rangeText: "Kannab vees umbes 18 tonni",
     cues: [
       "Suur lame lahtine veosetekk madalate äärtega, hõivab suurema osa masinast",
@@ -182,7 +182,7 @@ export const etEngineering: Record<string, ItemTranslation> = {
   },
   "bmr-3m": {
     aka: "Soomustatud demineerimismasin",
-    armament: "12.7 mm kaugjuhitav relvajaam",
+    armament: "12.7 mm kaugjuhitav relvasüsteem",
     cues: [
       "Tankikere ilma tornita, ees lai rullikute komplekt",
       "Kaks rasket rullikuplokki õlgadel, üks kummagi roomiku ees",
@@ -190,7 +190,7 @@ export const etEngineering: Record<string, ItemTranslation> = {
       "Kabiini taga vahel demineerimislaengute stardiseadmed",
     ],
     placements: [
-      "Pioneeriüksused, kes murravad miinivälju läbi liikuvale allüksusele",
+      "Pioneeriüksused, kes rajavad miiniväljadest läbipääsu liikuvale allüksusele",
       "Juhib kolonni läbi kahtlase vöö ja annab siis teatepulga edasi",
     ],
     doctrineNote:

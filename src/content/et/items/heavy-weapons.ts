@@ -4,7 +4,7 @@ import type { ItemTranslation } from "@/content/translations";
 export const etHeavyWeapons: Record<string, ItemTranslation> = {
   "pkp-pecheneg": {
     armament: "7.62x54mmR üldotstarbeline kuulipilduja, lintsöötmega",
-    rangeText: "Mõjus kahejalal 1500 m; kolmjalalt 1900 m",
+    rangeText: "Efektiivne kahejalal 1500 m; kolmjalalt 1900 m",
     cues: [
       "Raske ribiline rauakate kogu raua ulatuses",
       "Kiirvahetatavat rauda ei ole, erinevalt asendatud PKM-ist",
@@ -19,7 +19,7 @@ export const etHeavyWeapons: Record<string, ItemTranslation> = {
   },
   kord: {
     armament: "12.7x108mm raskekuulipilduja",
-    rangeText: "Mõjus 2000 m; kerge soomuse vastu 1500 m",
+    rangeText: "Efektiivne 2000 m; kerge soomuse vastu 1500 m",
     cues: [
       "Väga raske raud selge suudmepiduriga",
       "Paigaldatud madalale 6T7 kolmjalale või sõiduki rõngasalusele",
@@ -54,7 +54,7 @@ export const etHeavyWeapons: Record<string, ItemTranslation> = {
   "rpg-7": {
     aka: "Reaktiivgranaadiheitja",
     armament: "Korduvkasutatav 40 mm heitja ülemõõduliste raketgranaatidega",
-    rangeText: "Mõjus liikuva sihtmärgi vastu 200 m, paikse vastu 500 m",
+    rangeText: "Efektiivne liikuva sihtmärgi vastu 200 m, paikse vastu 500 m",
     cues: [
       "Toru iseloomuliku laieneva lehtriga taga",
       "Puidust või polümeerist kuumakaitsed keskosas",
@@ -73,7 +73,7 @@ export const etHeavyWeapons: Record<string, ItemTranslation> = {
   "rpo-a-shmel": {
     aka: "Kimalane",
     armament: "93 mm ühekordne termobaariline raketiheitja",
-    rangeText: "Mõjus 600 m; maksimaalne 1000 m",
+    rangeText: "Efektiivne 600 m; maksimaalne 1000 m",
     cues: [
       "Sile silindriline ühekordne toru, laienevat lehtrit ei ole",
       "Kantakse ja lastakse tavaliselt paarikaupa",

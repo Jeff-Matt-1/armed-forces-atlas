@@ -5,7 +5,7 @@ export const etRecon: Record<string, ItemTranslation> = {
   "brdm-2": {
     aka: "BRDM-2M",
     armament: "14.5 mm KPVT, 7.62 mm PKT",
-    rangeText: "KPVT mõjus umbes 2000 m",
+    rangeText: "KPVT efektiivne umbes 2000 m",
     cues: [
       "Neli ratast, mitte kaheksa — väiksem kui ükski BTR",
       "Kaks paari kõhurattaid telgede vahel, lastakse alla pehmel pinnasel",

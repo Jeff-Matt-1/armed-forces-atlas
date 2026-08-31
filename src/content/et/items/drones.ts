@@ -84,7 +84,7 @@ export const etDrones: Record<string, ItemTranslation> = {
       "Kasutatakse suurtükiväe, radarite ja õhutõrjesüsteemide vastu",
     ],
     doctrineNote:
-      "Laskemoon, mis ringleb, nii et ta surub luure-tule-ahela kokku üheks objektiks. Teda kasutatakse just nende kõrge väärtusega süsteemide vastu, mida see atlas sind tuvastama õpetab — vastupatareiradarid, liikursuurtükid, õhutõrjemasinad.",
+      "Varitsev õhuründemoon, mis surub luure-tule-ahela kokku üheks objektiks. Teda kasutatakse just nende kõrge väärtusega süsteemide vastu, mida see atlas sind tuvastama õpetab — vastupatareiradarid, liikursuurtükid, õhutõrjemasinad.",
     service: "Kasutuses",
   },
   "uran-9": {

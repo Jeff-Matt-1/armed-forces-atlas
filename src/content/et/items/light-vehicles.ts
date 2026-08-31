@@ -4,8 +4,8 @@ import type { ItemTranslation } from "@/content/translations";
 export const etLightVehicles: Record<string, ItemTranslation> = {
   "gaz-2975-tigr": {
     aka: "Tiiger",
-    armament: "Katuserõngas või kaugjuhitav alus: 7.62 mm PKT, 12.7 mm Kord või AGS-17",
-    rangeText: "Paigaldatud kuulipilduja mõjus kuni 2000 m",
+    armament: "Turell või kaugjuhitav alus: 7.62 mm PKT, 12.7 mm Kord või AGS-17",
+    rangeText: "Paigaldatud kuulipilduja efektiivne kuni 2000 m",
     cues: [
       "Kandiline soomustatud mootorikate peaaegu püstise esiklaasiga",
       "Neli suurt ratast selgete kaartega, mootorikate ei ulatu üle",
@@ -54,8 +54,8 @@ export const etLightVehicles: Record<string, ItemTranslation> = {
   },
   "kamaz-63968-typhoon": {
     aka: "Tüfoon-K",
-    armament: "Kaugjuhitav relvajaam 12.7 mm kuulipilduja või 30 mm granaadiheitjaga",
-    rangeText: "Relvajaam mõjus kuni 2000 m",
+    armament: "Kaugjuhitav relvasüsteem 12.7 mm kuulipilduja või 30 mm granaadiheitjaga",
+    rangeText: "Relvasüsteem efektiivne kuni 2000 m",
     cues: [
       "Väga kõrge 6x6 kere lameda V-kujulise põhjaga",
       "Kabiin ja dessandiruum moodustavad ühe pideva soomuskasti",
@@ -73,27 +73,27 @@ export const etLightVehicles: Record<string, ItemTranslation> = {
   },
   "gaz-233114-tigr-m": {
     aka: "GAZ-233114 / Tigr-M",
-    armament: "Kaugjuhitav relvajaam Arbalet-DM, 12.7 mm Kord",
-    rangeText: "Mõjus kuni 2000 m",
+    armament: "Kaugjuhitav relvasüsteem Arbalet-DM, 12.7 mm Kord",
+    rangeText: "Efektiivne kuni 2000 m",
     cues: [
       "Tigri kere madala kaugjuhitava torniga avatud rõnga asemel",
-      "Relvajaamal optikaplokk, laskur ei ole väljas",
+      "Relvasüsteemil optikaplokk, laskur ei ole väljas",
       "Ustel ja külgedel lisasoomuse paneelid",
-      "Antennipundar katuse tagaosas",
+      "Antennialus katuse tagaosas",
     ],
     placements: [
       "Eriotstarbelised (SpN) ja luureüksused",
       "Õhudessantrünnakuüksused tuletoetussõidukina",
     ],
     doctrineNote:
-      "Relvastatud luurevariant. Kaugjuhitav relvajaam avatud luugi asemel tähendab, et meeskond arvestab suletud luukidega võitlemisega.",
+      "Relvastatud luurevariant. Kaugjuhitav relvasüsteem avatud luugi asemel tähendab, et meeskond arvestab suletud luukidega võitlemisega.",
     crew: "2 + 5",
     service: "Kasutuses",
   },
   "iveco-lmv-rys": {
     aka: "Iveco LMV / Ilves",
-    armament: "Katuserõngas, 7.62 mm või 12.7 mm kuulipilduja",
-    rangeText: "Paigaldatud kuulipilduja mõjus kuni 2000 m",
+    armament: "Turell, 7.62 mm või 12.7 mm kuulipilduja",
+    rangeText: "Paigaldatud kuulipilduja efektiivne kuni 2000 m",
     cues: [
       "Tigrist märgatavalt madalam ja ümaram",
       "Kaldu mootorikate, esituled tiibadesse süvistatud",
@@ -111,7 +111,7 @@ export const etLightVehicles: Record<string, ItemTranslation> = {
   },
   "typhoon-u": {
     aka: "Taifuun",
-    armament: "Kaugjuhitav relvajaam või katuserõngas, kui paigaldatud",
+    armament: "Kaugjuhitav relvasüsteem või turell, kui paigaldatud",
     cues: [
       "Väga kõrge tahulise küljega soomuskere 6x6 veoautošassiil",
       "Mootorikate kabiini ees — KamAZi Typhoon-K on kabiin-mootori-peal ja katet ei ole",

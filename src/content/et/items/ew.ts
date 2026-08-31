@@ -3,7 +3,7 @@ import type { ItemTranslation } from "@/content/translations";
 /** Block 10 — Elektroonilise sõjapidamise süsteemid. */
 export const etEw: Record<string, ItemTranslation> = {
   "krasukha-4": {
-    rangeText: "Mõjus õhus olevate radarite vastu kuni umbes 300 km",
+    rangeText: "Efektiivne õhus olevate radarite vastu kuni umbes 300 km",
     cues: [
       "Mitu ümarat paraboolantenni koos ühel kokkupandaval alusel",
       "KamAZ-63501 8x8 varjualusega kabiini taga",
@@ -19,7 +19,7 @@ export const etEw: Record<string, ItemTranslation> = {
     service: "Kasutuses",
   },
   "krasukha-2": {
-    rangeText: "Mõjus õhus olevate radarite vastu kuni umbes 250 km",
+    rangeText: "Efektiivne õhus olevate radarite vastu kuni umbes 250 km",
     cues: [
       "Üksainus väga suur taldrik, mitte Krasuha-4 väiksemate kogum",
       "BAZ 8x8 šassii esikabiini ja pika lameda tekiga",

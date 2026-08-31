@@ -133,7 +133,7 @@ export const etBlocks: Record<string, BlockTranslation> = {
     title: "Luuresüsteemid",
     subtitle: "Maa-, suurtükiväe- ja eriluure",
     brief:
-      "Luuremasinad näevad välja nagu lahingumasinad, millest nad on ehitatud, sest nad peavad üle elama seal, kuhu nad saadetakse. Tunnus on alati katusel: sensor seal, kus peaks olema relv, lisakuppel, kokkupandud radar, antennipundar. See on teadlikult lühike õppetükk — radarid õppetükis 12, vaatluspunktid õppetükis 11 ja droonid õppetükis 18 teevad suurt osa samast tööst ja on seal käsitletud.",
+      "Luuremasinad näevad välja nagu lahingumasinad, millest nad on ehitatud, sest nad peavad üle elama seal, kuhu nad saadetakse. Tunnus on alati katusel: sensor seal, kus peaks olema relv, lisakuppel, kokkupandud radar, antennialus. See on teadlikult lühike õppetükk — radarid õppetükis 12, vaatluspunktid õppetükis 11 ja droonid õppetükis 18 teevad suurt osa samast tööst ja on seal käsitletud.",
     doctrineNote:
       "Grau ja Bartles kirjeldavad luuret kui luure-tule-süsteemi esimest poolt, mitte eesmärki omaette: selle toode on sihtmärk suurtükiväele. Seetõttu on suurtükiväe oma luuremasin väärtuslikum sihtmärk kui enamik tanke.",
   },

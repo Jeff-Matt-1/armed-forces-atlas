@@ -5,7 +5,7 @@ export const etAirDefence: Record<string, ItemTranslation> = {
   "zsu-23-4-shilka": {
     aka: "Šilka",
     armament: "4 × 23 mm automaatkahur AZP-23",
-    rangeText: "Mõjus kuni umbes 2500 m",
+    rangeText: "Efektiivne kuni umbes 2500 m",
     cues: [
       "Neli peenikest kahuritoru ühel alusel, paarikaupa üksteise peal",
       "Suur kandiline torn täidab suurema osa madalast roomikkerest",

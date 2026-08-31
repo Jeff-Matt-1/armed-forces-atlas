@@ -148,7 +148,7 @@ export const etArtillery: Record<string, ItemTranslation> = {
       "Manöövribrigaadide koosseisus ei ole",
     ],
     doctrineNote:
-      "Reaktiivsuurtükiväe keskmine aste ja sama palju külvatavate miinide kui lõhkemürskude vahend. Ühe leidmine viitab armee tasandi tuleplaneerimisele, mitte brigaadilahingule.",
+      "Reaktiivsuurtükiväe keskmine aste ja sama palju puistatavate miinide kui lõhkemürskude vahend. Ühe leidmine viitab armee tasandi tuleplaneerimisele, mitte brigaadilahingule.",
     crew: "4",
     service: "Kasutuses",
   },

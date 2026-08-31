@@ -5,7 +5,7 @@ export const etHandguns: Record<string, ItemTranslation> = {
   pm: {
     aka: "Pistolet Makarova, 9x18 mm",
     armament: "9x18 mm PM, 8-padrunine salv",
-    rangeText: "Mõjus kuni 50 m",
+    rangeText: "Efektiivne kuni 50 m",
     cues: [
       "Lühike lukk ümara suudmeotsaga",
       "Väljas löökkukk, väikesed fikseeritud sihikud",
@@ -24,7 +24,7 @@ export const etHandguns: Record<string, ItemTranslation> = {
   "mp-443": {
     aka: "Pistolet Jarõgina",
     armament: "9x19 mm, 17/18-padrunine salv",
-    rangeText: "Mõjus kuni 50 m",
+    rangeText: "Efektiivne kuni 50 m",
     cues: [
       "PM-ist pikem ja kandilisem lukk",
       "Kaherealine salv, käepide selgelt jämedam",
@@ -42,7 +42,7 @@ export const etHandguns: Record<string, ItemTranslation> = {
   },
   "gsh-18": {
     armament: "9x19 mm (sh soomustläbistav 7N31), 18-padrunine salv",
-    rangeText: "Mõjus kuni 50 m",
+    rangeText: "Efektiivne kuni 50 m",
     cues: [
       "Väga kerge polümeerraam, tahuliste külgedega lukk",
       "Välist löökkukke ei ole — löögitihvtiga",
@@ -57,7 +57,7 @@ export const etHandguns: Record<string, ItemTranslation> = {
   aps: {
     aka: "Avtomatitšeski Pistolet Stetškina",
     armament: "9x18 mm, 20-padrunine salv, valikuline tulerežiim",
-    rangeText: "Mõjus 50 m (õlatoega 200 m)",
+    rangeText: "Efektiivne 50 m (õlatoega 200 m)",
     cues: [
       "Ebatavaliselt pikk käepide 20-padrunise salvega",
       "Tulerežiimi valits luku küljes",
@@ -76,7 +76,7 @@ export const etHandguns: Record<string, ItemTranslation> = {
   "sr-1mp": {
     aka: "Vektor / SPS",
     armament: "9x21 mm soomustläbistav, 18-padrunine salv",
-    rangeText: "Mõjus 50 m; läbistab kuulivesti kuni 50 m",
+    rangeText: "Efektiivne 50 m; läbistab kuulivesti kuni 50 m",
     cues: [
       "Kaasaegne kandiline polümeerraam lisaseadmete siiniga",
       "Käepideme seljal pigistuskaitse",
@@ -92,7 +92,7 @@ export const etHandguns: Record<string, ItemTranslation> = {
   pss: {
     aka: "Pistolet Spetsialnõi Samozarjadnõi",
     armament: "7.62x42 mm SP-4 suletud kolviga padrun, 6 lasku",
-    rangeText: "Mõjus kuni 25 m",
+    rangeText: "Efektiivne kuni 25 m",
     cues: [
       "Summutitoru ei ole — püstol näeb tavaline välja, kuid on vaikne",
       "Kandiline tahuline lukk, väga lihtsad jooned",
@@ -107,7 +107,7 @@ export const etHandguns: Record<string, ItemTranslation> = {
   },
   udav: {
     armament: "9x21 mm, 18-padrunine salv",
-    rangeText: "Mõjus kuni 100 m",
+    rangeText: "Efektiivne kuni 100 m",
     cues: [
       "Pikk kaasaegne lukk täispika siiniga",
       "Mõlemakäelised juhtnupud ja ümberpööratav salvivabasti",
@@ -123,7 +123,7 @@ export const etHandguns: Record<string, ItemTranslation> = {
   "ak-74m": {
     aka: "Kalašnikov 5,45",
     armament: "5,45x39 mm, 30-padrunine salv",
-    rangeText: "Mõjus kuni umbes 500 m",
+    rangeText: "Efektiivne kuni umbes 500 m",
     cues: [
       "Must polümeerlaad seal, kus AKM-il on puit",
       "Küljele klappiv päraosa, mida fikseeritud päraga AK-74-l ei ole",
@@ -140,7 +140,7 @@ export const etHandguns: Record<string, ItemTranslation> = {
   },
   "ak-12": {
     armament: "5,45x39 mm, 30-padrunine salv",
-    rangeText: "Mõjus kuni umbes 500 m",
+    rangeText: "Efektiivne kuni umbes 500 m",
     cues: [
       "Siin üle kogu lukukoja ja kaane, mida ühelgi varasemal AK-l ei ole",
       "Teleskoopiline ja klappiv päraosa, mitte fikseeritud ega küljele klappiv",
@@ -158,7 +158,7 @@ export const etHandguns: Record<string, ItemTranslation> = {
   svd: {
     aka: "Dragunov",
     armament: "7,62x54R, 10-padrunine salv",
-    rangeText: "Mõjus kuni umbes 800 m",
+    rangeText: "Efektiivne kuni umbes 800 m",
     cues: [
       "Pikk raud ja skeletipära — päras on ava läbi",
       "Sihik PSO-1 istub kõrgel külgsiinil, nihutatud vasakule",
@@ -176,7 +176,7 @@ export const etHandguns: Record<string, ItemTranslation> = {
   "vss-vintorez": {
     aka: "Keermelõikur",
     armament: "9x39 mm allahelikiiruse padrun, 10- või 20-padrunine salv",
-    rangeText: "Mõjus kuni umbes 400 m",
+    rangeText: "Efektiivne kuni umbes 400 m",
     cues: [
       "Jäme sisseehitatud summuti üle suurema osa raua pikkusest — mitte külgekruvitud",
       "Tervikuna lühike, sihikust hoolimata palju lühem kui SVD",

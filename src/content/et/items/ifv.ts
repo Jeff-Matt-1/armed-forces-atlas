@@ -4,7 +4,7 @@ import type { ItemTranslation } from "@/content/translations";
 export const etIfv: Record<string, ItemTranslation> = {
   "bmp-1": {
     armament: "73 mm 2A28 Grom, 7.62 mm PKT, 9M14 Maljutka siin",
-    rangeText: "Kahur mõjus umbes 800 m",
+    rangeText: "Kahur efektiivne umbes 800 m",
     cues: [
       "Väga madal lame kere teravalt terava vööriga",
       "Väike kooniline üheinimesetorn keskkohast eespool",
@@ -22,7 +22,7 @@ export const etIfv: Record<string, ItemTranslation> = {
   },
   "bmp-2": {
     armament: "30 mm automaatkahur 2A42, 7.62 mm PKT, 9M113 Konkurs",
-    rangeText: "Automaatkahur mõjus umbes 2000 m",
+    rangeText: "Automaatkahur efektiivne umbes 2000 m",
     cues: [
       "Kõrgem kaheinimesetorn, BMP-1 omast tahapoole nihutatud",
       "Pikk peenike 30 mm toru, mis tõuseb järsult — selgeim erinevus BMP-1-st",
@@ -55,7 +55,7 @@ export const etIfv: Record<string, ItemTranslation> = {
   },
   "bmd-2": {
     armament: "30 mm automaatkahur 2A42, 7.62 mm PKT, 9M113 Konkurs",
-    rangeText: "Automaatkahur mõjus umbes 2000 m",
+    rangeText: "Automaatkahur efektiivne umbes 2000 m",
     cues: [
       "Palju väiksem kui ükski BMP — suurus on esimene tunnus",
       "Viis väikest tugiratast BMP kuue suurema vastu",

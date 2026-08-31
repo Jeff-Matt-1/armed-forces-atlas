@@ -5,7 +5,7 @@ export const etApc: Record<string, ItemTranslation> = {
   "btr-60pb": {
     aka: "BTR-60",
     armament: "14.5 mm KPVT, 7.62 mm PKT",
-    rangeText: "KPVT mõjus umbes 2000 m",
+    rangeText: "KPVT efektiivne umbes 2000 m",
     cues: [
       "Kaheksa ratast teraval paadikerel, ühtlaste vahedega",
       "Väike kooniline torn lühikese jämeda 14.5 mm kahuriga",
@@ -24,7 +24,7 @@ export const etApc: Record<string, ItemTranslation> = {
   "btr-70": {
     aka: "GAZ-4905",
     armament: "14.5 mm KPVT, 7.62 mm PKT",
-    rangeText: "KPVT mõjus umbes 2000 m",
+    rangeText: "KPVT efektiivne umbes 2000 m",
     cues: [
       "Väikesed madalad luugid teise ja kolmanda telje vahel",
       "Ümar nina, pehmem kui BTR-60 terav vöör",
@@ -40,7 +40,7 @@ export const etApc: Record<string, ItemTranslation> = {
   "btr-80": {
     aka: "GAZ-5903",
     armament: "14.5 mm KPVT, 7.62 mm PKT",
-    rangeText: "KPVT mõjus umbes 2000 m",
+    rangeText: "KPVT efektiivne umbes 2000 m",
     cues: [
       "Suur kaheosaline küljeuks teise ja kolmanda telje vahel",
       "Ukse ülemine pool avaneb ette, alumine langeb astmeks",
@@ -56,7 +56,7 @@ export const etApc: Record<string, ItemTranslation> = {
   "btr-82a": {
     aka: "BTR-82",
     armament: "30 mm automaatkahur 2A72, 7.62 mm PKT",
-    rangeText: "Automaatkahur mõjus umbes 2000 m",
+    rangeText: "Automaatkahur efektiivne umbes 2000 m",
     cues: [
       "Pikk peenike 30 mm toru seal, kus BTR-80-l on lühike jäme",
       "Kõrgem, kandilisem torn kui BTR-80 koonus",

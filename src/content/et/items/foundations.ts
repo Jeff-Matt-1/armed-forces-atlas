@@ -98,7 +98,7 @@ export const etFoundations: Record<string, ItemTranslation> = {
       "Armee tasandi reaktiivsuurtükiväe brigaadid",
     ],
     doctrineNote:
-      "Massiline pindalatuli allasurumiseks ja miinide külvamiseks: antakse kiiresti ja siis vahetatakse positsiooni, et vältida vastupatareitult.",
+      "Massiline pindalatuli allasurumiseks ja miinide puistamiseks: antakse kiiresti ja siis vahetatakse positsiooni, et vältida vastupatareitult.",
     crew: "3",
     service: "Kategooria",
   },
@@ -142,7 +142,7 @@ export const etFoundations: Record<string, ItemTranslation> = {
   "concept-uav": {
     name: "Mehitamata õhusõiduk (MÕS)",
     aka: "BLA (bespilotnõi letatelnõi aparaat)",
-    armament: "Enamasti relvastamata luureks; ringlevad tüübid kannavad lõhkepead",
+    armament: "Enamasti relvastamata luureks; varitsevad õhuründemoonad kannavad lõhkepead",
     rangeText: "Taktikalise mehitamata õhusõiduki raadius 100–120 km",
     cues: [
       "Väike kere, tõukepropeller taga",
