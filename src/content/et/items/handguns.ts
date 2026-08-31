@@ -4,7 +4,7 @@ import type { ItemTranslation } from "@/content/translations";
 export const etHandguns: Record<string, ItemTranslation> = {
   pm: {
     aka: "Pistolet Makarova, 9x18 mm",
-    armament: "9x18 mm PM, 8-padrunine salv",
+    armament: "9x18 mm PM, 8-padruniline salv",
     rangeText: "Efektiivne kuni 50 m",
     cues: [
       "Lühike kelk ümara suudmeotsaga",
@@ -23,7 +23,7 @@ export const etHandguns: Record<string, ItemTranslation> = {
   },
   "mp-443": {
     aka: "Pistolet Jarõgina",
-    armament: "9x19 mm, 17/18-padrunine salv",
+    armament: "9x19 mm, 17/18-padruniline salv",
     rangeText: "Efektiivne kuni 50 m",
     cues: [
       "PM-ist pikem ja kandilisem kelk",
@@ -41,7 +41,7 @@ export const etHandguns: Record<string, ItemTranslation> = {
     service: "Praegune standard",
   },
   "gsh-18": {
-    armament: "9x19 mm (sh soomustläbistav 7N31), 18-padrunine salv",
+    armament: "9x19 mm (sh soomustläbistav 7N31), 18-padruniline salv",
     rangeText: "Efektiivne kuni 50 m",
     cues: [
       "Väga kerge polümeerraam, tahuliste külgedega kelk",
@@ -56,7 +56,7 @@ export const etHandguns: Record<string, ItemTranslation> = {
   },
   aps: {
     aka: "Avtomatitšeski Pistolet Stetškina",
-    armament: "9x18 mm, 20-padrunine salv, valikuline tulerežiim",
+    armament: "9x18 mm, 20-padruniline salv, valikuline tulerežiim",
     rangeText: "Efektiivne 50 m (õlatoega 200 m)",
     cues: [
       "Ebatavaliselt pikk käepide 20-padrunise salvega",
@@ -75,7 +75,7 @@ export const etHandguns: Record<string, ItemTranslation> = {
   },
   "sr-1mp": {
     aka: "Vektor / SPS",
-    armament: "9x21 mm soomustläbistav, 18-padrunine salv",
+    armament: "9x21 mm soomustläbistav, 18-padruniline salv",
     rangeText: "Efektiivne 50 m; läbistab kuulivesti kuni 50 m",
     cues: [
       "Kaasaegne kandiline polümeerraam lisaseadmete siiniga",
@@ -97,7 +97,7 @@ export const etHandguns: Record<string, ItemTranslation> = {
       "Summutitoru ei ole — püstol näeb tavaline välja, kuid on vaikne",
       "Kandiline tahuline kelk, väga lihtsad jooned",
       "Lühike raud, suue ei ulatu välja",
-      "Väike 6-padrunine salv, peenike käepide",
+      "Väike 6-padruniline salv, peenike käepide",
     ],
     placements: ["Ainult eriotstarbeline luure ja riikliku julgeoleku üksused"],
     doctrineNote:
@@ -106,7 +106,7 @@ export const etHandguns: Record<string, ItemTranslation> = {
     service: "Eriüksused",
   },
   udav: {
-    armament: "9x21 mm, 18-padrunine salv",
+    armament: "9x21 mm, 18-padruniline salv",
     rangeText: "Efektiivne kuni 100 m",
     cues: [
       "Pikk kaasaegne kelk täispika siiniga",
@@ -122,7 +122,7 @@ export const etHandguns: Record<string, ItemTranslation> = {
   },
   "ak-74m": {
     aka: "Kalašnikov 5,45",
-    armament: "5,45x39 mm, 30-padrunine salv",
+    armament: "5,45x39 mm, 30-padruniline salv",
     rangeText: "Efektiivne kuni umbes 500 m",
     cues: [
       "Must polümeerkate seal, kus AKM-il on puit",
@@ -139,7 +139,7 @@ export const etHandguns: Record<string, ItemTranslation> = {
     service: "Kasutuses",
   },
   "ak-12": {
-    armament: "5,45x39 mm, 30-padrunine salv",
+    armament: "5,45x39 mm, 30-padruniline salv",
     rangeText: "Efektiivne kuni umbes 500 m",
     cues: [
       "Kinnitussiin kulgeb üle kogu lukukoja ja selle kaane — ühelgi varasemal AK-l seda ei ole",
@@ -157,7 +157,7 @@ export const etHandguns: Record<string, ItemTranslation> = {
   },
   svd: {
     aka: "Dragunov",
-    armament: "7,62x54R, 10-padrunine salv",
+    armament: "7,62x54R, 10-padruniline salv",
     rangeText: "Efektiivne kuni umbes 800 m",
     cues: [
       "Pikk raud ja skelettpära — päras on ava läbi",
@@ -175,7 +175,7 @@ export const etHandguns: Record<string, ItemTranslation> = {
   },
   "vss-vintorez": {
     aka: "Keermelõikur",
-    armament: "9x39 mm allahelikiiruse padrun, 10- või 20-padrunine salv",
+    armament: "9x39 mm allahelikiiruse padrun, 10- või 20-padruniline salv",
     rangeText: "Efektiivne kuni umbes 400 m",
     cues: [
       "Jäme sisseehitatud summuti üle suurema osa raua pikkusest — mitte külgekruvitud",
