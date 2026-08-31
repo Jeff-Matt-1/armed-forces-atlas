@@ -89,7 +89,7 @@ export const etSubmarines: Record<string, ItemTranslation> = {
     ],
     placements: [
       "Põhja- ja Vaikse ookeani laevastiku tuumatorpeedoallveelaevad",
-      "Jahivad teisi allveelaevu ja varjavad pinnalaevagruppe",
+      "Jahivad teisi allveelaevu ja varjavad pealveelaevagruppe",
     ],
     doctrineNote:
       "Gondel roolil on usaldusväärne tunnus ja seal on veetav sonarikett. Torpeedolaev kannab oma relvi sisemuses, nii et puhas siluett ongi tuvastus.",

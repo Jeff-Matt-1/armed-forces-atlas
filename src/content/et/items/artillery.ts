@@ -277,7 +277,7 @@ export const etArtillery: Record<string, ItemTranslation> = {
     ],
     placements: [
       "Õhudessantrügementide liikursuurtükiväe patareid",
-      "Õhudessantväe vastus haubitsapatareile, heidetakse koos väega alla",
+      "Õhudessantväe vastus haubitsapatareile, heidetakse koos üksusega alla",
     ],
     doctrineNote:
       "Seesama kahur-miiniheitja, mida Nona-K veab, pandud kerele, mis on piisavalt kerge langevarjuga heitmiseks. See annab õhudessantrügemendile oma kaudtule kohe maandumisest alates, ja just see on vahe eesmärgi hoidmise ja pelgalt sinna jõudmise vahel.",

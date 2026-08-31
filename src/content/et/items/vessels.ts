@@ -12,9 +12,9 @@ export const etVessels: Record<string, ItemTranslation> = {
       "Pikk lame vööritekk siledate püststardiluukide kohal",
       "Tuumajõul, seega korstnasuitsu ega selget väljalaset ei ole",
     ],
-    placements: ["Põhjalaevastiku lipulaeva klassi pinnalahingulaev", "Töökorras on alles üks"],
+    placements: ["Põhjalaevastiku lipulaeva klassi pealveelaev", "Töökorras on alles üks"],
     doctrineNote:
-      "Ehitatud ähvardama lennukikandjate rühmi massilise laevatõrjeraketi salvega. Ta on sama palju ulatuse avaldus kui sõjalaev, ja üksainus kere moodustab suure osa Vene pinnalaevastiku löögijõust.",
+      "Ehitatud ähvardama lennukikandjate rühmi massilise laevatõrjeraketi salvega. Ta on sama palju ulatuse avaldus kui sõjalaev, ja üksainus kere moodustab suure osa Vene pealveelaevastiku löögijõust.",
     crew: "Umbes 700",
     service: "Kasutuses",
   },
@@ -49,7 +49,7 @@ export const etVessels: Record<string, ItemTranslation> = {
     ],
     placements: [
       "Põhja- ja Vaikse ookeani laevastiku allveelaevatõrjehävitajad",
-      "Suuremate pinnalaevagruppide saatelaev",
+      "Suuremate pealveelaevagruppide saatelaev",
     ],
     doctrineNote:
       "Spetsialiseerunud allveelaevade jahtimisele, ja seepärast on ahter antud helikopteritele, mitte rakettidele. Ta saadab, mitte ei löö.",
@@ -71,7 +71,7 @@ export const etVessels: Record<string, ItemTranslation> = {
       "Põhjalaevastik, edasisi kereid ehitatakse",
     ],
     doctrineNote:
-      "Esimene kaasaegne Vene pinnalaev, mis on ehitatud püststardi ümber, nii et tema relvastus on nähtamatu kuni tulistamiseni. Sile korrastatud profiil on korraga tuvastustunnus ja konstruktsiooni eesmärk.",
+      "Esimene kaasaegne Vene pealveelaev, mis on ehitatud püststardi ümber, nii et tema relvastus on nähtamatu kuni tulistamiseni. Sile korrastatud profiil on korraga tuvastustunnus ja konstruktsiooni eesmärk.",
     crew: "Umbes 210",
     service: "Kasutuses",
   },

@@ -156,7 +156,7 @@ export const etTanks: Record<string, ItemTranslation> = {
     ],
     placements: [
       "Õhudessantdiviiside tankitõrjeüksused",
-      "Heidetakse õhu teel koos väega, keda ta toetab — erinevalt ükskõik millisest põhilahingutankist",
+      "Heidetakse õhu teel koos üksusega, keda ta toetab — erinevalt ükskõik millisest põhilahingutankist",
     ],
     doctrineNote:
       "Ei ole põhilahingutank ega ole ka nii soomustatud: ta kannab tankikahurit selleks, et õhudessantväel, kes tanke kaasa võtta ei saa, oleks siiski midagi, mis neid hävitab. Kui pidada teda kaugelt T-72-ks, hindad enda ees olevat tugevalt üle.",

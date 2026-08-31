@@ -14,7 +14,7 @@ export const etAircraft: Record<string, ItemTranslation> = {
     ],
     placements: [
       "Rünnaklennuväe rügemendid maavägede toetuseks",
-      "Töötab madalal ja toetatavate vägede lähedal",
+      "Töötab madalal ja toetatavate üksuste lähedal",
     ],
     doctrineNote:
       "Lähiõhutoetus otseses mõttes: aeglaselt, soomustatult ja madalalt, rünnates sihtmärke, mida maaväeülem näeb. Suurtükiväekeskses süsteemis täidab ta lünki, kuhu kahurid kiiresti ei ulatu.",

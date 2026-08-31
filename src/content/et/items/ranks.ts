@@ -83,7 +83,7 @@ export const etRanks: Record<string, ItemTranslation> = {
   ),
   "rank-navy-kapitan-1-ranga": navy(
     "1. järgu kapten",
-    "Juhib suurt pinnalahingulaeva või strateegilist allveelaeva.",
+    "Juhib suurt pealveelaeva või strateegilist allveelaeva.",
   ),
   "rank-navy-kontr-admiral": navy("Kontradmiral", "Kindralmajori vaste mereväes; juhib flotilli."),
   "rank-navy-vitse-admiral": navy(

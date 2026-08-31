@@ -150,7 +150,7 @@ export const etAirDefence: Record<string, ItemTranslation> = {
       "Ringkonna ja riigi tasandi vahend, mitte allüksuse oma",
     ],
     doctrineNote:
-      "Kõige välimine kiht ja sama palju poliitiline objekt kui sõjaline. Ta ei kaitse kontaktis olevaid vägesid, vaid keelab õhuruumi terve piirkonna kohal — seepärast ütleb ühe leidmine rohkem selle kohta, mis on liini taga, kui selle kohta, mis on liinil.",
+      "Kõige välimine kiht ja sama palju poliitiline objekt kui sõjaline. Ta ei kaitse kontaktis olevaid üksusi, vaid keelab õhuruumi terve piirkonna kohal — seepärast ütleb ühe leidmine rohkem selle kohta, mis on liini taga, kui selle kohta, mis on liinil.",
     service: "Kasutuses",
   },
 };

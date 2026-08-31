@@ -123,7 +123,7 @@ export const etLightVehicles: Record<string, ItemTranslation> = {
       "Veab inimesi mööda teid, ei liigu koos rünnakuga maastikul",
     ],
     doctrineNote:
-      "Ehitatud miinide ja teeäärsete laengute, mitte otsetule vastu. Kõrgus, mis teeb ta silmatorkavaks, ongi see kliirens, mis hoiab plahvatuse põrandast eemal — vahetus, mille vägi, kes peab teid kasutama, on nõus tegema.",
+      "Ehitatud miinide ja teeäärsete laengute, mitte otsetule vastu. Kõrgus, mis teeb ta silmatorkavaks, ongi see kliirens, mis hoiab plahvatuse põrandast eemal — vahetus, mille üksus, kes peab teid kasutama, on nõus tegema.",
     service: "Kasutuses",
   },
   linza: {

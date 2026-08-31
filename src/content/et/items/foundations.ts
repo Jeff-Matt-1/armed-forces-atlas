@@ -123,7 +123,7 @@ export const etFoundations: Record<string, ItemTranslation> = {
     service: "Kategooria",
   },
   "concept-ship": {
-    name: "Pinnalahingulaev",
+    name: "Pealveelaev",
     aka: "NK (nadvodnõi korabl)",
     armament: "Laevakahur, püststardiraketišahtid, lähikaitsesüsteemid",
     rangeText: "Tiibraketid üle 1500 km",
@@ -133,9 +133,9 @@ export const etFoundations: Record<string, ItemTranslation> = {
       "Kinnine mast paneelradaritega",
       "Suurematel üksustel kopteritekk ahtris",
     ],
-    placements: ["Nelja laevastiku ja Kaspia flotilli pinnalaevagrupid"],
+    placements: ["Nelja laevastiku ja Kaspia flotilli pealveelaevagrupid"],
     doctrineNote:
-      "Kaasaegseid Vene pinnalaevu hinnatakse eelkõige liikuvate stardiplatvormidena kaugtäppislöökide andmiseks.",
+      "Kaasaegseid Vene pealveelaevu hinnatakse eelkõige liikuvate stardiplatvormidena kaugtäppislöökide andmiseks.",
     crew: "Erinev",
     service: "Kategooria",
   },

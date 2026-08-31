@@ -139,11 +139,11 @@ export const etBlocks: Record<string, BlockTranslation> = {
   },
   vessels: {
     title: "Sõjalaevad ja alused",
-    subtitle: "Pinnalaevad, patrull- ja abilaevad",
+    subtitle: "Pealveelaevad, patrull- ja abilaevad",
     brief:
       "Laevu loetakse profiililt: pikkus millegi kõrvaloleva suhtes, kus asub pealisehitus ja mis seisab tekil. Raketilaevad näitavad oma relvastust — vanematel mudelitel piki külgi kaldu asetatud suured torud, uuematel siledad püstsed luugid — nii et tekiplaan eristab klasse ammu enne kerekuju. Nüri vöör ja päris ahtrisse lükatud pealisehitus tähendab dessantlaeva, mitte lahingulaeva.",
     doctrineNote:
-      "Vene pinnalaevastiku jõud on koondunud väga vähestesse suurtesse kerede ja väga paljudesse väikestesse. Kuna väikesed raketilaevad kannavad samu maasihtmärkide vastaseid relvi kui suured, on suurus ulatuse kohta halb juhis — ja just see on tuvastamisel kõige kasulikum teadmine.",
+      "Vene pealveelaevastiku jõud on koondunud väga vähestesse suurtesse kerede ja väga paljudesse väikestesse. Kuna väikesed raketilaevad kannavad samu maasihtmärkide vastaseid relvi kui suured, on suurus ulatuse kohta halb juhis — ja just see on tuvastamisel kõige kasulikum teadmine.",
   },
   submarines: {
     title: "Allveelaevad",
@@ -151,7 +151,7 @@ export const etBlocks: Record<string, BlockTranslation> = {
     brief:
       "Nähtav on ainult kolm asja: kere pikkus, laius ning torni kuju ja asukoht — ja sellest piisab. Ballistiliste rakettide laevad kannavad torusid torni taga, mis tõstab ahtrikere peale pika küüru. Tiibraketilaevad kannavad omi surveankru kõrval, mis teeb laeva ebatavaliselt laiaks ilma küüruta. Torpeedolaevadel ei ole kumbagi ja nad näevad puhtad välja.",
     doctrineNote:
-      "Allveelaevastik hoiab tuumaheidutuse säilivat osa ja peamist ohtu pinnalaevastikele, mistõttu ta saab ebaproportsionaalse osa mereväe investeeringutest. Tuvastamine käib siin klassi, mitte üksiklaeva järgi, sest klass määrab relva, mida ta kannab.",
+      "Allveelaevastik hoiab tuumaheidutuse säilivat osa ja peamist ohtu pealveelaevastikele, mistõttu ta saab ebaproportsionaalse osa mereväe investeeringutest. Tuvastamine käib siin klassi, mitte üksiklaeva järgi, sest klass määrab relva, mida ta kannab.",
   },
   drones: {
     title: "Mehitamata süsteemid",
