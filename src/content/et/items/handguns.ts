@@ -120,4 +120,72 @@ export const etHandguns: Record<string, ItemTranslation> = {
     crew: "1",
     service: "Kasutuselevõtmisel",
   },
+  "ak-74m": {
+    aka: "Kalašnikov 5,45",
+    armament: "5,45x39 mm, 30-padrunine salv",
+    rangeText: "Mõjus kuni umbes 500 m",
+    cues: [
+      "Must polümeerlaad seal, kus AKM-il on puit",
+      "Küljele klappiv päraosa, mida fikseeritud päraga AK-74-l ei ole",
+      "Pikk kaldus avaga suudmepidur — AK-74 perekonna tunnus",
+      "Salv on vähem kumer kui 7,62 AKM-il, sest padrun on väiksem",
+    ],
+    placements: [
+      "Motolaskur- ja õhudessantüksuste standardrelv",
+      "Endiselt maavägede arvukaim relv",
+    ],
+    doctrineNote:
+      "Relv, mida enamik Vene sõdureid tegelikult kannab. Tema kohalolek ei ütle iseenesest midagi — tema puudumine ütleb: AK-12-tega üksus on ümber varustatud, puitlaadiga AKM-idega mitte.",
+    service: "Kasutuses",
+  },
+  "ak-12": {
+    armament: "5,45x39 mm, 30-padrunine salv",
+    rangeText: "Mõjus kuni umbes 500 m",
+    cues: [
+      "Siin üle kogu lukukoja ja kaane, mida ühelgi varasemal AK-l ei ole",
+      "Teleskoopiline ja klappiv päraosa, mitte fikseeritud ega küljele klappiv",
+      "Käsikaitse on kandiline ja siinidega, mitte ümar puit- või polümeerkate",
+      "Siinide all endiselt selgelt Kalašnikov: sama gaasitoru, sama salv",
+    ],
+    placements: [
+      "Alates 2010. aastate keskpaigast ümber varustatud üksused, veel mitte kõikjal",
+      "Antakse esmalt koosseisudele, kellelt oodatakse lahingut, mitte hoidmist",
+    ],
+    doctrineNote:
+      "Moderniseeritud Kalašnikov, mitte uus relv, ja tema väärtus tuvastajale on ajaline: AK-12-te leidmine ütleb, et üksus on läbinud ümbervarustuse, mis paigutab ta järjekorda ka kõige muu jaoks, mis sellega kaasneb.",
+    service: "Kasutuses",
+  },
+  svd: {
+    aka: "Dragunov",
+    armament: "7,62x54R, 10-padrunine salv",
+    rangeText: "Mõjus kuni umbes 800 m",
+    cues: [
+      "Pikk raud ja skeletipära — päras on ava läbi",
+      "Sihik PSO-1 istub kõrgel külgsiinil, nihutatud vasakule",
+      "Peenike käsikaitse kahe pika õhuavaga mõlemal küljel",
+      "Pikem ja peenem kui ükski Kalašnikov, ja seda on näha",
+    ],
+    placements: [
+      "Üks motolaskurjao kohta, määratud laskuri relv",
+      "Ei ole snaiprirelv lääne mõistes: ta kuulub jaole",
+    ],
+    doctrineNote:
+      "Antakse jaole, mitte ei hoita spetsialistide käes, ja see ongi doktriini mõte: Vene jagu kannab oma täpsustuld kuni 800 m kaasas, selle asemel et seda mujalt kutsuda. Ühe leidmine ei ütle üksuse kohta midagi erilist, sest igal jaol on see olemas.",
+    service: "Kasutuses",
+  },
+  "vss-vintorez": {
+    aka: "Keermelõikur",
+    armament: "9x39 mm allahelikiiruse padrun, 10- või 20-padrunine salv",
+    rangeText: "Mõjus kuni umbes 400 m",
+    cues: [
+      "Jäme sisseehitatud summuti üle suurema osa raua pikkusest — mitte külgekruvitud",
+      "Tervikuna lühike, sihikust hoolimata palju lühem kui SVD",
+      "Tavaversioonil puidust skeletipära",
+      "Salv on lühike ja vaid kergelt kumer, jämeda allahelikiiruse padruni jaoks",
+    ],
+    placements: ["Eriotstarbelised luure- ja julgestusüksused", "Mitte kunagi liinijalaväe relv"],
+    doctrineNote:
+      "Vaikne suudme juures seetõttu, et padrun on allahelikiiruse, mitte lihtsalt summutatud. Tema kohalolek ütleb selles õppetükis kõige rohkem: VSS pildil paigutab üksuse eriotstarbeliseks luureks, mida ülejäänud pilt ka ei vihjaks.",
+    service: "Kasutuses",
+  },
 };

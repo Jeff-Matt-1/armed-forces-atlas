@@ -26,12 +26,12 @@ export const etBlocks: Record<string, BlockTranslation> = {
       "Auastme äratundmine ütleb, kellega on tegemist ja millise otsustusõigusega. Vene süsteemis on praporštšiku ja ohvitseri vahe suurem kui lääne armeedes, mistõttu õlakute lugemine ütleb üksuse juhtimise kohta rohkem kui pelk isikukoosseis.",
   },
   handguns: {
-    title: "Püstolid",
-    subtitle: "Maavägede ja eriüksuste käsitulirelvad",
+    title: "Käsitulirelvad",
+    subtitle: "Maavägede ja eriüksuste automaadid ning püstolid",
     brief:
-      "Püstoleid eristab siluett: luku kuju, salve suurus ja käepideme nurk. Vanem Makarov on ümar ja väike, uuemad relvad kandilised ja mahukama salvega. Summutiga ja vaikse laskemoonaga relvad kuuluvad eriüksustele ning nende olemasolu ütleb kandja ülesande kohta rohkem kui relv ise.",
+      "Kõik, mida sõdur käes kannab. Erista kõigepealt automaadid: kumer salv ja gaasitoru raua kohal tähendab Kalašnikovi, ja selle perekonna sees dateerib relva laad — puit on AKM, must polümeer AK-74M, siinid ja teleskoopiline päraosa AK-12. Pikk raud koos sihikuga ja skeletipäraga on SVD; lühike jämeda sisseehitatud summutiga VSS. Püstolid tulevad pärast, ja seal on küsimused luku kuju, käepideme nurk ja salve mahutavus.",
     doctrineNote:
-      "Püstol ei ole Vene süsteemis lahingurelv, vaid ametitunnus. Kellel see on ja millist mudelit ta kannab, viitab ülesandele ja üksusele, mitte tulejõule.",
+      "Automaat ütleb üksuse põlvkonna, püstol ütleb mehe. Jagu, kes kannab veel puitlaadiga AKM-e, ei ole sama koosseis kui see, kellel on AK-12; ja summutiga VSS või PSS pildil viitab eriotstarbelisele luurele, mitte motolaskurjaole.",
   },
   "heavy-weapons": {
     title: "Rasked, jao- ja eriotstarbelised relvad",

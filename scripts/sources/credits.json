@@ -180,6 +180,26 @@
     "attributionRequired": true
   },
   {
+    "slug": "ak-12",
+    "file": "File:AK-12 Assault Rifle Army-2022 2022-08-20 2384.jpg",
+    "localPath": "/images/items/ak-12.jpg",
+    "imageCredit": "CC BY-SA 4.0 — Mike1979 Russia",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:AK-12_Assault_Rifle_Army-2022_2022-08-20_2384.jpg",
+    "licence": "CC BY-SA 4.0",
+    "artist": "Mike1979 Russia",
+    "attributionRequired": true
+  },
+  {
+    "slug": "ak-74m",
+    "file": "File:Ak74 m.jpeg",
+    "localPath": "/images/items/ak-74m.jpg",
+    "imageCredit": "CC BY-SA 3.0 — Dorismonkey",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:Ak74_m.jpeg",
+    "licence": "CC BY-SA 3.0",
+    "artist": "Dorismonkey",
+    "attributionRequired": true
+  },
+  {
     "slug": "akula",
     "file": "File:Akula class submarine starboard quarter view.JPEG",
     "localPath": "/images/items/akula.jpg",
@@ -1520,6 +1540,16 @@
     "attributionRequired": true
   },
   {
+    "slug": "svd",
+    "file": "File:SVD Dragunov.jpg",
+    "localPath": "/images/items/svd.jpg",
+    "imageCredit": "CC BY-SA 4.0 — Hokos",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:SVD_Dragunov.jpg",
+    "licence": "CC BY-SA 4.0",
+    "artist": "Hokos",
+    "attributionRequired": true
+  },
+  {
     "slug": "tmm-3",
     "file": "File:TMM-Bridge-latrun-1.jpg",
     "localPath": "/images/items/tmm-3.jpg",
@@ -1675,6 +1705,16 @@
     "localPath": "/images/items/uran-9.jpg",
     "imageCredit": "CC BY-SA 4.0 — Vitaly V. Kuzmin",
     "imagePage": "https://commons.wikimedia.org/wiki/File:%D0%91%D0%BE%D0%B5%D0%B2%D0%BE%D0%B9_%D0%BC%D0%BD%D0%BE%D0%B3%D0%BE%D1%84%D1%83%D0%BD%D0%BA%D1%86%D0%B8%D0%BE%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9_%D1%80%D0%BE%D0%B1%D0%BE%D1%82%D0%BE%D1%82%D0%B5%D1%85%D0%BD%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D0%BA%D0%BE%D0%BC%D0%BF%D0%BB%D0%B5%D0%BA%D1%81_%D0%A3%D1%80%D0%B0%D0%BD-9_-_%D0%9C%D0%B5%D0%B6%D0%B4%D1%83%D0%BD%D0%B0%D1%80%D0%BE%D0%B4%D0%BD%D0%BE%D0%B3%D0%BE_%D0%B2%D0%BE%D0%B5%D0%BD%D0%BD%D0%BE-%D1%82%D0%B5%D1%85%D0%BD%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%BE%D0%B3%D0%BE_%D1%84%D0%BE%D1%80%D1%83%D0%BC%D0%B0_%D0%90%D0%A0%D0%9C%D0%98%D0%AF-2016_01.jpg",
+    "licence": "CC BY-SA 4.0",
+    "artist": "Vitaly V. Kuzmin",
+    "attributionRequired": true
+  },
+  {
+    "slug": "vss-vintorez",
+    "file": "File:VSS Vintorez - RaceofHeroes-part2-30.jpg",
+    "localPath": "/images/items/vss-vintorez.jpg",
+    "imageCredit": "CC BY-SA 4.0 — Vitaly V. Kuzmin",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:VSS_Vintorez_-_RaceofHeroes-part2-30.jpg",
     "licence": "CC BY-SA 4.0",
     "artist": "Vitaly V. Kuzmin",
     "attributionRequired": true
