@@ -9,7 +9,7 @@ export const etSubmarines: Record<string, ItemTranslation> = {
     cues: [
       "Pikk madal küür jookseb tornist ahtri poole — raketisektsioon",
       "Torn on siledalt kerre sulandatud, järsku astet ei ole",
-      "Torn asub tublisti ees, umbes kolmandiku peal",
+      "Torn asub selgelt ees, umbes kolmandiku peal",
       "Kere aheneb puhtalt ahtri poole, väliseid gondleid ei ole",
     ],
     placements: [
@@ -26,7 +26,7 @@ export const etSubmarines: Record<string, ItemTranslation> = {
     armament: "16 × ballistilist raketti R-29RMU Sineva",
     rangeText: "Raketid kuni umbes 8300 km",
     cues: [
-      "Väga kõrge raketiküür seisab tornist taga kerest tublisti kõrgemal",
+      "Väga kõrge raketiküür seisab tornist taga kerest tunduvalt kõrgemal",
       "Aste torni ja kere vahel on järsk, mitte Borei kombel sulandatud",
       "Vanem, nurgelisem torn kandilise ülaosaga",
       "Küür jookseb peaaegu ahtrini",
@@ -47,7 +47,7 @@ export const etSubmarines: Record<string, ItemTranslation> = {
     cues: [
       "Erakordselt lai — tunnus on laius, mitte pikkus",
       "Raketitorud asuvad tornist eespool, mis on siin ainulaadne",
-      "Torn tublisti tagapool, umbes kere keskel",
+      "Torn selgelt tagapool, umbes kere keskel",
       "Lai lame pealisehitus ümara kereülaosa asemel",
     ],
     placements: [
@@ -67,7 +67,7 @@ export const etSubmarines: Record<string, ItemTranslation> = {
       "Väga lai kere, kuid tornist taga raketiküüru ei ole",
       "Laius tuleb survekere kõrval asuvatest raketitorudest",
       "Pikk paralleelsete külgedega pealisehitus laia lameda ülaosaga",
-      "Torn on kõrge, kitsas ja tublisti ees",
+      "Torn on kõrge, kitsas ja selgelt ees",
     ],
     placements: [
       "Põhja- ja Vaikse ookeani laevastiku tiibraketiallveelaevad",

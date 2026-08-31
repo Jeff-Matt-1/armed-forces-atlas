@@ -117,7 +117,7 @@ export const etBlocks: Record<string, BlockTranslation> = {
     title: "Pioneerimasinad",
     subtitle: "Sillutamine, miinide raivamine, pinnasetööd",
     brief:
-      "Peaaegu kõik siin on tankikere, millelt on torn maha võetud ja asemele pandud tööriist, nii et tuvastamine tähendab tööriista lugemist: liigendpuomi, buldooserisahk, kokkupandud sild, hingedel heitjakaas, renn taga. Kui tööriist on sild, küsi, mis teda kannab — tankikere läheb sinna, kuhu tankid, veoauto järgib teed. Kõige esimene tunnus on aga see, et ükski neist ei suuda võidelda.",
+      "Peaaegu kõik siin on tankikere, millelt on torn maha võetud ja asemele pandud tööriist, nii et tuvastamine tähendab tööriista lugemist: liigendiga kraanapoom, buldooserisahk, kokkupandud sild, hingedel heitjakaas, renn taga. Kui tööriist on sild, küsi, mis teda kannab — tankikere läheb sinna, kuhu tankid, veoauto järgib teed. Kõige esimene tunnus on aga see, et ükski neist ei suuda võidelda.",
     doctrineNote:
       "Liikuvust käsitletakse lahingufunktsiooni, mitte toetusena. Eriti jõe ületamine on ettevalmistatud operatsioon, mistõttu ettepoole liikuv pontoonkolonn on üks selgemaid märke kavatsusest, mille allüksus endast välja annab.",
   },

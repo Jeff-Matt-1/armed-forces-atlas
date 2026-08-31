@@ -74,7 +74,7 @@ export const etEw: Record<string, ItemTranslation> = {
       "Raadio teel lõhatavate laengute ja taktikaliste raadiovõrkude vastu, mõnesaja meetri ulatuses ümber kolonni",
     cues: [
       "BTR-80 kere, kaheksa ratast ja paadivöör — kuid torni ei ole",
-      "Kõrge kandiline kastikujuline ehitis, mis ulatub katusest tublisti kõrgemale",
+      "Kõrge kandiline kastikujuline ehitis, mis ulatub katusest tunduvalt kõrgemale",
       "Väikesed mastantennid tagumisel tekil, mitte üks keskne mast",
       "Loeb kui BTR-80, millele on kasvanud kuur",
     ],

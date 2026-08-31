@@ -99,7 +99,7 @@ export const etVessels: Record<string, ItemTranslation> = {
     armament: "100 mm kahur, Redut õhutõrje, allveelaevatõrjetorpeedod",
     rangeText: "Ranniku- ja lähimereoperatsioonid",
     cues: [
-      "Väike — tublisti alla poole Slava pikkusest",
+      "Väike — tunduvalt alla poole Slava pikkusest",
       "Tahuliste külgedega pealisehitus jookseb üle suurema osa kere pikkusest",
       "Ümar kinnine mast, mis peidab radariantennid",
       "Kopteritekk ahtris, laeva pikkuse kohta ülemõõduline",
@@ -119,7 +119,7 @@ export const etVessels: Record<string, ItemTranslation> = {
     rangeText: "Kalibr maasihtmärkide vastu kuni umbes 1500 km",
     cues: [
       "Väga väike — suurtükipaadi mõõtu kere, õppetüki väikseim laev",
-      "Kandiline pealisehitus tublisti ees, ahtritekk jääb vabaks",
+      "Kandiline pealisehitus selgelt ees, ahtritekk jääb vabaks",
       "Kopteritekki ega hangaari ei ole",
       "Madal süvis: ta tegutseb ka jõgedel ja Kaspia merel, mitte üksnes merel",
     ],

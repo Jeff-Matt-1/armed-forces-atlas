@@ -28,7 +28,7 @@ export const etAircraft: Record<string, ItemTranslation> = {
     cues: [
       "Lai lapik nina — meeskond istub kõrvuti, mitte üksteise taga",
       "Nina profiil on toonud hüüdnime „nokkloom”",
-      "Pikk sabaastel ulatub mootoritest tublisti taha",
+      "Pikk sabaastel ulatub mootoritest kaugele taha",
       "Flankeri tiivad ja kaks kiilu hoopis teistsuguse esiosa all",
     ],
     placements: ["Pommituslennuväe rügemendid", "Vene standardne taktikaline löögilennuk"],
@@ -166,7 +166,7 @@ export const etAircraft: Record<string, ItemTranslation> = {
     rangeText: "Lahingraadius umbes 1300 km",
     cues: [
       "Suur kahemootoriline hävitaja pika kaarja tiivajuure eesservaga",
-      "Iseloomulik sabaastel, mis ulatub mootoritest tublisti tahapoole",
+      "Iseloomulik sabaastel, mis ulatub mootoritest kaugele tahapoole",
       "Kaks kiilu mootoritest väljaspool, mitte nende peal",
       "Igas mõõtmes suurem kui MiG-29 — perekondlik sarnasus ongi lõks",
     ],

@@ -25,7 +25,7 @@ export const etRadars: Record<string, ItemTranslation> = {
     cues: [
       "Tohutu ristkülikuline massiiv, mitu rida sügav ja masinast palju laiem",
       "Massiiv tõstetud võrestikutornile, ei istu katusel",
-      "BAZ 8x8 šassii, kabiin tornist tublisti eespool",
+      "BAZ 8x8 šassii, kabiin tornist selgelt eespool",
       "Mitu masinat töötavad koos ühe süsteemina",
     ],
     placements: [
@@ -41,7 +41,7 @@ export const etRadars: Record<string, ItemTranslation> = {
     rangeText: "Avastab lennukid kuni umbes 150 km",
     cues: [
       "Üksainus terviklik ristkülikuline paneel, mitte lahtine varrastevõrestik",
-      "Paneel kõrgel peenikesel mastil masinast tublisti kõrgemal",
+      "Paneel kõrgel peenikesel mastil masinast tunduvalt kõrgemal",
       "Märgatavalt väiksem kui Nebo-M massiiv",
       "Kõrvale seatud haagiskabiin ja generaator",
     ],

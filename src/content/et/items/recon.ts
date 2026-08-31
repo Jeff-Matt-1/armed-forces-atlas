@@ -46,7 +46,7 @@ export const etRecon: Record<string, ItemTranslation> = {
     cues: [
       "BMP kere torniga, millel on kaks suurt kuplikujulist luuki",
       "Sensori- ja optikakorpused seal, kus istuks kahur — pearelva ei ole",
-      "Kõrged vardantennid tornist tublisti kõrgemal",
+      "Kõrged vardantennid tornist selgelt kõrgemal",
       "Torn loeb pigem varustusest tiheda kui relvastatuna",
     ],
     placements: [

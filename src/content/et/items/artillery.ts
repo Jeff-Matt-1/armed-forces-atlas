@@ -141,7 +141,7 @@ export const etArtillery: Record<string, ItemTranslation> = {
       "Kuusteist jämedat toru — selgelt vähem ja laiemad kui Gradi nelikümmend",
       "ZIL-135 8x8 šassii, teljed rühmitatud kaks ette ja kaks taha",
       "Pikk vahe keskel kahe rattarühma vahel",
-      "Kabiin heitjast tublisti eespool, vahel laadimistekk",
+      "Kabiin heitjast selgelt eespool, vahel laadimistekk",
     ],
     placements: [
       "Armee tasandi reaktiivsuurtükiväe divisjonid",
@@ -299,7 +299,7 @@ export const etArtillery: Record<string, ItemTranslation> = {
       "Rakendatakse kindlustuste vastu, mitte rünnaku toetuseks",
     ],
     doctrineNote:
-      "Suurim teenistuses olev miiniheitja maailmas, ja ta ei ole mõeldud lagedal oleva elavjõu vastu: ta on hoonete, punkrite ja ettevalmistatud positsioonide jaoks, mida haubits ei murra. Ühe nägemine ütleb, et kindlustatud maastikule valmistatakse ette kavakohast rünnakut ja et otsus on tehtud tublisti kõrgemal kui kontaktis olev üksus.",
+      "Suurim teenistuses olev miiniheitja maailmas, ja ta ei ole mõeldud lagedal oleva elavjõu vastu: ta on hoonete, punkrite ja ettevalmistatud positsioonide jaoks, mida haubits ei murra. Ühe nägemine ütleb, et kindlustatud maastikule valmistatakse ette kavakohast rünnakut ja et otsus on tehtud tunduvalt kõrgemal kui kontaktis olev üksus.",
     crew: "5",
     service: "Kasutuses",
   },

@@ -5,10 +5,10 @@ export const etEngineering: Record<string, ItemTranslation> = {
   "imr-3m": {
     aka: "Lahingupioneerimasin",
     cues: [
-      "Pikk liigendpuomi kere kohale tahapoole kokku pandud",
+      "Pikk liigendiga kraanapoom kere kohale tahapoole kokku pandud",
       "Lai buldooserisahk masina ees",
       "Tankikere ilma tornita ja ilma kahurita",
-      "Väike operaatorikuppel tublisti ees",
+      "Väike operaatorikuppel selgelt ees",
     ],
     placements: [
       "Pioneeriüksused soomusallüksustele marsruutide raivamiseks",
@@ -24,9 +24,9 @@ export const etEngineering: Record<string, ItemTranslation> = {
     rangeText: "Ületab kuni 18 m laiuse lõhe",
     cues: [
       "Kokku klapitud käärsild kere peal",
-      "Sillapooled avanevad hingedel ja pannakse ninaga ette",
+      "Sillapooled avanevad hingedel ja sild lükatakse ots ees üle tõkke",
       "All T-55 tankikere, tornita",
-      "Masin istub koorma tõttu märgatavalt kõrgel",
+      "Masin on koorma tõttu märgatavalt kõrge siluetiga",
     ],
     placements: [
       "Pioneeriüksused tanki- ja motolaskurallüksuste toetuseks",
@@ -60,7 +60,7 @@ export const etEngineering: Record<string, ItemTranslation> = {
     rangeText: "Paneb mõne minutiga mitmesaja meetri pikkuse miiniväila",
     cues: [
       "Täielikult suletud kandiline pealisehitus üle kogu kere",
-      "Miinirenn ja adervarustus taga",
+      "Miinirenn ja miiniader taga",
       "Roomikšassii, ühine 2S3 ja teiste raskete masinatega",
       "Puomi, sahka ega silda ei ole — suletud kast roomikutel",
     ],
@@ -80,7 +80,7 @@ export const etEngineering: Record<string, ItemTranslation> = {
       "Suur lame heitjakaas kere esiosas hingedel üles tõstetud",
       "Selle taga lahtine ristkülikuline ruum laengutega",
       "2S1-l põhinev roomikkere seitsme tugirattaga",
-      "Torni ei ole, sahka ei ole, puomi ei ole",
+      "Torni ei ole, sahka ei ole, poomi ei ole",
     ],
     placements: [
       "Pioneeriüksused miiniväljadest läbipääsu rajamiseks enne rünnakut",

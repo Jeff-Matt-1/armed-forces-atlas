@@ -16,7 +16,7 @@ export const etC2: Record<string, ItemTranslation> = {
       "Allüksuse tagalas, mitte eesliiniüksuste juures",
     ],
     doctrineNote:
-      "Soomustamata, seega töötab varjes tublisti liinist tagapool. Šassii on ühine kümnete omavahel mitteseotud kastkeremasinatega — teda tuvastab ainult antennikomplekt, ja just nii ta olema peabki.",
+      "Soomustamata, seega töötab varjes kaugel liinist tagapool. Šassii on ühine kümnete omavahel mitteseotud kastkeremasinatega — teda tuvastab ainult antennikomplekt, ja just nii ta olema peabki.",
     service: "Kasutuses",
   },
   "r-145bm": {
