@@ -204,7 +204,7 @@ export const etEngineering: Record<string, ItemTranslation> = {
       "Tavaline ekskavaatoripoom sõjaväelisel KamAZi veoautošassiil",
       "Pöördplatvorm kabiini taga, kopp kere kohale kinnitatud",
       "Töötamise ajaks klapivad taga tugijalad alla",
-      "Soomustamata — töömasin mundris",
+      "Soomustamata — sõjaväevärvides tsiviilehitusmasin",
     ],
     placements: [
       "Pioneeriüksused, kes kaevavad positsioone, varjendeid ja sõidukikaevikuid",
