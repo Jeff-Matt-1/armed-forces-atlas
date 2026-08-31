@@ -29,7 +29,7 @@ export const etBlocks: Record<string, BlockTranslation> = {
     title: "Käsitulirelvad",
     subtitle: "Maavägede ja eriüksuste automaadid ning püstolid",
     brief:
-      "Kõik, mida sõdur käes kannab. Erista kõigepealt automaadid: kumer salv ja gaasitoru raua kohal tähendab Kalašnikovi ja selle perekonna sees dateerib relva laesäär — puit on AKM, must polümeer AK-74M, siinid ja teleskoopiline päraosa AK-12. Pikk raud koos sihikuga ja skeletipäraga on SVD; lühike jämeda sisseehitatud summutiga VSS. Püstolid tulevad pärast ja seal on küsimused luku kuju, käepideme nurk ja salve mahutavus.",
+      "Kõik, mida sõdur käes kannab. Erista kõigepealt automaadid: kumer salv ja gaasitoru raua kohal tähendab Kalašnikovi ja selle perekonna sees dateerib relva laesäär — puit on AKM, must polümeer AK-74M, siinid ja teleskoopiline päraosa AK-12. Pikk raud koos sihikuga ja skelettpäraga on SVD; lühike jämeda sisseehitatud summutiga VSS. Püstolid tulevad pärast ja seal on küsimused luku kuju, käepideme nurk ja salve mahutavus.",
     doctrineNote:
       "Automaadi järgi saab hinnata üksuse põlvkonda, püstoli järgi pigem kandja ametikohta. Jagu, kes kannab veel puidust laesäärega AKM-e, ei ole sama koosseis kui see, kellel on AK-12; summutiga VSS või PSS pildil viitab eriotstarbelisele luurele, mitte motolaskurjaole.",
   },

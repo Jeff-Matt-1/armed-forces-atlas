@@ -80,7 +80,7 @@ export const etHelicopters: Record<string, ItemTranslation> = {
     aka: "Halo",
     rangeText: "Kannab umbes 20 tonni",
     cues: [
-      "Hiiglaslik — suurim teenistuses olev kopter maailmas ja seda on näha",
+      "Hiiglaslik — suurim teenistuses olev kopter maailmas",
       "Kaheksa peatiiviku laba, rohkem kui millelgi muul siin",
       "Sügav kandiline kere tagumise laadimisrambiga",
       "Fikseeritud telik kõrgetel jalgadel, et ramp vabaks jääks",

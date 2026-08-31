@@ -144,7 +144,7 @@ export const etHandguns: Record<string, ItemTranslation> = {
     cues: [
       "Kinnitussiin kulgeb üle kogu lukukoja ja selle kaane — ühelgi varasemal AK-l seda ei ole",
       "Teleskoopiline ja klapitav päraosa, mitte fikseeritud ega küljele klapitav",
-      "Käsikaitse on kandiline ja siinidega, mitte ümar puit- või polümeerkate",
+      "Laesäär on kandiline ja siinidega, mitte ümar puit- või polümeerkate",
       "Siinide all endiselt selgelt Kalašnikov: sama gaasitoru, sama salv",
     ],
     placements: [
@@ -160,10 +160,10 @@ export const etHandguns: Record<string, ItemTranslation> = {
     armament: "7,62x54R, 10-padrunine salv",
     rangeText: "Efektiivne kuni umbes 800 m",
     cues: [
-      "Pikk raud ja skeletipära — päras on ava läbi",
+      "Pikk raud ja skelettpära — päras on ava läbi",
       "Sihik PSO-1 istub kõrgel külgsiinil, nihutatud vasakule",
-      "Peenike käsikaitse kahe pika õhuavaga mõlemal küljel",
-      "Pikem ja peenem kui ükski Kalašnikov ja seda on näha",
+      "Peenike laesäär kahe pika õhuavaga mõlemal küljel",
+      "Pikem ja peenem kui ükski Kalašnikov",
     ],
     placements: [
       "Üks motolaskurjao kohta, määratud laskuri relv",
@@ -180,7 +180,7 @@ export const etHandguns: Record<string, ItemTranslation> = {
     cues: [
       "Jäme sisseehitatud summuti üle suurema osa raua pikkusest — mitte külgekruvitud",
       "Tervikuna lühike, sihikust hoolimata palju lühem kui SVD",
-      "Tavaversioonil puidust skeletipära",
+      "Tavaversioonil puidust skelettpära",
       "Salv on lühike ja vaid kergelt kumer, jämeda allahelikiiruse padruni jaoks",
     ],
     placements: ["Eriotstarbelised luure- ja julgestusüksused", "Mitte kunagi liinijalaväe relv"],
