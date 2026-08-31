@@ -67,7 +67,12 @@ export function AppShell({ children }: { children: ReactNode }) {
 
       <footer className="border-t border-border">
         <div className="mx-auto flex w-full max-w-6xl flex-col gap-1 px-4 py-6 text-xs text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
-          <p>{t("shell.footerSources")}</p>
+          <p>
+            {t("shell.footerSources")}{" "}
+            <Link to="/privacy" className="underline underline-offset-4 hover:text-foreground">
+              {t("nav.privacy")}
+            </Link>
+          </p>
           <p className="designation">
             {t("shell.footerDoctrine")} <em>The Russian Way of War</em>
           </p>

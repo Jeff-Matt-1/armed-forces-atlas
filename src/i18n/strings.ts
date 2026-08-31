@@ -109,6 +109,49 @@ const en = {
   "badge.complete": "Every block cleared without a mistake. There is no higher rank.",
   "badge.cleanExams": "Cleared without a mistake ({count})",
   "badge.remaining": "{count} blocks still to clear perfectly",
+  // Privacy
+  "privacy.eyebrow": "Data",
+  "privacy.title": "Privacy",
+  "privacy.intro":
+    "This app is a study tool. It stores what you have studied so it can schedule revision, and nothing else. There is no advertising, no analytics and no third-party tracking of any kind.",
+  "privacy.withoutAccountTitle": "Without an account",
+  "privacy.withoutAccountBody":
+    "You can use everything here without signing in. Your progress then never leaves your device — it is written to your browser's local storage under three keys:",
+  "privacy.keyProgress": "what you have studied, graded and passed",
+  "privacy.keyLocale": "whether you chose English or Estonian",
+  "privacy.keyGate": "whether blocks unlock in order for you",
+  "privacy.withoutAccountClear":
+    "Clearing your browser's site data removes all of it. Nothing is sent to any server, so there is nothing for anyone to delete on your behalf.",
+  "privacy.withAccountTitle": "With an account",
+  "privacy.withAccountBody":
+    "An account exists so your progress follows you between devices. Creating one stores your email address and a hashed password, and moves the progress above into a database. These are the tables and everything in them:",
+  "privacy.tableUsers": "email address, hashed password, sign-in timestamps",
+  "privacy.tableProfiles": "an optional display name",
+  "privacy.tableReviews": "which cards you have reviewed, your grades and when each is next due",
+  "privacy.tableDrills": "which items you have identified correctly, by question type",
+  "privacy.tableBlocks": "mastery, best scores and whether each block exam is passed",
+  "privacy.tableAttempts":
+    "each exam and drill attempt: score, whether it passed, which items were missed",
+  "privacy.tableStreaks": "study dates and streak length",
+  "privacy.rls":
+    "Every one of these tables has row-level security enabled, so the database itself refuses to return one person's rows to another.",
+  "privacy.whereTitle": "Where it is stored",
+  "privacy.whereBody":
+    "The database is hosted by Supabase in Ireland (eu-west-1), inside the EU. The site itself is served by Cloudflare, which processes the IP address of every request in order to deliver the page, as any web server must.",
+  "privacy.thirdPartyTitle": "What else your browser contacts",
+  "privacy.thirdPartyBody":
+    "Two fonts are loaded from Google Fonts, which means your IP address reaches Google when a page loads. That is the only third party contacted while you use the app. Photographs are served from this site, not from Wikimedia, so browsing entries tells Wikimedia nothing.",
+  "privacy.notCollectedTitle": "What is not collected",
+  "privacy.notCollectedBody":
+    "No analytics, no advertising, no cookies for tracking, no session recording, no fingerprinting, and nothing is sold or shared with anyone. Your email address is used to sign you in and for nothing else — the app sends no email at all.",
+  "privacy.deleteTitle": "Deleting your data",
+  "privacy.deleteBody":
+    "Ask whoever gave you your account and it will be deleted, along with every row listed above. If you never made an account, clearing your browser's site data is the whole of it.",
+  "privacy.rightsTitle": "Your rights",
+  "privacy.rightsBody":
+    "Under the GDPR you may ask what is held about you, ask for it to be corrected, ask for a copy, or ask for it to be erased. Ask the person who runs this deployment; the list above is the complete answer to the first question.",
+  "privacy.seeSources": "Sources and licensing for the photographs and doctrinal material",
+  "nav.privacy": "Privacy",
   "quiz.runAgain": "Run again",
   "quiz.backToBlocks": "Back to blocks",
   "quiz.correct": "Correct",
@@ -368,6 +411,50 @@ const et: Record<StringKey, string> = {
   "badge.complete": "Kõik õppetükid sooritatud veatult. Kõrgemat astet ei ole.",
   "badge.cleanExams": "Veatult sooritatud ({count})",
   "badge.remaining": "{count} õppetükki veel veatult sooritada",
+  // Privacy
+  "privacy.eyebrow": "Andmed",
+  "privacy.title": "Privaatsus",
+  "privacy.intro":
+    "See rakendus on õppevahend. Ta salvestab selle, mida oled õppinud, et kordamist ajastada — ja mitte midagi muud. Reklaami, analüütikat ega kolmandate osapoolte jälgimist ei ole.",
+  "privacy.withoutAccountTitle": "Ilma kontota",
+  "privacy.withoutAccountBody":
+    "Kõike siinset saab kasutada sisse logimata. Sinu edenemine ei lahku siis kunagi sinu seadmest — see kirjutatakse brauseri kohalikku salvestusse kolme võtme alla:",
+  "privacy.keyProgress": "mida oled õppinud, hinnanud ja sooritanud",
+  "privacy.keyLocale": "kas valisid inglise või eesti keele",
+  "privacy.keyGate": "kas õppetükid avanevad sinu jaoks järjekorras",
+  "privacy.withoutAccountClear":
+    "Brauseri saidiandmete kustutamine eemaldab selle kõik. Serverisse ei saadeta midagi, nii et kellelgi ei ole sinu eest midagi kustutada.",
+  "privacy.withAccountTitle": "Kontoga",
+  "privacy.withAccountBody":
+    "Konto on olemas selleks, et edenemine liiguks sinuga seadmete vahel. Konto loomine salvestab sinu e-posti aadressi ja räsitud parooli ning viib ülaltoodud edenemise andmebaasi. Need on tabelid ja kõik, mis neis on:",
+  "privacy.tableUsers": "e-posti aadress, räsitud parool, sisselogimiste ajatemplid",
+  "privacy.tableProfiles": "valikuline kuvatav nimi",
+  "privacy.tableReviews":
+    "milliseid kaarte oled korranud, sinu hinnangud ja millal iga kaart uuesti tuleb",
+  "privacy.tableDrills": "millised kirjed oled õigesti tuvastanud, küsimuse liigi kaupa",
+  "privacy.tableBlocks": "valdamine, parimad tulemused ja kas õppetüki eksam on sooritatud",
+  "privacy.tableAttempts":
+    "iga eksami- ja harjutuskatse: tulemus, kas läbiti, millised kirjed jäid valeks",
+  "privacy.tableStreaks": "õppimise kuupäevad ja seeria pikkus",
+  "privacy.rls":
+    "Igal neist tabelitest on reatasandi turve sisse lülitatud, nii et andmebaas ise keeldub ühe inimese ridu teisele tagastamast.",
+  "privacy.whereTitle": "Kus seda hoitakse",
+  "privacy.whereBody":
+    "Andmebaasi majutab Supabase Iirimaal (eu-west-1), Euroopa Liidus. Saiti ennast serveerib Cloudflare, kes töötleb iga päringu IP-aadressi, et lehte üldse edastada — nagu iga veebiserver peab.",
+  "privacy.thirdPartyTitle": "Millega su brauser veel ühendust võtab",
+  "privacy.thirdPartyBody":
+    "Kaks kirjatüüpi laaditakse Google Fontsist, mis tähendab, et lehe laadimisel jõuab sinu IP-aadress Google'ini. See on ainus kolmas osapool, kellega rakenduse kasutamise ajal ühendust võetakse. Fotod serveeritakse sellelt saidilt, mitte Wikimediast, nii et kirjete sirvimine ei ütle Wikimediale midagi.",
+  "privacy.notCollectedTitle": "Mida ei koguta",
+  "privacy.notCollectedBody":
+    "Analüütikat ei ole, reklaami ei ole, jälgimisküpsiseid ei ole, seansisalvestust ei ole, sõrmejälgede võtmist ei ole, ja midagi ei müüda ega jagata kellegagi. Sinu e-posti aadressi kasutatakse sisselogimiseks ja mitte millekski muuks — rakendus ei saada ühtegi e-kirja.",
+  "privacy.deleteTitle": "Oma andmete kustutamine",
+  "privacy.deleteBody":
+    "Küsi sellelt, kes sulle konto andis, ja see kustutatakse koos kõigi ülalloetletud ridadega. Kui sa kunagi kontot ei teinud, on brauseri saidiandmete kustutamine kogu asi.",
+  "privacy.rightsTitle": "Sinu õigused",
+  "privacy.rightsBody":
+    "GDPR-i alusel võid küsida, mida sinu kohta hoitakse, nõuda selle parandamist, küsida koopiat või nõuda kustutamist. Pöördu selle poole, kes seda paigaldust haldab; ülaltoodud loend on esimesele küsimusele täielik vastus.",
+  "privacy.seeSources": "Fotode ja doktriinimaterjali allikad ning litsentsid",
+  "nav.privacy": "Privaatsus",
   "quiz.runAgain": "Tee uuesti",
   "quiz.backToBlocks": "Tagasi õppetükkide juurde",
   "quiz.correct": "Õige",
