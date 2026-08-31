@@ -125,8 +125,8 @@ export const etHandguns: Record<string, ItemTranslation> = {
     armament: "5,45x39 mm, 30-padrunine salv",
     rangeText: "Efektiivne kuni umbes 500 m",
     cues: [
-      "Must polümeerist laesäär seal, kus AKM-il on puit",
-      "Küljele klappiv päraosa, mida fikseeritud päraga AK-74-l ei ole",
+      "Must polümeerkate seal, kus AKM-il on puit",
+      "Küljele klapitav päraosa, mida fikseeritud päraga AK-74-l ei ole",
       "Pikk kaldus avaga suudmepidur — AK-74 perekonna tunnus",
       "Salv on vähem kumer kui 7,62 AKM-il, sest padrun on väiksem",
     ],
@@ -142,14 +142,14 @@ export const etHandguns: Record<string, ItemTranslation> = {
     armament: "5,45x39 mm, 30-padrunine salv",
     rangeText: "Efektiivne kuni umbes 500 m",
     cues: [
-      "Siin üle kogu lukukoja ja kaane, mida ühelgi varasemal AK-l ei ole",
-      "Teleskoopiline ja klappiv päraosa, mitte fikseeritud ega küljele klappiv",
+      "Kinnitussiin kulgeb üle kogu lukukoja ja selle kaane — ühelgi varasemal AK-l seda ei ole",
+      "Teleskoopiline ja klapitav päraosa, mitte fikseeritud ega küljele klapitav",
       "Käsikaitse on kandiline ja siinidega, mitte ümar puit- või polümeerkate",
       "Siinide all endiselt selgelt Kalašnikov: sama gaasitoru, sama salv",
     ],
     placements: [
       "Alates 2010. aastate keskpaigast ümber varustatud üksused, veel mitte kõikjal",
-      "Antakse esmalt koosseisudele, kellelt oodatakse lahingut, mitte hoidmist",
+      "Antakse esmalt koosseisudele, kellelt oodatakse lahingut, mitte positsioonide hoidmist",
     ],
     doctrineNote:
       "Moderniseeritud Kalašnikov, mitte uus relv ja tema väärtus tuvastajale on ajaline: AK-12-te leidmine ütleb, et üksus on läbinud ümbervarustuse, mis paigutab ta järjekorda ka kõige muu jaoks, mis sellega kaasneb.",
