@@ -125,7 +125,7 @@ export const etHandguns: Record<string, ItemTranslation> = {
     armament: "5,45x39 mm, 30-padrunine salv",
     rangeText: "Efektiivne kuni umbes 500 m",
     cues: [
-      "Must polümeerlaad seal, kus AKM-il on puit",
+      "Must polümeerist laesäär seal, kus AKM-il on puit",
       "Küljele klappiv päraosa, mida fikseeritud päraga AK-74-l ei ole",
       "Pikk kaldus avaga suudmepidur — AK-74 perekonna tunnus",
       "Salv on vähem kumer kui 7,62 AKM-il, sest padrun on väiksem",
@@ -135,7 +135,7 @@ export const etHandguns: Record<string, ItemTranslation> = {
       "Endiselt maavägede arvukaim relv",
     ],
     doctrineNote:
-      "Relv, mida enamik Vene sõdureid tegelikult kannab. Tema kohalolek ei ütle iseenesest midagi — tema puudumine ütleb: AK-12-tega üksus on ümber varustatud, puitlaadiga AKM-idega mitte.",
+      "Relv, mida enamik Vene sõdureid tegelikult kannab. Tema kohalolek ei ütle iseenesest midagi — tema puudumine ütleb: AK-12-tega üksus on ümber varustatud, puidust laesäärega AKM-idega mitte.",
     service: "Kasutuses",
   },
   "ak-12": {
@@ -152,7 +152,7 @@ export const etHandguns: Record<string, ItemTranslation> = {
       "Antakse esmalt koosseisudele, kellelt oodatakse lahingut, mitte hoidmist",
     ],
     doctrineNote:
-      "Moderniseeritud Kalašnikov, mitte uus relv, ja tema väärtus tuvastajale on ajaline: AK-12-te leidmine ütleb, et üksus on läbinud ümbervarustuse, mis paigutab ta järjekorda ka kõige muu jaoks, mis sellega kaasneb.",
+      "Moderniseeritud Kalašnikov, mitte uus relv ja tema väärtus tuvastajale on ajaline: AK-12-te leidmine ütleb, et üksus on läbinud ümbervarustuse, mis paigutab ta järjekorda ka kõige muu jaoks, mis sellega kaasneb.",
     service: "Kasutuses",
   },
   svd: {
@@ -163,14 +163,14 @@ export const etHandguns: Record<string, ItemTranslation> = {
       "Pikk raud ja skeletipära — päras on ava läbi",
       "Sihik PSO-1 istub kõrgel külgsiinil, nihutatud vasakule",
       "Peenike käsikaitse kahe pika õhuavaga mõlemal küljel",
-      "Pikem ja peenem kui ükski Kalašnikov, ja seda on näha",
+      "Pikem ja peenem kui ükski Kalašnikov ja seda on näha",
     ],
     placements: [
       "Üks motolaskurjao kohta, määratud laskuri relv",
       "Ei ole snaiprirelv lääne mõistes: ta kuulub jaole",
     ],
     doctrineNote:
-      "Antakse jaole, mitte ei hoita spetsialistide käes, ja see ongi doktriini mõte: Vene jagu kannab oma täpsustuld kuni 800 m kaasas, selle asemel et seda mujalt kutsuda. Ühe leidmine ei ütle üksuse kohta midagi erilist, sest igal jaol on see olemas.",
+      "Antakse jaole, mitte ei hoita spetsialistide käes ja see ongi doktriini mõte: Vene jagu kannab oma täpsustuld kuni 800 m kaasas, selle asemel et seda mujalt kutsuda. Ühe leidmine ei ütle üksuse kohta midagi erilist, sest igal jaol on see olemas.",
     service: "Kasutuses",
   },
   "vss-vintorez": {

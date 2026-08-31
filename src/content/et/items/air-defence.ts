@@ -17,7 +17,7 @@ export const etAirDefence: Record<string, ItemTranslation> = {
       "Laialt kasutusel ka maasihtmärkide vastu",
     ],
     doctrineNote:
-      "Relvastuseks ainult kahurid, ja üha sagedamini suunatakse need hoonete, mitte lennukite pihta. Just tulejõud maismaasihtmärkide vastu hoiab teda teenistuses ammu pärast seda, kui tema radar tänapäeva lennukite vastu vananes.",
+      "Relvastuseks ainult kahurid ja üha sagedamini suunatakse need hoonete, mitte lennukite pihta. Just tulejõud maismaasihtmärkide vastu hoiab teda teenistuses ammu pärast seda, kui tema radar tänapäeva lennukite vastu vananes.",
     crew: "4",
     service: "Kasutuses",
   },
@@ -131,7 +131,7 @@ export const etAirDefence: Record<string, ItemTranslation> = {
       "Töötab patareina eraldi heitja-, radari- ja juhtimismasinatest",
     ],
     doctrineNote:
-      "Keskmaa kate allüksusele, mitte üksusele, ja esimene süsteem siin, mis üksi võidelda ei saa — heitja, radar ja juhtimispunkt on eraldi masinad, mis tuleb leida koos.",
+      "Keskmaa kate allüksusele, mitte üksusele ja esimene süsteem siin, mis üksi võidelda ei saa — heitja, radar ja juhtimispunkt on eraldi masinad, mis tuleb leida koos.",
     crew: "4",
     service: "Kasutuses",
   },

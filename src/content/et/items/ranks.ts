@@ -68,7 +68,7 @@ export const etRanks: Record<string, ItemTranslation> = {
 
   "rank-navy-matros": navy("Madrus", "Reamehe vaste mereväes."),
   "rank-navy-starshina-2-stati": navy("Nooremmaat", "Nooremseersandi vaste mereväes."),
-  "rank-navy-michman": navy("Miitsman (mereväe vanemveebel)", "Praporštšiku vaste mereväes."),
+  "rank-navy-michman": navy("Mitšman (mereväe vanemveebel)", "Praporštšiku vaste mereväes."),
   "rank-navy-kapitan-leytenant": navy(
     "Kaptenleitnant",
     "Majori vaste mereväes; sõjalaeva osakonnaülem.",

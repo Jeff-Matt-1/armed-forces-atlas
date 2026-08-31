@@ -242,7 +242,7 @@ export const etArtillery: Record<string, ItemTranslation> = {
       "Paigutatakse kaugele taha, ulatudes sihtmärkideni, kuhu teised veetavad kahurid ei ulatu",
     ],
     doctrineNote:
-      "Kahur, mitte haubits: lame lennutrajektoor, pikk ulatus, ja teda kasutatakse vastupatareituleks ja sügavate sihtmärkide vastu, mitte rünnaku otsetoetuseks. Ühe leidmine ütleb, et kavandatav tuli kuulub armeele, mitte brigaadile.",
+      "Kahur, mitte haubits: lame lennutrajektoor, pikk ulatus ja teda kasutatakse vastupatareituleks ja sügavate sihtmärkide vastu, mitte rünnaku otsetoetuseks. Ühe leidmine ütleb, et kavandatav tuli kuulub armeele, mitte brigaadile.",
     crew: "8",
     service: "Kasutuses",
   },
@@ -280,7 +280,7 @@ export const etArtillery: Record<string, ItemTranslation> = {
       "Õhudessantväe vastus haubitsapatareile, heidetakse koos üksusega alla",
     ],
     doctrineNote:
-      "Seesama kahur-miiniheitja, mida Nona-K veab, pandud kerele, mis on piisavalt kerge langevarjuga heitmiseks. See annab õhudessantrügemendile oma kaudtule kohe maandumisest alates, ja just see on vahe eesmärgi hoidmise ja pelgalt sinna jõudmise vahel.",
+      "Seesama kahur-miiniheitja, mida Nona-K veab, pandud kerele, mis on piisavalt kerge langevarjuga heitmiseks. See annab õhudessantrügemendile oma kaudtule kohe maandumisest alates ja just see on vahe eesmärgi hoidmise ja pelgalt sinna jõudmise vahel.",
     crew: "4",
     service: "Kasutuses",
   },
@@ -299,7 +299,7 @@ export const etArtillery: Record<string, ItemTranslation> = {
       "Rakendatakse kindlustuste vastu, mitte rünnaku toetuseks",
     ],
     doctrineNote:
-      "Suurim teenistuses olev miiniheitja maailmas, ja ta ei ole mõeldud lagedal oleva elavjõu vastu: ta on hoonete, punkrite ja ettevalmistatud positsioonide jaoks, mida haubits ei murra. Ühe nägemine ütleb, et kindlustatud maastikule valmistatakse ette kavakohast rünnakut ja et otsus on tehtud tunduvalt kõrgemal kui kontaktis olev üksus.",
+      "Suurim teenistuses olev miiniheitja maailmas ja ta ei ole mõeldud lagedal oleva elavjõu vastu: ta on hoonete, punkrite ja ettevalmistatud positsioonide jaoks, mida haubits ei murra. Ühe nägemine ütleb, et kindlustatud maastikule valmistatakse ette kavakohast rünnakut ja et otsus on tehtud tunduvalt kõrgemal kui kontaktis olev üksus.",
     crew: "5",
     service: "Kasutuses",
   },

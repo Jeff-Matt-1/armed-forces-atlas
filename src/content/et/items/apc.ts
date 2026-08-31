@@ -84,7 +84,7 @@ export const etApc: Record<string, ItemTranslation> = {
       "Jalaväevedaja motolaskurüksustes",
     ],
     doctrineNote:
-      "Rohkem šassii kui masin: 2S1 ja tosina eriotstarbelise ümberehituse alus. Ühe tuvastamine ei ütle midagi enne, kui loed, mis on tema katusele kruvitud — V-variantidel laiad roomikud lume ja pehme pinnase jaoks, VM-il ja VMK-l 12.7 mm alus, ja jalavägi tagaruumis pigem tavapäraselt kui hädapäraselt.",
+      "Rohkem šassii kui masin: 2S1 ja tosina eriotstarbelise ümberehituse alus. Ühe tuvastamine ei ütle midagi enne, kui loed, mis on tema katusele kruvitud — V-variantidel laiad roomikud lume ja pehme pinnase jaoks, VM-il ja VMK-l 12.7 mm alus ja jalavägi tagaruumis pigem tavapäraselt kui hädapäraselt.",
     crew: "2 + 11",
     service: "Kasutuses",
   },

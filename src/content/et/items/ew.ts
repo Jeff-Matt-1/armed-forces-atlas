@@ -65,7 +65,7 @@ export const etEw: Record<string, ItemTranslation> = {
       "Töötab ees koos allüksusega, kuhu ta kuulub",
     ],
     doctrineNote:
-      "Brigaadi enda segaja, piisavalt väike, et lahinguga kaasa liikuda. Grau ja Bartles käsitlevad raadioelektroonilist võitlust brigaadi tasandil koosseisulise, mitte ülalt juurde antud väeliigina, ja maapinnal näeb see välja just nii.",
+      "Brigaadi enda segaja, piisavalt väike, et lahinguga kaasa liikuda. Grau ja Bartles käsitlevad raadioelektroonilist võitlust brigaadi tasandil koosseisulise, mitte ülalt juurde antud väeliigina ja maapinnal näeb see välja just nii.",
     service: "Kasutuses",
   },
   "rb-531b-infauna": {

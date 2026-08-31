@@ -73,7 +73,7 @@ export const etMissiles: Record<string, ItemTranslation> = {
       "Katab väinu ja lähenemisteid, mida pikema ulatusega süsteem katma ei pea",
     ],
     doctrineNote:
-      "Rannikukaitse kergem pool: rohkem rakette, vähem ulatust, ja salve kaal ulatuse asemel. Bastion keelab merepiirkonna, Bal küllastab kitsa — seepärast leiab neid koos ja seepärast on nende eristamine olulisem, kui esmapilgul paistab.",
+      "Rannikukaitse kergem pool: rohkem rakette, vähem ulatust ja salve kaal ulatuse asemel. Bastion keelab merepiirkonna, Bal küllastab kitsa — seepärast leiab neid koos ja seepärast on nende eristamine olulisem, kui esmapilgul paistab.",
     service: "Kasutuses",
   },
   "topol-m": {
@@ -81,7 +81,7 @@ export const etMissiles: Record<string, ItemTranslation> = {
     armament: "Üks mandritevaheline ballistiline rakett konteineris",
     rangeText: "Umbes 11 000 km",
     cues: [
-      "Hiiglaslik — kaheksa telge, ja konteiner ulatub kogu masina pikkuses",
+      "Hiiglaslik — kaheksa telge ja konteiner ulatub kogu masina pikkuses",
       "Üks sile toru, palju jämedam kui ükski taktikaline rakett",
       "Kabiin on koorma kõrval väike, taga olev jätab ta varju",
       "Liigub suure saatemeeskonnaga, kunagi mitte üksi",
@@ -91,7 +91,7 @@ export const etMissiles: Record<string, ItemTranslation> = {
       "Ei ole mingis mõttes allüksuse vahend — ta allub riiklikule tasandile",
     ],
     doctrineNote:
-      "Lisatud selleks, et teda ei aetaks kunagi segamini millegi taktikalisega. Miski temas ei kuulu sinu ees toimuvasse lahingusse: ta on patrullil olev strateegiline süsteem, ja ainus kasulik tuvastusfakt on see, et tema mõõtmed välistavad kõik ülejäänud selle õppetüki raketimasinad.",
+      "Lisatud selleks, et teda ei aetaks kunagi segamini millegi taktikalisega. Miski temas ei kuulu sinu ees toimuvasse lahingusse: ta on patrullil olev strateegiline süsteem ja ainus kasulik tuvastusfakt on see, et tema mõõtmed välistavad kõik ülejäänud selle õppetüki raketimasinad.",
     service: "Kasutuses",
   },
 };

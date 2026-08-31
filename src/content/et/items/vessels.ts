@@ -14,7 +14,7 @@ export const etVessels: Record<string, ItemTranslation> = {
     ],
     placements: ["Põhjalaevastiku lipulaeva klassi pealveelaev", "Töökorras on alles üks"],
     doctrineNote:
-      "Ehitatud ähvardama lennukikandjate rühmi massilise laevatõrjeraketi salvega. Ta on sama palju ulatuse avaldus kui sõjalaev, ja üksainus kere moodustab suure osa Vene pealveelaevastiku löögijõust.",
+      "Ehitatud ähvardama lennukikandjate rühmi massilise laevatõrjeraketi salvega. Ta on sama palju ulatuse avaldus kui sõjalaev ja üksainus kere moodustab suure osa Vene pealveelaevastiku löögijõust.",
     crew: "Umbes 700",
     service: "Kasutuses",
   },
@@ -52,7 +52,7 @@ export const etVessels: Record<string, ItemTranslation> = {
       "Suuremate pealveelaevagruppide saatelaev",
     ],
     doctrineNote:
-      "Spetsialiseerunud allveelaevade jahtimisele, ja seepärast on ahter antud helikopteritele, mitte rakettidele. Ta saadab, mitte ei löö.",
+      "Spetsialiseerunud allveelaevade jahtimisele ja seepärast on ahter antud helikopteritele, mitte rakettidele. Ta saadab, mitte ei löö.",
     crew: "Umbes 300",
     service: "Kasutuses",
   },
@@ -90,7 +90,7 @@ export const etVessels: Record<string, ItemTranslation> = {
       "Ehitatud ekspordiprojekti alusel, kohandatud Vene teenistuseks",
     ],
     doctrineNote:
-      "Fregatt, mis saadi kiiresti kätte juba ekspordiks tootmises olnud kere kohandamisega. Ta kannab sama maasihtmärkide raketti kui Gorškov, ja just see teeb vanema välimusega laevast tänase ohu.",
+      "Fregatt, mis saadi kiiresti kätte juba ekspordiks tootmises olnud kere kohandamisega. Ta kannab sama maasihtmärkide raketti kui Gorškov ja just see teeb vanema välimusega laevast tänase ohu.",
     crew: "Umbes 200",
     service: "Kasutuses",
   },
@@ -128,7 +128,7 @@ export const etVessels: Record<string, ItemTranslation> = {
       "Väikesed raketilaevad, mitte korvetid",
     ],
     doctrineNote:
-      "Kogu mõte on ebaproportsioonis: laev, mis mahub jõkke, kannab rakette, mis ulatuvad 1500 km sisemaale. Strateegiline mõju on lahutatud laeva suurusest, ja seepärast loeb siinne väikseim kere sama palju kui suurim.",
+      "Kogu mõte on ebaproportsioonis: laev, mis mahub jõkke, kannab rakette, mis ulatuvad 1500 km sisemaale. Strateegiline mõju on lahutatud laeva suurusest ja seepärast loeb siinne väikseim kere sama palju kui suurim.",
     crew: "Umbes 50",
     service: "Kasutuses",
   },

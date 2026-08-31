@@ -111,7 +111,7 @@ export const etSubmarines: Record<string, ItemTranslation> = {
       "Ranniku- ja lähimerepatrull ning maasihtmärkide löömine",
     ],
     doctrineNote:
-      "Akudel sõites vaikne ja piisavalt odav, et ehitada arvuliselt. Kalibri kandmine muudab rannikukaitse allveelaeva maasihtmärkide löögiplatvormiks, ja seepärast on suurus siin ohu kohta halb juhis.",
+      "Akudel sõites vaikne ja piisavalt odav, et ehitada arvuliselt. Kalibri kandmine muudab rannikukaitse allveelaeva maasihtmärkide löögiplatvormiks ja seepärast on suurus siin ohu kohta halb juhis.",
     crew: "Umbes 52",
     service: "Kasutuses",
   },

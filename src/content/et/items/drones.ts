@@ -16,7 +16,7 @@ export const etDrones: Record<string, ItemTranslation> = {
       "Arvukaim Vene droon teenistuses",
     ],
     doctrineNote:
-      "Tööhobune, mis sulgeb luure-tule-ahela: ta leiab sihtmärgi, jälgib mürskude langemist ja korrigeerib tuld. Grau ja Bartles väidavad, et Vene suurtükivägi on täpselt nii hea kui tema vaatlus, ja täna on suurem osa sellest vaatlusest siin.",
+      "Tööhobune, mis sulgeb luure-tule-ahela: ta leiab sihtmärgi, jälgib mürskude langemist ja korrigeerib tuld. Grau ja Bartles väidavad, et Vene suurtükivägi on täpselt nii hea kui tema vaatlus ja täna on suurem osa sellest vaatlusest siin.",
     service: "Kasutuses",
   },
   "eleron-3": {

@@ -15,7 +15,7 @@ export const etEngineering: Record<string, ItemTranslation> = {
       "Kasutatakse tõkete murdmiseks ja rusude koristamiseks",
     ],
     doctrineNote:
-      "Ehitatud töötama tule all, ja seepärast tehakse ekskavaatori tööd tankikerel. Selle olemasolu ees tähendab, et allüksus arvestab endale ise marsruudi rajamisega, mitte olemasoleva kasutamisega.",
+      "Ehitatud töötama tule all ja seepärast tehakse ekskavaatori tööd tankikerel. Selle olemasolu ees tähendab, et allüksus arvestab endale ise marsruudi rajamisega, mitte olemasoleva kasutamisega.",
     crew: "2",
     service: "Kasutuses",
   },
@@ -87,7 +87,7 @@ export const etEngineering: Record<string, ItemTranslation> = {
       "Kasutatakse kindlustuste ja hoonete vastu linnalahingus",
     ],
     doctrineNote:
-      "Laseb raketi, mis veab lõhkeainevooliku üle miinivälja ja detoneerib selle, rajades plahvatusega käigu. Sama laeng piki tänavat on laastav, ja just nii teda tänapäeval enamasti kasutataksegi.",
+      "Laseb raketi, mis veab lõhkeainevooliku üle miinivälja ja detoneerib selle, rajades plahvatusega käigu. Sama laeng piki tänavat on laastav ja just nii teda tänapäeval enamasti kasutataksegi.",
     crew: "2",
     service: "Kasutuses",
   },
@@ -176,7 +176,7 @@ export const etEngineering: Record<string, ItemTranslation> = {
       "Töötab ülekäigukohas, mitte esimeses ešelonis",
     ],
     doctrineNote:
-      "Veab üle selle, mis ise ei uju: kahurid, veoautod ja varustus üle jõe enne, kui sild olemas on. Tema tõttu peatab veetõke Vene allüksust tundide, mitte päevade kaupa, ja ta on kõige haavatavam just seal, kus ta on kõige vajalikum.",
+      "Veab üle selle, mis ise ei uju: kahurid, veoautod ja varustus üle jõe enne, kui sild olemas on. Tema tõttu peatab veetõke Vene allüksust tundide, mitte päevade kaupa ja ta on kõige haavatavam just seal, kus ta on kõige vajalikum.",
     crew: "2",
     service: "Kasutuses",
   },

@@ -34,7 +34,7 @@ export const etHelicopters: Record<string, ItemTranslation> = {
     ],
     placements: ["Maaväe lennuväe ründekopterirügemendid", "Töötab paaris luurajaga, mitte üksi"],
     doctrineNote:
-      "Puhtalt ründekopter, kellel ei ole midagi vedada — erinevalt Hindist, keda ta asendab. Tema ilmumine lõiku tähendab, et oodatakse tankitõrjetööd, mitte transporti, ja radar tiiviku kohal tähendab, et ta suudab võidelda varje tagant.",
+      "Puhtalt ründekopter, kellel ei ole midagi vedada — erinevalt Hindist, keda ta asendab. Tema ilmumine lõiku tähendab, et oodatakse tankitõrjetööd, mitte transporti ja radar tiiviku kohal tähendab, et ta suudab võidelda varje tagant.",
     crew: "2",
     service: "Kasutuses",
   },
@@ -53,7 +53,7 @@ export const etHelicopters: Record<string, ItemTranslation> = {
       "Kantakse ka dessantlaevadel, mitte ainult maalt lendamas",
     ],
     doctrineNote:
-      "Koaksiaaltiivik ongi kogu tuvastus: mitte millelgi muul Vene teenistuses ei ole kahte kohakuti tiivikut ja puuduvat sabatiivikut. Kõrvuti istmed lubavad teisel mehel juhtida teisi õhusõidukeid, ja just seepärast juhib ta paare ja otsib Mi-28-le sihtmärke sama palju, kui ise tulistab.",
+      "Koaksiaaltiivik ongi kogu tuvastus: mitte millelgi muul Vene teenistuses ei ole kahte kohakuti tiivikut ja puuduvat sabatiivikut. Kõrvuti istmed lubavad teisel mehel juhtida teisi õhusõidukeid ja just seepärast juhib ta paare ja otsib Mi-28-le sihtmärke sama palju, kui ise tulistab.",
     crew: "2",
     service: "Kasutuses",
   },
@@ -80,7 +80,7 @@ export const etHelicopters: Record<string, ItemTranslation> = {
     aka: "Halo",
     rangeText: "Kannab umbes 20 tonni",
     cues: [
-      "Hiiglaslik — suurim teenistuses olev kopter maailmas, ja seda on näha",
+      "Hiiglaslik — suurim teenistuses olev kopter maailmas ja seda on näha",
       "Kaheksa peatiiviku laba, rohkem kui millelgi muul siin",
       "Sügav kandiline kere tagumise laadimisrambiga",
       "Fikseeritud telik kõrgetel jalgadel, et ramp vabaks jääks",

@@ -49,7 +49,7 @@ export const etAircraft: Record<string, ItemTranslation> = {
     ],
     placements: ["Hävituslennuväe rügemendid", "Võimekaim Vene hävitaja laialdases teenistuses"],
     doctrineNote:
-      "Õhuülemvõim, ja lennuk, mis kõige tõenäolisemalt saadab löögigruppe. Flankeri perekond jagab seda siluetti, nii et teda eristavad Su-34-st või Su-30-st nina ja kabiin.",
+      "Õhuülemvõim ja lennuk, mis kõige tõenäolisemalt saadab löögigruppe. Flankeri perekond jagab seda siluetti, nii et teda eristavad Su-34-st või Su-30-st nina ja kabiin.",
     crew: "1",
     service: "Kasutuses",
   },
@@ -68,7 +68,7 @@ export const etAircraft: Record<string, ItemTranslation> = {
       "Võetakse aeglaselt kasutusele ja teda nähakse harva",
     ],
     doctrineNote:
-      "Kujundatud radarikaja vähendama, ja just selle vastu hoitakse teenistuses õppetüki 12 meeterlaine radareid. Arvud on endiselt nii väikesed, et operatiivne mõju jääb piiratuks.",
+      "Kujundatud radarikaja vähendama ja just selle vastu hoitakse teenistuses õppetüki 12 meeterlaine radareid. Arvud on endiselt nii väikesed, et operatiivne mõju jääb piiratuks.",
     crew: "1",
     service: "Kasutuses",
   },
@@ -106,7 +106,7 @@ export const etAircraft: Record<string, ItemTranslation> = {
       "Laseb tiibrakette väljastpoolt kaitstud õhuruumi",
     ],
     doctrineNote:
-      "Vana, ja tema ülesande jaoks ebaoluline: ta ei sisene kunagi kaitstud õhuruumi, vaid vabastab raketid sadu kilomeetreid eemal. Noolutatud tiivad propellerlennukil on kombinatsioon, mis on ainuomane sellele tüübile.",
+      "Vana ja tema ülesande jaoks ebaoluline: ta ei sisene kunagi kaitstud õhuruumi, vaid vabastab raketid sadu kilomeetreid eemal. Noolutatud tiivad propellerlennukil on kombinatsioon, mis on ainuomane sellele tüübile.",
     crew: "7",
     service: "Kasutuses",
   },
@@ -122,7 +122,7 @@ export const etAircraft: Record<string, ItemTranslation> = {
     ],
     placements: ["Raskepommituslennuväe rügemendid", "Strateegiline löök ja kaugpatrull"],
     doctrineNote:
-      "Suurim ja raskeim lahingulennuk maailmas. Nagu Tu-95 on ka tema raketikandja, mitte pommitaja otseses mõttes, ja tema väärtus on ulatus ja nähtavus, mitte kohaletoimetatud tonnaaž.",
+      "Suurim ja raskeim lahingulennuk maailmas. Nagu Tu-95 on ka tema raketikandja, mitte pommitaja otseses mõttes ja tema väärtus on ulatus ja nähtavus, mitte kohaletoimetatud tonnaaž.",
     crew: "4",
     service: "Kasutuses",
   },

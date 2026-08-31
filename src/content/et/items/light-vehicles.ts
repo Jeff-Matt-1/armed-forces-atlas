@@ -139,7 +139,7 @@ export const etLightVehicles: Record<string, ItemTranslation> = {
       "Kasutusel ka lihtsa kaitstud vedajana ilma meditsiinivarustuseta",
     ],
     doctrineNote:
-      "Kaitstud kiirabiauto, mitte lahingumasin, ja tema kohalolek märgib haavatute kogumispunkti või evakuatsioonimarsruuti. Tema äratundmine annab rohkem teadmist positsiooni kohta kui masina enda võimekuse kohta.",
+      "Kaitstud kiirabiauto, mitte lahingumasin ja tema kohalolek märgib haavatute kogumispunkti või evakuatsioonimarsruuti. Tema äratundmine annab rohkem teadmist positsiooni kohta kui masina enda võimekuse kohta.",
     service: "Kasutuses",
   },
 };

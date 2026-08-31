@@ -16,7 +16,7 @@ export const etC2: Record<string, ItemTranslation> = {
       "Allüksuse tagalas, mitte eesliiniüksuste juures",
     ],
     doctrineNote:
-      "Soomustamata, seega töötab varjes kaugel liinist tagapool. Šassii on ühine kümnete omavahel mitteseotud kastkeremasinatega — teda tuvastab ainult antennikomplekt, ja just nii ta olema peabki.",
+      "Soomustamata, seega töötab varjes kaugel liinist tagapool. Šassii on ühine kümnete omavahel mitteseotud kastkeremasinatega — teda tuvastab ainult antennikomplekt ja just nii ta olema peabki.",
     service: "Kasutuses",
   },
   "r-145bm": {
@@ -33,7 +33,7 @@ export const etC2: Record<string, ItemTranslation> = {
       "Reservi ja teise liini allüksused",
     ],
     doctrineNote:
-      "Eelmise põlvkonna soomustatud juhtimispunkt kerel, mille nõrkust selgitab soomustransportööride õppetükk. Ta paneb ülema oma üksuste juurde, mitte nende taha, ja just selleks raadiojaama soomustataksegi.",
+      "Eelmise põlvkonna soomustatud juhtimispunkt kerel, mille nõrkust selgitab soomustransportööride õppetükk. Ta paneb ülema oma üksuste juurde, mitte nende taha ja just selleks raadiojaama soomustataksegi.",
     service: "Piiratud kasutuses",
   },
   "r-149ma1": {

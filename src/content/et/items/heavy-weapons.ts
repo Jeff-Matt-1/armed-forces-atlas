@@ -85,7 +85,7 @@ export const etHeavyWeapons: Record<string, ItemTranslation> = {
       "Antakse motolaskurüksustele rünnakuülesanneteks",
     ],
     doctrineNote:
-      "Kuulub RKB-kaitse üksustele, mitte jalaväele, ja see ise on tuvastustunnus: nende kohalolek märgib ettevalmistatud positsioonide vastu suunatud rünnakut.",
+      "Kuulub RKB-kaitse üksustele, mitte jalaväele ja see ise on tuvastustunnus: nende kohalolek märgib ettevalmistatud positsioonide vastu suunatud rünnakut.",
     crew: "1",
     service: "Kasutuses",
   },
