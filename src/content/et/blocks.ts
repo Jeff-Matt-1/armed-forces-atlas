@@ -115,7 +115,7 @@ export const etBlocks: Record<string, BlockTranslation> = {
   },
   engineering: {
     title: "Pioneerimasinad",
-    subtitle: "Sillutamine, miinide raivamine, pinnasetööd",
+    subtitle: "Sillutamine, miinidest läbipääsu rajamine, pinnasetööd",
     brief:
       "Peaaegu kõik siin on tankikere, millelt on torn maha võetud ja asemele pandud tööriist, nii et tuvastamine tähendab tööriista lugemist: liigendiga kraanapoom, buldooserisahk, kokkupandud sild, hingedel heitjakaas, renn taga. Kui tööriist on sild, küsi, mis teda kannab — tankikere läheb sinna, kuhu tankid, veoauto järgib teed. Kõige esimene tunnus on aga see, et ükski neist ei suuda võidelda.",
     doctrineNote:

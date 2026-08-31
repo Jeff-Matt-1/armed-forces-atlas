@@ -7,7 +7,7 @@ export const etVessels: Record<string, ItemTranslation> = {
     armament: "P-700 Granit raketid, S-300F, 130 mm kahurid",
     rangeText: "Tuumajõul — praktiliselt piiramatu autonoomsus",
     cues: [
-      "Hiiglaslik: umbes 250 m, kääbustab iga kõrvaloleva saatelaeva",
+      "Hiiglaslik: umbes 250 m, tema kõrval näib iga saatelaev väike",
       "Kõrge kandiline pealisehitus keskel, radareid täis",
       "Pikk lame vööritekk siledate püststardiluukide kohal",
       "Tuumajõul, seega korstnasuitsu ega selget väljalaset ei ole",

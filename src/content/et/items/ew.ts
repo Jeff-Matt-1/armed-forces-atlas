@@ -76,7 +76,7 @@ export const etEw: Record<string, ItemTranslation> = {
       "BTR-80 kere, kaheksa ratast ja paadivöör — kuid torni ei ole",
       "Kõrge kandiline kastikujuline ehitis, mis ulatub katusest tunduvalt kõrgemale",
       "Väikesed mastantennid tagumisel tekil, mitte üks keskne mast",
-      "Loeb kui BTR-80, millele on kasvanud kuur",
+      "Näeb välja nagu BTR-80 kõrge kastikujulise pealisehitusega",
     ],
     placements: [
       "Elektroonilise sõjapidamise üksused kolonnide ja rännakute toetuseks",

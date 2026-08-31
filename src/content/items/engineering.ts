@@ -133,8 +133,8 @@ export const engineering: Item[] = [
     armament: null,
     rangeText: "Clears a lane roughly 90 m long and 6 m wide",
     cues: [
-      "Large flat launcher cover hinged upward at the front of the hull",
-      "Open rectangular compartment behind it holding the charges",
+      "Massive launcher assembly over the rear of the hull, its cover hinged upward",
+      "Open rectangular compartment holding the line charges",
       "2S1-derived tracked hull with seven roadwheels",
       "No turret, no blade, no arm",
     ],

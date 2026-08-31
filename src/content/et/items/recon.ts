@@ -87,7 +87,7 @@ export const etRecon: Record<string, ItemTranslation> = {
     ],
     placements: [
       "Pioneeriluure üksused, kes uurivad marsruute ja ülekäigukohti",
-      "Töötab sillapaneku- ja teeraivamismasinate ees, kellele ta ette kannab",
+      "Töötab sillapaneku- ja teerajamismasinate ees, kellele ta ette kannab",
     ],
     doctrineNote:
       "Vastab küsimustele, millest ülekäik sõltub: kui sügav, kui kiire vool, kui pehme põhi ja kas kallas kannab sõidukit. Ta uurib jõe läbi enne, kui parvlaevad ja sillapanekumasinad kohale jõuavad, nii et tema leidmine hoiatab ülekäigust varem kui selle tehnika leidmine, mis ülekäigu teeb.",

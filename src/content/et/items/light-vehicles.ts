@@ -67,7 +67,7 @@ export const etLightVehicles: Record<string, ItemTranslation> = {
       "Kolonni saatmine miinide ja isetehtud lõhkekehade ohuga aladel",
     ],
     doctrineNote:
-      "Miinikaitsega transport, mitte lahingumasin. Selle kasutamine märgib teeraivamise või tagalajulgeoleku ülesannet.",
+      "Miinikaitsega transport, mitte lahingumasin. Selle kasutamine märgib teerajamise või tagalajulgeoleku ülesannet.",
     crew: "2 + 14",
     service: "Kasutuses",
   },

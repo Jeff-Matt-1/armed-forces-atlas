@@ -11,7 +11,7 @@ export const etEngineering: Record<string, ItemTranslation> = {
       "Väike operaatorikuppel selgelt ees",
     ],
     placements: [
-      "Pioneeriüksused soomusallüksustele marsruutide raivamiseks",
+      "Pioneeriüksused soomusallüksustele marsruutide rajamiseks",
       "Kasutatakse tõkete murdmiseks ja rusude koristamiseks",
     ],
     doctrineNote:
@@ -75,10 +75,10 @@ export const etEngineering: Record<string, ItemTranslation> = {
   },
   "ur-77": {
     aka: "Zmei Gorõnõtš",
-    rangeText: "Raivab umbes 90 m pika ja 6 m laiuse käigu",
+    rangeText: "Rajab umbes 90 m pika ja 6 m laiuse käigu",
     cues: [
-      "Suur lame heitjakaas kere esiosas hingedel üles tõstetud",
-      "Selle taga lahtine ristkülikuline ruum laengutega",
+      "Kere tagaosa peal massiivne heitesüsteem, kaas hingedel üles tõstetud",
+      "Lahtine ristkülikuline ruum lõhkeainevoolikutega",
       "2S1-l põhinev roomikkere seitsme tugirattaga",
       "Torni ei ole, sahka ei ole, poomi ei ole",
     ],
@@ -87,7 +87,7 @@ export const etEngineering: Record<string, ItemTranslation> = {
       "Kasutatakse kindlustuste ja hoonete vastu linnalahingus",
     ],
     doctrineNote:
-      "Laseb raketi, mis veab lõhkeainevooliku üle miinivälja ja detoneerib selle, raivates plahvatusega käigu. Sama laeng piki tänavat on laastav, ja just nii teda tänapäeval enamasti kasutataksegi.",
+      "Laseb raketi, mis veab lõhkeainevooliku üle miinivälja ja detoneerib selle, rajades plahvatusega käigu. Sama laeng piki tänavat on laastav, ja just nii teda tänapäeval enamasti kasutataksegi.",
     crew: "2",
     service: "Kasutuses",
   },
@@ -191,7 +191,7 @@ export const etEngineering: Record<string, ItemTranslation> = {
     ],
     placements: [
       "Pioneeriüksused, kes rajavad miiniväljadest läbipääsu liikuvale allüksusele",
-      "Juhib kolonni läbi kahtlase vöö ja annab siis teatepulga edasi",
+      "Juhib kolonni läbi kahtlase vöö ja annab siis vastutuse üle",
     ],
     doctrineNote:
       "Laseb miinid raskusega õhku, selle asemel et neid otsida. Ta puhastab koridori, mis on piisavalt lai järgnevatele, ja seepärast on ta mineeritud marsruudil kolonni eesotsas — ning masin, mille kaitsja tahab kõige esimesena peatada.",
