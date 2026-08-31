@@ -7,10 +7,10 @@ export const etHandguns: Record<string, ItemTranslation> = {
     armament: "9x18 mm PM, 8-padrunine salv",
     rangeText: "Efektiivne kuni 50 m",
     cues: [
-      "Lühike lukk ümara suudmeotsaga",
+      "Lühike kelk ümara suudmeotsaga",
       "Väljas löökkukk, väikesed fikseeritud sihikud",
-      "Kaitseriiv luku küljes",
-      "Ühetükiline ümbritsev käepide tärni või rihmaaasaga",
+      "Kaitseriiv kelgu küljes",
+      "Monoliitne ümbritsev käepide tärni või rihmaaasaga",
     ],
     placements: [
       "Ohvitseride, meeskondade ja tagalapersonali pärandpüstol",
@@ -26,7 +26,7 @@ export const etHandguns: Record<string, ItemTranslation> = {
     armament: "9x19 mm, 17/18-padrunine salv",
     rangeText: "Efektiivne kuni 50 m",
     cues: [
-      "PM-ist pikem ja kandilisem lukk",
+      "PM-ist pikem ja kandilisem kelk",
       "Kaherealine salv, käepide selgelt jämedam",
       "Raami küljes kaitseriiv ja kandiline päästikukaar",
       "Selged kolme valge punktiga sihikud",
@@ -44,9 +44,9 @@ export const etHandguns: Record<string, ItemTranslation> = {
     armament: "9x19 mm (sh soomustläbistav 7N31), 18-padrunine salv",
     rangeText: "Efektiivne kuni 50 m",
     cues: [
-      "Väga kerge polümeerraam, tahuliste külgedega lukk",
+      "Väga kerge polümeerraam, tahuliste külgedega kelk",
       "Välist löökkukke ei ole — löögitihvtiga",
-      "Iseloomulikud lühikesed haardesooned ainult luku tagaosas",
+      "Iseloomulikud lühikesed haardesooned ainult kelgu tagaosas",
       "Sirge, kandiline profiil",
     ],
     placements: ["Väljastatud valitud armee-, siseministeeriumi ja eriüksustele MP-443 kõrval"],
@@ -60,7 +60,7 @@ export const etHandguns: Record<string, ItemTranslation> = {
     rangeText: "Efektiivne 50 m (õlatoega 200 m)",
     cues: [
       "Ebatavaliselt pikk käepide 20-padrunise salvega",
-      "Tulerežiimi valits luku küljes",
+      "Tulerežiimi valikuhoob kelgu küljes",
       "Kabuur toimib õlatoena",
       "Tervikuna suurem kui ükski teine Vene teenistuspüstol",
     ],
@@ -80,7 +80,7 @@ export const etHandguns: Record<string, ItemTranslation> = {
     cues: [
       "Kaasaegne kandiline polümeerraam lisaseadmete siiniga",
       "Käepideme seljal pigistuskaitse",
-      "Paks lukk eesmiste haardesoontega",
+      "Paks kelk eesmiste haardesoontega",
       "Tavapärast välist kaitseriivi ei ole",
     ],
     placements: ["FSB, FSO ja armee eriotstarbelised (spetsnaz) üksused"],
@@ -95,7 +95,7 @@ export const etHandguns: Record<string, ItemTranslation> = {
     rangeText: "Efektiivne kuni 25 m",
     cues: [
       "Summutitoru ei ole — püstol näeb tavaline välja, kuid on vaikne",
-      "Kandiline tahuline lukk, väga lihtsad jooned",
+      "Kandiline tahuline kelk, väga lihtsad jooned",
       "Lühike raud, suue ei ulatu välja",
       "Väike 6-padrunine salv, peenike käepide",
     ],
@@ -109,7 +109,7 @@ export const etHandguns: Record<string, ItemTranslation> = {
     armament: "9x21 mm, 18-padrunine salv",
     rangeText: "Efektiivne kuni 100 m",
     cues: [
-      "Pikk kaasaegne lukk täispika siiniga",
+      "Pikk kaasaegne kelk täispika siiniga",
       "Mõlemakäelised juhtnupud ja ümberpööratav salvivabasti",
       "Kandiline päästikukaar sõrmesüvendiga",
       "Osal relvadest keermestatud raud summuti jaoks",
