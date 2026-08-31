@@ -24,6 +24,29 @@ describe("interface strings", () => {
     expect(untranslated).toEqual([]);
   });
 
+  /**
+   * Copy must not count the blocks by hand.
+   *
+   * The home page said "nineteen subject blocks" next to a counter reading 22,
+   * because two blocks were added and the sentence was not. Any interface
+   * string that states how many blocks there are has to take the number from
+   * the content, which means carrying a placeholder rather than a word.
+   */
+  test("no interface string spells out a block count", () => {
+    const numerals =
+      /\b(one|two|three|four|five|six|seven|eight|nine|ten|eleven|twelve|thirteen|fourteen|fifteen|sixteen|seventeen|eighteen|nineteen|twenty|\u00FCks|kaks|kolm|neli|viis|kuus|seitse|kaheksa|\u00FCheksa|k\u00FCmme|\u00FCksteist|kaksteist|kolmteist|neliteist|viisteist|kuusteist|seitseteist|kaheksateist|\u00FCheksateist|kaksk\u00FCmmend)\s+(?:\S+\s+){0,2}\S*(block|plokk|\u00F5ppet\u00FCk)/i;
+
+    const offenders: string[] = [];
+    for (const locale of LOCALES) {
+      for (const key of KEYS) {
+        const value = translate(locale, key);
+        if (numerals.test(value))
+          offenders.push(locale + " " + key + ': "' + value.slice(0, 60) + '"');
+      }
+    }
+    expect(offenders).toEqual([]);
+  });
+
   test("placeholders survive substitution in both languages", () => {
     for (const locale of LOCALES) {
       expect(translate(locale, "block.entries", { count: 7 })).toContain("7");

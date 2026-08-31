@@ -41,7 +41,7 @@ const en = {
   "home.allBlocks": "All {count} blocks",
 
   "home.intro":
-    "A foundations primer plus nineteen subject blocks, one subject at a time. Every entry gives you the recognition cues, the main armament and range, and where the machine actually sits in the force structure. Doctrinal framing follows Grau & Bartles,",
+    "A foundations primer plus {count} subject blocks, one subject at a time. Every entry gives you the recognition cues, the main armament and range, and where the machine actually sits in the force structure. Doctrinal framing follows Grau & Bartles,",
   "home.modeFlashcards": "Flashcards",
   "home.modeFlashcardsBody":
     "Spaced repetition on photos and designations. Cards resurface exactly when you are about to forget them.",
@@ -298,7 +298,7 @@ const et: Record<StringKey, string> = {
   "home.allBlocks": "Kõik {count} õppetükki",
 
   "home.intro":
-    "Aluste sissejuhatus ja üheksateist teemaplokki, üks teema korraga. Iga kirje annab tuvastustunnused, pearelvastuse ja laskekauguse ning selle, kus masin tegelikult lahingukorras asub. Doktriini raamistik järgib Grau ja Bartlesi teost",
+    "Aluste sissejuhatus ja {count} teemaplokki, üks teema korraga. Iga kirje annab tuvastustunnused, pearelvastuse ja laskekauguse ning selle, kus masin tegelikult lahingukorras asub. Doktriini raamistik järgib Grau ja Bartlesi teost",
   "home.modeFlashcards": "Sõnasedelid",
   "home.modeFlashcardsBody":
     "Hajutatud kordamine fotode ja tähistuste peal. Kaardid tulevad tagasi täpselt siis, kui oled neid unustamas.",

@@ -39,7 +39,7 @@ function Home() {
           <p className="plate-label">{t("home.eyebrow")}</p>
           <h1 className="mt-4 max-w-3xl text-4xl leading-[1.05] sm:text-5xl">{t("home.title")}</h1>
           <p className="mt-5 max-w-2xl text-base text-muted-foreground">
-            {t("home.intro")} <em>The Russian Way of War</em>.
+            {t("home.intro", { count: readyBlocks.length - 1 })} <em>The Russian Way of War</em>.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-2">

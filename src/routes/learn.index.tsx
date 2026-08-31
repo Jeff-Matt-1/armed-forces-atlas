@@ -11,8 +11,7 @@ export const Route = createFileRoute("/learn/")({
       { title: "Study Blocks — Russian Armed Forces Recognition" },
       {
         name: "description",
-        content:
-          "Nineteen study blocks covering ranks, small arms, armour, artillery, air defence, vessels, drones and aircraft of the Russian Armed Forces.",
+        content: `${allBlocks.length} study blocks covering ranks, small arms, armour, artillery, air defence, missiles, vessels, drones, aircraft and helicopters of the Russian Armed Forces.`,
       },
       { property: "og:title", content: "Study Blocks — Russian Armed Forces Recognition" },
       {
