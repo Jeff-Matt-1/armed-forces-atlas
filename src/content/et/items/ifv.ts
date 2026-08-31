@@ -16,7 +16,7 @@ export const etIfv: Record<string, ItemTranslation> = {
       "Laialdaselt varudest taaskasutusse võetud",
     ],
     doctrineNote:
-      "Masin, mis lõi kogu kategooria: jalavägi, kes võitleb oma veokilt ja selle kõrval, mitte ei tule kaugel maas. Tema madalrõhukahur ei olnud kunagi mõeldud tankidega võitlemiseks, vaid hoonete ja kaevikute avamiseks.",
+      "Masin, mis lõi kogu kategooria: jalavägi, kes võitleb oma veokilt ja selle kõrval, mitte ei tule maha kaugel tagapool. Tema madalrõhukahur ei olnud kunagi mõeldud tankidega võitlemiseks, vaid hoonete ja kaevikute avamiseks.",
     crew: "3 + 8",
     service: "Kasutuses",
   },

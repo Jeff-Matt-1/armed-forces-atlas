@@ -149,7 +149,7 @@ export const etBlocks: Record<string, BlockTranslation> = {
     title: "Allveelaevad",
     subtitle: "Tuumatorpeedo-, diisel-, tiibraketi- ja ballistiliste rakettide laevad",
     brief:
-      "Nähtav on ainult kolm asja: kere pikkus, laius ning torni kuju ja asukoht — ja sellest piisab. Ballistiliste rakettide laevad kannavad torusid torni taga, mis tõstab ahtrikere peale pika küüru. Tiibraketilaevad kannavad omi surveankru kõrval, mis teeb laeva ebatavaliselt laiaks ilma küüruta. Torpeedolaevadel ei ole kumbagi ja nad näevad puhtad välja.",
+      "Nähtav on ainult kolm asja: kere pikkus, laius ning torni kuju ja asukoht — ja sellest piisab. Ballistiliste rakettide laevad kannavad torusid torni taga, mis tõstab ahtrikere peale pika küüru. Tiibraketilaevad kannavad omi survekere kõrval, mis teeb laeva ebatavaliselt laiaks ilma küüruta. Torpeedolaevadel ei ole kumbagi ja nad näevad puhtad välja.",
     doctrineNote:
       "Allveelaevastik hoiab tuumaheidutuse säilivat osa ja peamist ohtu pealveelaevastikele, mistõttu ta saab ebaproportsionaalse osa mereväe investeeringutest. Tuvastamine käib siin klassi, mitte üksiklaeva järgi, sest klass määrab relva, mida ta kannab.",
   },
@@ -163,11 +163,11 @@ export const etBlocks: Record<string, BlockTranslation> = {
   },
   aircraft: {
     title: "Sõjalennukid",
-    subtitle: "Hävitajad, ülekuulajad, pommitajad, transpordilennukid",
+    subtitle: "Hävitajad, tõrjehävitajad, pommitajad, transpordilennukid",
     brief:
       "Loe mootorid, siis loe tiib. Üks sirge tiib kahe kerekülgse mootori kohal on ründelennuk; kaks mootorit noolja tiiva all koos kahe sabakiiluga on hävitaja; neli mootorit tähendab pommitajat või transpordilennukit ja saba ütleb, kumba. Peened eristused tulevad viimasena, sest Flankeri perekond on üks lennukikere venitatud mitmeks lennukiks ja neid eristab usaldusväärselt ainult nina.",
     doctrineNote:
-      "Vene õhuväge kasutatakse selleks, et jõuda sinna, kuhu kahurid ei ulatu, mitte lahingu iseseisvaks võitmiseks. Seepärast on ründelennukeid rohkem kui ülekuulajaid, seepärast on pommitajad raketikandjad, mis kaitstud õhuruumi ei sisene, ja seepärast otsustab transpordilennukite park, mida õhudessantväed tegelikult teha suudavad.",
+      "Vene õhuväge kasutatakse selleks, et jõuda sinna, kuhu kahurid ei ulatu, mitte lahingu iseseisvaks võitmiseks. Seepärast on ründelennukeid rohkem kui tõrjehävitajaid, seepärast on pommitajad raketikandjad, mis kaitstud õhuruumi ei sisene, ja seepärast otsustab transpordilennukite park, mida õhudessantväed tegelikult teha suudavad.",
   },
   missiles: {
     title: "Raketisüsteemid",

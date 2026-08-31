@@ -16,7 +16,7 @@ export const etArtillery: Record<string, ItemTranslation> = {
       "Õhudessantväe ja rannikukaitse suurtükivägi",
     ],
     doctrineNote:
-      "Odavaim viis patarei maapinnale saada. Grau ja Bartles kirjeldavad süsteemi, kus tulemaht loeb rohkem kui täpsus, ja D-30 on olemas selleks, et torusid juurde anda.",
+      "Odavaim viis patarei välja panna. Grau ja Bartles kirjeldavad süsteemi, kus tulemaht loeb rohkem kui täpsus, ja D-30 on olemas selleks, et torusid juurde anda.",
     crew: "6",
     service: "Kasutuses",
   },

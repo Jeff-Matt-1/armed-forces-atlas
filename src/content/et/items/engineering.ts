@@ -33,7 +33,7 @@ export const etEngineering: Record<string, ItemTranslation> = {
       "Liigub esimeses ešelonis, mitte selle taga",
     ],
     doctrineNote:
-      "Tankišassii sellepärast, et sild peab jõudma sinna, kus on tankid, ja teekonna üle elama. Ta ostab ühe ületuskoha kiiresti ja tuleb siis tagasi tuua — seepärast võtab mitme lõhkega arvestav allüksus kaasa hoopis pontoonid.",
+      "Tankišassii sellepärast, et sild peab jõudma sinna, kus on tankid, ja teekonna üle elama. Ta annab ühe ületuskoha kiiresti ja tuleb siis tagasi tuua — seepärast võtab mitme lõhkega arvestav allüksus kaasa hoopis pontoonid.",
     crew: "2",
     service: "Kasutuses",
   },

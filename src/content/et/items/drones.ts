@@ -30,7 +30,7 @@ export const etDrones: Record<string, ItemTranslation> = {
     ],
     placements: ["Pataljoni ja kompanii luure", "Eriüksused ja õhudessantväed"],
     doctrineNote:
-      "Nii lühikese ulatuse ja nii odav, et väikesed üksused saavad teda vabalt kasutada. Kui Orlan teenib brigaadi kahureid, siis see teenib kompaniiülema enda silmi.",
+      "Nii lühikese ulatusega ja nii odav, et väikesed üksused saavad teda vabalt kasutada. Kui Orlan teenib brigaadi kahureid, siis see teenib kompaniiülema enda silmi.",
     service: "Kasutuses",
   },
   forpost: {

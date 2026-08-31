@@ -85,7 +85,7 @@ export const etHeavyWeapons: Record<string, ItemTranslation> = {
       "Antakse motolaskurüksustele rünnakuülesanneteks",
     ],
     doctrineNote:
-      "Kuulub kaitseväe RKB-üksustele, mitte jalaväele, ja see ise on tuvastustunnus: nende kohalolek märgib ettevalmistatud positsioonide vastu suunatud rünnakut.",
+      "Kuulub RKB-kaitse üksustele, mitte jalaväele, ja see ise on tuvastustunnus: nende kohalolek märgib ettevalmistatud positsioonide vastu suunatud rünnakut.",
     crew: "1",
     service: "Kasutuses",
   },
@@ -158,7 +158,7 @@ export const etHeavyWeapons: Record<string, ItemTranslation> = {
       "Hoitakse tagavaras soomusläbimurde sulgemiseks, ei liigu koos rünnakuga",
     ],
     doctrineNote:
-      "Juhib radari, mitte laskuri silma järgi, nii et suits, tolm ja pimedus teda ei peata — needsamad tingimused, mida soomus rünnakuks eelistab. Grau ja Bartles kirjeldavad tankitõrjereservi, mida hoitakse läbimurde sulgemiseks; see on seesama reserv, millele on antud igailmasilmad.",
+      "Juhib radari, mitte laskuri silma järgi, nii et suits, tolm ja pimedus teda ei peata — needsamad tingimused, mida soomus rünnakuks eelistab. Grau ja Bartles kirjeldavad tankitõrjereservi, mida hoitakse läbimurde sulgemiseks; see on seesama reserv, mis näeb igas ilmas.",
     crew: "2",
     service: "Kasutuses",
   },

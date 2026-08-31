@@ -55,7 +55,7 @@ export const etSubmarines: Record<string, ItemTranslation> = {
       "Viimast laeva kasutati enne kasutusest kõrvaldamist katsetusteks",
     ],
     doctrineNote:
-      "Lisatud sellepärast, et ta on eksimatu ja esineb pildimaterjalis endiselt. Kaks paralleelset surveankrut ühe välise kere sees on põhjus, miks ta nii lai on ja miks miski muu tema moodi välja ei näe.",
+      "Lisatud sellepärast, et ta on eksimatu ja esineb pildimaterjalis endiselt. Kaks paralleelset survekeret ühe välise kere sees on põhjus, miks ta nii lai on ja miks miski muu tema moodi välja ei näe.",
     crew: "Umbes 160",
     service: "Kasutusest väljas",
   },
@@ -65,7 +65,7 @@ export const etSubmarines: Record<string, ItemTranslation> = {
     rangeText: "Raketid kuni umbes 550 km",
     cues: [
       "Väga lai kere, kuid tornist taga raketiküüru ei ole",
-      "Laius tuleb surveankru kõrval asuvatest raketitorudest",
+      "Laius tuleb survekere kõrval asuvatest raketitorudest",
       "Pikk paralleelsete külgedega pealisehitus laia lameda ülaosaga",
       "Torn on kõrge, kitsas ja tublisti ees",
     ],

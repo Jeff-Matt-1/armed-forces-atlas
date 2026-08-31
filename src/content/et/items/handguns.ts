@@ -50,7 +50,7 @@ export const etHandguns: Record<string, ItemTranslation> = {
       "Sirge, kandiline profiil",
     ],
     placements: ["Väljastatud valitud armee-, siseministeeriumi ja eriüksustele MP-443 kõrval"],
-    doctrineNote: "Võetud kasutusele soomustläbistava võime tõttu kuulivesti vastu lähedalt.",
+    doctrineNote: "Võetud kasutusele lähedalt kuulivesti läbistava võime tõttu.",
     crew: "1",
     service: "Kasutuses, piiratud koguses",
   },
@@ -101,7 +101,7 @@ export const etHandguns: Record<string, ItemTranslation> = {
     ],
     placements: ["Ainult eriotstarbeline luure ja riikliku julgeoleku üksused"],
     doctrineNote:
-      "Vaikus tuleb padrunist, mitte summutist. Kunagi ei ole see üldväljastuses olnud relv.",
+      "Vaikus tuleb padrunist, mitte summutist. See ei ole kunagi olnud üldväljastusrelv.",
     crew: "1",
     service: "Eriüksused",
   },

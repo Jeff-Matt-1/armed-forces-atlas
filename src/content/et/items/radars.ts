@@ -50,7 +50,7 @@ export const etRadars: Record<string, ItemTranslation> = {
       "Täidab lünka pikema ulatusega jaamade katvuse all",
     ],
     doctrineNote:
-      "Ehitatud nägema seda, mis lendab madalalt — helikoptereid, tiibrakette, droone — ja seepärast läheb antenn masti otsa. Maad ligi hoidva sihtmärgi vastu ostab katvust kõrgus, mitte võimsus.",
+      "Ehitatud nägema seda, mis lendab madalalt — helikoptereid, tiibrakette, droone — ja seepärast läheb antenn masti otsa. Maad ligi hoidva sihtmärgi vastu annab katvust kõrgus, mitte võimsus.",
     service: "Kasutuses",
   },
   "zoopark-1": {

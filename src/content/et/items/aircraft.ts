@@ -83,11 +83,11 @@ export const etAircraft: Record<string, ItemTranslation> = {
       "Suur ja raske — kujult nähtavalt vähem väle kui hävitaja",
     ],
     placements: [
-      "Ülekuulajate rügemendid põhja- ja idasuundade katmiseks",
+      "Tõrjehävitajate rügemendid põhja- ja idasuundade katmiseks",
       "Osa lennukeid on kohandatud kandma Kinžali raketti",
     ],
     doctrineNote:
-      "Ülekuulaja, mitte lähivõitleja: ehitatud lendama kiiresti ja kaugele, et kohata pommitajaid ja tiibrakette tühja territooriumi kohal. Kandilised õhuvõtuavad on kiireim viis teda kaugelt Flankerist eristada.",
+      "Tõrjehävitaja, mitte lähivõitleja: ehitatud lendama kiiresti ja kaugele, et kohata pommitajaid ja tiibrakette tühja territooriumi kohal. Kandilised õhuvõtuavad on kiireim viis teda kaugelt Flankerist eristada.",
     crew: "2",
     service: "Kasutuses",
   },

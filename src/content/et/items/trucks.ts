@@ -62,7 +62,7 @@ export const etTrucks: Record<string, ItemTranslation> = {
     ],
     placements: ["Pioneeriüksused silla- ja pontoonikandjana", "Raskeevakuatsioon ja tehnika vedu"],
     doctrineNote:
-      "Suure koormusega ja suures osas välja vahetatud, kuid alles hoitud pioneeriülesannetes, kus tema kandevõime on endiselt oluline.",
+      "Suure kandevõimega ja suures osas välja vahetatud, kuid alles hoitud pioneeriülesannetes, kus tema kandevõime on endiselt oluline.",
     crew: "1 + 2",
     service: "Reservis ja pioneerikasutuses",
   },
@@ -96,7 +96,7 @@ export const etTrucks: Record<string, ItemTranslation> = {
       "Kergtransport teise liini ja territoriaalüksustes",
     ],
     doctrineNote:
-      "Langevarjuga heidetav mõõt sidus ta õhudessantvägedega. Suures osas välja vahetatud, kuid endiselt märk õhudessant- või vanemast koosseisust.",
+      "Langevarjuga heidetav suurus sidus ta õhudessantvägedega. Suures osas välja vahetatud, kuid endiselt märk õhudessant- või vanemast koosseisust.",
     crew: "1 + 2",
     service: "Reservis",
   },

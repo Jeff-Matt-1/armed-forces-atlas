@@ -118,7 +118,7 @@ export const etFoundations: Record<string, ItemTranslation> = {
       "Strateegiliste süsteemide puhul õhu- ja kosmoseväe rügemendid",
     ],
     doctrineNote:
-      "Kihilist õhutõrjet käsitletakse manöövri võimaldajana: see ostab maaväele vabaduse koonduda.",
+      "Kihilist õhutõrjet käsitletakse manöövri võimaldajana: see annab maaväele vabaduse koonduda.",
     crew: "3–4",
     service: "Kategooria",
   },
@@ -175,7 +175,7 @@ export const etFoundations: Record<string, ItemTranslation> = {
       "Armee tasandi iseseisvad elektroonilise sõjapidamise brigaadid",
     ],
     doctrineNote:
-      "Elektrooniline sõjapidamine kaitseb oma jõudu ja pimestab vastase luure-löögi-ahelat; seda käsitletakse tulena teiste vahenditega.",
+      "Elektrooniline sõjapidamine kaitseb oma jõudu ja pimestab vastase luure-löögi-ahelat; seda käsitletakse tulena, mida antakse teiste vahenditega.",
     crew: "3–4",
     service: "Kategooria",
   },
@@ -192,7 +192,7 @@ export const etFoundations: Record<string, ItemTranslation> = {
     ],
     placements: ["Brigaadide luurekompaniid ja -pataljonid", "Suurtükiväe luurepatareid"],
     doctrineNote:
-      "Luure on olemas selleks, et toita tuld. Enamasti käivitab avastamine suurtükitule, mitte manöövrilahingu.",
+      "Luure on olemas selleks, et anda kahuritele sihtmärke. Enamasti käivitab avastamine suurtükitule, mitte manöövrilahingu.",
     crew: "4–6",
     service: "Kategooria",
   },
