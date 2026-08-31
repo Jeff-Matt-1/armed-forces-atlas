@@ -7,7 +7,7 @@ import { useShuffled } from "@/hooks/useShuffled";
 import { imageFitClass, readyBlocks, studyableItems, type Item } from "@/lib/content";
 import { useLocale } from "@/i18n/LocaleProvider";
 import { useProgress, useRecordReview } from "@/lib/progress";
-import { gradeKeys } from "@/lib/srs";
+import { gradeChoices } from "@/lib/srs";
 import { useAuth } from "@/hooks/useAuth";
 import { cn } from "@/lib/utils";
 
@@ -165,15 +165,14 @@ function Flashcards() {
       </button>
 
       {flipped ? (
-        <div className="mt-4 grid grid-cols-4 gap-2">
-          {gradeKeys.map((key, value) => (
+        <div className="mt-4 grid grid-cols-2 gap-2">
+          {gradeChoices.map((choice) => (
             <Button
-              key={key}
-              variant={value === 0 ? "destructive" : value === 3 ? "default" : "outline"}
-              onClick={() => grade(value)}
-              className={cn(value === 2 && "border-primary")}
+              key={choice.key}
+              variant={choice.grade === 0 ? "destructive" : "default"}
+              onClick={() => grade(choice.grade)}
             >
-              {t(key)}
+              {t(choice.key)}
             </Button>
           ))}
         </div>

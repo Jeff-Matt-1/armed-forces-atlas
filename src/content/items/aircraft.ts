@@ -148,8 +148,9 @@ export const aircraft: Item[] = [
     name: "Tu-95MS",
     aka: "Bear-H",
     imageUrl: "/images/items/tu-95ms.jpg",
-    imageCredit: "CC BY-SA 4.0 — Роман Дергунов",
-    imagePage: "https://commons.wikimedia.org/wiki/File:Tu-95_at_an_Air_show_in_Voronezh_2014.jpg",
+    imageCredit: "CC BY-SA 3.0 — Igor Dvurekov",
+    imagePage:
+      "https://commons.wikimedia.org/wiki/File:Russian_Air_Force_Tupolev_Tu-95MS_Dvurekov-2.jpg",
     armament: "Kh-55 and Kh-101 cruise missiles",
     rangeText: "Range about 15,000 km; missiles add 2,500 km or more",
     cues: [

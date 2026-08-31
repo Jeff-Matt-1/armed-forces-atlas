@@ -54,12 +54,18 @@ export function strength(state: { intervalDays: number; reps: number }): number 
 }
 
 /**
- * The four SM-2 grades in ascending order, as interface string keys so the
- * buttons speak the reader's language rather than always English.
+ * What the reader is actually asked, and the SM-2 grade each answer means.
+ *
+ * Two choices rather than four: a recogniser either knew the vehicle or did
+ * not, and rating your own recall as "hard" against "good" is a judgement
+ * nobody can make consistently. "Next" is grade 2 — the neutral pass that
+ * leaves the ease factor untouched — and not grade 1, which is "hard" and
+ * would shorten the interval on every correct answer.
+ *
+ * `schedule` still handles 0 to 3, so ease already earned under the four-grade
+ * scale remains valid and the finer scale can be restored by adding buttons.
  */
-export const gradeKeys = [
-  "drill.gradeAgain",
-  "drill.gradeHard",
-  "drill.gradeGood",
-  "drill.gradeEasy",
-] as const satisfies readonly StringKey[];
+export const gradeChoices = [
+  { key: "drill.gradeAgain", grade: 0 },
+  { key: "drill.gradeNext", grade: 2 },
+] as const satisfies ReadonlyArray<{ key: StringKey; grade: number }>;

@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { LocaleFlag } from "@/components/LocaleFlag";
 import { useLocale } from "@/i18n/LocaleProvider";
 import { LOCALES, LOCALE_LABELS, LOCALE_SHORT } from "@/i18n/locales";
 
@@ -22,8 +23,9 @@ export function LanguageToggle() {
       onClick={() => setLocale(next)}
       title={`${t("shell.language")}: ${LOCALE_LABELS[next]}`}
       aria-label={`${t("shell.language")}: ${LOCALE_LABELS[next]}`}
-      className="designation px-2 text-xs tracking-wide"
+      className="designation flex items-center gap-1.5 px-2 text-xs tracking-wide"
     >
+      <LocaleFlag locale={next} className="shrink-0 rounded-[1px]" />
       {LOCALE_SHORT[next]}
     </Button>
   );

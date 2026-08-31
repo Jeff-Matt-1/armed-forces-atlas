@@ -202,9 +202,7 @@ const en = {
   "gate.openPrevious": "Go to {block}",
   "curriculum.inProgressHint": "Content in progress",
   "drill.gradeAgain": "Again",
-  "drill.gradeHard": "Hard",
-  "drill.gradeGood": "Good",
-  "drill.gradeEasy": "Easy",
+  "drill.gradeNext": "Next",
   "drill.recallHint":
     "Recall the designation, the armament, and the unit that fields it — then reveal.",
 
@@ -507,9 +505,7 @@ const et: Record<StringKey, string> = {
   "gate.openPrevious": "Ava {block}",
   "curriculum.inProgressHint": "Sisu on koostamisel",
   "drill.gradeAgain": "Uuesti",
-  "drill.gradeHard": "Raske",
-  "drill.gradeGood": "Hea",
-  "drill.gradeEasy": "Kerge",
+  "drill.gradeNext": "Edasi",
   "drill.recallHint":
     "Tuleta meelde tähistus, relvastus ja üksus, mis seda kasutab — seejärel ava vastus.",
 
