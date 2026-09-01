@@ -30,7 +30,7 @@ export const vessels: Item[] = [
       "Long flat foredeck covering flush vertical missile hatches",
       "Nuclear powered, so no funnel smoke and no obvious exhaust",
     ],
-    placements: ["Northern Fleet flagship-class surface combatant", "Only one remains operational"],
+    placements: ["Northern Fleet flagship-class surface ship", "Only one remains operational"],
     doctrineNote:
       "Built to threaten carrier groups with massed anti-ship missiles. It is as much a statement of reach as a warship, and a single hull represents a large fraction of Russian surface striking power.",
     crew: "About 700",

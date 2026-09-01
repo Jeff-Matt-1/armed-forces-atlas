@@ -209,7 +209,7 @@ export const blocks: Block[] = [
     slug: "vessels",
     ordinal: 16,
     title: "Warships and Vessels",
-    subtitle: "Surface combatants, patrol and auxiliary",
+    subtitle: "Surface ships, patrol and auxiliary",
     brief:
       "Ships are read by profile: length against anything nearby, where the superstructure sits, and what stands on the deck. Missile ships show their armament — huge tubes angled along the sides on the older designs, flush vertical hatches on the newer ones — so deck layout separates the classes long before hull shape does. A blunt bow and a superstructure pushed right aft means a landing ship rather than a combatant.",
     doctrineNote:
@@ -438,7 +438,7 @@ const baseItems: Item[] = [
   {
     slug: "concept-ship",
     blockSlug: "foundations",
-    name: "Surface Combatant",
+    name: "Surface Ship",
     aka: "NK (nadvodny korabl)",
     imageUrl: "/images/items/concept-ship.jpg",
     imageCredit: "CC BY 4.0 — Ministry of Defence of the Russian Federation",
@@ -996,7 +996,7 @@ const baseItems: Item[] = [
     imagePage: "https://commons.wikimedia.org/wiki/File:Russia-Navy-OF-5-2010.svg",
     armament: null,
     rangeText: null,
-    cues: ["Commands a major surface combatant or SSBN."],
+    cues: ["Commands a major surface ship or SSBN."],
     placements: [
       "Naval ladder — Navy; its naval infantry and coastal troops use the combined-arms ladder",
     ],
