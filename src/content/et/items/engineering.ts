@@ -218,7 +218,7 @@ export const etEngineering: Record<string, ItemTranslation> = {
     aka: "T-90 sillapanek",
     rangeText: "Ületab kuni 25 m laiuse tõkke",
     cues: [
-      "T-90 kere, sild kantakse lamedalt selle peal",
+      "T-90 kere, sild kantakse horisontaalselt selle peal",
       "Sild laotub kolme klapiva sektsioonina, mitte kahena",
       "Pikem koorem kui MT-55-l, ulatub mõlemast otsast üle",
       "Torni ei ole; ees vasakul väike kuppel",

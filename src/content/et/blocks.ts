@@ -173,7 +173,7 @@ export const etBlocks: Record<string, BlockTranslation> = {
     title: "Raketisüsteemid",
     subtitle: "Operatiiv-taktikalised, ranniku- ja strateegilised",
     brief:
-      "Raketid ratastel ja esimene küsimus on, mitu ratast. Neljateljeline šassii kahe lahtise raketiga on Iskander; üks rakett kallutataval siinil paadikujulise kere taga on Totška; neli lamedalt lebavat konteinerit veoautol on rannikusüsteem; ja kaheksa telge ühe toru all, mis on masina pikkune, tähendab strateegilist. Loe kõigepealt šassiid ja alles siis koormat — muud neil süsteemidel peaaegu ühist ei ole.",
+      "Raketid ratastel ja esimene küsimus on, mitu ratast. Neljateljeline šassii kahe lahtise raketiga on Iskander; üks rakett kallutataval siinil paadikujulise kere taga on Totška; neli horisontaalselt lebavat konteinerit veoautol on rannikusüsteem; ja kaheksa telge ühe toru all, mis on masina pikkune, tähendab strateegilist. Loe kõigepealt šassiid ja alles siis koormat — muud neil süsteemidel peaaegu ühist ei ole.",
     doctrineNote:
       "Ükski neist ei kuulu allüksusele, keda sa parasjagu jälgid. Neid vabastatakse armee tasandil või kõrgemal ja nad ulatuvad sihtmärkideni, mida sinu ees olev brigaad kunagi ei näe — juhtimispunktid, lennuväljad, sadamad, laskemoon. Ühe tuvastamine ütleb, milline ešelon on selle lõigu vastu huvi tundnud ja see on teistsugune ning suurem fakt kui see, mida ütleb ükskõik milline kahur.",
   },

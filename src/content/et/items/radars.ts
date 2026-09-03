@@ -59,7 +59,7 @@ export const etRadars: Record<string, ItemTranslation> = {
     cues: [
       "Roomikutel MT-LB perekonna kere lameda ristkülikulise paneeliga tagumisel tekil",
       "Paneel tõuseb kaldu ja skaneerib sektorit, ei pöörle täisringi",
-      "Paneel klapitakse sõiduks lamedalt kerele",
+      "Paneel klapitakse sõiduks kerele",
       "Tervikuna madal — mitte midagi õhuseirejaama masti kõrgusest",
     ],
     placements: [

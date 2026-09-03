@@ -141,7 +141,7 @@ export const etAirDefence: Record<string, ItemTranslation> = {
     rangeText: "Tabab olenevalt raketist kuni 400 km",
     cues: [
       "Neli väga suurt silindrilist konteinerit tõstetakse laskmiseks püsti",
-      "Sõidul lebavad konteinerid lamedalt 8x8 veoautol",
+      "Sõidul lebavad konteinerid horisontaalselt 8x8 veoautol",
       "Heitjal endal radarit ei ole — see on eraldi masin",
       "Palju suurem kui miski muu selles õppetükis",
     ],

@@ -7,7 +7,7 @@ export const etEw: Record<string, ItemTranslation> = {
     cues: [
       "Mitu ümarat paraboolantenni koos ühel kokkupandaval alusel",
       "KamAZ-63501 8x8 varjualusega kabiini taga",
-      "Antennisõlm klapitakse sõiduks lamedalt katusele",
+      "Antennisõlm klapitakse sõiduks katusele",
       "Mingit relva ei ole — alusel, kus oleks kahur, on taldrikud",
     ],
     placements: [

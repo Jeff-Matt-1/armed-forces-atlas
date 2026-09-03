@@ -45,9 +45,9 @@ export const etMissiles: Record<string, ItemTranslation> = {
     armament: "Kaks laevatõrjeraketti P-800 Oniks konteinerites",
     rangeText: "Laevade vastu umbes 300 km",
     cues: [
-      "Kaks pikka konteinerit kantakse lamedalt, laskmiseks tõstetakse peaaegu püsti",
+      "Kaks pikka konteinerit kantakse horisontaalselt, laskmiseks tõstetakse peaaegu püsti",
       "Kuuerattaline MZKT šassii, lühem kui Iskanderi kaheksarattaline",
-      "Konteinerid on siledad nürjade otstega torud, tiibu näha ei ole",
+      "Konteinerid on siledad tömpide otstega torud, tiibu näha ei ole",
       "Töötab koos eraldi juhtimismasinaga samal šassiil",
     ],
     placements: [
