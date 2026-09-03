@@ -176,7 +176,7 @@ export const helicopters: Item[] = [
     imageUrl: "/images/items/ka-29.jpg",
     imageCredit: "CC BY-SA 2.0 — Alan Wilson from Stilton, Peterborough, Cambs, UK",
     imagePage:
-      "https://commons.wikimedia.org/wiki/File:Kamov_Ka-29_%E2%80%9916_yellow%E2%80%99_(24221036478).jpg",
+      "https://commons.wikimedia.org/wiki/File:Kamov_Ka-29_%E2%80%9962_yellow%E2%80%99_(38528795601).jpg",
     armament: "Rocket pods, gun pods and a fixed machine gun; carries up to 16 troops",
     rangeText: "Combat radius roughly 200 km",
     cues: [

@@ -7,7 +7,7 @@ export const etMissiles: Record<string, ItemTranslation> = {
     armament: "Kaks kvaasiballistilist raketti 9M723, kantakse lahtiselt",
     rangeText: "Umbes 500 km",
     cues: [
-      "Kaks raketti kõrvuti lahtisel hällil, konteinereid ei ole",
+      "Kaks raketti kõrvuti lahtisel kiigel, konteinereid ei ole",
       "Kaheksarattaline MZKT šassii pika soomuskabiiniga",
       "Rakettidel jooksevad piki keret väikesed ribid, erinevalt siledast konteinerist",
       "Iskander-K kannab selle asemel kahte silindrilist tiibraketikonteinerit",
