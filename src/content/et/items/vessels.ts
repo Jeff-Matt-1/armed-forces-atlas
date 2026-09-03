@@ -61,7 +61,7 @@ export const etVessels: Record<string, ItemTranslation> = {
     armament: "Kalibr ja Oniks püstšahtides, 130 mm kahur, Poliment-Redut",
     rangeText: "Kalibr maasihtmärkide vastu kuni umbes 1500 km",
     cues: [
-      "Sile tahuline pealisehitus kaldus külgedega — ehitatud radarikaja vähendama",
+      "Sile tahuline pealisehitus kaldus külgedega — ehitatud radari peegeldust vähendama",
       "Kinnine mast lamedate radaripaneelidega, mitte lahtine võrestik",
       "Nähtavaid raketitorusid ei ole: heitjad on siledad šahtid tekis",
       "Üks 130 mm kahur ümaras varjatud tornis vööris",

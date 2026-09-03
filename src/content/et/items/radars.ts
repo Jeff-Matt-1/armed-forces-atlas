@@ -16,7 +16,7 @@ export const etRadars: Record<string, ItemTranslation> = {
       "Varajane hoiatus ja sihtmärkide leidmine õhutõrjeüksustele",
     ],
     doctrineNote:
-      "Vana ja väärtuslik just vanuse tõttu: meeterlaine annab kaja kujudelt, mis on optimeeritud palju lühemate lainete vastu, nii et selles vanuses jaam jääb varjatud lennukitele ebamugavaks.",
+      "Vana ja väärtuslik just vanuse tõttu: meeterlaine peegeldub kujudelt, mis on optimeeritud palju lühemate lainete vastu, nii et selles vanuses jaam jääb varjatud lennukitele ebamugavaks.",
     service: "Kasutuses",
   },
   "nebo-m": {

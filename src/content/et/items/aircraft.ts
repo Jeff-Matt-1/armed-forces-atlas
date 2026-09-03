@@ -68,7 +68,7 @@ export const etAircraft: Record<string, ItemTranslation> = {
       "Võetakse aeglaselt kasutusele ja teda nähakse harva",
     ],
     doctrineNote:
-      "Kujundatud radarikaja vähendama ja just selle vastu hoitakse teenistuses õppetüki 12 meeterlaine radareid. Arvud on endiselt nii väikesed, et operatiivne mõju jääb piiratuks.",
+      "Kujundatud radari peegeldust vähendama ja just selle vastu hoitakse teenistuses õppetüki 12 meeterlaine radareid. Arvud on endiselt nii väikesed, et operatiivne mõju jääb piiratuks.",
     crew: "1",
     service: "Kasutuses",
   },
