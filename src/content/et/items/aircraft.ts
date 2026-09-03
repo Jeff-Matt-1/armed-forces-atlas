@@ -5,7 +5,7 @@ export const etAircraft: Record<string, ItemTranslation> = {
   "su-25": {
     aka: "Gratš; Frogfoot",
     armament: "30 mm GSh-30-2, raketid ja pommid kümnel püloonil",
-    rangeText: "Lahiraadius umbes 375 km",
+    rangeText: "Lahingraadius umbes 375 km",
     cues: [
       "Sirge noolutuseta tiib — ainus selline õppetükis",
       "Kaks mootorit kastides tihedalt kere külgede vastu",
@@ -24,39 +24,39 @@ export const etAircraft: Record<string, ItemTranslation> = {
   "su-34": {
     aka: "Fullback",
     armament: "30 mm GSh-30-1, juhitavad pommid ja raketid",
-    rangeText: "Lahiraadius umbes 1100 km",
+    rangeText: "Lahingraadius umbes 1100 km",
     cues: [
       "Lai lapik nina — meeskond istub kõrvuti, mitte üksteise taga",
       "Nina profiil on toonud hüüdnime „nokkloom”",
       "Pikk sabaastel ulatub mootoritest kaugele taha",
       "Flankeri tiivad ja kaks kiilu teistsuguse esiosa all",
     ],
-    placements: ["Pommituslennuväe rügemendid", "Vene standardne taktikaline löögilennuk"],
+    placements: ["Pommituslennuväe rügemendid", "Vene standardne taktikaline ründelennuk"],
     doctrineNote:
-      "Hävitaja kerele ehitatud löögilennuk, mille meeskond istub pikkade lendude jaoks koos. Ta viib läbi sügavlööke, kuhu suurtükivägi ei ulatu.",
+      "Hävitaja kerele ehitatud ründelennuk, mille meeskond istub pikkade lendude jaoks koos. Ta viib läbi sügavlööke, kuhu suurtükivägi ei ulatu.",
     crew: "2",
     service: "Kasutuses",
   },
   "su-35s": {
     aka: "Flanker-E",
     armament: "30 mm GSh-30-1, õhk-õhk-raketid kaheteistkümnel püloonil",
-    rangeText: "Lahiraadius umbes 1600 km",
+    rangeText: "Lahingraadius umbes 1600 km",
     cues: [
       "Klassikaline Flankeri kuju: pikk sulanduv kere, kaks kiilu, kaks kaugel asetsevat mootorit",
-      "Terav radaririkas ja üheistmeline kabiinikate",
-      "Kanardeid ei ole, erinevalt mõnest varasemast Flankeri variandist",
+      "Terav ninakoonus ja üheistmeline kabiinikate",
+      "Esitiivakesi ei ole, erinevalt mõnest varasemast Flankeri variandist",
       "Sügav vahe mootorigondlite vahel kere all",
     ],
-    placements: ["Hävituslennuväe rügemendid", "Võimekaim Vene hävitaja laialdases teenistuses"],
+    placements: ["Hävituslennuväe rügemendid", "Võimekaim Vene hävitaja"],
     doctrineNote:
-      "Õhuülemvõim ja lennuk, mis kõige tõenäolisemalt saadab löögigruppe. Flankeri perekond jagab seda siluetti, nii et teda eristavad Su-34-st või Su-30-st nina ja kabiin.",
+      "Lennuk, mis kõige tõenäolisemalt saadab löögigruppe. Flankeri perekond jagab seda siluetti, nii et teda eristavad Su-34-st või Su-30-st nina ja kabiin.",
     crew: "1",
     service: "Kasutuses",
   },
   "su-57": {
     aka: "Felon",
     armament: "30 mm kahur, relvad sisemistes relvaruumides",
-    rangeText: "Lahiraadius umbes 1500 km",
+    rangeText: "Lahingraadius umbes 1500 km",
     cues: [
       "Tahulised nurgelised pinnad seal, kus Flanker on ümar",
       "Kaks kiilu väljapoole kaldu, mitte püsti",
@@ -75,7 +75,7 @@ export const etAircraft: Record<string, ItemTranslation> = {
   "mig-31": {
     aka: "Foxhound",
     armament: "Kaugmaa raketid R-33 ja R-37M; osal lennukitel Kinžal",
-    rangeText: "Lahiraadius umbes 720 km; ülekuulamine ulatub palju kaugemale",
+    rangeText: "Lahingraadius umbes 720 km; tõrjelennud ulatuvad palju kaugemale",
     cues: [
       "Suured kandilised õhuvõtuavad teravate nurgeliste servadega",
       "Tiib on peaaegu sirgeservaline, mitte Flankeri kombel kumer",
@@ -175,7 +175,7 @@ export const etAircraft: Record<string, ItemTranslation> = {
       "Lennukikere, millest on välja venitatud kõik hilisemad selle õppetüki Flankerid",
     ],
     doctrineNote:
-      "Perekonna alusmasin: Su-30, Su-33, Su-34 ja Su-35 on kõik seesama lennuk, mida on rolli järgi muudetud. Su-27 esimesena selgeks õppimine ongi see, mis teeb ülejäänud eristatavaks, sest erinevused on ninas, kabiinis ja kanardides, mitte üldkujus.",
+      "Perekonna alusmasin: Su-30, Su-33, Su-34 ja Su-35 on kõik seesama lennuk, mida on rolli järgi muudetud. Su-27 esimesena selgeks õppimine ongi see, mis teeb ülejäänud eristatavaks, sest erinevused on ninas, kabiinis ja esitiivakestes, mitte üldkujus.",
     crew: "1",
     service: "Kasutuses",
   },
@@ -184,10 +184,10 @@ export const etAircraft: Record<string, ItemTranslation> = {
     armament: "30 mm GSh-30-1, õhk-õhk ja juhitavad õhk-maa relvad",
     rangeText: "Lahingraadius umbes 1500 km",
     cues: [
-      "Flankeri kuju, tiivajuurte ees väikesed kanardid",
+      "Flankeri kuju, tiivajuurte ees esitiivakesed",
       "Kaks istet üksteise taga ühe pika kabiinikatte all",
       "Ninaprofiil kõrgem kui üheistmelisel Flankeril",
-      "Kanardid koos kahe istmega ongi see paar, mis eristab teda Su-35-st",
+      "Esitiivakesed koos kahe istmega ongi see paar, mis eristab teda Su-35-st",
     ],
     placements: [
       "Õhu- ja kosmoseväe ning mereväelennuväe mitmeotstarbelised rügemendid",
@@ -203,7 +203,7 @@ export const etAircraft: Record<string, ItemTranslation> = {
     armament: "30 mm GSh-30-1, õhk-õhk raketid R-27 ja R-73",
     rangeText: "Lahingraadius umbes 1000 km",
     cues: [
-      "Flanker kanardite ja ühe istmega — Su-30-l on kanardid ja kaks istet",
+      "Flanker esitiivakeste ja ühe istmega — Su-30-l on esitiivakesed ja kaks istet",
       "Tiivad ja sabapind klapivad, väljaspool on hingejooned näha",
       "Pidurikonks sabaastla all",
       "Pikendatud ninatelik ja tugevdatud telik tekile maandumiseks",
