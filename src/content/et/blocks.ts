@@ -163,11 +163,11 @@ export const etBlocks: Record<string, BlockTranslation> = {
   },
   aircraft: {
     title: "Sõjalennukid",
-    subtitle: "Hävitajad, tõrjehävitajad, pommitajad, transpordilennukid",
+    subtitle: "Hävitajad, püüdurhävitajad, pommitajad, transpordilennukid",
     brief:
       "Loe mootorid, siis loe tiib. Üks sirge tiib kahe kerekülgse mootori kohal on ründelennuk; kaks mootorit noolja tiiva all koos kahe sabakiiluga on hävitaja; neli mootorit tähendab pommitajat või transpordilennukit ja saba ütleb, kumba. Peened eristused tulevad viimasena, sest Flankeri perekond on üks lennukikere venitatud mitmeks lennukiks ja neid eristab usaldusväärselt ainult nina.",
     doctrineNote:
-      "Vene õhuväge kasutatakse selleks, et jõuda sinna, kuhu kahurid ei ulatu, mitte lahingu iseseisvaks võitmiseks. Seepärast on ründelennukeid rohkem kui tõrjehävitajaid, seepärast on pommitajad raketikandjad, mis kaitstud õhuruumi ei sisene, ja seepärast otsustab transpordilennukite park, mida õhudessantväed tegelikult teha suudavad.",
+      "Vene õhuväge kasutatakse selleks, et jõuda sinna, kuhu kahurid ei ulatu, mitte lahingu iseseisvaks võitmiseks. Seepärast on ründelennukeid rohkem kui püüdurhävitajaid, seepärast on pommitajad raketikandjad, mis kaitstud õhuruumi ei sisene, ja seepärast otsustab transpordilennukite park, mida õhudessantväed tegelikult teha suudavad.",
   },
   missiles: {
     title: "Raketisüsteemid",

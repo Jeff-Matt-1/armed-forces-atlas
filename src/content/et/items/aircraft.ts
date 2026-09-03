@@ -75,7 +75,7 @@ export const etAircraft: Record<string, ItemTranslation> = {
   "mig-31": {
     aka: "Foxhound",
     armament: "Kaugmaa raketid R-33 ja R-37M; osal lennukitel Kinžal",
-    rangeText: "Lahingraadius umbes 720 km; tõrjelennud ulatuvad palju kaugemale",
+    rangeText: "Lahingraadius umbes 720 km; püüdmislennud ulatuvad palju kaugemale",
     cues: [
       "Suured kandilised õhuvõtuavad teravate nurgeliste servadega",
       "Tiib on peaaegu sirgeservaline, mitte Flankeri kombel kumer",
@@ -83,11 +83,11 @@ export const etAircraft: Record<string, ItemTranslation> = {
       "Suur ja raske — kujult nähtavalt vähem väle kui hävitaja",
     ],
     placements: [
-      "Tõrjehävitajate rügemendid põhja- ja idasuundade katmiseks",
+      "Püüdurhävitajate rügemendid põhja- ja idasuundade katmiseks",
       "Osa lennukeid on kohandatud kandma Kinžali raketti",
     ],
     doctrineNote:
-      "Tõrjehävitaja, mitte lähivõitleja: ehitatud lendama kiiresti ja kaugele, et kohata pommitajaid ja tiibrakette tühja territooriumi kohal. Kandilised õhuvõtuavad on kiireim viis teda kaugelt Flankerist eristada.",
+      "Püüdurhävitaja, mitte lähivõitleja: ehitatud lendama kiiresti ja kaugele, et kohata pommitajaid ja tiibrakette tühja territooriumi kohal. Kandilised õhuvõtuavad on kiireim viis teda kaugelt Flankerist eristada.",
     crew: "2",
     service: "Kasutuses",
   },
