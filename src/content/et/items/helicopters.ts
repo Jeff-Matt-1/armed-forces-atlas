@@ -49,7 +49,7 @@ export const etHelicopters: Record<string, ItemTranslation> = {
     ],
     placements: [
       "Ründekopterirügemendid, sageli paari luurajana",
-      "Kantakse ka dessantlaevadel, mitte ainult maalt lendamas",
+      "Kasutusel ka dessantlaevadel, mitte ainult maalt lendamas",
     ],
     doctrineNote:
       "Koaksiaaltiivik ongi kogu tuvastus: mitte millelgi muul Vene teenistuses ei ole kahte kohakuti tiivikut ja puuduvat sabatiivikut. Kõrvuti istmed lubavad teisel mehel juhtida teisi õhusõidukeid ja just seepärast juhib ta paare ja otsib Mi-28-le sihtmärke sama palju, kui ise laseb.",
