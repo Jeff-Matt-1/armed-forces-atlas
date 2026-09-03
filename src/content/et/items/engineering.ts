@@ -145,7 +145,7 @@ export const etEngineering: Record<string, ItemTranslation> = {
   },
   zemledeliye: {
     aka: "Põllundus",
-    armament: "Kaks 122 mm torude plokki, mis tulistavad miine paigaldavaid rakette",
+    armament: "Kaks 122 mm torude plokki, mis lasevad miine paigaldavaid rakette",
     rangeText: "Puistab miiniväljasid umbes 5–15 km kaugusele",
     cues: [
       "KamAZ 8x8 soomustatud kabiiniga, ehitatud nagu raske raketiheitja",

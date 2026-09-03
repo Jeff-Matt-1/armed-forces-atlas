@@ -139,7 +139,7 @@ export const etHeavyWeapons: Record<string, ItemTranslation> = {
       "MT-LB peal seal, kus pinnas veetavat relva ei kanna",
     ],
     doctrineNote:
-      "Miiniheitja, mis tulistab valangut ühe miini asemel, nii et neli lasku jõuavad sihtmärgini enne, kui esimest kuulda on. Ta on ka lametule relv, mistõttu teda kasutatakse lagedal oleva elavjõu ja kergsõidukite vastu sama palju kui positsioonide vastu.",
+      "Miiniheitja, mis laseb valangut ühe miini asemel, nii et neli lasku jõuavad sihtmärgini enne, kui esimest kuulda on. Ta on ka lametule relv, mistõttu teda kasutatakse lagedal oleva elavjõu ja kergsõidukite vastu sama palju kui positsioonide vastu.",
     crew: "4",
     service: "Kasutuses",
   },

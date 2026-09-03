@@ -290,7 +290,7 @@ export const etArtillery: Record<string, ItemTranslation> = {
     rangeText: "Umbes 9,6 km, reaktiivmiiniga umbes 20 km",
     cues: [
       "Hiiglaslik miiniheitjatoru kantakse tagatekil kokkuklapitult, mitte tornis",
-      "Toru pöördub alla ja taha ning tulistab maapinnal olevalt alusplaadilt",
+      "Toru pöördub alla ja taha ning laseb maapinnal olevalt alusplaadilt",
       "Roomikkere ilma tornita, suuruselt lähedane 2S7-le",
       "Miinid on mehekõrgused ja laaditakse tagant raamilt",
     ],

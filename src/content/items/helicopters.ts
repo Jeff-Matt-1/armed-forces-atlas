@@ -24,7 +24,6 @@ export const helicopters: Item[] = [
       "Stub wings that carry weapons and are angled sharply down at the tips",
       "A cabin behind the cockpit: it carries troops, which no other gunship here does",
       "Retractable undercarriage, unusual on a helicopter",
-      "Photographed here in Czech markings — the type is flown by many operators",
     ],
     placements: [
       "Army aviation regiments supporting ground formations",

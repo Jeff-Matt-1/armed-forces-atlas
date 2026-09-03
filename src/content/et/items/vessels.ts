@@ -33,7 +33,7 @@ export const etVessels: Record<string, ItemTranslation> = {
       "Nimilaev hukkus 2022. aastal",
     ],
     doctrineNote:
-      "Nähtavad raketitorud on kogu konstruktsiooni filosoofia: kõik on pandud ühele massilisele salvele. Merel midagi ümber ei laadita, nii et laeva väärtus on kulutatud hetkel, mil ta tulistab.",
+      "Nähtavad raketitorud on kogu konstruktsiooni filosoofia: kõik on pandud ühele massilisele salvele. Merel midagi ümber ei laadita, nii et laeva väärtus on kulutatud hetkel, mil ta laseb.",
     crew: "Umbes 480",
     service: "Kasutuses",
   },
@@ -71,7 +71,7 @@ export const etVessels: Record<string, ItemTranslation> = {
       "Põhjalaevastik, jätkuehitused käivad",
     ],
     doctrineNote:
-      "Esimene kaasaegne Vene pealveelaev, mis on ehitatud püststardi ümber, nii et tema relvastus on nähtamatu kuni tulistamiseni. Sile korrastatud profiil on korraga tuvastustunnus ja konstruktsiooni eesmärk.",
+      "Esimene kaasaegne Vene pealveelaev, mis on ehitatud püststardi ümber, nii et tema relvastus on nähtamatu kuni laskmiseni. Sile korrastatud profiil on korraga tuvastustunnus ja konstruktsiooni eesmärk.",
     crew: "Umbes 210",
     service: "Kasutuses",
   },

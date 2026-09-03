@@ -8,17 +8,16 @@ export const etHelicopters: Record<string, ItemTranslation> = {
     rangeText: "Lahingraadius umbes 160 km",
     cues: [
       "Astmeline kabiin — kaks eraldi mullikatet, üks teisest kõrgemal ja taga",
-      "Tiivatüükad relvade jaoks, otsad järsult allapoole kaldu",
+      "Tiivad relvade jaoks, otsad järsult allapoole kaldu",
       "Kabiini taga dessantruum: ta veab meeskonda, mida ükski teine siinne ründekopter ei tee",
       "Sissetõmmatav telik, kopteri kohta ebatavaline",
-      "Pildil Tšehhi tähistustega — seda tüüpi lendab palju kasutajariike",
     ],
     placements: [
       "Maaväe lennuväerügemendid maaüksuste toetuseks",
       "Kasutatakse ka väikeste rühmade sisseviimiseks, mida uuemad ründekopterid ei suuda",
     ],
     doctrineNote:
-      "Ründekopter, kes on ühtlasi vedaja — nõukogude mõte, mida keegi teine edasi ei arendanud. Dessantruum on korraga tuvastuse ja doktriini võti: ühe leidmine ütleb, et operatsioon võib hõlmata inimeste maapinnale viimist, mitte ainult sinna tulistamist.",
+      "Ründekopter, kes on ühtlasi vedaja — nõukogude mõte, mida keegi teine edasi ei arendanud. Dessantruum on korraga tuvastuse ja doktriini võti: ühe leidmine ütleb, et operatsioon võib hõlmata inimeste maapinnale viimist, mitte ainult sinna laskmist.",
     crew: "2 + 8",
     service: "Kasutuses",
   },
@@ -53,7 +52,7 @@ export const etHelicopters: Record<string, ItemTranslation> = {
       "Kantakse ka dessantlaevadel, mitte ainult maalt lendamas",
     ],
     doctrineNote:
-      "Koaksiaaltiivik ongi kogu tuvastus: mitte millelgi muul Vene teenistuses ei ole kahte kohakuti tiivikut ja puuduvat sabatiivikut. Kõrvuti istmed lubavad teisel mehel juhtida teisi õhusõidukeid ja just seepärast juhib ta paare ja otsib Mi-28-le sihtmärke sama palju, kui ise tulistab.",
+      "Koaksiaaltiivik ongi kogu tuvastus: mitte millelgi muul Vene teenistuses ei ole kahte kohakuti tiivikut ja puuduvat sabatiivikut. Kõrvuti istmed lubavad teisel mehel juhtida teisi õhusõidukeid ja just seepärast juhib ta paare ja otsib Mi-28-le sihtmärke sama palju, kui ise laseb.",
     crew: "2",
     service: "Kasutuses",
   },
@@ -119,7 +118,7 @@ export const etHelicopters: Record<string, ItemTranslation> = {
     rangeText: "Lahingraadius umbes 200 km",
     cues: [
       "Lai lameda esiküljega kabiin kolme klaasipaneeliga, mitte Ka-27 ümar nina",
-      "Tiivatüükad kandurite jaoks, mida Ka-27-l ei ole",
+      "Tiivad püloonidega, mida Ka-27-l ei ole",
       "All samad koaksiaaltiivikud ja kaks kiilu nagu Ka-27-l",
       "Küljel dessantruumi aknad: ta veab meeskonda",
     ],

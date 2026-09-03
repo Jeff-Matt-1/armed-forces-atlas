@@ -55,7 +55,7 @@ export const etRadars: Record<string, ItemTranslation> = {
   },
   "zoopark-1": {
     aka: "Loomaaed",
-    rangeText: "Määrab tulistavad kahurid 20 km, raketiheitjad 35 km kauguselt",
+    rangeText: "Määrab laskvad kahurid 20 km, raketiheitjad 35 km kauguselt",
     cues: [
       "Roomikutel MT-LB perekonna kere lameda ristkülikulise paneeliga tagumisel tekil",
       "Paneel tõuseb kaldu ja skaneerib sektorit, ei pöörle täisringi",

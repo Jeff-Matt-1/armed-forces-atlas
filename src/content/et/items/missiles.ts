@@ -14,7 +14,7 @@ export const etMissiles: Record<string, ItemTranslation> = {
     ],
     placements: [
       "Armee ja ringkonna tasandil hoitavad raketibrigaadid",
-      "Vabastatakse kõrgemalt kui allüksus, kelle heaks ta tulistab — mitte kunagi selle enda poolt",
+      "Vabastatakse kõrgemalt kui allüksus, kelle heaks ta laseb — mitte kunagi selle enda poolt",
     ],
     doctrineNote:
       "Vene armee sügavlöögirelv: juhtimispunktid, lennuväljad, õhutõrje ja laskemoon sadade kilomeetrite kaugusel rindejoone taga. Tema ilmumine lõiku on väide selle kohta, kui palju see lõik on väärt tasandile, kellele ta kuulub — ja see on suurem fakt kui miski, mida ükski kahur ütleb.",
@@ -28,7 +28,7 @@ export const etMissiles: Record<string, ItemTranslation> = {
     cues: [
       "Üks rakett, mitte kaks — kiireim eristus Iskanderist",
       "Kuus ratast paadikujulisel ujuval kerel, mitte veoautošassiil",
-      "Rakett lebab pika kaheosalise katte all ja tõuseb tulistamiseks üles",
+      "Rakett lebab pika kaheosalise katte all ja tõuseb laskmiseks üles",
       "Tervikuna palju lühem ja madalam kui ükski uuematest süsteemidest",
     ],
     placements: [
@@ -45,7 +45,7 @@ export const etMissiles: Record<string, ItemTranslation> = {
     armament: "Kaks laevatõrjeraketti P-800 Oniks konteinerites",
     rangeText: "Laevade vastu umbes 300 km",
     cues: [
-      "Kaks pikka konteinerit kantakse lamedalt, tulistamiseks tõstetakse peaaegu püsti",
+      "Kaks pikka konteinerit kantakse lamedalt, laskmiseks tõstetakse peaaegu püsti",
       "Kuuerattaline MZKT šassii, lühem kui Iskanderi kaheksarattaline",
       "Konteinerid on siledad nürjade otstega torud, tiibu näha ei ole",
       "Töötab koos eraldi juhtimismasinaga samal šassiil",
