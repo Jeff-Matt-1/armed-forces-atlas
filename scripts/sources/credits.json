@@ -640,6 +640,36 @@
     "attributionRequired": true
   },
   {
+    "slug": "ka-27",
+    "file": "File:Ka-27 Russian Navy (17611939075).jpg",
+    "localPath": "/images/items/ka-27.jpg",
+    "imageCredit": "CC BY-SA 2.0 — Rob Schleiffert from Holland",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:Ka-27_Russian_Navy_(17611939075).jpg",
+    "licence": "CC BY-SA 2.0",
+    "artist": "Rob Schleiffert from Holland",
+    "attributionRequired": true
+  },
+  {
+    "slug": "ka-29",
+    "file": "File:Kamov Ka-29 ’16 yellow’ (24221036478).jpg",
+    "localPath": "/images/items/ka-29.jpg",
+    "imageCredit": "CC BY-SA 2.0 — Alan Wilson from Stilton, Peterborough, Cambs, UK",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:Kamov_Ka-29_%E2%80%9916_yellow%E2%80%99_(24221036478).jpg",
+    "licence": "CC BY-SA 2.0",
+    "artist": "Alan Wilson from Stilton, Peterborough, Cambs, UK",
+    "attributionRequired": true
+  },
+  {
+    "slug": "ka-31",
+    "file": "File:Kamov Ka-31, Russia - Air Force AN1258376.jpg",
+    "localPath": "/images/items/ka-31.jpg",
+    "imageCredit": "CC BY-SA 3.0 — parfaits",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:Kamov_Ka-31,_Russia_-_Air_Force_AN1258376.jpg",
+    "licence": "CC BY-SA 3.0",
+    "artist": "parfaits",
+    "attributionRequired": true
+  },
+  {
     "slug": "ka-52",
     "file": "File:Ka-52 at an air show in Voronezh 2014.jpg",
     "localPath": "/images/items/ka-52.jpg",

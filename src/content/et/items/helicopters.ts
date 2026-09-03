@@ -94,4 +94,60 @@ export const etHelicopters: Record<string, ItemTranslation> = {
     crew: "5",
     service: "Kasutuses",
   },
+  "ka-27": {
+    aka: "Helix-A",
+    armament: "Torpeedod, süvaveepommid ja poid kere all olevas relvaruumis",
+    rangeText: "Lahingraadius umbes 200 km",
+    cues: [
+      "Koaksiaaltiivikud ja sabatiivikut ei ole — Kamovi tunnus, sama mis Ka-52-l",
+      "Kaks kiilu väga lühikesel sabapoomil, erinevalt Ka-52 ühest poomist",
+      "Sügav kandiline kere neljal kõrgel jalal, ehitatud sisemise relvaruumi ümber",
+      "Tiivikud ja kiilud klapivad kokku, sest ta elab laeva peal",
+    ],
+    placements: [
+      "Mereväelennuvägi, pardal hävitajatel ja fregattidel",
+      "Üks või kaks masinat laeva kohta, mitte eskadrill maal",
+    ],
+    doctrineNote:
+      "Laevastiku allveelaevakütt ja põhjus, miks Vene sõjalaeval üldse lennutekk on. Laev, kes teda kannab, otsib palju kaugemale kui oma sonar ulatub, nii et kopteri leidmine ütleb, et laev jahib, mitte ei liigu läbi.",
+    crew: "3",
+    service: "Kasutuses",
+  },
+  "ka-29": {
+    aka: "Helix-B",
+    armament: "Raketikonteinerid, relvakonteinerid ja püsikuulipilduja; veab kuni 16 meest",
+    rangeText: "Lahingraadius umbes 200 km",
+    cues: [
+      "Lai lameda esiküljega kabiin kolme klaasipaneeliga, mitte Ka-27 ümar nina",
+      "Tiivatüükad kandurite jaoks, mida Ka-27-l ei ole",
+      "All samad koaksiaaltiivikud ja kaks kiilu nagu Ka-27-l",
+      "Küljel dessantruumi aknad: ta veab meeskonda",
+    ],
+    placements: [
+      "Merejalaväe toetus, lendab dessantlaevadelt",
+      "Töötab koos Ka-27-ga samadelt tekkidelt",
+    ],
+    doctrineNote:
+      "Merejalaväe oma ründekopter ja vedaja korraga — Hindi mõte merele viiduna. Tema ilmumine dessantlaeva kõrvale tähendab, et maale kavatsetakse mehi viia, mitte et jahitakse allveelaevu.",
+    crew: "2 + 16",
+    service: "Kasutuses",
+  },
+  "ka-31": {
+    aka: "Helix",
+    rangeText: "Avastab õhusõidukid umbes 100–150 km, laevad umbes 250 km kauguselt",
+    cues: [
+      "Suur lame radariantenn kere alla lamedaks klapitud — lennul pöördub alla ja hakkab pöörlema",
+      "Relvi ega sonarit ei ole: kere kannab radarit ja kütust",
+      "Telik tõmbub üles, et antenn vabaks jääks, erinevalt Ka-27 fikseeritud jalgadest",
+      "Koaksiaaltiivikud ja kaks kiilu näitavad sama perekonda",
+    ],
+    placements: [
+      "Mereväelennuvägi, varajane hoiatus laevagrupile",
+      "Haruldane: teenistuses on vaid mõni üksik",
+    ],
+    doctrineNote:
+      "Tõstab laevastiku radarihorisondi masti kohale, ja see on ainus viis, kuidas laev jõuab merepinna lähedal lendava raketi õigel ajal näha. Ta on maaväe seireradarite mereline vaste ja sama väärtuslik sihtmärk.",
+    crew: "2",
+    service: "Kasutuses",
+  },
 };
