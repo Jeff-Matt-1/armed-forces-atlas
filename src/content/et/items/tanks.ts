@@ -149,7 +149,7 @@ export const etTanks: Record<string, ItemTranslation> = {
     armament: "125 mm kahur 2A75, koaksiaalne 7.62 mm PKT",
     rangeText: "Kahur kuni umbes 2000 m, kahurist lastav rakett 5000 m",
     cues: [
-      "Tankikahur kerel, mis on selle jaoks palju liiga kerge — äratundmismärk igalt kauguselt",
+      "Tankikahur kerel, mis on selle jaoks palju liiga kerge",
       "Seitse väikest BMD-perekonna tugiratast, mitte tanki suured",
       "Väga madal lame kere, mis istub maapinna lähedal",
       "Ujuv, taga veejoad, mida ühelgi põhilahingutankil ei ole",

@@ -29,7 +29,7 @@ export const etAircraft: Record<string, ItemTranslation> = {
       "Lai lapik nina — meeskond istub kõrvuti, mitte üksteise taga",
       "Nina profiil on toonud hüüdnime „nokkloom”",
       "Pikk sabaastel ulatub mootoritest kaugele taha",
-      "Flankeri tiivad ja kaks kiilu hoopis teistsuguse esiosa all",
+      "Flankeri tiivad ja kaks kiilu teistsuguse esiosa all",
     ],
     placements: ["Pommituslennuväe rügemendid", "Vene standardne taktikaline löögilennuk"],
     doctrineNote:
@@ -96,7 +96,7 @@ export const etAircraft: Record<string, ItemTranslation> = {
     armament: "Tiibraketid Kh-55 ja Kh-101",
     rangeText: "Lennukaugus umbes 15 000 km; raketid lisavad 2500 km või rohkem",
     cues: [
-      "Neli turbopropellermootorit vastupidiselt pöörlevate propelleritega — miski muu ei näe selline välja",
+      "Neli turbopropellermootorit vastupidiselt pöörlevate propelleritega",
       "Teravalt noolutatud tiivad, propellerlennuki kohta ebatavaline",
       "Klaasitud nina ja pikk sale kere",
       "Propellerid teevad ta tuvastatavaks ka heli järgi",

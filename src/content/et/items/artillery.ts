@@ -121,7 +121,7 @@ export const etArtillery: Record<string, ItemTranslation> = {
     cues: [
       "Nelikümmend toru tihedas neli korda kümme plokis — rohkem torusid kui millelgi muul siin",
       "All mootorikattega Urali 6x6 veoauto, mootor kabiini ees",
-      "Torud on nii kitsad, et plokk loeb kaugelt tervikliku plaadina",
+      "Torud on nii kitsad, et plokk näib kaugelt tervikliku plaadina",
       "Enne laskmist alla lastud kaitsekilbid esiklaasi ees",
     ],
     placements: [

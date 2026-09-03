@@ -95,7 +95,7 @@ export const etRadars: Record<string, ItemTranslation> = {
       "MT-LB kere väikese pöörleva trummelantenniga",
       "Antenn ümara katte sees, mitte lahtine massiiv",
       "Istub lühikesel alusel vahetult tagumise teki kohal",
-      "Kaugelt väikseim antenn kogu õppetükis",
+      "Väikseim antenn kogu õppetükis",
     ],
     placements: [
       "Lahinguvälja seire suurtükiväe luurepatareides",

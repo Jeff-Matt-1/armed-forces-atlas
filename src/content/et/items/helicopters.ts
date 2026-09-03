@@ -64,7 +64,7 @@ export const etHelicopters: Record<string, ItemTranslation> = {
       "Suur ümara ninaga kabiin, küljel rida ümmargusi aknaid",
       "Kaheosalised tagauksed ja sageli välised kütusepaagid mõlemal küljel",
       "Viielabaline peatiivik ja kõrge sabapoom",
-      "Kaugelt kõige arvukam kopter, keda näed — eelda Hipi, kuni ei ole öeldud teisiti",
+      "Kõige arvukam kopter, keda näed — eelda Hipi, kuni ei ole öeldud teisiti",
     ],
     placements: [
       "Maaväe lennuväe transpordirügemendid ja peaaegu iga muu roll",

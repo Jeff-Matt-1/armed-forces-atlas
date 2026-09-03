@@ -167,7 +167,7 @@ export const etEngineering: Record<string, ItemTranslation> = {
     rangeText: "Kannab vees umbes 18 tonni",
     cues: [
       "Suur lame lahtine veosetekk madalate äärtega, hõivab suurema osa masinast",
-      "Paadikujuline kere, mis on ilmselgelt ehitatud ujuma, mitte üksnes kahlama",
+      "Paadikujuline kere, ehitatud ujuma, mitte üksnes kahlama",
       "Kabiin ees vasakul, tekk selle taga",
       "Taga sõukruvid, mitte veejoad",
     ],

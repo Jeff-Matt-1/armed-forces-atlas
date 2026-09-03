@@ -139,7 +139,7 @@ export const etVessels: Record<string, ItemTranslation> = {
     cues: [
       "Nüri vöör koos vööriväravatega — kere lõpeb kandiliselt, mitte teravalt",
       "Pikk lame katkematu tekk ilma raketitorude ja kahuritornideta vööris",
-      "Pealisehitus lükatud päris ahtrisse, ahtri kohale",
+      "Pealisehitus lükatud ahtrisse, ahtri kohale",
       "Istub iga lahingulaevaga võrreldes kõrgel ja kandiliselt",
     ],
     placements: [

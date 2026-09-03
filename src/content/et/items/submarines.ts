@@ -45,7 +45,7 @@ export const etSubmarines: Record<string, ItemTranslation> = {
     armament: "20 × ballistilist raketti R-39",
     rangeText: "Raketid kuni umbes 8300 km",
     cues: [
-      "Erakordselt lai — tunnus on laius, mitte pikkus",
+      "Lai — tunnus on laius, mitte pikkus",
       "Raketitorud asuvad tornist eespool, mis on siin ainulaadne",
       "Torn selgelt tagapool, umbes kere keskel",
       "Lai lame pealisehitus ümara kereülaosa asemel",

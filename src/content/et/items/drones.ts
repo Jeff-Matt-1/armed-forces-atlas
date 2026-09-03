@@ -58,7 +58,7 @@ export const etDrones: Record<string, ItemTranslation> = {
     cues: [
       "Üks kere V-sabaga, mitte kahe poomiga",
       "Pikk sale kõrgel asetsev tiib, purilennuki proportsioonidega",
-      "Tõukepropeller päris kere sabas",
+      "Tõukepropeller kere sabas",
       "Tiibade all pülonid — esimene relvastatud droon selles õppetükis",
     ],
     placements: [
