@@ -85,7 +85,7 @@ export const etHelicopters: Record<string, ItemTranslation> = {
       "Fikseeritud telik kõrgetel jalgadel, et ramp vabaks jääks",
     ],
     placements: [
-      "Ringkonna tasandil hoitavad raske transpordi rügemendid",
+      "Ringkonna tasandil paiknevad raske transpordi rügemendid",
       "Viib seda, milleni maantee ei ulatu või mida see kanda ei jaksa",
     ],
     doctrineNote:

@@ -11,7 +11,7 @@ export const etEw: Record<string, ItemTranslation> = {
       "Mingit relva ei ole — alusel, kus oleks kahur, on taldrikud",
     ],
     placements: [
-      "Ringkonna ja armee tasandil hoitavad elektroonilise sõjapidamise brigaadid ja kompaniid",
+      "Ringkonna ja armee tasandil paiknevad elektroonilise sõjapidamise brigaadid ja kompaniid",
       "Paigutatakse katma allüksust, mitte üksust",
     ],
     doctrineNote:

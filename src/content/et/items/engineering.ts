@@ -155,7 +155,7 @@ export const etEngineering: Record<string, ItemTranslation> = {
     ],
     placements: [
       "Pioneeriüksused, mis rajavad tõkkeid kaugelt",
-      "Hoitakse armee tasandil, mitte brigaadi juures",
+      "Paikneb armee tasandil, mitte brigaadi juures",
     ],
     doctrineNote:
       "Mineerib koha, saatmata sinna sapööre. Miinivälja saab panna teele, ülekäigule või maandumisalale minutitega ja kaugelt, mis muudab tõkete rajamise pioneeriülesandest tuleülesandeks.",

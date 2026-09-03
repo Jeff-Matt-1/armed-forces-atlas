@@ -13,8 +13,8 @@ export const etMissiles: Record<string, ItemTranslation> = {
       "Iskander-K kannab selle asemel kahte silindrilist tiibraketikonteinerit",
     ],
     placements: [
-      "Armee ja ringkonna tasandil hoitavad raketibrigaadid",
-      "Vabastatakse kõrgemalt kui allüksus, kelle heaks ta laseb — mitte kunagi selle enda poolt",
+      "Armee ja ringkonna tasandil paiknevad raketibrigaadid",
+      "Kasutusotsuse teeb kõrgem tasand, mitte üksus, keda ta toetab",
     ],
     doctrineNote:
       "Vene armee sügavlöögirelv: juhtimispunktid, lennuväljad, õhutõrje ja laskemoon sadade kilomeetrite kaugusel rindejoone taga. Tema ilmumine lõiku on väide selle kohta, kui palju see lõik on väärt tasandile, kellele ta kuulub — ja see on suurem fakt kui miski, mida ükski kahur ütleb.",

@@ -106,7 +106,7 @@ export const etArtillery: Record<string, ItemTranslation> = {
       "Seitse tugiratast ja kandiline esikabiin T-80-l põhineval šassiil",
     ],
     placements: [
-      "Armee ja ringkonna tasandil hoitavad raske suurtükiväe brigaadid",
+      "Armee ja ringkonna tasandil paiknevad raske suurtükiväe brigaadid",
       "Ei kuulu manöövribrigaadide koosseisu",
     ],
     doctrineNote:
@@ -295,7 +295,7 @@ export const etArtillery: Record<string, ItemTranslation> = {
       "Miinid on mehekõrgused ja laaditakse tagant raamilt",
     ],
     placements: [
-      "Armee tasandil hoitavad rasked miinipildujapatareid",
+      "Armee tasandil paiknevad rasked miinipildujapatareid",
       "Rakendatakse kindlustuste vastu, mitte rünnaku toetuseks",
     ],
     doctrineNote:
