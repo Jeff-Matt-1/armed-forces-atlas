@@ -153,6 +153,7 @@ export const helicopters: Item[] = [
     rangeText: "Combat radius roughly 200 km",
     cues: [
       "Coaxial rotors and no tail rotor — the Kamov signature, shared with the Ka-52",
+      "Large search radar under the cockpit — the Ka-29 has none, the Ka-31's is a flat panel under the belly",
       "Twin fins on a very short tail boom, unlike the Ka-52's single boom",
       "Deep boxy fuselage sitting high on four legs, built around an internal weapons bay",
       "Rotors and fins fold, because it lives on a ship",

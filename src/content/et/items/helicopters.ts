@@ -99,6 +99,7 @@ export const etHelicopters: Record<string, ItemTranslation> = {
     rangeText: "Lahingraadius umbes 200 km",
     cues: [
       "Koaksiaaltiivikud ja sabatiivikut ei ole — Kamovi tunnus, sama mis Ka-52-l",
+      "Suur otsinguradar kabiini all — Ka-29-l seda ei ole, Ka-31 oma on lame paneel kere all",
       "Kaks kiilu väga lühikesel sabapoomil, erinevalt Ka-52 ühest poomist",
       "Sügav kandiline kere neljal kõrgel jalal, ehitatud sisemise relvaruumi ümber",
       "Tiivikud ja kiilud klapivad kokku, sest ta elab laeva peal",
