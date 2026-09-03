@@ -58,7 +58,7 @@ export const etHelicopters: Record<string, ItemTranslation> = {
   },
   "mi-8": {
     aka: "Hip",
-    armament: "Ukserelvad, vajadusel raketikonteinerid külgtaladel",
+    armament: "Pardarelvad, vajadusel raketikonteinerid külgtaladel",
     rangeText: "Tavakütusega umbes 450 km",
     cues: [
       "Suur ümara ninaga kabiin, küljel rida ümmargusi aknaid",
