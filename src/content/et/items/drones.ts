@@ -53,13 +53,13 @@ export const etDrones: Record<string, ItemTranslation> = {
   },
   "orion-uav": {
     aka: "Inohodets; Pacer",
-    armament: "Juhitavad pommid ja raketid tiibade all olevatel pülonitel",
+    armament: "Juhitavad pommid ja raketid tiibade all olevatel püloonidel",
     rangeText: "Umbes 250 km, õhus kuni 24 tundi",
     cues: [
       "Üks kere V-sabaga, mitte kahe poomiga",
       "Pikk sale kõrgel asetsev tiib, purilennuki proportsioonidega",
       "Tõukepropeller kere sabas",
-      "Tiibade all pülonid — esimene relvastatud droon selles õppetükis",
+      "Tiibade all püloonid — esimene relvastatud droon selles õppetükis",
     ],
     placements: [
       "Armee tasandi löögi- ja luureüksused",

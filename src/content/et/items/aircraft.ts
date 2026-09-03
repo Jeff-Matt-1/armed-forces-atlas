@@ -4,7 +4,7 @@ import type { ItemTranslation } from "@/content/translations";
 export const etAircraft: Record<string, ItemTranslation> = {
   "su-25": {
     aka: "Gratš; Frogfoot",
-    armament: "30 mm GSh-30-2, raketid ja pommid kümnel pülonil",
+    armament: "30 mm GSh-30-2, raketid ja pommid kümnel püloonil",
     rangeText: "Lahiraadius umbes 375 km",
     cues: [
       "Sirge noolutuseta tiib — ainus selline õppetükis",
@@ -39,7 +39,7 @@ export const etAircraft: Record<string, ItemTranslation> = {
   },
   "su-35s": {
     aka: "Flanker-E",
-    armament: "30 mm GSh-30-1, õhk-õhk-raketid kaheteistkümnel pülonil",
+    armament: "30 mm GSh-30-1, õhk-õhk-raketid kaheteistkümnel püloonil",
     rangeText: "Lahiraadius umbes 1600 km",
     cues: [
       "Klassikaline Flankeri kuju: pikk sulanduv kere, kaks kiilu, kaks kaugel asetsevat mootorit",
@@ -130,7 +130,7 @@ export const etAircraft: Record<string, ItemTranslation> = {
     aka: "Candid",
     rangeText: "Veab umbes 50 tonni ligikaudu 4000 km kaugusele",
     cues: [
-      "Neli reaktiivmootorit pülonitel kõrge tiiva all",
+      "Neli reaktiivmootorit püloonidel kõrge tiiva all",
       "T-saba, stabilisaator kiilu otsas",
       "Klaasitud navigaatorikoht nina all",
       "Tagalaadimisramp ja jäme ülespoole tõusev sabaosa",
