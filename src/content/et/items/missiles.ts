@@ -73,7 +73,7 @@ export const etMissiles: Record<string, ItemTranslation> = {
       "Katab väinu ja lähenemisteid, mida pikema ulatusega süsteem katma ei pea",
     ],
     doctrineNote:
-      "Rannikukaitse kergem pool: rohkem rakette, vähem ulatust ja salve kaal ulatuse asemel. Bastion keelab merepiirkonna, Bal küllastab kitsa — seepärast leiab neid koos ja seepärast on nende eristamine olulisem, kui esmapilgul paistab.",
+      "Rannikukaitse kergem pool: rohkem rakette, vähem ulatust ja salvo kaal ulatuse asemel. Bastion keelab merepiirkonna, Bal küllastab kitsa — seepärast leiab neid koos ja seepärast on nende eristamine olulisem, kui esmapilgul paistab.",
     service: "Kasutuses",
   },
   "topol-m": {

@@ -14,7 +14,7 @@ export const etVessels: Record<string, ItemTranslation> = {
     ],
     placements: ["Põhjalaevastiku lipulaeva klassi pealveelaev", "Töökorras on alles üks"],
     doctrineNote:
-      "Ehitatud ähvardama lennukikandjate rühmi massilise laevatõrjeraketi salvega. Ta on sama palju ulatuse avaldus kui sõjalaev ja üksainus kere moodustab suure osa Vene pealveelaevastiku löögijõust.",
+      "Ehitatud heidutama lennukikandjate rühmi massilise laevatõrjeraketi salvoga. Ta on sama palju ulatuse avaldus kui sõjalaev ja üksainus kere moodustab suure osa Vene pealveelaevastiku löögijõust.",
     crew: "Umbes 700",
     service: "Kasutuses",
   },
@@ -33,7 +33,7 @@ export const etVessels: Record<string, ItemTranslation> = {
       "Nimilaev hukkus 2022. aastal",
     ],
     doctrineNote:
-      "Nähtavad raketitorud on kogu konstruktsiooni filosoofia: kõik on pandud ühele massilisele salvele. Merel midagi ümber ei laadita, nii et laeva väärtus on kulutatud hetkel, mil ta laseb.",
+      "Nähtavad raketitorud on kogu konstruktsiooni filosoofia: kõik on pandud ühele massilisele salvole. Merel midagi ümber ei laadita, nii et laeva väärtus on kulutatud hetkel, mil ta laseb.",
     crew: "Umbes 480",
     service: "Kasutuses",
   },
