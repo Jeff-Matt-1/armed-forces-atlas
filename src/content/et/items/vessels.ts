@@ -44,7 +44,7 @@ export const etVessels: Record<string, ItemTranslation> = {
     cues: [
       "Kaks eraldi korstnat, teineteisest kaugel — selles õppetükis ebatavaline",
       "Kaks üksikut 100 mm kahuritorni vööris, üks teise taga",
-      "Kopterihangaar ja -tekk hõivavad kogu ahtri",
+      "Kopteriangaar ja -tekk hõivavad kogu ahtri",
       "Suuri kaldu raketitorusid külgedel ei ole",
     ],
     placements: [
@@ -83,7 +83,7 @@ export const etVessels: Record<string, ItemTranslation> = {
       "Tavapärane nurgeline pealisehitus — vähem silutud kui Gorškovil",
       "Lahtine võrestikmast eraldi radariantennidega",
       "Üks 100 mm kahur vööris, väiksem kui Gorškovi 130 mm",
-      "Kopteritekk ahtris, hangaar pealisehitusse ehitatud",
+      "Kopteritekk ahtris, angaar pealisehitusse ehitatud",
     ],
     placements: [
       "Musta mere laevastiku fregatid",
@@ -120,7 +120,7 @@ export const etVessels: Record<string, ItemTranslation> = {
     cues: [
       "Väga väike — suurtükipaadi mõõtu kere, õppetüki väikseim laev",
       "Kandiline pealisehitus selgelt ees, ahtritekk jääb vabaks",
-      "Kopteritekki ega hangaari ei ole",
+      "Kopteritekki ega angaari ei ole",
       "Madal süvis: ta tegutseb ka jõgedel ja Kaspia merel, mitte üksnes merel",
     ],
     placements: [
