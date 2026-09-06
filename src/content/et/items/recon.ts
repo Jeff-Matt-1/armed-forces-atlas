@@ -47,7 +47,7 @@ export const etRecon: Record<string, ItemTranslation> = {
       "BMP kere torniga, millel on kaks suurt kuplikujulist luuki",
       "Sensori- ja optikakorpused seal, kus peaks olema kahur — pearelva ei ole",
       "Kõrged vardantennid tornist selgelt kõrgemal",
-      "Torn loeb pigem varustusest tiheda kui relvastatuna",
+      "Torn on täis mõõdistusvarustust, mitte relvastust",
     ],
     placements: [
       "Suurtükiväe luurepatareid",
