@@ -17,7 +17,7 @@ export const etRecon: Record<string, ItemTranslation> = {
       "Alusmasin kiirgus- ja keemialuure ning tankitõrjeraketi variantidele",
     ],
     doctrineNote:
-      "Kiire, ujuv ja kergelt soomustatud — mõeldud vaatlema, mitte võitlema. Grau ja Bartles rõhutavad, kui suure jõupingutuse Vene allüksused luurele pühendavad, ja traditsiooniliselt kandis seda just see masin.",
+      "Kiire, ujuv ja kergelt soomustatud — mõeldud vaatlema, mitte võitlema. Grau ja Bartles rõhutavad, kui suure jõupingutuse Vene allüksused luurele pühendavad ja traditsiooniliselt kandis seda just see masin.",
     crew: "4",
     service: "Kasutuses",
   },
@@ -27,7 +27,7 @@ export const etRecon: Record<string, ItemTranslation> = {
     cues: [
       "BMP-1 kere ja kuus tugiratast, kuid suurem kaheinimesetorn",
       "Torn on BMP-1 omast tagapool ja raketisiini ei ole",
-      "Väike seireradar, mis klapitakse torni taha üles",
+      "Väike maaradar, mis klapitakse torni taha üles",
       "Lisavardantennid luure sidevarustuse jaoks",
     ],
     placements: [
