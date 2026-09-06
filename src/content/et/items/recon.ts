@@ -80,7 +80,7 @@ export const etRecon: Record<string, ItemTranslation> = {
     aka: "Mardikas",
     armament: "7,62 mm PKT",
     cues: [
-      "Paadikujuline kere kõrge terava vööriga — ehitatud ujuma, mitte üksnes kahlama",
+      "Paadikujuline kere kõrge terava vööriga — ehitatud ujuma",
       "BMP-1 käiguosa: kuus väikest tugiratast palju kogukama kere all",
       "Klapitavad sondiõlad kere esiosal, üks kummalgi pool",
       "Katusel sensorite ja periskoopide kobar seal, kus oleks torn",
