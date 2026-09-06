@@ -3,7 +3,7 @@ import type { ItemTranslation } from "@/content/translations";
 /** Block 09 — Tankid. */
 export const etTanks: Record<string, ItemTranslation> = {
   "t-62m": {
-    armament: "115 mm sileraudne U-5TS; 12.7 mm NSVT",
+    armament: "115 mm sileraudne U-5TS; 12,7 mm NSVT",
     rangeText: "Kahur 1600–2000 m; tankitõrjerakett Šeksna 4000 m",
     cues: [
       "Viis tugiratast, kolmanda ja neljanda vahel selge lai vahe",
@@ -22,7 +22,7 @@ export const etTanks: Record<string, ItemTranslation> = {
   },
   "t-72b3": {
     aka: "Obr. 2011",
-    armament: "125 mm sileraudne 2A46M-5, automaatlaadur; 12.7 mm NSVT",
+    armament: "125 mm sileraudne 2A46M-5, automaatlaadur; 12,7 mm NSVT",
     rangeText: "Kahur 2500–3000 m; tankitõrjerakett Svir/Refleks 4000–5000 m",
     cues: [
       "Kuus ühtlaste vahedega väikest tugiratast, vahesid ei ole",
@@ -38,7 +38,7 @@ export const etTanks: Record<string, ItemTranslation> = {
   },
   "t-72b3m": {
     aka: "Obr. 2016 / T-72B3 mudel 2016",
-    armament: "125 mm 2A46M-5; 12.7 mm kaugjuhitav relvasüsteem",
+    armament: "125 mm 2A46M-5; 12,7 mm kaugjuhitav relvasüsteem",
     rangeText: "Kahur kuni 3000 m; tankitõrjerakett 5000 m",
     cues: [
       "Relikt-reaktiivsoomuse paneelid Kontakt-1 plokkide asemel kere ja torni esiosal",
@@ -52,7 +52,7 @@ export const etTanks: Record<string, ItemTranslation> = {
     service: "Praegune, moderniseeritud",
   },
   "t-80u": {
-    armament: "125 mm 2A46M-1; 12.7 mm NSVT",
+    armament: "125 mm 2A46M-1; 12,7 mm NSVT",
     rangeText: "Kahur 2500–3000 m; tankitõrjerakett Refleks 5000 m",
     cues: [
       "Gaasiturbiin: lai lame tagumine tekk suure keskse väljalaskevõrega",
@@ -71,7 +71,7 @@ export const etTanks: Record<string, ItemTranslation> = {
   },
   "t-80bvm": {
     aka: "T-80BV moderniseeritud variant",
-    armament: "125 mm 2A46M-4; 12.7 mm NSVT",
+    armament: "125 mm 2A46M-4; 12,7 mm NSVT",
     rangeText: "Kahur kuni 3000 m; tankitõrjerakett Refleks-M 5000 m",
     cues: [
       "Relikt-reaktiivsoomus suurte ristkülikuliste paneelidena üle torni esiosa",
@@ -86,7 +86,7 @@ export const etTanks: Record<string, ItemTranslation> = {
   },
   "t-90a": {
     aka: "Vladimir",
-    armament: "125 mm 2A46M-5; 12.7 mm kaugjuhitav jaam; Štora",
+    armament: "125 mm 2A46M-5; 12,7 mm kaugjuhitav jaam; Štora",
     rangeText: "Kahur 3000 m; tankitõrjerakett Refleks 5000 m",
     cues: [
       "Keevistorn sirgete püstiste külgedega (varasemal T-90 valatud)",
@@ -101,12 +101,12 @@ export const etTanks: Record<string, ItemTranslation> = {
   },
   "t-90m": {
     aka: "Proryv-3",
-    armament: "125 mm 2A46M-5; 7.62 mm ja 12.7 mm kaugjuhitav relvasüsteem",
+    armament: "125 mm 2A46M-5; 7,62 mm ja 12,7 mm kaugjuhitav relvasüsteem",
     rangeText: "Kahur 3000 m; tankitõrjerakett Refleks-M 5000 m",
     cues: [
       "Suur kandiline varustusrest torni tagaosas",
       "Relikt-paneelid ja võrekaitse taga",
-      "Kaugjuhitav relvasüsteem ülema kupli peal — avatud 12.7 mm alust ei ole",
+      "Kaugjuhitav relvasüsteem ülema kupli peal — avatud 12,7 mm alust ei ole",
       "Štora pimesteid ei ole",
     ],
     placements: ["Võimekaim tank esimese liini tankipataljonides; väljastatud piiratud koguses"],
@@ -115,7 +115,7 @@ export const etTanks: Record<string, ItemTranslation> = {
     service: "Praegune, eelisväljastus",
   },
   "t-14": {
-    armament: "125 mm 2A82-1M mehitamata tornis; 12.7 mm kaugjuhitav jaam",
+    armament: "125 mm 2A82-1M mehitamata tornis; 12,7 mm kaugjuhitav jaam",
     rangeText: "Kahur üle 4000 m; tankitõrjerakett kuni 8000 m (väidetavalt)",
     cues: [
       "Mehitamata kandiline tahuliste külgedega torn ilma meeskonnaluukideta",
@@ -146,7 +146,7 @@ export const etTanks: Record<string, ItemTranslation> = {
   },
   "2s25-sprut-sd": {
     aka: "Kaheksajalg",
-    armament: "125 mm kahur 2A75, koaksiaalne 7.62 mm PKT",
+    armament: "125 mm kahur 2A75, koaksiaalne 7,62 mm PKT",
     rangeText: "Kahur kuni umbes 2000 m, kahurist lastav rakett 5000 m",
     cues: [
       "Tankikahur kerel, mis on selle jaoks palju liiga kerge",

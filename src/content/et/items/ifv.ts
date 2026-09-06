@@ -3,7 +3,7 @@ import type { ItemTranslation } from "@/content/translations";
 /** Block 07 — Jalaväe lahingumasinad. */
 export const etIfv: Record<string, ItemTranslation> = {
   "bmp-1": {
-    armament: "73 mm 2A28 Grom, 7.62 mm PKT, 9M14 Maljutka siin",
+    armament: "73 mm 2A28 Grom, 7,62 mm PKT, 9M14 Maljutka siin",
     rangeText: "Kahur efektiivne umbes 800 m",
     cues: [
       "Väga madal lame kere teravalt terava vööriga",
@@ -21,7 +21,7 @@ export const etIfv: Record<string, ItemTranslation> = {
     service: "Kasutuses",
   },
   "bmp-2": {
-    armament: "30 mm automaatkahur 2A42, 7.62 mm PKT, 9M113 Konkurs",
+    armament: "30 mm automaatkahur 2A42, 7,62 mm PKT, 9M113 Konkurs",
     rangeText: "Automaatkahur efektiivne umbes 2000 m",
     cues: [
       "Kõrgem kaheinimesetorn, BMP-1 omast tahapoole nihutatud",
@@ -39,7 +39,7 @@ export const etIfv: Record<string, ItemTranslation> = {
     service: "Kasutuses",
   },
   "bmp-3": {
-    armament: "100 mm kahur 2A70, 30 mm 2A72, 7.62 mm PKT",
+    armament: "100 mm kahur 2A70, 30 mm 2A72, 7,62 mm PKT",
     rangeText: "100 mm kahur 4000 m; juhitav tankitõrjerakett 5500 m",
     cues: [
       "Kaks relva ühes tornis — jäme 100 mm toru ja selle kõrval peenike 30 mm",
@@ -54,7 +54,7 @@ export const etIfv: Record<string, ItemTranslation> = {
     service: "Kasutuses",
   },
   "bmd-2": {
-    armament: "30 mm automaatkahur 2A42, 7.62 mm PKT, 9M113 Konkurs",
+    armament: "30 mm automaatkahur 2A42, 7,62 mm PKT, 9M113 Konkurs",
     rangeText: "Automaatkahur efektiivne umbes 2000 m",
     cues: [
       "Palju väiksem kui ükski BMP — suurus on esimene tunnus",
@@ -70,7 +70,7 @@ export const etIfv: Record<string, ItemTranslation> = {
   },
   "bmd-4m": {
     aka: "Sadovnitsa",
-    armament: "100 mm kahur 2A70, 30 mm 2A72, 7.62 mm PKT",
+    armament: "100 mm kahur 2A70, 30 mm 2A72, 7,62 mm PKT",
     rangeText: "100 mm kahur 4000 m; juhitav tankitõrjerakett 5500 m",
     cues: [
       "BMP-3 relvastus — 100 mm ja 30 mm koos — poole väiksemal kerel",

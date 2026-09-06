@@ -44,7 +44,7 @@ export const heavyWeapons: Item[] = [
     imageUrl: "/images/items/kord.jpg",
     imageCredit: "CC BY-SA 3.0 — Sergeev Pavel",
     imagePage: "https://commons.wikimedia.org/wiki/File:Kord_6P50.jpg",
-    armament: "12.7x108mm heavy machine gun",
+    armament: "12.7x108 mm heavy machine gun",
     rangeText: "Effective 2,000 m; 1,500 m against light armour",
     cues: [
       "Very heavy barrel with prominent muzzle brake",

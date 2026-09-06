@@ -109,7 +109,7 @@ export const etHandguns: Record<string, ItemTranslation> = {
   },
   pss: {
     aka: "Pistolet Spetsialnõi Samozarjadnõi",
-    armament: "7.62x42 mm SP-4 suletud kolviga padrun, 6 lasku",
+    armament: "7,62x42 mm SP-4 suletud kolviga padrun, 6 lasku",
     rangeText: "Efektiivne kuni 25 m",
     cues: [
       "Summutitoru ei ole — püstol näeb tavaline välja, kuid on vaikne",

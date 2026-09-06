@@ -92,7 +92,7 @@ export const etSubmarines: Record<string, ItemTranslation> = {
       "Jahivad teisi allveelaevu ja jälitavad pealveelaevagruppe",
     ],
     doctrineNote:
-      "Gondel roolil on usaldusväärne tunnus ja seal on veetav sonarikett. Torpeedolaev kannab oma relvi sisemuses, nii et puhas siluett ongi tuvastus.",
+      "Gondel vertikaalroolil on usaldusväärne tunnus ja selle sees on veetav sonariantenn. Ründeallveelaev kannab oma relvi sisemuses, nii et puhas siluett ongi tuvastus.",
     crew: "Umbes 73",
     service: "Kasutuses",
   },

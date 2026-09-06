@@ -15,7 +15,7 @@ export const etBlocks: Record<string, BlockTranslation> = {
     brief:
       "Enne kui hakkad eristama üksikuid masinaid, pead teadma, millist liiki masinaga on tegemist. Iga kirje siin on kategooria, mitte konkreetne sõiduk: mille poolest erineb jalaväe lahingumasin soomustransportöörist, mille poolest liikursuurtükk veetavast suurtükist. Need eristused ei tulene välimusest, vaid ülesandest — ja just ülesanne määrab, mida masina kohalolek lahinguväljal tähendab.",
     doctrineNote:
-      "Kogu ülejäänud õppevara toetub sellele sõnavarale. Kui kategooria on selge, taandub konkreetse masina tuvastamine mõnele üksikule tunnusele; kui kategooria on segane, ei aita ka kõige täpsem tunnuste loend.",
+      "Grau ja Bartles kirjeldavad Vene relvajõude kui suurtükiväearmeed manöövrikomponendiga. Pea seda meeles: siinsed kategooriad ei ole kaalult võrdsed — struktuuri, mille sees tankid ja jalavägi manööverdavad, valitsevad tuli ja luure.",
   },
   ranks: {
     title: "Auastmed",
@@ -23,7 +23,7 @@ export const etBlocks: Record<string, BlockTranslation> = {
     brief:
       "Auastmeid loetakse õlakutelt: tärnide arv ja suurus, triipude arv ja laius. Vene süsteemis kasvavad tärnid auastme tõustes nii arvult kui mõõdult ja kindralite õlakud loobuvad triipudest hoopis. Mereväe redel on eraldi ja seda ei saa maaväe omaga segi ajada.",
     doctrineNote:
-      "Auastme äratundmine ütleb, kellega on tegemist ja millise otsustusõigusega. Vene süsteemis on praporštšiku ja ohvitseri vahe suurem kui lääne armeedes, mistõttu õlakute lugemine ütleb üksuse juhtimise kohta rohkem kui pelk isikukoosseis.",
+      "Juhtimistasand loeb rohkem kui auaste ise. Pataljoni taktikalist gruppi juhtival podpolkovnikul on tegelik üldväeline käsuõigus; samas auastmes staabiohvitseril ei ole.",
   },
   handguns: {
     title: "Käsitulirelvad",
@@ -143,7 +143,7 @@ export const etBlocks: Record<string, BlockTranslation> = {
     brief:
       "Laevu loetakse profiililt: pikkus millegi kõrvaloleva suhtes, kus asub pealisehitus ja mis seisab tekil. Raketilaevad näitavad oma relvastust — vanematel mudelitel piki külgi kaldu asetatud suured torud, uuematel siledad püstsed luugid — nii et tekiplaan eristab klasse ammu enne kerekuju. Nüri vöör ja päris ahtrisse lükatud pealisehitus tähendab dessantlaeva, mitte lahingulaeva.",
     doctrineNote:
-      "Vene pealveelaevastiku jõud on koondunud väga vähestesse suurtesse kerede ja väga paljudesse väikestesse. Kuna väikesed raketilaevad kannavad samu maasihtmärkide vastaseid relvi kui suured, on suurus ulatuse kohta halb juhis — ja just see on tuvastamisel kõige kasulikum teadmine.",
+      "Vene pealveelaevastiku jõud on koondunud väga vähestesse suurtesse keredesse ja väga paljudesse väikestesse. Kuna väikesed raketilaevad kannavad samu maasihtmärkide vastaseid relvi kui suured, on suurus ulatuse kohta halb juhis — ja just see on tuvastamisel kõige kasulikum teadmine.",
   },
   submarines: {
     title: "Allveelaevad",

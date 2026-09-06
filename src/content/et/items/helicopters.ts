@@ -4,7 +4,7 @@ import type { ItemTranslation } from "@/content/translations";
 export const etHelicopters: Record<string, ItemTranslation> = {
   "mi-24": {
     aka: "Hind",
-    armament: "12.7 mm või 30 mm relv, raketid, Šturmi või Ataka raketid",
+    armament: "12,7 mm või 30 mm relv, raketid, Šturmi või Ataka raketid",
     rangeText: "Lahingraadius umbes 160 km",
     cues: [
       "Astmeline kabiin — kaks eraldi mullikatet, üks teisest kõrgemal ja taga",

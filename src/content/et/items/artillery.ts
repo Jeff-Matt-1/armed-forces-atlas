@@ -78,13 +78,13 @@ export const etArtillery: Record<string, ItemTranslation> = {
     service: "Kasutuses",
   },
   "2s19-msta-s": {
-    armament: "152 mm haubits 2A64, 12.7 mm NSVT",
+    armament: "152 mm haubits 2A64, 12,7 mm NSVT",
     rangeText: "24,7 km tavamürsuga, 29 km reaktiivmürsuga",
     cues: [
       "Suur kaldu torn täislaiuse pikendusega taga",
       "T-80 käiguosa — kuus tugiratast tankisuurusel kerel",
       "Väga pikk toru, mille keskosas on suitsuärastaja",
-      "Kaugjuhitav 12.7 mm kuulipilduja ülema kupli peal",
+      "Kaugjuhitav 12,7 mm kuulipilduja ülema kupli peal",
     ],
     placements: [
       "Tanki- ja motolaskurbrigaadide liikursuurtükiväe divisjonid",

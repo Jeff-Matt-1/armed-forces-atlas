@@ -4,11 +4,11 @@ import type { ItemTranslation } from "@/content/translations";
 export const etApc: Record<string, ItemTranslation> = {
   "btr-60pb": {
     aka: "BTR-60",
-    armament: "14.5 mm KPVT, 7.62 mm PKT",
+    armament: "14,5 mm KPVT, 7,62 mm PKT",
     rangeText: "KPVT efektiivne umbes 2000 m",
     cues: [
       "Kaheksa ratast teraval paadikerel, ühtlaste vahedega",
-      "Väike kooniline torn lühikese jämeda 14.5 mm kahuriga",
+      "Väike kooniline torn lühikese jämeda 14,5 mm kahuriga",
       "Küljeuksi ei ole üldse — dessant väljub katuseluukidest",
       "Kaks bensiinimootorit, seega taga kaks väljalasketoru",
     ],
@@ -23,12 +23,12 @@ export const etApc: Record<string, ItemTranslation> = {
   },
   "btr-70": {
     aka: "GAZ-4905",
-    armament: "14.5 mm KPVT, 7.62 mm PKT",
+    armament: "14,5 mm KPVT, 7,62 mm PKT",
     rangeText: "KPVT efektiivne umbes 2000 m",
     cues: [
       "Väikesed madalad luugid teise ja kolmanda telje vahel",
       "Ümar nina, pehmem kui BTR-60 terav vöör",
-      "Sama kooniline 14.5 mm torn kui BTR-60-l ja BTR-80-l",
+      "Sama kooniline 14,5 mm torn kui BTR-60-l ja BTR-80-l",
       "Endiselt kaks bensiinimootorit — BTR-80-l on üks diisel",
     ],
     placements: ["Teise liini motolaskurüksused", "Siseväed ja eriotstarbelised variandid"],
@@ -39,13 +39,13 @@ export const etApc: Record<string, ItemTranslation> = {
   },
   "btr-80": {
     aka: "GAZ-5903",
-    armament: "14.5 mm KPVT, 7.62 mm PKT",
+    armament: "14,5 mm KPVT, 7,62 mm PKT",
     rangeText: "KPVT efektiivne umbes 2000 m",
     cues: [
       "Suur kaheosaline küljeuks teise ja kolmanda telje vahel",
       "Ukse ülemine pool avaneb ette, alumine langeb astmeks",
       "Üks diiselmootor, seega üks väljalasketoru kahe asemel",
-      "Kooniline torn lühikese jämeda 14.5 mm toruga",
+      "Kooniline torn lühikese jämeda 14,5 mm toruga",
     ],
     placements: ["Motolaskurpataljonid kogu maaväes", "Merejalavägi ja õhudessantrünnakuüksused"],
     doctrineNote:
@@ -55,7 +55,7 @@ export const etApc: Record<string, ItemTranslation> = {
   },
   "btr-82a": {
     aka: "BTR-82",
-    armament: "30 mm automaatkahur 2A72, 7.62 mm PKT",
+    armament: "30 mm automaatkahur 2A72, 7,62 mm PKT",
     rangeText: "Automaatkahur efektiivne umbes 2000 m",
     cues: [
       "Pikk peenike 30 mm toru seal, kus BTR-80-l on lühike jäme",
@@ -71,11 +71,11 @@ export const etApc: Record<string, ItemTranslation> = {
   },
   "mt-lb": {
     aka: "Mitmeotstarbeline kerge soomustraktor",
-    armament: "7.62 mm PKT väikeses tornis; VM-variantidel 12.7 mm NSVT või Kord",
+    armament: "7,62 mm PKT väikeses tornis; VM-variantidel 12,7 mm NSVT või Kord",
     cues: [
       "Roomikutel ja märkimisväärselt madal — vaevu kõrgem kui mehed tema kõrval",
       "Pikk lame katus peaaegu ilma pealisehituseta",
-      "Torn ees paremal: väike 7.62 mm, massiivsem 12.7 mm alus või puudub üldse",
+      "Torn ees paremal: väike 7,62 mm, massiivsem 12,7 mm alus või puudub üldse",
       "Kuus väikest tugiratast, tagasijooksurullikuid ei ole",
     ],
     placements: [
@@ -84,12 +84,12 @@ export const etApc: Record<string, ItemTranslation> = {
       "Jalaväevedaja motolaskurüksustes",
     ],
     doctrineNote:
-      "Rohkem šassii kui masin: 2S1 ja tosina eriotstarbelise ümberehituse alus. Ühe tuvastamine ei ütle midagi enne, kui loed, mis on tema katusele kruvitud — V-variantidel laiad roomikud lume ja pehme pinnase jaoks, VM-il ja VMK-l 12.7 mm alus ja jalavägi tagaruumis pigem tavapäraselt kui hädapäraselt.",
+      "Rohkem šassii kui masin: 2S1 ja tosina eriotstarbelise ümberehituse alus. Ühe tuvastamine ei ütle midagi enne, kui loed, mis on tema katusele kruvitud — V-variantidel laiad roomikud lume ja pehme pinnase jaoks, VM-il ja VMK-l 12,7 mm alus ja jalavägi tagaruumis pigem tavapäraselt kui hädapäraselt.",
     crew: "2 + 11",
     service: "Kasutuses",
   },
   "btr-d": {
-    armament: "Kaks kere ette paigaldatud 7.62 mm PKT-d; torni ei ole",
+    armament: "Kaks kere ette paigaldatud 7,62 mm PKT-d; torni ei ole",
     cues: [
       "Roomikutel, madal ja tavaliselt ilma igasuguse tornita",
       "Pikem kere kui BMD-2-l — kuus tugiratast viie asemel",
@@ -107,7 +107,7 @@ export const etApc: Record<string, ItemTranslation> = {
   },
   "btr-mdm-rakushka": {
     aka: "Merekarp",
-    armament: "7.62 mm PKT",
+    armament: "7,62 mm PKT",
     cues: [
       "Kõrge kandiline pealisehitus õhudessantväe roomikkerel",
       "Viis tugiratast, samad mis tema kõrval teenival BMD-4M-il",

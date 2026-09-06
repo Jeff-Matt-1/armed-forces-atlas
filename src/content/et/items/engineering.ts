@@ -39,7 +39,7 @@ export const etEngineering: Record<string, ItemTranslation> = {
   },
   "brem-1": {
     aka: "Soomustatud evakuatsioonimasin",
-    armament: "12.7 mm NSVT",
+    armament: "12,7 mm NSVT",
     cues: [
       "Kraana pool kere paremal küljel kokku pandud",
       "Buldooserisahk ees, kasutusel toetuslabidana",
@@ -62,7 +62,7 @@ export const etEngineering: Record<string, ItemTranslation> = {
       "Täielikult suletud kandiline pealisehitus üle kogu kere",
       "Miinirenn ja miiniader taga",
       "Roomikšassii, ühine 2S3 ja teiste raskete masinatega",
-      "Puomi, sahka ega silda ei ole — suletud kast roomikutel",
+      "Poomi, sahka ega silda ei ole — suletud kast roomikutel",
     ],
     placements: [
       "Pioneeriüksused kaitse- ja tõkestusmiiniväljade rajamiseks",
@@ -163,7 +163,7 @@ export const etEngineering: Record<string, ItemTranslation> = {
   },
   "pts-4": {
     aka: "Roomik-ujuvtransportöör",
-    armament: "12.7 mm kaugjuhitav relvasüsteem",
+    armament: "12,7 mm kaugjuhitav relvasüsteem",
     rangeText: "Kannab vees umbes 18 tonni",
     cues: [
       "Suur lame lahtine veosetekk madalate äärtega, hõivab suurema osa masinast",
@@ -182,7 +182,7 @@ export const etEngineering: Record<string, ItemTranslation> = {
   },
   "bmr-3m": {
     aka: "Soomustatud demineerimismasin",
-    armament: "12.7 mm kaugjuhitav relvasüsteem",
+    armament: "12,7 mm kaugjuhitav relvasüsteem",
     cues: [
       "Tankikere ilma tornita, ees lai rullikute komplekt",
       "Kaks rasket rullikuplokki õlgadel, üks kummagi roomiku ees",
