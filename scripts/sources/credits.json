@@ -200,6 +200,16 @@
     "attributionRequired": true
   },
   {
+    "slug": "akm",
+    "file": "File:AKM automatkarbin - 7,62x39mm.jpg",
+    "localPath": "/images/items/akm.jpg",
+    "imageCredit": "Public domain — Armémuseum (The Swedish Army Museum)",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:AKM_automatkarbin_-_7,62x39mm.jpg",
+    "licence": "Public domain",
+    "artist": "Armémuseum (The Swedish Army Museum)",
+    "attributionRequired": false
+  },
+  {
     "slug": "akula",
     "file": "File:К-419 Кузбасс. Парад ВМФ Владивосток 2008.07.25.JPG",
     "localPath": "/images/items/akula.jpg",

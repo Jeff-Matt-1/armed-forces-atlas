@@ -1,7 +1,25 @@
 import type { ItemTranslation } from "@/content/translations";
 
-/** Block 02 — Püstolid. Designations stay; everything descriptive is translated. */
+/** Block 02 — Käsitulirelvad. Designations stay; everything descriptive is translated. */
 export const etHandguns: Record<string, ItemTranslation> = {
+  akm: {
+    aka: "Moderniseeritud AK-47; Kalašnikov 7,62",
+    armament: "7,62x39 mm, 30-padruniline salv",
+    rangeText: "Efektiivne kuni umbes 400 m",
+    cues: [
+      "Puidust päraosa, käepide ja laesäär seal, kus AK-74M-il on must polümeerkate",
+      "Tugevalt kumer salv — 7,62 padrun on jämedam kui 5,45",
+      "Lühike kaldu lõigatud kompensaator, mitte AK-74 pikk avadega suudmepidur",
+      "Fikseeritud päraosa rauaga ühel joonel, mitte küljele klapitav",
+    ],
+    placements: [
+      "Hoiul väga suurtes kogustes, esimese liini üksustes teda ei ole",
+      "Antakse mobiliseeritud, territoriaal- ja tagalakoosseisudele",
+    ],
+    doctrineNote:
+      "Relv, mille ladu välja annab, kui uuemat ei jätku. Tema leidmine ütleb vähem relva enda kui üksuse ümbervarustusjärjekorra koha kohta: esimese liini koosseisud kannavad AK-74M-i ja AK-12-t.",
+    service: "Kasutuses",
+  },
   pm: {
     aka: "Pistolet Makarova, 9x18 mm",
     armament: "9x18 mm PM, 8-padruniline salv",

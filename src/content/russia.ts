@@ -1063,6 +1063,33 @@ const baseItems: Item[] = [
     sort: 109,
   },
   {
+    slug: "akm",
+    blockSlug: "handguns",
+    name: "AKM",
+    aka: "Modernised AK-47; Kalashnikov 7.62",
+    imageUrl: "/images/items/akm.jpg",
+    imageFit: "contain",
+    imageCredit: "Public domain — Armémuseum (The Swedish Army Museum)",
+    imagePage: "https://commons.wikimedia.org/wiki/File:AKM_automatkarbin_-_7,62x39mm.jpg",
+    armament: "7.62x39 mm, 30-round magazine",
+    rangeText: "Effective to roughly 400 m",
+    cues: [
+      "Wooden stock, grip and handguard, where an AK-74M has black polymer",
+      "Deeply curved magazine — the 7.62 round is fatter than the 5.45",
+      "Short slanted compensator, not the AK-74's long ported brake",
+      "Fixed stock in line with the barrel, not side-folding",
+    ],
+    placements: [
+      "Held in storage in very large numbers rather than issued to first-line units",
+      "Issued to mobilised, territorial and rear-area formations",
+    ],
+    doctrineNote:
+      "The rifle stores hand out when the modern one runs short. Finding it says less about the weapon than about where its unit sits in the re-equipment queue: first-line formations carry AK-74Ms and AK-12s.",
+    crew: null,
+    service: "In service",
+    sort: 0,
+  },
+  {
     slug: "ak-74m",
     blockSlug: "handguns",
     name: "AK-74M",
@@ -1087,7 +1114,7 @@ const baseItems: Item[] = [
       "The rifle most Russian soldiers actually carry. Its presence tells you nothing on its own — its absence does: a unit with AK-12s has been re-equipped, and one with wooden AKMs has not.",
     crew: null,
     service: "In service",
-    sort: 0,
+    sort: 1,
   },
   {
     slug: "ak-12",
@@ -1115,7 +1142,7 @@ const baseItems: Item[] = [
       "A modernised Kalashnikov rather than a new rifle, and its value to a recogniser is chronological: finding AK-12s says the unit has been through re-equipment, which places it in the queue for everything else that comes with it.",
     crew: null,
     service: "In service",
-    sort: 1,
+    sort: 2,
   },
   {
     slug: "svd",
@@ -1142,7 +1169,7 @@ const baseItems: Item[] = [
       "Issued to the squad rather than held by specialists, which is the doctrinal point: Russian squads carry their own precision fire out to 800 m instead of calling for it. Finding one says nothing special about the unit, because every squad has one.",
     crew: null,
     service: "In service",
-    sort: 2,
+    sort: 3,
   },
   {
     slug: "vss-vintorez",
@@ -1169,7 +1196,7 @@ const baseItems: Item[] = [
       "Quiet at the muzzle because the round is subsonic, not merely muffled. It is the weapon in this block whose presence says the most: a VSS in a photograph places the unit as special-purpose reconnaissance, whatever the rest of the picture suggests.",
     crew: null,
     service: "In service",
-    sort: 3,
+    sort: 4,
   },
   {
     slug: "pm",
@@ -1195,7 +1222,7 @@ const baseItems: Item[] = [
       "Ubiquitous rather than important. Its presence indicates an older or second-line issue set.",
     crew: "1",
     service: "Legacy, still in service",
-    sort: 4,
+    sort: 5,
   },
   {
     slug: "mp-443",
@@ -1221,7 +1248,7 @@ const baseItems: Item[] = [
       "The intended universal replacement for the PM; its issue marks a modernised unit set.",
     crew: "1",
     service: "Current standard",
-    sort: 5,
+    sort: 6,
   },
   {
     slug: "gsh-18",
@@ -1243,7 +1270,7 @@ const baseItems: Item[] = [
     doctrineNote: "Fielded for its armour-piercing performance against body armour at close range.",
     crew: "1",
     service: "In service, limited",
-    sort: 6,
+    sort: 7,
   },
   {
     slug: "aps",
@@ -1269,7 +1296,7 @@ const baseItems: Item[] = [
       "A machine pistol used where a compact automatic is wanted — recon teams, protective details.",
     crew: "1",
     service: "Legacy / special use",
-    sort: 7,
+    sort: 8,
   },
   {
     slug: "sr-1mp",
@@ -1292,7 +1319,7 @@ const baseItems: Item[] = [
       "A defeat-the-vest pistol; presence signals a special-purpose or protective unit rather than line infantry.",
     crew: "1",
     service: "In service, special units",
-    sort: 8,
+    sort: 9,
   },
   {
     slug: "pss",
@@ -1315,7 +1342,7 @@ const baseItems: Item[] = [
       "Silence comes from the cartridge, not a suppressor. Never a general-issue weapon.",
     crew: "1",
     service: "Special units",
-    sort: 9,
+    sort: 10,
   },
   {
     slug: "udav",
@@ -1338,7 +1365,7 @@ const baseItems: Item[] = [
     doctrineNote: "Fielding is gradual; its appearance indicates a recently re-equipped unit.",
     crew: "1",
     service: "Entering service",
-    sort: 10,
+    sort: 11,
   },
   {
     slug: "t-62m",
