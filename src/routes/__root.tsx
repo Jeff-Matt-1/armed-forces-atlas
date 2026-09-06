@@ -37,14 +37,13 @@ function NotFoundComponent() {
 function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
   console.error(error);
   const router = useRouter();
+  const { t } = useLocale();
 
   return (
     <div className="flex min-h-[60vh] items-center justify-center px-4">
       <div className="max-w-md text-center">
-        <h1 className="text-xl font-semibold tracking-tight">This page didn't load</h1>
-        <p className="mt-2 text-sm text-muted-foreground">
-          Something went wrong. Try again or head back to the block index.
-        </p>
+        <h1 className="text-xl font-semibold tracking-tight">{t("error.title")}</h1>
+        <p className="mt-2 text-sm text-muted-foreground">{t("error.body")}</p>
         <div className="mt-6 flex flex-wrap justify-center gap-2">
           <button
             onClick={() => {
@@ -53,13 +52,13 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
             }}
             className="inline-flex items-center justify-center rounded-sm bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
           >
-            Try again
+            {t("error.tryAgain")}
           </button>
           <a
             href="/"
             className="inline-flex items-center justify-center rounded-sm border border-input px-4 py-2 text-sm font-medium transition-colors hover:bg-secondary"
           >
-            Go home
+            {t("error.goHome")}
           </a>
         </div>
       </div>
@@ -84,12 +83,9 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     ],
     links: [
       { rel: "stylesheet", href: appCss },
-      { rel: "preconnect", href: "https://fonts.googleapis.com" },
-      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
-      {
-        rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap",
-      },
+      // Self-hosted: see scripts/fonts.ts. Serving these from Google meant every
+      // reader made a third-party request the privacy note would have to name.
+      { rel: "stylesheet", href: "/fonts/fonts.css" },
       { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
       { rel: "icon", href: "/favicon-32.png", type: "image/png", sizes: "32x32" },
       // iOS ignores the manifest's icons and uses this one for the home screen.

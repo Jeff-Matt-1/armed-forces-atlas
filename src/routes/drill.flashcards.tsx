@@ -134,7 +134,7 @@ function Flashcards() {
         {card.imageUrl ? (
           <img
             src={card.imageUrl}
-            alt="Recognition card"
+            alt={t("drill.cardImageAlt")}
             className={`aspect-[16/9] w-full bg-secondary ${imageFitClass(card.slug)}`}
           />
         ) : (

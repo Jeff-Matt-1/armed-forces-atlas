@@ -140,7 +140,7 @@ const en = {
     "The database is hosted by Supabase in Ireland (eu-west-1), inside the EU. The site itself is served by Cloudflare, which processes the IP address of every request in order to deliver the page, as any web server must.",
   "privacy.thirdPartyTitle": "What else your browser contacts",
   "privacy.thirdPartyBody":
-    "Two fonts are loaded from Google Fonts, which means your IP address reaches Google when a page loads. That is the only third party contacted while you use the app. Photographs are served from this site, not from Wikimedia, so browsing entries tells Wikimedia nothing.",
+    "Nothing. Fonts, photographs and every other asset are served from this site, so no third party is contacted while you use the app — Google is not asked for the fonts, and browsing entries tells Wikimedia nothing about what you looked at.",
   "privacy.notCollectedTitle": "What is not collected",
   "privacy.notCollectedBody":
     "No analytics, no advertising, no cookies for tracking, no session recording, no fingerprinting, and nothing is sold or shared with anyone. Your email address is used to sign you in and for nothing else — the app sends no email at all.",
@@ -201,6 +201,7 @@ const en = {
   "gate.lockedBodyGeneric": "Work through the earlier blocks to open this one.",
   "gate.openPrevious": "Go to {block}",
   "curriculum.inProgressHint": "Content in progress",
+  "drill.cardImageAlt": "Recognition card",
   "drill.gradeAgain": "Again",
   "drill.gradeNext": "Next",
   "drill.recallHint":
@@ -242,6 +243,13 @@ const en = {
   "review.photoInstead": "Photo ID instead",
   "notFound.body": "The route you requested does not exist in this trainer.",
   "notFound.goToBlocks": "Go to blocks",
+
+  // Error boundary. Rendered inside the providers, so it can translate; if the
+  // locale provider itself is what failed, the context default leaves it English.
+  "error.title": "This page didn't load",
+  "error.body": "Something went wrong. Try again or head back to the block index.",
+  "error.tryAgain": "Try again",
+  "error.goHome": "Go home",
 
   "local.onThisDevice": "On this device",
   "local.body":
@@ -441,7 +449,7 @@ const et: Record<StringKey, string> = {
     "Andmebaasi majutab Supabase Iirimaal (eu-west-1), Euroopa Liidus. Saiti ennast serveerib Cloudflare, kes töötleb iga päringu IP-aadressi, et lehte üldse edastada — nagu iga veebiserver peab.",
   "privacy.thirdPartyTitle": "Millega su brauser veel ühendust võtab",
   "privacy.thirdPartyBody":
-    "Kaks kirjatüüpi laaditakse Google Fontsist, mis tähendab, et lehe laadimisel jõuab sinu IP-aadress Google'ini. See on ainus kolmas osapool, kellega rakenduse kasutamise ajal ühendust võetakse. Fotod serveeritakse sellelt saidilt, mitte Wikimediast, nii et kirjete sirvimine ei ütle Wikimediale midagi.",
+    "Mitte midagi. Kirjatüübid, fotod ja kõik muu serveeritakse sellelt saidilt, nii et rakenduse kasutamise ajal ei võeta ühendust ühegi kolmanda osapoolega — kirjatüüpe ei küsita Google'ilt ja kirjete sirvimine ei ütle Wikimediale midagi selle kohta, mida sa vaatasid.",
   "privacy.notCollectedTitle": "Mida ei koguta",
   "privacy.notCollectedBody":
     "Analüütikat ei ole, reklaami ei ole, jälgimisküpsiseid ei ole, seansisalvestust ei ole, sõrmejälgede võtmist ei ole, ja midagi ei müüda ega jagata kellegagi. Sinu e-posti aadressi kasutatakse sisselogimiseks ja mitte millekski muuks — rakendus ei saada ühtegi e-kirja.",
@@ -504,6 +512,7 @@ const et: Record<StringKey, string> = {
   "gate.lockedBodyGeneric": "Selle avamiseks tööta läbi eelnevad õppetükid.",
   "gate.openPrevious": "Ava {block}",
   "curriculum.inProgressHint": "Sisu on koostamisel",
+  "drill.cardImageAlt": "Tuvastuskaart",
   "drill.gradeAgain": "Uuesti",
   "drill.gradeNext": "Edasi",
   "drill.recallHint":
@@ -545,6 +554,11 @@ const et: Record<StringKey, string> = {
   "review.photoInstead": "Tee hoopis fototuvastust",
   "notFound.body": "Sellist marsruuti selles treeneris ei ole.",
   "notFound.goToBlocks": "Mine õppetükkide juurde",
+
+  "error.title": "Leht ei laadinud",
+  "error.body": "Midagi läks valesti. Proovi uuesti või mine tagasi õppetükkide nimekirja.",
+  "error.tryAgain": "Proovi uuesti",
+  "error.goHome": "Avalehele",
 
   "local.onThisDevice": "Selles seadmes",
   "local.body":

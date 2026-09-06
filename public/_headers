@@ -19,3 +19,11 @@
   Cache-Control: public, max-age=604800
 /favicon*
   Cache-Control: public, max-age=604800
+
+# Self-hosted webfonts. The filenames carry family, weight and subset, so a
+# different font would be a different file — a year is safe, and it is what
+# Google's own font CDN served before these were brought in-house.
+/fonts/*.woff2
+  Cache-Control: public, max-age=31536000, immutable
+/fonts/fonts.css
+  Cache-Control: public, max-age=86400, stale-while-revalidate=604800

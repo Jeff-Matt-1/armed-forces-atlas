@@ -1,0 +1,62 @@
+# Keeps the Supabase project from being paused.
+#
+# Free-plan projects pause after seven days without activity. This app only
+# talks to Supabase when somebody signs in or syncs progress, so a quiet week —
+# a school holiday, say — is enough to put the project to sleep and lock every
+# student out until it is restored by hand.
+#
+# Daily rather than weekly on purpose: GitHub makes no promise about when a
+# scheduled run happens and drops them under load, so seven chances are used to
+# clear a seven-day deadline.
+#
+# SETUP (once, by the repository owner):
+#   Settings -> Secrets and variables -> Actions -> Variables -> New variable
+#     SUPABASE_URL              https://<project-ref>.supabase.co
+#     SUPABASE_PUBLISHABLE_KEY  the sb_publishable_... key
+#   Both are repository *variables*, not secrets: the publishable key is served
+#   to every visitor's browser already, and a variable can be read back to check
+#   it, which a secret cannot.
+#
+# Note: GitHub disables scheduled workflows in a repository with no activity for
+# 60 days, and emails the owner when it does.
+
+name: Supabase keep-alive
+
+on:
+  schedule:
+    - cron: "17 6 * * *"
+  workflow_dispatch:
+
+permissions: {}
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping the auth health endpoint
+        env:
+          SUPABASE_URL: ${{ vars.SUPABASE_URL }}
+          SUPABASE_PUBLISHABLE_KEY: ${{ vars.SUPABASE_PUBLISHABLE_KEY }}
+        run: |
+          set -euo pipefail
+
+          if [ -z "${SUPABASE_URL}" ] || [ -z "${SUPABASE_PUBLISHABLE_KEY}" ]; then
+            echo "::error::Set the SUPABASE_URL and SUPABASE_PUBLISHABLE_KEY repository variables (see the comment at the top of this file)."
+            exit 1
+          fi
+
+          # /auth/v1/health is the only endpoint that answers 200 to the
+          # publishable key alone; /rest/v1/ returns 401 without a session, and
+          # a 401 is a poor thing to build a liveness check on.
+          code=$(curl -sS -o /tmp/body -w '%{http_code}' --max-time 30 --retry 3 --retry-delay 20 \
+            -H "apikey: ${SUPABASE_PUBLISHABLE_KEY}" \
+            "${SUPABASE_URL%/}/auth/v1/health")
+
+          echo "HTTP ${code}"
+          cat /tmp/body
+          echo
+
+          if [ "${code}" != "200" ]; then
+            echo "::error::Supabase health check returned ${code}. If the project is already paused, restore it in the dashboard."
+            exit 1
+          fi
