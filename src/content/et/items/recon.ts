@@ -17,7 +17,7 @@ export const etRecon: Record<string, ItemTranslation> = {
       "Alusmasin kiirgus- ja keemialuure ning tankitõrjeraketi variantidele",
     ],
     doctrineNote:
-      "Kiire, ujuv ja kergelt soomustatud — mõeldud vaatama, mitte võitlema. Grau ja Bartles rõhutavad, kui suure jõupingutuse Vene allüksused luurele pühendavad, ja traditsiooniliselt kandis seda just see masin.",
+      "Kiire, ujuv ja kergelt soomustatud — mõeldud vaatlema, mitte võitlema. Grau ja Bartles rõhutavad, kui suure jõupingutuse Vene allüksused luurele pühendavad, ja traditsiooniliselt kandis seda just see masin.",
     crew: "4",
     service: "Kasutuses",
   },
