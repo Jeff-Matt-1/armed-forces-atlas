@@ -361,4 +361,30 @@ export const engineering: Item[] = [
     service: "In service",
     sort: 12,
   },
+  {
+    slug: "mtu-72",
+    blockSlug: "engineering",
+    name: "MTU-72",
+    aka: "T-72 bridgelayer",
+    imageUrl: "/images/items/mtu-72.jpg",
+    imageCredit: "CC BY-SA 4.0 — Vitaly V. Kuzmin",
+    imagePage: "https://commons.wikimedia.org/wiki/File:Army2016demo-099.jpg",
+    armament: null,
+    rangeText: "Spans a gap of up to 18 m",
+    cues: [
+      "T-72 hull under a single span carried flat along the top",
+      "Span is one piece — the MT-55 folds in two, the MTU-90 in three",
+      "Load overhangs the hull at both ends",
+      "No turret; the launching frame stands at the front of the hull",
+    ],
+    placements: [
+      "Engineer units of tank and motor rifle formations",
+      "Held in numbers alongside the newer MTU-90, not replaced by it",
+    ],
+    doctrineNote:
+      "The T-72-based predecessor of the MTU-90 and still widely held. Its single span is shorter than the MTU-90's three sections, so which of the two an engineer unit fields sets the widest gap the formation behind it can cross.",
+    crew: "2",
+    service: "In service",
+    sort: 13,
+  },
 ];

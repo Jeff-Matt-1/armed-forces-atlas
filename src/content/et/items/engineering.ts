@@ -232,4 +232,22 @@ export const etEngineering: Record<string, ItemTranslation> = {
     crew: "2",
     service: "Kasutuses",
   },
+  "mtu-72": {
+    aka: "T-72 sillapanek",
+    rangeText: "Ületab kuni 18 m laiuse tõkke",
+    cues: [
+      "T-72 kere, üheosaline sild kantakse horisontaalselt selle peal",
+      "Sild on ühes tükis — MT-55 klapib kaheks, MTU-90 kolmeks",
+      "Koorem ulatub kere mõlemast otsast üle",
+      "Torni ei ole; kere esiotsas on pealepaneku raam",
+    ],
+    placements: [
+      "Tanki- ja motolaskurkoosseisude pioneeriüksused",
+      "On kasutuses uuema MTU-90 kõrval, mitte sellega asendatud",
+    ],
+    doctrineNote:
+      "MTU-90 T-72-l põhinev eelkäija, endiselt laialdaselt kasutuses. Tema üheosaline ava on lühem kui MTU-90 kolm sektsiooni, nii et see, kumb neist pioneeriüksusel on, määrab kõige laiema tõkke, mida tema taga olev koosseis ületada saab.",
+    crew: "2",
+    service: "Kasutuses",
+  },
 };

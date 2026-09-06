@@ -920,6 +920,16 @@
     "attributionRequired": false
   },
   {
+    "slug": "mtu-72",
+    "file": "File:Army2016demo-099.jpg",
+    "localPath": "/images/items/mtu-72.jpg",
+    "imageCredit": "CC BY-SA 4.0 — Vitaly V. Kuzmin",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:Army2016demo-099.jpg",
+    "licence": "CC BY-SA 4.0",
+    "artist": "Vitaly V. Kuzmin",
+    "attributionRequired": true
+  },
+  {
     "slug": "mtu-90",
     "file": "File:MTU-90 1.jpg",
     "localPath": "/images/items/mtu-90.jpg",
