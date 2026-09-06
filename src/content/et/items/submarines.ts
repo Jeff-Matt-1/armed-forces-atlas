@@ -8,7 +8,7 @@ export const etSubmarines: Record<string, ItemTranslation> = {
     rangeText: "Raketid kuni umbes 8000 km",
     cues: [
       "Pikk madal küür jookseb tornist ahtri poole — raketisektsioon",
-      "Torn on siledalt kerre sulandatud, järsku astet ei ole",
+      "Kere pealne on ühtlane ja katkematu — peale torni ei tõuse midagi kõrgemale",
       "Torn asub selgelt ees, umbes kolmandiku peal",
       "Kere aheneb puhtalt ahtri poole, väliseid gondleid ei ole",
     ],
@@ -27,7 +27,7 @@ export const etSubmarines: Record<string, ItemTranslation> = {
     rangeText: "Raketid kuni umbes 8300 km",
     cues: [
       "Väga kõrge raketiküür seisab tornist taga kerest tunduvalt kõrgemal",
-      "Aste torni ja kere vahel on järsk, mitte Borei kombel sulandatud",
+      "Küür tõuseb kere pealselt peaaegu püstiste külgedega plokina",
       "Vanem, nurgelisem torn kandilise ülaosaga",
       "Küür jookseb peaaegu ahtrini",
     ],
@@ -89,7 +89,7 @@ export const etSubmarines: Record<string, ItemTranslation> = {
     ],
     placements: [
       "Põhja- ja Vaikse ookeani laevastiku tuumatorpeedoallveelaevad",
-      "Jahivad teisi allveelaevu ja varjavad pealveelaevagruppe",
+      "Jahivad teisi allveelaevu ja jälitavad pealveelaevagruppe",
     ],
     doctrineNote:
       "Gondel roolil on usaldusväärne tunnus ja seal on veetav sonarikett. Torpeedolaev kannab oma relvi sisemuses, nii et puhas siluett ongi tuvastus.",
@@ -111,7 +111,7 @@ export const etSubmarines: Record<string, ItemTranslation> = {
       "Ranniku- ja lähimerepatrull ning maasihtmärkide löömine",
     ],
     doctrineNote:
-      "Akudel sõites vaikne ja piisavalt odav, et ehitada arvuliselt. Kalibri kandmine muudab rannikukaitse allveelaeva maasihtmärkide löögiplatvormiks ja seepärast on suurus siin ohu kohta halb juhis.",
+      "Akudel sõites vaikne ja piisavalt odav, et ehitada arvuliselt. Kalibri kandmine muudab rannikukaitse allveelaeva maasihtmärkide löögiplatvormiks ja seepärast ei saa ohtu siin laeva mõõtmete järgi hinnata.",
     crew: "Umbes 52",
     service: "Kasutuses",
   },

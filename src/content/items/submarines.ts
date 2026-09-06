@@ -27,7 +27,7 @@ export const submarines: Item[] = [
     rangeText: "Missiles to about 8,000 km",
     cues: [
       "Long low hump running aft from the sail — the missile compartment",
-      "Sail is smoothly faired into the hull, with no sharp step",
+      "Casing runs smooth and unbroken — nothing stands above it but the sail",
       "Sail set well forward, roughly a third of the way back",
       "Hull tapers cleanly to the stern with no external pods",
     ],
@@ -47,13 +47,13 @@ export const submarines: Item[] = [
     name: "Delta IV class",
     aka: "Project 667BDRM Delfin",
     imageUrl: "/images/items/delta-iv.jpg",
-    imageCredit: "CC BY 4.0 — Министерство обороны Российской Федерации",
-    imagePage: "https://commons.wikimedia.org/wiki/File:Submarine_Novomoskovsk,_2016_2.jpg",
+    imageCredit: "Public domain — US gov",
+    imagePage: "https://commons.wikimedia.org/wiki/File:Submarine_Delta_IV_class.jpg",
     armament: "16 × R-29RMU Sineva ballistic missiles",
     rangeText: "Missiles to about 8,300 km",
     cues: [
       "Very tall missile hump standing well proud of the hull behind the sail",
-      "Step between sail and casing is abrupt, not faired like a Borei's",
+      "Hump rises from the casing as a slab with near-vertical sides",
       "Older, more angular sail with a squared-off top",
       "Hump runs almost to the stern",
     ],
@@ -100,8 +100,8 @@ export const submarines: Item[] = [
     name: "Oscar II class",
     aka: "Project 949A Antey",
     imageUrl: "/images/items/oscar-ii.jpg",
-    imageCredit: "CC BY 4.0 — Министерство обороны Российской федерации",
-    imagePage: "https://commons.wikimedia.org/wiki/File:K-410_Smolensk.jpg",
+    imageCredit: "Public domain — Unknown author",
+    imagePage: "https://commons.wikimedia.org/wiki/File:Submarine_Oscar_class.jpg",
     armament: "24 × P-700 Granit cruise missiles, torpedoes",
     rangeText: "Missiles to about 550 km",
     cues: [
@@ -126,9 +126,9 @@ export const submarines: Item[] = [
     name: "Akula class",
     aka: "Project 971 Shchuka-B",
     imageUrl: "/images/items/akula.jpg",
-    imageCredit: "Public domain — Unknown author",
+    imageCredit: "CC BY 3.0 — Alex omen",
     imagePage:
-      "https://commons.wikimedia.org/wiki/File:Akula_class_submarine_starboard_quarter_view.JPEG",
+      "https://commons.wikimedia.org/wiki/File:%D0%9A-419_%D0%9A%D1%83%D0%B7%D0%B1%D0%B0%D1%81%D1%81._%D0%9F%D0%B0%D1%80%D0%B0%D0%B4_%D0%92%D0%9C%D0%A4_%D0%92%D0%BB%D0%B0%D0%B4%D0%B8%D0%B2%D0%BE%D1%81%D1%82%D0%BE%D0%BA_2008.07.25.JPG",
     armament: "Torpedoes and cruise missiles through the torpedo tubes",
     rangeText: null,
     cues: [

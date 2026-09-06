@@ -151,22 +151,22 @@
   },
   {
     "slug": "admiral-gorshkov",
-    "file": "File:Admiral Gorshkov frigate 03.jpg",
+    "file": "File:Admiral Gorshkov frigate 02.jpg",
     "localPath": "/images/items/admiral-gorshkov.jpg",
     "imageCredit": "CC BY 4.0 — Ministry of Defence of the Russian Federation",
-    "imagePage": "https://commons.wikimedia.org/wiki/File:Admiral_Gorshkov_frigate_03.jpg",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:Admiral_Gorshkov_frigate_02.jpg",
     "licence": "CC BY 4.0",
     "artist": "Ministry of Defence of the Russian Federation",
     "attributionRequired": true
   },
   {
     "slug": "admiral-grigorovich",
-    "file": "File:Адмирал Григорович.jpg",
+    "file": "File:Фрегат \"Адмирал Макаров\" 2016.jpg",
     "localPath": "/images/items/admiral-grigorovich.jpg",
-    "imageCredit": "CC BY 4.0 — Пресс-служба Западного военного округа",
-    "imagePage": "https://commons.wikimedia.org/wiki/File:%D0%90%D0%B4%D0%BC%D0%B8%D1%80%D0%B0%D0%BB_%D0%93%D1%80%D0%B8%D0%B3%D0%BE%D1%80%D0%BE%D0%B2%D0%B8%D1%87.jpg",
+    "imageCredit": "CC BY 4.0 — Ministry of Defence of Russia",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:%D0%A4%D1%80%D0%B5%D0%B3%D0%B0%D1%82_%22%D0%90%D0%B4%D0%BC%D0%B8%D1%80%D0%B0%D0%BB_%D0%9C%D0%B0%D0%BA%D0%B0%D1%80%D0%BE%D0%B2%22_2016.jpg",
     "licence": "CC BY 4.0",
-    "artist": "Пресс-служба Западного военного округа",
+    "artist": "Ministry of Defence of Russia",
     "attributionRequired": true
   },
   {
@@ -201,13 +201,13 @@
   },
   {
     "slug": "akula",
-    "file": "File:Akula class submarine starboard quarter view.JPEG",
+    "file": "File:К-419 Кузбасс. Парад ВМФ Владивосток 2008.07.25.JPG",
     "localPath": "/images/items/akula.jpg",
-    "imageCredit": "Public domain — Unknown author",
-    "imagePage": "https://commons.wikimedia.org/wiki/File:Akula_class_submarine_starboard_quarter_view.JPEG",
-    "licence": "Public domain",
-    "artist": "Unknown author",
-    "attributionRequired": false
+    "imageCredit": "CC BY 3.0 — Alex omen",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:%D0%9A-419_%D0%9A%D1%83%D0%B7%D0%B1%D0%B0%D1%81%D1%81._%D0%9F%D0%B0%D1%80%D0%B0%D0%B4_%D0%92%D0%9C%D0%A4_%D0%92%D0%BB%D0%B0%D0%B4%D0%B8%D0%B2%D0%BE%D1%81%D1%82%D0%BE%D0%BA_2008.07.25.JPG",
+    "licence": "CC BY 3.0",
+    "artist": "Alex omen",
+    "attributionRequired": true
   },
   {
     "slug": "ark-1",
@@ -501,13 +501,13 @@
   },
   {
     "slug": "delta-iv",
-    "file": "File:Submarine Novomoskovsk, 2016 1.jpg",
+    "file": "File:Submarine Delta IV class.jpg",
     "localPath": "/images/items/delta-iv.jpg",
-    "imageCredit": "CC BY 4.0 — Министерство обороны Российской Федерации",
-    "imagePage": "https://commons.wikimedia.org/wiki/File:Submarine_Novomoskovsk,_2016_1.jpg",
-    "licence": "CC BY 4.0",
-    "artist": "Министерство обороны Российской Федерации",
-    "attributionRequired": true
+    "imageCredit": "Public domain — US gov",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:Submarine_Delta_IV_class.jpg",
+    "licence": "Public domain",
+    "artist": "US gov",
+    "attributionRequired": false
   },
   {
     "slug": "dt-30",
@@ -881,10 +881,10 @@
   },
   {
     "slug": "moskva",
-    "file": "File:Project 1164 Moskva 2012 G2.jpg",
+    "file": "File:Project 1164 Moskva 2009 G2.jpg",
     "localPath": "/images/items/moskva.jpg",
     "imageCredit": "Public domain — George Chernilevsky",
-    "imagePage": "https://commons.wikimedia.org/wiki/File:Project_1164_Moskva_2012_G2.jpg",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:Project_1164_Moskva_2009_G2.jpg",
     "licence": "Public domain",
     "artist": "George Chernilevsky",
     "attributionRequired": false
@@ -961,12 +961,12 @@
   },
   {
     "slug": "oscar-ii",
-    "file": "File:Oscar class submarine 3.jpg",
+    "file": "File:Submarine Oscar class.jpg",
     "localPath": "/images/items/oscar-ii.jpg",
-    "imageCredit": "Public domain — USN, VP9",
-    "imagePage": "https://commons.wikimedia.org/wiki/File:Oscar_class_submarine_3.jpg",
+    "imageCredit": "Public domain — Unknown author",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:Submarine_Oscar_class.jpg",
     "licence": "Public domain",
-    "artist": "USN, VP9",
+    "artist": "Unknown author",
     "attributionRequired": false
   },
   {
@@ -1041,12 +1041,12 @@
   },
   {
     "slug": "pyotr-velikiy",
-    "file": "File:HMS Dragon with Kirov Class 'Pyotr Velikiy' MOD 45157551.jpg",
+    "file": "File:Tactical exercises of the Russian Navy.jpg",
     "localPath": "/images/items/pyotr-velikiy.jpg",
-    "imageCredit": "OGL v1.0 — Royal Navy",
-    "imagePage": "https://commons.wikimedia.org/wiki/File:HMS_Dragon_with_Kirov_Class_%27Pyotr_Velikiy%27_MOD_45157551.jpg",
-    "licence": "OGL v1.0",
-    "artist": "Royal Navy",
+    "imageCredit": "CC BY 4.0 — Igor Zarembo, Presidential Press and Information Office",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:Tactical_exercises_of_the_Russian_Navy.jpg",
+    "licence": "CC BY 4.0",
+    "artist": "Igor Zarembo, Presidential Press and Information Office",
     "attributionRequired": true
   },
   {
@@ -1401,13 +1401,13 @@
   },
   {
     "slug": "ropucha",
-    "file": "File:Project 775M AZOV 2008 G2.jpg",
+    "file": "File:Kaliningrad2004Cartagena.jpg",
     "localPath": "/images/items/ropucha.jpg",
-    "imageCredit": "Public domain — George Chernilevsky",
-    "imagePage": "https://commons.wikimedia.org/wiki/File:Project_775M_AZOV_2008_G2.jpg",
-    "licence": "Public domain",
-    "artist": "George Chernilevsky",
-    "attributionRequired": false
+    "imageCredit": "CC BY-SA 3.0 — José María Casanova Colorado, Cartagena from Los Barcos de Eugenio - Eugenio´s Warships",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:Kaliningrad2004Cartagena.jpg",
+    "licence": "CC BY-SA 3.0",
+    "artist": "José María Casanova Colorado, Cartagena from Los Barcos de Eugenio - Eugenio´s Warships",
+    "attributionRequired": true
   },
   {
     "slug": "rpg-7",
@@ -1701,12 +1701,12 @@
   },
   {
     "slug": "udaloy",
-    "file": "File:Soviet destroyer Udaloy underway c1981.jpg",
+    "file": "File:AdmiralVinogradov2009.jpg",
     "localPath": "/images/items/udaloy.jpg",
-    "imageCredit": "Public domain — U.S. Navy",
-    "imagePage": "https://commons.wikimedia.org/wiki/File:Soviet_destroyer_Udaloy_underway_c1981.jpg",
+    "imageCredit": "Public domain — Mass Communications Specialist 2nd Class Jason R. Zalasky",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:AdmiralVinogradov2009.jpg",
     "licence": "Public domain",
-    "artist": "U.S. Navy",
+    "artist": "Mass Communications Specialist 2nd Class Jason R. Zalasky",
     "attributionRequired": false
   },
   {

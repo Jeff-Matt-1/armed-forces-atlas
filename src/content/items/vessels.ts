@@ -19,9 +19,8 @@ export const vessels: Item[] = [
     name: "Pyotr Velikiy",
     aka: "Kirov class; Project 1144 Orlan",
     imageUrl: "/images/items/pyotr-velikiy.jpg",
-    imageCredit: "OGL v1.0 — Royal Navy",
-    imagePage:
-      "https://commons.wikimedia.org/wiki/File:HMS_Dragon_with_Kirov_Class_%27Pyotr_Velikiy%27_MOD_45157551.jpg",
+    imageCredit: "CC BY 4.0 — Igor Zarembo, Presidential Press and Information Office",
+    imagePage: "https://commons.wikimedia.org/wiki/File:Tactical_exercises_of_the_Russian_Navy.jpg",
     armament: "P-700 Granit missiles, S-300F, 130 mm guns",
     rangeText: "Nuclear powered — effectively unlimited endurance",
     cues: [
@@ -44,7 +43,7 @@ export const vessels: Item[] = [
     aka: "Project 1164 Atlant; Moskva",
     imageUrl: "/images/items/moskva.jpg",
     imageCredit: "Public domain — George Chernilevsky",
-    imagePage: "https://commons.wikimedia.org/wiki/File:Project_1164_Moskva_2012_G2.jpg",
+    imagePage: "https://commons.wikimedia.org/wiki/File:Project_1164_Moskva_2009_G2.jpg",
     armament: "16 × P-500/P-1000 missiles, S-300F, 130 mm twin gun",
     rangeText: "Anti-ship missiles to about 550 km",
     cues: [
@@ -69,8 +68,8 @@ export const vessels: Item[] = [
     name: "Udaloy class",
     aka: "Project 1155 Fregat",
     imageUrl: "/images/items/udaloy.jpg",
-    imageCredit: "Public domain — U.S. Navy",
-    imagePage: "https://commons.wikimedia.org/wiki/File:Soviet_destroyer_Udaloy_underway_c1981.jpg",
+    imageCredit: "Public domain — Mass Communications Specialist 2nd Class Jason R. Zalasky",
+    imagePage: "https://commons.wikimedia.org/wiki/File:AdmiralVinogradov2009.jpg",
     armament: "Metel anti-submarine missiles, 2 × 100 mm guns, torpedoes",
     rangeText: "Anti-submarine missiles to about 50 km",
     cues: [
@@ -96,7 +95,7 @@ export const vessels: Item[] = [
     aka: "Project 22350",
     imageUrl: "/images/items/admiral-gorshkov.jpg",
     imageCredit: "CC BY 4.0 — Ministry of Defence of the Russian Federation",
-    imagePage: "https://commons.wikimedia.org/wiki/File:Admiral_Gorshkov_frigate_03.jpg",
+    imagePage: "https://commons.wikimedia.org/wiki/File:Admiral_Gorshkov_frigate_02.jpg",
     armament: "Kalibr and Oniks in vertical cells, 130 mm gun, Poliment-Redut",
     rangeText: "Kalibr to about 1,500 km against land targets",
     cues: [
@@ -121,9 +120,9 @@ export const vessels: Item[] = [
     name: "Admiral Grigorovich class",
     aka: "Project 11356R",
     imageUrl: "/images/items/admiral-grigorovich.jpg",
-    imageCredit: "CC BY 4.0 — Пресс-служба Западного военного округа",
+    imageCredit: "CC BY 4.0 — Ministry of Defence of Russia",
     imagePage:
-      "https://commons.wikimedia.org/wiki/File:%D0%90%D0%B4%D0%BC%D0%B8%D1%80%D0%B0%D0%BB_%D0%93%D1%80%D0%B8%D0%B3%D0%BE%D1%80%D0%BE%D0%B2%D0%B8%D1%87.jpg",
+      "https://commons.wikimedia.org/wiki/File:%D0%A4%D1%80%D0%B5%D0%B3%D0%B0%D1%82_%22%D0%90%D0%B4%D0%BC%D0%B8%D1%80%D0%B0%D0%BB_%D0%9C%D0%B0%D0%BA%D0%B0%D1%80%D0%BE%D0%B2%22_2016.jpg",
     armament: "Kalibr vertical cells, 100 mm gun, Shtil air defence",
     rangeText: "Kalibr to about 1,500 km against land targets",
     cues: [
@@ -201,8 +200,9 @@ export const vessels: Item[] = [
     name: "Ropucha class",
     aka: "Project 775",
     imageUrl: "/images/items/ropucha.jpg",
-    imageCredit: "Public domain — George Chernilevsky",
-    imagePage: "https://commons.wikimedia.org/wiki/File:Project_775M_AZOV_2008_G2.jpg",
+    imageCredit:
+      "CC BY-SA 3.0 — José María Casanova Colorado, Cartagena from Los Barcos de Eugenio - Eugenio´s Warships",
+    imagePage: "https://commons.wikimedia.org/wiki/File:Kaliningrad2004Cartagena.jpg",
     armament: "Light guns and rocket launchers only",
     rangeText: "Carries roughly 10 tanks or 340 troops",
     cues: [
