@@ -48,7 +48,7 @@ export const etVessels: Record<string, ItemTranslation> = {
       "Suuri kaldu raketitorusid külgedel ei ole",
     ],
     placements: [
-      "Põhja- ja Vaikse ookeani laevastiku allveelaevatõrjehävitajad",
+      "Põhja- ja Vaikse ookeani laevastiku allveelaevatõrje hävitajad",
       "Suuremate pealveelaevagruppide saatelaev",
     ],
     doctrineNote:
