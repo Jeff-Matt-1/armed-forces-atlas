@@ -92,7 +92,7 @@ export const etEw: Record<string, ItemTranslation> = {
     cues: [
       "MT-LB kere suure avatud võrestikantenni all",
       "Raam on lai horisontaalne peenikeste varraste massiiv, mitte taldrik",
-      "Massiiv istub lühikesel mastil otse kere kohal",
+      "Massiiv asetseb lühikesel mastil otse kere kohal",
       "Tagumisele tekile on sageli püstitatud telkvarjualune",
     ],
     placements: [

@@ -10,7 +10,7 @@ export const etAircraft: Record<string, ItemTranslation> = {
       "Sirge noolutuseta tiib — ainus selline õppetükis",
       "Kaks mootorit kastides tihedalt kere külgede vastu",
       "Lühike nüri nina tugevalt raamitud kabiiniga",
-      "Istub kõrgel pikkadel telikutel, ehitatud lihtsatele lennuväljadele",
+      "Asetseb kõrgel pikkadel telikutel, ehitatud lihtsatele lennuväljadele",
     ],
     placements: [
       "Rünnaklennuväe rügemendid maavägede toetuseks",

@@ -140,14 +140,14 @@ export const etVessels: Record<string, ItemTranslation> = {
       "Nüri vöör koos vööriväravatega — kere lõpeb kandiliselt, mitte teravalt",
       "Pikk lame katkematu tekk ilma raketitorude ja kahuritornideta vööris",
       "Pealisehitus lükatud ahtrisse, ahtri kohale",
-      "Istub iga lahingulaevaga võrreldes kõrgel ja kandiliselt",
+      "Kõrgem ja kandilisem kui ükski lahingulaev",
     ],
     placements: [
       "Kõigi laevastike dessantlaevad",
       "Kasutatakse ka kiire sõjaväetranspordina teatrite vahel",
     ],
     doctrineNote:
-      "Vööriväravad on korraga tuvastustunnus ja eesmärk. Laev, mis suudab randuda ja soomuse otse maha laadida, teeb dessandiohu usutavaks — ja teeb neist keredest sadamas eelissihtmärgid.",
+      "Vööriväravad on korraga tuvastustunnus ja eesmärk. Laev, mis suudab randuda ja soomuse otse maha laadida, teeb dessandiohu usutavaks — ja teeb neist eelissihtmärgid.",
     crew: "Umbes 95",
     service: "Kasutuses",
   },

@@ -58,7 +58,7 @@ export const etHeavyWeapons: Record<string, ItemTranslation> = {
     cues: [
       "Toru iseloomuliku laieneva lehtriga taga",
       "Puidust või polümeerist kuumakaitsed keskosas",
-      "Lõhkepea on selgelt laiem kui toru, millel ta istub",
+      "Lõhkepea on selgelt laiem kui toru, millel ta asetseb",
       "Optiline sihik vasakul küljel",
     ],
     placements: [

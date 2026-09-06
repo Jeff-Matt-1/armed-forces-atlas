@@ -24,7 +24,7 @@ export const etRadars: Record<string, ItemTranslation> = {
     rangeText: "Avastab lennukid kuni umbes 600 km",
     cues: [
       "Tohutu ristkülikuline massiiv, mitu rida sügav ja masinast palju laiem",
-      "Massiiv tõstetud võrestikutornile, ei istu katusel",
+      "Massiiv tõstetud võrestikutornile, mitte katusele",
       "BAZ 8x8 šassii, kabiin tornist selgelt eespool",
       "Mitu masinat töötavad koos ühe süsteemina",
     ],
@@ -74,7 +74,7 @@ export const etRadars: Record<string, ItemTranslation> = {
     aka: "Ilves",
     rangeText: "Avastab miinipildujad kuni umbes 10 km, raketiheitjad kuni umbes 20 km",
     cues: [
-      "Ümmargune peegelantenn alusel — Zoopark istub samal kerel lameda ristkülikukujulise paneeliga",
+      "Ümmargune peegelantenn alusel — Zoopark asetseb samal kerel lameda ristkülikukujulise paneeliga",
       "Antenn klapitakse sõiduks tagatekile alla",
       "Pikk MT-LBu kere, seitse tugiratast, torni ei ole",
       "Kandiline seadmekast antenni ja juhikoha vahel",
@@ -94,7 +94,7 @@ export const etRadars: Record<string, ItemTranslation> = {
     cues: [
       "MT-LB kere väikese pöörleva trummelantenniga",
       "Antenn ümara katte sees, mitte lahtine massiiv",
-      "Istub lühikesel alusel vahetult tagumise teki kohal",
+      "Asetseb lühikesel alusel vahetult tagumise teki kohal",
       "Väikseim antenn kogu õppetükis",
     ],
     placements: [

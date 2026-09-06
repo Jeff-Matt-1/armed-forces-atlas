@@ -151,7 +151,7 @@ export const etTanks: Record<string, ItemTranslation> = {
     cues: [
       "Tankikahur kerel, mis on selle jaoks palju liiga kerge",
       "Seitse väikest BMD-perekonna tugiratast, mitte tanki suured",
-      "Väga madal lame kere, mis istub maapinna lähedal",
+      "Väga madal lame kere, mis asetseb maapinna lähedal",
       "Ujuv, taga veejoad, mida ühelgi põhilahingutankil ei ole",
     ],
     placements: [

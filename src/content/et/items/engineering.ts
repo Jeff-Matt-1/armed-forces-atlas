@@ -97,7 +97,7 @@ export const etEngineering: Record<string, ItemTranslation> = {
     cues: [
       "Kokkuklapitavad pontoonlülid, üks iga veoauto kohta",
       "Lülid avanevad vee peal lamedaks sõiduteeks",
-      "Sild istub madalal, peaaegu veepinnaga tasa",
+      "Sild asetseb madalal, peaaegu veepinnaga tasa",
       "Tunne ära pigem kolonnis olevad veoautod kui sild ise",
     ],
     placements: [

@@ -176,7 +176,7 @@ export const etArtillery: Record<string, ItemTranslation> = {
     armament: "24 × 220 mm termobaarilist raketti",
     rangeText: "6 km — palju lühem kui ükski teine raketisüsteem siin",
     cues: [
-      "Roomikud, mitte rattad: heitja istub T-72 tankišassiil",
+      "Roomikud, mitte rattad: heitja asetseb T-72 tankišassiil",
       "Kandiline madal toruplokk seal, kus oleks tankitorn",
       "Kahuritoru ei ole üldse, mis eristab teda kohe tankist",
       "Heitjaplokk on eest taha palju lühem kui Gradil",
@@ -253,7 +253,7 @@ export const etArtillery: Record<string, ItemTranslation> = {
     cues: [
       "BMP-3 kere suure ümara torniga, mille toru on lühike ja jäme",
       "Toru palju kobakam kui ükski tankikahur sarnasel kerel",
-      "Torn istub kõrgel ja tekil kaugel taga",
+      "Torn asetseb kõrgel ja tekil kaugel taga",
       "Ujuv, taga BMP-3 veejoad",
     ],
     placements: [

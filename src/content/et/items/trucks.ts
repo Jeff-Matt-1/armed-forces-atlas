@@ -57,7 +57,7 @@ export const etTrucks: Record<string, ItemTranslation> = {
     cues: [
       "Väga suur mootorikattega 6x6 hiiglaslike madalrõhurehvidega",
       "Punnis ümar mootorikate — hüüdnimi tähendab niinejalatsit",
-      "Istub Uralist märgatavalt kõrgemal",
+      "Asetseb Uralist märgatavalt kõrgemal",
       "Sageli koos pioneeride silla- või pontoonkoormaga",
     ],
     placements: ["Pioneeriüksused silla- ja pontoonikandjana", "Raskeevakuatsioon ja tehnika vedu"],
@@ -106,7 +106,7 @@ export const etTrucks: Record<string, ItemTranslation> = {
       "Kaks roomikkeret liigendiga ühendatud — liigendmasin, mitte üks sõiduk",
       "Mõlemad sektsioonid roomikutel, roomikud väga laiad ja madala survega",
       "Kabiin esisektsioonil, veosekere tagumisel",
-      "Istub kõrgel käiguosal ja ujub ilma ettevalmistuseta",
+      "Asetseb kõrgel käiguosal ja ujub ilma ettevalmistuseta",
     ],
     placements: [
       "Arktika- ja põhjaüksused seal, kuhu rattad ei pääse",

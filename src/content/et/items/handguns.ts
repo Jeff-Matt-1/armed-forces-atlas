@@ -179,7 +179,7 @@ export const etHandguns: Record<string, ItemTranslation> = {
     rangeText: "Efektiivne kuni umbes 800 m",
     cues: [
       "Pikk raud ja skelettpära — päras on ava läbi",
-      "Sihik PSO-1 istub kõrgel külgsiinil, nihutatud vasakule",
+      "Sihik PSO-1 asetseb kõrgel külgsiinil, nihutatud vasakule",
       "Peenike laesäär kahe pika õhuavaga mõlemal küljel",
       "Pikem ja peenem kui ükski Kalašnikov",
     ],

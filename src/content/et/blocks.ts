@@ -53,7 +53,7 @@ export const etBlocks: Record<string, BlockTranslation> = {
     title: "Veoautod",
     subtitle: "Ural, KamAZ, KrAZ ja logistikašassiid",
     brief:
-      "Šassii, mis veab kõike ülejäänut. Tuvastamine käib kolme küsimuse kaudu: mitu telge, kas mootorikate on kabiini ees või istub kabiin mootori peal ja mis on veokastis. Viimane loeb enim — sama KamAZi kabiin on nii veose, juhtimispunkti, elektroonilise sõjapidamise kabiini kui radari varjualuse all, nii et veoauto ise ei ütle kunagi, millise süsteemiga on tegemist.",
+      "Šassii, mis veab kõike ülejäänut. Tuvastamine käib kolme küsimuse kaudu: mitu telge, kas mootorikate on kabiini ees või asetseb kabiin mootori peal ja mis on veokastis. Viimane loeb enim — sama KamAZi kabiin on nii veose, juhtimispunkti, elektroonilise sõjapidamise kabiini kui radari varjualuse all, nii et veoauto ise ei ütle kunagi, millise süsteemiga on tegemist.",
     doctrineNote:
       "Grau ja Bartles märgivad, et Vene allüksustel on oma veovõimekust vähe ja nad toetuvad tugevalt raudteele. Veoautopark on seetõttu tegelik piirang sellele, kui kaugele raudteesõlmest üksus võitlema suudab minna, mistõttu logistikamasinate lugemine on viis ulatuse hindamiseks.",
   },
@@ -77,7 +77,7 @@ export const etBlocks: Record<string, BlockTranslation> = {
     title: "Soomustransportöörid",
     subtitle: "BTR-perekond ja roomiktransportöörid",
     brief:
-      "Vedajad, mitte lahingumasinad. Ratastel BTR-liin näeb kaugelt ühesugune välja — kaheksa ratast, paadikere, väike torn — nii et tuvastamine taandub kahele detailile: kas küljeuks on olemas ja mis tornis istub. Ust ei ole tähendab BTR-60, väikesed luugid BTR-70, suur kaheosaline uks BTR-80 ja pikk peenike toru selle ukse kohal BTR-82A. Roomiktransportööre eristab see, kui madalal nad istuvad.",
+      "Vedajad, mitte lahingumasinad. Ratastel BTR-liin näeb kaugelt ühesugune välja — kaheksa ratast, paadikere, väike torn — nii et tuvastamine taandub kahele detailile: kas küljeuks on olemas ja mis tornis asetseb. Ust ei ole tähendab BTR-60, väikesed luugid BTR-70, suur kaheosaline uks BTR-80 ja pikk peenike toru selle ukse kohal BTR-82A. Roomiktransportööre eristab see, kui madalal nad asetsevad.",
     doctrineNote:
       "Need toovad jalaväe kohale ja lähevad siis eest ära. Grau ja Bartles märgivad, et Vene motolaskurüksused ootavad mahatulekut lähedal; vedaja ülesanne on üle elada lähenemine, mitte rünnak ja seepärast on tema relvastus kaitsev.",
   },
@@ -109,7 +109,7 @@ export const etBlocks: Record<string, BlockTranslation> = {
     title: "Radarid",
     subtitle: "Seire, vastupatareituli ja sihtmärkide leidmine",
     brief:
-      "Loe antenni ja radar on käes. Mõõt käib koos lainepikkuse ja ulatusega: kahe veoauto laiune pikkade varraste võre on meeterlaine jaam, mis otsib lennukeid sadade kilomeetrite kauguselt, samas kui väike trummel roomikkerel otsib mõne kilomeetri pealt sõidukeid või mürske. Seejärel küsi, mida ta jahib — õhuseirejaamad seisavad kõrgel mastil ja pöörlevad ringi, lahinguvälja- ja vastupatareijaamad istuvad madalal ja skaneerivad kitsast sektorit.",
+      "Loe antenni ja radar on käes. Mõõt käib koos lainepikkuse ja ulatusega: kahe veoauto laiune pikkade varraste võre on meeterlaine jaam, mis otsib lennukeid sadade kilomeetrite kauguselt, samas kui väike trummel roomikkerel otsib mõne kilomeetri pealt sõidukeid või mürske. Seejärel küsi, mida ta jahib — õhuseirejaamad seisavad kõrgel mastil ja pöörlevad ringi, lahinguvälja- ja vastupatareijaamad asetsevad madalal ja skaneerivad kitsast sektorit.",
     doctrineNote:
       "Kõige olulisemad on siin vastupatareijaamad. Nad jälgivad mürsku lennus ja arvutavad tagasi kahurini, mis teeb neist ühed väärtuslikumad sihtmärgid lahinguväljal, kus tulemuse otsustab suurtükivägi — sellest roomikud, madal profiil ja kohe pärast kiirgamist positsiooni vahetamine.",
   },
