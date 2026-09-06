@@ -82,7 +82,7 @@ export const etRecon: Record<string, ItemTranslation> = {
     cues: [
       "Paadikujuline kere kõrge terava vööriga — ehitatud ujuma",
       "BMP-1 käiguosa: kuus väikest tugiratast palju kogukama kere all",
-      "Klapitavad sondiõlad kere esiosal, üks kummalgi pool",
+      "Klapitavad pinnasesondid kere esiosal, üks kummalgi pool",
       "Katusel sensorite ja periskoopide kobar seal, kus oleks torn",
     ],
     placements: [
