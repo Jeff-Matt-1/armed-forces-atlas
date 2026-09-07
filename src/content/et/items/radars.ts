@@ -30,7 +30,7 @@ export const etRadars: Record<string, ItemTranslation> = {
     ],
     placements: [
       "Ringkonna tasandi raadiotehnilised väed",
-      "Toidab kaugmaa õhutõrjeraketisüsteeme",
+      "Toetab kaugmaa õhutõrjeraketisüsteeme",
     ],
     doctrineNote:
       "P-18 taoliste jaamade kaasaegne järglane, mis ühendab mitu lainevahemikku, nii et see, mida ühes on raske näha, on teises nähtav. Tegemist on strateegilise sensoriga: ühe leidmine tähendab teda teenindava õhutõrjevõrgu leidmist.",
