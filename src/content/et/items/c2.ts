@@ -23,10 +23,10 @@ export const etC2: Record<string, ItemTranslation> = {
     aka: "Kajakas",
     rangeText: "Mitu raadiovõrku korraga",
     cues: [
-      "BTR-60 kere — kaheksa ratast, terav paadivöör, küljeuksi ei ole",
+      "BTR-60 kere — kaheksa ratast, terav paadinina, küljeuksi ei ole",
       "Torni ei ole seal, kus BTR-60PB seda kannaks",
       "Mitu varrasantenni piki kere katust",
-      "Katus tõstetud madalaks kastiks tööruumi kohal",
+      "Madal kast katusel töösektsiooni kohal",
     ],
     placements: [
       "Nõukogudeaegsete koosseisude juhtimis- ja staabimasin",
