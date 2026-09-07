@@ -52,6 +52,8 @@ export function BadgeIndicator() {
         title={label}
         aria-label={label}
         aria-expanded={open}
+        // The award overlay flies its badge to this button and needs to measure it.
+        data-badge-slot=""
         className="flex items-center rounded-sm p-1 transition-colors hover:bg-secondary"
       >
         <ExcellenceBadge rank={state.rank} size={26} />

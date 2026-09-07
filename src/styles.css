@@ -242,8 +242,25 @@
   }
 }
 
-.badge-award-scrim {
+/* The dimming layer, separate from the overlay itself so it can fade out
+ * from under the badge while the badge is still flying to the header. */
+.badge-award-veil {
+  background: color-mix(in oklab, var(--color-background) 92%, transparent);
   animation: badge-scrim 220ms ease-out both;
+}
+
+/* Setting animation: none is what releases the entry animation's fill, so the
+ * transition below has an opacity it is allowed to change. */
+.badge-award-veil-out {
+  animation: none;
+  opacity: 0;
+  transition: opacity 520ms ease-out;
+}
+
+.badge-award-text-out {
+  animation: none;
+  opacity: 0;
+  transition: opacity 240ms ease-out;
 }
 
 .badge-award-mark {
