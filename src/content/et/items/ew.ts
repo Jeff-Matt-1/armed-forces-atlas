@@ -31,7 +31,7 @@ export const etEw: Record<string, ItemTranslation> = {
       "Paaris Krasuha-4-ga samades allüksustes",
     ],
     doctrineNote:
-      "Ehitatud just õhus olevate varajase hoiatuse lennukite pimestamiseks. Kui Krasuha-4 katab hulga õhukiirgureid, siis see keskendub sellele, mis näeb kõige kaugemale.",
+      "Ehitatud just õhus olevate eelhoiatuslennukite pimestamiseks. Kui Krasuha-4 katab hulga õhukiirgureid, siis see keskendub sellele, mis näeb kõige kaugemale.",
     service: "Kasutuses",
   },
   "r-330zh-zhitel": {
@@ -91,8 +91,8 @@ export const etEw: Record<string, ItemTranslation> = {
     rangeText: "Kaitseb enda ümber umbes 50 hektarit",
     cues: [
       "MT-LB kere suure avatud võrestikantenni all",
-      "Raam on lai horisontaalne peenikeste varraste massiiv, mitte taldrik",
-      "Massiiv asetseb lühikesel mastil otse kere kohal",
+      "Raam on lai horisontaalne peenikeste varraste võre, mitte taldrik",
+      "Antennivõre asetseb lühikesel mastil otse kere kohal",
       "Tagumisele tekile on sageli püstitatud telkvarjualune",
     ],
     placements: [

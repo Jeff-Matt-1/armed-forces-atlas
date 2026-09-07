@@ -26,7 +26,7 @@ export const radars: Item[] = [
     rangeText: "Detects aircraft to roughly 250 km",
     cues: [
       "Broad lattice of long horizontal rods in stacked rows",
-      "Array carried on a Ural truck, with a second truck for the cabin",
+      "Array on one Ural truck, the operator cabin on a second",
       "Rods are widely spaced — the metre band needs large, sparse elements",
       "Array rotates as a whole on a mast above the vehicle",
     ],
@@ -35,7 +35,7 @@ export const radars: Item[] = [
       "Early warning and target acquisition for air defence units",
     ],
     doctrineNote:
-      "Old, and valued for the reason it is old: metre-band wavelengths return echoes from shapes optimised against much shorter ones, so a set of this age remains awkward for stealth aircraft to defeat.",
+      "Old, and valued for being old. Stealth shaping is designed against the centimetre bands most modern radars use; the P-18 works on metre-long waves, which that shaping does far less to defeat. It will not give a missile anything to guide on, but it will tell you something is up there — which is why the old sets are kept.",
     crew: null,
     service: "In service",
     sort: 0,

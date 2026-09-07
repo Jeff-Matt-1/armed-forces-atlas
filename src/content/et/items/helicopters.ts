@@ -134,7 +134,7 @@ export const etHelicopters: Record<string, ItemTranslation> = {
   },
   "ka-31": {
     aka: "Helix",
-    rangeText: "Avastab õhusõidukid umbes 100–150 km, laevad umbes 250 km kauguselt",
+    rangeText: "Avastab õhusõidukeid umbes 100–150 km ja laevu umbes 250 km kauguselt",
     cues: [
       "Suur lame radariantenn kere alla lamedaks klapitud — lennul pöördub alla ja hakkab pöörlema",
       "Relvi ega sonarit ei ole: kere kannab radarit ja kütust",
@@ -142,7 +142,7 @@ export const etHelicopters: Record<string, ItemTranslation> = {
       "Koaksiaaltiivikud ja kaks kiilu näitavad sama perekonda",
     ],
     placements: [
-      "Mereväelennuvägi, varajane hoiatus laevagrupile",
+      "Mereväelennuvägi, eelhoiatus laevagrupile",
       "Haruldane: teenistuses on vaid mõni üksik",
     ],
     doctrineNote:

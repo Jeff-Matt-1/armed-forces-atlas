@@ -23,7 +23,7 @@ export const etRecon: Record<string, ItemTranslation> = {
   },
   "brm-1k": {
     armament: "73 mm 2A28 Grom, 7,62 mm PKT",
-    rangeText: "Seireradar avastab sõidukid umbes 7 km kauguselt",
+    rangeText: "Maaradar avastab sõidukeid umbes 7 km kauguselt",
     cues: [
       "BMP-1 kere ja kuus tugiratast, kuid suurem kaheinimesetorn",
       "Torn on BMP-1 omast tagapool ja raketisiini ei ole",
@@ -42,7 +42,7 @@ export const etRecon: Record<string, ItemTranslation> = {
   "prp-4a-argus": {
     aka: "Liikuv luurepunkt",
     armament: "7,62 mm PKT",
-    rangeText: "Avastab ja määrab sihtmärgid kuni umbes 10 km",
+    rangeText: "Avastab ja määrab sihtmärke kuni umbes 10 km kaugusel",
     cues: [
       "BMP kere torniga, millel on kaks suurt kuplikujulist luuki",
       "Sensori- ja optikakorpused seal, kus peaks olema kahur — pearelva ei ole",

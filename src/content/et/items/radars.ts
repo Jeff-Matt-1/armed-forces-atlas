@@ -4,27 +4,27 @@ import type { ItemTranslation } from "@/content/translations";
 export const etRadars: Record<string, ItemTranslation> = {
   "p-18": {
     aka: "Terek; Spoon Rest D",
-    rangeText: "Avastab lennukid kuni umbes 250 km",
+    rangeText: "Avastab lennukeid kuni umbes 250 km kaugusel",
     cues: [
       "Lai võrestik pikkadest horisontaalsetest varrastest üksteise kohal ridades",
-      "Massiiv Urali veoautol, kabiini jaoks teine veoauto",
+      "Antennivõre ühel Urali veoautol, juhtimiskabiin teisel",
       "Vardad on hõredalt — meeterlaine vajab suuri hajusaid elemente",
-      "Massiiv pöörleb tervikuna masina kohal mastil",
+      "Antennivõre pöörleb tervikuna masina kohal mastil",
     ],
     placements: [
       "Raadiotehnilised väed õhuseireks",
-      "Varajane hoiatus ja sihtmärkide leidmine õhutõrjeüksustele",
+      "Eelhoiatus ja sihtmärkide leidmine õhutõrjeüksustele",
     ],
     doctrineNote:
-      "Vana ja väärtuslik just vanuse tõttu: meeterlaine peegeldub kujudelt, mis on optimeeritud palju lühemate lainete vastu, nii et selles vanuses jaam jääb varjatud lennukitele ebamugavaks.",
+      "Vana ja just vanuse tõttu väärtuslik. Varjatud lennuki kuju on kavandatud petma sentimeetrilainet, mida kasutab enamik kaasaegseid radareid; P-18 töötab meetripikkustel lainetel, mille vastu see kuju palju ei aita. Täpsust raketi juhtimiseks ta ei anna, kuid ütleb, et midagi on õhus — ja seepärast hoitakse vana jaama teenistuses.",
     service: "Kasutuses",
   },
   "nebo-m": {
     aka: "Taevas-M",
-    rangeText: "Avastab lennukid kuni umbes 600 km",
+    rangeText: "Avastab lennukeid kuni umbes 600 km kaugusel",
     cues: [
-      "Tohutu ristkülikuline massiiv, mitu rida sügav ja masinast palju laiem",
-      "Massiiv tõstetud võrestikutornile, mitte katusele",
+      "Tohutu ristkülikuline antennivõre, mitu rida sügav ja masinast palju laiem",
+      "Antennivõre tõstetud võrestikutornile, mitte katusele",
       "BAZ 8x8 šassii, kabiin tornist selgelt eespool",
       "Mitu masinat töötavad koos ühe süsteemina",
     ],
@@ -38,11 +38,11 @@ export const etRadars: Record<string, ItemTranslation> = {
   },
   "kasta-2e2": {
     aka: "Flat Face E",
-    rangeText: "Avastab lennukid kuni umbes 150 km",
+    rangeText: "Avastab lennukeid kuni umbes 150 km kaugusel",
     cues: [
       "Üksainus terviklik ristkülikuline paneel, mitte lahtine varrastevõrestik",
       "Paneel kõrgel peenikesel mastil masinast tunduvalt kõrgemal",
-      "Märgatavalt väiksem kui Nebo-M massiiv",
+      "Märgatavalt väiksem kui Nebo-M antennivõre",
       "Kõrvale seatud haagiskabiin ja generaator",
     ],
     placements: [
@@ -72,7 +72,8 @@ export const etRadars: Record<string, ItemTranslation> = {
   },
   "ark-1": {
     aka: "Ilves",
-    rangeText: "Avastab miinipildujad kuni umbes 10 km, raketiheitjad kuni umbes 20 km",
+    rangeText:
+      "Avastab miinipildujaid kuni umbes 10 km ja raketiheitjaid kuni umbes 20 km kaugusel",
     cues: [
       "Ümmargune peegelantenn alusel — Zoopark asetseb samal kerel lameda ristkülikukujulise paneeliga",
       "Antenn klapitakse sõiduks tagatekile alla",
@@ -90,10 +91,10 @@ export const etRadars: Record<string, ItemTranslation> = {
   "snar-10": {
     aka: "Leopard",
     armament: "7,62 mm PKT",
-    rangeText: "Avastab sõidukid kuni 20 km, liikuvad inimesed 10 km",
+    rangeText: "Avastab sõidukeid kuni 20 km ja liikuvaid inimesi 10 km kaugusel",
     cues: [
       "MT-LB kere väikese pöörleva trummelantenniga",
-      "Antenn ümara katte sees, mitte lahtine massiiv",
+      "Antenn ümara katte sees, mitte lahtine võre",
       "Asetseb lühikesel alusel vahetult tagumise teki kohal",
       "Väikseim antenn kogu õppetükis",
     ],
