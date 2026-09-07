@@ -9,11 +9,13 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
+import { BadgeAward } from "@/components/BadgeAward";
 import { MasteryRing } from "@/components/MasteryRing";
 import { getItem, imageFitClass } from "@/lib/content";
 import { useLocale } from "@/i18n/LocaleProvider";
 import type { CorrectAnswer } from "@/lib/progress-types";
-import { useRecordAttempt } from "@/lib/progress";
+import { rankAfterFlawless } from "@/lib/badges";
+import { useProgress, useRecordAttempt } from "@/lib/progress";
 import { PASS_RATIO, type Question } from "@/lib/quiz";
 import { cn } from "@/lib/utils";
 
@@ -47,7 +49,10 @@ export function QuizRunner({
   const [finished, setFinished] = useState(false);
   const [saveError, setSaveError] = useState<string | null>(null);
   const [cardOpen, setCardOpen] = useState(false);
+  // The rung a flawless run just earned, held until the overlay is dismissed.
+  const [awarded, setAwarded] = useState<number | null>(null);
   const recordAttempt = useRecordAttempt();
+  const progress = useProgress();
 
   const question = questions[index];
   const questionItem = question ? getItem(question.itemSlug) : undefined;
@@ -100,6 +105,13 @@ export function QuizRunner({
           missed,
           correct,
         });
+        // Worked out from the rows as they were before the save, so the
+        // overlay does not wait for progress to come back. Only a block exam
+        // with nothing missed earns a rung, and only the first time.
+        if (mode === "exam" && blockSlug && finalScore === total) {
+          const rank = rankAfterFlawless(progress.blockProgress, blockSlug);
+          if (rank !== null) setAwarded(rank);
+        }
         setFinished(true);
       } catch {
         setSaveError(t("quiz.saveFailed"));
@@ -113,7 +125,8 @@ export function QuizRunner({
   if (finished) {
     return (
       <div className="mx-auto w-full max-w-2xl px-4 py-12">
-        <p className="plate-label">{mode === "exam" ? "Exam result" : "Drill result"}</p>
+        {awarded !== null && <BadgeAward rank={awarded} onDone={() => setAwarded(null)} />}
+        <p className="plate-label">{mode === "exam" ? t("quiz.result") : t("quiz.drillResult")}</p>
         <div className="mt-4 flex items-center gap-5 border border-border bg-card p-6">
           <MasteryRing value={percent} size={76} label={`${percent}%`} />
           <div>

@@ -109,6 +109,13 @@ const en = {
   "badge.complete": "Every block cleared without a mistake. There is no higher rank.",
   "badge.cleanExams": "Cleared without a mistake ({count})",
   "badge.remaining": "{count} blocks still to clear perfectly",
+
+  // Shown full-screen the moment a flawless exam earns a rung: the badge
+  // itself lives in the header, where it was appearing unnoticed.
+  "badge.awardEyebrow": "Excellence badge",
+  "badge.awardTitle": "Rank earned",
+  "badge.awardFrameTitle": "Frame earned",
+  "badge.awardDismiss": "Dismiss",
   // Privacy
   "privacy.eyebrow": "Data",
   "privacy.title": "Privacy",
@@ -417,6 +424,11 @@ const et: Record<StringKey, string> = {
   "badge.complete": "Kõik õppetükid sooritatud veatult. Kõrgemat astet ei ole.",
   "badge.cleanExams": "Veatult sooritatud ({count})",
   "badge.remaining": "{count} õppetükki veel veatult sooritada",
+
+  "badge.awardEyebrow": "Meisterlikkuse märk",
+  "badge.awardTitle": "Aste teenitud",
+  "badge.awardFrameTitle": "Raam teenitud",
+  "badge.awardDismiss": "Sulge",
   // Privacy
   "privacy.eyebrow": "Andmed",
   "privacy.title": "Privaatsus",

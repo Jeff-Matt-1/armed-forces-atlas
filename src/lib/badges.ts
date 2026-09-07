@@ -102,6 +102,36 @@ export type BadgeState = {
  * until something has actually been cleared, so an untouched account carries
  * no badge at all.
  */
+/**
+ * The rank a flawless exam on `slug` is about to earn, or null if it earns
+ * nothing.
+ *
+ * Answered from the rows as they stand plus the result being saved, rather
+ * than by waiting for progress to round-trip, so the award overlay can name
+ * the new rung the instant the last question is answered. Null when the block
+ * was already clean, because a block gives its step exactly once — retaking a
+ * block you have already cleared should not throw the ceremony again.
+ */
+export function rankAfterFlawless(rows: BlockProgressRow[], slug: string): number | null {
+  const alreadyClean = rows.some(
+    (row) => row.block_slug === slug && (row.best_exam ?? 0) >= FLAWLESS,
+  );
+  if (alreadyClean) return null;
+
+  const others = rows.filter((row) => row.block_slug !== slug);
+  const existing = rows.find((row) => row.block_slug === slug);
+  const withResult: BlockProgressRow = {
+    block_slug: slug,
+    mastery: existing?.mastery ?? 0,
+    exam_passed: true,
+    best_score: FLAWLESS,
+    best_photo_id: existing?.best_photo_id ?? 0,
+    best_structure: existing?.best_structure ?? 0,
+    best_exam: FLAWLESS,
+  };
+  return badgeState([...others, withResult]).rank;
+}
+
 export function badgeState(rows: BlockProgressRow[]): BadgeState {
   const blocks = flawlessBlocks(rows);
   if (blocks.length === 0) return { rank: null, blocks, complete: false };

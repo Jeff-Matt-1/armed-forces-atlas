@@ -1,7 +1,7 @@
 import { describe, expect, test } from "bun:test";
 
 import { readyBlocks } from "@/lib/content";
-import { badgeState, maxRank, tierFor } from "@/lib/badges";
+import { badgeState, maxRank, rankAfterFlawless, tierFor } from "@/lib/badges";
 import type { BlockProgressRow } from "@/lib/progress-types";
 
 const row = (block_slug: string, best_exam: number): BlockProgressRow => ({
@@ -112,5 +112,32 @@ describe("excellence badges", () => {
       if (tier.stars > 3) over.push(`rank ${rank}: ${tier.stars} stars`);
     }
     expect(over).toEqual([]);
+  });
+});
+
+describe("the rung a flawless exam is about to earn", () => {
+  test("Foundations cleared first announces the bare frame", () => {
+    expect(rankAfterFlawless([], foundations)).toBe(0);
+  });
+
+  test("a further block announces the next rank up", () => {
+    const rows = [row(foundations, 100), row(second, 100)];
+    expect(rankAfterFlawless(rows, third)).toBe(2);
+  });
+
+  test("a block already cleared announces nothing", () => {
+    const rows = [row(foundations, 100), row(second, 100)];
+    expect(rankAfterFlawless(rows, second)).toBeNull();
+  });
+
+  test("clearing a block that was passed with a mistake still announces", () => {
+    const rows = [row(foundations, 100), row(second, 94)];
+    expect(rankAfterFlawless(rows, second)).toBe(1);
+  });
+
+  test("it agrees with the rank progress will settle on", () => {
+    const rows = [row(foundations, 100)];
+    const announced = rankAfterFlawless(rows, second);
+    expect(announced).toBe(badgeState([...rows, row(second, 100)]).rank);
   });
 });

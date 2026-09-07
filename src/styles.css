@@ -182,3 +182,86 @@
     );
   background-size: 44px 44px;
 }
+
+/* Excellence badge award.
+ *
+ * The badge used to appear in the header while the reader was looking at their
+ * exam result, so the thing they had just earned went unnoticed. These drive a
+ * short overlay instead: the badge lands, a ring goes out from behind it, and
+ * the whole thing leaves after a couple of seconds.
+ *
+ * Motion is the point here, so it is not decoration that can simply be dropped
+ * for prefers-reduced-motion — the reduced variant still shows and dismisses
+ * the badge, it just arrives by fading rather than by moving. */
+@keyframes badge-land {
+  0% {
+    opacity: 0;
+    transform: scale(0.35) rotate(-14deg);
+  }
+  55% {
+    opacity: 1;
+    transform: scale(1.12) rotate(3deg);
+  }
+  75% {
+    transform: scale(0.97) rotate(-1deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+@keyframes badge-ring {
+  0% {
+    opacity: 0.75;
+    transform: scale(0.4);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(2.6);
+  }
+}
+
+@keyframes badge-rise {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes badge-scrim {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.badge-award-scrim {
+  animation: badge-scrim 220ms ease-out both;
+}
+
+.badge-award-mark {
+  animation: badge-land 900ms cubic-bezier(0.22, 1.2, 0.36, 1) both;
+}
+
+.badge-award-ring {
+  animation: badge-ring 1100ms ease-out 140ms both;
+}
+
+.badge-award-text {
+  animation: badge-rise 420ms ease-out 520ms both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .badge-award-mark,
+  .badge-award-ring,
+  .badge-award-text {
+    animation: badge-scrim 260ms ease-out both;
+  }
+}
