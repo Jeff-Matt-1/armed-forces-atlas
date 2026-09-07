@@ -36,7 +36,7 @@ export const etSubmarines: Record<string, ItemTranslation> = {
       "Asendatakse järk-järgult Borei klassiga",
     ],
     doctrineNote:
-      "Põlvkond, mille Borei asendab, ja selgeim näide tuvastusreeglist: mida kõrgem ja järsem on küür, seda vanem on laev.",
+      "Borei asendab just seda põlvkonda ja see on ühtlasi selgeim näide tuvastusreeglist: mida kõrgem ja järsem on küür, seda vanem on laev.",
     crew: "Umbes 135",
     service: "Kasutuses",
   },

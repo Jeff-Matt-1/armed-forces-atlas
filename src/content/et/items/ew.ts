@@ -48,7 +48,7 @@ export const etEw: Record<string, ItemTranslation> = {
       "Paigutatakse katma piirkonda, mitte üksusega kaasa minema",
     ],
     doctrineNote:
-      "Ründab satelliitnavigatsiooni ja satelliittelefone ning ulatub ka mobiilside- ja V/UHF-sagedustele — nii katkestab ta nii drooni juhtimislingi kui ka satelliitnavigatsiooni, mille järgi see lendab, ja mobiilsidevõrgu, millele üksus oma raadiote kadudes taandub. Tõmmitsad on korraga äratundmismärk ja nõrkus: ülesseadmine võtab aega ja kiiresti ümber paigutuda ei saa.",
+      "Ründab satelliitnavigatsiooni ja satelliittelefone ning ulatub ka mobiilside- ja V/UHF-sagedustele — nii katkestab ta drooni juhtimislingi ja satelliitnavigatsiooni, mille järgi see lendab. Katkeb ka mobiilsidevõrk, millele üksus oma raadiote kadudes taandub. Tõmmitsad on korraga äratundmismärk ja nõrkus: ülesseadmine võtab aega ja kiiresti ümber paigutuda ei saa.",
     service: "Kasutuses",
   },
   "borisoglebsk-2": {
@@ -83,7 +83,7 @@ export const etEw: Record<string, ItemTranslation> = {
       "Antakse ette, mitte ei hoita ringkonna tasandil",
     ],
     doctrineNote:
-      "Pigem kaitsev kui ründav: ta surub alla raadiolinke, millega lõhatakse teeäärseid laenguid, ja katab kolonni optiliselt. Tema olemasolu kolonnis ütleb, et marsruuti ei peeta turvaliseks.",
+      "Pigem kaitsev kui ründav: ta katab kolonni optiliselt ja surub alla raadiolinke, millega lõhatakse teeäärseid laenguid. Tema olemasolu kolonnis ütleb, et marsruuti ei peeta turvaliseks.",
     service: "Kasutuses",
   },
   "rtut-bm": {

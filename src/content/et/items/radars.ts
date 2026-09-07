@@ -63,7 +63,7 @@ export const etRadars: Record<string, ItemTranslation> = {
       "Tervikuna madal — mitte midagi õhuseirejaama masti kõrgusest",
     ],
     placements: [
-      "Suurtükiväe luureüksuste vastupatareiradar",
+      "Suurtükiväe luureüksuste kaudtuleradar",
       "Paigutatakse liini lähedale taha, et sektor kataks vastase kahuripiirkonnad",
     ],
     doctrineNote:
@@ -81,11 +81,11 @@ export const etRadars: Record<string, ItemTranslation> = {
       "Kandiline seadmekast antenni ja juhikoha vahel",
     ],
     placements: [
-      "Suurtükiväeluure üksuste vastupatareijaam",
+      "Suurtükiväeluure üksuste kaudtuleradar",
       "Paigutatakse rindejoone taha nii, et sektor katab vastase suurtükipositsioone",
     ],
     doctrineNote:
-      "Vanem vastupatareijaam, mis on endiselt kasutuses kõrvuti Zoopargiga, mis pidi ta välja vahetama. Mõlemad sõidavad samal kerel, nii et kogu tuvastus on antenn — siin peegelantenn, seal lame paneel. Kumbki neist ütleb, et suurtükiväeluure üksus töötab ja et miinipilduja tuli läheduses maksab midagi.",
+      "Vanem kaudtuleradar, mis on endiselt kasutuses kõrvuti Zoopargiga, mis pidi ta välja vahetama. Mõlemad sõidavad samal kerel, nii et kogu tuvastus on antenn — siin peegelantenn, seal lame paneel. Kumbki neist ütleb, et suurtükiväeluure üksus töötab.",
     service: "Kasutuses",
   },
   "snar-10": {

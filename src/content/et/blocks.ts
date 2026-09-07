@@ -101,7 +101,7 @@ export const etBlocks: Record<string, BlockTranslation> = {
     title: "Juhtimissüsteemid",
     subtitle: "Juhtimispunktid, Strelets, juhtimisautomaatika",
     brief:
-      "Juhtimismasinad on ehitatud silmatorkamatuks, nii et tuvastamine käib lahutamise teel: tuttav kere, millelt relv puudub ja mille asemel on antennid. Neid eristab šassii ja šassii järgib tasandit — kastkerega veoauto tagalas, ratastel vedaja koos manöövriüksustega, roomikkere, mis suudab rünnakule järgneda, ja päris all käes hoitav terminal kaevikus.",
+      "Juhtimismasinad on ehitatud silmatorkamatuks, nii et tuvastamine käib lahutamise teel: tuttav kere, millelt relv puudub ja mille asemel on antennid. Neid eristab šassii ja šassii järgib tasandit — kastkerega veoauto tagalas, ratastel vedaja koos manöövriüksustega, rünnakule järgnev roomikkere ja päris all käes hoitav terminal kaevikus.",
     doctrineNote:
       "Juhtimispunkti leidmine on viis suurtükiväekeskse jõu halvamiseks ja mõlemad pooled teavad seda. Kõik siin on selle järgi kujundatud: masinad peidavad end tavaliste kolonnide sisse ja ahela kõige tähtsam sõlm on seade luuraja käes, mitte miski soomustatu.",
   },
@@ -109,9 +109,9 @@ export const etBlocks: Record<string, BlockTranslation> = {
     title: "Radarid",
     subtitle: "Seire, vastupatareituli ja sihtmärkide leidmine",
     brief:
-      "Loe antenni ja radar on käes. Mõõt käib koos lainepikkuse ja ulatusega: kahe veoauto laiune pikkade varraste võre on meeterlaine jaam, mis otsib lennukeid sadade kilomeetrite kauguselt, samas kui väike trummel roomikkerel otsib mõne kilomeetri pealt sõidukeid või mürske. Seejärel küsi, mida ta jahib — õhuseirejaamad seisavad kõrgel mastil ja pöörlevad ringi, lahinguvälja- ja vastupatareijaamad asetsevad madalal ja skaneerivad kitsast sektorit.",
+      "Loe antenni ja radar on käes. Mõõt käib koos lainepikkuse ja ulatusega: kahe veoauto laiune pikkade varraste võre on meeterlaine jaam, mis otsib lennukeid sadade kilomeetrite kauguselt, samas kui väike trummel roomikkerel otsib mõne kilomeetri pealt sõidukeid või mürske. Seejärel küsi, mida ta jahib — õhuseirejaamad seisavad kõrgel mastil ja pöörlevad ringi, lahinguvälja- ja kaudtuleradarid asetsevad madalal ja skaneerivad kitsast sektorit.",
     doctrineNote:
-      "Kõige olulisemad on siin vastupatareijaamad. Nad jälgivad mürsku lennus ja arvutavad tagasi kahurini, mis teeb neist ühed väärtuslikumad sihtmärgid lahinguväljal, kus tulemuse otsustab suurtükivägi — sellest roomikud, madal profiil ja kohe pärast kiirgamist positsiooni vahetamine.",
+      "Kõige olulisemad on siin kaudtuleradarid. Nad jälgivad mürsku lennus ja arvutavad tagasi kahurini, mis teeb neist ühed väärtuslikumad sihtmärgid lahinguväljal, kus tulemuse otsustab suurtükivägi — sellest roomikud, madal profiil ja kohe pärast kiirgamist positsiooni vahetamine.",
   },
   engineering: {
     title: "Pioneerimasinad",
@@ -167,7 +167,7 @@ export const etBlocks: Record<string, BlockTranslation> = {
     brief:
       "Loe mootorid, siis loe tiib. Üks sirge tiib kahe kerekülgse mootori kohal on ründelennuk; kaks mootorit noolja tiiva all koos kahe sabakiiluga on hävitaja; neli mootorit tähendab pommitajat või transpordilennukit ja saba ütleb, kumba. Peened eristused tulevad viimasena, sest Flankeri perekond on üks lennukikere venitatud mitmeks lennukiks ja neid eristab usaldusväärselt ainult nina.",
     doctrineNote:
-      "Vene õhuväge kasutatakse selleks, et jõuda sinna, kuhu kahurid ei ulatu, mitte lahingu iseseisvaks võitmiseks. Seepärast on ründelennukeid rohkem kui püüdurhävitajaid, seepärast on pommitajad raketikandjad, mis kaitstud õhuruumi ei sisene, ja seepärast otsustab transpordilennukite park, mida õhudessantväed tegelikult teha suudavad.",
+      "Vene õhuväge kasutatakse selleks, et jõuda sinna, kuhu kahurid ei ulatu, mitte lahingu iseseisvaks võitmiseks. Seepärast on ründelennukeid rohkem kui püüdurhävitajaid, seepärast on pommitajad raketikandjad, mis kaitstud õhuruumi ei sisene ja seepärast otsustab transpordilennukite park, mida õhudessantväed tegelikult teha suudavad.",
   },
   missiles: {
     title: "Raketisüsteemid",

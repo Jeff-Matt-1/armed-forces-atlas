@@ -113,7 +113,7 @@ export const etTrucks: Record<string, ItemTranslation> = {
       "Kannab šassiina ka teisi süsteeme, mitte üksnes veost",
     ],
     doctrineNote:
-      "Ehitatud pinnasele, mis muud ei kanna — lumi, soo, tundra. Kaks liigendiga ühendatud keret jaotavad raskuse nii hõredalt, et masin läbib kohti, kus tavaline roomikmasin vajub, ja just seepärast on põhjapoolsed allüksused varustatud tema, mitte veoautode ümber.",
+      "Ehitatud pinnasele, mis muud ei kanna — lumi, soo, tundra. Kaks liigendiga ühendatud keret jaotavad raskuse nii hõredalt, et masin läbib kohti, kus tavaline roomikmasin vajub ja just seepärast on põhjapoolsed allüksused varustatud tema, mitte veoautode ümber.",
     service: "Kasutuses",
   },
 };

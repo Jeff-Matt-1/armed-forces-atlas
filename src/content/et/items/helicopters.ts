@@ -146,7 +146,7 @@ export const etHelicopters: Record<string, ItemTranslation> = {
       "Haruldane: teenistuses on vaid mõni üksik",
     ],
     doctrineNote:
-      "Tõstab laevastiku radarihorisondi masti kohale, ja see on ainus viis, kuidas laev jõuab merepinna lähedal lendava raketi õigel ajal näha. Ta on maaväe seireradarite mereline vaste ja sama väärtuslik sihtmärk.",
+      "Tõstab laevastiku radarihorisondi masti kohale ja see on ainus viis, kuidas laev jõuab merepinna lähedal lendava raketi õigel ajal näha. Ta on maaväe seireradarite mereline vaste ja sama väärtuslik sihtmärk.",
     crew: "2",
     service: "Kasutuses",
   },

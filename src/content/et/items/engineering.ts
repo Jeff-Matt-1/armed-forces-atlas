@@ -33,7 +33,7 @@ export const etEngineering: Record<string, ItemTranslation> = {
       "Liigub esimeses ešelonis, mitte selle taga",
     ],
     doctrineNote:
-      "Tankišassii sellepärast, et sild peab jõudma sinna, kus on tankid, ja teekonna üle elama. Ta annab ühe ületuskoha kiiresti ja tuleb siis tagasi tuua — seepärast võtab mitme lõhkega arvestav allüksus kaasa hoopis pontoonid.",
+      "Tankišassii sellepärast, et sild peab jõudma tankide juurde ja teekonna üle elama. Ta annab ühe ületuskoha kiiresti ja tuleb siis tagasi tuua — seepärast võtab mitme lõhkega arvestav allüksus kaasa hoopis pontoonid.",
     crew: "2",
     service: "Kasutuses",
   },
@@ -139,7 +139,7 @@ export const etEngineering: Record<string, ItemTranslation> = {
       "Töötab kolonni ees, mitte koos sellega",
     ],
     doctrineNote:
-      "Teeb tee sinna, kus seda ei ole, ja just see lubab allüksusel liikuda väljaspool neid üksikuid teid, mis olemas on. Aeglane ja silmatorkav, seega töötab enne liikumist, mitte selle ajal — ühe leidmine ütleb, et marsruuti valmistatakse ette, ja umbkaudu ka seda, kuhu pealetung kavatseb minna.",
+      "Teeb tee sinna, kus seda ei ole. Just see lubab allüksusel liikuda väljaspool neid üksikuid teid, mis olemas on. Aeglane ja silmatorkav, seega töötab enne liikumist, mitte selle ajal — ühe leidmine ütleb, et marsruuti valmistatakse ette. See näitab umbkaudu ka seda, kuhu pealetung kavatseb minna.",
     crew: "2",
     service: "Kasutuses",
   },
@@ -194,7 +194,7 @@ export const etEngineering: Record<string, ItemTranslation> = {
       "Juhib kolonni läbi kahtlase vöö ja annab siis vastutuse üle",
     ],
     doctrineNote:
-      "Laseb miinid raskusega õhku, selle asemel et neid otsida. Ta puhastab koridori, mis on piisavalt lai järgnevatele, ja seepärast on ta mineeritud marsruudil kolonni eesotsas — ning masin, mille kaitsja tahab kõige esimesena peatada.",
+      "Laseb miinid raskusega õhku, selle asemel et neid otsida. Ta puhastab koridori, mis on piisavalt lai järgnevatele ja seepärast on ta mineeritud marsruudil kolonni eesotsas — ning masin, mille kaitsja tahab kõige esimesena peatada.",
     crew: "2",
     service: "Kasutuses",
   },
@@ -228,7 +228,7 @@ export const etEngineering: Record<string, ItemTranslation> = {
       "Liigub esimeses ešelonis, mitte selle taga",
     ],
     doctrineNote:
-      "MT-55 kaasaegne asendaja kerel, mis peab sammu tankidega, kellele ta silda paneb, ja talub sama tuld. Pikem ava tähendab, et ta ületab tõkkeid, mis vanema masina peataksid, ja see laiendab maad, mida allüksus saab läbitavaks pidada.",
+      "MT-55 kaasaegne asendaja kerel, mis talub sama tuld ja peab sammu tankidega, kellele ta silda paneb. Pikem ava tähendab, et ta ületab tõkkeid, mis vanema masina peataksid. See laiendab maad, mida allüksus saab läbitavaks pidada.",
     crew: "2",
     service: "Kasutuses",
   },

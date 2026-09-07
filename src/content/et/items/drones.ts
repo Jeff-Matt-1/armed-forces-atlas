@@ -84,7 +84,7 @@ export const etDrones: Record<string, ItemTranslation> = {
       "Kasutatakse suurtükiväe, radarite ja õhutõrjesüsteemide vastu",
     ],
     doctrineNote:
-      "Varitsev õhuründemoon, mis surub luure-tule-ahela kokku üheks objektiks. Teda kasutatakse just nende kõrge väärtusega süsteemide vastu, mida see atlas sind tuvastama õpetab — vastupatareiradarid, liikursuurtükid, õhutõrjemasinad.",
+      "Varitsev õhuründemoon, mis surub luure-tule-ahela kokku üheks objektiks. Teda kasutatakse just nende kõrge väärtusega süsteemide vastu, mida see atlas sind tuvastama õpetab — kaudtuleradarid, liikursuurtükid, õhutõrjemasinad.",
     service: "Kasutuses",
   },
   "uran-9": {
@@ -102,7 +102,7 @@ export const etDrones: Record<string, ItemTranslation> = {
       "Mõeldud linnarünnakuks ja tulega luureks",
     ],
     doctrineNote:
-      "Meeskonnavarustuse puudumine on tuvastustunnus: luukide puudumine tähendab, et sees ei ole kedagi. Lahingukatsetused näitasid, kui palju juhtimisulatust ja olukorrateadlikkust selline masin kaotab, ja seepärast on ta endiselt haruldane.",
+      "Meeskonnavarustuse puudumine on tuvastustunnus: luukide puudumine tähendab, et sees ei ole kedagi. Lahingukatsetused näitasid, kui palju juhtimisulatust ja olukorrateadlikkust selline masin kaotab ja seepärast on ta endiselt haruldane.",
     service: "Piiratud kasutuses",
   },
 };
