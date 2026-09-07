@@ -64,7 +64,7 @@ export const etVessels: Record<string, ItemTranslation> = {
       "Sile tahuline pealisehitus kaldus külgedega — ehitatud radari peegeldust vähendama",
       "Kinnine mast lamedate radaripaneelidega, mitte lahtine võrestik",
       "Nähtavaid raketitorusid ei ole: heitjad on siledad šahtid tekis",
-      "Üks 130 mm kahur ümaras varjatud tornis vööris",
+      "Üks 130 mm kahur ümaras vargtornis vööris",
     ],
     placements: [
       "Vene mereväe kaasaegne esimese järgu fregatt",

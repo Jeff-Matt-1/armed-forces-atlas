@@ -16,7 +16,7 @@ export const etRadars: Record<string, ItemTranslation> = {
       "Eelhoiatus ja sihtmärkide leidmine õhutõrjeüksustele",
     ],
     doctrineNote:
-      "Vana ja just vanuse tõttu väärtuslik. Varjatud lennuki kuju on kavandatud petma sentimeetrilainet, mida kasutab enamik kaasaegseid radareid; P-18 töötab meetripikkustel lainetel, mille vastu see kuju palju ei aita. Täpsust raketi juhtimiseks ta ei anna, kuid ütleb, et midagi on õhus — ja seepärast hoitakse vana jaama teenistuses.",
+      "Vana ja just vanuse tõttu väärtuslik. Varglennuki kuju on kavandatud petma sentimeetrilainet, mida kasutab enamik kaasaegseid radareid; P-18 töötab meetripikkustel lainetel, mille vastu see kuju palju ei aita. Täpsust raketi juhtimiseks ta ei anna, kuid ütleb, et midagi on õhus — ja seepärast hoitakse vana jaama teenistuses.",
     service: "Kasutuses",
   },
   "nebo-m": {
