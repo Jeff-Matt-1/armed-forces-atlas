@@ -42,13 +42,14 @@ export const heavyWeapons: Item[] = [
     name: "Kord",
     aka: null,
     imageUrl: "/images/items/kord.jpg",
-    imageCredit: "CC BY-SA 3.0 — Sergeev Pavel",
-    imagePage: "https://commons.wikimedia.org/wiki/File:Kord_6P50.jpg",
+    imageCredit: "CC BY-SA 4.0 — Vitaly V. Kuzmin",
+    imagePage:
+      "https://commons.wikimedia.org/wiki/File:12,7-%D0%BC%D0%BC_%D0%BF%D1%83%D0%BB%D0%B5%D0%BC%D0%B5%D1%82_%D0%9A%D0%BE%D1%80%D0%B4_-_%D0%A2%D0%B5%D1%85%D0%BD%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D0%B8_%D0%B2_%D0%BC%D0%B0%D1%88%D0%B8%D0%BD%D0%BE%D1%81%D1%82%D1%80%D0%BE%D0%B5%D0%BD%D0%B8%D0%B8-2010_01.jpg",
     armament: "12.7x108 mm heavy machine gun",
     rangeText: "Effective 2,000 m; 1,500 m against light armour",
     cues: [
       "Very heavy barrel with prominent muzzle brake",
-      "Mounted on a low 6T7 tripod or a vehicle ring mount",
+      "Fielded on a bipod, a low 6T7 tripod or a vehicle ring mount",
       "Side-mounted belt feed with large links",
       "Spade grips at the rear, no shoulder stock on tripod mounts",
     ],

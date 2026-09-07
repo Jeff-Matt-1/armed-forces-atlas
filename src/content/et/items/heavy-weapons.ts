@@ -22,7 +22,7 @@ export const etHeavyWeapons: Record<string, ItemTranslation> = {
     rangeText: "Efektiivne 2000 m; kerge soomuse vastu 1500 m",
     cues: [
       "Väga raske raud selge suudmepiduriga",
-      "Paigaldatud madalale 6T7 kolmjalale või sõiduki rõngasalusele",
+      "Kasutusel kahejalal, madalal 6T7 kolmjalal või sõiduki rõngasalusel",
       "Külgmine lintsöötmine suurte lülidega",
       "Taga labidkäepidemed, kolmjalal õlatuge ei ole",
     ],
