@@ -101,7 +101,7 @@ export const etApc: Record<string, ItemTranslation> = {
       "Alusmasin õhudessantväe juhtimis-, miinipilduja- ja õhutõrjevariantidele",
     ],
     doctrineNote:
-      "Õhudessantväe vaste MT-LB-le: langevarjuga heidetav lameplatvorm, mis veab kaasa kõike, mida vaja. Puuduv torn on tuvastustunnus.",
+      "Õhudessantväe vaste MT-LB-le: langevarjuga heidetav madel, mis veab kaasa kõike, mida vaja. Puuduv torn on tuvastustunnus.",
     crew: "3 + 10",
     service: "Kasutuses",
   },

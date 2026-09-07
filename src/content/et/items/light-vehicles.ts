@@ -130,7 +130,7 @@ export const etLightVehicles: Record<string, ItemTranslation> = {
     aka: "Lääts",
     cues: [
       "Lühike 4x4 soomusveok, palju väiksem kui Typhoon",
-      "Kõrge kastikere eraldi soomuskabiini taga",
+      "Kõrge furgoon eraldi soomuskabiini taga",
       "Meditsiiniversioonil punase risti märgid, sageli üle värvitud",
       "Üks tagauks astmetega, kanderaamide, mitte dessandi jaoks",
     ],

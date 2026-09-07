@@ -101,7 +101,7 @@ export const etBlocks: Record<string, BlockTranslation> = {
     title: "Juhtimissüsteemid",
     subtitle: "Juhtimispunktid, Strelets, juhtimisautomaatika",
     brief:
-      "Juhtimismasinad on ehitatud silmatorkamatuks, nii et tuvastamine käib lahutamise teel: tuttav kere, millelt relv puudub ja mille asemel on antennid. Neid eristab šassii ja šassii järgib tasandit — kastkerega veoauto tagalas, ratastel vedaja koos manöövriüksustega, rünnakule järgnev roomikkere ja päris all käes hoitav terminal kaevikus.",
+      "Juhtimismasinad on ehitatud silmatorkamatuks, nii et tuvastamine käib lahutamise teel: tuttav kere, millelt relv puudub ja mille asemel on antennid. Neid eristab šassii ja šassii järgib tasandit — furgooniga veoauto tagalas, ratastel vedaja koos manöövriüksustega, rünnakule järgnev roomikkere ja päris all käes hoitav terminal kaevikus.",
     doctrineNote:
       "Juhtimispunkti leidmine on viis suurtükiväekeskse jõu halvamiseks ja mõlemad pooled teavad seda. Kõik siin on selle järgi kujundatud: masinad peidavad end tavaliste kolonnide sisse ja ahela kõige tähtsam sõlm on seade luuraja käes, mitte miski soomustatu.",
   },

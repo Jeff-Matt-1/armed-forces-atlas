@@ -6,9 +6,9 @@ export const etC2: Record<string, ItemTranslation> = {
     aka: "R-142NSA",
     rangeText: "Lühi- ja ultralühilainevõrgud üle allüksuse vastutusala",
     cues: [
-      "GAZ-66 4x4 mootorikattega, kannab kandilist kastkeret",
-      "Varrasantennid kobaras kabiini ja kastkere katuse kohal",
-      "Kastkere küljel aknad",
+      "GAZ-66 4x4 mootorikattega, kannab kandilist furgooni",
+      "Varrasantennid kobaras kabiini ja furgooni katuse kohal",
+      "Furgooni küljel aknad",
       "Töörežiimis on kaablid maas lahti keritud",
     ],
     placements: [
@@ -16,7 +16,7 @@ export const etC2: Record<string, ItemTranslation> = {
       "Allüksuse tagalas, mitte eesliiniüksuste juures",
     ],
     doctrineNote:
-      "Soomustamata, seega töötab varjes kaugel liinist tagapool. Šassii on ühine kümnete omavahel mitteseotud kastkeremasinatega — teda tuvastab ainult antennikomplekt ja just nii ta olema peabki.",
+      "Soomustamata, seega töötab varjes kaugel liinist tagapool. Šassii on ühine kümnete omavahel mitteseotud furgoonmasinatega — teda saab tuvastada ainult antennikomplekti järgi.",
     service: "Kasutuses",
   },
   "r-145bm": {
