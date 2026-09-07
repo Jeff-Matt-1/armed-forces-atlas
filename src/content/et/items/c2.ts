@@ -4,12 +4,12 @@ import type { ItemTranslation } from "@/content/translations";
 export const etC2: Record<string, ItemTranslation> = {
   "r-142n": {
     aka: "R-142NSA",
-    rangeText: "Lühi- ja ultralainevõrgud üle allüksuse vastutusala",
+    rangeText: "Lühi- ja ultralühilainevõrgud üle allüksuse vastutusala",
     cues: [
       "GAZ-66 4x4 mootorikattega, kannab kandilist kastkeret",
       "Varrasantennid kobaras kabiini ja kastkere katuse kohal",
       "Kastkere küljel aknad",
-      "Töötamise ajal jooksevad kaablid maha",
+      "Töörežiimis on kaablid maas lahti keritud",
     ],
     placements: [
       "Juhtimis- ja staabimasin rügemendi ja pataljoni tasandil",
