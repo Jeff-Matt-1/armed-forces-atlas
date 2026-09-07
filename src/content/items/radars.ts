@@ -153,21 +153,21 @@ export const radars: Item[] = [
     imageUrl: "/images/items/snar-10.jpg",
     imageCredit: "CC0 — Alf van Beem",
     imagePage:
-      "https://commons.wikimedia.org/wiki/File:Battlefield_Surveillance_Radar_SNAR_10_on_MTLB_M_1975_in_Aalborg_Forsvars-_og_Garnisonsmuseum,_pic1.JPG",
+      "https://commons.wikimedia.org/wiki/File:Battlefield_Surveillance_Radar_SNAR_10_on_MTLB_M_1975_in_Aalborg_Forsvars-_og_Garnisonsmuseum,_pic4.JPG",
     armament: "7.62 mm PKT",
     rangeText: "Detects vehicles to roughly 20 km, moving men to 10 km",
     cues: [
-      "MT-LB hull carrying a small rotating drum-shaped antenna",
-      "Antenna housed in a rounded cover, not an open array",
-      "Sits on a short mount just above the rear deck",
-      "Smallest antenna in the block by a wide margin",
+      "MT-LB hull with a boxy turret set right at the rear",
+      "Flat rectangular antenna on a short mast above the turret",
+      "Antenna folds down flat along the hull for travel",
+      "Shorter hull than the Zoopark and ARK-1, which use the stretched MT-LBu",
     ],
     placements: [
       "Battlefield surveillance in artillery reconnaissance batteries",
       "Watches ground movement rather than airspace",
     ],
     doctrineNote:
-      "Points at the ground, not the sky: it finds vehicles and men moving in the enemy's rear and can walk artillery onto them by watching the fall of shot. The small antenna is the tell that this is a short-range ground sensor.",
+      "Points at the ground, not the sky: it finds vehicles and men moving in the enemy's rear and can walk artillery onto them by watching the fall of shot. It shares a hull family with the counter-battery sets, so the shorter hull is what tells you this one is watching for movement rather than hunting guns.",
     crew: null,
     service: "In service",
     sort: 5,

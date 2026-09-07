@@ -93,17 +93,17 @@ export const etRadars: Record<string, ItemTranslation> = {
     armament: "7,62 mm PKT",
     rangeText: "Avastab sõidukeid kuni 20 km ja liikuvaid inimesi 10 km kaugusel",
     cues: [
-      "MT-LB kere väikese pöörleva trummelantenniga",
-      "Antenn ümara katte sees, mitte lahtine võre",
-      "Asetseb lühikesel alusel vahetult tagumise teki kohal",
-      "Väikseim antenn kogu õppetükis",
+      "MT-LB kere, kandiline torn otse taga",
+      "Lame kandiline antenn lühikesel mastil torni kohal",
+      "Antenn klapitakse sõiduks piki keret alla",
+      "Lühem kere kui Zoopargil ja ARK-1-l, mis kasutavad pikendatud MT-LBu-d",
     ],
     placements: [
       "Lahinguvälja seire suurtükiväe luurepatareides",
       "Jälgib liikumist maapinnal, mitte õhuruumis",
     ],
     doctrineNote:
-      "Suunatud maapinnale, mitte taeva poole: ta leiab vastase tagalas liikuvaid sõidukeid ja inimesi ning suudab mürskude langemist jälgides suurtükituld sihile juhtida. Väike antenn on tunnus, et tegemist on lähimaa maasensoriga.",
+      "Suunatud maapinnale, mitte taeva poole: ta leiab vastase tagalas liikuvaid sõidukeid ja inimesi ning suudab mürskude langemist jälgides suurtükituld sihile juhtida. Ta jagab kereperekonda kaudtuleradaritega, nii et just lühem kere ütleb, et see masin jälgib liikumist, mitte ei jahi kahureid.",
     service: "Kasutuses",
   },
 };
