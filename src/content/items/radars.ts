@@ -149,7 +149,7 @@ export const radars: Item[] = [
     slug: "snar-10",
     blockSlug: "radars",
     name: "SNAR-10",
-    aka: "Leopard",
+    aka: "Leopard; Big Fred",
     imageUrl: "/images/items/snar-10.jpg",
     imageCredit: "CC0 — Alf van Beem",
     imagePage:

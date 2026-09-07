@@ -89,7 +89,7 @@ export const etRadars: Record<string, ItemTranslation> = {
     service: "Kasutuses",
   },
   "snar-10": {
-    aka: "Leopard",
+    aka: "Leopard; Big Fred",
     armament: "7,62 mm PKT",
     rangeText: "Avastab sõidukeid kuni 20 km ja liikuvaid inimesi 10 km kaugusel",
     cues: [
