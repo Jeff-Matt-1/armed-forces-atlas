@@ -7,7 +7,7 @@ export const etC2: Record<string, ItemTranslation> = {
     rangeText: "Lühi- ja ultralainevõrgud üle allüksuse vastutusala",
     cues: [
       "GAZ-66 4x4 mootorikattega, kannab kandilist kastkeret",
-      "Vardantennid kobaras kabiini ja kastkere katuse kohal",
+      "Varrasantennid kobaras kabiini ja kastkere katuse kohal",
       "Kastkere küljel aknad",
       "Töötamise ajal jooksevad kaablid maha",
     ],
@@ -25,7 +25,7 @@ export const etC2: Record<string, ItemTranslation> = {
     cues: [
       "BTR-60 kere — kaheksa ratast, terav paadivöör, küljeuksi ei ole",
       "Torni ei ole seal, kus BTR-60PB seda kannaks",
-      "Mitu vardantenni piki kere katust",
+      "Mitu varrasantenni piki kere katust",
       "Katus tõstetud madalaks kastiks tööruumi kohal",
     ],
     placements: [
@@ -42,7 +42,7 @@ export const etC2: Record<string, ItemTranslation> = {
     cues: [
       "BTR-80 kere, kaheksa ratast, torn on täielikult puudu",
       "Kandiline tõstetud pealisehitus väikese vaatluskupliga",
-      "Mitu kõrget vardantenni katusest kõrgemal",
+      "Mitu kõrget varrasantenni katusest kõrgemal",
       "Varustuskastid kere ülaosa külgedel",
     ],
     placements: [

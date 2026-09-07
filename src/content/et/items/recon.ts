@@ -28,7 +28,7 @@ export const etRecon: Record<string, ItemTranslation> = {
       "BMP-1 kere ja kuus tugiratast, kuid suurem kaheinimesetorn",
       "Torn on BMP-1 omast tagapool ja raketisiini ei ole",
       "Väike maaradar, mis klapitakse torni taha üles",
-      "Lisavardantennid luure sidevarustuse jaoks",
+      "Lisavarrasantennid luure sidevarustuse jaoks",
     ],
     placements: [
       "Motolaskur- ja tankibrigaadide luurekompaniid",
@@ -46,7 +46,7 @@ export const etRecon: Record<string, ItemTranslation> = {
     cues: [
       "BMP kere torniga, millel on kaks suurt kuplikujulist luuki",
       "Sensori- ja optikakorpused seal, kus peaks olema kahur — pearelva ei ole",
-      "Kõrged vardantennid tornist selgelt kõrgemal",
+      "Kõrged varrasantennid tornist selgelt kõrgemal",
       "Torn on täis mõõdistusvarustust, mitte relvastust",
     ],
     placements: [
