@@ -423,7 +423,11 @@ const et: Record<StringKey, string> = {
 
   "prompt.designation": 'Millist tähistust tuntakse ka nime all "{aka}"?',
   "prompt.placement": "Kus {name} tavaliselt asub?",
-  "prompt.armament": "Milline on {name} pearelvastus?",
+  // The name cannot be inflected by the template, and Estonian wants the
+  // genitive after "pearelvastus" — "Kordi", not "Kord". Naming the subject
+  // first and asking after the dash keeps every designation in the nominative,
+  // which is the one form the content can guarantee.
+  "prompt.armament": "{name} — milline on pearelvastus?",
   "prompt.photo": "Tuvasta see tehnika.",
 
   "prompt.photoCategory": "Millisesse kategooriasse see kuulub?",

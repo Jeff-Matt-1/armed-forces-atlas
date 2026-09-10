@@ -19,6 +19,7 @@ export const etVessels: Record<string, ItemTranslation> = {
     service: "Kasutuses",
   },
   moskva: {
+    name: "Slava klass",
     aka: "Projekt 1164 Atlant; Moskva",
     armament: "16 × P-500/P-1000 raketti, S-300F, 130 mm kaksikkahur",
     rangeText: "Laevatõrjeraketid kuni umbes 550 km",
@@ -38,6 +39,7 @@ export const etVessels: Record<string, ItemTranslation> = {
     service: "Kasutuses",
   },
   udaloy: {
+    name: "Udaloi klass",
     aka: "Projekt 1155 Fregat",
     armament: "Metel allveelaevatõrjeraketid, 2 × 100 mm kahurit, torpeedod",
     rangeText: "Allveelaevatõrjeraketid kuni umbes 50 km",
@@ -57,6 +59,7 @@ export const etVessels: Record<string, ItemTranslation> = {
     service: "Kasutuses",
   },
   "admiral-gorshkov": {
+    name: "Admiral Gorškovi klass",
     aka: "Projekt 22350",
     armament: "Kalibr ja Oniks püstšahtides, 130 mm kahur, Poliment-Redut",
     rangeText: "Kalibr maasihtmärkide vastu kuni umbes 1500 km",
@@ -76,6 +79,7 @@ export const etVessels: Record<string, ItemTranslation> = {
     service: "Kasutuses",
   },
   "admiral-grigorovich": {
+    name: "Admiral Grigorovitši klass",
     aka: "Projekt 11356R",
     armament: "Kalibr püstšahtides, 100 mm kahur, Štil õhutõrje",
     rangeText: "Kalibr maasihtmärkide vastu kuni umbes 1500 km",
@@ -95,6 +99,7 @@ export const etVessels: Record<string, ItemTranslation> = {
     service: "Kasutuses",
   },
   steregushchiy: {
+    name: "Stereguštši klass",
     aka: "Projekt 20380",
     armament: "100 mm kahur, Redut õhutõrje, allveelaevatõrjetorpeedod",
     rangeText: "Ranniku- ja lähimereoperatsioonid",
@@ -114,6 +119,7 @@ export const etVessels: Record<string, ItemTranslation> = {
     service: "Kasutuses",
   },
   "buyan-m": {
+    name: "Bujan-M klass",
     aka: "Projekt 21631",
     armament: "8 × Kalibr püstšahtides, 100 mm kahur",
     rangeText: "Kalibr maasihtmärkide vastu kuni umbes 1500 km",
@@ -133,6 +139,7 @@ export const etVessels: Record<string, ItemTranslation> = {
     service: "Kasutuses",
   },
   ropucha: {
+    name: "Ropucha klass",
     aka: "Projekt 775",
     armament: "Ainult kerged kahurid ja raketiheitjad",
     rangeText: "Kannab umbes 10 tanki või 340 meest",

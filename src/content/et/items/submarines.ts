@@ -3,6 +3,7 @@ import type { ItemTranslation } from "@/content/translations";
 /** Block 17 — Allveelaevad. */
 export const etSubmarines: Record<string, ItemTranslation> = {
   borei: {
+    name: "Borei klass",
     aka: "Projekt 955; Dolgoruki",
     armament: "16 × ballistilist raketti Bulava",
     rangeText: "Raketid kuni umbes 8000 km",
@@ -22,6 +23,7 @@ export const etSubmarines: Record<string, ItemTranslation> = {
     service: "Kasutuses",
   },
   "delta-iv": {
+    name: "Delta IV klass",
     aka: "Projekt 667BDRM Delfin",
     armament: "16 × ballistilist raketti R-29RMU Sineva",
     rangeText: "Raketid kuni umbes 8300 km",
@@ -41,6 +43,7 @@ export const etSubmarines: Record<string, ItemTranslation> = {
     service: "Kasutuses",
   },
   typhoon: {
+    name: "Typhooni klass",
     aka: "Projekt 941 Akula",
     armament: "20 × ballistilist raketti R-39",
     rangeText: "Raketid kuni umbes 8300 km",
@@ -60,6 +63,7 @@ export const etSubmarines: Record<string, ItemTranslation> = {
     service: "Kasutusest väljas",
   },
   "oscar-ii": {
+    name: "Oscar II klass",
     aka: "Projekt 949A Antei",
     armament: "24 × tiibraketti P-700 Granit, torpeedod",
     rangeText: "Raketid kuni umbes 550 km",
@@ -79,6 +83,7 @@ export const etSubmarines: Record<string, ItemTranslation> = {
     service: "Kasutuses",
   },
   akula: {
+    name: "Akula klass",
     aka: "Projekt 971 Štšuka-B",
     armament: "Torpeedod ja torpeedotorude kaudu tiibraketid",
     cues: [
@@ -97,6 +102,7 @@ export const etSubmarines: Record<string, ItemTranslation> = {
     service: "Kasutuses",
   },
   kilo: {
+    name: "Täiustatud Kilo klass",
     aka: "Projekt 636.3 Varšavjanka",
     armament: "Torpeedod ja tiibraketid Kalibr",
     rangeText: "Kalibr maasihtmärkide vastu kuni umbes 1500 km",
