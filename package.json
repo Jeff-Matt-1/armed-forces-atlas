@@ -5,14 +5,14 @@
   "type": "module",
   "scripts": {
     "dev": "vite dev",
-    "build": "vite build",
+    "build": "vite build && bun run scripts/build-sw.ts",
     "build:dev": "vite build --mode development",
     "preview": "vite preview",
     "lint": "eslint .",
     "typecheck": "tsc --noEmit && tsc -p tsconfig.test.json --noEmit",
     "test": "bun test",
     "format": "prettier --write .",
-    "deploy": "bun run scripts/check-deploy-env.ts && vite build && wrangler deploy"
+    "deploy": "bun run scripts/check-deploy-env.ts && vite build && bun run scripts/build-sw.ts && wrangler deploy"
   },
   "overrides": {
     "rolldown": "1.2.1"

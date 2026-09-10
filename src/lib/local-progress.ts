@@ -263,3 +263,83 @@ function newId(): string {
   if (typeof crypto !== "undefined" && "randomUUID" in crypto) return crypto.randomUUID();
   return `local-${Date.now()}-${Math.random().toString(16).slice(2)}`;
 }
+
+/**
+ * The last snapshot the account returned, kept so that losing the network does
+ * not look like losing your progress.
+ *
+ * Without it, a signed-in reader offline read as a brand new account: every
+ * block relocked, every ring at zero. Keyed by user so a shared device does not
+ * show one person's progress to the next.
+ */
+const SNAPSHOT_KEY = "recognition-trainer:last-snapshot";
+
+export type AccountSnapshot = {
+  reviews: CardReview[];
+  blocks: BlockProgressRow[];
+  drills: DrillResult[];
+  streak: StreakRow | null;
+};
+
+type StoredSnapshot = { version: number; userId: string; snapshot: AccountSnapshot };
+
+export function readAccountSnapshot(userId: string): AccountSnapshot | null {
+  if (typeof window === "undefined") return null;
+  try {
+    const raw = window.localStorage.getItem(SNAPSHOT_KEY);
+    if (!raw) return null;
+    const parsed = JSON.parse(raw) as StoredSnapshot;
+    if (parsed.version !== STORE_VERSION || parsed.userId !== userId) return null;
+    return parsed.snapshot;
+  } catch {
+    return null;
+  }
+}
+
+export function writeAccountSnapshot(userId: string, snapshot: AccountSnapshot): void {
+  if (typeof window === "undefined") return;
+  try {
+    const payload: StoredSnapshot = { version: STORE_VERSION, userId, snapshot };
+    window.localStorage.setItem(SNAPSHOT_KEY, JSON.stringify(payload));
+  } catch {
+    // Quota or blocked storage: the reader simply loses the offline fallback.
+  }
+}
+
+export function clearAccountSnapshot(): void {
+  if (typeof window === "undefined") return;
+  try {
+    window.localStorage.removeItem(SNAPSHOT_KEY);
+  } catch {
+    // Nothing to do; a stale snapshot is keyed by user and will not be read
+    // for anyone else.
+  }
+}
+
+/**
+ * Lays study done on this device over what the account last returned.
+ *
+ * Used only for display while offline. The authoritative merge still happens
+ * against the server through mergeLocalIntoAccount; this just stops the ring
+ * from dropping to zero the moment the connection does.
+ */
+export function overlayLocal(base: AccountSnapshot, local: LocalProgress): AccountSnapshot {
+  const reviews = new Map(base.reviews.map((row) => [row.item_slug, row]));
+  for (const [slug, row] of Object.entries(local.reviews)) {
+    const existing = reviews.get(slug);
+    reviews.set(slug, existing ? mergeReview(existing, row) : row);
+  }
+
+  const blocks = new Map(base.blocks.map((row) => [row.block_slug, row]));
+  for (const [slug, row] of Object.entries(local.blocks)) {
+    const existing = blocks.get(slug);
+    blocks.set(slug, existing ? mergeBlock(existing, row) : row);
+  }
+
+  return {
+    reviews: [...reviews.values()],
+    blocks: [...blocks.values()],
+    drills: mergeDrills(local.drills ?? [], base.drills),
+    streak: mergeStreak(local.streak, base.streak),
+  };
+}

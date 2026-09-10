@@ -13,6 +13,7 @@ import appCss from "../styles.css?url";
 import { AuthProvider } from "@/hooks/useAuth";
 import { LocaleProvider, useLocale } from "@/i18n/LocaleProvider";
 import { AppShell } from "@/components/AppShell";
+import { ServiceWorkerBridge } from "@/components/ServiceWorkerBridge";
 import { Toaster } from "@/components/ui/sonner";
 
 function NotFoundComponent() {
@@ -127,6 +128,7 @@ function RootComponent() {
             <Outlet />
           </AppShell>
           <Toaster />
+          <ServiceWorkerBridge />
         </AuthProvider>
       </LocaleProvider>
     </QueryClientProvider>

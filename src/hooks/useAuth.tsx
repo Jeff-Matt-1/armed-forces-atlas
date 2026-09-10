@@ -2,6 +2,7 @@ import type { Session, User } from "@supabase/supabase-js";
 import { createContext, useContext, useEffect, useMemo, useState, type ReactNode } from "react";
 
 import { supabase } from "@/integrations/supabase/client";
+import { clearAccountSnapshot } from "@/lib/local-progress";
 
 type AuthContextValue = {
   user: User | null;
@@ -42,6 +43,10 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       loading,
       signOut: async () => {
         await supabase.auth.signOut();
+        // The cached account snapshot exists so that going offline does not
+        // read as an empty account. Once signed out it is one person's progress
+        // sitting on a device that may be shared, so it goes with the session.
+        clearAccountSnapshot();
       },
     }),
     [session, loading],

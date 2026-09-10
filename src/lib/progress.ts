@@ -17,9 +17,12 @@ import {
   mergeBlock,
   mergeReview,
   mergeStreak,
+  overlayLocal,
+  readAccountSnapshot,
   readLocalProgress,
   recordLocalAttempt,
   recordLocalReview,
+  writeAccountSnapshot,
 } from "@/lib/local-progress";
 import type {
   Attempt,
@@ -91,6 +94,19 @@ async function fetchRemoteSnapshot(): Promise<Snapshot> {
   };
 }
 
+/**
+ * Whether a failed write is the network rather than the server.
+ *
+ * The distinction matters. A connectivity failure should be kept on the device
+ * and retried; a server refusing the write — a policy error, a malformed row —
+ * has to surface, or the reader is told their study saved when it never will.
+ */
+function looksOffline(error: unknown): boolean {
+  if (typeof navigator !== "undefined" && navigator.onLine === false) return true;
+  const message = error instanceof Error ? error.message : String(error);
+  return /failed to fetch|networkerror|network request failed|load failed/i.test(message);
+}
+
 function localSnapshot(): Snapshot {
   const store = readLocalProgress();
   return {
@@ -107,8 +123,25 @@ export function useProgress() {
 
   const snapshot = useQuery({
     queryKey: ["progress", userId],
-    queryFn: (): Promise<Snapshot> =>
-      userId ? fetchRemoteSnapshot() : Promise.resolve(localSnapshot()),
+    queryFn: async (): Promise<Snapshot> => {
+      if (!userId) return localSnapshot();
+      try {
+        const remote = await fetchRemoteSnapshot();
+        // Kept so that losing the network later does not read as a brand new
+        // account, with every block relocked and every ring back at zero.
+        writeAccountSnapshot(userId, remote);
+        return overlayLocal(remote, readLocalProgress());
+      } catch (error) {
+        if (!looksOffline(error)) throw error;
+        const cached = readAccountSnapshot(userId) ?? {
+          reviews: [],
+          blocks: [],
+          drills: [],
+          streak: null,
+        };
+        return overlayLocal(cached, readLocalProgress());
+      }
+    },
   });
 
   const data = snapshot.data ?? { reviews: [], blocks: [], drills: [], streak: null };
@@ -256,23 +289,31 @@ export function useRecordReview() {
       }
 
       const next = schedule(input.current ?? emptyReview, input.grade);
-      const { error } = await supabase.from("card_reviews").upsert(
-        {
-          user_id: user.id,
-          item_slug: input.itemSlug,
-          block_slug: input.blockSlug,
-          ease: next.ease,
-          interval_days: next.intervalDays,
-          reps: next.reps,
-          lapses: next.lapses,
-          last_grade: input.grade,
-          due_at: next.dueAt.toISOString(),
-          updated_at: new Date().toISOString(),
-        },
-        { onConflict: "user_id,item_slug" },
-      );
-      if (error) throw error;
-      await touchRemoteStreak(user.id);
+      try {
+        const { error } = await supabase.from("card_reviews").upsert(
+          {
+            user_id: user.id,
+            item_slug: input.itemSlug,
+            block_slug: input.blockSlug,
+            ease: next.ease,
+            interval_days: next.intervalDays,
+            reps: next.reps,
+            lapses: next.lapses,
+            last_grade: input.grade,
+            due_at: next.dueAt.toISOString(),
+            updated_at: new Date().toISOString(),
+          },
+          { onConflict: "user_id,item_slug" },
+        );
+        if (error) throw error;
+        await touchRemoteStreak(user.id);
+      } catch (error) {
+        // Offline: keep the card on the device rather than losing it. The merge
+        // on reconnect carries it up, and the same local store the signed-out
+        // path uses means the two cannot drift.
+        if (!looksOffline(error)) throw error;
+        recordLocalReview(input);
+      }
     },
     onSuccess: () => invalidateProgress(queryClient),
   });
@@ -299,73 +340,84 @@ export function useRecordAttempt() {
         return;
       }
 
-      const { error } = await supabase.from("attempts").insert({
-        user_id: user.id,
-        block_slug: input.blockSlug,
-        mode: input.mode,
-        score: input.score,
-        total: input.total,
-        passed: input.passed,
-        missed: input.missed,
-      });
-      if (error) throw error;
-
-      // Every correct answer credits its own item and block, so a drill run
-      // across all blocks still advances each block it touched. Insert-only:
-      // the row's existence means "answered correctly at least once".
-      if (input.correct.length > 0) {
-        const rows = dedupeCorrect(input.correct).map((row) => ({
-          user_id: user.id,
-          item_slug: row.item_slug,
-          block_slug: row.block_slug,
-          kind: row.kind,
-        }));
-        const { error: drillError } = await supabase
-          .from("drill_results")
-          .upsert(rows, { onConflict: "user_id,item_slug,kind", ignoreDuplicates: true });
-        if (drillError) throw drillError;
+      try {
+        await recordAttemptRemotely(user.id, input);
+      } catch (error) {
+        // Offline: keep the whole attempt on the device. A drill or an exam is
+        // far more work than a single card, so losing one costs more.
+        if (!looksOffline(error)) throw error;
+        recordLocalAttempt(input);
       }
-
-      if (input.blockSlug) {
-        const percent = input.total ? Math.round((input.score / input.total) * 100) : 0;
-        const { data: existing, error: existingError } = await supabase
-          .from("block_progress")
-          .select("best_score, exam_passed, best_photo_id, best_structure, best_exam")
-          .eq("block_slug", input.blockSlug)
-          .maybeSingle();
-        if (existingError) throw existingError;
-
-        const { error: progressError } = await supabase.from("block_progress").upsert(
-          {
-            user_id: user.id,
-            block_slug: input.blockSlug,
-            best_score: Math.max(percent, existing?.best_score ?? 0),
-            // Per-mode bests, so mastery can reflect each activity separately.
-            best_photo_id:
-              input.mode === "photo-id"
-                ? Math.max(percent, existing?.best_photo_id ?? 0)
-                : (existing?.best_photo_id ?? 0),
-            best_structure:
-              input.mode === "structure"
-                ? Math.max(percent, existing?.best_structure ?? 0)
-                : (existing?.best_structure ?? 0),
-            best_exam:
-              input.mode === "exam"
-                ? Math.max(percent, existing?.best_exam ?? 0)
-                : (existing?.best_exam ?? 0),
-            exam_passed:
-              (existing?.exam_passed ?? false) || (input.mode === "exam" && input.passed),
-            updated_at: new Date().toISOString(),
-          },
-          { onConflict: "user_id,block_slug" },
-        );
-        if (progressError) throw progressError;
-      }
-
-      await touchRemoteStreak(user.id);
     },
     onSuccess: () => invalidateProgress(queryClient),
   });
+}
+
+/** The remote half, lifted out so the offline fallback can wrap it whole. */
+async function recordAttemptRemotely(userId: string, input: AttemptInput): Promise<void> {
+  const { error } = await supabase.from("attempts").insert({
+    user_id: userId,
+    block_slug: input.blockSlug,
+    mode: input.mode,
+    score: input.score,
+    total: input.total,
+    passed: input.passed,
+    missed: input.missed,
+  });
+  if (error) throw error;
+
+  // Every correct answer credits its own item and block, so a drill run
+  // across all blocks still advances each block it touched. Insert-only:
+  // the row's existence means "answered correctly at least once".
+  if (input.correct.length > 0) {
+    const rows = dedupeCorrect(input.correct).map((row) => ({
+      user_id: userId,
+      item_slug: row.item_slug,
+      block_slug: row.block_slug,
+      kind: row.kind,
+    }));
+    const { error: drillError } = await supabase
+      .from("drill_results")
+      .upsert(rows, { onConflict: "user_id,item_slug,kind", ignoreDuplicates: true });
+    if (drillError) throw drillError;
+  }
+
+  if (input.blockSlug) {
+    const percent = input.total ? Math.round((input.score / input.total) * 100) : 0;
+    const { data: existing, error: existingError } = await supabase
+      .from("block_progress")
+      .select("best_score, exam_passed, best_photo_id, best_structure, best_exam")
+      .eq("block_slug", input.blockSlug)
+      .maybeSingle();
+    if (existingError) throw existingError;
+
+    const { error: progressError } = await supabase.from("block_progress").upsert(
+      {
+        user_id: userId,
+        block_slug: input.blockSlug,
+        best_score: Math.max(percent, existing?.best_score ?? 0),
+        // Per-mode bests, so mastery can reflect each activity separately.
+        best_photo_id:
+          input.mode === "photo-id"
+            ? Math.max(percent, existing?.best_photo_id ?? 0)
+            : (existing?.best_photo_id ?? 0),
+        best_structure:
+          input.mode === "structure"
+            ? Math.max(percent, existing?.best_structure ?? 0)
+            : (existing?.best_structure ?? 0),
+        best_exam:
+          input.mode === "exam"
+            ? Math.max(percent, existing?.best_exam ?? 0)
+            : (existing?.best_exam ?? 0),
+        exam_passed: (existing?.exam_passed ?? false) || (input.mode === "exam" && input.passed),
+        updated_at: new Date().toISOString(),
+      },
+      { onConflict: "user_id,block_slug" },
+    );
+    if (progressError) throw progressError;
+  }
+
+  await touchRemoteStreak(userId);
 }
 
 export function useAttempts() {
@@ -398,20 +450,27 @@ export function useAttempts() {
 export function useMergeLocalProgress() {
   const { user } = useAuth();
   const queryClient = useQueryClient();
-  const mergedFor = useRef<string | null>(null);
+  const inFlight = useRef(false);
   const [merging, setMerging] = useState(false);
+  // Bumped when the browser says the network is back, to retry the merge.
+  const [reconnects, setReconnects] = useState(0);
 
   const userId = user?.id ?? null;
 
   useEffect(() => {
-    if (!userId || mergedFor.current === userId) return;
+    const onOnline = () => setReconnects((value) => value + 1);
+    window.addEventListener("online", onOnline);
+    return () => window.removeEventListener("online", onOnline);
+  }, []);
 
-    if (!hasLocalProgress()) {
-      mergedFor.current = userId;
-      return;
-    }
+  useEffect(() => {
+    if (!userId || inFlight.current) return;
+    // Not "once per sign-in" any more. Studying offline while signed in writes
+    // to the same local store, so there is local work to carry up at any point
+    // in a session, not only at the moment of signing in.
+    if (!hasLocalProgress()) return;
 
-    mergedFor.current = userId;
+    inFlight.current = true;
     setMerging(true);
 
     void mergeLocalIntoAccount(userId)
@@ -420,12 +479,14 @@ export function useMergeLocalProgress() {
         invalidateProgress(queryClient);
       })
       .catch(() => {
-        // Leave the local copy alone so the work is not lost, and allow a
-        // later sign-in to retry the merge.
-        mergedFor.current = null;
+        // Leave the local copy alone so the work is not lost. The next
+        // reconnect, or the next sign-in, retries it.
       })
-      .finally(() => setMerging(false));
-  }, [userId, queryClient]);
+      .finally(() => {
+        inFlight.current = false;
+        setMerging(false);
+      });
+  }, [userId, queryClient, reconnects]);
 
   return { merging };
 }

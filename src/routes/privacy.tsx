@@ -59,6 +59,10 @@ function Privacy() {
         <p className="mt-3">{t("privacy.rls")}</p>
       </Section>
 
+      <Section title={t("privacy.cachedTitle")}>
+        <p>{t("privacy.cachedBody")}</p>
+      </Section>
+
       <Section title={t("privacy.whereTitle")}>
         <p>{t("privacy.whereBody")}</p>
       </Section>

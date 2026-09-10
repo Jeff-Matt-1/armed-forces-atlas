@@ -1,0 +1,97 @@
+<!doctype html>
+<!--
+  Served by the service worker when a page is requested with no connection and
+  no cached copy of that URL.
+
+  Deliberately not the cached home page: that document is /, and handing it back
+  for /learn/tanks would hydrate the router against the wrong address. Saying so
+  plainly is better than rendering the wrong page.
+
+  Self-contained — no stylesheet, no font, no script — because everything it
+  could reference is exactly what is unavailable. Both languages are shown
+  because it cannot read the reader's stored preference.
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0d0d0f" />
+    <title>Offline — Armed Forces Atlas</title>
+    <style>
+      :root {
+        color-scheme: dark;
+      }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem;
+        background: #0d0d0f;
+        color: #e8e6e3;
+        font-family: ui-sans-serif, system-ui, sans-serif;
+        line-height: 1.5;
+      }
+      main {
+        max-width: 30rem;
+        text-align: center;
+      }
+      p.label {
+        margin: 0;
+        font-family: ui-monospace, monospace;
+        font-size: 0.6875rem;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: #8b8781;
+      }
+      h1 {
+        margin: 0.75rem 0 0;
+        font-size: 1.5rem;
+        font-weight: 600;
+      }
+      p.body {
+        margin: 0.5rem 0 0;
+        font-size: 0.875rem;
+        color: #8b8781;
+      }
+      hr {
+        margin: 2rem 0;
+        border: 0;
+        border-top: 1px solid #2a2a2e;
+      }
+      a {
+        display: inline-block;
+        margin-top: 2rem;
+        padding: 0.5rem 1rem;
+        border: 1px solid #3a3a3f;
+        border-radius: 2px;
+        color: #e8e6e3;
+        text-decoration: none;
+        font-family: ui-monospace, monospace;
+        font-size: 0.6875rem;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <p class="label">Ühendus puudub</p>
+      <h1>Seda lehte ei ole seadmesse salvestatud</h1>
+      <p class="body">
+        Laadi kogu materjal edenemise lehel alla, siis töötab õppimine ka ilma ühenduseta.
+      </p>
+
+      <hr />
+
+      <p class="label">No connection</p>
+      <h1>This page is not stored on the device</h1>
+      <p class="body">
+        Download the library from the progress page and study works with no connection at all.
+      </p>
+
+      <a href="/">Avaleht · Home</a>
+    </main>
+  </body>
+</html>

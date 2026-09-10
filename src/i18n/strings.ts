@@ -127,6 +127,26 @@ const en = {
   "badge.awardTitle": "Rank earned",
   "badge.awardFrameTitle": "Frame earned",
   "badge.awardDismiss": "Dismiss",
+
+  // A precache pins a reader to the build they installed, so there has to be a
+  // way to move on and a way to be told.
+  "update.available": "A newer version is available.",
+  "update.reload": "Update",
+
+  // Offline library
+  "offline.title": "Offline use",
+  "offline.body":
+    "Store the whole library on this device: every photograph and every page. Study then works with no connection at all.",
+  "offline.unavailable": "Available once the page has been reloaded.",
+  "offline.download": "Download the library",
+  "offline.downloadSize": "Download the library · {size}",
+  "offline.progress": "Downloading · {done} / {total}",
+  "offline.ready": "Stored on this device",
+  "offline.readySize": "Stored on this device · {size}",
+  "offline.error": "The download did not finish. There may not be room on the device.",
+  "offline.cancel": "Cancel",
+  "offline.remove": "Remove",
+  "offline.build": "Edition {build}",
   // Privacy
   "privacy.eyebrow": "Data",
   "privacy.title": "Privacy",
@@ -134,7 +154,7 @@ const en = {
     "This app is a study tool. It stores what you have studied so it can schedule revision, and nothing else. There is no advertising, no analytics and no third-party tracking of any kind.",
   "privacy.withoutAccountTitle": "Without an account",
   "privacy.withoutAccountBody":
-    "You can use everything here without signing in. Your progress then never leaves your device — it is written to your browser's local storage under three keys:",
+    "You can use everything here without signing in, including offline: download the library from the progress page and the app needs no connection at all. Your progress then never leaves your device — it is written to your browser's local storage under three keys:",
   "privacy.keyProgress": "what you have studied, graded and passed",
   "privacy.keyLocale": "whether you chose English or Estonian",
   "privacy.keyGate": "whether blocks unlock in order for you",
@@ -153,6 +173,9 @@ const en = {
   "privacy.tableStreaks": "study dates and streak length",
   "privacy.rls":
     "Every one of these tables has row-level security enabled, so the database itself refuses to return one person's rows to another.",
+  "privacy.cachedTitle": "Kept on the device while signed in",
+  "privacy.cachedBody":
+    "So that losing your connection does not read as an empty account, the last progress the server returned is also kept in local storage, under a fourth key. It is tied to your account and is erased when you sign out. Downloading the library for offline use stores the photographs and pages themselves in the browser's cache; that is study material, not personal data, and removing the download deletes it.",
   "privacy.whereTitle": "Where it is stored",
   "privacy.whereBody":
     "The database is hosted by Supabase in Ireland (eu-west-1), inside the EU. The site itself is served by Cloudflare, which processes the IP address of every request in order to deliver the page, as any web server must.",
@@ -462,6 +485,23 @@ const et: Record<StringKey, string> = {
   "badge.awardTitle": "Aste teenitud",
   "badge.awardFrameTitle": "Raam teenitud",
   "badge.awardDismiss": "Sulge",
+
+  "update.available": "Saadaval on uuem versioon.",
+  "update.reload": "Uuenda",
+
+  "offline.title": "Kasutamine ilma ühenduseta",
+  "offline.body":
+    "Salvesta kogu materjal sellesse seadmesse: kõik fotod ja kõik lehed. Seejärel töötab õppimine ka täiesti ilma ühenduseta.",
+  "offline.unavailable": "Saadaval pärast lehe uuesti laadimist.",
+  "offline.download": "Laadi materjal alla",
+  "offline.downloadSize": "Laadi materjal alla · {size}",
+  "offline.progress": "Laadin alla · {done} / {total}",
+  "offline.ready": "Seadmesse salvestatud",
+  "offline.readySize": "Seadmesse salvestatud · {size}",
+  "offline.error": "Allalaadimine jäi pooleli. Seadmes võib ruumi puudu olla.",
+  "offline.cancel": "Katkesta",
+  "offline.remove": "Eemalda",
+  "offline.build": "Väljaanne {build}",
   // Privacy
   "privacy.eyebrow": "Andmed",
   "privacy.title": "Privaatsus",
@@ -469,7 +509,7 @@ const et: Record<StringKey, string> = {
     "See rakendus on õppevahend. Ta salvestab selle, mida oled õppinud, et kordamist ajastada — ja mitte midagi muud. Reklaami, analüütikat ega kolmandate osapoolte jälgimist ei ole.",
   "privacy.withoutAccountTitle": "Ilma kontota",
   "privacy.withoutAccountBody":
-    "Kõike siinset saab kasutada sisse logimata. Sinu edenemine ei lahku siis kunagi sinu seadmest — see kirjutatakse brauseri kohalikku salvestusse kolme võtme alla:",
+    "Kõike siinset saab kasutada sisse logimata, ka ilma ühenduseta: laadi materjal edenemise lehel alla ja rakendus ei vaja võrku üldse. Sinu edenemine ei lahku siis kunagi sinu seadmest — see kirjutatakse brauseri kohalikku salvestusse kolme võtme alla:",
   "privacy.keyProgress": "mida oled õppinud, hinnanud ja sooritanud",
   "privacy.keyLocale": "kas valisid inglise või eesti keele",
   "privacy.keyGate": "kas õppetükid avanevad sinu jaoks järjekorras",
@@ -489,6 +529,9 @@ const et: Record<StringKey, string> = {
   "privacy.tableStreaks": "õppimise kuupäevad ja seeria pikkus",
   "privacy.rls":
     "Igal neist tabelitest on reatasandi turve sisse lülitatud, nii et andmebaas ise keeldub ühe inimese ridu teisele tagastamast.",
+  "privacy.cachedTitle": "Mida hoitakse seadmes sisselogituna",
+  "privacy.cachedBody":
+    "Et ühenduse kadumine ei näeks välja nagu tühi konto, hoitakse serveri viimati tagastatud edenemist ka kohalikus salvestuses, neljanda võtme all. See on seotud sinu kontoga ja kustutatakse välja logides. Materjali allalaadimine salvestab fotod ja lehed brauseri vahemällu; see on õppevara, mitte isikuandmed, ja allalaadimise eemaldamine kustutab selle.",
   "privacy.whereTitle": "Kus seda hoitakse",
   "privacy.whereBody":
     "Andmebaasi majutab Supabase Iirimaal (eu-west-1), Euroopa Liidus. Saiti ennast serveerib Cloudflare, kes töötleb iga päringu IP-aadressi, et lehte üldse edastada — nagu iga veebiserver peab.",

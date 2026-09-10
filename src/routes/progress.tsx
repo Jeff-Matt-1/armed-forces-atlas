@@ -6,6 +6,7 @@ import { Switch } from "@/components/ui/switch";
 import { Label } from "@/components/ui/label";
 import { LocalOnlyNotice } from "@/components/LocalOnlyNotice";
 import { MasteryRing } from "@/components/MasteryRing";
+import { OfflineLibrary } from "@/components/OfflineLibrary";
 import { getItem, imageFitClass, plateNumber, readyBlocks } from "@/lib/content";
 import { useLocale } from "@/i18n/LocaleProvider";
 import { readGatePreference, useAttempts, useProgress, writeGatePreference } from "@/lib/progress";
@@ -156,6 +157,8 @@ function ProgressPage() {
           </ul>
         )}
       </section>
+
+      <OfflineLibrary />
 
       <section className="mt-10 border border-border p-4">
         <div className="flex items-center justify-between gap-4">
