@@ -6,17 +6,27 @@ import { localiseBlock, localiseItem } from "@/content/translations";
 import { allItems, itemsOfBlock, setContentLocale } from "@/lib/content";
 import { designationQuestion } from "@/lib/quiz";
 import { LOCALES } from "@/i18n/locales";
-import { translate } from "@/i18n/strings";
+import { STRING_KEYS, translate } from "@/i18n/strings";
 
 describe("interface strings", () => {
   /**
    * English defines the key set. A missing Estonian string falls back rather
    * than rendering blank, so the failure mode is invisible without a test.
    */
+  /**
+   * A few strings are the same in both languages on purpose, so being identical
+   * cannot by itself mean untranslated. Listed rather than pattern-matched, so
+   * that adding one is a decision somebody has to write down.
+   */
+  const SAME_IN_BOTH: string[] = [
+    "quiz.progress", // "{current} / {total}" — placeholders and punctuation only
+    "about.commons", // Wikimedia Commons, a proper noun
+  ];
+
   test("every English key has an Estonian string", () => {
     const untranslated: string[] = [];
-    // Keys are only enumerable through a known one; walk them via translate.
-    for (const key of KEYS) {
+    for (const key of STRING_KEYS) {
+      if (SAME_IN_BOTH.includes(key)) continue;
       const en = translate("en", key);
       const et = translate("et", key);
       if (!et || et === en) untranslated.push(key);
@@ -33,12 +43,15 @@ describe("interface strings", () => {
    * the content, which means carrying a placeholder rather than a word.
    */
   test("no interface string spells out a block count", () => {
+    // The gap between numeral and noun stays inside one sentence. Allowed to
+    // cross a full stop, it matched "rise one rank. Each block counts once",
+    // which states no total and counts nothing.
     const numerals =
-      /\b(one|two|three|four|five|six|seven|eight|nine|ten|eleven|twelve|thirteen|fourteen|fifteen|sixteen|seventeen|eighteen|nineteen|twenty|\u00FCks|kaks|kolm|neli|viis|kuus|seitse|kaheksa|\u00FCheksa|k\u00FCmme|\u00FCksteist|kaksteist|kolmteist|neliteist|viisteist|kuusteist|seitseteist|kaheksateist|\u00FCheksateist|kaksk\u00FCmmend)\s+(?:\S+\s+){0,2}\S*(block|plokk|\u00F5ppet\u00FCk)/i;
+      /\b(one|two|three|four|five|six|seven|eight|nine|ten|eleven|twelve|thirteen|fourteen|fifteen|sixteen|seventeen|eighteen|nineteen|twenty|\u00FCks|kaks|kolm|neli|viis|kuus|seitse|kaheksa|\u00FCheksa|k\u00FCmme|\u00FCksteist|kaksteist|kolmteist|neliteist|viisteist|kuusteist|seitseteist|kaheksateist|\u00FCheksateist|kaksk\u00FCmmend)\s+(?:[^\s.]+\s+){0,2}[^\s.]*(block|plokk|\u00F5ppet\u00FCk)/i;
 
     const offenders: string[] = [];
     for (const locale of LOCALES) {
-      for (const key of KEYS) {
+      for (const key of STRING_KEYS) {
         const value = translate(locale, key);
         if (numerals.test(value))
           offenders.push(locale + " " + key + ': "' + value.slice(0, 60) + '"');
@@ -252,75 +265,3 @@ describe("content translation", () => {
     expect([...all].some((c) => INVISIBLE.includes(c.codePointAt(0)!))).toBe(false);
   });
 });
-
-/** Every key used by the interface, listed so the test above can walk them. */
-const KEYS = [
-  "nav.blocks",
-  "nav.review",
-  "nav.progress",
-  "nav.sources",
-  "nav.signIn",
-  "nav.signOut",
-  "shell.tagline",
-  "shell.footerSources",
-  "shell.footerDoctrine",
-  "shell.language",
-  "home.eyebrow",
-  "home.title",
-  "home.intro",
-  "home.startFoundations",
-  "home.photoDrill",
-  "home.statBlocks",
-  "home.statEntries",
-  "home.statDue",
-  "home.statStreak",
-  "home.continue",
-  "home.readyBlocks",
-  "home.allBlocks",
-  "home.modeFlashcards",
-  "home.modeFlashcardsBody",
-  "home.modePhotoId",
-  "home.modePhotoIdBody",
-  "home.modeStructure",
-  "home.modeStructureBody",
-  "home.openDrill",
-  "block.blockNumber",
-  "block.noPhotograph",
-  "block.entries",
-  "block.doctrineNote",
-  "block.flashcards",
-  "block.photoId",
-  "block.structureDrill",
-  "block.exam",
-  "item.recognitionCues",
-  "item.forceStructure",
-  "item.armamentRange",
-  "item.employment",
-  "item.data",
-  "item.status",
-  "item.crew",
-  "quiz.identify",
-  "quiz.scoreLine",
-  "quiz.failLine",
-  "quiz.saving",
-  "quiz.recognitionCard",
-  "quiz.backToBlocks",
-  "quiz.passed",
-  "quiz.strong",
-  "quiz.needsWork",
-  "quiz.missed",
-  "quiz.finish",
-  "quiz.next",
-  "quiz.saveFailed",
-  "quiz.saveRetry",
-  "quiz.notEnough",
-  "quiz.notEnoughBody",
-  "gaps.title",
-  "gaps.cards",
-  "gaps.photo",
-  "gaps.placement",
-  "gaps.exam",
-  "gaps.open",
-  "quiz.notForBlock",
-  "quiz.notForBlockBody",
-] as const;

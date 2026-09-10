@@ -38,7 +38,7 @@ function StructureDrill() {
   const { block } = Route.useSearch();
   const [seed, setSeed] = useState(0);
   const { items: questions, built } = useShuffled(
-    () => buildPlacementQuiz(block ? [block] : undefined, 12),
+    () => buildPlacementQuiz(block ? [block] : undefined, block ? undefined : 12),
     [block, seed],
   );
   const blockTitle = block ? getBlock(block)?.title : undefined;

@@ -19,6 +19,29 @@ function prompt(key: StringKey, values?: Record<string, string | number>): strin
   return translate(contentLocale(), key, values);
 }
 
+/**
+ * What a photograph is asking the reader to name.
+ *
+ * "Identify this equipment" is right for a vehicle and wrong for most of what
+ * else the atlas teaches: a shoulder board is not equipment, nor is a rifle in
+ * the sense the word carries here, and Foundations shows a real vehicle in
+ * order to ask which class it belongs to rather than which vehicle it is.
+ *
+ * Keyed by block rather than carried on the content, because it is a question
+ * about how to ask, not a fact about the thing being asked about. Blocks not
+ * listed are vehicles and equipment, where the default is correct.
+ */
+const PHOTO_PROMPT: Partial<Record<string, StringKey>> = {
+  foundations: "prompt.photoCategory",
+  ranks: "prompt.photoRank",
+  handguns: "prompt.photoWeapon",
+  "heavy-weapons": "prompt.photoWeapon",
+  vessels: "prompt.photoVessel",
+  submarines: "prompt.photoVessel",
+  aircraft: "prompt.photoAircraft",
+  helicopters: "prompt.photoAircraft",
+};
+
 export type Question =
   | {
       kind: "photo-id";
@@ -90,7 +113,7 @@ export function photoQuestion(item: Item, blockPool: Item[]): Question | null {
     id: `photo:${item.slug}`,
     itemSlug: item.slug,
     imageUrl: item.imageUrl,
-    prompt: prompt("prompt.photo"),
+    prompt: prompt(PHOTO_PROMPT[item.blockSlug] ?? "prompt.photo"),
     options: pickDistractors([...names, item.name], item.name, 3),
     answer: item.name,
   };
@@ -130,7 +153,9 @@ export function armamentQuestion(item: Item, pool: Item[]): Question | null {
     kind: "armament",
     id: `arm:${item.slug}`,
     itemSlug: item.slug,
-    prompt: prompt("prompt.armament", { name: item.name }),
+    prompt: prompt(item.blockSlug === "handguns" ? "prompt.ammunition" : "prompt.armament", {
+      name: item.name,
+    }),
     options,
     answer: item.armament,
   };
@@ -347,7 +372,9 @@ export function designationQuestion(item: Item, pool: Item[]): Question | null {
     kind: "designation",
     id: `desig:${item.slug}`,
     itemSlug: item.slug,
-    prompt: prompt("prompt.designation", { aka: item.aka }),
+    prompt: prompt(item.blockSlug === "ranks" ? "prompt.designationRank" : "prompt.designation", {
+      aka: item.aka,
+    }),
     options: shuffle([item.name, ...chosen]),
     answer: item.name,
   };
@@ -383,26 +410,33 @@ export function seniorityQuestion(item: Item, pool: Item[]): Question | null {
   };
 }
 
-export function buildPhotoQuiz(blockSlugs: string[] | undefined, length = 12): Question[] {
+/**
+ * Photo recognition. An undefined length means every item that can be asked
+ * about, which is what a single block should give: capped at twelve, Ranks
+ * (28 entries), Artillery (16) and Engineering (14) could not show everything
+ * in one run, and a reader had to restart repeatedly to meet the rest.
+ */
+export function buildPhotoQuiz(blockSlugs: string[] | undefined, length?: number): Question[] {
   const pool = photoItems(blockSlugs);
   const questions: Question[] = [];
   for (const item of shuffle(pool)) {
     const samePool = pool.filter((i) => i.blockSlug === item.blockSlug);
     const question = photoQuestion(item, samePool.length >= 4 ? samePool : pool);
     if (question) questions.push(question);
-    if (questions.length >= length) break;
+    if (length !== undefined && questions.length >= length) break;
   }
   return questions;
 }
 
-export function buildPlacementQuiz(blockSlugs: string[] | undefined, length = 12): Question[] {
+/** Structure drill, capped the same way and for the same reason. */
+export function buildPlacementQuiz(blockSlugs: string[] | undefined, length?: number): Question[] {
   const pool = studyableItems(blockSlugs);
   const placements = allPlacements(blockSlugs);
   const questions: Question[] = [];
   for (const item of shuffle(pool)) {
     const question = placementQuestion(item, placements);
     if (question) questions.push(question);
-    if (questions.length >= length) break;
+    if (length !== undefined && questions.length >= length) break;
   }
   return questions;
 }

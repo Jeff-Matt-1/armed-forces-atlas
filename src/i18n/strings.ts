@@ -88,10 +88,21 @@ const en = {
   "prompt.placement": "Where is the {name} normally found?",
   "prompt.armament": "What is the main armament of the {name}?",
   "prompt.photo": "Identify this equipment.",
+
+  // The photograph asks a different question in different blocks: a shoulder
+  // board is not equipment, a rifle is not "equipment" in the sense the word
+  // carries here, and Foundations shows a vehicle in order to ask which class
+  // it belongs to rather than which vehicle it is.
+  "prompt.photoCategory": "Which category does this belong to?",
+  "prompt.photoRank": "Identify this rank.",
+  "prompt.photoWeapon": "Identify this weapon.",
+  "prompt.photoVessel": "Identify this vessel.",
+  "prompt.photoAircraft": "Identify this aircraft.",
+  "prompt.designationRank": 'Which rank is also known as "{aka}"?',
+  "prompt.ammunition": "What ammunition does the {name} use?",
   "prompt.seniority": "Which of these is the most senior rank?",
 
   // Quiz
-  "quiz.identify": "Identify this equipment.",
   "quiz.progress": "{current} / {total}",
   "quiz.examHeading": "Block exam · {block}",
   "quiz.examIntro":
@@ -328,6 +339,17 @@ const en = {
 
 export type StringKey = keyof typeof en;
 
+/**
+ * Every key, for tests that have to walk them.
+ *
+ * Exported rather than listed a second time: the test file used to keep its own
+ * hand-written array, which had drifted to 68 of 247 keys, so the check that
+ * every English string has an Estonian one was quietly running on a quarter of
+ * them. Same rule as the block count — nothing about the content gets counted
+ * by hand.
+ */
+export const STRING_KEYS = Object.keys(en) as StringKey[];
+
 const et: Record<StringKey, string> = {
   // Shell
   "nav.blocks": "Õppetükid",
@@ -403,10 +425,17 @@ const et: Record<StringKey, string> = {
   "prompt.placement": "Kus {name} tavaliselt asub?",
   "prompt.armament": "Milline on {name} pearelvastus?",
   "prompt.photo": "Tuvasta see tehnika.",
+
+  "prompt.photoCategory": "Millisesse kategooriasse see kuulub?",
+  "prompt.photoRank": "Tuvasta see auaste.",
+  "prompt.photoWeapon": "Tuvasta see relv.",
+  "prompt.photoVessel": "Tuvasta see alus.",
+  "prompt.photoAircraft": "Tuvasta see õhusõiduk.",
+  "prompt.designationRank": 'Millist auastet tuntakse ka nime all "{aka}"?',
+  "prompt.ammunition": "Millist laskemoona {name} kasutab?",
   "prompt.seniority": "Milline neist on kõrgeim auaste?",
 
   // Quiz
-  "quiz.identify": "Tuvasta see tehnika.",
   "quiz.progress": "{current} / {total}",
   "quiz.examHeading": "Õppetüki eksam · {block}",
   "quiz.examIntro":

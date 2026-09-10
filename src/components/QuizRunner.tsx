@@ -234,7 +234,7 @@ export function QuizRunner({
         <div className="mt-6 border border-border bg-card">
           <img
             src={question.imageUrl}
-            alt={t("quiz.identify")}
+            alt={question.prompt}
             className={`aspect-[16/9] w-full bg-secondary ${imageFitClass(question.itemSlug)}`}
           />
         </div>
