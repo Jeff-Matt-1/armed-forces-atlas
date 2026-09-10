@@ -10,8 +10,10 @@
  *
  * Two version strings, for two different lifetimes:
  *
- *   SHELL_VERSION  hashes the precache list, so any code or font change makes a
- *                  new shell and retires the old one.
+ *   SHELL_VERSION  hashes the precache list *and* the images, so any code,
+ *                  font or photograph change makes a new shell and retires the
+ *                  old one. The images are in there because the precached
+ *                  offline-manifest.json carries the edition number.
  *   IMAGES_VERSION hashes the names and sizes of public/images/items, so a
  *                  routine deploy leaves a reader's 47 MB of photographs alone
  *                  and only replacing a photograph costs them the download.
@@ -89,12 +91,21 @@ for (const path of precache) {
 
 const source = await Bun.file(SOURCE).text();
 const sw = source
-  .replace("__SHELL_VERSION__", shortHash(precache.join("\n")))
+  .replace("__SHELL_VERSION__", shellVersion)
   .replace("__IMAGES_VERSION__", shortHash(imageFacts.join("\n")))
   .replace("__PRECACHE__", JSON.stringify(precache, null, 2));
 
 if (sw.includes("__SHELL_VERSION__") || sw.includes("__PRECACHE__")) {
   throw new Error("placeholders left unsubstituted — did the source change?");
+}
+
+// The manifest's "build" and the worker's SHELL_VERSION are the same number
+// shown in two places, and they have already drifted apart once: an edit that
+// changed one left the other computing its own hash, so a deployment shipped a
+// worker and a manifest that disagreed. Cheaper to assert than to notice.
+const emitted = sw.match(/SHELL_VERSION = "(\w+)"/)?.[1];
+if (emitted !== shellVersion) {
+  throw new Error(`sw.js says ${emitted}, the manifest says ${shellVersion}`);
 }
 
 await Bun.write(`${OUT}/sw.js`, sw);
