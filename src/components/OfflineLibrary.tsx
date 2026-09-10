@@ -6,6 +6,7 @@ import {
   downloadAll,
   offlineStatus,
   offlineSupported,
+  offlineManifest,
   removeDownload,
   storageUsed,
   type OfflineProgress,
@@ -52,15 +53,12 @@ export function OfflineLibrary() {
 
   useEffect(() => {
     void refresh();
-    // The download size comes from the build rather than from counting bytes in
+    // Size and edition come from the build rather than from counting bytes in
     // the browser, so the button can say what it will cost before it is pressed.
-    void fetch("/offline-manifest.json")
-      .then((response) => (response.ok ? response.json() : null))
-      .then((data: { bytes?: number; build?: string } | null) => {
-        setSize(data?.bytes ?? null);
-        setBuild(data?.build ?? null);
-      })
-      .catch(() => setSize(null));
+    void offlineManifest().then((manifest) => {
+      setSize(manifest?.bytes ?? null);
+      setBuild(manifest?.build ?? null);
+    });
 
     return () => abort.current?.abort();
   }, [refresh]);

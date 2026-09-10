@@ -74,13 +74,25 @@ const imageBytes = imageFacts.reduce((sum, fact) => sum + Number(fact.split(":")
 // too, or a reader keeps being shown the edition before the one they hold. The
 // cost is re-fetching the pages, about 10 MB; the photographs are keyed
 // separately and survive.
+const imagesVersion = shortHash(imageFacts.join("\n"));
 const shellVersion = shortHash([...precache, ...imageFacts].join("\n"));
 await Bun.write(
   `${OUT}/offline-manifest.json`,
   // "build" is shown in the interface. An institution has to be able to say
   // which edition a class trained on, and storing it beside the download makes
   // that a question about the device rather than about the server.
-  JSON.stringify({ build: shellVersion, images: imageFacts.length, bytes: imageBytes }) + "\n",
+  //
+  // The cache names travel with it because the page fills those caches itself.
+  // Matching them on a prefix instead meant the page could not fill one that
+  // did not exist yet, and the worker creates the image cache lazily — so
+  // before the first photograph had ever been viewed there was nothing to find
+  // and the download refused outright.
+  JSON.stringify({
+    build: shellVersion,
+    images: imageFacts.length,
+    bytes: imageBytes,
+    caches: { pages: `afa-pages-${shellVersion}`, images: `afa-images-${imagesVersion}` },
+  }) + "\n",
 );
 
 for (const path of precache) {
@@ -92,7 +104,7 @@ for (const path of precache) {
 const source = await Bun.file(SOURCE).text();
 const sw = source
   .replace("__SHELL_VERSION__", shellVersion)
-  .replace("__IMAGES_VERSION__", shortHash(imageFacts.join("\n")))
+  .replace("__IMAGES_VERSION__", imagesVersion)
   .replace("__PRECACHE__", JSON.stringify(precache, null, 2));
 
 if (sw.includes("__SHELL_VERSION__") || sw.includes("__PRECACHE__")) {

@@ -13,18 +13,39 @@ import { allItems, readyBlocks } from "@/lib/content";
  * page a network error, because each navigation is server-rendered per request
  * and there is no prerendered HTML to fall back on. Caching the documents too
  * works because every route loader in this app is a synchronous lookup in the
- * bundled content — a cached document plus the precached JS renders any route
+ * bundled content — a stored document plus the precached JS renders any route
  * with nothing else available.
  */
-
-/** Cache names carry a version the page does not know; match on the prefix. */
-const IMAGES_PREFIX = "afa-images-";
-const PAGES_PREFIX = "afa-pages-";
 
 /** Enough at once to saturate a connection, few enough not to stall the UI. */
 const CONCURRENCY = 6;
 
 export type OfflineProgress = { done: number; total: number };
+
+export type OfflineManifest = {
+  build: string;
+  images: number;
+  bytes: number;
+  caches: { pages: string; images: string };
+};
+
+/**
+ * Written by scripts/build-sw.ts beside the service worker, so the page and the
+ * worker cannot disagree about which caches they are filling.
+ *
+ * Reading the names from here rather than matching a prefix over existing
+ * caches is deliberate: the worker creates the image cache lazily, on the first
+ * photograph it is asked for, so a prefix search found nothing at all before
+ * the reader had opened a single card — and the download refused outright.
+ */
+let manifestPromise: Promise<OfflineManifest | null> | null = null;
+
+export function offlineManifest(): Promise<OfflineManifest | null> {
+  manifestPromise ??= fetch("/offline-manifest.json")
+    .then((response) => (response.ok ? (response.json() as Promise<OfflineManifest>) : null))
+    .catch(() => null);
+  return manifestPromise;
+}
 
 export function offlineSupported(): boolean {
   return (
@@ -59,28 +80,27 @@ export function imageUrls(): string[] {
   return [...new Set(allItems.map((item) => item.imageUrl).filter((url): url is string => !!url))];
 }
 
-async function cacheNamed(prefix: string): Promise<Cache | null> {
-  const key = (await caches.keys()).find((name) => name.startsWith(prefix));
-  return key ? caches.open(key) : null;
-}
-
 /**
  * How much of the library is already stored.
  *
- * Counted rather than remembered in a flag: a reader can clear site data, or a
- * new build can retire the page cache, and a flag would then promise something
- * that is no longer true.
+ * Counted from the caches on every visit rather than remembered in a flag: site
+ * data can be cleared and a new build retires the page cache, and a flag would
+ * go on promising something that had stopped being true.
  */
 export async function offlineStatus(): Promise<OfflineProgress> {
   if (!offlineSupported()) return { done: 0, total: 0 };
-  const images = await cacheNamed(IMAGES_PREFIX);
-  const pages = await cacheNamed(PAGES_PREFIX);
+  const manifest = await offlineManifest();
+  if (!manifest) return { done: 0, total: 0 };
+
+  const existing = new Set(await caches.keys());
+  const held = new Set<string>();
+  for (const name of [manifest.caches.pages, manifest.caches.images]) {
+    if (!existing.has(name)) continue;
+    const cache = await caches.open(name);
+    for (const request of await cache.keys()) held.add(new URL(request.url).pathname);
+  }
+
   const wanted = [...imageUrls(), ...pageUrls()];
-  const held = new Set(
-    [...((await images?.keys()) ?? []), ...((await pages?.keys()) ?? [])].map(
-      (request) => new URL(request.url).pathname,
-    ),
-  );
   return { done: wanted.filter((url) => held.has(url)).length, total: wanted.length };
 }
 
@@ -111,17 +131,19 @@ async function fillCache(
 }
 
 /**
- * Fetch and store everything. Rejects on a storage quota error rather than
- * finishing quietly with half a library, because a reader who was told it was
- * downloaded and then finds a blank card in the field has been lied to.
+ * Fetch and store everything. Rejects rather than finishing quietly with half a
+ * library, because a reader who was told it was downloaded and then finds a
+ * blank card in the field has been lied to.
  */
 export async function downloadAll(
   signal: AbortSignal,
   onProgress: (progress: OfflineProgress) => void,
 ): Promise<void> {
-  const images = await cacheNamed(IMAGES_PREFIX);
-  const pages = await cacheNamed(PAGES_PREFIX);
-  if (!images || !pages) throw new Error("offline caches unavailable");
+  const manifest = await offlineManifest();
+  if (!manifest) throw new Error("offline manifest unavailable");
+
+  const pages = await caches.open(manifest.caches.pages);
+  const images = await caches.open(manifest.caches.images);
 
   const imageList = imageUrls();
   const pageList = pageUrls();
@@ -134,10 +156,14 @@ export async function downloadAll(
   await fillCache(images, imageList, signal, tick);
 }
 
-/** Frees the space again. The precached shell stays — it is a few hundred KB. */
+/**
+ * Frees the space again — including caches retired by an earlier build, which
+ * the worker only clears when it next activates. The precached shell stays; it
+ * is a few hundred kilobytes and the app needs it to start.
+ */
 export async function removeDownload(): Promise<void> {
   for (const name of await caches.keys()) {
-    if (name.startsWith(IMAGES_PREFIX) || name.startsWith(PAGES_PREFIX)) await caches.delete(name);
+    if (name.startsWith("afa-images-") || name.startsWith("afa-pages-")) await caches.delete(name);
   }
 }
 

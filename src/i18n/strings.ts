@@ -143,7 +143,8 @@ const en = {
   "offline.progress": "Downloading · {done} / {total}",
   "offline.ready": "Stored on this device",
   "offline.readySize": "Stored on this device · {size}",
-  "offline.error": "The download did not finish. There may not be room on the device.",
+  "offline.error":
+    "The download did not finish. Try again — if it keeps stopping, the device may be out of room.",
   "offline.cancel": "Cancel",
   "offline.remove": "Remove",
   "offline.build": "Edition {build}",
@@ -498,7 +499,8 @@ const et: Record<StringKey, string> = {
   "offline.progress": "Laadin alla · {done} / {total}",
   "offline.ready": "Seadmesse salvestatud",
   "offline.readySize": "Seadmesse salvestatud · {size}",
-  "offline.error": "Allalaadimine jäi pooleli. Seadmes võib ruumi puudu olla.",
+  "offline.error":
+    "Allalaadimine jäi pooleli. Proovi uuesti — kui see kordub, võib seadmes ruumi puudu olla.",
   "offline.cancel": "Katkesta",
   "offline.remove": "Eemalda",
   "offline.build": "Väljaanne {build}",
