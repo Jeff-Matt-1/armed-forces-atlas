@@ -3,7 +3,7 @@ import type { ItemTranslation } from "@/content/translations";
 /** Block 14 — Õhutõrjesüsteemid. */
 export const etAirDefence: Record<string, ItemTranslation> = {
   "zsu-23-4-shilka": {
-    aka: "Šilka",
+    aka: "Shilka",
     armament: "4 × 23 mm automaatkahur AZP-23",
     rangeText: "Efektiivne kuni umbes 2500 m",
     cues: [
@@ -67,14 +67,14 @@ export const etAirDefence: Record<string, ItemTranslation> = {
       "Kahurid ja raketid koos — kaks kahuritoru, raketikonteinerid väljaspool",
       "Neli suletud raketikasti torni mõlemal küljel",
       "Roomikkere suure radaritaldrikuga torni tagaosas",
-      "Torn on Šilka omast palju kõrgem",
+      "Torn on Shilka omast palju kõrgem",
     ],
     placements: [
       "Motolaskur- ja tankirügementide õhutõrjepatareid",
-      "Asendas Šilka esimese liini allüksustes",
+      "Asendas Shilka esimese liini allüksustes",
     ],
     doctrineNote:
-      "Vastus Šilka probleemile: kahurid selle vastu, mis tuleb lähedale ja kiiresti, raketid selle vastu, mis püsib eemal. Mõlema kandmine tähendab, et masin ei pea valima enne, kui sihtmärk ilmub.",
+      "Vastus Shilka probleemile: kahurid selle vastu, mis tuleb lähedale ja kiiresti, raketid selle vastu, mis püsib eemal. Mõlema kandmine tähendab, et masin ei pea valima enne, kui sihtmärk ilmub.",
     crew: "4",
     service: "Kasutuses",
   },

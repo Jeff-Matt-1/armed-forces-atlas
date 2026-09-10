@@ -84,7 +84,7 @@ export const etTrucks: Record<string, ItemTranslation> = {
     service: "Kasutuses",
   },
   "gaz-66": {
-    aka: "Šišiga",
+    aka: "Shishiga",
     cues: [
       "Väike 4x4, kabiin mootori peal, nüri peaaegu ruudukujuline nina",
       "Ainult kaks telge — palju lühem kui Ural või KamAZ",

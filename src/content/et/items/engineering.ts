@@ -74,7 +74,7 @@ export const etEngineering: Record<string, ItemTranslation> = {
     service: "Kasutuses",
   },
   "ur-77": {
-    aka: "Zmei Gorõnõtš",
+    aka: "Zmei Gorynych",
     rangeText: "Rajab umbes 90 m pika ja 6 m laiuse käigu",
     cues: [
       "Kere tagaosa peal massiivne heitesüsteem, kaas hingedel üles tõstetud",

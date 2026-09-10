@@ -84,7 +84,7 @@ export const etSubmarines: Record<string, ItemTranslation> = {
   },
   akula: {
     name: "Akula klass",
-    aka: "Projekt 971 Štšuka-B",
+    aka: "Projekt 971 Shchuka-B",
     armament: "Torpeedod ja torpeedotorude kaudu tiibraketid",
     cues: [
       "Puhas kere ilma küüruta ja ilma ebatavalise laiuseta — torpeedolaev",
@@ -103,7 +103,7 @@ export const etSubmarines: Record<string, ItemTranslation> = {
   },
   kilo: {
     name: "Täiustatud Kilo klass",
-    aka: "Projekt 636.3 Varšavjanka",
+    aka: "Projekt 636.3 Varshavyanka",
     armament: "Torpeedod ja tiibraketid Kalibr",
     rangeText: "Kalibr maasihtmärkide vastu kuni umbes 1500 km",
     cues: [

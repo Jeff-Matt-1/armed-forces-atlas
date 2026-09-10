@@ -39,7 +39,7 @@ export const etVessels: Record<string, ItemTranslation> = {
     service: "Kasutuses",
   },
   udaloy: {
-    name: "Udaloi klass",
+    name: "Udaloy klass",
     aka: "Projekt 1155 Fregat",
     armament: "Metel allveelaevatõrjeraketid, 2 × 100 mm kahurit, torpeedod",
     rangeText: "Allveelaevatõrjeraketid kuni umbes 50 km",
@@ -59,7 +59,7 @@ export const etVessels: Record<string, ItemTranslation> = {
     service: "Kasutuses",
   },
   "admiral-gorshkov": {
-    name: "Admiral Gorškovi klass",
+    name: "Admiral Gorshkovi klass",
     aka: "Projekt 22350",
     armament: "Kalibr ja Oniks püstšahtides, 130 mm kahur, Poliment-Redut",
     rangeText: "Kalibr maasihtmärkide vastu kuni umbes 1500 km",
@@ -79,14 +79,14 @@ export const etVessels: Record<string, ItemTranslation> = {
     service: "Kasutuses",
   },
   "admiral-grigorovich": {
-    name: "Admiral Grigorovitši klass",
+    name: "Admiral Grigorovichi klass",
     aka: "Projekt 11356R",
-    armament: "Kalibr püstšahtides, 100 mm kahur, Štil õhutõrje",
+    armament: "Kalibr püstšahtides, 100 mm kahur, Shtil õhutõrje",
     rangeText: "Kalibr maasihtmärkide vastu kuni umbes 1500 km",
     cues: [
-      "Tavapärane nurgeline pealisehitus — vähem silutud kui Gorškovil",
+      "Tavapärane nurgeline pealisehitus — vähem silutud kui Gorshkovil",
       "Lahtine võrestikmast eraldi radariantennidega",
-      "Üks 100 mm kahur vööris, väiksem kui Gorškovi 130 mm",
+      "Üks 100 mm kahur vööris, väiksem kui Gorshkovi 130 mm",
       "Kopteritekk ahtris, angaar pealisehitusse ehitatud",
     ],
     placements: [
@@ -94,12 +94,12 @@ export const etVessels: Record<string, ItemTranslation> = {
       "Ehitatud ekspordiprojekti alusel, kohandatud Vene teenistuseks",
     ],
     doctrineNote:
-      "Fregatt, mis saadi kiiresti kätte juba ekspordiks tootmises olnud kere kohandamisega. Ta kannab sama maasihtmärkide raketti kui Gorškov ja just see teeb vanema välimusega laevast tänase ohu.",
+      "Fregatt, mis saadi kiiresti kätte juba ekspordiks tootmises olnud kere kohandamisega. Ta kannab sama maasihtmärkide raketti kui Gorshkov ja just see teeb vanema välimusega laevast tänase ohu.",
     crew: "Umbes 200",
     service: "Kasutuses",
   },
   steregushchiy: {
-    name: "Stereguštši klass",
+    name: "Steregushchiy klass",
     aka: "Projekt 20380",
     armament: "100 mm kahur, Redut õhutõrje, allveelaevatõrjetorpeedod",
     rangeText: "Ranniku- ja lähimereoperatsioonid",
@@ -119,7 +119,7 @@ export const etVessels: Record<string, ItemTranslation> = {
     service: "Kasutuses",
   },
   "buyan-m": {
-    name: "Bujan-M klass",
+    name: "Buyan-M klass",
     aka: "Projekt 21631",
     armament: "8 × Kalibr püstšahtides, 100 mm kahur",
     rangeText: "Kalibr maasihtmärkide vastu kuni umbes 1500 km",

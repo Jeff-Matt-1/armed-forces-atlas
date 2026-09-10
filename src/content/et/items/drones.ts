@@ -89,7 +89,7 @@ export const etDrones: Record<string, ItemTranslation> = {
   },
   "uran-9": {
     aka: "Uran-9 maarobot",
-    armament: "30 mm automaatkahur 2A72, Ataka raketid, Šmel heitjad",
+    armament: "30 mm automaatkahur 2A72, Ataka raketid, Shmel heitjad",
     rangeText: "Juhitakse kuni umbes 3 km kauguselt",
     cues: [
       "Roomikmasin, kuid meeskonna jaoks palju liiga väike",

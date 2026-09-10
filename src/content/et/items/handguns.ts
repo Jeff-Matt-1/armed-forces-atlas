@@ -3,7 +3,7 @@ import type { ItemTranslation } from "@/content/translations";
 /** Block 02 — Käsitulirelvad. Designations stay; everything descriptive is translated. */
 export const etHandguns: Record<string, ItemTranslation> = {
   akm: {
-    aka: "Moderniseeritud AK-47; Kalašnikov 7,62",
+    aka: "Moderniseeritud AK-47; Kalashnikov 7,62",
     armament: "7,62x39 mm, 30-padruniline salv",
     rangeText: "Efektiivne kuni umbes 400 m",
     cues: [
@@ -73,7 +73,7 @@ export const etHandguns: Record<string, ItemTranslation> = {
     service: "Kasutuses, piiratud koguses",
   },
   aps: {
-    aka: "Avtomatitšeski Pistolet Stetškina",
+    aka: "Avtomaticheskiy Pistolet Stechkina",
     armament: "9x18 mm, 20-padruniline salv, valikuline tulerežiim",
     rangeText: "Efektiivne 50 m (õlatoega 200 m)",
     cues: [
@@ -139,7 +139,7 @@ export const etHandguns: Record<string, ItemTranslation> = {
     service: "Kasutuselevõtmisel",
   },
   "ak-74m": {
-    aka: "Kalašnikov 5,45",
+    aka: "Kalashnikov 5,45",
     armament: "5,45x39 mm, 30-padruniline salv",
     rangeText: "Efektiivne kuni umbes 500 m",
     cues: [
@@ -163,14 +163,14 @@ export const etHandguns: Record<string, ItemTranslation> = {
       "Kinnitussiin kulgeb üle kogu lukukoja ja selle kaane — ühelgi varasemal AK-l seda ei ole",
       "Teleskoopiline ja klapitav päraosa, mitte fikseeritud ega küljele klapitav",
       "Laesäär on kandiline ja siinidega, mitte ümar puit- või polümeerkate",
-      "Siinide all endiselt selgelt Kalašnikov: sama gaasitoru, sama salv",
+      "Siinide all endiselt selgelt Kalashnikov: sama gaasitoru, sama salv",
     ],
     placements: [
       "Alates 2010. aastate keskpaigast ümber varustatud üksused, veel mitte kõikjal",
       "Antakse esmalt koosseisudele, kellelt oodatakse lahingut, mitte positsioonide hoidmist",
     ],
     doctrineNote:
-      "Moderniseeritud Kalašnikov, mitte uus relv ja tema väärtus tuvastajale on ajaline: AK-12-te leidmine ütleb, et üksus on läbinud ümbervarustuse, mis paigutab ta järjekorda ka kõige muu jaoks, mis sellega kaasneb.",
+      "Moderniseeritud Kalashnikov, mitte uus relv ja tema väärtus tuvastajale on ajaline: AK-12-te leidmine ütleb, et üksus on läbinud ümbervarustuse, mis paigutab ta järjekorda ka kõige muu jaoks, mis sellega kaasneb.",
     service: "Kasutuses",
   },
   svd: {
@@ -181,7 +181,7 @@ export const etHandguns: Record<string, ItemTranslation> = {
       "Pikk raud ja skelettpära — päras on ava läbi",
       "Sihik PSO-1 asetseb kõrgel külgsiinil, nihutatud vasakule",
       "Peenike laesäär kahe pika õhuavaga mõlemal küljel",
-      "Pikem ja peenem kui ükski Kalašnikov",
+      "Pikem ja peenem kui ükski Kalashnikov",
     ],
     placements: [
       "Üks motolaskurjao kohta, määratud laskuri relv",

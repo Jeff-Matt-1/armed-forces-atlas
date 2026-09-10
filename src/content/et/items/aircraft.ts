@@ -3,7 +3,7 @@ import type { ItemTranslation } from "@/content/translations";
 /** Block 19 — Sõjalennukid. */
 export const etAircraft: Record<string, ItemTranslation> = {
   "su-25": {
-    aka: "Gratš; Frogfoot",
+    aka: "Grach; Frogfoot",
     armament: "30 mm GSh-30-2, raketid ja pommid kümnel püloonil",
     rangeText: "Lahingraadius umbes 375 km",
     cues: [
@@ -74,7 +74,7 @@ export const etAircraft: Record<string, ItemTranslation> = {
   },
   "mig-31": {
     aka: "Foxhound",
-    armament: "Kaugmaa raketid R-33 ja R-37M; osal lennukitel Kinžal",
+    armament: "Kaugmaa raketid R-33 ja R-37M; osal lennukitel Kinzhal",
     rangeText: "Lahingraadius umbes 720 km; püüdmislennud ulatuvad palju kaugemale",
     cues: [
       "Suured kandilised õhuvõtuavad teravate nurgeliste servadega",
@@ -84,7 +84,7 @@ export const etAircraft: Record<string, ItemTranslation> = {
     ],
     placements: [
       "Püüdurhävitajate rügemendid põhja- ja idasuundade katmiseks",
-      "Osa lennukeid on kohandatud kandma Kinžali raketti",
+      "Osa lennukeid on kohandatud kandma Kinzhali raketti",
     ],
     doctrineNote:
       "Püüdurhävitaja, mitte lähivõitleja: ehitatud lendama kiiresti ja kaugele, et kohata pommitajaid ja tiibrakette tühja territooriumi kohal. Kandilised õhuvõtuavad on kiireim viis teda kaugelt Flankerist eristada.",

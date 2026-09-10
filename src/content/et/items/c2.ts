@@ -37,7 +37,7 @@ export const etC2: Record<string, ItemTranslation> = {
     service: "Piiratud kasutuses",
   },
   "r-149ma1": {
-    aka: "Kušetka-B",
+    aka: "Kushetka-B",
     rangeText: "Raadio-, raadiorelee- ja satelliitside",
     cues: [
       "BTR-80 kere, kaheksa ratast, torn on täielikult puudu",

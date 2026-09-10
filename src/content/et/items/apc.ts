@@ -119,7 +119,7 @@ export const etApc: Record<string, ItemTranslation> = {
       "Alus õhudessantväe juhtimis- ja meditsiinivariantidele",
     ],
     doctrineNote:
-      "Käib paaris BMD-4M-iga ühisel šassiil, nii et moderniseeritud õhudessantpataljon peab ühte varuosakomplekti. Rakuška kolonnis tähendab, et BMD-4M-id on temaga kaasas.",
+      "Käib paaris BMD-4M-iga ühisel šassiil, nii et moderniseeritud õhudessantpataljon peab ühte varuosakomplekti. Rakushka kolonnis tähendab, et BMD-4M-id on temaga kaasas.",
     crew: "2 + 13",
     service: "Kasutuses",
   },

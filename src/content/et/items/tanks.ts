@@ -4,7 +4,7 @@ import type { ItemTranslation } from "@/content/translations";
 export const etTanks: Record<string, ItemTranslation> = {
   "t-62m": {
     armament: "115 mm sileraudne U-5TS; 12,7 mm NSVT",
-    rangeText: "Kahur 1600–2000 m; tankitõrjerakett Šeksna 4000 m",
+    rangeText: "Kahur 1600–2000 m; tankitõrjerakett Sheksna 4000 m",
     cues: [
       "Viis tugiratast, kolmanda ja neljanda vahel selge lai vahe",
       "Ümar torn punnis hoburaua-kujulise BDD-soomusplokiga ees",
@@ -86,16 +86,16 @@ export const etTanks: Record<string, ItemTranslation> = {
   },
   "t-90a": {
     aka: "Vladimir",
-    armament: "125 mm 2A46M-5; 12,7 mm kaugjuhitav jaam; Štora",
+    armament: "125 mm 2A46M-5; 12,7 mm kaugjuhitav jaam; Shtora",
     rangeText: "Kahur 3000 m; tankitõrjerakett Refleks 5000 m",
     cues: [
       "Keevistorn sirgete püstiste külgedega (varasemal T-90 valatud)",
-      "Štora infrapunapimestid — kaks „punast silma” kahuri mõlemal pool",
+      "Shtora infrapunapimestid — kaks „punast silma” kahuri mõlemal pool",
       "T-72 stiilis kuue tugirattaga käiguosa",
       "Kontakt-5 reaktiivsoomus torni esiossa integreeritud",
     ],
     placements: ["Valitud esimese liini brigaadide ja diviiside tankipataljonid"],
-    doctrineNote: "Viimistletud T-72 liini tank; Štora kiirgurid on kiireim tuvastustunnus.",
+    doctrineNote: "Viimistletud T-72 liini tank; Shtora kiirgurid on kiireim tuvastustunnus.",
     crew: "3",
     service: "Kasutuses",
   },
@@ -107,7 +107,7 @@ export const etTanks: Record<string, ItemTranslation> = {
       "Suur kandiline varustusrest torni tagaosas",
       "Relikt-paneelid ja võrekaitse taga",
       "Kaugjuhitav relvasüsteem ülema kupli peal — avatud 12,7 mm alust ei ole",
-      "Štora pimesteid ei ole",
+      "Shtora pimesteid ei ole",
     ],
     placements: ["Võimekaim tank esimese liini tankipataljonides; väljastatud piiratud koguses"],
     doctrineNote: "Eelisvarustus. Selle olemasolu näitab allüksust, mida juhatus peab põhirõhuks.",
