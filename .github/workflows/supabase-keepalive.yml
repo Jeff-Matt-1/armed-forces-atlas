@@ -1,4 +1,4 @@
-# Keeps the Supabase project from being paused.
+# Keeps the Supabase project from being paused by giving it database activity.
 #
 # Free-plan projects pause after seven days without activity. This app only
 # talks to Supabase when somebody signs in or syncs progress, so a quiet week —
@@ -33,7 +33,7 @@ jobs:
   ping:
     runs-on: ubuntu-latest
     steps:
-      - name: Ping the auth health endpoint
+      - name: Run a query against the database
         env:
           SUPABASE_URL: ${{ vars.SUPABASE_URL }}
           SUPABASE_PUBLISHABLE_KEY: ${{ vars.SUPABASE_PUBLISHABLE_KEY }}
@@ -45,18 +45,26 @@ jobs:
             exit 1
           fi
 
-          # /auth/v1/health is the only endpoint that answers 200 to the
-          # publishable key alone; /rest/v1/ returns 401 without a session, and
-          # a 401 is a poor thing to build a liveness check on.
+          # This used to ping /auth/v1/health, and the project was paused
+          # anyway on 2026-10-07 after eight consecutive green runs. That
+          # endpoint is GoTrue reporting on itself; it never touches Postgres,
+          # so it does not count as the activity the pause timer measures. The
+          # workflow was reporting success while the very thing it exists to
+          # prevent was happening.
+          #
+          # A select through PostgREST does reach the database. Row-level
+          # security gives the anonymous role nothing, so the body comes back
+          # as an empty array, which is the point: a real connection and a
+          # real query, returning no data at all.
           code=$(curl -sS -o /tmp/body -w '%{http_code}' --max-time 30 --retry 3 --retry-delay 20 \
             -H "apikey: ${SUPABASE_PUBLISHABLE_KEY}" \
-            "${SUPABASE_URL%/}/auth/v1/health")
+            "${SUPABASE_URL%/}/rest/v1/profiles?select=id&limit=1")
 
           echo "HTTP ${code}"
           cat /tmp/body
           echo
 
           if [ "${code}" != "200" ]; then
-            echo "::error::Supabase health check returned ${code}. If the project is already paused, restore it in the dashboard."
+            echo "::error::Supabase query returned ${code}. If the project is already paused, restore it in the dashboard; a paused project stops resolving in DNS, so curl may fail outright."
             exit 1
           fi
