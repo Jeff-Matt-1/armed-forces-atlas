@@ -59,6 +59,15 @@ function Privacy() {
         <p className="mt-3">{t("privacy.rls")}</p>
       </Section>
 
+      <Section title={t("privacy.classTitle")}>
+        <p>{t("privacy.classBody")}</p>
+        <ul className="mt-3 space-y-1">
+          <Key name="class_seats" desc={t("privacy.tableClassSeats")} />
+          <Key name="class_progress" desc={t("privacy.tableClassProgress")} />
+        </ul>
+        <p className="mt-3">{t("privacy.classLimit")}</p>
+      </Section>
+
       <Section title={t("privacy.cachedTitle")}>
         <p>{t("privacy.cachedBody")}</p>
       </Section>

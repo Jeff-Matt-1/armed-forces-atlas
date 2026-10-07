@@ -8,6 +8,7 @@ import { Label } from "@/components/ui/label";
 import { supabase } from "@/integrations/supabase/client";
 import { authRedirectTo } from "@/lib/site";
 import { useLocale } from "@/i18n/LocaleProvider";
+import type { StringKey } from "@/i18n/strings";
 
 export const Route = createFileRoute("/auth")({
   head: () => ({
@@ -30,16 +31,21 @@ export const Route = createFileRoute("/auth")({
 
 type Mode = "signin" | "signup" | "forgot";
 
-const HEADING: Record<Mode, string> = {
-  signin: "Sign in",
-  signup: "Create an account",
-  forgot: "Reset your password",
+/**
+ * Keys rather than English, because these were literals and the Estonian
+ * sign-in page was showing an English heading and an English paragraph under
+ * it. Every other string on the page already went through the translator.
+ */
+const HEADING: Record<Mode, StringKey> = {
+  signin: "auth.signIn",
+  signup: "auth.createAccount",
+  forgot: "auth.resetHeading",
 };
 
-const SUBMIT_LABEL: Record<Mode, string> = {
-  signin: "Sign in",
-  signup: "Create account",
-  forgot: "Send reset link",
+const SUBMIT_LABEL: Record<Mode, StringKey> = {
+  signin: "auth.signIn",
+  signup: "auth.createAccount",
+  forgot: "auth.sendResetLink",
 };
 
 function AuthPage() {
@@ -89,15 +95,15 @@ function AuthPage() {
           setSentTo(email);
           return;
         }
-        toast.success("Account created");
+        toast.success(t("auth.toastCreated"));
       } else {
         const { error } = await supabase.auth.signInWithPassword({ email, password });
         if (error) throw error;
-        toast.success("Signed in");
+        toast.success(t("auth.toastSignedIn"));
       }
       void navigate({ to: "/learn" });
     } catch (error) {
-      toast.error(error instanceof Error ? error.message : "Authentication failed");
+      toast.error(error instanceof Error ? error.message : t("auth.toastFailed"));
     } finally {
       setBusy(false);
     }
@@ -129,11 +135,9 @@ function AuthPage() {
   return (
     <div className="mx-auto w-full max-w-md px-4 py-14">
       <p className="plate-label">{t("auth.account")}</p>
-      <h1 className="mt-3 text-3xl">{HEADING[mode]}</h1>
+      <h1 className="mt-3 text-3xl">{t(HEADING[mode])}</h1>
       <p className="mt-2 text-sm text-muted-foreground">
-        {mode === "forgot"
-          ? "Enter the address you signed up with and we will send you a link to set a new password."
-          : "Progress, spaced-repetition scheduling and exam results are stored against your account. Study content stays free to browse without one."}
+        {mode === "forgot" ? t("auth.introForgot") : t("auth.introSignIn")}
       </p>
 
       <form onSubmit={submit} className="mt-8 space-y-4">
@@ -163,7 +167,7 @@ function AuthPage() {
           </div>
         )}
         <Button type="submit" className="w-full" disabled={busy}>
-          {SUBMIT_LABEL[mode]}
+          {t(SUBMIT_LABEL[mode])}
         </Button>
       </form>
 
@@ -182,6 +186,15 @@ function AuthPage() {
                 switchTo("forgot") if that ever changes — the mode and the
                 /reset-password route are still here and still work. */}
             <p className="text-muted-foreground">{t("auth.forgotAskInstructor")}</p>
+            {/* A trainee issued a seat code has no email address to type here
+                and would otherwise be stuck on this form. */}
+            <p>
+              {t("auth.haveCode")}{" "}
+              <Link to="/join" className="underline underline-offset-4">
+                {t("class.goToJoin")}
+              </Link>
+              .
+            </p>
           </>
         )}
         {mode === "signup" && (
@@ -199,11 +212,11 @@ function AuthPage() {
             onClick={() => switchTo("signin")}
             className="block w-full underline-offset-4 hover:underline"
           >
-            Remembered it? Back to sign in
+            {t("auth.rememberedIt")}
           </button>
         )}
         <p>
-          You can also{" "}
+          {t("auth.youCanAlso")}{" "}
           <Link to="/learn" className="underline underline-offset-4">
             {t("auth.studyWithout")}
           </Link>

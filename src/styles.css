@@ -282,3 +282,23 @@
     animation: badge-scrim 260ms ease-out both;
   }
 }
+
+/*
+ * Printing the seat-code sheet.
+ *
+ * An instructor hands out codes on paper, so the roster has to leave the page
+ * as a list and not as a screenshot of an application. The site chrome and the
+ * controls go; the seats stay, on white, at a size that survives a photocopier.
+ */
+@media print {
+  header,
+  footer,
+  .print-hide {
+    display: none !important;
+  }
+
+  body {
+    background: #fff;
+    color: #000;
+  }
+}

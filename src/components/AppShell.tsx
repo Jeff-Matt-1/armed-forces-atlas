@@ -7,6 +7,7 @@ import { LanguageToggle } from "@/components/LanguageToggle";
 import { useLocale } from "@/i18n/LocaleProvider";
 import type { StringKey } from "@/i18n/strings";
 import { useMergeLocalProgress } from "@/lib/progress";
+import { useIsInstructor, useSyncClassSummary } from "@/lib/class";
 import { Button } from "@/components/ui/button";
 
 const NAV = [
@@ -19,14 +20,27 @@ const NAV = [
 export function AppShell({ children }: { children: ReactNode }) {
   const { user, signOut } = useAuth();
   const { t } = useLocale();
+  const instructor = useIsInstructor();
   // Mounted inside AuthProvider, so this is the one place guaranteed to see
   // every sign-in and fold anonymous study into the account exactly once.
   useMergeLocalProgress();
+  // Same reason: a trainee's summary has to reach the class roster from
+  // wherever they happen to be studying, not only from the progress page.
+  useSyncClassSummary();
 
   return (
     <div className="flex min-h-screen flex-col bg-background">
       <header className="sticky top-0 z-40 border-b border-border bg-background/95 backdrop-blur">
-        <div className="mx-auto flex h-14 w-full max-w-6xl items-center gap-6 px-4">
+        {/*
+          Two rows on a phone, one on anything wider. The bar was a single
+          non-wrapping row of a fixed height, so on a 375 px screen it needed
+          554 px: the sign-in button sat entirely past the right edge and the
+          language toggle was cut in half, reachable only by scrolling the page
+          sideways. The nav takes the full width and drops to its own line
+          below the brand, which leaves the controls that must always be
+          reachable — language and sign in — on the first row.
+        */}
+        <div className="mx-auto flex w-full max-w-6xl flex-wrap items-center gap-x-4 px-4 py-2 sm:h-14 sm:flex-nowrap sm:gap-6 sm:py-0">
           <Link to="/" className="flex items-baseline gap-2">
             <span className="designation text-sm font-bold tracking-tight text-primary">
               RECOG/RU
@@ -34,32 +48,49 @@ export function AppShell({ children }: { children: ReactNode }) {
             <span className="plate-label hidden sm:inline">{t("shell.tagline")}</span>
           </Link>
 
-          <nav className="ml-auto flex items-center gap-1">
+          <nav className="order-last flex w-full flex-wrap items-center gap-1 pt-1 sm:order-none sm:ml-auto sm:w-auto sm:flex-nowrap sm:pt-0">
             {NAV.map((entry) => (
               <Link
                 key={entry.to}
                 to={entry.to}
-                className="rounded-sm px-2.5 py-1.5 text-sm text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
+                className="rounded-sm px-2 py-1.5 text-sm text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground sm:px-2.5"
                 activeProps={{ className: "bg-secondary text-foreground" }}
               >
                 {t(entry.label)}
               </Link>
             ))}
+            {instructor.data && (
+              <Link
+                to="/class"
+                className="rounded-sm px-2 py-1.5 text-sm text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground sm:px-2.5"
+                activeProps={{ className: "bg-secondary text-foreground" }}
+              >
+                {t("nav.class")}
+              </Link>
+            )}
           </nav>
 
-          <BadgeIndicator />
+          {/*
+            Grouped only so the group can be pushed to the right of the brand
+            on the phone's first row. "sm:contents" dissolves the wrapper on
+            wider screens, so the three sit in the bar's own gap spacing there
+            exactly as before.
+          */}
+          <div className="ml-auto flex items-center gap-2 sm:contents">
+            <BadgeIndicator />
 
-          <LanguageToggle />
+            <LanguageToggle />
 
-          {user ? (
-            <Button variant="ghost" size="sm" onClick={() => void signOut()}>
-              {t("nav.signOut")}
-            </Button>
-          ) : (
-            <Button asChild size="sm">
-              <Link to="/auth">{t("nav.signIn")}</Link>
-            </Button>
-          )}
+            {user ? (
+              <Button variant="ghost" size="sm" onClick={() => void signOut()}>
+                {t("nav.signOut")}
+              </Button>
+            ) : (
+              <Button asChild size="sm">
+                <Link to="/auth">{t("nav.signIn")}</Link>
+              </Button>
+            )}
+          </div>
         </div>
       </header>
 

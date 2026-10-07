@@ -146,21 +146,122 @@ export type Database = {
         };
         Relationships: [];
       };
+      class_progress: {
+        Row: {
+          badge_rank: number;
+          blocks_passed: number;
+          blocks_total: number;
+          content_build: string | null;
+          current_streak: number;
+          last_study_date: string | null;
+          overall: number;
+          synced_at: string;
+          user_id: string;
+        };
+        Insert: {
+          badge_rank?: number;
+          blocks_passed?: number;
+          blocks_total?: number;
+          content_build?: string | null;
+          current_streak?: number;
+          last_study_date?: string | null;
+          overall?: number;
+          synced_at?: string;
+          user_id: string;
+        };
+        Update: {
+          badge_rank?: number;
+          blocks_passed?: number;
+          blocks_total?: number;
+          content_build?: string | null;
+          current_streak?: number;
+          last_study_date?: string | null;
+          overall?: number;
+          synced_at?: string;
+          user_id?: string;
+        };
+        Relationships: [];
+      };
+      class_seats: {
+        Row: {
+          claimed_at: string | null;
+          class_id: string;
+          code: string;
+          id: string;
+          label: string | null;
+          seat_no: number;
+          user_id: string | null;
+        };
+        Insert: {
+          claimed_at?: string | null;
+          class_id: string;
+          code: string;
+          id?: string;
+          label?: string | null;
+          seat_no: number;
+          user_id?: string | null;
+        };
+        Update: {
+          claimed_at?: string | null;
+          class_id?: string;
+          code?: string;
+          id?: string;
+          label?: string | null;
+          seat_no?: number;
+          user_id?: string | null;
+        };
+        Relationships: [
+          {
+            foreignKeyName: "class_seats_class_id_fkey";
+            columns: ["class_id"];
+            isOneToOne: false;
+            referencedRelation: "classes";
+            referencedColumns: ["id"];
+          },
+        ];
+      };
+      classes: {
+        Row: {
+          archived_at: string | null;
+          created_at: string;
+          id: string;
+          instructor_id: string;
+          name: string;
+        };
+        Insert: {
+          archived_at?: string | null;
+          created_at?: string;
+          id?: string;
+          instructor_id: string;
+          name: string;
+        };
+        Update: {
+          archived_at?: string | null;
+          created_at?: string;
+          id?: string;
+          instructor_id?: string;
+          name?: string;
+        };
+        Relationships: [];
+      };
       profiles: {
         Row: {
           created_at: string;
           display_name: string | null;
           id: string;
+          is_instructor: boolean;
         };
         Insert: {
           created_at?: string;
           display_name?: string | null;
           id: string;
+          is_instructor?: boolean;
         };
         Update: {
           created_at?: string;
           display_name?: string | null;
           id?: string;
+          is_instructor?: boolean;
         };
         Relationships: [];
       };
@@ -193,7 +294,17 @@ export type Database = {
       [_ in never]: never;
     };
     Functions: {
-      [_ in never]: never;
+      claim_seat: {
+        Args: { seat_code: string };
+        Returns: {
+          class_name: string;
+          seat_label: string;
+          seat_no: number;
+          status: string;
+        }[];
+      };
+      instructor_owns_trainee: { Args: { trainee: string }; Returns: boolean };
+      is_instructor: { Args: never; Returns: boolean };
     };
     Enums: {
       [_ in never]: never;

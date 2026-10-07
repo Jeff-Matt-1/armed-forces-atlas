@@ -174,6 +174,14 @@ const en = {
   "privacy.tableStreaks": "study dates and streak length",
   "privacy.rls":
     "Every one of these tables has row-level security enabled, so the database itself refuses to return one person's rows to another.",
+  "privacy.classTitle": "If you joined a class with a code",
+  "privacy.classBody":
+    "A seat code creates an ordinary account, with an address derived from the code rather than one of your own, and adds two rows that the instructor who issued the code can read:",
+  "privacy.tableClassSeats": "your seat number and the name your instructor wrote against it",
+  "privacy.tableClassProgress":
+    "mastery, blocks passed, badge rank, streak and the day you last studied",
+  "privacy.classLimit":
+    "That summary is the whole of what an instructor can reach. Your answers, the items you keep missing and your sign-in times are not readable by them — no policy in the database grants it. The numbers are sent by your device when it has a connection, so studying offline keeps working and the roster catches up afterwards.",
   "privacy.cachedTitle": "Kept on the device while signed in",
   "privacy.cachedBody":
     "So that losing your connection does not read as an empty account, the last progress the server returned is also kept in local storage, under a fourth key. It is tied to your account and is erased when you sign out. Downloading the library for offline use stores the photographs and pages themselves in the browser's cache; that is study material, not personal data, and removing the download deletes it.",
@@ -309,6 +317,17 @@ const en = {
   "auth.forgotAskInstructor":
     "Forgotten your password? Ask your instructor to set a new one — there is no reset email.",
   "auth.studyWithout": "keep studying without an account",
+  "auth.resetHeading": "Reset your password",
+  "auth.sendResetLink": "Send reset link",
+  "auth.introSignIn":
+    "Progress, spaced-repetition scheduling and exam results are stored against your account. Study content stays free to browse without one.",
+  "auth.introForgot":
+    "Enter the address you signed up with. We will send you a link to set a new password.",
+  "auth.rememberedIt": "Remembered it? Back to sign in",
+  "auth.youCanAlso": "You can also",
+  "auth.toastCreated": "Account created",
+  "auth.toastSignedIn": "Signed in",
+  "auth.toastFailed": "Authentication failed",
 
   "about.transparency": "Transparency",
   "about.title": "Sources and licensing",
@@ -354,6 +373,71 @@ const en = {
   "progress.progressiveUnlockBody":
     "Require each block exam to be passed before the next block opens.",
   "drill.tapToReveal": "Tap to reveal the designation",
+
+  "auth.haveCode": "Given a seat code by an instructor?",
+  // Joining a class
+  "join.eyebrow": "Class",
+  "join.title": "Join your class",
+  "join.body":
+    "Enter the seat code your instructor gave you. There is no email address and no password to remember.",
+  "join.code": "Seat code",
+  "join.codeHint": "Eight characters. Capitals and dashes do not matter.",
+  "join.submit": "Join",
+  "join.joining": "Joining…",
+  "join.joinedTitle": "You are in",
+  "join.alreadyIn": "You are already in a class",
+  "join.seatLine": "{class} · seat {seat}",
+  "join.startStudying": "Start studying",
+  "join.malformed": "That code is not complete. Check every character.",
+  "join.unknown": "No such code. Ask your instructor for the right one.",
+  "join.closed":
+    "That course has ended and its codes no longer work. Ask your instructor for a current one.",
+  "join.taken": "That seat belongs to someone else. If the code is yours, sign out first.",
+  "join.elsewhere": "You are already in another class. One account belongs to one seat.",
+  "join.instructor": "An instructor account cannot take a seat on its own roster.",
+  "join.failed": "Joining failed. Try again once you have a connection.",
+  "join.noCode": "No code? You can also",
+
+  // Instructor
+  "nav.class": "Classes",
+  "class.eyebrow": "Instructor",
+  "class.title": "Classes",
+  "class.signInTitle": "Sign in to see your classes",
+  "class.signInBody": "The roster is tied to your instructor account.",
+  "class.notInstructorTitle": "This account does not run a class",
+  "class.notInstructorBody":
+    "Instructor accounts are set up by hand. If you were given a seat code, join your class instead.",
+  "class.goToJoin": "Join with a code",
+  "class.closedClasses": "Closed",
+  "class.endCourse": "End the course",
+  "class.reopen": "Reopen",
+  "class.closedBanner": "This course is closed. Its codes no longer work and no one else can join.",
+  "class.delete": "Delete permanently",
+  "class.deleteTitle": "Delete {class}?",
+  "class.deleteBody":
+    "This removes the class, its seats and its codes, and with them your view of these trainees' numbers. It cannot be undone.",
+  "class.deleteKeeps":
+    "It does not touch the trainees themselves. Their accounts stay, the study saved on their devices stays, and they simply stop belonging to a class.",
+  "class.deleteConfirm": "Delete",
+  "class.cancel": "Cancel",
+  "class.yourClasses": "Your classes",
+  "class.newName": "New class",
+  "class.newSeats": "Seats",
+  "class.create": "Create",
+  "class.loading": "Loading the roster…",
+  "class.seatsClaimed": "Seats in use: {claimed} / {total}",
+  "class.printSheet": "Print the code sheet",
+  "class.addSeats": "Add five seats",
+  "class.seatName": "Trainee name",
+  "class.seatNamePlaceholder": "Name (optional)",
+  "class.neverStudied": "not started",
+  "class.studiedToday": "studied today",
+  "class.lastStudied": "studied {days} d ago",
+  "class.lastSynced": "data {days} d old",
+  "class.claimedNoData": "joined, nothing reported yet",
+  "class.unclaimed": "free",
+  "class.syncNote":
+    "Numbers reach the roster when a trainee's device has a connection. A seat that has been studying with no connection shows its study day and how old the data is.",
 
   // Misc
   "common.notFound": "Not found",
@@ -531,9 +615,17 @@ const et: Record<StringKey, string> = {
   "privacy.tableStreaks": "õppimise kuupäevad ja seeria pikkus",
   "privacy.rls":
     "Igal neist tabelitest on reatasandi turve sisse lülitatud, nii et andmebaas ise keeldub ühe inimese ridu teisele tagastamast.",
+  "privacy.classTitle": "Kui liitusid klassiga koodi abil",
+  "privacy.classBody":
+    "Liitumiskood loob tavalise konto, mille aadress tuletatakse koodist ega ole sinu oma ning lisab kaks rida, mida koodi väljastanud instruktor näeb:",
+  "privacy.tableClassSeats": "sinu koha number ja nimi, mille instruktor sellele kirjutas",
+  "privacy.tableClassProgress":
+    "meisterlikkus, sooritatud õppetükid, märgi aste, seeria ja viimane õppepäev",
+  "privacy.classLimit":
+    "Rohkemat instruktor ei näe. Sinu vastused, korduvalt valesti vastatud objektid ja sisselogimise ajad ei ole talle loetavad — ükski andmebaasi reegel seda ei luba. Numbrid saadab sinu seade siis, kui ühendus on olemas, nii et ilma ühenduseta õppimine toimib edasi ja nimekiri jõuab hiljem järele.",
   "privacy.cachedTitle": "Mida hoitakse seadmes sisselogituna",
   "privacy.cachedBody":
-    "Et ühenduse kadumine ei näeks välja nagu tühi konto, hoitakse serveri viimati tagastatud edenemist ka kohalikus salvestuses, neljanda võtme all. See on seotud sinu kontoga ja kustutatakse välja logides. Materjali allalaadimine salvestab fotod ja lehed brauseri vahemällu; see on õppevara, mitte isikuandmed, ja allalaadimise eemaldamine kustutab selle.",
+    "Et ühenduse kadumine ei näeks välja nagu tühi konto, hoitakse serveri viimati tagastatud edenemist ka kohalikus salvestuses, neljanda võtme all. See on seotud sinu kontoga ja kustutatakse välja logides. Materjali allalaadimine salvestab fotod ja lehed brauseri vahemällu; see on õppevara, mitte isikuandmed. Allalaadimise eemaldamine kustutab selle.",
   "privacy.whereTitle": "Kus seda hoitakse",
   "privacy.whereBody":
     "Andmebaasi majutab Supabase Iirimaal (eu-west-1), Euroopa Liidus. Saiti ennast serveerib Cloudflare, kes töötleb iga päringu IP-aadressi, et lehte üldse edastada — nagu iga veebiserver peab.",
@@ -542,10 +634,10 @@ const et: Record<StringKey, string> = {
     "Mitte midagi. Kirjatüübid, fotod ja kõik muu serveeritakse sellelt saidilt, nii et rakenduse kasutamise ajal ei võeta ühendust ühegi kolmanda osapoolega — kirjatüüpe ei küsita Google'ilt ja kirjete sirvimine ei ütle Wikimediale midagi selle kohta, mida sa vaatasid.",
   "privacy.notCollectedTitle": "Mida ei koguta",
   "privacy.notCollectedBody":
-    "Analüütikat ei ole, reklaami ei ole, jälgimisküpsiseid ei ole, seansisalvestust ei ole, sõrmejälgede võtmist ei ole, ja midagi ei müüda ega jagata kellegagi. Sinu e-posti aadressi kasutatakse sisselogimiseks ja mitte millekski muuks — rakendus ei saada ühtegi e-kirja.",
+    "Analüütikat ei ole, reklaami ei ole, jälgimisküpsiseid ei ole, seansisalvestust ei ole, sõrmejälgede võtmist ei ole ja midagi ei müüda ega jagata kellegagi. Sinu e-posti aadressi kasutatakse sisselogimiseks ja mitte millekski muuks — rakendus ei saada ühtegi e-kirja.",
   "privacy.deleteTitle": "Oma andmete kustutamine",
   "privacy.deleteBody":
-    "Küsi sellelt, kes sulle konto andis, ja see kustutatakse koos kõigi ülalloetletud ridadega. Kui sa kunagi kontot ei teinud, on brauseri saidiandmete kustutamine kogu asi.",
+    "Küsi konto andjalt ja see kustutatakse koos kõigi ülalloetletud ridadega. Kui sa kunagi kontot ei teinud, on brauseri saidiandmete kustutamine kogu asi.",
   "privacy.rightsTitle": "Sinu õigused",
   "privacy.rightsBody":
     "GDPR-i alusel võid küsida, mida sinu kohta hoitakse, nõuda selle parandamist, küsida koopiat või nõuda kustutamist. Pöördu selle poole, kes seda paigaldust haldab; ülaltoodud loend on esimesele küsimusele täielik vastus.",
@@ -665,17 +757,28 @@ const et: Record<StringKey, string> = {
   "auth.forgot": "Unustasid parooli?",
   "auth.forgotAskInstructor":
     "Unustasid parooli? Palu juhendajal uus määrata — parooli lähtestamise e-kirja ei saadeta.",
-  "auth.studyWithout": "jätka õppimist ilma kontota",
+  "auth.studyWithout": "jätkata õppimist ilma kontota",
+  "auth.resetHeading": "Taasta oma parool",
+  "auth.sendResetLink": "Saada taastuslink",
+  "auth.introSignIn":
+    "Edenemine, kordamisgraafik ja eksamitulemused salvestatakse sinu konto alla. Õppematerjali saab sirvida ka ilma kontota.",
+  "auth.introForgot":
+    "Sisesta aadress, millega registreerusid. Saadame sulle lingi uue parooli määramiseks.",
+  "auth.rememberedIt": "Tuli meelde? Tagasi sisselogimise juurde",
+  "auth.youCanAlso": "Võid ka",
+  "auth.toastCreated": "Konto loodud",
+  "auth.toastSignedIn": "Sisse logitud",
+  "auth.toastFailed": "Autentimine ebaõnnestus",
 
   "about.transparency": "Läbipaistvus",
   "about.title": "Allikad ja litsentsid",
   "about.publicSources":
-    "See treener on mõeldud huvilistele ja kaitseväelastele baasväljaõppe materjalina. Kasutatakse ainult avalikke allikaid. Siin ei ole midagi piiratud ega salastatud ega mitteavalikest dokumentidest tuletatud, ja ei tule ka edaspidi.",
+    "See treener on mõeldud huvilistele ja kaitseväelastele baasväljaõppe materjalina. Kasutatakse ainult avalikke allikaid. Siin ei ole midagi piiratud ega salastatud ega mitteavalikest dokumentidest tuletatud ega tule ka edaspidi.",
   "about.doctrineIntro": "Doktriini raamistik järgib Lester W. Grau ja Charles K. Bartlesi teost",
   "about.doctrineRest":
     "(Foreign Military Studies Office), mis on avalikult välja antud uurimus. Kui kirje juures on kasutusmärkus, peegeldab see selle töö raamistikku: Vene relvajõud on tulekesksed ja tehnikat mõistab kõige paremini selle rolli kaudu suurtükiväekeskses lahingus.",
   "about.photographs":
-    "Fotod pärinevad Wikimedia Commonsist ja on siin taasesitatud nende algsete litsentside alusel; autor ja litsents on näidatud igal kaardil ning viidatud tagasi Commonsi faililehele. Koopiaid serveeritakse sellelt saidilt, mitte ei laadita mujalt, ja need on veebi jaoks vähendatud; muid muudatusi ei tehta.",
+    "Fotod pärinevad Wikimedia Commonsist ja on siin taasesitatud nende algsete litsentside alusel; autor ja litsents on näidatud igal kaardil ning viidatud tagasi Commonsi faililehele. Koopiaid serveeritakse sellelt saidilt, mitte ei laadita mujalt ja need on veebi jaoks vähendatud; muid muudatusi ei tehta.",
   "about.placements":
     "Kirjeldatud kohad lahingukorras vastavad tavapärasele avalikult teadaolevale praktikale. Koosseisud muutuvad; käsitle neid tüüpiliste, mitte absoluutsetena.",
   "about.imageCredits": "Piltide autorid",
@@ -702,7 +805,7 @@ const et: Record<StringKey, string> = {
   "curriculum.eyebrow": "Õppekava",
   "curriculum.title": "Õppetükid",
   "curriculum.intro":
-    "Tegele ühe teemaga korraga. Iga õppetükk algab ülevaatega, siis tulevad tuvastuskaardid, seejärel harjutused, ja lõpetab segaeksam. Järgmise õppetüki avamiseks tuleb eksam sooritada 80% peale.",
+    "Tegele ühe teemaga korraga. Iga õppetükk algab ülevaatega, siis tulevad tuvastuskaardid, seejärel harjutused ja lõpetab segaeksam. Järgmise õppetüki avamiseks tuleb eksam sooritada 80% peale.",
   "curriculum.inProgress": "Koostamisel",
   "curriculum.lockedHint": "Avamiseks soorita eelmine õppetükk",
   "progress.recentAttempts": "Hiljutised katsed",
@@ -711,6 +814,72 @@ const et: Record<StringKey, string> = {
   "progress.progressiveUnlockBody":
     "Nõua iga õppetüki eksami sooritamist, enne kui järgmine avaneb.",
   "drill.tapToReveal": "Puuduta tähistuse nägemiseks",
+
+  "auth.haveCode": "Kas instruktor andis sulle liitumiskoodi?",
+  // Klassiga liitumine
+  "join.eyebrow": "Klass",
+  "join.title": "Liitu oma klassiga",
+  "join.body":
+    "Sisesta kood, mille instruktor sulle andis. E-posti aadressi ega parooli meelde jätta ei ole vaja.",
+  "join.code": "Liitumiskood",
+  "join.codeHint": "Kaheksa märki. Suurtähed ja sidekriipsud ei loe.",
+  "join.submit": "Liitu",
+  "join.joining": "Liitun…",
+  "join.joinedTitle": "Oled klassis",
+  "join.alreadyIn": "Oled juba klassis",
+  "join.seatLine": "{class} · koht {seat}",
+  "join.startStudying": "Alusta õppimist",
+  "join.malformed": "See kood ei ole terve. Kontrolli iga märki.",
+  "join.unknown": "Sellist koodi ei ole. Küsi instruktorilt õige kood.",
+  "join.closed":
+    "See kursus on lõppenud ja selle koodid enam ei tööta. Küsi instruktorilt praegune kood.",
+  "join.taken": "See koht kuulub kellelegi teisele. Kui kood on sinu oma, logi enne välja.",
+  "join.elsewhere": "Oled juba teises klassis. Üks konto kuulub ühele kohale.",
+  "join.instructor": "Instruktori konto ei saa oma nimekirjas kohta võtta.",
+  "join.failed": "Liitumine ebaõnnestus. Proovi uuesti, kui ühendus on olemas.",
+  "join.noCode": "Koodi ei ole? Võid ka",
+
+  // Instruktor
+  "nav.class": "Klassid",
+  "class.eyebrow": "Instruktor",
+  "class.title": "Klassid",
+  "class.signInTitle": "Klasside nägemiseks logi sisse",
+  "class.signInBody": "Nimekiri on seotud sinu instruktorikontoga.",
+  "class.notInstructorTitle": "See konto klassi ei juhi",
+  "class.notInstructorBody":
+    "Instruktorikontod luuakse käsitsi. Kui sulle anti liitumiskood, liitu selle asemel oma klassiga.",
+  "class.goToJoin": "Liitu koodiga",
+  "class.closedClasses": "Lõpetatud",
+  "class.endCourse": "Lõpeta kursus",
+  "class.reopen": "Taasta",
+  "class.closedBanner":
+    "Kursus on lõpetatud. Selle koodid enam ei tööta ja keegi uus liituda ei saa.",
+  "class.delete": "Kustuta jäädavalt",
+  "class.deleteTitle": "Kas kustutada {class}?",
+  "class.deleteBody":
+    "See eemaldab klassi, selle kohad ja koodid ning koos nendega sinu vaate nende õppurite numbritele. Seda ei saa tagasi võtta.",
+  "class.deleteKeeps":
+    "Õppureid ennast see ei puuduta. Nende kontod jäävad alles, seadmesse salvestatud õppetöö jääb alles ja nad lihtsalt ei kuulu enam ühtegi klassi.",
+  "class.deleteConfirm": "Kustuta",
+  "class.cancel": "Loobu",
+  "class.yourClasses": "Sinu klassid",
+  "class.newName": "Uus klass",
+  "class.newSeats": "Kohti",
+  "class.create": "Loo",
+  "class.loading": "Laen nimekirja…",
+  "class.seatsClaimed": "Kohti kasutusel: {claimed} / {total}",
+  "class.printSheet": "Prindi koodileht",
+  "class.addSeats": "Lisa viis kohta",
+  "class.seatName": "Õppuri nimi",
+  "class.seatNamePlaceholder": "Nimi (valikuline)",
+  "class.neverStudied": "alustamata",
+  "class.studiedToday": "õppis täna",
+  "class.lastStudied": "õppis {days} p tagasi",
+  "class.lastSynced": "andmed {days} p vanad",
+  "class.claimedNoData": "liitunud, andmeid veel ei ole",
+  "class.unclaimed": "vaba",
+  "class.syncNote":
+    "Numbrid jõuavad nimekirja siis, kui õppuri seadmel on ühendus. Ilma ühenduseta õppinud koha juures on näha õppepäev ja andmete vanus.",
 
   // Misc
   "common.notFound": "Ei leitud",
