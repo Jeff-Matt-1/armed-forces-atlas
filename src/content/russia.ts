@@ -365,8 +365,8 @@ const baseItems: Item[] = [
     name: "Self-Propelled Gun (SPG)",
     aka: "SAU (samokhodnaya artilleriyskaya ustanovka)",
     imageUrl: "/images/items/concept-spg.jpg",
-    imageCredit: "CC BY-SA 4.0 — Zala",
-    imagePage: "https://commons.wikimedia.org/wiki/File:2S19_Msta-S_PM_MWB_03.jpg",
+    imageCredit: "Public domain — Николай Путин",
+    imagePage: "https://commons.wikimedia.org/wiki/File:Msta-S.jpg",
     armament: "152 mm howitzer",
     rangeText: "Conventional 24–29 km; rocket-assisted to ~40 km",
     cues: [

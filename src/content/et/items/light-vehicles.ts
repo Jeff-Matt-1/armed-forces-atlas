@@ -39,7 +39,6 @@ export const etLightVehicles: Record<string, ItemTranslation> = {
     service: "Kasutuses, asendamisel",
   },
   "uaz-3163-patriot": {
-    aka: "UAZ-3163",
     cues: [
       "Tsiviilmaasturi jooned, UAZ-469-ga võrreldes ümaram",
       "Täiskõrgusega külgaknad ja kerevärvi postid",
@@ -72,7 +71,7 @@ export const etLightVehicles: Record<string, ItemTranslation> = {
     service: "Kasutuses",
   },
   "gaz-233114-tigr-m": {
-    aka: "GAZ-233114 / Tigr-M",
+    aka: "Tigr-M",
     armament: "Kaugjuhitav relvasüsteem Arbalet-DM, 12,7 mm Kord",
     rangeText: "Efektiivne kuni 2000 m",
     cues: [

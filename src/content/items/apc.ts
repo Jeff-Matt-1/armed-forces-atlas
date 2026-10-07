@@ -43,7 +43,7 @@ export const apc: Item[] = [
     slug: "btr-70",
     blockSlug: "apc",
     name: "BTR-70",
-    aka: "GAZ-4905",
+    aka: null,
     imageUrl: "/images/items/btr-70.jpg",
     imageCredit:
       "Attribution — Правительство Приднестровской Молдавской Республики (Government of the Pridnestrovian Moldavian Republic)",
@@ -67,7 +67,7 @@ export const apc: Item[] = [
     slug: "btr-80",
     blockSlug: "apc",
     name: "BTR-80",
-    aka: "GAZ-5903",
+    aka: null,
     imageUrl: "/images/items/btr-80.jpg",
     imageCredit: "CC BY-SA 3.0 — Vitaliy Ragulin",
     imagePage: "https://commons.wikimedia.org/wiki/File:Russian_BTR-80_APC.jpg",

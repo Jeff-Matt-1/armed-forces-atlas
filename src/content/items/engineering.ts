@@ -75,7 +75,7 @@ export const engineering: Item[] = [
     aka: "Armoured recovery vehicle",
     imageUrl: "/images/items/brem-1.jpg",
     imageCredit: "CC BY-SA 4.0 — Vitaly V. Kuzmin",
-    imagePage: "https://commons.wikimedia.org/wiki/File:BREM-1_armoured_recovery_vehicle_(1).jpg",
+    imagePage: "https://commons.wikimedia.org/wiki/File:4thTankDivisionOpenDay17p1-24.jpg",
     armament: "12.7 mm NSVT",
     rangeText: null,
     cues: [
@@ -100,9 +100,8 @@ export const engineering: Item[] = [
     name: "GMZ-3",
     aka: "Tracked minelayer",
     imageUrl: "/images/items/gmz-3.jpg",
-    imageCredit: "CC BY-SA 3.0 — Mike1979 Russia",
-    imagePage:
-      "https://commons.wikimedia.org/wiki/File:GMZ-3_minelayer_vehicle_at_Engineering_Technologies_2012.jpg",
+    imageCredit: "CC BY-SA 4.0 — Vitaly V. Kuzmin",
+    imagePage: "https://commons.wikimedia.org/wiki/File:GMZ-3_at_Engineering_Technologies_2012.jpg",
     armament: null,
     rangeText: "Lays a minefield several hundred metres long in minutes",
     cues: [
@@ -208,9 +207,8 @@ export const engineering: Item[] = [
     name: "BAT-2",
     aka: "Path-layer",
     imageUrl: "/images/items/bat-2.jpg",
-    imageCredit: "CC BY 4.0 — Павла Герасимова (Pavel Gerasimov)",
-    imagePage:
-      "https://commons.wikimedia.org/wiki/File:%D0%91%D0%90%D0%A2-2_-_%D0%A4%D0%B8%D0%BD%D0%B0%D0%BB_%D0%BC%D0%B5%D0%B6%D0%B4%D1%83%D0%BD%D0%B0%D1%80%D0%BE%D0%B4%D0%BD%D0%BE%D0%B3%D0%BE_%D0%BA%D0%BE%D0%BD%D0%BA%D1%83%D1%80%D1%81%D0%B0_%C2%AB%D0%91%D0%B5%D0%B7%D0%BE%D0%BF%D0%B0%D1%81%D0%BD%D1%8B%D0%B9_%D0%BC%D0%B0%D1%80%D1%88%D1%80%D1%83%D1%82%C2%BB_01.jpg",
+    imageCredit: "CC BY-SA 4.0 — Vitaly V. Kuzmin",
+    imagePage: "https://commons.wikimedia.org/wiki/File:OpenWater2017qualifying-45.jpg",
     armament: null,
     rangeText: "Cuts route at roughly 10 km/h in easy going, far slower in earth",
     cues: [
@@ -289,7 +287,7 @@ export const engineering: Item[] = [
     aka: "Armoured mine-clearing vehicle",
     imageUrl: "/images/items/bmr-3m.jpg",
     imageCredit: "CC BY-SA 4.0 — Vitaly V. Kuzmin",
-    imagePage: "https://commons.wikimedia.org/wiki/File:Engineering_Technologies_-_2012_(5-38).jpg",
+    imagePage: "https://commons.wikimedia.org/wiki/File:Russia_Arms_Expo_2013_(531-10).jpg",
     armament: "12.7 mm remote weapon station",
     rangeText: null,
     cues: [

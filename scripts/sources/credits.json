@@ -71,12 +71,12 @@
   },
   {
     "slug": "2s19-msta-s",
-    "file": "File:2S19 Msta-S PM MWB 03.jpg",
+    "file": "File:ParkPatriot2015part6-04.jpg",
     "localPath": "/images/items/2s19-msta-s.jpg",
-    "imageCredit": "CC BY-SA 4.0 — Zala",
-    "imagePage": "https://commons.wikimedia.org/wiki/File:2S19_Msta-S_PM_MWB_03.jpg",
-    "licence": "CC BY-SA 4.0",
-    "artist": "Zala",
+    "imageCredit": "CC BY-SA 3.0 — Vitaly V. Kuzmin",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:ParkPatriot2015part6-04.jpg",
+    "licence": "CC BY-SA 3.0",
+    "artist": "Vitaly V. Kuzmin",
     "attributionRequired": true
   },
   {
@@ -251,12 +251,12 @@
   },
   {
     "slug": "bat-2",
-    "file": "File:БАТ-2 - Финал международного конкурса «Безопасный маршрут» 01.jpg",
+    "file": "File:OpenWater2017qualifying-45.jpg",
     "localPath": "/images/items/bat-2.jpg",
-    "imageCredit": "CC BY 4.0 — Павла Герасимова (Pavel Gerasimov)",
-    "imagePage": "https://commons.wikimedia.org/wiki/File:%D0%91%D0%90%D0%A2-2_-_%D0%A4%D0%B8%D0%BD%D0%B0%D0%BB_%D0%BC%D0%B5%D0%B6%D0%B4%D1%83%D0%BD%D0%B0%D1%80%D0%BE%D0%B4%D0%BD%D0%BE%D0%B3%D0%BE_%D0%BA%D0%BE%D0%BD%D0%BA%D1%83%D1%80%D1%81%D0%B0_%C2%AB%D0%91%D0%B5%D0%B7%D0%BE%D0%BF%D0%B0%D1%81%D0%BD%D1%8B%D0%B9_%D0%BC%D0%B0%D1%80%D1%88%D1%80%D1%83%D1%82%C2%BB_01.jpg",
-    "licence": "CC BY 4.0",
-    "artist": "Павла Герасимова (Pavel Gerasimov)",
+    "imageCredit": "CC BY-SA 4.0 — Vitaly V. Kuzmin",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:OpenWater2017qualifying-45.jpg",
+    "licence": "CC BY-SA 4.0",
+    "artist": "Vitaly V. Kuzmin",
     "attributionRequired": true
   },
   {
@@ -351,10 +351,10 @@
   },
   {
     "slug": "bmr-3m",
-    "file": "File:Engineering Technologies - 2012 (5-38).jpg",
+    "file": "File:Russia Arms Expo 2013 (531-10).jpg",
     "localPath": "/images/items/bmr-3m.jpg",
     "imageCredit": "CC BY-SA 4.0 — Vitaly V. Kuzmin",
-    "imagePage": "https://commons.wikimedia.org/wiki/File:Engineering_Technologies_-_2012_(5-38).jpg",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:Russia_Arms_Expo_2013_(531-10).jpg",
     "licence": "CC BY-SA 4.0",
     "artist": "Vitaly V. Kuzmin",
     "attributionRequired": true
@@ -391,10 +391,10 @@
   },
   {
     "slug": "brem-1",
-    "file": "File:BREM-1 armoured recovery vehicle (1).jpg",
+    "file": "File:4thTankDivisionOpenDay17p1-24.jpg",
     "localPath": "/images/items/brem-1.jpg",
     "imageCredit": "CC BY-SA 4.0 — Vitaly V. Kuzmin",
-    "imagePage": "https://commons.wikimedia.org/wiki/File:BREM-1_armoured_recovery_vehicle_(1).jpg",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:4thTankDivisionOpenDay17p1-24.jpg",
     "licence": "CC BY-SA 4.0",
     "artist": "Vitaly V. Kuzmin",
     "attributionRequired": true
@@ -500,6 +500,16 @@
     "attributionRequired": true
   },
   {
+    "slug": "concept-spg",
+    "file": "File:Msta-S.jpg",
+    "localPath": "/images/items/concept-spg.jpg",
+    "imageCredit": "Public domain — Николай Путин",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:Msta-S.jpg",
+    "licence": "Public domain",
+    "artist": "Николай Путин",
+    "attributionRequired": false
+  },
+  {
     "slug": "d-30",
     "file": "File:122mm howitzer D-30 - Armory masters4.jpg",
     "localPath": "/images/items/d-30.jpg",
@@ -527,6 +537,16 @@
     "imagePage": "https://commons.wikimedia.org/wiki/File:DT-30P1_Vityaz_1.jpg",
     "licence": "CC BY-SA 4.0",
     "artist": "Алексей Китаев",
+    "attributionRequired": true
+  },
+  {
+    "slug": "dyugon",
+    "file": "File:«Мичман Лермонтов».jpg",
+    "localPath": "/images/items/dyugon.jpg",
+    "imageCredit": "CC BY 4.0 — Alexey Kitayev",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:%C2%AB%D0%9C%D0%B8%D1%87%D0%BC%D0%B0%D0%BD_%D0%9B%D0%B5%D1%80%D0%BC%D0%BE%D0%BD%D1%82%D0%BE%D0%B2%C2%BB.jpg",
+    "licence": "CC BY 4.0",
+    "artist": "Alexey Kitayev",
     "attributionRequired": true
   },
   {
@@ -571,12 +591,12 @@
   },
   {
     "slug": "gaz-2975-tigr",
-    "file": "File:GAZ-2975 Tigr.jpg",
+    "file": "File:GAZ 2975 Tigr.JPG",
     "localPath": "/images/items/gaz-2975-tigr.jpg",
-    "imageCredit": "CC BY-SA 3.0 — Евгений Катышев",
-    "imagePage": "https://commons.wikimedia.org/wiki/File:GAZ-2975_Tigr.jpg",
+    "imageCredit": "CC BY-SA 3.0 — Digr",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:GAZ_2975_Tigr.JPG",
     "licence": "CC BY-SA 3.0",
-    "artist": "Евгений Катышев",
+    "artist": "Digr",
     "attributionRequired": true
   },
   {
@@ -591,12 +611,22 @@
   },
   {
     "slug": "gmz-3",
-    "file": "File:GMZ-3 minelayer vehicle at Engineering Technologies 2012.jpg",
+    "file": "File:GMZ-3 at Engineering Technologies 2012.jpg",
     "localPath": "/images/items/gmz-3.jpg",
-    "imageCredit": "CC BY-SA 3.0 — Mike1979 Russia",
-    "imagePage": "https://commons.wikimedia.org/wiki/File:GMZ-3_minelayer_vehicle_at_Engineering_Technologies_2012.jpg",
-    "licence": "CC BY-SA 3.0",
-    "artist": "Mike1979 Russia",
+    "imageCredit": "CC BY-SA 4.0 — Vitaly V. Kuzmin",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:GMZ-3_at_Engineering_Technologies_2012.jpg",
+    "licence": "CC BY-SA 4.0",
+    "artist": "Vitaly V. Kuzmin",
+    "attributionRequired": true
+  },
+  {
+    "slug": "grisha",
+    "file": "File:Suzdalets2009Istanbul.jpg",
+    "localPath": "/images/items/grisha.jpg",
+    "imageCredit": "CC BY-SA 2.0 — Kevin Fox",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:Suzdalets2009Istanbul.jpg",
+    "licence": "CC BY-SA 2.0",
+    "artist": "Kevin Fox",
     "attributionRequired": true
   },
   {
@@ -940,6 +970,16 @@
     "attributionRequired": true
   },
   {
+    "slug": "nanuchka",
+    "file": "File:Nanuchka class corvette.JPG",
+    "localPath": "/images/items/nanuchka.jpg",
+    "imageCredit": "Public domain — US military",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:Nanuchka_class_corvette.JPG",
+    "licence": "Public domain",
+    "artist": "US military",
+    "attributionRequired": false
+  },
+  {
     "slug": "nebo-m",
     "file": "File:Nebo-M RLM-ME Army-2016.jpg",
     "localPath": "/images/items/nebo-m.jpg",
@@ -948,6 +988,16 @@
     "licence": "CC BY-SA 4.0",
     "artist": "Boevaya mashina",
     "attributionRequired": true
+  },
+  {
+    "slug": "neustrashimy",
+    "file": "File:Portside view of the Russian Frigate NEUSTRASHIMYY (712) (DN-SD-05-02976).jpg",
+    "localPath": "/images/items/neustrashimy.jpg",
+    "imageCredit": "Public domain — PH2 George Sisting, Usn",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:Portside_view_of_the_Russian_Frigate_NEUSTRASHIMYY_(712)_(DN-SD-05-02976).jpg",
+    "licence": "Public domain",
+    "artist": "PH2 George Sisting, Usn",
+    "attributionRequired": false
   },
   {
     "slug": "orion-uav",
@@ -1017,6 +1067,16 @@
     "imagePage": "https://commons.wikimedia.org/wiki/File:Astrakhan_Victory_Day_Parade_(May_9_2015)_Pantsir-S1_P5090721_2185.jpg",
     "licence": "CC BY-SA 4.0",
     "artist": "Alexxx1979",
+    "attributionRequired": true
+  },
+  {
+    "slug": "parchim",
+    "file": "File:Kazanets.jpg",
+    "localPath": "/images/items/parchim.jpg",
+    "imageCredit": "CC BY-SA 3.0 — Eduardo Raboso",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:Kazanets.jpg",
+    "licence": "CC BY-SA 3.0",
+    "artist": "Eduardo Raboso",
     "attributionRequired": true
   },
   {
@@ -1597,6 +1657,16 @@
     "imagePage": "https://commons.wikimedia.org/wiki/File:SVD_Dragunov.jpg",
     "licence": "CC BY-SA 4.0",
     "artist": "Hokos",
+    "attributionRequired": true
+  },
+  {
+    "slug": "tarantul",
+    "file": "File:Ivanovets corvette 2012 G1.jpg",
+    "localPath": "/images/items/tarantul.jpg",
+    "imageCredit": "CC BY 4.0 — George Chernilevsky",
+    "imagePage": "https://commons.wikimedia.org/wiki/File:Ivanovets_corvette_2012_G1.jpg",
+    "licence": "CC BY 4.0",
+    "artist": "George Chernilevsky",
     "attributionRequired": true
   },
   {

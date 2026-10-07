@@ -1,0 +1,15 @@
+# Both self-propelled gun cards showed the same photograph, and it was a
+# burnt-out wreck: a rusted, gutted 2S19 hulk on a plinth. Nothing about a
+# recognition cue survives on it — no paint, no intact turret line, no running
+# gear to read. A tester spotted it.
+#
+# Two different intact vehicles now, so the Foundations category card and the
+# artillery card no longer share one picture.
+#
+#   concept-spg  a clean side profile, which is what teaches the silhouette the
+#                Foundations cues describe: tall boxy hull, very large turret,
+#                long barrel with a muzzle brake.
+#   2s19-msta-s  a front three-quarter, where the turret detail that separates
+#                this gun from the other 152 mm vehicles is legible.
+concept-spg	File:Msta-S.jpg
+2s19-msta-s	File:ParkPatriot2015part6-02.jpg

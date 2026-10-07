@@ -115,6 +115,32 @@ describe("content wiring", () => {
     expect(wrong).toEqual([]);
   });
 
+  /**
+   * A factory index is not a name either.
+   *
+   * The GRAU rule above catches "6P41". It does not catch "GAZ-5903", which is
+   * the same mistake wearing a manufacturer's prefix, and two of those reached
+   * a tester: asked to identify "GAZ-4905" and "GAZ-5903", he was being tested
+   * on having read a GAZ catalogue rather than on recognising a BTR.
+   *
+   * Type designations stay. BTR-60 and BRDM-2M are what the things are called;
+   * the prefix here is the family, not the factory. Only the manufacturers'
+   * own indices are rejected, which is why they are listed rather than matched
+   * by shape — "BTR-82" and "UAZ-3163" are the same shape and only one of them
+   * is a name.
+   */
+  test("no aka is a bare manufacturer index", () => {
+    const index = /^(GAZ|UAZ|ZIL|KamAZ|KAMAZ|MAZ|KrAZ|VPK|AMN)-?d+[A-Za-z]*$/i;
+    const offenders: string[] = [];
+    for (const item of items) {
+      if (!item.aka) continue;
+      for (const part of item.aka.split(/[;,/]/)) {
+        if (index.test(part.trim())) offenders.push(item.slug + ': "' + item.aka + '"');
+      }
+    }
+    expect(offenders).toEqual([]);
+  });
+
   test("ready blocks carry a brief and a doctrinal note", () => {
     const bare = readyBlocks.filter((b) => !b.brief || !b.doctrineNote);
     expect(bare.map((b) => b.slug)).toEqual([]);

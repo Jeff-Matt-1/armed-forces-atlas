@@ -121,8 +121,8 @@ export const artillery: Item[] = [
     name: "2S19 Msta-S",
     aka: null,
     imageUrl: "/images/items/2s19-msta-s.jpg",
-    imageCredit: "CC BY-SA 4.0 — Zala",
-    imagePage: "https://commons.wikimedia.org/wiki/File:2S19_Msta-S_PM_MWB_03.jpg",
+    imageCredit: "CC BY-SA 3.0 — Vitaly V. Kuzmin",
+    imagePage: "https://commons.wikimedia.org/wiki/File:ParkPatriot2015part6-04.jpg",
     armament: "152 mm 2A64 howitzer, 12.7 mm NSVT",
     rangeText: "24.7 km standard, 29 km rocket-assisted",
     cues: [

@@ -9,6 +9,11 @@ import type { Item } from "@/content/types";
  * angled launcher tubes along the sides, or flush vertical hatches forward —
  * so the deck layout separates the classes faster than the hull ever will.
  *
+ * Ordered from the largest hull down to the smallest, because that is the
+ * order in which the readings stop working: length separates a cruiser from a
+ * frigate at a glance, and below corvette size everything is small, so the
+ * answer moves to where the gun sits and what is on the forecastle.
+ *
  * The block uses imageFit "contain": a warship's identity lives in its full
  * length, and a crop that removes the bow or the stern removes the answer.
  */
@@ -142,6 +147,30 @@ export const vessels: Item[] = [
     sort: 4,
   },
   {
+    slug: "neustrashimy",
+    blockSlug: "vessels",
+    name: "Neustrashimy class",
+    aka: "Project 11540 Yastreb",
+    imageUrl: "/images/items/neustrashimy.jpg",
+    imageCredit: "Public domain — PH2 George Sisting, Usn",
+    imagePage:
+      "https://commons.wikimedia.org/wiki/File:Portside_view_of_the_Russian_Frigate_NEUSTRASHIMYY_(712)_(DN-SD-05-02976).jpg",
+    armament: "100 mm gun, Kinzhal air defence, anti-submarine torpedoes",
+    rangeText: "Air defence to about 12 km",
+    cues: [
+      "Flush deck: the line runs unbroken from bow to stern with no step down aft",
+      "Long clear foredeck, with the bridge set unusually far back",
+      "Single 100 mm gun forward and nothing else on the deck ahead of it",
+      "Hangar and flight deck aft, and no missile tubes along the sides",
+    ],
+    placements: ["Baltic Fleet frigates", "Only two ships were completed"],
+    doctrineNote:
+      "A planned series that stopped at two hulls, both of them in the Baltic. That makes it a frigate a NATO navy in those waters meets more often than its numbers suggest.",
+    crew: "About 210",
+    service: "In service",
+    sort: 5,
+  },
+  {
     slug: "steregushchiy",
     blockSlug: "vessels",
     name: "Steregushchiy class",
@@ -165,7 +194,82 @@ export const vessels: Item[] = [
       "Where the Soviet navy built ocean-going ships, this is built for the seas immediately around Russia. Its size is the cue and the doctrine: sea denial close in, rather than power projection far out.",
     crew: "About 100",
     service: "In service",
-    sort: 5,
+    sort: 6,
+  },
+  {
+    slug: "parchim",
+    blockSlug: "vessels",
+    name: "Parchim class",
+    aka: "Project 1331M",
+    imageUrl: "/images/items/parchim.jpg",
+    imageCredit: "CC BY-SA 3.0 — Eduardo Raboso",
+    imagePage: "https://commons.wikimedia.org/wiki/File:Kazanets.jpg",
+    armament: "76 mm gun, anti-submarine rocket launchers, torpedoes",
+    rangeText: "Rocket launchers reach about 6 km",
+    cues: [
+      "Short hull, about 75 m, with a large white radome high on the lattice mast",
+      "Everything is forward: the gun and two squat rocket launchers crowd the forecastle",
+      "Low uncluttered stern, with no helicopter deck and no hangar",
+      "Nothing stands on the forecastle ahead of the gun but the rocket launchers",
+    ],
+    placements: [
+      "Baltic Fleet small anti-submarine ships",
+      "Harbour approaches and coastal patrol",
+    ],
+    doctrineNote:
+      "Built in East German yards for the Soviet Baltic Fleet and never sent anywhere else. It is the hull most often met in the Baltic approaches, which makes it worth knowing better than any cruiser.",
+    crew: "About 60",
+    service: "In service",
+    sort: 7,
+  },
+  {
+    slug: "grisha",
+    blockSlug: "vessels",
+    name: "Grisha class",
+    aka: "Project 1124 Albatros",
+    imageUrl: "/images/items/grisha.jpg",
+    imageCredit: "CC BY-SA 2.0 — Kevin Fox",
+    imagePage: "https://commons.wikimedia.org/wiki/File:Suzdalets2009Istanbul.jpg",
+    armament: "76 mm gun, Osa-M air defence, anti-submarine rockets and torpedoes",
+    rangeText: "Air defence to about 15 km",
+    cues: [
+      "The gun is aft, behind the superstructure — the reverse of most small warships",
+      "Air-defence missile bin on the forecastle, forward of the bridge",
+      "Short hull, about 70 m, with a sharply flared bow and a long forecastle",
+      "Flat rotating radar aerial on a lattice mast, and no helicopter deck",
+    ],
+    placements: [
+      "Small anti-submarine ships in every fleet",
+      "Also operated by the Coast Guard of the Border Service",
+    ],
+    doctrineNote:
+      "The most numerous Soviet submarine hunter of all, and the layout follows the task: the forecastle is given to the missile bin and the rocket launchers, so the gun goes aft. Gun position alone separates it from a Parchim.",
+    crew: "About 70",
+    service: "In service",
+    sort: 8,
+  },
+  {
+    slug: "nanuchka",
+    blockSlug: "vessels",
+    name: "Nanuchka class",
+    aka: "Project 1234 Ovod",
+    imageUrl: "/images/items/nanuchka.jpg",
+    imageCredit: "Public domain — US military",
+    imagePage: "https://commons.wikimedia.org/wiki/File:Nanuchka_class_corvette.JPG",
+    armament: "6 × P-120 Malakhit missiles, Osa-M air defence, 76 mm gun",
+    rangeText: "Anti-ship missiles to about 150 km",
+    cues: [
+      "Two banks of three missile tubes, angled outboard on each side",
+      "Very large spherical radome dominating a broad blocky superstructure",
+      "Missile bin on the forecastle and the gun right aft — nothing forward",
+      "Small: about 60 m, roughly a quarter of a Kirov's length",
+    ],
+    placements: ["Small missile ships built for coastal strike", "Black Sea and Pacific Fleets"],
+    doctrineNote:
+      "A hull small enough to build in numbers carrying a salvo sized for a destroyer. The bet is that six heavy missiles fired from close inshore are worth more than the ship carrying them.",
+    crew: "About 60",
+    service: "In service",
+    sort: 9,
   },
   {
     slug: "buyan-m",
@@ -179,7 +283,7 @@ export const vessels: Item[] = [
     armament: "8 × Kalibr in vertical cells, 100 mm gun",
     rangeText: "Kalibr to about 1,500 km against land targets",
     cues: [
-      "Very small — a gunboat-sized hull, the smallest ship in the block",
+      "Very small — a gunboat-sized hull, the smallest warship in the block",
       "Boxy superstructure well forward, leaving a clear afterdeck",
       "No helicopter deck and no hangar",
       "Shallow draught: it operates on rivers and the Caspian as well as at sea",
@@ -192,7 +296,30 @@ export const vessels: Item[] = [
       "The point of it is disproportion: a ship small enough for a river carrying missiles that reach 1,500 km inland. Strategic effect is decoupled from ship size, which is why the smallest hull here matters as much as the largest.",
     crew: "About 50",
     service: "In service",
-    sort: 6,
+    sort: 10,
+  },
+  {
+    slug: "tarantul",
+    blockSlug: "vessels",
+    name: "Tarantul class",
+    aka: "Project 1241 Molniya",
+    imageUrl: "/images/items/tarantul.jpg",
+    imageCredit: "CC BY 4.0 — George Chernilevsky",
+    imagePage: "https://commons.wikimedia.org/wiki/File:Ivanovets_corvette_2012_G1.jpg",
+    armament: "4 × anti-ship missiles, 76 mm gun, close-in guns",
+    rangeText: "Anti-ship missiles to about 120 km",
+    cues: [
+      "Very low freeboard and a long sleek hull, about 56 m",
+      "Two pairs of large cylindrical missile canisters amidships, angled outboard",
+      "76 mm gun on the forecastle, well forward of the bridge",
+      "Open lattice mast carrying a spherical radome above the bridge",
+    ],
+    placements: ["Missile boats for fast attack from harbour", "Baltic and Black Sea Fleets"],
+    doctrineNote:
+      "A hull with no endurance, no air defence worth the name and four heavy anti-ship missiles. It is meant to leave harbour, fire and return, so its threat is a function of how close it is based rather than how far it can go.",
+    crew: "About 40",
+    service: "In service",
+    sort: 11,
   },
   {
     slug: "ropucha",
@@ -219,6 +346,33 @@ export const vessels: Item[] = [
       "The bow doors are the recognition cue and the purpose. A ship that can beach and unload armour directly is what makes an amphibious threat credible — and what makes these hulls priority targets in harbour.",
     crew: "About 95",
     service: "In service",
-    sort: 7,
+    sort: 12,
+  },
+  {
+    slug: "dyugon",
+    blockSlug: "vessels",
+    name: "Dyugon class",
+    aka: "Project 21820",
+    imageUrl: "/images/items/dyugon.jpg",
+    imageCredit: "CC BY 4.0 — Alexey Kitayev",
+    imagePage:
+      "https://commons.wikimedia.org/wiki/File:%C2%AB%D0%9C%D0%B8%D1%87%D0%BC%D0%B0%D0%BD_%D0%9B%D0%B5%D1%80%D0%BC%D0%BE%D0%BD%D1%82%D0%BE%D0%B2%C2%BB.jpg",
+    armament: "Two close-in gun mounts only",
+    rangeText: "Carries about 140 tonnes — three tanks or five armoured vehicles",
+    cues: [
+      "Small, about 45 m, and fast for a craft carrying armour",
+      "Open cargo deck over most of the length, with the vehicles in plain view",
+      "Only a low deckhouse aft, not a multi-deck superstructure",
+      "Blunt bow with a ramp, and no gun turret forward",
+    ],
+    placements: [
+      "Landing craft of the Baltic Fleet and the Caspian Flotilla",
+      "Carries armour from ship to shore",
+    ],
+    doctrineNote:
+      "Where a Ropucha beaches a company, this runs three vehicles ashore at nearly twice the speed. It is the last leg of a landing rather than the whole of one.",
+    crew: "About 6",
+    service: "In service",
+    sort: 13,
   },
 ];

@@ -98,6 +98,23 @@ export const etVessels: Record<string, ItemTranslation> = {
     crew: "Umbes 200",
     service: "Kasutuses",
   },
+  neustrashimy: {
+    name: "Neustrashimy klass",
+    aka: "Projekt 11540 Yastreb",
+    armament: "100 mm kahur, Kinzhal õhutõrje, allveelaevatõrjetorpeedod",
+    rangeText: "Õhutõrje kuni umbes 12 km",
+    cues: [
+      "Ühtlane tekk: joon jookseb vöörist ahtrini katkematult, astet ahtri poole ei ole",
+      "Pikk vaba vööritekk, komandosild on ebatavaliselt kaugel taga",
+      "Üks 100 mm kahur vööris ja tekil selle ees ei ole midagi muud",
+      "Angaar ja kopteritekk ahtris, raketitorusid külgedel ei ole",
+    ],
+    placements: ["Läänemere laevastiku fregatid", "Valmis ehitati ainult kaks laeva"],
+    doctrineNote:
+      "Kavandatud seeria jäi kahe kere juurde ja mõlemad teenivad Läänemerel. Just seal kohtab NATO merevägi Vene fregatti kõige tõenäolisemalt.",
+    crew: "Umbes 210",
+    service: "Kasutuses",
+  },
   steregushchiy: {
     name: "Steregushchiy klass",
     aka: "Projekt 20380",
@@ -118,13 +135,73 @@ export const etVessels: Record<string, ItemTranslation> = {
     crew: "Umbes 100",
     service: "Kasutuses",
   },
+  parchim: {
+    name: "Parchim klass",
+    aka: "Projekt 1331M",
+    armament: "76 mm kahur, allveelaevatõrje raketiheitjad, torpeedod",
+    rangeText: "Raketiheitjate ulatus umbes 6 km",
+    cues: [
+      "Lühike kere, umbes 75 m, suur valge radarikuppel kõrgel võrestikmastil",
+      "Kõik on ees: kahur ja kaks madalat raketiheitjat täidavad vööriteki",
+      "Madal tühi ahter, kopteritekki ega angaari ei ole",
+      "Vööritekil kahuri ees ei ole midagi peale raketiheitjate",
+    ],
+    placements: [
+      "Läänemere laevastiku väikesed allveelaevatõrje laevad",
+      "Sadamate sissesõidud ja rannikupatrull",
+    ],
+    doctrineNote:
+      "Ehitatud Ida-Saksamaa tehastes Nõukogude Läänemere laevastikule ja mujale neid ei saadetud. See on kere, mida Läänemere sissesõitudes kõige sagedamini kohtab ja mida tasub seetõttu tunda paremini kui ühtki ristlejat.",
+    crew: "Umbes 60",
+    service: "Kasutuses",
+  },
+  grisha: {
+    name: "Grisha klass",
+    aka: "Projekt 1124 Albatros",
+    armament: "76 mm kahur, Osa-M õhutõrje, allveelaevatõrje raketid ja torpeedod",
+    rangeText: "Õhutõrje kuni umbes 15 km",
+    cues: [
+      "Kahur on ahtris, pealisehituse taga — vastupidi enamikule väikelaevadele",
+      "Õhutõrjeraketi heitja vööritekil, komandosillast eespool",
+      "Lühike kere, umbes 70 m, terav laienev vöör ja pikk vööritekk",
+      "Lame pöörlev radariantenn võrestikmastil, kopteritekki ei ole",
+    ],
+    placements: [
+      "Väikesed allveelaevatõrje laevad kõigis laevastikes",
+      "Kasutuses ka piirivalve rannikuvalves",
+    ],
+    doctrineNote:
+      "Kõige arvukam Nõukogude allveelaevade jahtija ja paigutus tuleneb ülesandest: vööritekk on antud raketiheitjatele, nii et kahur läheb ahtrisse. Kahuri asukoht üksi eristab teda Parchimist.",
+    crew: "Umbes 70",
+    service: "Kasutuses",
+  },
+  nanuchka: {
+    name: "Nanuchka klass",
+    aka: "Projekt 1234 Ovod",
+    armament: "6 × P-120 Malakhit raketti, Osa-M õhutõrje, 76 mm kahur",
+    rangeText: "Laevatõrjeraketid kuni umbes 150 km",
+    cues: [
+      "Kaks kolmese raketitoru plokki, kummalgi küljel kaldu väljapoole",
+      "Väga suur kerajas radarikuppel laia kandilise pealisehituse kohal",
+      "Raketiheitja vööritekil ja kahur päris ahtris — ees kahurit ei ole",
+      "Väike: umbes 60 m, ligikaudu veerand Kirovi pikkusest",
+    ],
+    placements: [
+      "Väikesed raketilaevad rannikulöögi jaoks",
+      "Musta mere ja Vaikse ookeani laevastik",
+    ],
+    doctrineNote:
+      "Kere, mida saab väiksuse tõttu arvukalt ehitada, kannab hävitaja mõõtu salvot. Panus on selles, et kuus rasket raketti rannikult lastuna on väärt rohkem kui laev, mis neid kannab.",
+    crew: "Umbes 60",
+    service: "Kasutuses",
+  },
   "buyan-m": {
     name: "Buyan-M klass",
     aka: "Projekt 21631",
     armament: "8 × Kalibr püstšahtides, 100 mm kahur",
     rangeText: "Kalibr maasihtmärkide vastu kuni umbes 1500 km",
     cues: [
-      "Väga väike — suurtükipaadi mõõtu kere, õppetüki väikseim laev",
+      "Väga väike — suurtükipaadi mõõtu kere, õppetüki väikseim sõjalaev",
       "Kandiline pealisehitus selgelt ees, ahtritekk jääb vabaks",
       "Kopteritekki ega angaari ei ole",
       "Madal süvis: ta tegutseb ka jõgedel ja Kaspia merel, mitte üksnes merel",
@@ -136,6 +213,23 @@ export const etVessels: Record<string, ItemTranslation> = {
     doctrineNote:
       "Kogu mõte on ebaproportsioonis: laev, mis mahub jõkke, kannab rakette, mis ulatuvad 1500 km sisemaale. Strateegiline mõju on lahutatud laeva suurusest ja seepärast loeb siinne väikseim kere sama palju kui suurim.",
     crew: "Umbes 50",
+    service: "Kasutuses",
+  },
+  tarantul: {
+    name: "Tarantul klass",
+    aka: "Projekt 1241 Molniya",
+    armament: "4 × laevatõrjeraketti, 76 mm kahur, lähitõrjekahurid",
+    rangeText: "Laevatõrjeraketid kuni umbes 120 km",
+    cues: [
+      "Väga madal vabaparras ja pikk sihvakas kere, umbes 56 m",
+      "Kaks paari suuri silindrilisi raketikonteinereid keskel, kaldu väljapoole",
+      "76 mm kahur vööritekil, komandosillast tublisti eespool",
+      "Lahtine võrestikmast keraja radarikupliga komandosilla kohal",
+    ],
+    placements: ["Raketikaatrid kiireks löögiks sadamast", "Läänemere ja Musta mere laevastik"],
+    doctrineNote:
+      "Kere, millel ei ole autonoomsust ega nimetamisväärset õhutõrjet, kannab nelja rasket laevatõrjeraketti. Ta on mõeldud sadamast väljuma, laskma ja tagasi tulema, nii et oht sõltub sellest, kui lähedal ta baseerub, mitte sellest, kui kaugele ta jõuab.",
+    crew: "Umbes 40",
     service: "Kasutuses",
   },
   ropucha: {
@@ -156,6 +250,26 @@ export const etVessels: Record<string, ItemTranslation> = {
     doctrineNote:
       "Vööriväravad on korraga tuvastustunnus ja eesmärk. Laev, mis suudab randuda ja soomuse otse maha laadida, teeb dessandiohu usutavaks — ja teeb neist eelissihtmärgid.",
     crew: "Umbes 95",
+    service: "Kasutuses",
+  },
+  dyugon: {
+    name: "Dyugon klass",
+    aka: "Projekt 21820",
+    armament: "Ainult kaks lähitõrjekahurit",
+    rangeText: "Kannab umbes 140 tonni — kolm tanki või viis soomukit",
+    cues: [
+      "Väike, umbes 45 m ja soomust kandva aluse kohta kiire",
+      "Lahtine lastitekk üle suurema osa pikkusest, sõidukid on näha",
+      "Ahtris on ainult madal tekiehitis, mitte mitmekorruseline pealisehitus",
+      "Nüri vöör rambiga, kahuritorni ees ei ole",
+    ],
+    placements: [
+      "Läänemere laevastiku ja Kaspia flotilli dessantkaatrid",
+      "Veab soomust laevalt kaldale",
+    ],
+    doctrineNote:
+      "Kui Ropucha maabutab kompanii, siis see viib kaldale kolm sõidukit peaaegu kaks korda kiiremini. Ta on dessandi viimane etapp, mitte kogu dessant.",
+    crew: "Umbes 6",
     service: "Kasutuses",
   },
 };

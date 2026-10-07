@@ -180,7 +180,7 @@ export const etFoundations: Record<string, ItemTranslation> = {
     service: "Kategooria",
   },
   "concept-recon": {
-    name: "Rekkemasin",
+    name: "Luuresoomuk",
     aka: "BRM (bojevaja razvedõvatelnaja mašina)",
     armament: "Kuulipilduja või kerge automaatkahur; tegelik koorem on sensorid",
     rangeText: "Sensorite avastuskaugus 10–25 km",

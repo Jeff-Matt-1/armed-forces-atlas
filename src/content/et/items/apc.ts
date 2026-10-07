@@ -22,7 +22,6 @@ export const etApc: Record<string, ItemTranslation> = {
     service: "Piiratud kasutuses, peamiselt reservis",
   },
   "btr-70": {
-    aka: "GAZ-4905",
     armament: "14,5 mm KPVT, 7,62 mm PKT",
     rangeText: "KPVT efektiivne umbes 2000 m",
     cues: [
@@ -38,7 +37,6 @@ export const etApc: Record<string, ItemTranslation> = {
     service: "Piiratud kasutuses",
   },
   "btr-80": {
-    aka: "GAZ-5903",
     armament: "14,5 mm KPVT, 7,62 mm PKT",
     rangeText: "KPVT efektiivne umbes 2000 m",
     cues: [
