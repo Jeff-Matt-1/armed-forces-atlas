@@ -5,12 +5,15 @@
 # card still cost a round trip, and on a filtered or congested network enough
 # of those time out that images visibly fail to appear.
 #
-# A day of browser cache with a week of stale-while-revalidate: a study session
-# re-reads nothing, and a replaced photograph still reaches everyone within a
-# day without a hard refresh. The filenames are stable slugs that occasionally
-# get a new picture, so "immutable" would be wrong.
+# A day of browser cache, and no stale-while-revalidate. The window was a week,
+# which quietly meant a corrected photograph could go on being shown for days
+# after it was replaced — the comment here used to claim the opposite. Dropping
+# it costs one conditional request per photograph per day, which is what the
+# ETag is for, and nothing like the round trip per card that "must-revalidate"
+# used to cost. The filenames are stable slugs that occasionally get a new
+# picture, so "immutable" would be wrong.
 /images/*
-  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
+  Cache-Control: public, max-age=86400
 
 # Icons change only when the brand does.
 /icon-*.png

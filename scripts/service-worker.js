@@ -9,40 +9,92 @@
  * and because the repo already does its build-time work in single-purpose
  * scripts rather than in plugin configuration.
  *
- * Three caches, versioned independently on purpose:
+ * Three caches, with two different lifetimes:
  *
  *   shell  — hashed JS/CSS/fonts/icons. Tied to the build; replaced wholesale.
  *   pages  — SSR HTML. Also tied to the build, because a document from an older
  *            build references asset filenames this build has deleted.
- *   images — 202 photographs, ~47 MB. Versioned by the *contents* of the image
- *            directory instead, so an ordinary code deploy does not make a
- *            reader download 47 MB again, while replacing a photograph does.
+ *   images — 208 photographs, ~49 MB, in a cache whose name never changes.
+ *            Correcting one picture used to rename this cache and so cost every
+ *            offline reader the whole download again; now each photograph
+ *            carries its own fingerprint and only the ones that actually
+ *            changed are dropped.
  */
 
 const SHELL_VERSION = "__SHELL_VERSION__";
-const IMAGES_VERSION = "__IMAGES_VERSION__";
 const PRECACHE = __PRECACHE__;
+
+/**
+ * The name of the image cache this build would have used under the old scheme.
+ *
+ * Kept only to hand over a reader's existing download. A cache under that exact
+ * name holds precisely the photographs this build ships — the name was a hash
+ * of them — so its contents can be adopted rather than re-fetched. Any other
+ * afa-images-* cache belongs to an older set and is simply dropped.
+ *
+ * This is migration code. Once readers have updated it does nothing, and it can
+ * be deleted.
+ */
+const LEGACY_IMAGES_CACHE = "afa-images-__IMAGES_VERSION__";
+
+/** The document shown when a navigation fails and the URL is not cached. */
+const OFFLINE_URL = "/offline.html";
+
+/** Where the fingerprints of the stored photographs are kept, inside the cache. */
+const FINGERPRINTS_KEY = "/__image-fingerprints";
 
 const SHELL_CACHE = `afa-shell-${SHELL_VERSION}`;
 const PAGES_CACHE = `afa-pages-${SHELL_VERSION}`;
-const IMAGES_CACHE = `afa-images-${IMAGES_VERSION}`;
+const IMAGES_CACHE = "afa-images";
 
 /** Caches the page owns too, so it can fill them and report on them. */
 const KNOWN = [SHELL_CACHE, PAGES_CACHE, IMAGES_CACHE];
 
 self.addEventListener("install", (event) => {
   event.waitUntil(
-    caches.open(SHELL_CACHE).then((cache) =>
+    (async () => {
+      const cache = await caches.open(SHELL_CACHE);
       // addAll is atomic: one 404 would throw away the whole install, and a
       // half-installed shell is worse than none.
-      cache.addAll(PRECACHE),
-    ),
+      await cache.addAll(PRECACHE);
+      await clearRedirectFlag(cache);
+    })(),
   );
 });
+
+/**
+ * Re-stores the offline document without its redirect flag.
+ *
+ * Cloudflare answers /offline.html with a 307 to /offline, because it drops
+ * the .html extension. addAll follows that redirect quite happily, but the
+ * response it stores carries redirected = true, and a browser refuses such a
+ * response as the answer to a navigation. The one document whose whole purpose
+ * is to appear when a navigation fails would therefore have failed to appear,
+ * leaving the reader on the browser's own error page.
+ *
+ * Rebuilding the response from its body clears the flag. Done once at install
+ * rather than on every fallback, so the stored copy is correct from the start.
+ */
+async function clearRedirectFlag(cache) {
+  const hit = await cache.match(OFFLINE_URL);
+  if (!hit || !hit.redirected) return;
+  const clean = new Response(await hit.blob(), {
+    status: hit.status,
+    statusText: hit.statusText,
+    headers: hit.headers,
+  });
+  await cache.put(OFFLINE_URL, clean);
+}
 
 self.addEventListener("activate", (event) => {
   event.waitUntil(
     (async () => {
+      const images = await caches.open(IMAGES_CACHE);
+      // Before the sweep below, or it would delete the very cache being
+      // handed over.
+      await adoptLegacyImages(images);
+      await dropReplacedImages(images);
+
       for (const key of await caches.keys()) {
         if (key.startsWith("afa-") && !KNOWN.includes(key)) await caches.delete(key);
       }
@@ -51,16 +103,74 @@ self.addEventListener("activate", (event) => {
   );
 });
 
+/** Moves a matching old download into the stable cache instead of re-fetching it. */
+async function adoptLegacyImages(images) {
+  const legacy = await caches.has(LEGACY_IMAGES_CACHE);
+  if (!legacy) return;
+  const old = await caches.open(LEGACY_IMAGES_CACHE);
+  for (const request of await old.keys()) {
+    if (await images.match(request)) continue;
+    const hit = await old.match(request);
+    if (hit) await images.put(request, hit);
+  }
+}
+
+/**
+ * Drops only the photographs whose bytes have actually changed.
+ *
+ * The build writes a fingerprint per file into offline-manifest.json, which is
+ * precached, so the worker can compare what this build ships against what the
+ * reader is holding. A corrected photograph is deleted and re-fetched on next
+ * view; the other two hundred are left alone. That is the whole point of the
+ * change: a photo fix used to cost 49 MB and now costs one file.
+ *
+ * Entries that vanish from the manifest are dropped too, so a retired
+ * photograph does not sit in the cache for ever.
+ */
+async function dropReplacedImages(images) {
+  const manifest = await caches.match("/offline-manifest.json", { cacheName: SHELL_CACHE });
+  if (!manifest) return;
+
+  const wanted = (await manifest.json()).files ?? {};
+  const previous = await images.match(FINGERPRINTS_KEY);
+  const held = previous ? await previous.json() : {};
+
+  for (const path of Object.keys(held)) {
+    if (wanted[path] !== held[path]) await images.delete(path);
+  }
+
+  await images.put(
+    FINGERPRINTS_KEY,
+    new Response(JSON.stringify(wanted), { headers: { "content-type": "application/json" } }),
+  );
+}
+
 /** The page asks for this when the reader accepts an update. */
 self.addEventListener("message", (event) => {
   if (event.data === "skip-waiting") self.skipWaiting();
 });
 
-async function cacheFirst(request, cacheName) {
+/**
+ * `revalidate` decides whether the miss is allowed to be filled from the
+ * browser's own HTTP cache.
+ *
+ * It must not be, for photographs. A worker's fetch is not covered by the
+ * reader pressing reload, so after a photograph was replaced the sequence was:
+ * miss in the image cache, fetch served the day-old copy out of the HTTP
+ * cache, and the worker then stored that stale copy as the new one. A reader
+ * could hard-reload, close every tab and accept the update, and still be shown
+ * the old picture — and each attempt re-poisoned the cache.
+ *
+ * "no-cache" does not mean no caching; it means revalidate before reusing.
+ * Unchanged photographs answer 304 against the ETag and cost almost nothing.
+ * Assets and fonts skip it: their filenames are content-hashed, so a stale one
+ * is impossible and revalidating them would be pure waste.
+ */
+async function cacheFirst(request, cacheName, revalidate = false) {
   const cache = await caches.open(cacheName);
   const hit = await cache.match(request);
   if (hit) return hit;
-  const response = await fetch(request);
+  const response = await fetch(request, revalidate ? { cache: "no-cache" } : undefined);
   // Only successes are kept: a cached 404 would outlive the mistake that
   // produced it. There is no cross-origin case to guard against here — the
   // fetch handler has already refused anything not served from this origin.
@@ -80,7 +190,7 @@ async function navigate(request) {
     // against the wrong URL.
     const hit = await cache.match(request);
     if (hit) return hit;
-    const offline = await caches.match("/offline.html", { cacheName: SHELL_CACHE });
+    const offline = await caches.match(OFFLINE_URL, { cacheName: SHELL_CACHE });
     if (offline) return offline;
     throw error;
   }
@@ -100,7 +210,7 @@ self.addEventListener("fetch", (event) => {
     return;
   }
   if (url.pathname.startsWith("/images/")) {
-    event.respondWith(cacheFirst(request, IMAGES_CACHE));
+    event.respondWith(cacheFirst(request, IMAGES_CACHE, true));
     return;
   }
   if (url.pathname.startsWith("/assets/") || url.pathname.startsWith("/fonts/")) {

@@ -27,6 +27,8 @@ export type OfflineManifest = {
   images: number;
   bytes: number;
   caches: { pages: string; images: string };
+  /** Path to content fingerprint, so the worker can drop only what changed. */
+  files: Record<string, string>;
 };
 
 /**
@@ -122,7 +124,12 @@ async function fillCache(
         tick();
         continue;
       }
-      const response = await fetch(url, { signal });
+      // "reload" bypasses the browser's own HTTP cache for this request.
+      // Photographs are served with a day of browser caching, so a plain fetch
+      // could copy a stale picture straight into the offline library and keep
+      // it there for good — a corrected photograph would then never reach the
+      // one reader who most depends on the download being right.
+      const response = await fetch(url, { signal, cache: "reload" });
       if (response.ok) await cache.put(url, response);
       tick();
     }
@@ -163,7 +170,11 @@ export async function downloadAll(
  */
 export async function removeDownload(): Promise<void> {
   for (const name of await caches.keys()) {
-    if (name.startsWith("afa-images-") || name.startsWith("afa-pages-")) await caches.delete(name);
+    // "afa-images" has no version suffix any more, so match the bare name too
+    // — otherwise "Remove" would leave 49 MB of photographs behind.
+    if (name === "afa-images" || name.startsWith("afa-images-") || name.startsWith("afa-pages-")) {
+      await caches.delete(name);
+    }
   }
 }
 
