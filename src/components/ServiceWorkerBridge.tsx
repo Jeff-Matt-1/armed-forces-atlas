@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 
 import { useLocale } from "@/i18n/LocaleProvider";
+import { pruneReplacedImages } from "@/lib/offline";
 
 /**
  * Registers the service worker and offers the update when one is waiting.
@@ -23,6 +24,14 @@ export function ServiceWorkerBridge() {
     if (!("serviceWorker" in navigator)) return;
 
     let cancelled = false;
+
+    // A corrected photograph should not wait behind the update prompt. The
+    // worker drops replaced pictures when it activates, which needs the reader
+    // to accept; this does the same comparison from the page, so a correction
+    // lands on the next visit whether or not anyone presses anything.
+    void pruneReplacedImages().catch(() => {
+      // Losing a photograph refresh is not worth telling a reader about.
+    });
 
     // A controller change means the new worker took over, which only happens
     // after the reader accepts. Reloading here rather than at the click keeps

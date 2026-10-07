@@ -49,6 +49,60 @@ export function offlineManifest(): Promise<OfflineManifest | null> {
   return manifestPromise;
 }
 
+/**
+ * Where the worker records the fingerprint of every photograph it is holding.
+ * The page reads and writes the same key; see pruneReplacedImages below.
+ */
+const FINGERPRINTS_KEY = "/__image-fingerprints";
+
+/**
+ * Drop the photographs this build has replaced, from the page.
+ *
+ * The worker does this too, but only when it activates — and it activates only
+ * when the reader accepts the update prompt. So a corrected photograph could
+ * sit behind a prompt nobody pressed, which is exactly what happened: a reader
+ * was shown a replaced picture for days, hard-reloaded, closed every tab, and
+ * still saw the old one, because none of that activates a waiting worker.
+ *
+ * The page holds the same manifest and can make the same comparison on load.
+ * A correction then arrives on the next visit with nothing to press.
+ *
+ * Only prunes when the worker has already written a fingerprint record. Without
+ * one there is nothing to compare against, and writing today's fingerprints over
+ * an unknown set of stored photographs would mark stale ones as current.
+ */
+export async function pruneReplacedImages(): Promise<number> {
+  if (!offlineSupported()) return 0;
+  const manifest = await offlineManifest();
+  if (!manifest?.files) return 0;
+
+  const existing = new Set(await caches.keys());
+  if (!existing.has(manifest.caches.images)) return 0;
+
+  const cache = await caches.open(manifest.caches.images);
+  const previous = await cache.match(FINGERPRINTS_KEY);
+  if (!previous) return 0;
+
+  const held = (await previous.json()) as Record<string, string>;
+  let dropped = 0;
+  for (const [path, fingerprint] of Object.entries(held)) {
+    if (manifest.files[path] !== fingerprint) {
+      await cache.delete(path);
+      dropped += 1;
+    }
+  }
+
+  if (dropped > 0) {
+    await cache.put(
+      FINGERPRINTS_KEY,
+      new Response(JSON.stringify(manifest.files), {
+        headers: { "content-type": "application/json" },
+      }),
+    );
+  }
+  return dropped;
+}
+
 export function offlineSupported(): boolean {
   return (
     typeof window !== "undefined" &&
