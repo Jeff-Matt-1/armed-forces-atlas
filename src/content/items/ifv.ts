@@ -115,8 +115,8 @@ export const ifv: Item[] = [
     name: "BMD-4M",
     aka: "Sadovnitsa",
     imageUrl: "/images/items/bmd-4m.jpg",
-    imageCredit: "CC BY-SA 4.0 — Boevaya mashina",
-    imagePage: "https://commons.wikimedia.org/wiki/File:BMD-4M_at_Army_2016.jpg",
+    imageCredit: "CC BY-SA 3.0 — Vitaly V. Kuzmin",
+    imagePage: "https://commons.wikimedia.org/wiki/File:BMD-4M_-_0-12.jpg",
     armament: "100 mm 2A70 gun-launcher, 30 mm 2A72, 7.62 mm PKT",
     rangeText: "100 mm gun to 4,000 m; guided round to 5,500 m",
     cues: [
